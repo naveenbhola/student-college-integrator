@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="user\Entities\UserSocialProfile" table="userSocialProfile" repository-class="user\Repositories\UserRepository">
+    <change-tracking-policy>DEFERRED_IMPLICIT</change-tracking-policy>
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="twitterId" type="string" column="twitterId"/>
+    <field name="facebookId" type="string" column="facebookId"/>
+    <field name="linkedinId" type="string" column="linkedinId"/>
+    <field name="youtubeId" type="string" column="youtubeId"/>
+    <field name="personalURL" type="string" column="personalURL"/>
+    <one-to-one target-entity="user\Entities\User" field="user" inversed-by="socialProfile">
+          <join-column name="userId" referenced-column-name="userid" />
+    </one-to-one>
+    <lifecycle-callbacks/>
+  </entity>
+</doctrine-mapping>

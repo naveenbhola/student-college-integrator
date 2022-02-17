@@ -1,0 +1,21 @@
+.pagination{background:#fbfbfb; padding:15px; border:1px solid #f0f0f0; margin-bottom:15px;}
+.pagination p{font-size:14px;}
+ul.pagination-list{float:left; color:#999999}
+ul.pagination-list li{margin-right:8px; float:left}
+ul.pagination-list li a{text-decoration:none; border:1px solid #b0b0b0; padding:2px 5px;}
+ul.pagination-list li a.active{background:#333; color:#fff;}
+ul.pagination-list li.first-child a, ul.pagination-list li.last-child a{border:none;}
+.dv-pad{padding: 0px 10px 10px 18px;}
+.inrAplCountries {min-height: 100px;max-height:200px;height:auto;overflow-y: auto;}
+.dv-ht{max-height: 284px;overflow: auto;}
+.dv-ht span{margin-left: 11px;}
+.cmn-popup{width:475px;background:#f9f9f9;font-size:12px;font-family:'open sans';box-shadow:0 2px 2px 0 rgba(0,0,0,.16),0 0 0 1px rgba(0,0,0,.08);position:absolute;z-index:2000}
+/*  new popup overlay */
+.cmn-popup{width: 475px;background: #f9f9f9;font-size: 12px;font-family: 'open sans';box-shadow:0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);position: absolute;z-index:2000;}
+a.cmn-hd{color: #999; font-size: 26px; text-align: right;padding:10px 12px 0;font-weight: 400;display: block; text-decoration: none;line-height: 11px;}
+
+.cmn-det{font-size: 14px; font-weight: 400;line-height: 24px;}
+
+.cmn-det strong{font-size: 18px; font-weight: 600;display: block; margin-bottom: 5px;padding: 0 10px 0 18px;}
+.cmn-det .abroad-layer-content{padding: 10px 10px 10px 18px;}
+.cmn-det .err-pra{padding: 0px 10px 0px 18px;}

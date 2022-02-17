@@ -1,0 +1,63 @@
+.formPreviewMain {font-size:14px; font-family:Arial, Helvetica, sans-serif !important;}
+.appsFormBg{background-color:#fff; padding:10px;}
+.previewHeader{display:block; margin-bottom:12px; width:890px; margin:0 auto}
+.previewChildHeader{border:1px solid red}
+.instLogoBox{width:105px; float:left}
+.previewTetx{font-size:22px; color:red; clear:both}
+.previewBody{width:890px; margin:0 auto; padding-top:5px}
+.courseNameDetails{font-size:15px; color:#000000; font-weight:normal; line-height:normal; padding:8px 0 0 0px; width:560px; float:left}
+.courseNameDetails p{font-size:28px; text-transform:uppercase; font-weight:bold; margin-bottom:5px; line-height:40px;}
+.courseNameDetails span{font-size:12px;}
+.batch-details{text-align:center; font-size:20px; font-weight:bold; padding:15px 0; font-family:Tahoma, Geneva, sans-serif}
+.batch-details span{font-size:12px; font-weight:normal; font-family:Arial, Helvetica, sans-serif}
+.contTxt{width:500px; float:left; font-size:16px; font-weight:bold}
+.formNumb{padding-bottom:10px; float:right; width:250px; font-weight:bold}
+.formNumb span{width:140px; display:block; float:left}
+.formNumb p{float:left}
+.header-left{width:681px; float:left;}
+.flLt{float:left}
+
+.picBox{width:198px; float:right; background-color:#fff; height:184px; border:1px solid #000}
+.picBox img{border:1px solid #cacaca; width:195px; height:182px;}
+.picBox p{text-align:center; padding-top:80px; font-size:12px}
+.formRows{display:block; margin-bottom:2px; float:left; width:100%}
+.formRows ul li{display:block; margin-bottom:15px; width:100%; float:left}
+.formRows ul li label{float:left; padding:6px 5px 0 0; font-weight:normal; width:150px;}
+.formRows ul li label strong{font-size:12px; font-weight:normal; width:100%; display:block}
+.formRows ul li label span{padding-right:8px; float:left}
+.formRows ul li ul{padding-left:25px; display:block; display:list-item}
+.formRows ul li ul li{float:none !important; vertical-align:top}
+.previewFieldBox, .previewFieldBox2,.previewFieldBox3{float:left; width:886px;}
+.previewFieldBox2{width:870px; padding-left:22px}
+.previewFieldBox2 span{font-size:11px; text-align:center; display:block}
+.previewFieldBox span, .enrollmentPreviewField span{display:block; border-bottom:solid 1px #000000; padding-top:5px}
+.previewFieldBox3 span {display:block; border-bottom:dotted 1px #000000;}
+.formColumns2{float:left}
+.flRt{float:right}
+.boxTable{border: 1px solid #000000; border-collapse: collapse; background-color:#fff}
+.boxTable tr td{height:27px; width:30px; padding:0; margin:0; text-align: center;}
+.educationTable, .educationTable2{border: 1px solid #000000; border-collapse: collapse; background:#fff}
+.educationTable tr th{text-align:center; font-weight:normal}
+.educationTable2 tr th{text-align:center; font-weight:bold}
+.formWordWrapper{white-space: pre-wrap; word-wrap: break-word; overflow:hidden}
+.checkCols{padding-left:30px; float:left}
+.checkCols label{width:auto !important; padding-right:10px !important;}
+.formPersonalDetails{width:280px; float:left;}
+.formPersonalDetails label{width:85px !important;}
+.ackknowBox{padding:10px; background:#fff}
+.ackknowBox div.title{text-align:center; padding-bottom:20px}
+.formDateBox{width:300px; float:left}
+.formSignBox{width:300px; text-align:left; float:right}
+.appFormCont{border:1px solid #000; margin-bottom:3px}
+.appFormCont p{background-color:#000; color:#fff; text-transform:uppercase; padding:3px 5px; text-align:center; font-size:17px}
+.appFormCont div{font-size:16px; font-weight:bold; text-align:center; padding:10px 0; line-height:25px}
+.appFormCont div strong{font-size:20px}
+.appFormCont div span{font-size:18px}
+.office-use-box{border:1px solid #000; width:350px; float:left; height:198px;}
+.office-use-box p{text-align:center; margin:15px 0}
+.office-use-box ul li{margin-bottom:18px; padding:0 5px}
+.office-use-box ul li label{padding-right:10px}
+.check-box{width:25px; height:18px; border:1px solid #000; text-align:center; margin-bottom:5px; padding-top:6px}
+.course-box{width:320px; float:right; border:0 none}
+.course-box table{height:200px}
+.header-box{padding-top:31px; clear:left}

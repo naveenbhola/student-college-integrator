@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="user\Entities\UserAdditionalInfo" table="tUserAdditionalInfo" repository-class="user\Repositories\UserRepository">
+    <change-tracking-policy>DEFERRED_IMPLICIT</change-tracking-policy>
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="currentClass" type="string" column="currentClass"/>
+    <field name="currentSchool" type="string" column="currentSchool"/>
+    <field name="bookedExamDate" type="integer" column="bookedExamDate"/>
+    <field name="gradUniversity" type="string" column="gradUniversity"/>
+    <field name="gradCollege" type="string" column="gradCollege"/>
+    <field name="extracurricular" type="string" column="extracurricular"/>
+    <field name="specialConsiderations" type="string" column="specialConsiderations"/>
+    <field name="preferences" type="string" column="preferences"/>
+    <field name="bio" type="string" column="bio"/>
+    <field name="aboutMe" type="string" column="aboutMe"/>
+    <field name="studentEmail" type="string" column="studentEmail"/>
+    <field name="maritalStatus" type="string" column="maritalStatus"/>
+    <field name="employmentStatus" type="string" column="employmentStatus"/>
+    <many-to-one target-entity="user\Entities\User" field="user" inversed-by="userAdditionalInfo">
+          <join-column name="userId" referenced-column-name="userid" />
+    </many-to-one>
+    <lifecycle-callbacks/>
+  </entity>
+</doctrine-mapping>

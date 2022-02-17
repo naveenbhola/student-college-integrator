@@ -1,0 +1,17 @@
+<title>
+	<%if(seoData!= null && seoData != undefined){%>
+		<%= seoData.metaTitle %>
+	<%}%>
+</title>
+<meta name="keywords" content="Shiksha, education, colleges,universities, institutes,career, career options, career prospects,
+engineering, mba, medical, mbbs,study abroad, foreign education, college, university, institute,
+courses, coaching, technical education, higher education,forum, community, education career experts,
+ask experts, admissions,results, events,scholarships"/>
+
+<meta name="description" content="<%= (seoData!= null && seoData != undefined) ? seoData.metaDescription : '' %>"/>
+
+<%if(seoData!= null && seoData != undefined){%>
+	<link rel="canonical" href="https://www.shiksha.com<%= seoData.canonicalUrl %>" />
+<%}%>
+
+

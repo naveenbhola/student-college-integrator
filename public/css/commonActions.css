@@ -1,0 +1,97 @@
+.spacefix{height:14px;}
+
+/*compare bottom sticky widget*/
+.compare-bot-sticky{position:fixed;width:988px;bottom:0;left:0;right:0;margin:0 auto;z-index: 99;}
+.compare-sticky-items{width: 943px;float:left;background: #f5f5f6;box-sizing:border-box;box-shadow: 0 -1px 4px #b3b2b2;-webkit-box-shadow: 0 -1px 4px #b3b2b2;-moz-box-shadow: 0 -1px 4px #b3b2b2;}
+.clgs-added{display:block}
+.added-clgs{width: 200px;height: 68px;border-right: 1px solid #e7e5e5;float: left;/* margin: 5px 0; */padding: 10px 8px 0;position: relative;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;display:block}
+.btn-col{width: 140px;display:block;border-right: 0;}
+.num-to-add{width:48px;height:48px;border-radius:50%;border:1px solid #E5E4E6;color: #F5F5F6;display:block;line-height: 48px;font-weight: 600;font-size: 24px;text-align: center;margin:0 auto;background: #E6E5E5;}
+.ready-to-compare{display:block;width:160px;box-sizing:content-box;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;height: 40px;padding: 5px;overflow:hidden;text-decoration:none !important;color:#008489 !important;font-size:12px;line-height:20px;text-overflow: ellipsis;font-weight:600;/* white-space: normal; */}
+.show-hide-btn {width: 45px; float: right;height: 68px;padding: 30px 0px 0px 8px;color: #fff !important;background: #999999;text-align: center; text-decoration: none !important;display: block;-moz-box-sizing: border-box; -webkit-box-sizing: border-box;box-sizing: border-box;font-size: 14px;-moz-box-shadow: 0 -1px 4px #b3b2b2; -webkit-box-shadow: 0 -1px 4px #b3b2b2; box-shadow: 0 -1px 4px #b3b2b2;}
+.show-cmpre-btn{width:107px;float:right;height: 47px;padding: 17px 0 0 0;color:#fff !important;background: #999999;text-align:center;text-decoration:none !important;display: none;-moz-box-sizing: border-box; -webkit-box-sizing: border-box;box-sizing: border-box;font-size: 14px;-moz-box-shadow: 0 -1px 4px #b3b2b2; -webkit-box-shadow: 0 -1px 4px #b3b2b2; box-shadow: 0 -1px 4px #b3b2b2;}
+.clgs-added .close-icon {color: #8E8E8E !important;background:transparent;text-decoration: none !important;width: 16px;height: 16px;display: inline-block;text-align: center;font-size: 22px;line-height: 14px;position: absolute;cursor: pointer;top: 5px;right: 5px;}
+.cmpre-col{display:block;}
+.cmpre-col .cmpre-btn{display:block;box-sizing:content-box;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;background: #eea234;padding: 7px 15px;margin: 3px auto;text-align:center;color:#fff;width: 64px;text-decoration:none;font-size:14px;font-weight:700}
+.cmpre-col .link{font-size:12px;color:#008489;line-height: 20px;display:block;text-align:center;text-decoration:none !important;font-weight:normal}
+.common-sprite{background: url(../images/common-sprite-v1.png) no-repeat;display: inline-block;}
+.compare-bot-sticky .show-arr, .compare-bot-sticky .hide-arr{background-position: -60px -195px;width: 13px;height: 7px;margin-right: 8px;position: relative;top: -2px;}
+.compare-bot-sticky .hide-arr {background-position: -43px -195px;}
+.compare-bot-sticky .show-cmpre-btn .show-arr{margin-left:8px;margin-right:0}
+/*compare end sticky widget*/
+
+
+
+/*compare register styles & Overlay code*/
+.layer-outer, .blkRound{/*width:470px; margin:0 auto; */border:2px solid #5e5e5e; padding:10px 15px 15px; font-family:Tahoma, Geneva, sans-serif; background:#fff;width:auto;box-sizing:content-box;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;}
+.layer-outer .layer-title{margin-bottom:15px}
+.layer-outer .layer-contents h5{font:700 14px Arial, Helvetica, sans-serif; color:#000; margin-bottom:5px}
+.layer-outer .layer-scroll{height:375px; overflow:auto; padding-right:15px}
+.layer-outer .layer-title h4, .layer-title .title{font-size:18px; font-weight:bold; margin-right:25px; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif}
+.layer-outer .layer-title h4 span, .layer-title .title span{margin:0 !important; padding:0 !important; font-size:18px !important}
+.layer-outer .layer-title .close,.layer-head .close{background-position:0px -195px !important; width:19px; height:16px; top:5px; right:-4px; position:relative; float:right;}
+.layer-outer .pointer-cursor,.pointer{cursor:pointer}
+
+ul.compare-college-list{width:100%;}
+ul.compare-college-list li{margin-bottom:10px; font-size:14px;color:#4a4a4a;}
+.green-tick-mark{background-position:-93px -97px !important; width:14px; height:11px; margin-right:10px;}
+.shortlist-widget{background:#fbfbfb; border:1px solid #e1e1e1; padding:10px 15px; margin:25px 0 0; float:left}
+.shortlist-widget-head{color:#4a4a4a; font-size:16px; border-bottom:2px solid #ee9c64; padding-bottom:10px}
+.shortlist-widget-head p{color:#959494; font-size:13px;margin-top:2px;}
+.shortlist-list{margin:40px 0 0px 0;width:640px;}
+.shortlist-list ul{float:left; margin-bottom:10px;}
+.shortlist-list ul li{width:131px; padding:40px 10px; border:1px solid #f3f3f3; background:#fff; color:#9b9b9b; font-size:12px; line-height:16px; text-align:center; float:left; margin-right:8px; -moz-box-shadow:2px 2px 2px #ccc;-webkit-box-shadow:2px 2px 2px #ccc;box-shadow:2px 2px 2px #ccc; position:relative;}
+.shortlist-list ul li.last{margin-right:0;border-radius:0;}
+.shortlist-list ul li strong{color:#222; font-size:14px; margin-bottom:6px; display:block; font-weight:normal;}
+.shrtlist-icon-box{width:28px;background:#fff; position:absolute; top:-14px; left:40%; height:28px;}
+.placmnt-sml-icn, .readRvw-sml-icn, .askCurrent-sml-icn, .getAlert-sml-icn{background-position:-144px 0px; width:22px; height:21px; position:relative; top:4px;}
+.readRvw-sml-icn{background-position:-144px -26px;}
+.askCurrent-sml-icn{background-position:-144px -51px;}
+.getAlert-sml-icn{background-position:-144px -76px;}
+.shrtlist-btn{color:#fff !important; font-size:14px; background:#e97424; padding:8px 25px; display:inline-block; text-decoration:none !important;}
+.shrtlist-star-icon{background-position:-138px -213px; width:16px; height:16px; vertical-align:middle; margin-right:5px; top:-1px; position:relative;}
+.registration-layer{width:610px; margin:0 auto; font-family:Tahoma, Geneva, sans-serif;}
+.registration-head{padding:12px 15px; background:#e6e6e6; color:#000b3e; font-size:18px;}
+.reg-star-box{background:#e17836; -moz-border-radius:2px; -webkit-border-radius:2px; border-radius:2px; display:inline-block; width:20px; margin-right:10px; padding:2px;}
+.register-star-icon{background-position:-115px -213px !important; width:20px; height:20px; vertical-align:middle;}
+.registration-form{background:#fff; padding:15px;}
+.registration-left-col{width:280px; float:left}
+.registration-right-col{width:240px; border:1px solid #d3d3d3; -moz-border-radius:2px; -webkit-border-radius:2px; border-radius:2px; padding:15px 20px;width:280px !important;}
+.reg-shortlist-title{color:#4a4a4a; font-size:14px; font-weight:bold; margin-bottom:15px;}
+.shortlist-sec{color:#7d7d7d; margin:15px 0 0; float:left;font-size: 12px;font-family: tahoma;}
+.shortlist-details strong{font-weight: bold;}
+.shortlist-details p{font-size: 12px;}
+.shortlist-sec .last{margin-bottom:0;}
+.shortlist-col{margin-bottom:15px;}
+.exam-right-col .registration-right-col{padding:15px 17px;}
+.exam-right-col .shortlist-sec{margin-bottom:20px;}
+.exam-right-col .shortlist-col{margin-bottom:5px;}
+.placmnt-data-icon,.read-rvw-icon, .ask-current-icon, .get-alert-icon{background-position:-110px 0 !important; width:30px; height:30px; float:left; position:relative; top:2px;}
+.read-rvw-icon{background-position:-110px -33px !important;}
+.ask-current-icon{background-position:-110px -64px !important;}
+.get-alert-icon{background-position:-110px -97px !important;}
+.shortlist-details{margin-left:45px;}
+.bro-sml-icon{background-position:-144px -101px; width:17px; height:17px; margin-right:5px; vertical-align:middle;}
+.shortlist-layer .shortlist-pointer{background-position:-164px -101px; width:15px; height:13px; position:absolute; right:50px; top:-10px;}
+.shortlist-title{background:#ea782b; padding:8px 12px; color:#fff; font-size:14px; text-align:left; line-height:15px;}
+.star-large-icon{background-position:-115px -236px; width:25px; height:25px; margin-right:10px; vertical-align:middle; float:left; top:2px; position:relative}
+.shortlist-detail-list{background:#f3f3f3; padding:10px;  font-size:13px; float:left; width:100%; box-sizing:border-box; text-align:left; -moz-box-sizing:border-box;-webkit-box-sizing:border-box; box-sizing:border-box; border:1px dashed #ebebeb;}
+.review-shortlist-icn{background-position:-172px -23px;}
+.askCurrent-shortlist-icn{background-position:-172px -46px;}
+.getAlert-shortlist-icn{background-position:-172px -68px;}
+.shortlist-detail-list ul li{float:left; width:49%;}
+.shortlist-detail-list ul li.last{margin-bottom:0;}
+.shortlist-detail-list ul li a{margin-left:10px;color:#3b3b3b !important; text-decoration:none !important}
+.cate-shrtlist-widget .shortlist-list{width:711px}
+.cate-shrtlist-widget{width:100%; margin:0; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; padding:20px 35px;}
+.cate-shrtlist-widget .shortlist-list ul li{margin-right:31px;}
+.cate-shrtlist-widget .shortlist-list ul li.last{margin-right:0;}
+.modalDialog_transparentDivs{filter:alpha(opacity=40);opacity:0.4;background-color:#000;z-index:105;position:absolute;}
+.modalDialog_contentDiv{border:0px solid #FFF;padding:2px;z-index:1005;position:absolute;background-color:transparent;}
+.modalDialog_contentDiv_shadow{z-index:90;position:absolute;background-color:#transparent;filter:alpha(opacity=30);opacity:0.3;}
+.icon-Home, .icon-Institutes, .icon-Discussions,.icon-AskExperts,.icon-ApplyOnline, .icon-News, .icon-Faq, .icon-Rankings, .icon-CollegePredictor ,.icon-Exams ,.help-tool-tip .pointer, .info-pointer, .layer-title .close , .layer-head .close, .dropdwn-arrow, .data-source-logo, .examRslt-icon, .opt-arr-u, .opt-arr-d, .new-icon-1, .new-icon-2, .orange-arrow, .common-sprite, .icon-studentMentor, .compare-sprite{background:url(../images/common-sprite-v1.png) no-repeat; display:inline-block}
+a:link,a:active,a:visited,a:hover{color:#008489; text-decoration:none}
+.float_L, #blogNavigationTab LI SPAN {float: left;font-size: 12px;}
+.txt_align_r {text-align: right;}
+.layer-contents div a {font-size: 12px;}
+#registration-box-layer ul li p{font-size: 12px;}

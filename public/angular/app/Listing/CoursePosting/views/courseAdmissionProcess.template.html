@@ -1,0 +1,59 @@
+<div class="row" id="course_admission_process_form">
+    <div [mysize]="'12'">
+        <div class="x_panel">
+            <div [class.x_title]="opened">
+                <ul class="nav navbar-left panel_toolbox">
+                    <li><a class="collapse-link" (click)="toggle()"><i [class]="opened?' fa fa-chevron-up':' fa fa-chevron-down'"></i></a></li>
+                </ul>
+                <h2>Admission Process <img class="helperText" id="admission_process" src="/public/images/tooltip.png" width="20px" style="padding-right:0px" (click)="toolTipNotify('admission_process',$event)"></h2>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content" [formGroup]="courseAdmissionProcess"  [hidden]="!opened">
+            <div formArrayName="admission_process" *ngIf="initialized">
+                <div *ngFor="let item of courseAdmissionProcess.controls.admission_process.controls; let rowIndex=index;let rowLast = last;">
+                    <div [formGroup]="courseAdmissionProcess.controls.admission_process.controls[rowIndex]">
+                        <div class="form-group">
+                            <h4 [mysize]="'3'">Stage {{rowIndex + 1}}</h4>
+                        </div>
+                        <div class="form-group">
+                            <div [mysize]="'3'"><label>Name</label></div>
+                            <div mysize="3">
+                                <select name="eventType" #t (change)="addControlForOthers(rowIndex,t.value)" formControlName="admission_name">
+                                    <option value="">Select Event Type </option>
+                                    <option *ngFor="let item of courseStaticData?.stage_names" value="{{item.value}}"> {{item.label}}</option>
+                                </select>
+                                <span class="help-block text-danger">
+                                    <span *ngIf="courseAdmissionProcess.controls.admission_process.controls[rowIndex]?.errors?.validateOneOrNoneFormGroup?.admission_name">Admission Name is required</span>
+                                </span>                      
+                            </div>
+                            <div mysize="4" *ngIf="courseAdmissionProcess.controls.admission_process.controls[rowIndex].controls.admission_name?.value == 'Others'">
+                                <input type="text" formControlName="admission_name_others" />
+                                <span class="help-block text-danger">
+                                    <span *ngIf="courseAdmissionProcess.controls.admission_process.controls[rowIndex].controls?.admission_name_others?.errors?.required">Admission Name Other is required</span>
+                                    <span *ngIf="courseAdmissionProcess.controls.admission_process.controls[rowIndex].controls?.admission_name_others?.errors?.maxlength">{{courseAdmissionProcess.controls.admission_process.controls[rowIndex].controls?.admission_name_others?.errors?.maxlength}}</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div [mysize]="'3'"><label>Description</label></div>
+                            <div [mysize]>
+                                <textarea type="text" formControlName="admission_description"></textarea>
+                                <span class="help-block text-danger">
+                                    <span *ngIf="courseAdmissionProcess.controls.admission_process.controls[rowIndex]?.errors?.validateOneOrNoneFormGroup?.admission_description">Admission Description cannot be empty</span>
+                                    <span *ngIf="courseAdmissionProcess.controls.admission_process.controls[rowIndex].controls?.admission_description?.errors?.maxlength">{{courseAdmissionProcess.controls.admission_process.controls[rowIndex].controls?.admission_description?.errors?.maxlength}}</span>
+                                    <span *ngIf="courseAdmissionProcess.controls.admission_process.controls[rowIndex].controls?.admission_description?.errors?.minlength">{{courseAdmissionProcess.controls.admission_process.controls[rowIndex].controls?.admission_description?.errors?.minlength}}</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div [mysize]="'9'" class="control-label">
+                            <a href="javascript:void(0);" *ngIf="courseAdmissionProcess.controls.admission_process.controls.length > 1" (click)="removeAdmissionProcess(rowIndex)" class="btn cmsButton cmsFont">Remove</a>
+                            <a href="javascript:void(0);" *ngIf="rowLast" (click)="addAdmissionProcess()" class="btn cmsButton cmsFont">+ Add More</a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

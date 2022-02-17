@@ -1,0 +1,507 @@
+#listing-cont{padding:0 10px 10px 10px; font-family:Tahoma, Geneva, sans-serif; color:#000}
+#listing-cont .universal-select{width:98%; overflow:auto}
+.localityDiv li{margin-bottom:0px !important;}
+.sprite-bg, .btn-arrow, .min-sal, .max-sal, .avg-sal,.rUp,.rDn{background:url(/public/images/listing-sprites.png) no-repeat; display:inline-block; overflow:hidden;}
+#page-header, #inst-details, #page-tabs, #page-contents, .section-cont, ul.alumini-ratings, ul.alumini-ratings li, ul.photo-vid, ul.latest-discussion-list li, .desc-details-wrap, .school-branch-cont ul li, .pink-box ul li, ul.sal-statastics li{width:100%; float:left}
+#page-header{clear:left; float:none;background:#FFF;width:100%;z-index:100;}
+.header-sticky{display:none;background: #FFFFFF;position: fixed;z-index:100;box-shadow:0 4px 4px #9d9c8a; -moz-box-shadow:0 4px 4px #9d9c8a; -webkit-box-shadow:0 4px 4px #9d9c8a; padding: 2px 10px; width: 968px !important; height:auto}
+.header-sticky #header-details{width:100%; margin-bottom:2px}
+.header-sticky #header-details .sticky-title{font-size:21px !important}
+.header-sticky #header-details .sticky-title strong{font-size:14px !important}
+.header-sticky #page-tabs{margin-top:0 !important}
+.header-sticky #page-tabs ul li{padding:1px 10px 2px !important; font-size:13px !important}
+.header-sticky #page-tabs ul li.active{padding:1px 10px 3px !important}
+#listing-cont .orange-button{font-size:14px !important; padding:4px 8px}
+.btn-arrow{background-position:-45px -34px; width:7px; height:12px; margin:1px 0 0 3px; vertical-align:middle}
+#header-details{float:left;}
+#header-details h1, .sticky-title{font-size:24px; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; color:#000; font-weight:normal; margin-bottom:10px}
+#header-details h1 strong, .sticky-title strong{font-size:16px; color:#3d3d3d; font-weight:normal; font-family:Tahoma, Geneva, sans-serif}
+.see-all-link{font-size:12px; font-family:Arial, Helvetica, sans-serif}
+.see-all-link span{background-position:-6px 0; width:4px; height:7px; margin-left:2px; vertical-align:middle}
+#header-logo{float:right; text-align:right;}
+.head-office{background-position:-88px -10px; width:54px; height:10px; margin-right:5px; *vertical-align:middle}
+#inst-details{font-family:Arial, Helvetica, sans-serif}
+#inst-details strong{color:#3c3c3c; font-weight:normal; margin-right:20px;}
+#inst-details a{float:left}
+.contact-icn{background-position:0 -10px; width:21px; height:13px; margin:0px 5px 0 0; float:left}
+.email-icn{background-position:-24px -10px; width:16px; height:11px; margin:2px 4px 0 15px; float:left}
+.sms-icn{background-position:-42px -10px; width:11px; height:16px; margin:0px 3px 0 15px; float:left}
+.save-icn{background-position:-55px -10px; width:14px; height:14px; margin:0px 3px 0 15px; float:left}
+.alumini-icn{background-position:-42px -83px; width:27px; height:20px; margin:0px 7px 0 0px; vertical-align:bottom; *vertical-align:middle}
+.apply-icn{background-position:-71px -10px; width:14px; height:11px; margin:2px 2px 0 15px; float:left;}
+.opened-arrow, .closed-arrow{background-position:0px -31px; width:21px; height:21px; margin:0px 2px 0 0px; float:left;}
+.closed-arrow{background-position:-22px -31px;}
+#page-tabs{border-bottom:1px solid #DADADA; margin-top:10px;}
+#page-tabs ul{padding: 0 0 0 15px; float:left; width: 75%}
+#page-tabs ul li{background-color: #F5F5F5; position: relative; top: 1px; cursor:pointer; margin:0 7px 0 0; padding:8px 16px 7px; float:left; border-color:#DADADA; border-style:solid solid none; border-width:1px 1px 0; font-size:16px; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;}
+#page-tabs ul li.active{background-color:#fff; padding:8px 16px; font-weight:bold}
+#page-tabs ul li a{color:#000;text-decoration:none} 
+#page-contents{padding:15px 0;}
+#listing-left-col{width:685px; float:left;}
+#listing-left-col #child-left{width:408px; float:left;}
+#listing-left-col #child-right{width:260px; float:right;}
+#listing-right-col{width:265px; float:right;}
+.section-cont{padding-bottom:25px;}
+p.sub-title{margin-bottom:10px}
+.section-cont .big-pic{width:288px; height:201px; overflow:hidden; float:left}
+.section-cont .thumbnails{width:119px; float:right}
+.thumbnails img{float:left}
+h2.section-title, h3.section-sub-title, .section-cont-title,h4.section-title , .section-sub-title{font:bold 16px "Trebuchet MS", Arial, Helvetica, sans-serif; margin-bottom:10px}
+h3.section-sub-title, .section-sub-title{font-size:15px; margin-bottom:3px;}
+.section-cont-title{background:#f0f0f0; border-bottom:1px solid #dddddd; padding:4px 8px; overflow:hidden; *height:0.01%}
+h2.section-title span{font-size:14px}
+h2.section-title strong{font-size:12px; font-weight:normal}
+ul.bullet-items{}
+ul.bullet-items li{margin:0 0 7px 18px; list-style-type:disc !important; color:#767676; line-height:17px}
+ul.bullet-items p{color:#000}
+ul.bullet-items p span{color:#c5c5c5; margin:0 2px}
+ul.bullet-items label{color:#3d3d3d}
+.bld{font-weight:bold !important}
+ul.sal-statastics{width:182px; float:left; border-left:1px solid #d8d8d8; font:normal 11px Arial, Helvetica, sans-serif; color:#555555; padding-top:3px}
+ul.sal-statastics li{padding:0; margin-bottom:10px;}
+.min-sal{border:1px solid #cce3f9; background-color:#fff; background-position:0 -108px; background-repeat:repeat-x}
+.max-sal{border:1px solid #f7ed76; background-color:#fff; background-position:0 -137px; background-repeat:repeat-x}
+.avg-sal{border:1px solid #bef7a9; background-color:fff; background-position:0 -122px; background-repeat:repeat-x}
+.sal-labels{width:70px; padding:4px 0px 0 5px; float:left; font-family:Arial, Helvetica, sans-serif}
+.sal-labels label{margin-bottom:13px; display:block}
+.scale-bg{background-position:0 -53px; width:176px; height:11px; position:relative; margin:0 0 0 -2px !important; padding:0 !important; overflow:hidden;}
+.scale-figure{font-size:11px; color:#afafaf; padding:2px 0 0 74px; width:190px}
+.scale-figure label{width:29px; float:left;}
+.scale-figure label.third{padding-left:4px}
+.scale-figure label.fourth{padding-left:4px; padding-right:9px}
+.scale-figure label.sixth{width:16px; padding-left:4px}
+ul.alumini-ratings{font-family:Arial, Helvetica, sans-serif}
+ul.alumini-ratings li{margin-bottom:3px;}
+ul.alumini-ratings label{width:138px; float:left; color:#0065de; padding:2px 0 0 7px;}
+ul.alumini-ratings div{width:110px; float:left}
+ul.alumini-ratings img{vertical-align:middle}
+ul.alumini-ratings div span{font-size:11px; vertical-align:middle; margin-left:2px}
+ul.photo-vid li{margin:0 3px 0 7px}
+ul.photo-vid li, ul.photo-vid li img{width:72px; height:42px; float:left}
+p.view-all-pic{font-size:11px; padding:8px 0 0 7px; clear:left; color:#aeaeae}
+.big-img-cont{text-align:center; margin-bottom:12px}
+p.discussion-header{margin-bottom:12px; clear:both;}
+p.discussion-header span{margin-top:8px; display:block}
+ul.latest-discussion-list{height:220px; overflow:hidden;}
+ul.latest-discussion-list li{}
+ul.latest-discussion-list p{margin-bottom:10px; clear:left}
+ul.latest-discussion-list .figure{width:37px; float:left; padding-top:3px}
+ul.latest-discussion-list .details{line-height:17px; margin-left:45px}
+.ask-abt-outer{padding:3px; border:1px solid #dbdbdb; border-radius:8px; -moz-border-radius:8px; -webkit-border-radius:8px; box-shadow:inset 0 1px 3px #e0e0e0; -moz-box-shadow:inset 0 1px 3px #e0e0e0; -webkit-box-shadow:inset 0 1px 3px #e0e0e0; color:#333; font-size:14px; font-family:Arial, Helvetica, sans-serif; overflow:hidden; _height:30px}
+.ask-abt-field{width:292px; padding:3px; font:normal 16px Arial, Helvetica, sans-serif; border:0 none; color:#444; float:left}
+.desc-details-wrap{margin-top:20px}
+.scholl-desc{line-height:17px}
+.desc-title-box, .title-block{background-color:#eef4ff; padding:6px 5px; border:1px solid #e0eaff; font-size:12px; font-weight:normal; overflow:hidden; box-shadow:0 1px 3px #dbdbdb; -moz-box-shadow:0 1px 3px #dbdbdb; -webkit-box-shadow:0 1px 3px #dbdbdb; margin-bottom:15px; *height:0.01%;}
+.desc-title-box strong, .title-block strong{font:bold 16px "Trebuchet MS", Arial, Helvetica, sans-serif; display:block; margin-left:28px}
+.desc-title-box p{float:left; padding-left:10px; color:#d7d7d7; padding-top:4px}
+h6.sub-title{font:normal 15px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#000000; margin-bottom:5px;}
+.school-branch-cont{margin-top:40px; *height:0.01%}
+.school-branch-cont{background:#f3ffe2; padding:8px 8px 3px; overflow:hidden}
+.school-branch-cont ul li{margin-bottom:10px}
+.school-branch-cont h6{font-size:14px; margin-bottom:10px; padding-bottom:4px; border-bottom:1px solid #d8faa8; font-weight:normal}
+.school-branch-cont label{font-weight:bold; width:100px; text-align:right; padding-right:8px; float:left; font-size:14px}
+.school-branch-cont p{width:555px; float:left; color:#a5a6a7; padding-top:2px}
+.pL-7{padding-left:7px}
+.pL-15{padding-left:15px}
+.pT-8{padding-top:8px}
+.shadow-box{-moz-box-shadow:0px 0px 3px #cdcdcd;-webkit-box-shadow:0px 0px 3px #cdcdcd;box-shadow:0px 0px 3px #cdcdcd;}
+.contact-detail-cont{border:1px solid #f2f2f2; background:#fafafa; padding:12px;}
+.contact-detail-cont ul li{margin-bottom:12px;}
+.gray-rule{background:#e1dfdf; height:1px; overflow:hidden; width:100%; margin:20px 0}
+.pink-box{background:#fffcde; border:1px solid #f2f2f2; position:relative;}
+.pink-box h2, .ask-ques-box h2, .alumina-title{font-size:18px; font-weight:normal; margin-bottom:12px; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif}
+.alumina-title{width:600px; float:left;}
+/*.pink-box ul li{margin-bottom:15px;}*/
+.pink-box ul li label{margin-bottom:5px; display:block}
+.pink-box .universal-txt-field{width:96%}
+.pink-box .universal-select{width:100% !important}
+.big-button, .big-button-inactive{border:2px solid #a15d19; background-color: #e97525; background-image: -webkit-gradient(linear, left top, left bottom, from(#f8a552), to(#e97525)); background-image: -webkit-linear-gradient(top, #f8a552, #e97525); background-image: -moz-linear-gradient(top, #f8a552, #e97525); background-image: -o-linear-gradient(top, #f8a552, #e97525); background-image: linear-gradient(to bottom, #f8a552, #e97525); padding:3px 0; color:#fff; font:bold 22px Arial, Helvetica, sans-serif; text-align:center; border-radius:12px; -moz-border-radius:12px; -webkit-border-radius:12px; text-shadow:1px 1px 1px #9d4716; -moz-text-shadow:1px 1px 1px #9d4716; -webkit-text-shadow:1px 1px 1px #9d4716; width:215px; cursor:pointer}
+.big-button-inactive{border:solid 2px #929292; background-color:#acacac; background-image:none; color:#c5c6c8; text-shadow:1px 1px 1px #7d746d; -moz-text-shadow:1px 1px 1px #7d746d; -webkit-text-shadow:1px 1px 1px #7d746d; width:215px; cursor:auto}
+.mL-10{margin-left:10px;}
+.listing-girl{background:url(/public/images/listing-girl.jpg) 0 0 no-repeat; width:116px; height:164px; position:absolute; right:80px; bottom:0;}
+p.info{font-size:11px; padding:10px 0 0 15px; line-height:17px}
+.view-all-opt{font-weight:bold; color:#bbbbbb}
+.instituteLists{padding-left:7px}
+.instituteLists ul li{border-bottom: 1px solid #EDEDED; float:left; margin-bottom:8px;  padding-bottom:20px; width: 100%;}
+.instituteLists ul li.last{border:0 none; margin:0; padding:0}
+.collegeDetailsWrapper{float: left; width: 100%;}
+.collegePic{float: left; width: 124px;}
+.collegeDescription{float: left; width: 538px;padding-left:12px;}
+.aimaRating{float: left; padding: 2px 12px 0 0;}
+.ratingBox{background: #F68E1B; border: 1px solid #D67413; color: #FFFFFF; font-size: 12px; font-weight: bold; padding: 2px 5px; text-align: center;}
+.alumniRating{float: left;}
+.alumniRating img, .alumniRating span{vertical-align:middle}
+.collegeDescription h5{font-size: 12px; line-height: 18px;}
+.collegeDescription h5 span{font-weight: normal;}
+.feeStructure{color: #717171; margin-top: 5px;}
+.feeStructure span{color: #000000;}
+ul.facilities{margin: 10px 0 !important;}
+ul.facilities li{border: medium none; color: #767676; float: left; margin: 0 0 0 18px; padding: 0 10px 0 0; width: auto; list-style:disc !important;}
+ul.facilities li p{color:#000}
+#vid-col{width:427px; float:left;}
+#photo-col{width:490px; float:right;}
+.next-prev{float:right; padding-top:3px}
+.next-prev .prev, .next-prev .next{background-position:0 -83px; width:19px; height:17px; display:inline-block; float:left; margin-left:5px}
+.next-prev .next{background-position:-21px -83px;}
+.vid-block{width:427px;background: url("/public/images/loader_hpg.gif") no-repeat scroll center center transparent;}
+.photo-paging{float:right; font-size:12px; font-weight:normal; color:#aeaeae; font-family:Arial, Helvetica, sans-serif; padding-top:4px}
+.photo-paging span{color:#000000; margin:0 2px}
+.photo-paging a span{font-size:14px;}
+ul.photo-vid-lists{margin-top:12px}
+ul.photo-vid-lists li{float:left; background:#fff; border:5px solid #fff; padding:3px; margin-right:22px}
+ul.photo-vid-lists li.active{border:5px solid #ececec;}
+ul.photo-vid-lists li label{display:block; margin:3px 0}
+ul.photo-vid-lists .thumb-box{width:123px; height:100px; position:relative; background: url("/public/images/loader_hpg.gif") no-repeat scroll center center transparent;}
+.title-block{font-size:14px; font-family:Arial, Helvetica, sans-serif}
+.title-block strong{font-size:18px; font-weight:bold; margin-right:25px;margin-left:0;float:left;}
+.title-block p{float:left}
+.rating-cont{float:left; padding-right:20px;}
+.rating-cont img, .rating-cont span{vertical-align:middle}
+.rating-cont b{color:#b8b8b8; font-weight:normal; margin-left:20px}
+.alumini-content{padding-left:7px; font-family:Arial, Helvetica, sans-serif}
+.alumini-content p{line-height:17px}
+.padd-10{padding:10px;}
+.cols-title, .cols-title2{background-color:#ffe14d; background-position:0 -210px; background-repeat:repeat-x; padding:3px 10px 3px; display:block; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:18px; line-height:19px}
+.cols-title p, .cols-title2 p{margin-left:62px; padding-top:3px}
+.cols-title2 p{padding-top:12px;}
+.inst-icn, .inst-icn2{background-position:0 -154px; width:56px; height:54px; float:left}
+.play-icn{background-position:-74px -82px; width:35px; height:24px; position:absolute; bottom:5px; right:5px}
+/*.inst-icn2{position:absolute; top:-8px; left:10px}*/
+.select-loc{font-size:14px; margin-bottom:12px}
+.select-loc label{color:#307800}
+.select-loc span{font-size:11px; color:#0065DE}
+.vam{vertical-align:middle}
+.bottom-girl3{background:url(/public/images/girl2.png) no-repeat scroll 493px 52px #FFFCDE}
+.bottom-girl, .bottom-girl2{background:url(/public/images/girls.png) 0 0 no-repeat; width:161px; height:216px; display:inline-block; float:right; margin:10px 20px 0 0}
+.bottom-girl2{width:136px; height:345px; position:absolute; right:-15px; top:35px; background-position:-163px 0}
+.bottom-girl-response{background:url(/public/images/frmGirl.gif) 0 0 no-repeat; bottom: 0;float: right;height: 216px;position: absolute;right: 10px;width: 194px;}
+.find-form-cols{width:242px; float:left; padding-right:15px}
+.top-aligner{margin-top:18px}
+.multi-layer-contents{color:#b0b0b0; line-height:18px}
+.multi-layer-contents span{margin:0 4px}
+ul.layer-col{float:left; width:150px}
+.course-details{padding:0 0 10px 10px; margin-bottom:12px; line-height:19px;}
+.course-details table{border-collapse:collapse;}
+.mbot-0{margin-bottom:0}
+h1, h2, h3, h4, h5, h6 {display: block;}
+.user-content ul, .user-content li{color:#000 !important;margin:0 0 7px 10px; list-style-type:disc !important; color:#767676; line-height:17px}
+.courseOthers,.instituteOthers,.courseReadLess,.instituteReadLess {display:none;}
+/*CSS For common_new.css*/
+#breadcrumb{font:normal 11px Tahoma, Geneva, sans-serif; margin-bottom:10px; width:100%; float:left;}
+#breadcrumb ul li{float:left;}
+.bc-arrow{background:url(/public/images/listing-sprites.png) 0 0 no-repeat; display:inline-block; overflow:hidden; width:4px; height:7px; overflow:hidden; margin:0 4px; *vertical-align:middle}
+.spacer1{height:1px; overflow:hidden}
+.layer-contents{ border-radius: 0 0 4px 4px; padding: 10px 10px 0 10px; *height:0.01%}
+.layer-contents h5{font:700 14px Arial, Helvetica, sans-serif; color:#000; margin-bottom:5px}
+.layer-scroll{overflow:auto; padding-right:15px}
+.pointer-cursor{cursor:pointer}
+/*over view tab vertical accordian */
+.accordion { text-align: left; font: 'Helvetica Neue', Verdana, Arial, sans-serif }
+.accordion > ol { position: relative; overflow: hidden; height: 100%; margin: 0; padding: 0; list-style-type: none;border:1px solid #E0EAFF; border-left:none; }
+.accordion .slide > h2 { color: black;font-size: 16px;font-weight: normal;margin: 0; z-index: 100; position: absolute; top: 0; left: 0; -webkit-transform: translateX(-100%) rotate(-90deg); -webkit-transform-origin: right top; -moz-transform: translateX(-100%) rotate(-90deg);-moz-transform-origin: right top; -o-transform: translateX(-100%) rotate(-90deg); -o-transform-origin: right top; transform: translateX(-100%) rotate(-90deg); transform-origin: right top;-ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); }
+.accordion .slide > h2 span { display: block; padding-right: 8%; text-align: right; height: 90%;margin-top: 5px; -moz-user-select: none;-khtml-user-select: none;user-select: none;}
+.accordion .slide > h2 b { display: inline-block; position: absolute; top: 13%; left: 10%; text-align: center; -webkit-transform: rotate(90deg); -moz-transform: rotate(90deg); -o-transform: rotate(90deg); transform: rotate(90deg);-ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);}
+.accordion .slide > h2:hover { cursor: pointer }
+.accordion .slide > div { height: 100%; position: absolute; top: 0; z-index: 10; overflow: hidden; overflow-y: auto; background: white; }
+.accordion noscript p { padding: 10px; margin: 0; background: white ;}
+.accordion .slide > div .user-content{padding:10px;font-family: Tahoma,Geneva,sans-serif;line-height:145%}
+.accordion .slide > div h3{padding:10px;font: 16px "Trebuchet MS",Arial,Helvetica,sans-serif;font-weight:bold}
+.basic .slide > h2 { background: #EEF4FF; color: black; line-height: 116%;border:1px solid #E0EAFF;margin: -1px -1px -1px 0px; }
+.basic .slide > h2.selected{ background: #C9DAF8;font-weight:bold}
+.rounded, .rounded > ol { -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; border-radius: 2px }
+.rounded .slide > h2 span { -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; border-radius: 4px }
+/******************************************** IE */
+.ie .slide > h2 b { top: 42%; left: 5% }
+.ie9 .slide > h2 { filter: none; -ms-transform: translateX(-100%) rotate(-90deg); -ms-transform-origin: right top }
+.ie8.basic > ol {border-right: 2px solid #E0EAFF }
+/*End*/
+/*#askWidget {background: url(/public/images/loader_hpg.gif) no-repeat scroll center center transparent;height:400px}*/
+.ana-box{margin-bottom:12px; padding-left:5px; width:99%; float:left}
+.ana-user-pic, .ana-user-pic img{width:58px; height:52px; float:left}
+.ana-details{width:600px; float:left; padding-left:12px;}
+.ana-details h5{font-size:13px; font-weight:normal; margin-bottom:10px}
+.ana-details h5 label{color:#999999; font-size:11px}
+.ques-icn{width:21px; height:16px; float:left; background-position:-57px -31px; margin-top:4px}
+.ans-icn{width:19px; height:13px; float:left; background-position:-80px -33px; margin-top:5px}
+.ask-icn{width:26px; height:32px; background-position:-146px 0px; margin:2px 8px 0 0; display:inline-block; vertical-align:middle}
+.star-icn{width:14px; height:15px; background-position:-106px -31px; margin-top:2px; display:inline-block; vertical-align:bottom}
+.ques-cont, .ans-cont{width:562px; float:left; padding-left:10px; line-height:17px; color:#4f4f4f}
+.ans-cont{color:#000}
+.ask-ques-box{background-color:#eef4ff; border:1px solid #e0eaff; padding:10px; margin-bottom:20px}
+.ask-ques-box h2{font-weight:bold; margin-bottom:2px !important; *height:0.01%}
+.ask-user-info{width:220px; float:left; margin-top:5px}
+.ask-user-info label{width:100%; float:left;}
+.ask-user-info label span{color:red; font-size:14px;}
+.ask-user-info .universal-txt-field{width:90% !important}
+.aqAns s {clear: both; display: block; font-size: 1px; font-style: normal; height: 1px;  overflow: hidden;}
+.aqAns div.imgBx{float: left;width: 58px;}
+.fbkBx div.imgBx{float: left; width: 36px;}
+.aqAns div.cntBx{margin-left: 68px;}
+.fbkBx div.cntBx{margin: 0 5px 0 45px;}
+.rUp{background-position: -112px -83px; padding-right: 25px; font:normal 11px Tahoma, Geneva, sans-serif; float:left; border-right:1px dotted #bfbfbf; margin-right:5px}
+.rDn{background-position: -153px -83px; padding-right: 25px; font:normal 11px Tahoma, Geneva, sans-serif; float:left;}
+.forA img{vertical-align:middle}
+.quesAnsBullets {background: url("/public/images/shikIcons.png") no-repeat scroll 0 -673px transparent; padding: 0 0 0 11px;}
+.fbkBx {background:#ECECEC; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; margin-bottom: 10px; padding: 6px 9px 6px 6px; width: 507px;}
+.ftBx, .fbkBx .cntBx .ftxArea{border: 1px solid #DBDBDB; border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px; box-shadow:0 1px 2px #E0E0E0 inset; -moz-box-shadow:0 1px 2px #E0E0E0 inset; -webkit-box-shadow:0 1px 2px #E0E0E0 inset; color: #757575; font-family: Tahoma,Arial; font-size: 11px; overflow: auto; padding:7px 5px 4px 7px; width: 528px;}
+.fbkBx .cntBx .ftxArea {width:98% !important;}
+#securityCode {width: 108px !important;}
+.instituteLists{}
+.instituteLists ul{margin-top:15px}
+.instituteLists ul li{border-bottom:1px solid #ededed; padding-bottom:12px; margin-bottom:12px; width:100%; float:left}
+.instituteListsDetails{float:left; width:484px;}
+.collegeDetailCol{width:466px; float:left;}
+.collegeDetailCol h4, .collegeDetailCol h3, .college-title{font-size:16px;}
+.college-title{font-weight:bold;}
+.collegeDetailCol h4 span, .collegeDetailCol h3 span, .college-title span{font-size:12px; font-weight:normal}
+.collegeDetailCol em{color:#6F6F6F; font-size:12px; font-weight:bold; margin-top:3px; clear:both; display:block}
+.collegeDetailsWrapper{float:left; width:100%; margin-top:15px}
+.collegePic{width:118px; height:98px; float:left}
+.collegeDescription{width:320px; float:right;}
+.collegeDescription h5{font-size:12px; line-height:18px}
+.collegeDescription h5 span{font-size:11px; font-weight:normal; line-height:normal}
+.aimaRating{float:left; padding-right:12px;}
+.ratingBox{background:#f68e1b; border:1px solid #d67413; text-align:center; font-weight:bold; color:#FFFFFF; padding:0px 5px; font-size:12px}
+.alumniRating{float:left}
+.alumniRating span.rateNum{font-size:11px}
+.feeStructure{font-size:11px; color:#717171; margin-top:5px}
+.feeStructure span{color:#000}
+.feeStructure b{color:#d0d0d0; margin:0 3px; font-weight:normal}
+ul.facilities{margin:10px 0 !important}
+ul.facilities li{list-style:none !important; float:left; font-size:11px; color:#000000; margin:0; padding:0 10px 2px 0px; border:none; width:auto}
+ul.facilities li span{width:4px; height:4px; float:left; background-color:#c1c2c6; margin:5px 5px 0 0; overflow:hidden}
+ul.facilities li strong {float:left; font-weight:normal}
+.description { border-bottom: 1px solid #EDEDED;clear: left;  display: block; font-size: 18px;  font-weight: bold;  margin-bottom: 8px;  padding-bottom: 3px;}
+.applyTab{background:#F48637 !important;color:#fff;font-weight:bold;margin-bottom:2px;border:none !important;font-size:12px}
+.onlineTab{background:#FFF !important;color:#fff;border:none !important;float:right !important;margin:0 !important;padding:0 !important}
+#hiddenFormPartAskInstitute{float:left; width:100%}
+.homeShik_textBoxBorder {background: none repeat scroll 0 0 #FFFFFF; border-color: #636563 #CECBCE #CECBCE; border-right: 1px solid #CECBCE; border-style: solid; border-width: 1px;  height: 27px;  overflow: hidden;}
+.homeShik_searchtextBox{border: 0 none; font-size: 14px; padding: 4px; width: 90%;}
+.cloudBox span{background:url(/public/images/apps-sprite.gif) no-repeat;}
+.cloudBox{position:absolute; z-index:999;width:164px; background-color:transparent !important; display:block}
+.cloudBox span{background-position:0px -859px; width:13px; height:17px; z-index:999; left:9px; position:relative; top:1px; display:block}
+.cloudBox div{background:#fdffc0; padding:8px; width:245px; font-size:12px; float:left; border:1px solid #f9eaa7; position:relative; color:#000; font-weight:normal;border-radius:10px;}
+.onlineAppsListing{color: gray; float: right; position: relative; z-index:99;}
+.onlineAppFormButton{background: url("/public/images/online-app-buttons.gif") no-repeat scroll left -43px; width:195px; height:31px; border:0 none; cursor:pointer}
+.howitWorksLayerWrapListing{position:absolute; left:-175px; top:40px; z-index:9; width:875px;}
+.howitWorksPointerListing{margin-left: 195px !important;}
+.howitWorksPointer, .howitWorksPointer2, .howitWorksPointer3, .howitWorksPointerListing{background-position: -860px -65px !important; display: block; height: 26px; margin-bottom: -3px; margin-left: 790px; position: relative; width: 19px;}
+
+.bestCollege, .saveTime, .saveTime2, .multipleSubmissions, .trackSubmissions, .trackSubmissions2, .genuineForms, .createProfileBtn, .bannerShade, div.slideLeft, div.slideRight, .carouselImg ul li.activeItem span, .carouselBullets ul li, .carouselBullets ul li.activeButton, .selectCollege, .receiveForm, .submitForm, .getUpdates, .onlineResult, .startNowBtn, .pin, .approvalStrip span.approvedStamp, .approvalStrip2 span.approvedStamp, .viewCriteria, .appliedStudents, .applylayerPointer, .eligibilityPointer, .authorisedPointer, .authorisedPointer2, .vertArrow1, .vertArrow2, .howitWorksPointer, .howitWorksPointer2, .howitWorksPointer3, .howitWorksPointerListing, .horArrow1, .horArrow2, #homeBanner, a.onlineAppFormButton2, .customerSupport div.figure{background: url("/public/images/appsHome-sprite.gif") no-repeat scroll 0 0 transparent;}
+.authorisedContent, .howitWorksLayerContent {background-color: #FFFFFF; border: 2px solid #CFCFCF; border-radius: 10px 10px 10px 10px; box-shadow: 0 0 3px #C6C5C5; padding: 15px;}
+.eligibilityBox{font-size: 12px; position: relative; text-align: left; z-index: 999;}
+.howitWorksLayerWrap, .howitWorksLayerWrap2{position:absolute; left:-780px; top:22px; z-index:9999999; width:875px;}
+.howitWorksLayerWrap2{left:45px; bottom:35px; top:auto !important; bottom:71px}
+.howitWorksPointer,.howitWorksPointer2,.howitWorksPointer3, .howitWorksPointerListing{background-position:-860px -65px !important; height:26px; width:19px; display:block; margin-left:790px; margin-bottom:-3px; position:relative}
+.howitWorksPointer2{background-position:right -33px !important; width:29px !important; height:30px !important; margin-left:418px !important; _margin-left:160px !important; margin-bottom:0px !important; margin-top:-2px !important; float:left}
+.howitWorksPointer3{background-position:right -33px !important; width:29px !important; height:30px !important; margin-left:338px !important; _margin-left:160px !important; margin-bottom:0px !important; margin-top:-2px !important; float:left}
+.howitWorksPointerListing{margin-left:195px !important}
+.applylayerContent{background-color: #FEFFCD; border: 2px solid #FFF590; border-radius: 10px 10px 10px 10px; padding: 8px 12px 9px;}
+.applylayerContent ul{margin:0}
+.applylayerContent ul li{margin:0; padding:0; float:left; border:0; line-height:17px; width:100%; list-style-type:none !important}
+.applylayerContent ul li label{color:#757575;}
+.applylayerContent ul li span{fcolor:#000; text-decoration:none;}
+.applylayerContent ul li span.line-through{text-decoration:line-through}
+.applylayerContent ul li strong{color:#d27412}
+.selectCollegeAlign{margin-right: 10px;}
+.selectCollege{background-position: 0 -54px; float: left; height: 96px; width: 69px;}
+.vertArrow1{background-position:-492px -54px; width:50px; height:70px; margin:60px 0 0 3px; float:left}
+.vertArrow2{background-position:-543px -54px; width:50px; height:70px; margin:53px 0 0 3px; float:left}
+.horArrow1{background-position:-596px -54px; width:60px; height:29px; margin:55px 0 0 5px; float:left}
+.horArrow2{background-position:-596px -84px; width:60px; height:29px; margin:55px 15px 0; float:left}
+.submitFormAligner{margin: 20px 0 0 -25px;}
+.submitForm{background-position: -69px -54px; float: left; height: 77px; margin: 20px 0 0 -25px;width: 134px;}
+.receiveForm{background-position: -205px -54px; float: left; height: 83px; width: 80px;}
+.receiveFormAligner{margin-top: 15px;}
+.getUpdates{background-position: -288px -54px;float: left;height: 91px;margin-top: 10px;width: 111px;}
+.getUpdatesAligner{margin: 0 0 0 15px;}
+.onlineResult{background-position: -402px -54px;float: left;height: 91px;margin-top: 15px;width: 92px;}
+ul.howWorksDetail, ul.howWorksLayerDetail{}
+ul.howWorksLayerDetail li.firstItem{margin-right: 30px; width: 130px !important;}
+ul.howWorksLayerDetail li.secItem, ul.howWorksLayerDetail li.thirdItem {margin-right: 24px; width: 150px !important;}
+ul.howWorksLayerDetail li.thirdItem{margin-right: 18px;}
+ul.howWorksLayerDetail li.secItem, ul.howWorksLayerDetail li.thirdItem {margin-right: 24px; width: 150px !important;}
+ul.howWorksLayerDetail li.fourthItem{margin-right: 22px; width: 160px !important;}
+ul.howWorksLayerDetail li.fifthItem{width: 150px !important;}
+ul.howWorksLayerDetail li {float: left; margin-bottom: 5px; text-align: left;}
+#homeBanner div.aside ul li, ul.howWorksLayerDetail li{color: #4B4B4B; float: left; font-size: 13px; line-height: 18px; list-style: none outside none !important; margin-bottom: 15px;  width: 48%;}
+.studentNotice{background: none repeat scroll 0 0 #F9F9F9; color: #4B4B4B !important; font-size: 11px; line-height: 18px; padding: 4px; text-align: left;}
+.howitWorkBtn{padding: 20px 0 10px; text-align: center;}
+.startNowBtn{background-position: -660px -54px; border: medium none; color: #FFFFFF; cursor: pointer; font: bold 20px Georgia,"Times New Roman",Times,serif; height: 29px;
+margin-bottom: 0;padding: 0;text-align: center;text-indent: -10px; width: 148px;}
+ul.howWorksDetail li strong, ul.howWorksLayerDetail li strong{color: #EC7B02;display: block; font-size: 14px !important; font-weight: bold !important; line-height: normal !important;  margin-bottom: 2px; padding-bottom: 4px !important;}
+.eligibilityLayerWrap {left: 10px;  position: absolute; top: 15px; width: 360px; z-index: 99999;}
+.applylayerPointer, .eligibilityPointer {background-position: -824px 0;display: block; height: 31px; margin-bottom: -2px; margin-left: 272px; position: relative; width: 26px;}
+.eligibilityPointer {margin-left: 35px;}
+.course-details ul li {margin:0 0 7px 18px; list-style-type:disc !important}
+.course-details ol li {margin:0 0 7px 18px; list-style-type:decimal !important}
+.call-icn, .call-icn2{background:url(/public/images/call-icn.gif) 0 0 no-repeat; width:44px; height:44px; display:block; float:left; margin-left:8px}
+#last_updated { padding-bottom: 10px; font-size: 11px;font-family:trebuchet ms;}
+.header-sticky #page-tabs > div{padding-top:3px}
+.bestStar{background:#fffcd6 url(/public/images/tagStar.gif) no-repeat left top;float:right;padding:0 10px 4px 26px}
+
+/* added css for inline recommendations*/
+.recomm-box{background:#fff; margin-top:5px}
+.recomm-box .header{border-bottom:1px solid #e4e4e4; padding:10px 10px 15px 10px}
+.recomm-box .header h4{font:normal 16px "Trebuchet MS", Arial, Helvetica, sans-serif; display:block; margin-bottom:10px}
+.recomm-box .header p{background:url(/public/images/tick-bg.gif) 0 1px no-repeat; padding-left:26px; font:normal 12px Tahoma, Geneva, sans-serif}
+.recomm-box .content-details, .content-details{padding:10px; font:normal 13px Tahoma, Geneva, sans-serif; position:relative}
+.content-details p{line-height:20px}
+.content-details h5, .content-details h6{font:normal 14px Tahoma, Geneva, sans-serif; margin-bottom:6px}
+.content-details h6{font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; margin-bottom:8px}
+.content-details .figure{margin-bottom:10px}
+.content-details .bullet-items{margin-top:5px}
+.content-details .bullet-items li{border:0 none !important; padding:0 !important; float:left !important; width:auto !important}
+.content-details .bullet-items li{float:left; margin:0 10px 3px 18px !important}
+.slider-control{padding:10px 3px 3px 0}
+.slider-control .prev-btn, .slider-control .next-btn{background:url(/public/images/slider-control.gif)0 0 no-repeat; width:26px; height:20px; display:inline-block; float:left; cursor:pointer; text-indent:-9999px; outline:0 none;}
+.slider-control .prev-btn{background-position:0px -22px; width:26px}
+.slider-control .next-btn{background-position:-26px 0; width:25px; right:0}
+.content-details .feeStructure{font-size:12px !important}
+.content-details .inst-pic{width:124px; float:left}
+.content-details .inst-details{margin-left:135px}
+.section-row{float:left; width:100%; margin-top:5px}
+ol.ist-list{margin:0; padding:0;}
+ol.ist-list li{border-bottom:1px solid #e3e3e3; float:left; width:100%; margin-bottom:15px; padding-bottom:15px}
+ol.ist-list li.last{border:0 none; margin-bottom:0px;}
+#scrollbar-box{width:675px;}
+#scrollbar-box .viewport {width:655px; height: 380px; overflow: hidden; position: relative;}
+#scrollbar-box .overview { list-style: none; position: absolute; left: 0; top: 0; padding: 0; margin: 0; }
+#scrollbar-box .scrollbar{position: relative; float: right; width:7px;}
+#scrollbar-box .track {background:#f0f0f0; height: 100%; width:7px; position: relative; border-left:1px solid #dbdbdb}
+#scrollbar-box .thumb {background:#dbdbdb; height:90px; width:6px; cursor:pointer; overflow:hidden; position:absolute; top:0; left:0px; border-left:1px solid #dbdbdb; border-left:0 none}
+#scrollbar-box .disable { display: none; }
+.noSelect { user-select: none; -o-user-select: none; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; }
+.orangeButtonStyle_disabled{background-color:#a3a3a3; color:#e2e2e2; font-size:13px !important; border:1px solid #828181; border-right:1px solid #5a5a5a; border-bottom:1px solid #5a5a5a; font-weight:bold; font-family:Arial, Helvetica, sans-serif; padding:4px 3px; padding:4px 5px\9; cursor:pointer; overflow:visible}
+.apply_confirmation {background:url(/public/images/cmsSResult_Checked.gif) no-repeat 0px 2px; padding-left:18px; font-size:13px; margin-bottom:5px; display:none; color:green}
+
+/* Css for College Ambassador project */
+#current-student-widget{}
+#current-student-widget h5{font:normal 18px "Trebuchet MS", Arial, Helvetica, sans-serif; float:left; display:block; width:90%; margin-bottom:10px;}
+#current-student-widget .orange-button{font-size:15px !important;margin: auto;}
+#current-student-widget .widget-details{margin-left:98px; font-size:16px; color:#646464}
+.current-stdnt-picBg, .current-stdnt-picBg2{width:68px; height:100px; padding:10px 15px 8px 8px; background:url(/public/images/student-pic-cloud.gif) 0 0 no-repeat; float:left}
+.current-stdnt-picBg2{background:none; padding:0px 15px 0px 0px; height:80px}
+.current-stdnt-picBg .student-pic, .current-stdnt-picBg2 .student-pic{width:58px; height:50px; margin:0 0 6px 5px}
+.student-details{margin-left:85px}
+.student-details p{margin-bottom:6px}
+.student-details ol{margin:0; padding:0;}
+.student-details ol li{margin-bottom:5px; line-height:18px}
+.student-details ol li label{color:#3e3e3e}
+
+.ana_a{background: url("/public/images/ana_a.gif") no-repeat scroll left 2px transparent;font-size: 12px !important;line-height: 20px;padding-left: 34px;}
+
+/*For contact layer*/
+.contact-layer{font-family:Tahoma, Geneva, sans-serif;}
+.contact-layer .layer-head{padding:12px 12px 0}
+ul.contact-form .universal-txt-field{width:90%}
+ul.contact-form .universal-select{width:94%}
+.form-col{width:48%}
+ul.contact-form, ul.contact-form-details{padding:12px}
+ul.contact-form-details{overflow:hidden}
+ul.contact-form li, ul.contact-form-details li{margin-bottom:15px; float:left; width:100%}
+ul.contact-form-details li{margin-bottom:7px; line-height:17px}
+ul.contact-form-details li strong{margin-right: 5px !important}
+.contact-title{font:700 17px "Trebuchet MS", Arial, Helvetica, sans-serif; display:block; margin-bottom:25px}
+.icon-close, .icon-tick{background:url(../images/listing-sprites.png) no-repeat; display:inline-block}
+.icon-close{background-position:-59px -153px; width:16px; height:14px; margin-top:4px; cursor:pointer}
+.icon-tick{background-position:-77px -153px; width:17px; height:15px; display:block; float:left}
+.confirm-msg{clear:both; margin:0px 0 20px 0; font:bold 13px Tahoma, Geneva, sans-serif;}
+.confirm-msg p{margin-left:22px}
+.inst-title{background:#fafafa; padding:7px 12px; font:bold 13px Tahoma, Geneva, sans-serif}
+.report-num{margin:8px 0 0 77px}
+.report-num .orange-button{font-size:11px !important;}
+/*Upto here*/
+
+/** Course Page Campus Connect **/
+#connect-wrapp{font:normal 12px Tahoma, Geneva, sans-serif; color:#000;}
+#connect-wrapp-widget{clear:left;}
+.cmnt-icon, .view-icon, .reply-cloud, .connect-icon, .figure-cloud{background:url(/public/images/campus-sprite.png) no-repeat; display:inline-block; vertical-align:middle}
+.figure-cloud{background-position:0 -86px; Width:81px; height:78px; text-align:center; padding-top:12px; float:left;}
+.cmnt-icon{background-position:0 -13px; width:19px; height:15px;}
+.view-icon{background-position:0 0; width:5px; height:10px; margin-left:2px}
+.view-discussion{font-size:16px; display:block; margin-bottom:11px;}
+.discussion-head{padding:0 10px 5px 10px; clear:left; display:block; margin-bottom:2px; overflow:hidden}
+.title-txt{font-size:16px; width:70%;}
+.total-cmts{font-size:14px; width:28%; text-align:right}
+.total-cmts p{display:block; margin-bottom:8px}
+.total-cmts span{display:block; font-size:12px; color:#888888}
+.current-students li{padding:15px 12px; overflow:hidden; border-bottom:1px solid #e1e0e0; -moz-box-shadow:0 -1px 0 #fff inset; -webkit-box-shadow:0 -1px 0 #fff inset; box-shadow:0 -1px 0 #fff inset; cursor:pointer}
+.current-students li:hover{background:#e9eaee}
+.current-discussion{background:#efeeee; display:table; width:100%}
+.current-discussion li{display:table-cell; vertical-align:top;}
+.current-discussion li.course-discussion{width:59%; padding:12px 0 0px 12px}
+.student-figure{width:58px; float:left}
+.student-figure img{width:58px; height:52px}
+.discussion-details{margin-left:68px; overflow:hidden}
+.blue-btn{background:#fff; color:#555555; text-transform:uppercase; font:bold 9px Tahoma, Geneva, sans-serif; padding:4px 6px; display:inline-block; letter-spacing:1px; border: 1px solid #c4c4c4}
+.font-15{font-size:15px}
+.clear-width{float:left; width:100%;}
+.discussion-details .student-details{display:block; color:#2e2e2e; line-height:17px; margin:0px;}
+.discussion-details .student-details strong{color:#7c7c7c; width:62px; float:left; display:block;}
+.discussion-details .student-details span{margin-left:60px; display:block}
+.student-name{display:block; margin-bottom:8px}
+.student-name strong{display:inline-block; margin-bottom:6px}
+.student-name a{vertical-align:middle; margin-right:3px}
+.helper-box{background:#e9e8e8; padding:12px 0; width:21%; border-right:3px solid #efeeee}
+.current-discussion .last{border:0 none; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0;}
+.helper-box p{display:block; margin-bottom:6px}
+.callout-box, .callout-box2{font-size:13px; position:relative; margin-bottom:60px; background:#f5f4f4; border-top:3px solid #e3e3e3; padding-top:13px}
+.callout-box2{margin-bottom: 20px}
+.callout-box:after{content:"";	position:absolute; bottom:-43px; left:15px; border:0; border-right-width:38px; border-bottom-width:43px; border-style:solid; border-color:transparent #f5f3f4; display:block; width:0;}
+.callout-content{padding:15px 12px;}
+.btn-viewall{padding:10px 12px;}
+.callout-content .course-details{line-height:normal; margin-bottom:0 !important; padding:0 !important}
+.callout-content .course-details li{margin-bottom:10px; line-height:150%}
+.callout-content .course-details li strong{margin-bottom:3px; color:#6f6f6f}
+.callout-content .course-details li p{margin-bottom:5px; line-height:130%; display:inline}
+.mt15, .mt30, .mt10{margin-top:15px; display:block}
+.mt30{margin-top:30px}
+.mt10{margin-top:10px}
+.discuss-comnt-section{}
+.cmnt-filter{color:#686666; font-size:14px; margin-bottom:20px}
+.cmnt-title, .old-discuss-title{border-bottom:1px solid #ebebeb; padding-bottom:5px; font-size:18px; overflow:hidden; margin-bottom:3px}
+.view-filter{color:#686666; font-size:14px;}
+.view-filter a.active{color:#000; text-decoration:none; cursor:auto}
+.pipe{color:#b6b6b6; margin:0 3px}
+.comment-block li{border-bottom:1px dashed #dadada; padding:10px 0 8px; float:left; width:100%}
+.ques-icon{color:#fff; font:bold 20px/30px Arial, Helvetica, sans-serif; background:#cecece; -moz-border-radius:50% 50%; -webkit-border-radius:50% 50%; border-radius:50% 50%; display:block; width:30px; height:30px; text-align:center; float:left}
+.ques-details, .comment-box{margin-left:47px; font-size:14px; color:#121212}
+.comment-box{font-size: 12px}
+.ques-head{display:block; color:#888888; font-size:12px;}
+.ques-head strong{font-weight:normal;}
+.ques-head strong span{vertical-align: middle}
+.ques-head strong a{vertical-align:middle; color:#4f4f4f !important}
+.ques-details p, .comment-box p{line-height:20px;float:left; width:100%}
+a.black-link{color: #121212 !important}
+.load-more{background:#efefef; display:block; text-align:center; padding:7px 0; font-size:14px; margin-top:5px}
+.old-discussions{margin-top:20px}
+.old-discuss-title{font:bold 16px Tahoma, Geneva, sans-serif; overflow:visible; margin-bottom:15px; padding-bottom:8px}
+.old-discussions ul li{list-style-type:disc; font-size:15px; margin:0 0 10px 20px; color:#d1d1d1; width:45%;}
+.reply-cloud{background-position:-22px 0; width:65px; height:53px; float:left}
+.reply-box{margin-left:80px; border:1px solid #000}
+.connect-icon{background-position:0 -53px; width:30px; height:30px; display:block; float:left}
+.connect-title{margin:0 0 0px 40px}
+.connect-title h2{font-size:18px; font-weight:bold; margin-bottom:5px; display:block}
+.connect-title p{font-size:15px}
+.white-btn{background:#fff; padding:4px 10px; border:1px solid #d2d2d2; font-size:14px; text-decoration:none !important; display:inline-block; margin-top:12px; color:#0065DE !important}
+.student-cols{width:49%;}
+.course-title{font-size:18px; font-weight:normal; color:#787878; margin-bottom:18px; display:block}
+.connect-widget{width:322px; background:#fbf3ce; padding:10px 10px 16px; font:16px normal Tahoma, Geneva, sans-serif; box-shadow:0 0 2px 2px #a5a5a5}
+.connect-widget-title{font:18px "Trebuchet MS",Arial,Helvetica,sans-serif; margin-bottom:13px; position:relative;}
+.widget-content{margin-bottom:12px;}
+.widget-content .figure{width:73px; float:left;}
+.widget-content .figure img{border:1px solid #d1d1d1}
+.widget-content p{margin:5px 0 0 90px; font-size:14px; color:#646464;}
+.widget-participants{display:table; width:100%}
+.widget-participants li{display:table-cell; vertical-align:top; text-align:center}
+.widget-participants li p{margin-bottom:6px; display:block}
+.close-widget{position:absolute; right:-2px; top:4px; border:1px solid #d43333; color:#fff !important; text-decoration:none !important; height:15px; width:15px; line-height:15px; text-align:center; font-size:18px; background-color:#ae1215; background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.39, #F02124), color-stop(0.57, #AD1F22)); background-image: -o-linear-gradient(bottom, #F02124 39%, #AD1F22 57%); background-image: -moz-linear-gradient(bottom, #F02124 39%, #AD1F22 57%); background-image: -webkit-linear-gradient(bottom, #F02124 39%, #AD1F22 57%); background-image: -ms-linear-gradient(bottom, #F02124 39%, #AD1F22 57%); background-image: linear-gradient(to bottom, #F02124 39%, #AD1F22 57%);}
+.comment-box{background:#ececec; padding:10px; clear:left; margin:0px 0 10px 75px}
+.comment-box p{line-height:20px}
+.link-color{color:#0065DE}
+.font-13{font-size:13px}
+.Fnt10{font-size:10px;}
+.cmnt-pointer{background:url(/public/images/upArw.png) 0 0 no-repeat; width:19px; height:9px; overflow:hidden; display:inline-block; position:relative; left:12px}
+/*** End here **/
+

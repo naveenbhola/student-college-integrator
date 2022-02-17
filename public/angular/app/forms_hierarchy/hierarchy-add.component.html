@@ -1,0 +1,74 @@
+<div class="clearfix"></div>
+<div  class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="x_panel">
+      <div class="x_title">
+        <h2>Hieararchy</h2>
+        <ul class="nav navbar-right panel_toolbox">
+          <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+          </li>                      
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+      <div class="x_content">
+        <br />
+        <form  [formGroup]="hierarchyForm" id="demo-form2" class="form-horizontal form-label-left" (submit)="submitHierarchy()">
+          <div class="form-group">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12">Select Stream<span class="required">*</span></label>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <select class="form-control" placeholder="Choose Stream" formControlName="stream">
+                <option value='' selected>Choose Stream</option>
+                <option *ngFor="let stream of streamList|sortArrByColumn:'asc':'name'" value={{stream.stream_id}}>{{stream.name}}</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12">Select Substream</label>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <select class="form-control" placeholder="Choose Substream" formControlName="substream">
+                <option value="0" selected>Choose Substream</option>
+                <option *ngFor="let substream of substreamList|sortArrByColumn:'asc':'name'" value={{substream.substream_id}}>{{substream.name}}</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12">Select Specialization</label>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <select class="form-control" placeholder="Choose Specialization" formControlName="specialization">
+                <option value="0" selected>Choose Specialization</option>
+                <option *ngFor="let specialization of specializationList|sortArrByColumn:'asc':'name'" value={{specialization.specialization_id}}>{{specialization.name}}</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12">Select Scope<span class="required">*</span></label>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <select class="form-control" placeholder="Choose Scope" formControlName="scope">
+                <option value="national">National</option>
+                <!-- <option value="abroad">Abroad</option> -->
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12">Select CourseType<span class="required">*</span></label>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <select class="form-control" placeholder="Choose CourseType" formControlName="courseType">
+                <option value="academic">Academic</option>
+                <!-- <option value="testprep">TestPrep</option> -->
+                <!-- <option value="both">Both</option> -->
+              </select>
+            </div>
+          </div>
+          
+          <div class="ln_solid"></div>
+          <div class="form-group">
+            <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+              <button type="button" (click) = "backToHome()" class="btn btn-primary">Cancel</button>
+              <button type="submit" [disabled]="!hierarchyForm.valid || submitPending" class="btn btn-success">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

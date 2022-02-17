@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for pwa/application/modules/listing/institute/components/AdmissionComponent.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../../index.html">All files</a> / <a href="index.html">pwa/application/modules/listing/institute/components</a> AdmissionComponent.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">71.43% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>10/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">80% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>8/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">75% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>3/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">71.43% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>10/14</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
+import style from './../assets/css/style.css';
+import specificFile from './../assets/css/admission.css';
+import commonCss from './../../course/assets/courseCommon.css';
+import {getTextFromHtml} from './../../../../utils/stringUtility';
+import {makeURLAsHyperlink} from './../../../../utils/urlUtility';
+import Analytics from './../../../reusable/utils/AnalyticsTracking';
+import {addingDomainToUrl} from './../../../../utils/commonHelper';
+&nbsp;
+class Admission extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  
+ 
+<span class="fstat-no" title="function not covered" >  tr</span>ackEvent()
+  {
+    var category = <span class="cstat-no" title="statement not covered" >'ILP';</span>
+<span class="cstat-no" title="statement not covered" >    if(this.props.page == "university"){</span>
+<span class="cstat-no" title="statement not covered" >          category = 'ULP';</span>
+    } 
+<span class="cstat-no" title="statement not covered" >    Analytics.event({category : category, action : 'AdmissionWidget', label : 'Click'});</span>
+  }
+&nbsp;
+  ExamWidget(examData) {
+&nbsp;
+    const {config} = this.props;
+    var ExamData = [];
+&nbsp;
+    for(var i in examData){
+       var ele  = (
+            &lt;a className="rippleefect" key={'examData'+i} href={addingDomainToUrl(examData[i].url,config.SHIKSHA_HOME)} onClick = {this.trackEvent.bind(this)} &gt;
+              &lt;p&gt;
+                &lt;strong&gt;
+                  &lt;span &gt;{examData[i].name+' '+examData[i].year} &lt;/span&gt;
+                &lt;/strong&gt;
+              &lt;/p&gt;
+              &lt;i className="forward-icon"&gt;&lt;/i&gt;
+            &lt;/a&gt;
+          )
+        ExamData.push(ele);
+&nbsp;
+    }
+&nbsp;
+    return (&lt;div className="_subcontainer _noPad"&gt;
+      &lt;h3 className="offeredH3"&gt;Exams Offered by University&lt;/h3&gt;
+      &lt;div&gt;
+        &lt;ul className="examsoffered"&gt;
+         {ExamData}
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;)
+&nbsp;
+  }
+&nbsp;
+  render() {
+&nbsp;
+    const {config,admissionData} = this.props;
+&nbsp;
+&nbsp;
+    const admmsionUrl  =   addingDomainToUrl(admissionData.url,config.SHIKSHA_HOME);  
+    return (&lt;section className='listingTuple' id="admission"&gt;
+      &lt;div className="_container"&gt;
+        &lt;h2 className="tbSec2"&gt;Admissions&lt;/h2&gt;
+        { admissionData.admissionDetails !=null ?
+          (&lt;div className="_subcontainer psrltv"&gt;
+                   &lt;div className="adm-DivSec"&gt;
+                     &lt;div dangerouslySetInnerHTML={{
+                         __html: getTextFromHtml(admissionData.admissionDetails, 500)
+                       }}&gt;&lt;/div&gt;
+                     &lt;div className="gradient-col" id="viewMoreLink"&gt;
+                       &lt;a href={admmsionUrl+'#admission'} className="gradVw-mr trnBtn rippleefect" onClick = {this.trackEvent.bind(this)} &gt;View More
+                         &lt;i className="blu-arrw"&gt;&lt;/i&gt;
+                       &lt;/a&gt;
+                     &lt;/div&gt;
+                   &lt;/div&gt;
+                 &lt;/div&gt;) : null
+        }
+        {admissionData.examList &amp;&amp; admissionData.examList.length&gt;0 ? this.ExamWidget(admissionData.examList): null}
+      &lt;/div&gt;
+      {   
+        (admissionData.showAdmissionFlag === true) ? (
+          &lt;div className="find-schlrSec h0"&gt;
+            &lt;div className="find-schlrSec-inr h0"&gt;
+            &lt;p&gt;{"Want to know the eligibility, admission process and important dates of all "+this.props.instituteName+" courses?"}&lt;/p&gt;
+              &lt;a href={admmsionUrl} className="trnBtn rippleefect" onClick = {this.trackEvent.bind(this)}&gt;View Admissions Info&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        ) : null
+      }
+&nbsp;
+&nbsp;
+    &lt;/section&gt;)
+&nbsp;
+  }
+}
+export default Admission;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Dec 20 2018 18:08:06 GMT+0530 (IST)
+</div>
+</div>
+<script src="../../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../../sorter.js"></script>
+</body>
+</html>

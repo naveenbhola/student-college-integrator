@@ -1,0 +1,33 @@
+.social-sharing-popup{
+    position: absolute;
+    top: 20px;
+    right: -47px;
+    width: 150px;
+}
+.sharing-box{
+    border-radius: 2px;
+    background: #fff;
+    position: relative;
+}
+.sharing-box-wrapper{
+    box-shadow: 0 2px 10px rgba(0,0,0,.2);
+    position: relative;
+}
+
+.box-pointer{
+    position: absolute;
+    left: 50%;
+    top: -4px;
+    transform: translateX(-50%);
+}
+.box-pointer:after{
+    content: "";
+    width: 0px;
+    height: 0px;
+    border: 8px solid transparent;
+    border-top-color: #fff;
+    transform: rotate(180deg);
+    position: relative;
+    display: inline-block;
+    top: -12px;
+}

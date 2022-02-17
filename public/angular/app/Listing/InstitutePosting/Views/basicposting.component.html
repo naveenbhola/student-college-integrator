@@ -1,0 +1,265 @@
+<div class="row" id="basic_info_form">
+  <div mysize="12">
+      <div class="x_panel">
+         <div [class.x_title]="opened">
+               <ul class="nav navbar-left panel_toolbox">
+                      <li><a class="collapse-link" (click)="toggle()"><i [class]="opened?' fa fa-chevron-up':' fa fa-chevron-down'"></i></a></li>
+                </ul>
+             <h2>Basic Information</h2>
+             <div class="clearfix"></div>
+         </div>
+               <div class="x_content" [hidden]="!opened">             
+                  <div class="form-group">
+                     <label mysize="3" class="cmsAlignLeft cmsFont">{{instituteObj.postingListingType}} name<span class="required">*</span><img id="institute_name" class="helperText" src="/public/images/tooltip.png" width="20px" style="padding-right:0px" (click)="toolTipNotify('institute_name',$event)"></label>
+                     <div mysize="6">
+                         <input #instituteName="ngModel" type="text" name="name" [mypattern]="'[A-Za-z0-9 ]{1,200}'" [myrequired]="1" [mymaxlength]="'200'" [(ngModel)]="instituteObj.name"   [registerForm]="form" [registerModel]="instituteName">
+                         <span class="help-block text-danger">
+                             <span *ngIf="instituteName.errors?.maxlength">{{instituteName.errors?.maxlength}}</span>
+                             <span *ngIf="instituteName.errors?.required">{{instituteName.errors?.required}}</span>
+                             <span *ngIf="instituteName.errors?.pattern">{{instituteName.errors?.pattern}}</span>
+                         </span>
+                     </div>
+                  </div>
+
+                  <div class="form-group" *ngIf = "!(instituteObj.is_dummy == 'true' && instituteObj.postingListingType == 'University')">
+                     <div mysize="3">
+                         <label mysize="12" class="cmsFont" style="text-align:left;padding-left:22px;">Location<img id="location" class="helperText" src="/public/images/tooltip.png" width="20px" style="padding-right:0px" (click)="toolTipNotify('location',$event)"></label>
+                     </div>
+                     <div mysize="7">
+                         <div style="padding-left:0px;" mysize="4">
+                            <select *ngIf="changedFlag" name="stateId" class="select2_single form-control cmsFont" tabindex="-1" placeholder="Select state" [ngModel]="instituteObj.main_location.state_id" (ngModelChange)="stateChanged($event);">  
+                                <option value="0">Select state</option>
+                                <option *ngFor="let state of locationData?.locations | mapToIterable | sortArrByColumn:'asc':'val.name'" value="{{state.val.id}}" > {{state.val.name}}</option>
+                            </select>
+                         </div>
+                         <div mysize="4" *ngIf="changedFlag">
+                             <select required="required" name="CityId" class="select2_group form-control cmsFont" placeholder="Select city" #cityRef="ngModel" [ngModel]="instituteObj.main_location.city_id" (ngModelChange)="cityChanged($event, instituteObj.main_location.city_id);" [myrequired]="'1'"  [registerForm]="form" [registerModel]="cityRef">
+                             <option value="0">Select city</option>
+                                <option *ngFor="let city of cityList | sortArrByColumn:'asc':'name'" value="{{city.id}}">{{city.name}}</option>
+                             </select>
+                             <span class="help-block text-danger cmsFont">
+                                <span *ngIf="cityRef.errors?.required">{{cityRef.errors?.required}}</span>
+                             </span>
+                         </div>
+                         <div mysize="4" *ngIf="localities && localities.length > 0 && changedFlag">
+                             <select name="localityId" class="select2_group form-control cmsFont" placeholder="Select Locality" [ngModel]="instituteObj.main_location.locality_id" (ngModelChange)="localityChanged($event, instituteObj.main_location.city_id,instituteObj.main_location.locality_id);">
+                             <option value="0">Select Locality</option>
+                                <option *ngFor="let locality of localities | sortArrByColumn:'asc':'name'" value="{{locality.id}}">{{locality.name}}</option>
+                             </select>
+                         </div>
+                     </div>
+                  </div>
+           
+                  <div class="form-group">
+                     <label mysize="3" class="cmsAlignLeft cmsFont">Short name<img id="short_name" class="helperText" src="/public/images/tooltip.png" width="20px" style="padding-right:0px" (click)="toolTipNotify('short_name',$event)"></label>
+                     <div mysize="6">
+                         <input #instituteShortName="ngModel" type="text" name="shortname" [mypattern]="'[A-Za-z0-9 ]{1,100}'" [mymaxlength]="'100'" [(ngModel)]="instituteObj.short_name"   [registerForm]="form" [registerModel]="instituteShortName">
+                         <span class="help-block text-danger cmsFont">
+                             <span *ngIf="instituteShortName.errors?.maxlength">{{instituteShortName.errors?.maxlength}}</span>
+                             <span *ngIf="instituteShortName.errors?.pattern">{{instituteShortName.errors?.pattern}}</span>
+                         </span>
+                     </div>
+                  </div>
+
+                  <div class="form-group">
+                     <label mysize="3" class="cmsAlignLeft cmsFont">About College<img id="about_college" class="helperText" src="/public/images/tooltip.png" width="20px" style="padding-right:0px" (click)="toolTipNotify('about_college',$event)"></label>
+                     <div mysize="6">
+                        <textarea name="aboutCollege" class="textboxBorder mceEditor"  id="about_college_tiny" caption="About College" [ngModel]="instituteObj.about_college" (ngModelChange)="instituteObj.about_college=$event;changedetected();"></textarea>
+                     </div>
+                  </div>
+
+				<div *ngIf = "instituteObj.is_dummy == 'false'">
+                  <div class="form-group">
+                     <label mysize="3" class="cmsAlignLeft cmsFont">Abbreviation<img id="abbreviation" class="helperText" src="/public/images/tooltip.png" width="20px" style="padding-right:0px" (click)="toolTipNotify('abbreviation',$event)"></label>
+                     <div mysize="3">
+                         <input #abbreviation="ngModel" tooltip="tooltipData['abbreviation']"  tooltipTrigger="hover" tooltipPlacement="up" type="text" name="abbreviation" [mymaxlength]="'50'" [(ngModel)]="instituteObj.abbreviation" [registerForm]="form" [registerModel]="abbreviation">
+                         <span class="help-block text-danger cmsFont" >
+                             <span *ngIf="abbreviation.errors?.maxlength">{{abbreviation.errors?.maxlength}}</span>
+                         </span>
+                     </div>
+                  </div>
+
+                  <div *ngIf = "activateSynonym">
+                   <div class="form-group" *ngFor="let synonym of instituteObj.synonyms;let i = index;"> 
+                     <div mysize="3"> 
+                        <label *ngIf="i == 0" mysize="12" class="cmsFont" style="text-align:left;padding-left:22px;">Synonym<img id="synonymn" class="helperText" src="/public/images/tooltip.png" width="20px" style="padding-right:0px" (click)="toolTipNotify('synonymn',$event)"></label> 
+                     </div> 
+                     <div mysize="6"> 
+                        <div style="padding-left:0px;" mysize="6"> 
+
+                           <input name="synonym{{i+1}}" [(ngModel)]="instituteObj.synonyms[i].value" type="text" placeholder="Enter Synonym"> 
+                        </div>
+                        <div *ngIf="instituteObj.synonyms.length-1" mysize="3"> 
+                            <button type="button" (click)="instituteObj.removeSynonym(i)" class="btn cmsButton cmsFont">Remove</button> 
+                        </div>
+                        <div *ngIf="i+1 == instituteObj.synonyms.length" mysize="3"> 
+                            <button type="button" (click)="instituteObj.addSynonym();rebindFormControl('synonym');" class="btn cmsButton cmsFont">+ Add More</button>
+                        </div>
+                     </div> 
+                    </div> 
+                  </div>
+
+                  <div class="form-group">
+                     <label mysize="3" class="cmsAlignLeft cmsFont">Year of establishment</label>
+                     <div mysize="3">
+                         <input #establishment_year="ngModel" type="text" name="establishment_year" [mywholenumber] [mymin]="'1500'" [mymax]="currentYear" [(ngModel)]="instituteObj.establishment_year" [registerForm]="form" [registerModel]="establishment_year">
+                         <span class="help-block text-danger cmsFont">
+                             <span *ngIf="establishment_year.errors?.number">{{establishment_year.errors?.number}}</span>
+                         </span>
+                     </div>
+
+                     <label class="cmsFont" mysize="3" *ngIf="instituteObj.postingListingType == 'University'">Year of becoming university</label>
+                     <div mysize="3" *ngIf="instituteObj.postingListingType == 'University'">
+                         <input  type="text" name="establish_university_year" [registerForm] = "form" [registerModel]="establish_university_year" #establish_university_year="ngModel" [(ngModel)]="instituteObj.establish_university_year" [mywholenumber] [mymin]="'1500'" [mymax]="currentYear">
+                         <span class="help-block text-danger cmsFont">
+                             <span *ngIf="establish_university_year.errors?.number">{{establish_university_year.errors?.number}}</span>
+                         </span>
+                     </div>
+
+                  </div>
+                  <div class="form-group" *ngIf="instituteObj.postingListingType == 'University'">
+                        <label mysize="3" class="cmsFont cmsAlignLeft">University type<span  class="required">*</span></label>
+                       <div style="" mysize="3">
+                            <select class="cmsFont" name="university_type" required [(ngModel)]="instituteObj.university_type" [myrequired]="'1'" [registerForm]="form" [registerModel]="universityType" #universityType = "ngModel"> 
+                            <option value="">Select </option> 
+                                <option *ngFor="let type of instituteStaticData?.university_type" value="{{type.value}}" > {{type.label}}</option>
+                            </select>
+                            <span class="help-block text-danger cmsFont">
+                                <span *ngIf="universityType.errors?.required">{{universityType.errors?.required}}</span>
+                             </span>
+                         </div>
+                  </div>
+
+                  <div class="form-group">
+                     <div mysize="3">
+                         <label mysize="12" class="cmsFont" style="text-align:left;padding-left:22px;">Ownership</label>
+                     </div>
+                     <div mysize="6">
+                         <div mysize="4" *ngFor="let i of instituteStaticData?.ownernship">
+                              <div class="radio-inline"><label noBootstrap class="cmsFont" >
+                                  <input type="radio" class="flat" name="ownership" [(ngModel)]="instituteObj.ownership" value="{{i.value}}"/> {{i.label}}
+                              </label></div>
+                         </div>                            
+                     </div>
+                  </div>
+
+
+
+                  <div class="form-group">
+                      <div mysize="3">
+                          <label mysize="12" class="cmsFont" style="text-align:left;padding-left:22px;">Students type</label>
+                      </div>
+                      <div mysize="6">
+                          <div mysize="4" *ngFor="let i of instituteStaticData?.student_type">
+                              <div class="radio-inline"><label noBootstrap class="cmsFont" >
+                                  <input type="radio" class="flat" name="student_type" [(ngModel)]="instituteObj.students_type"  value="{{i.value}}" /> {{i.label}}
+                              </label></div>
+                          </div>                            
+                      </div>
+                  </div>
+                  <div class="form-group" *ngIf="instituteObj.postingListingType == 'University'">
+                      <div mysize="3">
+                          <label mysize="12" class="cmsFont" style="text-align:left;padding-left:22px;">Open University</label>
+                      </div>
+                      <div mysize="6">
+                          <div mysize="4">
+                             <div class="radio-inline"><label noBootstrap class="cmsFont" >
+                                 <input type="radio" class="flat" name="openUniversity" [value]=true [(ngModel)]="instituteObj.is_open_university" /> Yes
+                             </label></div>
+                          </div>
+                          <div mysize="4">
+                            <div class="radio-inline"><label noBootstrap class="cmsFont" >
+                                <input type="radio" class="flat" name="openUniversity" [value]=false [(ngModel)]="instituteObj.is_open_university" /> No
+                            </label></div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="form-group" *ngIf="instituteObj.postingListingType == 'University'">
+                      <div mysize="3">
+                          <label mysize="12" class="cmsFont" style="text-align:left;padding-left:22px;">UGC Approved</label>
+                      </div>
+                      <div mysize="6">
+                          <div mysize="4">
+                             <div class="radio-inline"><label noBootstrap class="cmsFont" >
+                                 <input type="radio" class="flat" name="ugcApproved" [value]=true [(ngModel)]="instituteObj.is_ugc_approved" /> Yes
+                             </label></div>
+                          </div>
+                          <div mysize="4">
+                            <div class="radio-inline"><label noBootstrap class="cmsFont" >
+                                <input type="radio" class="flat" name="ugcApproved" [value]=false [(ngModel)]="instituteObj.is_ugc_approved" /> No
+                            </label></div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="form-group" *ngIf="instituteObj.postingListingType == 'University'">
+                      <div mysize="3">
+                          <label mysize="12" class="cmsFont" style="text-align:left;padding-left:22px;">AIU MemberShip</label>
+                      </div>
+                      <div mysize="6">
+                          <div mysize="4">
+                             <div class="radio-inline"><label noBootstrap class="cmsFont" >
+                                 <input type="radio" class="flat" name="aiuMembership" [value]=true [(ngModel)]="instituteObj.is_aiu_membership" /> Yes
+                             </label></div>
+                          </div>
+                          <div mysize="4">
+                            <div class="radio-inline"><label noBootstrap class="cmsFont" >
+                                <input type="radio" class="flat" name="aiuMembership" [value]=false [(ngModel)]="instituteObj.is_aiu_membership" /> No
+                            </label></div>
+                          </div>
+                      </div>
+                  </div>
+
+
+                  <div class="form-group" *ngIf="instituteObj.postingListingType != 'University'">
+                      <div mysize="3">
+                          <label mysize="12" class="cmsFont" style="text-align:left;padding-left:22px;">Is autonomous<img id="autonomous" class="helperText" src="/public/images/tooltip.png" width="20px" style="padding-right:0px" (click)="toolTipNotify('autonomous',$event)"></label>
+                      </div>
+                      <div mysize="6">
+                          <div mysize="4">
+                             <div class="radio-inline"><label noBootstrap class="cmsFont">
+                                 <input type="radio" class="flat" name="isAutonomous" value="1" [(ngModel)]="instituteObj.is_autonomous" /> Yes
+                             </label></div>
+                          </div>
+                          <div mysize="4">
+                            <div class="radio-inline"><label noBootstrap class="cmsFont" >
+                                <input type="radio" class="flat" name="isAutonomous" value="0" [(ngModel)]="instituteObj.is_autonomous" /> No
+                            </label></div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      <div mysize="3">
+                          <label mysize="12" class="cmsFont" style="text-align:left;padding-left:22px;">Institute of national importance</label>
+                      </div>
+                      <div mysize="6">
+                          <div mysize="4">
+                             <div class="radio-inline"><label noBootstrap class="cmsFont" >
+                                 <input type="radio" class="flat" name="isNationalImportance" value="1" [(ngModel)]="instituteObj.is_national_importance" /> Yes
+                             </label></div>
+                          </div>
+                          <div mysize="4">
+                            <div class="radio-inline"><label noBootstrap class="cmsFont" >
+                                <input type="radio" class="flat" name="isNationalImportance" value="0" [(ngModel)]="instituteObj.is_national_importance" /> No
+                            </label></div>
+                          </div>
+                      </div>
+                  </div>
+
+
+                  <div class="form-group">
+                      <label mysize="3" class="cmsFont" style="text-align: left !important;padding-left: 32px !important;">NAAC accreditation<img id="naac_accreditation" class="helperText" src="/public/images/tooltip.png" width="20px" style="padding-right:0px" (click)="toolTipNotify('naac_accreditation',$event)"></label>
+                      <div mysize="3">
+                          <select  class="cmsFont" name="accreditation" [(ngModel)]="instituteObj.accreditation">
+                              <option value="">Choose accrediatation</option>
+                              <option *ngFor="let option of instituteStaticData?.accreditation" value="{{option.value}}">{{option.label}}</option>
+                          </select>
+                      </div>
+                  </div> 
+				  </div>  
+                </div>
+            </div>
+        </div>
+    </div>

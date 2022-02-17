@@ -1,0 +1,106 @@
+/*wiki content css*/
+.pwa_admission .admission_wikidata {font-size: 1rem;overflow-wrap: break-word;}
+.pwa_admission .admission_wikidata img{width: 100% !important}
+
+.pwa_admission .admission_wikidata.miniView {max-height: 240px;position: relative}
+.pwa_admission .admission_wikidata.showContent {max-height: none;overflow: auto}
+.pwa_admission .admission_wikidata a{font-size: 1rem;font-weight: 600;text-decoration: none;}
+.pwa_admission .admission_wikidata p {font-size: 1rem;margin-bottom: 8px;line-height: 1.4;}
+.pwa_admission .admission_wikidata table {width: 100% !important;border-collapse: collapse;border: none;background: #fff;display: block;overflow: auto;margin: 0 0 15px !important;height: 100% !important;}
+.pwa_admission .admission_wikidata table tr:nth-child(odd) {background-color: #f3f6f8;}
+.pwa_admission .admission_wikidata table tr td, .admission_wikidata table tr th {padding: 5px 10px;border: 1px solid #b8c8d1;width: auto;}
+.pwa_admission .admission_wikidata table tr td *, .admission_wikidata table tr th *{padding: 0;margin: 0;font-size: 1rem;}
+.pwa_admission .admission_wikidata table tr td, .admission_wikidata table tr th {padding: 5px 10px;border: 1px solid #b8c8d1;width: auto;}
+.pwa_admission .admission_wikidata h3 {font-size: 1.0625rem;line-height: 1.36;}
+.pwa_admission .admission_wikidata h2, .admission_wikidata h3, .admission_wikidata h4, .admission_wikidata h5, .admission_wikidata h6 {font-weight: 600;color: #111;margin-bottom: 4px;}
+.pwa_admission .gradient-col {display: block;text-align: center; height: 95px;position: absolute; width: 100%; left: 0; bottom: 0;background: linear-gradient(180deg,hsla(0,0%,100%,0) -25%,hsla(0,0%,100%,.09) 16%,#fff 44%,#fff 0,#fff 0,#fff 58%,#fff);  background: -moz-linear-gradient(to bottom,hsla(0,0%,100%,0) -25%,hsla(0,0%,100%,.09) 16%,#fff 44%,#fff 18%,#fff -1%,#fff 58%,#fff 100%);z-index: 2;}
+.pwa_admission .arrow:after { content: ""; display: inline-block; width: 6px;height: 6px;border-bottom: 2px solid #008489;    border-right: 2px solid #008489; margin: 0 0 0 2px;transform: rotate(-45deg);}
+.pwa_admission .gradient-col>.gradVw-mr { margin-top: 46px;}
+.pwa_admission .admission_wikidata table tr td ul,.pwa_admission .admission_wikidata table tr td ol{margin-left: 20px;}
+.pwa_admission .admission_wikidata ul li{color: #000;font-size: 1rem;line-height: 1.32;margin-bottom: 5px;}
+.pwa_admission .psrltv{position: relative;}
+.pwa_admission .admission_wikidata strong {font-size: inherit;font-weight: 600;}
+.pwa_admission .inter_link{display: inline-block;position: relative;}
+.pwa_admission .link_arw:after{content: '';display: inline-block;width: 6px;height: 6px;border-bottom: 2px solid #008489;border-right: 2px solid #008489;margin: 0 0 0 9px;transform: rotate(45deg);position: relative;top: -2px;}
+.pwa_admission .exam_course{border-bottom: 1px solid #d2d2d2;margin-bottom: 10px}
+.pwa_admission .admission_wikidata table th, .admission_wikidata table th * {color: #fff;font-weight: 600;}
+.pwa_admission .admission_wikidata table th {background: #003d5c;}
+
+.admission_wikidata strong{font-size: inherit;font-weight: 600;}
+.admission_wikidata img{max-width: 100%;}
+.admission_wikidata iframe{width: 100%;margin: 0 auto;}
+.gradient-col .trnBtn{border:none;}
+.admission_wikidata ul{margin-left: 20px;}
+.admission_wikidata h2,
+.admission_wikidata h3,
+.admission_wikidata h4,
+.admission_wikidata h5,
+.admission_wikidata h6
+ {
+    font-weight: 600;color: #111;margin-bottom: 4px;
+}
+.admission_wikidata h2{font-size: 1.125rem;line-height: 1.34;}
+.admission_wikidata h3{font-size: 1.0625rem;line-height: 1.36;}
+.admission_wikidata h4{font-size: 1rem;line-height: 1.38;}
+.admission_wikidata h5{font-size: 0.9375rem;line-height: 1.4;}
+.admission_wikidata h6{font-size: 0.875rem;line-height: 1.4;} 
+.admission_wikidata table tr td ul, .admission_wikidata ul, .admission_wikidata ol{
+    margin-left: 20px;
+    padding: 10px 0px 0px;
+}
+.admission_wikidata table tr td ul li{
+    margin-bottom: 10px;
+}
+.admission_wikidata ul li{
+    list-style-type: disc !important;
+}
+
+.admission_wikidata .detail-text {
+    font-size: 0.875rem;
+    color: #666;
+}
+@media (min-width: 1281px) {
+
+  .admission_wikidata table {
+        display: table;
+    }
+
+}
+.admission_wikidata .embed.half-width {
+    width: 100%;
+    text-align: left;
+    float: none!important;
+    margin: 0!important;
+}
+.admission_wikidata .quote-box:before {
+    content: open-quote;
+    font: bold 22px Georgia;
+    color: #000;
+}
+.admission_wikidata .quote-box {
+    quotes: "“" "”" "‘" "’";
+}
+.admission_wikidata .quote-box {
+    border: 1px solid #eeeeee;
+    padding: 10px;
+    background: #f8f8f8;
+    margin: 5px 0 !important;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: none !important;
+}
+.admission_wikidata .quote-box:after {
+    content: close-quote;
+    font: bold 22px Georgia;
+    color: #000;
+}
+
+.fnt-w6, .admission_wikidata a{font-weight: 600;}
+.admission_wikidata a{text-decoration: underline;}
+.admission_wikidata table a{text-decoration: none;}
+
+
+
+/*ends*/

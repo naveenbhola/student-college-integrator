@@ -1,0 +1,49 @@
+div.tb-area {width:100%;text-align:  center;margin:  0 auto;border-bottom: 1px solid #eaeaea;}
+        ul.profil-tb{background: #fff; display: table;font-family: 'open sans';margin: 0; padding: 0;}
+        ul.profil-tb li{display: table-cell;height: 44px;text-align: center; line-height: 44px;}
+        ul.profil-tb li a{text-decoration: none;color: #111;font-size: 16px; font-weight: 400;padding: 10px 30px;}
+        ul.profil-tb li.active{border-bottom: 4px solid var(--Teal)}
+        ul.profil-tb li.active a{color: var(--Teal); font-weight: 600;}
+
+
+
+
+      .new_tabs {
+          font-family:'Open Sans',sans-serif;
+          margin-top: 16px;
+          width: 100%;
+          height: auto;
+          box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+          background-color: #ffffff;
+          margin-bottom: 16px;
+          min-height: 200px;
+          margin-bottom: 16px;
+      }
+      .email-wrapper{display: block}
+      .email_title{padding: 16px 16px 0px;;font-size: 18px;font-weight: 600;color: #111}
+      .email_title span{color: #666;font-size: 12px;font-weight: 400}
+      .email_row{display: block;padding: 0 16px;}
+      .email_cols{padding: 16px 0px;border-bottom: 1px solid #e6e6e6;position: relative}
+      .email_cols:last-child{border-bottom: none;}
+      .descrpt_block{width: 85%;}
+      .descrpt_block h3, .descrpt_block p{margin: 0}
+      .descrpt_block h3{margin-bottom: 2px;font-size: 14px;font-weight: 600;color: var(--Charcoal-Black)}
+      .descrpt_block p{font-size: 14px;color:var(--Dark-Slate);}
+      .hide-chck {opacity: 0;position: absolute;}
+      .email_cols.highlight:before {  content: '';position: absolute;top: -1px;height: 98%;border: 2px solid #8fabd0;left: -16px;right: -16px;z-index: 1;}
+      .email_cols.highlight {border: none;}
+
+
+
+
+      /*toggle bar css*/
+      .email_cols .ios-toggle, .email_cols .ios-toggle:active {position: absolute;top: 0px;height: 0;width: 0;opacity: 0;border: none;outline: none;}
+      .email_cols .checkbox-label {display: block;position: relative;font-size: 12px;line-height: 16px;width: 40px;height: 16px;-webkit-border-radius: 18px;-moz-border-radius: 18px;border-radius: 18px;background: #dddfe0;cursor: pointer;box-shadow: inset 0 0 6px #9e9d9d;}
+      .email_cols  .checkbox-label:before {content: "";position: absolute;top: 50%;color: #333;left: 0;width: 20px;height: 20px;border: .25em solid #fafafa;margin-top: -2px;border-radius: 50%;box-sizing: border-box;background-color: #ddd;transform: translateY(-50%);box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);}
+      .email_cols  .checkbox-label:after {content: attr(data-off);display: block;position: absolute;z-index: -1;top: 1px;left: -28px;padding: 0;height: 100%;width: auto;text-transform: uppercase;font-size: 12px;font-weight: 600;text-align: right;color: #999;white-space: nowrap;}
+      .email_cols  .checkbox-label, .checkbox-label:before, .checkbox-label:after{-webkit-transition: .25s ease-in-out;-moz-transition: .25s ease-in-out;-o-transition: .25s ease-in-out;transition: .25s ease-in-out;cursor: pointer;}
+      .email_cols .ios-toggle:checked + .checkbox-label:after {color: #111;}
+      .email_cols .ios-toggle:checked + .checkbox-label:after {content: attr(data-on);left: 49px;width: auto;top: -1px;}
+      .email_cols .ios-toggle:checked + .checkbox-label:before {transform: translateX(2em) translateY(-50%);-webkit-transform: translateX(2em) translateY(-50%);-moz-transform: translateX(2em) translateY(-50%);right: 23px;left: auto;}
+      .email_cols .ios-toggle:checked + .checkbox-label{background: var(--Teal);}
+      .email_cols .toggle_bar {position: absolute;right: 27px;top: 17px;z-index: 12;}

@@ -1,0 +1,18 @@
+<style type="text/css">
+	.showCursor
+	{
+		cursor: pointer;
+	}
+</style>
+<div style="text-align:right">
+	<ul class="pagination pagination-sm">
+		<li *ngIf="pageNumber != 1" ><a class="pagination-arw" style="cursor:pointer" (click)="paginationRequest(pageNumber-1)">❮</a></li>
+		<!-- <div *ngFor ="let key of paginationNumbers | rangearray:startPage-1 | sortArrByColumn:'asc'" class="page-items"> -->
+		<li *ngFor ="let key of paginationNumbers | rangearray:startPage-1 | sortArrByColumn:'asc'" class="page-item" [ngClass]="{active: key == pageNumber}">
+		 <a *ngIf = "key <= endPage"  class="page-link" style="color:#5b5757;" [ngClass]="{showCursor : key != pageNumber}" (click)="paginationRequest(key)">{{key}}</a>
+		</li>
+
+		<!-- </div> -->
+		<li *ngIf="pageNumber != totalPages" ><a  *ngIf="totalPages > 1" style="cursor:pointer" class="pagination-arw" (click)="paginationRequest(pageNumber+1)">❯</a></li>
+	</ul>
+</div>

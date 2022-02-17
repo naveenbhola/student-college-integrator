@@ -1,0 +1,31 @@
+ 
+.homepage_sldrC {background: #fff;padding: 10px 0px 5px 0px;width: 100%;height: auto;}
+.coursepage_sldrC {background: #fff;padding: 10px 0px 0px 0px;width: 100%;height: auto;}
+.coursepage_sldrC::-webkit-scrollbar{display: none;}
+.homepage_sldrC::-webkit-scrollbar{display: none;}
+.sldAr::-webkit-scrollbar{display: none;}
+ul.ftrSlder{padding:0px 16px;}
+ul.ftrSlder:after{content:"";display: block;clear: both;}
+ul.ftrSlder li{list-style-type: none; height:107px; width: 196px;box-shadow:0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08); border-radius: 2px;margin: 0px 10px 10px 0px; float: left;overflow: hidden;}
+ul.ftrSlder li div.vwd-clg, ul.ftrSlder li div.vwd-clgInfo{padding: 0px 10px 6px 10px;background: #fff;}
+ul.ftrSlder li img{width:100%;height: auto;}
+.sldrC .sldAr{overflow: auto;-webkit-overflow-scrolling: touch;}
+ul.ftrSlder li div p{font-size: 0.875rem; font-weight: 600; color: #000; height: 56px}
+ul.ftrSlder li div span{font-size: 0.75rem;color: #2A2A2A;line-height: 12px;}
+ul.ftrSlder li:last-child{margin-right: 0px;}
+ul.ftrSlder {min-width: max-content;min-width:-moz-max-content; min-width:-webkit-max-content;}
+section.ftrbnr ._container {padding: 0;}
+/*section.ftrbnr{margin-bottom: 20px;}*/
+
+.coursepage_sldrC ul.ftrSlder li{height:auto;width: 180px;border: 1px solid #ccc; border-radius: 2px;list-style: none;display: inline-block;background: #fff;}
+.coursepage_sldrC ul.ftrSlder li:last-child{margin-right: 0px;}
+.coursepage_sldrC ul.ftrSlder li .vwd-clg{width: 178px; height: 133px;background: #eee;padding: 0px;overflow: hidden;}
+.coursepage_sldrC ul.ftrSlder li .vwd-clg a {display: block;}
+.coursepage_sldrC ul.ftrSlder li .vwd-clgInfo{width: 180px; color: #000; font-size: 0.875rem;padding: 6px 10px 6px; font-weight: 600;}
+.coursepage_sldrC ul.ftrSlder li .vwd-clgInfo p{height:72px;height: calc(1.58em * 3);overflow: hidden;}
+.coursepage_sldrC ul.ftrSlder li .vwd-clgInfo span{color: #2A2A2A; font-size: 0.75rem,;font-weight: 400;margin-bottom: 8px;display: block;height: 24px;}
+.coursepage_sldrC ul.ftrSlder li .vwd-clgInfo a.btnYellow{padding: 10px 0px; display: block}
+.link{color: #008489;}
+.vwd-clgInfo .button--orange{width: 100%;}
+#exam_rhs_content .vwd-clgInfo .button--orange{width: auto;}
+

@@ -1,0 +1,81 @@
+<html lang="en">
+      <head>
+            <meta charset="utf-8"/>
+            <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+            <%-seoTags%>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            <link rel="dns-prefetch" href="//js.shiksha.ws">
+            <link rel="dns-prefetch" href="//css.shiksha.ws">
+            <link rel="dns-prefetch" href="//images.shiksha.ws">
+            <link rel="dns-prefetch" href="//apis.shiksha.com">
+            <meta name = "format-detection" content = "telephone=no" />
+            <meta name = "format-detection" content = "address=no" />
+            <meta name="copyright" content="Shiksha.com" />
+            <meta name="resource-type" content="document" />
+            <meta name="pragma" content="no-cache" />
+            <meta name="HandheldFriendly" content="True"/>
+            <meta name="MobileOptimized" content="320"/>
+            <meta http-equiv="cleartype" content="on"/>
+            <meta http-equiv="x-dns-prefetch-control" content="off"/>
+            <meta name="theme-color" content="#05818D"/>
+            <link rel="publisher" href="https://plus.google.com/+shiksha"/>
+            <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://images.shiksha.ws/public/mobile/images/touch/apple-touch-icon-144x144-precomposed.png"/>
+            <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://images.shiksha.ws/public/mobile/images/touch/apple-touch-icon-114x114-precomposed.png"/>
+            <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://images.shiksha.ws/public/mobile/images/apple-touch-icon-72x72-precomposed.png"/>
+            <link rel="apple-touch-icon-precomposed" href="https://images.shiksha.ws/public/mobile/images/apple-touch-icon-57x57-precomposed.png"/>
+            <link rel="shortcut icon" href="https://images.shiksha.ws/public/mobile/images/apple-touch-icon.png"/>
+            <link rel="manifest" href="/manifest.json">
+            
+    <style type="text/css">@font-face{font-family:'Open Sans';src:url(/public/fonts/open-sans/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.eot);src:url(/public/fonts/open-sans/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.eot?#iefix) format('embedded-opentype'),url(https://images.shiksha.ws/public/fonts/open-sans/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff'),url(https://images.shiksha.ws/public/fonts/open-sans/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.ttf) format('truetype');font-weight:400;font-style:normal}* {-webkit-tap-highlight-color: transparent;}*,body{cursor: pointer;padding:0;border:0;margin:0;font-family: 'Open Sans', sans-serif;box-sizing:border-box}:root,html{font-size: 16px;line-height: 1.58;}html{-webkit-text-size-adjust: 100%;}a{text-decoration: none;}.msprite {display: inline-block;position: relative;}.header{background:#007075;width:100%;display:table;z-index:9;box-shadow:0 2px 2px 0 rgba(0,0,0,.16),0 0 0 1px rgba(0,0,0,.08);height:40px;line-height:1}body{min-width:320px;background:#f1f2f4}:root,html{font-size:16px;line-height:1.58}.back-col,.hem-menu{background:0 0;border:0;cursor:pointer;line-height:0;margin:0;padding:5px 12px;position:relative;width:20px;text-align:center}.back-col .back-ico,.hem-menu>span.icon-bar,.logo>span.msprite,.q-ask>span,.right-menu>span,.short-lst.q-srch>span.search{background:url(https://images.shiksha.ws/pwa/public/images/new-header-pwa.svg) -9px -9px no-repeat}.header-title,.logo{text-align:left;background:#007075}.notification,.q-ask,.q-srch,.right-menu{text-align:center}.back-col,.header-title,.hem-menu,.logo,.q-ask,.right-menu{display:table-cell;vertical-align:middle}.logo span{color:transparent;width:88px;height:20px;text-indent:-9999px}.q-ask,.q-srch,.right-menu{width:19px;display:table-cell;vertical-align:middle;background:0 0;position:relative}.short-lst.q-srch>span.search{background-position:-183px -6px;width:24px;height:24px;vertical-align:middle;display:inline-block}.full-screen-close,.toggle,.toggle-right{display:none}.right-menu{padding:8px 17px 5px 12px;background:#007075}.right-menu span{width:20px;height:20px;background-position:-129px -9px}.menu-right{position:fixed;height:100%;width:17em;background:#e5e5da;top:0;bottom:0;left:auto;z-index:9999;overflow-y:scroll;-webkit-overflow-scrolling:touch;right:-310px;-webkit-box-shadow:-5px 0 5px rgba(0,0,0,.15);-moz-box-shadow:-5px 0 5px rgba(0,0,0,.15);box-shadow:-5px 0 5px rgba(0,0,0,.15);transform:translate3d(0,0,0);-webkit-transform:translate3d(0,0,0);-webkit-transition:all .3s;transition:all .3s;-webkit-transition-timing-function:linear;transition-timing-function:linear}.toggle-right:checked+.menu-right{right:-1px}.hem-menu>span.icon-bar{display:block;background-position:-103px -5px;width:20px;height:20px}.q-ask>span{background-position:-155px -8px;width:24px;height:20px;vertical-align:middle;display:inline-block}.notification{background-color:#F37921;width:18px;height:18px;-moz-border-radius:50%;-webkit-border-radius:50% 50%;border-radius:50%;position:absolute;top:5px;right:6px;color:#fff;font-size:.625rem;line-height:18px;cursor:pointer;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;display: none;}.menu-container{background:#fff;width:17em;backface-visibility:hidden;box-shadow:6px 1px 6px -1px rgba(0,0,0,.37);-webkit-box-shadow:6px 1px 6px -1px rgba(0,0,0,.37);-moz-box-shadow:6px 1px 6px -1px rgba(0,0,0,.37);float:left;height:100%;position:fixed;z-index:9999;-webkit-transition:-webkit-transform .3s ease-out;-o-transition:transform .3s ease-out;transition:transform .3s ease-out;transition:transform .3s ease-out,-webkit-transform .3s ease-out;transform:translateX(-103%);-webkit-transform:translateX(-103%);-moz-transform:translateX(-103%);display:none}.inner-menu .cat-menu .abroadHeading,.main-footer ul li a,.main-footer ul li label{text-transform:uppercase;position:relative;text-decoration:none}.main-footer{background:#fff}.main-footer ul li{list-style:none;width:100%;float:left;position:relative;border-bottom:1px solid #ccc;background:#fff;font-weight:700;font-size:.75rem}.main-footer ul li:first-child{border-top:1px solid #ccc}.main-footer ul li a,.main-footer ul li label{display:block;padding:12px 15px 10px;color:#008489}..footer-arr-dwn,.footer-arr-up{background-position:-372px -11px;width:16px;height:6px;right:15px;top:19px;position:absolute}.footer-arr-dwn,.footer-arr-up{background:url('https://images.shiksha.ws/pwa/public/images/new-header-pwa.svg') no-repeat}.link-box{max-height:0;overflow:hidden;padding:0 15px;transition:max-height .2s ease-out}.footer-child{font-size:90%;padding:10px 0 20px;background:#fff;display:inline-block;box-shadow:none}.r-user,.subcat-heading>a,.tac,.user-block .u-div .ru-name{text-align:center}.partner-nav{font-size:80%;line-height:25px;border-bottom:1px solid #ccc;margin-bottom:12px;padding:0 10px 12px}.partner-nav strong,.ui-panel-dismiss-open{display:block}.partner-nav p{margin:10px 0 15px}.partner-nav a{text-decoration:none;color:#000;margin:0 7px}.footer-child aside{font-size:78%;color:#999;line-height:14px}.oops-img{background: url(https://images.shiksha.ws/pwa/public/images/clp-sprite-pwa-v1.svg) no-repeat;background-position: -102px -143px;width: 137px;height: 80px;display: block;margin: 0 auto 12px auto;}a.bkHome-btn{text-decoration: none; display: inline-block; padding: 7px 30px; border-radius: 4px; background: #008489; color: #fff;font-size: 0.875rem;font-weight: 600;margin-top: 14px;}.notFound-Div{position: relative;width: 100%;height: 100%;}.notFound-Page{font-size: .875rem;font-weight: 400;text-align: center;padding: 0 10px;top: 50%;left: 0;right: 0;position: absolute;transform: translateY(-50%);}.notFound-Page .title{font-size: 1.25rem; color: #008489; font-weight: 600;margin-bottom: 15px;}.notFound-Page .title.noMrg{margin: 0;} .hmldr{margin-left:38%;margin-top:30px;font-size: .875rem}.q-ask, .q-srch {padding: 5px 12px;position: relative;}.dfp-wraper{background: #f1f2f4;}.dfp-add > div{margin: 12px auto;}.cokkie-lyr {width: 100%;padding: 10px;background: rgba(0,0,0,0.85);color: #fff;position: static;bottom: 0;left: 0;right: 0;font-size: 11px;font-family: 'open sans', sans-serif;z-index: 100;display: block;}.cokkie-box {max-width: 945px;margin: 0 auto;display: table;line-height: 15px;}.cokkie-box p, .cokkie-lyr .tar {display: table-cell;vertical-align: middle;}a.cookAgr-btn {background: #f09c43;font-size: 13px;font-weight: 600;border-radius: 2px;text-align: center;text-decoration: none;color: #fff;display: inline-block;width: 66px;height: 30px;line-height: 28px;margin-left: 5px;font-family: 'open sans', sans-serif;}.cokkie-lyr a {color: #0efbf3;text-decoration: none;}.cokkie-lyr.display-none{display: none;}
+    <%-styles%></style>
+
+
+             <link rel="stylesheet" type="text/css" id="shkCmn">
+
+             <% for(var i=0; i < scripts.length; i++) { %>
+              <link rel="preload" href="<%-scripts[i]%>" as="script">
+            <% } %>
+
+            <script>
+                  window.onerror = function (msg, url, line, col, exception) { var img = new Image(); var srcUrl = 'https://shiksha.com/AppMonitor/logJSErrorsData/logJSerrors?msg=' + encodeURIComponent(msg) +'&line=' + encodeURIComponent(line) +'&url=' + encodeURIComponent(url) +'&col=' + encodeURIComponent(col) +'&exception='+encodeURIComponent(exception); img.src = srcUrl; }
+            </script>
+            <%-schema%>
+
+            <script type="application/ld+json">
+            {
+              "@context" : "http://schema.org",
+              "@type"    : "Organization",
+              "url"      : "https://www.shiksha.com",
+              "logo"     : "https://www.shiksha.com/public/images/nshik_ShikshaLogo1.gif",
+              "name"     : "Shiksha.com",
+              "sameAs"   : ["https://www.facebook.com/shikshacafe", "https://twitter.com/ShikshaDotCom", "https://en.wikipedia.org/wiki/Shiksha.com", "https://plus.google.com/+shiksha"]
+            }
+            </script>
+  </head>
+  <body id="shkBdy"><div id="reg-full-layer"></div><div id="fullLayer-container"></div><div id="popup-container"></div><div id="gallery-container"></div><div id="root"><%-header%><%-content%><%-footer%></div>
+
+    <script type="text/javascript">
+      function lazyLoadJs(e,a,r){for(var s,t,c=[],d=e.scripts[0];s=r.shift();)t=e.createElement(a),"async"in d?(t.async=!1,e.head.appendChild(t)):d.readyState?(c.push(t),t.onreadystatechange=n):e.write("<"+a+' src="'+s+'" defer></'+a+">"),t.src=s}
+      var shikshaMain = '<%-jsDomain%>/pwa/public/js/mobile-shiksha-main-7715b50cb04682025850.js';
+      var commonCss = "<%-cssDomain + '/pwa/public/css/'+getCSSWithVersion('shikshaCommon')%>";
+      var referrer = '';
+      window.addEventListener("load", function() {
+          lazyLoadJs(document, "script", <%-JSON.stringify(scripts)%>);
+          lazyLoadJs(document,"script",[shikshaMain]);
+
+      });
+      if(typeof commonCss =='string')
+      {
+          if(document.getElementById('shkCmn') && document.getElementById('shkCmn').href==''){
+            document.getElementById('shkCmn').href = commonCss;
+      }
+    }
+    </script>
+  <script type="text/javascript">
+    window.__PRELOADED_STATE__ = <%-JSON.stringify(preloadedState).replace(/</g, '\\u003c')%>;
+    window.serviceWokrerFile = "<%-serviceWokrerFile%>";
+    window.COOKIEDOMAIN = "<%-COOKIEDOMAIN%>";
+  </script>
+ </body>
+</html>

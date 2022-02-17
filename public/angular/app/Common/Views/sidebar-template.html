@@ -1,0 +1,136 @@
+<div class="col-md-3 left_col" style="z-index: 3">
+    <div class="left_col scroll-view">
+        <div class="navbar nav_title" style="border: 0;">
+            <a class="site_title" href="/enterprise/Enterprise"><i class="fa fa-paw"></i> <span>Shiksha Admin</span></a>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <!-- menu profile quick info -->
+        <div class="profile"></div>
+        <!-- /menu profile quick info -->
+        <br/>
+
+        <!-- sidebar menu -->
+        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <div class="menu_section">
+                <ul class="nav side-menu">
+                    <li [class.active]="activeLink=='shikshaBase'" (click)="setActiveLink('shikshaBase')"><a><i
+                            class="fa fa-home"></i> Shiksha Base <span (click)="toggle()" [class]="opened?' fa fa-chevron-up':' fa fa-chevron-down'"></span></a>
+                        <ul class="nav child_menu" *ngIf="activeLink=='shikshaBase' && opened">
+                            <li><a [routerLink]="['/cmsPosting/substreamPosting/viewList']">Substream</a></li>
+                            <li><a [routerLink]="['/cmsPosting/specializationPosting/viewList']">Specialization</a></li>
+                            <li><a [routerLink]="['/cmsPosting/hierarchyPosting/viewList']">Hierarchy</a></li>
+                            <li><a [routerLink]="['/cmsPosting/basecoursePosting/viewList']">Base Course</a></li>
+                            <li><a [routerLink]="['/cmsPosting/populargroupPosting/viewList']">Popular Group</a></li>
+                            <li><a [routerLink]="['/cmsPosting/certificationProviderPosting/viewList']">Certification
+                                Provider</a></li>
+                        </ul>
+                    </li>
+
+                      <li [class.active]="activeLink=='universityPosting'" (click)="setActiveLink('universityPosting')">
+                        <a><i class="fa fa-home"></i>University Posting<span (click)="toggle()" [class]="opened?' fa fa-chevron-up':' fa fa-chevron-down'"></span></a>
+                        <ul class="nav child_menu" *ngIf="activeLink=='universityPosting' && opened">
+                            <li><a (click)="openViewList('UniversityPosting')">List</a></li>
+                            <li><a [routerLink]="['/nationalInstitute/UniversityPosting/create']">Create<span class="fa fa-chevron-down"></span></a>
+
+                                <ul class="nav child_menu" *ngIf="subLink == 'universityPosting_create'">                                  
+                                  <li class="sub_menu" *ngFor="let subLinkItem of validUniversitySubLinks"><a href="javascript:void(0);" (click)="scrollToView(subLinkItem.id)"> {{subLinkItem.value}}</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li [class.active]="activeLink=='institutePosting'" (click)="setActiveLink('institutePosting')">
+                        <a><i class="fa fa-home"></i>Institute Posting<span (click)="toggle()" [class]="opened?' fa fa-chevron-up':' fa fa-chevron-down'"></span></a>
+                        <ul class="nav child_menu" *ngIf="activeLink=='institutePosting' && opened">
+                            <li><a (click)="openViewList('InstitutePosting')">List</a></li>
+                            <li><a [routerLink]="['/nationalInstitute/InstitutePosting/create']">Create<span class="fa fa-chevron-down"></span></a>
+
+                                <ul class="nav child_menu" *ngIf="subLink == 'institutePosting_create'">                                  
+                                  <li class="sub_menu" *ngFor="let subLinkItem of getValidInstituteSubLinks"><a href="javascript:void(0);" (click)="scrollToView(subLinkItem.id)"> {{subLinkItem.value}}</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                     <li [class.active]="activeLink=='coursePosting'" (click)="setActiveLink('coursePosting')">
+                     <a><i class="fa fa-home"></i> Course Posting<span (click)="toggle()" [class]="opened?' fa fa-chevron-up':' fa fa-chevron-down'"></span></a>
+                     <ul class="nav child_menu" *ngIf="activeLink=='coursePosting' && opened">
+                            <li><a [routerLink]="['/nationalCourse/CoursePosting/viewList']">List</a></li>
+                            <li><a [routerLink]="['/nationalCourse/CoursePosting/create']">Create<span class="fa fa-chevron-down"></span></a>
+
+                                <ul class="nav child_menu" *ngIf="subLink == 'create'">                                  
+                                  <li class="sub_menu" *ngFor="let subLinkItem of validCourseSubLinks"><a href="javascript:void(0);" (click)="scrollToView(subLinkItem.id)"> {{subLinkItem.value}}</a></li>
+                                </ul>
+                            </li>
+                     </ul>
+                     </li>
+                </ul>
+
+
+                <ul class="nav side-menu">
+                    <li [class.active]="activeLink=='categorySeo'" (click)="setActiveLink('categorySeo')"><a><i
+                            class="fa fa-home"></i> Category Page <span (click)="toggle()" [class]="opened?' fa fa-chevron-up':' fa fa-chevron-down'"></span></a>
+                        <ul class="nav child_menu" *ngIf="activeLink=='categorySeo' && opened">
+                            <li><a [routerLink]="['/nationalCategoryList/CategoryPageSeoEnterprise/viewList']">Category Page SEO</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav side-menu">
+                     <li [class.active]="activeLink=='listingContent'" (click)="setActiveLink('listingContent')"><a><i
+                            class="fa fa-home"></i> Listing Content <span (click)="toggle()" [class]="opened?' fa fa-chevron-up':' fa fa-chevron-down'"></span></a>
+                        <ul class="nav child_menu" *ngIf="activeLink=='listingContent' && opened">
+                            <li><a [routerLink]="['/nationalInstitute/InstitutePosting/cmsFeaturedCourses']">Update UILP Mini Course Tuple</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        <!-- /sidebar menu -->
+
+        <!-- /menu footer buttons -->
+        <!-- <div class="sidebar-footer hidden-small">
+            <a data-toggle="tooltip" data-placement="top" title="Settings">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+            </a>
+            <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+            </a>
+            <a data-toggle="tooltip" data-placement="top" title="Lock">
+                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+            </a>
+            <a data-toggle="tooltip" data-placement="top" title="Logout">
+                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+            </a>
+        </div> -->
+        <!-- /menu footer buttons -->
+    </div>
+</div>
+
+<!-- top navigation -->
+<div class="top_nav">
+    <div class="nav_menu">
+        <nav>
+            <div class="nav toggle" (click)="toggleSideBar()">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                    <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown"
+                       aria-expanded="false"></a>
+                    <ul class="dropdown-menu dropdown-usermenu pull-right">
+                        <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </nav>
+    </div>
+</div>
+<!-- /top navigation -->
+
+<!-- page content -->

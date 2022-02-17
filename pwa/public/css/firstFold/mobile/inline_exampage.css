@@ -1,0 +1,22 @@
+.usefull-links{font-size:.75rem;color:#333;padding:5px 9px 0}.nav-tabs{box-sizing:border-box;overflow:hidden;width:100%;height:auto}.chp-nav{width:100%;background:#fff;z-index:99991;box-shadow:0 2px 2px 0 rgba(0,0,0,.16),0 0 0 1px rgba(0,0,0,.08)}.chp-nav.sticky{position:fixed;top:0;box-shadow:0 2px 2px 0 rgba(0,0,0,0.16),0 0 0 1px rgba(0,0,0,0.08);z-index:11}.chp-navList{position:relative;padding:0}ul.l2Menu-list li a{padding:7px 10px 4px;color:#008489;display:inline-block;border-bottom:4px solid transparent;font-size:.875rem;font-weight:400}ul.l2Menu-list li{border-bottom:1px solid #d8d8d8}ul.l2Menu-list li:last-child{border-bottom:none}ul.l2Menu-list li a.active{border-bottom:4px solid #008489;color:#008489;font-weight:600}ul.l2Menu-list.collapse li{display:none}ul.l2Menu-list.collapse li.active{display:block;border-bottom:none}.expnd-switch{display:inline-block;width:24px;margin:1px;height:24px;border:1px solid #008489;border-radius:50%;text-align:center;position:relative;background-color:#fff;box-shadow:2px 2px 3px rgba(0,0,0,0.2)}.expnd-circle{position:absolute;right:0;top:-25px;padding:30px 10px 9px 20px}.expnd-switch:before{content:"";width:2px;height:14px;position:absolute;background:#008489;top:4px;left:10px}.expnd-switch:after{content:"";width:14px;height:2px;background:#008489;position:absolute;top:10px;left:4px}.expended .expnd-switch:before{content:none}.nav-col.nav-bar{margin-bottom:12px;box-shadow:0 2px 2px 0 rgba(0,0,0,.16),0 0 0 1px rgba(0,0,0,.08)}.ib-circle{display:inline-block;border-radius:50%}@media only screen and (min-width: 1024px){ul.l2Menu-list{padding-right:38px}ul.l2Menu-list li{display:inline;border-bottom:none}ul.l2Menu-list li a{padding:7px 10px 4px;position:relative}ul.l2Menu-list li a:after{content:"";display:block;height:1px;left:0;right:0;position:absolute;background:#d2d2d2;bottom:-4px}ul.l2Menu-list li.hide{display:none}.expnd-circle{top:-24px}}.css-acrdn{box-shadow:0 2px 2px 0 rgba(0,0,0,.16),0 0 0 1px rgba(0,0,0,.08);padding:0;border-radius:0;background:#fff;position:relative;margin-bottom:12px}label.block-label{display:block;position:relative;padding:2px 12px;border-bottom:1px solid #e6e5e5;color:#000;font-weight:600;cursor:pointer;position:relative}label.block-label h2{font-size:0.875rem;font-weight:400;color:#000;position:relative;text-align:center;}label.block-label h2:after{content:"";display:inline-block;width:6px;height:6px;top:50%;right:7px;position:absolute;border-bottom:2px solid #000;border-right:2px solid #000;margin:-2px 0 0;transform:rotate(-135deg)}.toggle-input{display:none}.table-content p:first-child{border-top:none}.table-content p{padding:9px 12px 3px;display:block;cursor:pointer;font-size:.875rem;font-weight:400;color:#008489}.toc-block{margin-top:12px}.toc-block.toc-fixed{position:fixed;left:0;top:81px;z-index:9992;margin:0;right:0}.toc-fixed .css-acrdn{border:none;box-shadow:0 2px 2px 0 rgba(0,0,0,0.16),0 0 0 1px rgba(0,0,0,0.08)}input.toggle-input:checked+label h2:after{transform:rotate(-135deg);margin:-2px 0 0}@media only screen and (min-width: 320px) and (max-width: 1023px){.table-content::-webkit-scrollbar{display:none}}.rwd-right{margin-top:12px}.flex-mob{display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;flex-direction:row;justify-content:center}.bredcrumbs_span {font-size: 0.75rem;line-height: 1;}.flex-mob button.trnBtn {
+    line-height: 34px;
+}
+.eaply.button--orange {
+}
+.flex-mob > * {
+    width: 100%;
+    max-width: 250px;
+}
+.flex-mob button:nth-child(2) {
+    margin-left: 5px;
+}
+/*course tag*/
+._browseRow a._clist {font-size: 0.875rem;margin: 0 8px 10px 0;color: #000;display: inline-block;text-decoration: none;padding: 6px 10px 5px;border-radius: 6px;border: 1px solid #000;max-width: 96%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;float: left}
+._browseRow  a._clink {display: none;margin-left: -30px;padding: 5px 0 5px 32px;background: linear-gradient(to right,rgba(255,255,255,0) 0,rgba(255,255,255,1) 30%);
+    border: none;color: #008489;position: absolute;font-size: 0.765rem;right: 0;bottom: 0px;margin-bottom: 0;font-weight: 600;}
+._padaround{padding: 12px;}
+._browseBy{display: inline-block;position: relative;}
+._browseRow{overflow: hidden;width: auto;float: left;font-size: 0px;}
+._sctntitle{display: block;font-weight: 600;font-size: 0.875rem;margin-bottom: 6px;}
+
+/*course tag end*/

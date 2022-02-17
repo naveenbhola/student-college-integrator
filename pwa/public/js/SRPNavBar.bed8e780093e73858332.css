@@ -1,0 +1,59 @@
+    .exams_head{padding: 12px;border-bottom: 1px solid #ccc;}
+    .exam-clg-rslts{font-size: 1rem;line-height: 1.32;text-align: center;}
+    .exam_sustntxt{font-size: 0.75rem;}
+    .navbar-icons{margin: 0 4px 0 0;display: block;background: url(/pwa/public/images/srp_sprite.svg);}
+    .fixed_tile{position: relative;background: #fff;z-index: 11;}
+    .flex-navbar {display: flex;height: 100%;justify-content:space-between;align-items: center;flex-direction: row;box-shadow: 0 2px 2px 0 rgba(0,0,0,.16), 0 0 0 1px rgba(0,0,0,.08);}
+    .flex-navbar a {flex: 1;color: #000;align-items:center;justify-content:center;text-decoration:none;padding: 6px 10px 6px;height: auto;flex-direction: column;border-right: 1px solid #ccc;display: inline-flex;text-align: center;font-size: 0.875rem;width: 25%;position: relative;}
+    .flex-navbar a.active:after {border-bottom: 4px solid #008489;font-weight: 600;content: '';position: absolute;bottom: 0px;left: 0;right: 0px;}
+    .flex-navbar a.active {font-weight: 600;color: #008489;background-image: linear-gradient(-180deg, #FFFFFF 0%, rgba(0, 132, 137, 0.5) 274%);}
+    .flex-navbar a:last-child {border-right: none;}
+    .fixed_tile.stickynav{position: fixed;}
+    .fixed_tile.stickynav .exams_head {
+      display: none;
+    }
+    .flex-navbar a span{display: none;}
+    .navbar-icons.Exams, .navbar-icons.Colleges {
+        width: 30px;
+        height: 30px;
+        background-position: -35px 0px;
+    }
+    .navbar-icons.Institute, .navbar-icons.Colleges {
+        background-position: 0 -2px;
+    }
+    .navbar-icons.Questions {
+        width: 34px;
+        height: 30px;
+        background-position: -76px 0px;
+    }
+    .navbar-icons.Articles {
+        width: 34px;
+        height: 34px;
+        background-position: -118px 0px;
+    }
+@media only screen and (min-width: 1024px) {
+    .fixed_tile{position: fixed;top: 0px;left: 0px;right: 0px;height: auto;z-index: 11;box-shadow: 0 2px 2px 0 rgba(0,0,0,.16), 0 0 0 1px rgba(0,0,0,.08);}
+    .examstable-grid{margin: 8px auto 0px;width: 1170px;}
+      .flex-navbar{width: 100%;margin: 0 auto;box-shadow: none;}
+      .flex-navbar a{display: inline-flex;align-items: center;justify-content: center;flex: 1;flex-direction: row;height: 50px;}
+      .navbar-icons{margin: 0 6px 0 0px}
+      .exam_impdates table tr td{padding: 10px;}
+      .fixed_tile{width: 100%;margin: 0 auto 12px;position: relative;}
+      .flex-navbar a span{display: inline-block;font-size: 0.875rem;color: #666;margin-left: 5px;}
+       .ctp-wrapper .ctp_pwa, .ctp-wrapper #ctp_pwa{margin: 30px auto;max-width: 928px;}
+      .ctp_container{float: none;}
+      .ctp_block{float: none;}
+      .ctp_sidebar{background-color: #fff;}  
+      .fixed_tile.stickynav + .ctp_container {padding-top: 110px;}
+      .fixed_tile.stickynav .flex-navbar{width: 1170px;}
+      .fixed_tile.stickynav  .flex-navbar a{border-left: 1px solid #d0d1d1;}
+      .fixed_tile.stickynav  .flex-navbar a.active{border-right: none;}
+      .fixed_tile.stickynav  .flex-navbar a:last-child{border-right: 1px solid #d0d1d1; }
+      body{background: rgba(241,242,244,.51);}
+
+}
+
+.fixed_tile.stickynav + .pwaexams_container {
+    padding-top: 110px;
+}
+

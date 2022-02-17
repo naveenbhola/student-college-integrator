@@ -1,0 +1,39 @@
+<div class="row" id="usp_form">
+    <div mysize="12">
+        <div class="x_panel">
+            <div [class.x_title]="opened">
+                <ul class="nav navbar-left panel_toolbox">
+                    <li><a class="collapse-link" (click)="toggle()"><i [class]="opened?' fa fa-chevron-up':' fa fa-chevron-down'"></i></a></li>
+                </ul>
+                <h2>USP <img class="helperText" id="usp" src="/public/images/tooltip.png" width="20px" style="padding-right:0px" (click)="toolTipNotify('usp',$event)"></h2>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content" [hidden]="!opened">
+                <div *ngIf="activateUsp">
+                    <div class="form-group" *ngFor="let uspKey of usp;let i = index;">
+                        <div mysize="3"> 
+                            <label *ngIf="i == 0" mysize="12" class="cmsFont" style="text-align:left;padding-left:22px;">Usp</label> 
+                        </div>
+                        <div [mysize]>
+                            <div style="padding-left:0px;" [mysize]>                           
+                                <input name="uspKey{{i+1}}" [ngModel]="uspKey.value" (ngModelChange)="uspKey.value=$event;changedetected()" type="text" placeholder="Enter USP"/>
+                                <span class="help-block text-danger cmsFont">
+                                    <span *ngIf="errors?.validateMaxLength && errors?.validateMaxLength[i]?.value?.maxlength">{{errors?.validateMaxLength[i]?.value?.maxlength}}</span>
+                                    <span *ngIf="errors?.validateMinLength && errors?.validateMinLength[i]?.value?.minlength">{{errors?.validateMinLength[i]?.value?.minlength}}</span>
+                                </span>
+                            </div>
+                            <div *ngIf="usp.length-1" mysize="3"> 
+                                <button type="button" (click)="removeUspControl(i);" class="btn cmsButton cmsFont">Remove</button>
+                            </div>
+                            <div *ngIf="i+1 == usp.length" mysize="3">
+                                <div *ngIf = "i<7">                         
+                                    <button type="button" (click)="addUsp();rebindFormControl('usp');" class="btn cmsButton cmsFont">+ Add More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

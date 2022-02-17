@@ -1,0 +1,26 @@
+<?php
+	global $homePageMap;
+	$homePageMap = array (
+		'SHIKSHA_HOME_PAGE' => '1',
+		'FOREIGN_PAGE' => '2',
+		'ENTRANCE_EXAM_PREPARATION_PAGE' => '3',
+		'MANAGEMENT_PAGE' => '4',
+		'ONLINE_PAGE' => '5',
+		'BANKING_FINANCE_PAGE' => '6',
+		'IT_PAGE' => '7',
+		'HOSPITALITY_PAGE' => '8',
+		'RETAIL_PAGE' => '9',
+		'MISCELLANEOUS_PAGE' => '29',
+		'VOCATIONAL_PAGE' => '10',
+		'LANGUAGES_PAGE' => '11',
+		'MEDIA_MASS_COMM_PAGE' => '12',
+		'BEAUTY_PAGE' => '13',
+		'PROFESSIONAL_PAGE' => '14',
+		'SCIENCE_ENGINEERING_PAGE' => '22',
+		'LEGAL_PARALEGAL_PAGE' => '23',
+		'HEALTH_MEDICINE_PAGE' => '25',
+		'EDUCATION_TEACHING_PAGE' => '26',
+		'ANIMATION_PAGE' => '27',
+		'INDIA_PAGE' => '28'
+	);
+?>

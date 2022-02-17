@@ -1,0 +1,57 @@
+.ask-qryDv {
+    border-top: 1px solid #ccc;
+    padding: 8px 12px 12px;
+}
+
+.ask-qryDv .curr-stu {
+    width: 100%;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.curr-stu .curr-stuImg {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    vertical-align: top;
+    background: #e1e2e2;
+    margin: 0;
+    float: left;
+    text-align: center;
+    font-size: 24px;
+    overflow: hidden;
+    color: #777;
+}
+
+.curr-stu .curr-stuDet {
+    display: inline-block;
+    color: #666;
+    font-size: 0.75rem;
+    margin-left: 10px;
+    vertical-align: top;
+}
+
+.curr-stu .curr-stuDet strong {
+    font-weight: 600;
+    color: #000;
+    font-size: 0.875rem;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.curr-stu .curr-stuImg img {
+    width: 40px;
+    height: 40px;
+}
+
+p.askQry-titl {
+    font-weight: 600;
+    font-size: 0.875rem;
+    margin-bottom: 10px;
+    line-height: 1.3125rem;
+}
+
+@media only screen and (min-width: 1024px){
+    .ask-qryDv{padding: 12px 16px 16px;}
+}

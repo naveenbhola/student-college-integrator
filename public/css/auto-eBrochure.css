@@ -1,0 +1,91 @@
+@charset "utf-8";
+/* CSS Document */
+body{font:normal 14px Arial, Helvetica, sans-serif; margin:0; padding:0; color:#000}
+ul,li,p,form,h1,h2,h3,h4,h5,h6{margin:0; padding:0; outline:0}
+
+ul,li{margin:10px 0 10px 18px}
+ul, ol{margin-bottom: 25px}
+ul li, ol li{margin:0 0 10px 0px}
+a:link,a:active,a:visited,a:hover{color:#0065de; text-decoration:none}
+a:hover{text-decoration:underline}
+img{border:0 none}
+#brochure-wrapper{width:100%; font:normal 14px Arial, Helvetica, sans-serif; color:#1e1e1e; margin:0 auto; position:relative;}
+#brochure-wrapper p, .content-box p{line-height:21px}
+#cover-header{background:#f1dc9a url(../images/cover-header-sep.jpg) left bottom repeat-x; padding:50px 20px 30px; overflow:hidden}
+#cover-header .inst-name{float:left; width:440px}
+#cover-header .inst-logo{width:110px; float:right}
+#cover-header .inst-name h2{color:#800e20; font:normal 33px Arial, Helvetica, sans-serif; margin-bottom:15px}
+#cover-header .inst-name p{font:italic bold 21px Georgia, "Times New Roman", Times, serif; color:#343434;}
+#bot-pattern, #bot-pattern2{}
+#bot-pattern2{}
+#top-pattern{}
+.page-title{background:#e1e3e3; border-left:12px solid #bbb7b2; padding:15px; font:normal 25px Arial, Helvetica, sans-serif; color:#373737; margin-bottom:35px}
+#bro-content{padding:10px 0px 30px 0px;}
+#bro-inner-content{padding:0px 52px 0px 38px;}
+#bro-inner-content h4{background:#efd483; padding:2px 12px 2px 8px; font:normal 18px Arial, Helvetica, sans-serif; color:#800e20; display:block; margin-bottom:15px}
+#bro-inner-content h4 span{font-size:14px}
+.top-reasons-cloud{margin:0 20px; font-size:11px}
+.reason-details{background:#3d8e87; padding:12px 15px; color:#fff; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; overflow:hidden}
+.reason-details h5{font-size:20px; color:#efd483; font-weight:normal; margin-bottom:12px; display:block}
+.reason-details ol, ol.bullet-items, ol.bullet-items2{margin:0 0 0 5px; padding:0; float:left; width:48%; list-style:none !important}
+ol.bullet-items2{width:auto; margin:10px 0 0px 2px}
+.reason-details ol li, ol.bullet-items li, ol.bullet-items2 li, .top-reasons-cloud .pointer, .footer-logo,.abt-course{background:url(../images/bro-sprites.gif) 0 0 no-repeat}
+.reason-details ol li, ol.bullet-items li, ol.bullet-items2 li{margin-bottom:5px; background-position:left 4px; padding-left:10px}
+ol.bullet-items2 li ul li{background:none !important; list-style:disc !important}
+ol.bullet-items li{background-position:left -313px; list-style:none !important}
+ol.bullet-items2 li{background-position:left -616px; line-height:18px; margin-bottom:8px; list-style:none !important; font-size: 14px !important}
+ol.bullet-items2 li span, ol.bullet-items2 li p{font-size: 14px !important}
+.top-reasons-cloud .pointer{background-position:0 -196px; width:20px; height:27px; margin-left:50px}
+#page-footer{text-align:right; width:100%; position:relative}
+#page-footer .footer-logo{background-position:0 -234px; width:255px; height:59px; display:inline-block; position:absolute; right:22px; top:30px}
+.content-box{margin-bottom:20px; float:left; width:100%;}
+.content-box h2{font-size:18px; font-weight:bold; display:block; margin-bottom:10px}
+.bro-table{width:100%; font:normal 13px Arial, Helvetica, sans-serif; border-collapse:collapse; border:1px solid #dadada; margin-top:10px; color:#3c3939}
+.bro-table tr th, .bro-table tr td{border:1px solid #dadada; padding:5px 8px;}
+.bro-table tr th{text-align:left; font-size:14px; color:#969a9a; font-weight:normal}
+.photo-frame{border:1px solid #d5d7d7; margin-top:20px; float: left; box-shadow: 0px 4px 6px #ccc; -moz-box-shadow: 0px 4px 6px #ccc; -webkit-box-shadow: 0px 4px 6px #ccc;}
+.abt-course{}
+ul.placement-comp li{float:left; width:118px; height:38px; margin:0 8px 8px 0; list-style:none !important}
+ul.placement-comp li img{width:120px;}
+ol.numeric-item{margin:15px 0 0 0px; padding:0}
+ol.numeric-item li{list-style:decimal; float:left; width:230px; font-size:13px; margin:0 12px 7px 18px;}
+.clearFix{clear:both; font-size:1px;}
+.spacer3{height:3px; overflow:hidden}
+.spacer5{height:5px; overflow:hidden}
+.spacer8{height:8px; overflow:hidden}
+.spacer10{height:10px; overflow:hidden}
+.spacer15{height:15px; overflow:hidden}
+.spacer20{height:20px; overflow:hidden}
+.flLt{float:left}
+.flRt{float:right}
+.tac{text-align:center}
+.sprite-bg, .btn-arrow, .min-sal, .max-sal, .avg-sal,.rUp,.rDn{background:url(/public/images/listing-sprites.png) no-repeat; display:inline-block; overflow:hidden;}
+.section-cont{padding-bottom:25px;}
+p.sub-title{margin-bottom:10px}
+.section-cont .big-pic{width:288px; height:201px; overflow:hidden; float:left}
+.section-cont .thumbnails{width:119px; float:right}
+.thumbnails img{float:left}
+h3.section-title, h3.section-sub-title, .section-cont-title {font:bold 16px "Trebuchet MS", Arial, Helvetica, sans-serif; margin-bottom:10px}
+h3.section-sub-title{font-size:15px; margin-bottom:3px;}
+.section-cont-title{background:#f0f0f0; border-bottom:1px solid #dddddd; padding:4px 8px; overflow:hidden; *height:0.01%}
+h3.section-title span{font-size:14px}
+h3.section-title strong{font-size:12px; font-weight:normal}
+ul.bullet-items{}
+ul.bullet-items li{margin:0 0 7px 18px; list-style-type:disc !important; color:#767676; line-height:17px}
+ul.bullet-items p{color:#000}
+ul.bullet-items p span{color:#c5c5c5; margin:0 2px}
+ul.bullet-items label{color:#3d3d3d}
+.bld{font-weight:bold !important}
+ul.sal-statastics{width:182px; float:left; border-left:1px solid #d8d8d8; font:normal 11px Arial, Helvetica, sans-serif; color:#555555; margin: 0; padding:3px 0 0 0}
+ul.sal-statastics li{padding:0; margin-bottom:10px; list-style: none !important}
+.min-sal{border:1px solid #cce3f9; background-color:#fff; background-position:0 -108px; background-repeat:repeat-x}
+.max-sal{border:1px solid #f7ed76; background-color:#fff; background-position:0 -137px; background-repeat:repeat-x}
+.avg-sal{border:1px solid #bef7a9; background-color:fff; background-position:0 -122px; background-repeat:repeat-x}
+.sal-labels{width:70px; padding:4px 0px 0 5px; float:left; font-family:Arial, Helvetica, sans-serif}
+.sal-labels label{margin-bottom:13px; display:block}
+.scale-bg{background-position:0 -53px; width:176px; height:11px; position:relative; margin:0 0 0 -2px !important; padding:0 !important; overflow:hidden;}
+.scale-figure{font-size:11px; color:#afafaf; padding:2px 0 0 74px; width:190px}
+.scale-figure label{width:29px; float:left;}
+.scale-figure label.third{padding-left:4px}
+.scale-figure label.fourth{padding-left:4px; padding-right:9px}
+.scale-figure label.sixth{width:16px; padding-left:4px}

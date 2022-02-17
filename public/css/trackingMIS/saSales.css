@@ -1,0 +1,85 @@
+*{
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+.ct{height:124px;text-align: center;}
+.card-title{margin: 0px;}
+.mt{margin-top: 10px;}
+.f18{font-size: 18px;}
+.f12{font-size: 12px;}
+.f14{font-size: 14px;}
+.f48{font-size: 48px; line-height: 1; margin-bottom: 0px;}
+.ctgray{color: #666;}
+.bg-col{background: rgba(204, 204, 204, 0.47);}
+.col-start{padding: 10px 5px;}
+.stu-list{height: 553px;overflow: auto;}
+.stu-list > ul{margin: 0;padding: 0;}
+.stu-list > ul > li{list-style: none;border: 1px solid #e6e5e5;margin-bottom: 10px;background: #fff;}
+.stu-list > ul > li > a{display:block;text-decoration: none;}
+.stu-list > ul > li > a > div{padding-top: 10px;padding-bottom:10px;}
+.stu-list > ul > li:hover,.stu-list > ul > li.act2{ background: #eef9ff;border: 1px solid #3fa9f5;}
+.img-block{width: 58px;height: 52px;display: inline-block;vertical-align: top;margin-right: 5px;margin-left: 5px;}
+.side-col{display: inline-block;vertical-align: top;overflow: word-break:break-all;width: 74%;}
+.abroad-stu-name{margin: 2px 0px 0px;line-height: 16px; }
+.abroad-stu-qual, .abroad-exams{margin: 0px 0px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.x-panel{padding: 10px;margin-top: 10px;background: #fff;}
+.img-new{display: inline-block;vertical-align:top;width: 117px;height: 78px;border: 1px solid #e6e5e5;margin-right: 20px}
+.img-desc{display: inline-block;display: inline-block;width: 70%;}
+.img-desc > p{margin: 0;}
+.contrl-label{float: none;display:inline-block;width: 200px;padding-top: 0px;text-align: left;vertical-align: top;font-weight: 400}
+.contrl {display: inline-block;vertical-align: top;width: 65%;}
+.control-group{padding:5px 5px 0px}
+.control-group:before,
+.control-group:after{content:'';display:table;}
+.control-group:after {display: table;content: "";line-height: 0;}
+.fbold{font-weight: bold;}
+.ct.act{ border: 1px solid #3fa9f5;}
+.studentCountTile{ cursor: pointer; }
+.ct.act > P{
+    color:#3fa9f5;
+    font-weight:400;
+}
+.ct > p:last-child{
+    margin:0px;
+}
+.act:after{
+    content:'';
+    position:absolute;
+    bottom: -7px;
+    border: 3px solid #3fa9f5;
+    width: 34%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+#appliedStudentLegends > ul{padding: 0px;}
+#appliedStudentLegends > ul:after,
+#appliedStudentLegends > ul:before{content: '';display: table}
+#appliedStudentLegends > ul:after{clear: both}
+#appliedStudentLegends > ul > li{cursor: pointer;margin: 0px 10px 10px 0px;padding: 5px 10px;border: 1px solid #e6e5e5;position: relative}
+#appliedStudentLegends > ul > li.active:before {
+    display: block;
+    position: absolute;
+    pointer-events: none;
+    content: '';
+    visibility: visible;
+    -webkit-transform: rotate(-137deg);
+    -ms-transform: rotate(-137deg);
+    transform: rotate(-137deg);
+    width: 12px;
+    height: 12px;
+    box-shadow: -1px -1px 0 0px rgba(34, 36, 38, 0.15);
+    background: #fff;
+    z-index: 2;
+    bottom: -5px;
+    left: 50%;
+    margin: 0 0 0 -.25em;
+}
+#appliedStudentLegends > ul > li > i{margin-right:10px;}
+#appliedStudentLegends > ul > li:hover{box-shadow: 4px 6px 9px -6px #999}
+#appliedStudentLegends > ul > li:last-child{margin-right: 0px;}
+td.univName > .img-sec{display: inline-block;margin-right: 15px}
+td.univName > .img-sec > img{max-width: 200px;min-width: 100px;width:100%;height: auto}
+td.univName > .img-desc{display: inline-block;font-size: 14px;width: auto}
+.top-container{margin-top: 20px;padding: 10px 0 0;border-top: 1px solid #e6e5e5}
+.max-len{min-height: 533px;overflow: auto;background: #fff}

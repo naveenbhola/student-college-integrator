@@ -1,0 +1,207 @@
+@charset "utf-8";
+/* CSS Document */
+.top-bottom-padding{padding:10px 0;}
+.nav a {outline: none;}
+.style-form {background-color: #F5F5F5; margin-bottom: 12px; padding-top: 15px;}
+a.anchorDisabled {color: red;}
+.disabled {pointer-events: none;cursor: default;}
+.back2top {bottom: 27%;float: right;position: fixed;right: 5px;display:none; cursor:pointer;}
+.errorBox, .warningBox {top: 7px; position: relative; display: none;}
+
+
+
+/*Edit Request Layer*/
+.tags-layer {
+    width: 100%;
+    position: fixed;
+    height: 100%;
+    background: #1c252c;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: .7;
+    z-index: 9999;
+    display: none;
+}
+.posting-layer {
+    width: 780px;
+    height: auto;
+    background: #fff;
+    position: fixed;
+    display: none;
+    left: 0;
+    right: 0;
+    top: 15%;
+    z-index: 9999;
+    border: 1px solid;
+    border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+    margin: 0 auto;
+}
+.tags-head {
+    width: 100%;
+    padding: 10px 15px;
+    background: #f1f1f1;
+    color: #5a595c;
+    font-size: 20px;
+    position: relative;
+    font-weight: 400;
+}
+.tags-head>a.cls-head {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 13px;
+}
+.cls-cross:after, .tags-head>a.cls-head:after {
+    position: absolute;
+    top: 4px;
+    right: 3px;
+    content: "x";
+    border-radius: 50%;
+    font-size: 28px;
+    color: #ccc;
+    line-height: 14px;
+    width: 24px;
+    font-weight: 400;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: -70px -69px;
+    height: 24px;
+}
+
+.posting-layer .tag-body {
+    display: block;
+    padding: 15px;
+    background: #fff;
+}
+
+.posting-layer .tag-body p.new-line {
+    color: #989898;
+    font-size: 12px;
+    display: block;
+    font-weight: 400;
+    padding: 5px 0 15px;
+    border-bottom: 1px solid #e5e6e6;
+    margin-bottom: 15px;
+}
+.report-ul {
+    list-style: none;
+    display: block;
+    width: 100%;padding:0;
+}
+.report-ul li {
+    padding: 5px 7px 10px;
+    margin: 0;
+    position: relative;
+    padding-left: 30px;
+    /*margin-bottom: 10px;*/
+    cursor: pointer;
+}
+.report-ul li div.report-col {
+    display: block;
+}
+div.report-col input[type=checkbox] {
+    display: none;
+}
+.report-ul li div.report-col label {
+    width: 100%;
+    font-size: 14px;
+    color: #232428;
+    font-weight: 400;
+    display: block;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.report-ul li div.report-col label:before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    position: absolute;
+    left: 3px;
+    bottom: 1px;
+    background-color: #fff;
+    top: 9px;
+    border: 1px solid #d0d1d1;
+}
+.btns-col {
+    display: block;
+    margin: 15px 0 0;
+    line-height: 30px;
+    color: #babbbd;
+    font-size: 12px;
+}
+.btns-col .right-box {
+    float: right;
+}
+.ana-btns {
+    width: 88px;
+    height: 30px;
+    line-height: 28px;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+    text-transform: capitalize;
+}
+.d-btn {
+    background: #e7e9e7;
+    color: #babbbd!important;
+    cursor: default;
+}
+.clr {
+    width: 100%;
+    display: block;
+    clear: both;
+    height: 0;
+}
+.write-col {
+    display: block;
+    position: relative;
+}
+.write-txt {
+    border: 1px solid #a3a9ac;
+    resize: none;
+    color: #666;
+    opacity: 1;
+    padding: 10px 10px;
+    width: 100%;
+    margin: 25px 0 0 0;
+    font-size: 12px;
+    font-weight: 400;
+    outline: 0;
+    box-shadow: none;
+    border-radius: 0;
+    overflow: hidden;
+}
+.posting-layer .tag-body p.count-numbr {
+    display: none;
+    position: absolute;
+    right: 1px;
+    top: -15px;
+    text-align: right;
+    color: #babbbd;
+    font-size: 12px;
+    font-weight: 400;
+    margin-right: 1px;
+}
+div.report-col input[type=checkbox]:checked+label:before {
+    content: ' ';
+    color: #008489;
+    line-height: 11px;
+    text-align: center;
+    width: 15px;
+    height: 15px;
+    background: url(/public/images/ana-icons-new-l.png?v=1);
+    background-position: 186px -330.2px;
+}
+a.a-btn {
+    color: #fff!important;
+    background: #f29d37;
+}
+.not-active {
+  pointer-events: none;
+  cursor: default;
+}

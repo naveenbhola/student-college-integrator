@@ -1,0 +1,25 @@
+     <section class="data-card">
+        <h2 class="color-3 f16 heading-gap font-w6">Students who viewed this course also viewed</h2>
+        <div class="card-cm">
+           <amp-carousel height="0" width="0" layout="responsive" type="carousel" class="s-c ga-analytic" data-vars-event-name="STUDENT_WHO_VIEWED">
+              <% data.map((item) =>  { %>
+              <figure class="slide-fig color-w">
+                 <a>
+                    <amp-img src="<%- item.imageUrl %>" width=155 height=116 layout=responsive></amp-img>
+                 </a>
+                 <div class="pad-5">
+                    <a href="<%- item.instituteUrl %>" class="caption color-3 f14 font-w6 m-5btm clg-tl"><%- item.instituteName %></a>
+                    <figcaption class="caption color-6 f12 font-w4 m-5btm clg-lc">
+                       <%- item.cityName %>
+                       <% if(item.establishYear != null) {%>
+                         | Estd. <%-item.establishYear %>
+                      <% } %>
+                    </figcaption>
+                    <a href="https://www.shiksha.com/b-tech/course/b-e-in-mechanical-engineering-pimpri-chinchwad-college-of-engineering-and-research-pimpri-chinchwad-educations-trust-s-ravet-pune-231911" class="caption color-3 f14 font-w6 clg-tl"><%- item.courseName %></a>
+                    <a href="https://www.shiksha.com/muser5/UserActivityAMP/getResponseAmpPage?listingType=course&listingId=231911&actionType=brochure&fromwhere=coursepage&pos=alsoViewed" class="btn btn-primary color-o color-f f14 font-w7 m-top ga-analytic" data-vars-event-name="DBROCHURE_COURSE_ALSOVIEWED">Request Brochure</a>
+                 </div>
+              </figure>
+            <% }) %>
+           </amp-carousel>
+        </div>
+     </section>

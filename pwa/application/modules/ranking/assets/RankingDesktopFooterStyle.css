@@ -1,0 +1,12 @@
+.pwa_pagecontent {border-bottom: 1px solid #d2d2d2;}
+.ranking-footer-section {background: #f1f1f1;}
+.ranking-footer-section .top_widget{background: transparent;margin: 0 auto;padding: 10px 0px;box-shadow: none;width: 1200px;}
+.ranking-footer-section .list_col{width: 100%;display: flex;flex-direction: row;justify-content: flex-start;align-items: center;margin-bottom: 10px;}
+.ranking-footer-section .list_col h4{min-width: 60px;margin-right: 10px;font-size: 0.875rem;font-weight: 600;}
+.ranking-footer-section .rslts_ul{margin: 0px 10px 0px 0px;display: flex;flex-direction: row;justify-content: flex-start;width: max-content;width: -webkit-max-conent;width: -moz-max-content}
+.ranking-footer-section .rslts_ul li{margin: 0px 10px 0px 0px;width: 103px;}
+.ranking-footer-section .rslts_ul li a{color: #666;}
+.ranking-footer-section .rslts_ul li a:hover{color: #008489;}
+.widget_content .ranking_btns {color: #008489;padding: 7px 10px 4px;border-radius: 2px;border: 1px solid #008489;display: inline-block;height: auto;width: auto;line-height: inherit;cursor: pointer;}
+.ranking-footer-section .footer-heading{margin-left: 40px;padding: 22px 0 0px 22px;}
+.f20_normal, .f20_bold {font-size: 1.32rem;}

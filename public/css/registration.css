@@ -1,0 +1,166 @@
+#registration-box, #registration-box2 {font:normal 12px 'Open Sans',sans-serif }
+#registration-box ul, #registration-box2 ul{list-style:none; margin:0; padding:0;}
+#registration-box ul li{margin-bottom:10px; width:100%; clear:both; display:inline-block; float:none !important}
+#registration-box2 ul li{margin-bottom:5px; width:100%; clear:both; display:inline-block; float:none !important}
+#registration-box2 ul li label{width:180px; float:left; padding:3px 4px 0 0; text-align:right}
+#registration-box2 ul li label span, #registration-box-layer ul li label span{color:#F00;}
+#registration-box2 .fields-col, #registration-box-layer .fields-col{float:left; width:270px;}
+#registration-box ul li.pref-row, #registration-box-layer ul li.pref-row{font-size:20px}
+
+input.register-fields, textarea.register-fields, .selectStyleDiv, .custom-dropdown select{padding:5px 3px; width:100%; border:1px solid #ccc; border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px; color:#333;  font-size: 13px !important; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box}
+.two-column-fields{float:left; width:50%; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box}
+#registration-box2 select {width:230px;}
+.register-fields2 {width:228px;}
+#registration-box2 .selectStyleDiv{padding:3px 5px 4px 3px; font-size: 13px; width:222px;}
+#registration-box2 .regLayer{width:235px;}
+input.register-fields{padding:6px 7px !important;}
+@media screen and (-webkit-min-device-pixel-ratio:0){input.register-fields{box-shadow:none}}
+/*Buttons*/
+.gray-button{background-position:left 2px; background-repeat:repeat-x; border:solid 1px #bebebe; -moz-border-radius:6px; -webkit-border-radius:6px;border-radius:6px; font:bold 12px 'Open Sans',sans-serif; overflow:visible; padding:3px 8px; cursor:pointer; margin:0; text-shadow:1px 1px 2px #b5b5b5; color:#444343}
+.orange-button, a.orange-button{background-color:#eea234; border:solid 1px #eea234; overflow:visible; padding:4px 8px; font: 14px 'Open Sans',sans-serif; color:#fff; line-height:normal; cursor:pointer; margin:0; height:30px\9; *filter:chroma(color=#000000);}
+a.orange-button{text-decoration:none !important}
+/* chrome */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+.orange-button{height:30px}
+}
+#registration-box label, #registration-box-layer label{display: block; float: left; width: 100%;}
+#registration-box-layer ul li{margin-bottom:8px !important; width:100%; clear:both; display:inline-block; float:none !important}
+#registration-box-layer ul li label{font-size:12px !important}
+.selectStyleDiv{padding: 8px 5px 8px 8px; width: 93%; cursor:default; background:#fff;}
+.selectStyleArrow {background:url(../images/select-arrow.gif) 0 0 no-repeat; display: inline-block; float: right; height: 18px;width: 17px;}
+.regErrorMsg {color:red;font-size: 12px;}
+.city-layer-main-exams{padding:0;  box-shadow: 2px 2px 2px #cccccc;}
+.city-layer-col{width: 200px;margin-right: 7px;float: left;}
+.city-layer-col-exams {width:355px; padding:15px 10px 10px 10px;}
+.city-layer-col-last{width:235px; margin-right:0; border-left:1px solid #E2E2E2; padding-left:10px;float: left;}
+.city-layer-col strong{margin-bottom:5px; display:block}
+.city-layer-col ul{height:227px; overflow-y:auto; overflow-x:hidden}
+.city-layer-col ul li{display:block; clear:left; margin-bottom:5px !important; float:left !important}
+.city-layer-col ul li span{color:#0065DE}
+.city-layer-btn{border-top:1px solid #c4c4c6; padding:15px 0 5px 0px; text-align:center}
+.city-layer-btn-exams{text-align:center; background: #eee; padding:10px 0 10px 0;}
+.clearFix {clear: both}
+.spacer10{height:10px; overflow:hidden}
+.country-layer{background:#fff; border-bottom:1px solid #c5c5c5; padding:10px; float:left;}
+.country-layer-cols{float:left; font-size:12px; margin-right:12px;}
+.country-layer .last{margin-right:0}
+.country-layer .first{margin-right:5px}
+.country-layer .first label{padding-right:0}
+.country-layer .first ul li{padding:0 !important; margin-left:0 !important;}
+.country-layer-cols strong{font-weight:bold; margin-bottom:7px; display:block; width:125px; color:#000;}
+.country-layer-cols ul{margin:10px 0 0 22px !important; padding:0; height:200px; overflow-y:auto; overflow-x:hidden; width:122px}
+.country-layer-cols ul li{margin:0 0 2px 0; padding:0 35px 0 0 !important; list-style:none; margin-bottom:5px !important; display:block; width:100%;; float:left !important}
+.country-layer-cols ul li span input{margin:0; padding:0; vertical-align:middle; width:13px; height:13px}
+.country-layer-cols ul li span{width:19px; float:left;}
+.country-layer-cols ul li label{color:#3665e9; vertical-align:middle; margin-left:0px; text-align: left !important; padding: 0 !important; display:block; width:85px !important; float:left;}
+.clearFix{clear:both}
+.spacer15{height:15px; overflow:hidden}
+.form-cols{width:285px; float:left; padding-top:15px}
+.connect-cols{width:300px; float:right; font:normal 12px 'Open Sans',sans-serif}
+.box-shadow-unified{background:#FFF;border:1px solid #d1d1d1; border-top:none; -webkit-box-shadow: 0px 1px 2px 1px #d1d1d1; -moz-box-shadow: 0px 1px 2px 1px #d1d1d1; box-shadow: 0px 1px 2px 1px #d1d1d1; margin-top:-46px; padding-bottom:10px}
+p.student-info{font:700 13px 'Open Sans',sans-serif; margin:0; padding:12px 0 5px; display:block; *height:0.01%}
+.fb-plugin-box{border:1px solid #d1d1d1; -webkit-box-shadow:0 0px 3px 1px #d1d1d1; -moz-box-shadow:0 0px 3px 1px #d1d1d1; box-shadow:0 0px 3px 1px #d1d1d1; margin-top:25px; padding:10px}
+.student-info-box{font:normal 13px 'Open Sans',sans-serif}
+.fb-plugin-box h4{font:bold 14px 'Open Sans',sans-serif; margin:0 0 5px; padding:0}
+.student-info-box h2{color:#ff8100; font:normal 18px 'Open Sans',sans-serif; margin-bottom:10px;}
+.student-info-box ul{margin:0; padding:60px 0 0 35px}
+.student-info-box ul li{margin-bottom:12px; color:#282828; list-style:disc;}
+#user-exists-login-overlay h3 {font-size:13px; color:#222; margin-bottom: 10px; font-weight:700}
+.infoIcon{background:url(/public/images/infoIcon.jpg) no-repeat left top;height:25px;line-height:25px;padding-left:35px}
+.registrationLoader {background: url(https://www.shiksha.com/public/images/loader.gif) no-repeat center}
+#preferredStudyLocationLayer{z-index:999}
+#gallery_div_script_tpl, .mmp_banner_container2{font:normal 12px 'Open Sans',sans-serif}
+#gallery_div_script_tpl ul, .mmp_banner_container2 ul{margin:10px 0 10px 15px; float:left}
+#gallery_div_script_tpl ul li, .mmp_banner_container2 ul li{margin:0 0 3px 20px; list-style:disc !important}
+.mmp_banner_message{clear:both; font-size:12px !important}
+.shiksha-fb-plugin{padding:10px 10px 0 10px; overflow:hidden}
+.shiksha-fb-plugin .figure{width:40px; float:left;}
+.shiksha-fb-plugin p{font-size:11px; margin:0; padding:0; color:#3c59a9}
+.shiksha-fb-plugin p strong{font-size:14px}
+.fb-like-btn{display:block; margin-top:6px}
+.OrgangeFont{color:#FD8103}
+.bld{font-weight:700}
+.colon-separater{float:left; margin-right:1px; padding-top:2px}
+.confirm-bro-msg{color: #a0a0a0; font:700 17px 'Open Sans',sans-serif; margin-bottom:10px; background:url(/public/images/confirm-icn.gif) 0 4px no-repeat; padding-left:28px; padding-top:4px;}
+.exams-separator{border-top:1px solid #ddd; margin-right:20px; margin-top:5px; line-height: 10px;}
+.exams-state-info{margin-left: 115px; padding-right: 10px; display: none; color:#777;}
+.exams-passing-year-block {float:left; width:95px; display: none;}
+.exams-passing-year-block select {width:90px !important;}
+.exams-score-block {float:left; width:130px; display: none;}
+.exams-score-block input {width:115px; color:#111;}
+.regLayerIframe {position:relative; display:none; z-index:98;}
+.exam-layer-iframe {z-index:109; position:absolute; filter:alpha(opacity:20);opacity: .2; width:370px; top:-1px;}
+.regLayer {position:relative; display:none; z-index:99; width:370px; background: #fff; border:1px solid #ccc; top:-1px; box-shadow:2px 2px 2px #cccccc; float:left}
+.exam-layer-cb {float:left; width:25px; padding-top: 2px;}
+.exam-layer-name {margin-left: 25px; padding-top: 5px; margin-right: 10px; word-break: break-all;}
+.exam-layer-details-box {padding-top:5px; display: none;}
+.exam-layer-score-box {float:left; width:180px; margin-left: 25px; display: block;}
+.exam-layer-score-field {width:170px; color:#555; font-size: 12px;}
+.exam-layer-score-field-nonmmp {width:160px !important; color:#555; font-size: 13px !important; padding:3px;}
+.exam-layer-year-box {float:left; width:125px; display: block;}
+.exam-layer-year-select {width:115px !important; font-size: 12px;}
+.exam-layer-year-select-nonmmp {width:115px !important; font-size: 13px !important; padding:2px;}
+.exam-layer-state-info {margin-left: 25px; padding-right: 10px; display: block; color:#777;}
+.exam-layer-error-msgbox {margin-left: 25px; padding-right: 10px;}
+.exam-layer-separator {border-top:1px solid #ddd; margin-right:20px; margin-top:5px; line-height: 10px;}
+#registrationFormDiv #registration-box select, #registrationFormDiv #registration-box-layer select, #registrationFormDiv textarea.register-fields{width:100%}
+/*#registrationFormDiv .selectStyleDiv{width:95%}
+#registrationFormDiv input.register-fields{width:96%}
+*/
+
+.select-opt-layer{border:1px solid #ccc; padding:12px; background:#fff; position:absolute; top:30px; right:40px;}
+.select-opt-layer ol li{float:left; width:100%}
+.select-opt-layer p{color:#666666; margin:5px 0 20px 0; font-size:11px}
+ul.mmp-registration-list{width:100%;}
+ul.mmp-registration-list li{float: left;}
+ul.mmp-registration-list label{width:100px !important;}
+.country-width{width:33%;}
+.btn-area{margin: 10px 0 0px 0; border-top:1px solid #ccc;}
+.h-rule{height:1px; border-bottom:1px dashed #9a9a9a; margin:20px 0; width:85%; float:left; position:relative}
+.opt-txt{text-align:center; position:absolute; top:-13px; width:46px; padding:4px; background:#f3f3f3; left:45%; font-size:14px;}
+.more-opt-box{background: #F3F3F3; border: 1px solid #CCCCCC; color: #676767; font-size: 11px; padding: 1px 3px 3px; position: absolute; right: -68px; text-align: center; top: -9px; cursor:pointer; z-index:9;}
+.opt-arr-d, .opt-arr-u{background-position:-56px -125px !important; width:10px; height:7px; margin-right:2px; cursor:pointer;}
+.opt-arr-u{background-position:-66px -126px !important;}
+
+
+
+/*CSS for New Registration Layer*/
+.other-exams{margin-left:60px; width:130px;}
+
+
+
+/*@supports (pointer-events: none) and
+      ((-webkit-appearance: none) or
+      (-moz-appearance: none) or
+      (appearance: none)) 
+{*/
+.custom-dropdown{position: relative; display: block; vertical-align: middle; border:1px solid #ccc; border-radius:4px; width:100%; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box}
+.custom-dropdown select{padding-right:6px; border: 0; border-radius: 0px; -webkit-appearance: none; -moz-appearance: none; appearance: none; outline:0 none; border-radius:4px}
+.custom-dropdown::before, .custom-dropdown::after{content: ""; position: absolute; pointer-events: none; background-color: #fff;}
+.custom-dropdown::before {width: 27px; right: 0; top: 0; bottom: 0; background:#fff url(../images/drop-arrow2.gif) right center no-repeat; border-radius:4px}
+.custom-dropdown select[disabled]{color: rgba(0,0,0,.3);}
+.abroad-register-details{margin:0px 45px 20px 10px; width:340px;}
+.abroad-register-details-2{margin:0px 45px 0px 0px; width:300px;}
+.abroad-register-details-2 .custom-dropdown select{padding:6px}
+/* FF only temp fix */
+@-moz-document url-prefix(){
+	.custom-dropdown select{ padding-right: .9em }
+}
+/*}*/
+.select-overlap {background:rgba(0, 0, 0, 0); height: 28px; left: 0; position: absolute; top: 0; width: 100%; z-index: 9;}
+.city-layer-main{padding:10px;}
+
+/***temp css for shorlist9nov15***/
+.customInputs input[type="radio"], .customInputs input[type="checkbox"] {display: none;display: inline-block\9;float: left\9;}
+.customInputs input[type="checkbox"] + label span {background-position: -76px -164px;background-color: rgba(0, 0, 0, 0);cursor: pointer;display: block;margin: 0;vertical-align: middle;width: 17px;height: 15px;float: left;display: none\9;}
+.customInputs label p {margin-left: 20px;display: inline\9; margin: 3px 0 0 20px\9;}
+.customInputs input[type="checkbox"]:checked + label span {background-position: -93px -164px;background-color: rgba(0, 0, 0, 0);}
+/***temp css for shorlist9nov15 ends***/
+
+.pin-detail{color: #656565; font-size:12px; margin-top:10px;}
+.pin-title{font-size:14px; color:#333; line-height: 20px; margin-bottom:8px;}
+.pin-detail input[type="text"]{width:150px; margin:12px 5px 5px 0;}
+.universal-select, input.universal-txt-field{padding:5px !important; width:100%; border:1px solid #dbdbdb; border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px; box-shadow:inset 0 1px 3px #e0e0e0; -moz-box-shadow:inset 0 1px 3px #e0e0e0; -webkit-box-shadow:inset 0 1px 3px #e0e0e0; color:#333; font-size:14px;}
+
+/*CSS for common customized registration form */
+.outLaySt{width:640px;font-family:Trebuchet MS;padding:0}.layTitSt{background:#e6e6e6;padding:10px}.closeSt{right:8px;top:3px}.layContSt{padding:0 6px 10px;background:#fff}.loginSt{margin-right:14px}.rfFormSt{margin-left:15px;margin-top:15px}.rRCSt{width:235px !important;}

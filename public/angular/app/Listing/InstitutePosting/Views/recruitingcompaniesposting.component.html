@@ -1,0 +1,96 @@
+ <div class="row" id="recruiting_companies_form">
+        <div mysize="12">
+            <div class="x_panel">
+                <div [class.x_title]="opened">
+                    <ul class="nav navbar-left panel_toolbox">
+                      <li><a class="collapse-link" (click)="toggle()"><i [class]="opened?' fa fa-chevron-up':' fa fa-chevron-down'"></i></a></li>
+                    </ul>
+                    <h2>Recruiting Companies</h2>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content" [hidden]="!opened">
+                  <div class="form-group">
+                        <label mysize="3" class="cmsFont cmsAlignLeft">Add companies<span  class="required">*</span></label>
+
+                        <div [mysize] *ngIf="showAutosuggestor">
+                            <ng-select 
+                              [allowClear]="true"
+                              [items]="recruitingAutoSuggestorItems"
+                              [disabled]="disabled"
+                              (selected)="selectedRC($event)"
+                              (removed)="removedRC($event)"
+                              (typed)="typed($event)"                                  
+                              placeholder="Select companies"
+                              >
+                            </ng-select>
+                        </div>
+                  </div>
+                  <br/>
+                  <div class="form-group" *ngIf="instituteObj.companies.length > 0">
+                     <h4 mysize="3" class="cmsFont cmsAlignLeft">Added companies</h4>
+                     <div  mysize="3"> 
+                            <button type="button" (click)="showRCModal()" class="btn cmsButton cmsFont ">Remove All</button>
+                      </div>
+                  </div>
+                  <br/>
+
+                  <div class="form-group" *ngFor="let com of instituteObj.companies;let rcIndex = index;">
+                    <div [mysize] style="margin-left:117px"> 
+                      <div mysize="3">
+                          <select name="position" placeholder="position" [ngModel]="com.position" (ngModelChange)="changeCompanyPosition(com.position,$event)">
+                                  <option *ngFor="let i of instituteObj.companies;let i=index"  [value]="i+1">{{i+1}}</option>
+                          </select>
+                      </div>
+                        <div [mysize]>                           
+                           <input class="cmsFont" name="addedCompanies{{rcIndex+1}}" disabled="disabled" type="text" value="{{com.company_name}}"/>
+                        </div>
+                         <div  mysize="3"> 
+                            <button type="button" (click)="showRCModal(com.company_id)"  class="btn cmsButton cmsFont">Remove</button>
+                        </div>
+                    </div>
+                  </div>
+                  <div>
+                    <shiksha-modal
+                     [isModalOpened] = "isModalOpened"
+                     [modalContent]="modalContent"
+                     [modalSize]="'large'"
+                     [elementId]="modalEle"
+                     (modalResponse)="modalResponse($event)"
+                 ></shiksha-modal>    
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+ <!--  <div bsModal #rcRemoveAllModel="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" aria-label="Close" (click)="rcRemoveAllModel.hide()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title">{{rcAlert['message']}}</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="x_panel">
+                <div class="x_content">
+                  <button type="button" (click)="removeAddedCompanies('remove',rcAlert['isAll'],rcAlert['id'])" class="btn btn-warning">Yes</button>
+                  <button type="button" (click)="removeAddedCompanies()" class="btn btn-warning">No</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->

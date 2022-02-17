@@ -1,0 +1,66 @@
+<div class="clearfix"></div>
+<div class="row" *ngIf="initialized">
+    <div mysize="12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Certification Provider</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <br />
+                <form  [formGroup]="certificationProviderForm" class="form-horizontal form-label-left" (submit)="submitCertificationProvider()">
+                <div class="form-group">
+                    <label mysize="3">Certification Provider Name <span class="required">*</span>
+                    </label>
+                    <div mysize="6">
+                        <input type="text" formControlName="name" mysize="7">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label mysize="3">Certification Provider Alias 
+                    </label>
+                    <div mysize="6">
+                        <input type="text" formControlName="alias" mysize="7">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label mysize="3">Certification Provider  Synonym</label>
+                    <div mysize="6">
+                        <input formControlName="synonym" mysize="7"  type="text">
+                    </div>
+                </div>
+                <fieldset>
+                    <legend>Map to Courses</legend>
+                    <div formArrayName="courseMapping">
+                        <div *ngFor="let item of certificationProviderForm.controls['courseMapping'].controls;let i = index">
+                            <div class="form-group" [formGroupName]="i">
+                                <div mysize="3">
+                                    <select #courseId formControlName="courseId">
+                                        <option value=''>Choose Course</option>
+                                        <option *ngFor="let course of CourseMappingList[i]" value={{course.base_course_id}}>{{course.name}}</option>
+                                    </select>
+                                </div>
+                                <div mysize="3">
+                                    <button *ngIf="courseMapping.length>1" type="button" (click)="removeCourseMapping(i)" class="btn btn-dark">Remove</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <button type="button" (click)="addItemToCourseMapping()" class="btn btn-link">Add More</button>
+                <div class="ln_solid"></div>
+                <div class="form-group">
+                    <div mysize="6" myclassoffset="3">
+                        <button type="button" (click) = "backToHome()" class="btn btn-primary">Cancel</button>
+                        <button type="submit" [disabled]="!certificationProviderForm.valid || submitPending" class="btn btn-success">Submit</button>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

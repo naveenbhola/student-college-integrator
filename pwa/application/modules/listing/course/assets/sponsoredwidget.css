@@ -1,0 +1,25 @@
+.adm-alrList{font-size: 0.875rem;}
+.adms-alrtList ul li:first-child {
+    padding-top: 0;
+}
+.adms-alrtList ul li {
+    font-size: 0.8125rem;
+    padding: 10px 0;
+    color: #000;
+    line-height: 19px;
+    border-bottom: 1px solid #e6e5e5;
+    list-style: none;
+}
+.adms-alrtList ul li:last-child{
+    border-bottom: none;
+}
+.adms-alrtList ul li strong {
+    font-size: 0.875rem;
+    margin-bottom: 4px;
+    display: block;
+    font-weight: 600;
+}
+.adms-alrtList ul li p {
+    margin-bottom: 4px;
+}
+span.sponsered-tag{float: right;color: #999;font-weight: 400;font-size: 12px;line-height: 24px;margin-right: 9px;}

@@ -1,0 +1,41 @@
+
+/*table tr td{border: 1px solid #A5C0D4;padding: 5px 7px;
+    vertical-align: top;}*/
+/*.clp .facts_table table tr td, table tr td{border: 1px solid #A5C0D4;}*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    font-size: .875rem;
+    text-align: left;
+    line-height: 1.3125rem;
+    -webkit-overflow-scrolling: touch;
+     display: block;
+    overflow: auto;
+}
+
+/*td:last-child {
+    width: 100%;
+}*/
+
+.aboutSection{
+    margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 1024px){
+	.facts_table {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.facts_table table {
+    width: 50%;
+    margin-bottom: 0px;
+    display: table;
+}
+.facts_table table:nth-child(2){
+    margin-left: 20px;
+}
+}

@@ -1,0 +1,658 @@
+import React,{Component} from 'react';
+import CategoryTuple from './CategoryTuple';
+import Filters from './FiltersComponent';
+import NotFound from './../../../common/components/NotFound';
+import ZeroResultPage from './ZrpPage';
+import {fetchCategoryPageData, fetchTupleData, fetchResponseFormsData} from './../actions/CategoryPageAction';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { getRequest } from '../../../../utils/ApiCalls';
+import RecoLinkWidget from './RecoLinkWidget';
+import PreventScrolling from './../../../reusable/utils/PreventScrolling';
+import ContentLoader from './../utils/contentLoader';
+import {makeShikshaHeaderSticky,stickyNavTabAndCTA} from './../../../reusable/utils/commonUtil';
+import {getCategoryGTMparams,generateCatPageUrl,getBeaconTrackData} from './../utils/categoryUtil';
+import TagManager  from './../../../reusable/utils/loadGTM';
+import {defaultLocationLayerSteamIds} from './../config/categoryConfig';
+import APIConfig from './../../../../../config/apiConfig';
+import SingleSelectLayer from './../../../common/components/SingleSelectLayer';
+import ElasticSearchTracking from './../../../reusable/utils/ElasticSearchTracking';
+import {parseQueryString, getQueryVariable,getObjectSize, showToastMsg, isEmpty, pruneSrpQueryParams} from '../../../../utils/commonHelper';
+import  { Redirect } from 'react-router-dom';
+import categoryCSS from './../assets/categoryPage.css';
+import CategoryTableComponent from './CategoryTableComponent';
+import ErrorMsg from './../../../common/components/ErrorMsg';
+import {dfpBannerConfig,clearDfpBannerConfig} from './../../../reusable/actions/commonAction';
+import {fetchCollegeSRPData} from "../../../search/actions/SearchAction";
+
+
+class CategoryPage extends Component {
+ constructor(props, context)
+  {
+    super(props, context);
+    this.state = {
+        isShowLoader : false,
+        moreFlag:true,
+        isOpen : false,
+        customList : {},
+        layerHeading : '',
+        search: false,
+        subHeading : false,
+        placeHolderText : '',
+        layerType : '',
+        captionMsg : '',
+        maxCount: 20,
+        filters : {},
+        aliasMapping : {},
+        defaultAppliedFilters : {},
+        filterOrder : {},
+        loadMoreCourses:[],
+        nameMapping: {},
+        selectedFiltersCount: 0,
+        totalCourseCount : 0
+    }
+   this.params = {
+                  listingAppBannerHeight : '0',
+                  listingScrollflag : false,
+                  listingRemovePaddingflag : false,
+                  listingScrollUpDownflag : false,
+                  st : 0,
+                  shikshaBannerHeight : 0,
+                  hashValue : null,
+                  nextHashValue : null
+                };
+  }
+
+  showMoreText(){
+    this.setState({ 
+      moreFlag:false
+    });
+  }
+
+  componentDidMount(){
+      if(!this.isServerSideRenderedHTML())
+      {
+        const {location} = this.props;
+        if(this.props.isSrp)
+            this.initialFetchSRPData(location);
+        else
+            this.initialFetchData(location);
+      }
+      else
+      {
+        if(!this.isErrorPage())
+        {
+          this.lastScrollTop = window.scrollY;
+          stickyNavTabAndCTA();
+          this.scrollStop();    
+          this.trackBeacon();
+          this.openDefaultLocationLayer();
+          this.getFiltersData();
+          var dfpPostParams = 'parentPage=DFP_CategoryPage'; 
+          if(this.props.categoryData != null && typeof this.props.categoryData.requestData != 'undefined' && typeof this.props.categoryData.requestData.categoryPageId != 'undefined')
+          {   
+
+              const appliedFilters = typeof this.props.categoryData.requestData.appliedFilters != 'undefined' ? this.props.categoryData.requestData.appliedFilters: {};
+              var dfpParams = '';
+              if(!isEmpty(appliedFilters)){
+                var dfpData = new Object();
+                dfpData['streams']         = appliedFilters.streams;
+                dfpData['substreams']      = appliedFilters.substreams;
+                dfpData['baseCourse']      = appliedFilters.baseCourse;
+                dfpData['specializations'] = appliedFilters.specializations;
+                dfpData['deliveryMethod']  = appliedFilters.deliveryMethod;
+                dfpData['educationType']   = appliedFilters.educationType;
+                dfpData['city']            = appliedFilters.city;
+                dfpData['state']           = appliedFilters.state;
+                dfpData['credential']      = appliedFilters.credential;
+                dfpParams                  = JSON.stringify(dfpData);
+              }  
+              dfpPostParams +='&entity_id='+this.props.categoryData.requestData.categoryPageId+'&extraPrams='+dfpParams;
+          }
+          this.props.dfpBannerConfig(dfpPostParams);
+        }
+        this.preCacheFirstTuple();
+      }
+  }
+  openDefaultLocationLayer()
+  {
+    const {categoryData} = this.props;
+    const queryParams = this.props.location.search;
+    if(this.isOpenLocationLayerOnLoad() && this.isAllIndiaRequest() && queryParams.indexOf("rf=filters"
+) < 0)
+      {
+        const categoryInfoData = typeof categoryData.requestData != 'undefined' && categoryData.requestData && typeof categoryData.requestData.categoryData != 'undefined' ? categoryData.requestData.categoryData: {};
+        this.getLocationLayer(categoryInfoData['streamId'],categoryInfoData['substreamId']);
+      }
+  }
+
+  getLocationLayer(streamId,substreamId)
+  {
+    if(this.isErrorPage())
+      return;
+      let params = {};
+      params['streamId'] = streamId;
+      if(typeof substreamId != 'undefined' && substreamId > 0)
+          params['substreamId'] = parseInt(substreamId);
+      this.setState({...this.state,'customList' : {}, 'isOpen' : true,'layerHeading' : 'Select your location','search' : true,'subHeading':false,'placeHolderText':'Enter Location',captionMsg : 'To see relevant colleges, select preferred location(s):',layerType : 'location'});
+      PreventScrolling.disableScrolling();
+      //this.getLocationData(streamId,params);
+  }
+    getLocationData(streamId,params)
+    {
+        //this.setState({...this.state,'isOpen' : true,'layerHeading' : layerHeading,'search' : true,'subHeading':true,'placeHolderText':'Enter Location',isAnchorLink : false});
+        let hashValue = btoa(JSON.stringify(params));
+        getRequest(APIConfig.GET_LOCATIONBY_FILTER+'?data='+hashValue).then((response) => {
+            PreventScrolling.disableScrolling();
+            this.displayList(response.data.data);            
+        });
+    }
+
+    formatForDefaultLocationLayer(filters)
+    {
+      var filtersData = [];
+      if(typeof filters != 'undefined' &&  typeof filters['location'] != 'undefined'  && Array.isArray(filters['location']) && filters['location'].length > 0)
+      {
+        filtersData = filters['location'].filter(function(value){
+            return value.enabled == true; 
+        })
+      }
+      if(Array.isArray(filtersData) && filtersData.length > 0)
+        {
+          this.displayList({'states': filtersData});
+        }
+        else
+        {
+          this.displayList(null); 
+        }
+    }
+    displayList(customData)
+    {
+        this.setState({'customList' : customData});
+    }
+
+  trackGTM()
+  {
+    const {categoryData,config} = this.props;
+    var gtmParams;
+    if(categoryData && typeof categoryData.requestData != 'undefined')
+    {
+        gtmParams = getCategoryGTMparams(categoryData,this.state.aliasMapping);
+        TagManager.dataLayer({dataLayer : gtmParams, dataLayerName : 'dataLayer'});
+    }
+  }
+  trackBeacon()
+  {
+    const {categoryData,config} = this.props;
+      var trackingParams;
+      if(categoryData && typeof categoryData.requestData != 'undefined')
+      {
+        trackingParams = getBeaconTrackData(categoryData);
+        ElasticSearchTracking(trackingParams,config.BEACON_TRACK_URL);
+      }
+  }
+
+  componentWillReceiveProps(nextProps)
+  {
+    let nextHash = this.getBase64UrlParams(nextProps.location);
+    let prevHash = this.getBase64UrlParams(this.props.location);
+    if(prevHash != nextHash)
+    {
+        if(this.props.isSrp)
+            this.initialFetchSRPData(nextProps.location);
+        else {
+            this.initialFetchData(nextProps.location);
+        }
+
+    }
+  }
+  componentWillUnmount()
+  {
+    window.scroll = null;
+    this.params.hashValue = null;
+    this.params.nextHashValue = null;
+    PreventScrolling.enableScrolling(false,true);
+    if(PreventScrolling.canUseDOM())
+    {
+        document.getElementById('page-header').style.display = "table";
+        document.getElementById('page-header').style.position = "relative";
+    }
+    this.props.clearDfpBannerConfig();
+  }
+
+  isErrorPage()
+  {
+      let html404 = document.getElementById('notFound-Page');
+      return (html404 && html404.innerHTML);
+  }
+
+  isServerSideRenderedHTML()
+  {
+      let htmlNode = document.getElementById('CTP');
+      return ((htmlNode && htmlNode.innerHTML) || this.isErrorPage());
+  }
+  scrollStop() {
+
+    // Setup scrolling variable
+    var isScrolling;
+    var self = this;
+
+    // Listen for scroll events
+    window.scroll = null;
+    window.onscroll = function ( event ) {
+      stickyNavTabAndCTA();
+      window.clearTimeout( isScrolling );
+        self.scrollFinished();
+    }
+  }
+  
+  scrollFinished()
+  {
+    makeShikshaHeaderSticky(this.params);
+  }
+  getUrlParams(locationParams, loadMoreInstitutes){
+      if(!PreventScrolling.canUseDOM()){
+        return "";
+      }
+      let url = locationParams.pathname;
+      
+      let queryParams = {};//new URLSearchParams(locationParams.search);
+          queryParams = parseQueryString(locationParams.search);
+      let paramsObj = {};
+      for(var key of Object.keys(queryParams))
+      {
+        let keyArr = key.split(/[[\]]{1,2}/);
+        if(keyArr[0] == 'rf')
+        {
+          paramsObj[keyArr[0]] = getQueryVariable(keyArr[0], locationParams.search);//queryParams.getAll(key)[0];
+        }
+        else if(keyArr[0] != '')
+        {
+          paramsObj[keyArr[0]] = getQueryVariable(keyArr[0], locationParams.search);//queryParams.getAll(key);  
+        }
+      }
+      if(!this.props.isSrp)
+        paramsObj['url'] = url;
+      if(this.props.isSrp && paramsObj['rf'] === 'searchwidget'){
+          paramsObj['rf'] = 'searchWidget';
+      }
+      //paramsObj['ctpgRandom'] = getCookie('ctpgRandom');
+      const loadMoreInsti = this.props.isSrp ? 'lmi' :  'loadMoreInstitutes';
+      if(typeof loadMoreInstitutes != "undefined" && Array.isArray(loadMoreInstitutes) && loadMoreInstitutes.length > 0)
+      {
+        paramsObj[loadMoreInsti] = loadMoreInstitutes;
+      }
+      return paramsObj;
+  }
+  getBase64UrlParams(locationParams, loadMoreInstitutes)
+  {
+      if(!PreventScrolling.canUseDOM()){
+          return "";
+      }
+      const paramsObj = this.getUrlParams(locationParams, loadMoreInstitutes);
+      if (!this.props.isSrp && paramsObj['rf'] !== 'filters')
+          paramsObj['fr'] = "true";
+      let params = btoa(JSON.stringify(paramsObj));
+      return params;
+  }
+
+  modalClose()
+  {
+      this.setState({...this.state,'isOpen' : false,'customList':{}});
+      PreventScrolling.enableScrolling();
+  }
+  initialFetchData(location)
+  {    
+      var self = this;
+      this.setState({isShowLoader : true});
+      const pathName = location ? location.pathname : this.props.location.pathname;
+      const isFirstPage = this.detectIfFirstPage(pathName);
+      const locationRegex = /^\/colleges/;
+      const  locationPage = locationRegex.test(pathName);
+      const showPCW = isFirstPage && !locationPage;
+      const paramsObj = this.getUrlParams(location);
+      if (paramsObj['rf'] !== 'filters')
+          paramsObj['fr'] = "true";
+      let fetchPromise = this.props.fetchCategoryPageData(paramsObj,'',false, showPCW);
+      fetchPromise.then(function(res){
+          //self.addHashValueToCategoryData();
+          self.setState({isShowLoader : false});
+          self.setState({aliasMapping : {},defaultAppliedFilters : {},filterOrder : {},filters: {},loadMoreCourses:[],nameMapping: {},selectedFiltersCount: 0,totalCourseCount : 0});
+          self.openDefaultLocationLayer();    
+          self.trackBeacon();      
+          self.lastScrollTop = window.scrollY;
+          stickyNavTabAndCTA();
+          self.scrollStop();
+          self.getFiltersData();
+          self.preCacheFirstTuple();
+
+          var dfpPostParams = 'parentPage=DFP_CategoryPage'; 
+          if(self.props.categoryData != null && typeof self.props.categoryData.requestData != 'undefined' && typeof self.props.categoryData.requestData.categoryPageId != 'undefined')
+          {   
+              const appliedFilters = typeof self.props.categoryData.requestData.appliedFilters != 'undefined' ? self.props.categoryData.requestData.appliedFilters: {};
+              var dfpParams = '';
+              if(!isEmpty(appliedFilters)){
+                var dfpData = new Object();
+                dfpData['streams']         = appliedFilters.streams;
+                dfpData['substreams']      = appliedFilters.substreams;
+                dfpData['baseCourse']      = appliedFilters.baseCourse;
+                dfpData['specializations'] = appliedFilters.specializations;
+                dfpData['deliveryMethod']  = appliedFilters.deliveryMethod;
+                dfpData['educationType']   = appliedFilters.educationType;
+                dfpData['city']            = appliedFilters.city;
+                dfpData['state']           = appliedFilters.state;
+                dfpData['credential']      = appliedFilters.credential;
+                dfpParams                  = JSON.stringify(dfpData);
+              }
+              dfpPostParams +='&entity_id='+self.props.categoryData.requestData.categoryPageId+'&extraPrams='+dfpParams;
+          }
+          self.props.dfpBannerConfig(dfpPostParams);
+
+      });
+  }
+
+    initialFetchSRPData(location)
+    {
+        var self = this;
+        this.setState({isShowLoader : true});
+        const paramsObj = this.getUrlParams(location);
+        const params =  btoa(JSON.stringify(paramsObj));
+        let fetchPromise = this.props.fetchCollegeSRPData(params);
+        fetchPromise.then(function(res){
+            //self.addHashValueToCategoryData();
+            self.setState({isShowLoader : false});
+            self.setState({aliasMapping : {},defaultAppliedFilters : {},filterOrder : {},filters: {},loadMoreCourses:[],nameMapping: {},selectedFiltersCount: 0,totalCourseCount : 0});
+            //self.openDefaultLocationLayer();
+            //self.trackBeacon();
+            self.lastScrollTop = window.scrollY;
+            stickyNavTabAndCTA();
+            self.scrollStop();
+            self.getFiltersData();
+            //self.preCacheFirstTuple();
+
+        });
+    }
+
+  preCacheFirstTuple()
+  {
+    const queryParams = this.props.location.search;
+     if(queryParams.indexOf("rf=filters") < 0 && this.props.categoryData!=null && typeof this.props.categoryData!='undefined' && typeof this.props.categoryData.seoData != 'undefined' && this.props.categoryData.seoData!=null && !this.isErrorPage()){
+        if(this.isServerSideRenderedHTML())
+        {
+          fetchTupleData(this.props.categoryData.categoryInstituteTuple, this.props.categoryData.seoData.canonicalUrl);
+        }
+          if(this.props.categoryData.paginationData && this.props.categoryData.paginationData.currentPageNUmber == 1) {
+              fetchResponseFormsData(this.props.categoryData.categoryInstituteTuple);
+          }
+      }
+  }
+
+  getFiltersData()
+  {
+      const {categoryData} = this.props;
+      if(typeof categoryData != 'undefined' && typeof categoryData.categoryInstituteTuple != 'undefined' && categoryData.categoryInstituteTuple.length > 0)
+      {
+        const {location} = this.props;        
+        var loadMoreInstitutes = [];
+        for(var i in categoryData.categoryInstituteTuple)
+        {
+          if(categoryData.categoryInstituteTuple[i].instituteId != 0)
+              loadMoreInstitutes.push(categoryData.categoryInstituteTuple[i].instituteId);
+        }
+        var params = this.getBase64UrlParams(location, loadMoreInstitutes);
+        const filterAPI = this.props.isSrp ? APIConfig.GET_COLLEGE_SRP_FILTERS : APIConfig.GET_CATEGORYPAGE_FILTERS
+        getRequest(filterAPI+'?data='+params).then((response) => {
+            if(response.data.data != null)
+
+            {
+              var data = response.data.data;
+              this.setState({aliasMapping : data.aliasMapping,defaultAppliedFilters : data.defaultAppliedFilters,filterOrder : data.filterOrder,filters: data.filters,loadMoreCourses:data.loadMoreCourses,nameMapping: data.nameMapping,selectedFiltersCount: data.selectedFiltersCount,totalCourseCount : data.totalCourseCount});
+              this.trackGTM();
+              this.formatForDefaultLocationLayer(data.filters);
+            }
+        });
+      }
+  }
+
+
+
+  isAllIndiaRequest(){
+        const {categoryData} = this.props;
+        if(typeof categoryData !=' undefined' && !categoryData)
+        {
+            return;
+        }
+
+        const appliedFilters = typeof categoryData.requestData != 'undefined' && categoryData.requestData && typeof categoryData.requestData.appliedFilters != 'undefined' ? categoryData.requestData.appliedFilters: {};
+        window.appliedFilters = appliedFilters;
+        if((typeof appliedFilters['city'] != 'undefined' && ((appliedFilters['city'].length == 0) || (appliedFilters['city'].length == 1 && appliedFilters['city'][0] == 1))) && (typeof appliedFilters['state'] != 'undefined' && ((appliedFilters['state'].length == 0) || (appliedFilters['state'].length == 1 && appliedFilters['state'][0] == 1)))) {
+            return true;
+        }
+        return false;
+    }
+
+  isOpenLocationLayerOnLoad()
+  {
+      const {categoryData} = this.props;
+      if(typeof categoryData !=' undefined' && !categoryData)
+      {
+          return;
+      }
+      const categoryInfoData = typeof categoryData.requestData != 'undefined' && categoryData.requestData && typeof categoryData.requestData.categoryData != 'undefined' ? categoryData.requestData.categoryData: {};
+      if(categoryInfoData && typeof categoryInfoData['streamId'] != 'undefined' && defaultLocationLayerSteamIds.indexOf(categoryInfoData['streamId']) > -1)
+          return true;
+      
+      return false;
+  }
+
+  renderLoader () {
+      PreventScrolling.enableScrolling(true);
+      if(PreventScrolling.canUseDOM())
+      {
+          document.getElementById('page-header').style.display = "table";
+          document.getElementById('page-header').style.position = "relative";
+      }
+      return <ContentLoader/>;
+  }
+
+  addHashValueToCategoryData()
+  {
+     const {location} = this.props;
+     let nextHashValue = 'server';
+     if(PreventScrolling.canUseDOM())
+     {
+         nextHashValue = this.getBase64UrlParams(location); 
+     }
+     this.params.hashValue = nextHashValue;
+  }
+
+  onLocationSubmit(selectedOptions)
+  {
+    let {history,location} = this.props;
+    const {aliasMapping,defaultAppliedFilters,filters} = this.state;
+    if(!Array.isArray(selectedOptions) && selectedOptions.length == 0)
+    {
+      return;
+    }
+    if(getObjectSize(filters) == 0)
+    {
+      showToastMsg('some problem occured. please try again');
+      return;
+    }
+    selectedOptions.map(function(value)
+    {
+        var optionValArr  = value.optionValue.split(/_(.+)?/),
+        optionKey = optionValArr[0],
+        optionValue = optionValArr[1];
+        value.optionValue = aliasMapping[optionKey]+'_'+optionValue;
+    });
+    const queryParams = generateCatPageUrl(selectedOptions,aliasMapping,defaultAppliedFilters,filters);
+    history.push(location.pathname+'?rf=filters&'+queryParams);
+    this.setState({isOpen : false});
+  }
+    
+  generatePageHeadingHTML(){
+      if(this.props.isSrp && this.props.searchedKeyword !== 'undefined'){
+          const isRelaxed = this.props.categoryData.keywordRelaxed;
+          const isSpellCheckDone = this.props.categoryData.spellcheckDone;
+
+          let searchedTermData = this.props.categoryData.requestData.appliedFilters;
+          if(searchedTermData.originalSearchKeyword === searchedTermData.searchKeyword || (!isSpellCheckDone && !isRelaxed))
+              return (<h1>{this.props.categoryData.totalInstituteCount} Colleges for "{this.props.searchedKeyword}"</h1>);
+          else{
+              return (<React.Fragment>
+                  <h1>No Colleges found for "{this.props.searchedKeyword}"</h1>
+                  <p className="resultTxt">Suggestion: Please enter only a college/course name or check spellings</p>
+                  <p className="zrp-clgs">Showing results for "{searchedTermData.searchKeyword} {(!isSpellCheckDone && isRelaxed) ?
+                      <span className="strikeThrough">{searchedTermData ? searchedTermData.qerKeyword:''}</span>:''}"</p>
+              </React.Fragment>)
+          }
+      }
+      else if(this.props.isSrp){
+          return (<h1>{this.props.categoryData.totalInstituteCount} Colleges</h1>);
+      }
+      let heading = (<React.Fragment>
+          <h1>{this.props.categoryData.totalInstituteCount} {typeof this.props.categoryData.requestData != 'undefined' && typeof this.props.categoryData.requestData.categoryData != 'undefined' && this.props.categoryData.requestData.categoryData && this.props.categoryData.requestData.categoryData.headingMobile}</h1>
+          { this.state.totalCourseCount > 0 ?<span className="offrd-courses"> Offering {this.state.totalCourseCount} Courses</span>:<span className="offrd-courses"> Offering Courses</span> }
+          {(this.state.moreFlag?<p>
+              Check the <strong>list of all <span>{this.props.categoryData.requestData.headingCriteria}</span> colleges/institutes in <span>{this.props.categoryData.requestData.locationString}</span> listed on Shiksha</strong>. Get all information <a onClick={this.showMoreText.bind(this)}>... more</a></p>:<p>Check the <strong>list of all <span>{this.props.categoryData.requestData.headingCriteria}</span> colleges/institutes in <span>{this.props.categoryData.requestData.locationString}</span> listed on Shiksha</strong>. Get all information related to admissions, fees, courses, placements, reviews & more on <span>{this.props.categoryData.requestData.headingCriteria}</span> colleges in <span>{this.props.categoryData.requestData.locationString}</span> to help you decide which college you should be targeting for <span>{this.props.categoryData.requestData.headingCriteria}</span> admissions in <span>{this.props.categoryData.requestData.locationString}</span></p>)}
+          </React.Fragment>);
+     return heading;
+  }
+  generateFilters(){
+     let queryP =  pruneSrpQueryParams(this.props.location.search, ['q', 'tk','okw', 'autosuggestorPick','apk']);
+     const pageUrl = this.props.isSrp ? this.props.location.pathname + queryP: this.props.categoryData.requestData.categoryData.url;
+     return (<Filters filters={this.state.filters} displayName={this.state.nameMapping} shortName={this.state.aliasMapping} pageUrl={pageUrl} defaultAppliedFilters={this.state.defaultAppliedFilters} filterOrder={this.state.filterOrder} selectedFiltersCount={this.state.selectedFiltersCount} isSrp = {this.props.isSrp}/>);
+  }
+    showState(){
+      if(this.props.isSrp || this.props.categoryData.totalInstituteCount >= 10 || this.props.categoryData.fallbackResultCount <= 0)
+          return false;
+      return true;
+
+  }
+  render() {
+        if(this.state.isShowLoader)
+        {
+            return (
+                <React.Fragment>
+                    {this.renderLoader()}
+                </React.Fragment>
+
+                );
+        }
+        const {location,categoryData} = this.props;
+
+        let nextHashValue = this.getBase64UrlParams(location);
+        if(typeof categoryData == 'undefined' || (typeof categoryData != 'undefined' && categoryData  && Object.keys(categoryData).length == 0) || (typeof categoryData != 'undefined' && this.props.categoryData && Object.keys(this.props.categoryData).length == 1 && Object.keys(this.props.categoryData)[0] == 'hashValue')) {
+            return (
+                <React.Fragment>
+                    {this.renderLoader()}
+                </React.Fragment>
+                );
+        }
+        else if(typeof categoryData == 'undefined' || categoryData == null) {
+          return <ErrorMsg/>;
+        }
+        else if(typeof categoryData.categoryUrlHash != 'undefined' && typeof nextHashValue != 'undefined' && nextHashValue != "" && categoryData.categoryUrlHash != nextHashValue)
+        {
+            return (
+                <React.Fragment>
+                    {this.renderLoader()}
+                </React.Fragment>
+                );
+        }
+        else if((categoryData &&  categoryData.requestData && ! categoryData.requestData.categoryData &&  categoryData.requestData.show404))
+        {
+            return <NotFound/>;
+        }
+        else if(categoryData &&  categoryData.requestData && categoryData.requestData.categoryData){
+            let totalCount = this.props.categoryData.totalInstituteCount;
+            if(this.showState()){
+                totalCount += this.props.categoryData.fallbackResultCount;
+            }
+            let maxPages = Math.ceil(totalCount/this.state.maxCount);
+            let currentPageNum = this.props.categoryData.requestData.pageNumber;
+            let queryString = '';
+            if(typeof window != 'undefined' && window.location.search!='')
+            {
+             queryString = window.location.search;
+            }
+            let basePageUrl = this.props.categoryData.requestData.categoryData.url+queryString;
+            if(currentPageNum > maxPages && maxPages != 0) { //safe check
+             return <Redirect to={`${basePageUrl}`}  />
+            }
+            else if((categoryData && Array.isArray(categoryData.categoryInstituteTuple) && categoryData.categoryInstituteTuple.length == 0))
+            {
+              return <ZeroResultPage isSrp = {this.props.isSrp} keyword = {this.props.searchedKeyword} config={this.props.config}/>
+            }
+        }
+        else if((categoryData && Array.isArray(categoryData.categoryInstituteTuple) && categoryData.categoryInstituteTuple.length == 0))
+        {
+          return <ZeroResultPage isSrp = {this.props.isSrp} keyword = {this.props.searchedKeyword}  config={this.props.config}/>
+        }
+        let showInTable = true;
+        if(this.props.isSrp){
+            showInTable = false;
+        }
+        PreventScrolling.enableScrolling(true);
+
+    return (
+      <React.Fragment>
+        <CategoryTableComponent show="false" categoryData={this.props.categoryData}/>
+        <div id="fixed-card" className="nav-tabs display-none">
+            {this.generateFilters()}
+        </div>
+        <div id="CTP">
+        <div className="ctp">
+            <section>
+              <div className="ctp_container">
+                 <div className="ctp-filter-head">
+                    <div className="fltr-contnt">
+                        {this.generatePageHeadingHTML()}
+                    </div>
+                  <div id="tab-section">
+                      {this.generateFilters()}
+                    {/*<Filters filters={this.state.filters} displayName={this.state.nameMapping} shortName={this.state.aliasMapping} pageUrl={this.props.categoryData.requestData.categoryData.url} defaultAppliedFilters={this.state.defaultAppliedFilters} filterOrder={this.state.filterOrder} selectedFiltersCount={this.state.selectedFiltersCount}/>*/}
+                  </div>          
+                  </div>
+                 <CategoryTuple showInTable = {showInTable} config={this.props.config} isSrp={this.props.isSrp} aggregateRatingConfig={this.props.categoryData.aggregateRatingConfig} showStateData={this.showState()} categoryData={this.props.categoryData} gaTrackingCategory={this.props.isSrp ? 'Integrated_Search' : 'CTP'} loadMoreCourses={this.state.loadMoreCourses} showPagination="true"/>
+                 <RecoLinkWidget recoData={this.props.categoryData.categoryPageLinks}/>
+                 <SingleSelectLayer show={this.state.isOpen} onClose={this.modalClose.bind(this)} data={this.state.customList} search={this.state.search} heading= {this.state.layerHeading} showSubHeading={this.state.subHeading} placeHolderText={this.state.placeHolderText} layerType={this.state.layerType} captionMsg={this.state.captionMsg}  onSubmit={this.onLocationSubmit.bind(this)} multiSelect={true}>
+                 </SingleSelectLayer>
+
+              </div>
+            </section>       
+          </div>
+      </div>
+    </React.Fragment>
+      )
+  }
+
+    detectIfFirstPage (pathName){
+     const lastCharUrl = pathName[pathName.length - 1];
+     let firstPage = true;
+        if(!isNaN(lastCharUrl) && parseInt(lastCharUrl) > 1){
+            firstPage = false;
+        }
+        return firstPage;
+    }
+
+}
+CategoryPage.defaultProps ={
+    isSrp : false,
+    searchedKeyword : ''
+}
+
+function mapStateToProps(state)
+{
+  return {
+      categoryData : state.categoryData,
+      config : state.config
+  }
+}
+
+function mapDispatchToProps(dispatch){
+  return bindActionCreators({ fetchCategoryPageData,dfpBannerConfig,clearDfpBannerConfig, fetchCollegeSRPData }, dispatch);
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(CategoryPage);

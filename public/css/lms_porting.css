@@ -1,0 +1,48 @@
+/*Career CMS CSS*/
+#lms-port-wrapper{padding:10px; font:normal 12px Arial, Helvetica, sans-serif}
+.page-title{float:left; width:100%; margin-bottom:8px}
+.page-title h2{font:normal 20px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#fc8104; padding-top:6px; display:block}
+.page-title span{color:#9b9b9b; margin:0 5px}
+#lms-port-content{border:1px solid #e2e2e2; padding:15px 12px 20px; clear:left;margin-top: 10px;}
+.form-section{}
+.lms-section{float:left; width:100%; margin-bottom:15px; padding-bottom:15px; border-bottom:1px solid #e2e2e2;}
+.last-section{margin:0; padding:0; border:0 none}
+.lms-section label{margin:0; padding:0;width: 150px;float: left;text-align: right;}
+.lms-section h3, .lms-section h5{font:normal 16px Arial, Helvetica, sans-serif; display:block; margin-bottom:12px}
+.lms-section h5{font-size:14px; color:#7e7e7e; margin-bottom:8px}
+.lms-section ul li, .form-section ul li{margin:0 0 8px 0; padding:0; float:left; width:100%}
+.form-section input, .form-section select{font:normal 12px Arial, Helvetica, sans-serif}
+.form-section ul li{margin:0 0 12px 0;}
+.form-section ul li label{width:150px; text-align:right; float:left}
+.form-section ul li div.form-fields{margin-left:160px}
+.lms-section ol{margin:0; padding:0}
+.lms-section ol li{margin:0 0 6px 0; padding:0; float:left; width:100%}
+.main-leads{font-size:14px; font-weight:bold}
+.main-leads label span{color:#fc8104}
+.sub-points{padding:5px 0 0 18px;}
+.manage-table{font-size:13px;}
+.manage-table td, .manage-table th{padding:12px 10px;word-wrap: break-word;vertical-align: top;}
+.manage-table tr th{/*background:#e6e6e6;*/ font-size:14px; font-weight:normal; text-align: left;}
+.manage-table tr.alt-row{background:#f5f5f5}
+.porting-duration{margin-top:10px}
+.porting-duration strong{margin-right:10px}
+.porting-duration img, .porting-duration input{vertical-align:middle}
+.porting-duration div{margin-right:18px}
+.mapping-section{background:#f1f1f1; padding:10px; width:550px; font-size:13px}
+.mapping-section input{width:95%}
+.mapping-section select{width:99%}
+.mapping-section .col-1{width:200px; float:left}
+.mapping-section .col-2{width:140px; float:right}
+.mapping-section ol{margin:0; padding:0}
+.mapping-section ol li{margin-bottom:8px; padding:0}
+.course-box{padding:8px; border:1px solid #cccccc; height:128px; overflow:auto; width:300px; float:left; margin-right:5px; overflow-x:hidden}
+.course-box ol{margin:0; padding:0}
+.course-box ol li{margin-bottom:5px; width:100%; float:left; margin:0}
+.select-porting{width:300px; overflow-y:auto; height:80px; border:1px solid #e3e3ed; padding:5px}
+.select-porting ol{margin:0; padding:0}
+.select-porting ol li{padding:0; margin:0 0 5px 0;}
+.select-porting ol li.sub-portings{margin:0 0 5px 20px; width:90%; word-wrap: break-word;}
+
+.form-fields_v1{
+    margin-left: 160px; 	
+}

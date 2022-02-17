@@ -1,0 +1,38 @@
+/*reset properties*/
+
+/*check*/
+ section.artBnr ._container,  section.ftrbnr ._container {padding: 0;}
+ .sldrC .sldAr ul li:last-child { margin-right: 0}
+ .border-right {border-right: 1px solid #f1f1f1}
+ .anchrHp, .tbc a.inpt { text-decoration: none}
+ .expertList>li.add { padding: 0 80px}
+ .table-cell, .tbSec>ul>li {text-align: center; vertical-align: middle;}
+ .AskBtn {position: relative;overflow: hidden;padding: 16px 32px;}
+ /*check*/
+
+
+/*Featured colleges CSS starts*/
+.sldrC{background: #fff;padding: 10px 0px 5px 0px;width: 100%;height: 240px;}
+ul.ftrSlder{width: 1052px;padding:0px 16px;}
+ul.ftrSlder:after{content:"";display: block;clear: both;}
+ul.ftrSlder li{width: 196px;box-shadow:0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08); border-radius: 2px;margin: 0px 10px 10px 0px; float: left;overflow: hidden;}
+ul.ftrSlder li div{padding: 0px 10px 6px 10px;background: #fff;}
+ul.ftrSlder li img{width:100%;height: auto;}
+.sldrC .sldAr{overflow: auto}
+ul.ftrSlder li div p{font-size: 0.875rem; font-weight: 600; color: #000; height: 56px}
+ul.ftrSlder li div span{font-size: 0.75rem;color: #2A2A2A;line-height: 12px;}
+/*Featured colleges CSS ends*/
+
+/*button css starts*/
+ .button-container { text-align: center; padding: 16px 0 0; line-height: 13px;}
+ .AskBtn {font-weight: 600;font-size: 1rem;color: #fff;background-color: #f37921;cursor: pointer;padding:10px 24px;border: 0;text-decoration: none;text-align: center;border-radius: 2px;-webkit-appearance:none; display: inline-block;    -webkit-tap-highlight-color: transparent;width: 116px;}
+ .AskBtn::-webkit-selection {background: none;}
+ .trnBtn {border: 1px solid #008489;color: #008489;font-size: 0.875rem;font-weight: 600;padding: 0px 16px;text-align: center; cursor: pointer;background: #fff;text-decoration: none;display: inline-block; line-height: 34px;  -webkit-tap-highlight-color: transparent; height: 36px;border-radius:2px;}
+a.AskBtn {position: relative;overflow: hidden;padding: 16px 32px;}
+
+/*ripple effect*/
+.ripple-container {position: absolute;left: 0;top: 0;height: 0;width: 0;pointer-events: none;overflow: hidden;}
+.ripple-effect {margin-top: 0px;margin-left: 0px;width: 1px;height: 1px;background-color: rgba(0, 0, 0, 0.033);transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);border-radius: 50%;pointer-events: none;}
+.ripple-effect.light {background-color: rgba(255, 255, 255, 0.15);}
+.ripple-effect.dark {background-color: rgba(0, 0, 0, 0.075);}
+/*Layer animation*/

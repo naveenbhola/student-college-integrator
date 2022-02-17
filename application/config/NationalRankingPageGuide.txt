@@ -1,0 +1,78 @@
+DEVELOPMENT
+-----------
+1. Make copy of ranking folder and name it ranking_new
+        svn export NATIONAL_RANKING_PAGES_NEW/shiksha/application/modules/Ranking/ranking
+        cp -r /var/www/html/shiksha/application/modules/Ranking/ranking_new shiksha/application/modules/Ranking/
+        svn add shiksha/application/modules/Ranking/ranking_new
+        svn ci -m "NONE-0: Ranking new folder"
+2. New tab for ranking in CMS: Ranking_new
+3. Make entry in config for ranking_pages_new and ranking_page_data_new tables and use this wherever view/libraries/builder/etc. are loaded
+4. Make copy of ranking_cms.js and name it ranking_cms_new.js
+        svn export NATIONAL_RANKING_PAGES_NEW/shiksha/public/js/ranking_cms.js
+        cp -r /ranking_cms_new.js shiksha/public/js/
+        svn add shiksha/public/js/ranking_cms_new.js
+        svn ci -m "NONE-0:new js added"
+5. Load ranking_cms_new.js instead of ranking_cms.js
+6. Create new global variable for module ranking_new and use this wherever ajax calls are made or for redirection in js
+7. Database changes:
+    1. Copy ranking_pages to ranking_pages_new: (import would be better, some data types and indexes are not copied as is)
+    2. Copy ranking_page_data to ranking_page_data_new (import would be better, some data types and indexes are not copied as is)
+    3. Create indexes in ranking_pages_new and ranking_page_data_new
+    4. Make unique key in table ranking_page_course_source_data: [ranking_page_course_id, source_id, parameter_id] must be unique
+    5. Run create tables query ----- number of tables to be created: 6
+            - ranking_page_sources
+            - ranking_page_source_params
+            - ranking_page_source_mapping
+            - ranking_page_course_source_data
+            - tickets_ranking_page_sources
+            - tickets_ranking_page_source_params
+8. Make new source named "Shiksha" using new CMS interface. (open url: www.shiksha.com/ranking_new/RankingEnterprise/manageSources/, else increment id of both ticketing servers)
+9. Make new source parameter named "Overall Rank" using new CMS interface.
+10. Run the script to import existing data in created new tables:
+        www.shiksha.com/ListingScripts/migrationOfRanking
+11. Alter table ranking_pages_new to add new column "disclaimer":
+        ALTER TABLE  `ranking_pages_new` ADD  `disclaimer` VARCHAR( 500 ) NOT NULL AFTER  `ranking_page_text` ;
+12. Alter table ranking_page_data_new to remove column "rank":
+        ALTER TABLE ranking_page_data_new DROP COLUMN rank;
+
+MAKING LIVE CMS PROJECT
+-----------------------
+1. Database changes:
+    1. Copy ranking_pages to ranking_pages_new: (import would be better, some data types and indexes are not copied as is)
+    2. Copy ranking_page_data to ranking_page_data_new (import would be better, some data types and indexes are not copied as is)
+    3. Create indexes in ranking_pages_new and ranking_page_data_new
+    4. Run create tables query ----- number of tables to be created: 6
+            - ranking_page_sources
+            - ranking_page_source_params
+            - ranking_page_source_mapping
+            - ranking_page_course_source_data
+            - tickets_ranking_page_sources
+            - tickets_ranking_page_source_params
+    5. Make unique key in table ranking_page_course_source_data: [ranking_page_course_id, source_id, parameter_id] must be unique
+        ALTER TABLE  `ranking_page_course_source_data` ADD UNIQUE (ranking_page_course_id, source_id, parameter_id);
+2. Make new source named "Shiksha" using new CMS interface. (open url: www.shiksha.com/ranking_new/RankingEnterprise/manageSources/, else increment id of both ticketing servers)
+3. Make new source parameter named "Overall Rank" using new CMS interface.
+4. Run the script to import existing data in created new tables:
+        www.shiksha.com/ListingScripts/migrationOfRanking
+5. Alter table ranking_pages_new to add new column "disclaimer":
+        ALTER TABLE  `ranking_pages_new` ADD  `disclaimer` VARCHAR( 500 ) NOT NULL AFTER  `ranking_page_text` ;
+6. Alter table ranking_page_data_new to remove column "rank":
+        ALTER TABLE ranking_page_data_new DROP COLUMN rank;
+
+MAKING LIVE WHOLE RANKING PROJECT
+---------------------------------
+1. Delete ranking folder
+2. Rename ranking_new folder to ranking
+3. Change entry in ranking_config/shikshaConstants
+4. Delete ranking_cms.js
+5. Rename ranking_cms_new.js to ranking_cms.js
+6. Rename ranking_new.js to ranking.js
+7. Load ranking_cms.js instead of ranking_cms_new.js
+8. Load ranking.js instead of ranking_new.js
+9. Change global variable "RANKING_PAGE_MODULE" from ranking_new to ranking in shiksha/application/modules/Ranking/ranking_new/views/ranking_enterprise/ranking_cms_header.php
+10. Disable Ranking CMS tab
+11. Database changes:
+    1. Delete ranking_pages
+    2. Rename ranking_pages_new to ranking_pages
+    2. Delete ranking_page_data
+    3. Rename ranking_page_data_new to ranking_page_data

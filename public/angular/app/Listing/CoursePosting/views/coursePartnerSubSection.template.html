@@ -1,0 +1,72 @@
+<div *ngIf="initialized">
+    <h3 *ngIf="mainForm.controls['courseTypeForm'].controls['course_variant'].value == CVCONST.double">{{caption}}</h3>
+    <div class="form-group" [formGroup]="coursePartnerForm">
+        <div *ngIf="coursePartnerForm.controls[controlArrayName].controls.length > 0">
+            <table formArrayName="partnerInstituteFormArr"  class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>College</th>
+                        <th>Duration</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr></tr>
+                    <tr *ngFor="let partnerData of coursePartnerForm.controls[controlArrayName].controls; let rowIndex=index" [formGroup]="coursePartnerForm.controls[controlArrayName].controls[rowIndex]">
+                    <td class="odd">
+                        {{partnerData.controls.partner_name.value }}
+                        <span *ngIf="partnerData.controls.partner_name.value.length == 0" class="help-block text-danger">*College Name is mandatory</span>
+                    </td>
+                    <td>
+                    <tr>
+                        <td>
+                            <input name="duration_value" formControlName="duration_value" type="number"/>
+                            <span class="help-block text-danger" *ngIf="partnerData.controls.duration_value?.errors">{{partnerData.controls.duration_value.errors.msg}}</span>
+                        </td>
+                        <select  class="select2_single form-control" formControlName="duration_unit">
+                            <option *ngFor="let item of courseStaticData?.duration"   value="{{item.value}}" >{{item.label}}</option>
+                        </select>
+                        <!-- <td>
+                            </td> -->
+                    </tr>
+                    </td>
+                    <td>
+                        <button *ngIf="(rowIndex != 0 || caption == 'Exit')" (click)="removePartnerInstitute(rowIndex)" type="button">X</button>
+                    </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div  *ngIf="collegeAdditionCount < 5">
+        <div class="form-group">
+            <h4>
+                Add Institute/University
+            </h4>
+        </div>
+        <div class="form-group">
+            <div [mysize]="'3'">
+                <label mysize="5">Scope</label>
+            </div>
+            <div [mysize]="'9'">
+                <div [mysize]="'3'">
+                    <label class="radio-inline" [mysize]="'6'" noBootstrap>
+                    <input type="radio" name="scope_{{caption}}" [(ngModel)]="scope" class="flat"  selected="true" value="domestic"/>Domestic</label>
+                </div>
+                <div [mysize]="'3'">
+                    <label class="radio-inline" [mysize]="'8'" noBootstrap>
+                    <input type="radio" name="scope_{{caption}}" [(ngModel)]="scope" class="flat" value="studyAbroad"/>Study Abroad</label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <br/>
+            <div *ngIf="activateSuggestor">
+                <shikshaInstituteAutosuggestor (removedInstituteSuggestion)="resetSuggestionData()" (selectedInstituteItem)="handleSuggestionChange($event, scope)" [autoSuggestorType]="scope" [suggestionType]="'instituteUniversity'"></shikshaInstituteAutosuggestor>
+                <div *ngIf="invalidIdError">
+                    <span class="help-block text-danger">{{invalidIdError}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

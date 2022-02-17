@@ -1,0 +1,96 @@
+.seat-head {
+    font-size: 0.875rem;
+    color: #000;
+}
+
+.seat-info{margin:10px 0;}
+
+.seat-info div.tab {
+  position: relative;
+  margin-bottom: -1px;
+  width: 100%;
+  color: #fff;
+  overflow: hidden;
+}
+
+.seat-info div.tab input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.seat-info div.tab label.tab-label {
+  position: relative;
+  display: block;
+  padding: 0 0 0 1em;
+  background: #fff;
+  font-weight: 600;
+  padding:13px 10px;
+  cursor: pointer;
+  border: 1px solid #e1e1e1;
+  color: #000;
+
+}
+
+.seat-info div.tab .blue label {
+  background: #2980b9;
+}
+
+.seat-info div.tab .tab-content {
+  max-height: 0;
+  overflow: hidden;
+  background: #fff;
+  -webkit-transition: max-height .35s;
+  -o-transition: max-height .35s;
+  transition: max-height .35s;
+}
+
+.seat-info div.tab .tab-content p ,.seat-info div.tab .tab-content ul{
+  margin: 1em;color: #000;
+}
+/* :checked */
+
+.seat-info div.tab input:checked ~ .tab-content {
+  max-height: inherit;border: 1px solid #e1e1e1;
+}
+
+/* Icon */
+
+.seat-info div.tab label.tab-label::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 3em;
+  height: 3em;
+  text-align: center;
+}
+
+.seat-info div.tab input[type=checkbox] + label::after , .seat-info div.tab input[type=checkbox]:checked + label::after{ background: url(https://images.shiksha.ws/pwa/public/images/pwa-header-mobile-v3.svg) no-repeat; content: '';font-size: 1.5rem;color: #008489;position: absolute;font-weight: 400;right: 12px;top: 11px;background-position: -102px -65px;width: 22px;height: 24px;display: inline-block;
+}
+.seat-info div.tab input[type=checkbox]:checked + label::after {content:''; background-position: -125px -65px}
+
+.seat-info div.tab .tab-content ul{margin:0; padding: 10px;}
+.seat-info div.tab .tab-content ul li{list-style: none;color: #000;padding-bottom: 10px;}
+.seat-info div.tab .tab-content ul li:last-child{margin: 0; padding:0;}
+.seat-info div.tab input:checked ~ label {box-shadow: 0 2px 1px #e1e1e1; border-bottom: none;}
+.seat-info div.tab input:checked ~ .tab-content {border: 1px solid #e1e1e1;   background: rgba(241, 242, 244, 0.3);}
+.seat-info div.tab .tab-content ul li span:first-child {display:  inline-block; width: 85%;}
+span.count-spn { text-align: right; display:  inline-block; width: 15%;}
+.seat-info div.tab input:checked ~ .tab-content label.vw-allLink{ text-align: center;color: #008489;text-decoration: none; width: 100%; display: block; margin: 5px 0 10px;  font-weight: 600;}
+.seat-info div.tab input:checked ~ .tab-content label.vw-allLink i.rotate{transform:rotate(90deg);top:6px; left:8px; background-position: -114px -41px;width: 15px;height: 20px;position: relative;right: -1px;display: inline-block;}
+
+.hide{display: none}
+
+ul.nrml-list li.read-more-target{display:none;}
+.read-more-state:checked ~ .read-more-wrap .read-more-target {display: block;}
+.read-more-state:checked ~ .read-more-trigger{display: none}
+
+.seat-info div.tab label.tab-label i.info-icon {
+    left: -5px;
+    top: 3px;
+    position: relative;
+}
+
+.help_title{margin-bottom: 5px;font-size: 0.875rem;font-weight: 600}
+.help_p{font-size: 0.75rem}

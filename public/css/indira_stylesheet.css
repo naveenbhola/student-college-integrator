@@ -1,0 +1,51 @@
+body {margin:auto; background:#f3f1f2;}
+
+.width {width:988px; background:#ffffff; text-align:center;}
+
+.clearboth {clear:both;}
+
+.header-left {float:left; padding:10px; text-align:left;}
+
+.header-text {font-family:Arial, Helvetica, sans-serif; font-size:12px; line-height:18px; padding:5px 0px 10px 0px; text-align:justify;}
+
+.header-image {float:right; margin:10px 6px 0px 0px;}
+
+.shadowtop {background:url(/public/images/indira_images/shadow-top_1.gif); height:9px;}
+
+.shadowbot {background:url(/public/images/indira_images/shadow-bot_1.gif); height:9px;}
+
+.institutes-bg {background:#f5f6f7; text-align:left;}
+
+.institute-name {font-family:Arial, Helvetica, sans-serif; font-size:17px; font-weight:bold; padding:10px;}
+
+.group-tab {background:#ffffff; border:1px solid #cbcbcb; width:305px; height:280px; margin:0px 10px 20px 10px; float:left;}
+
+.group-name-bg1 {background:#79becd; margin:2px; padding:5px;}
+
+.group-name-bg2 {background:#000000; margin:2px; padding:5px;}
+
+.group-name-bg3 {background:#183f44; margin:2px; padding:5px;}
+
+.group-name-bg4 {background:#188bcc; margin:2px; padding:5px;}
+
+.group-name-bg5 {background:#05396b; margin:2px; padding:5px;}
+
+.group-name-text {font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#ffffff; font-weight:bold;}
+.group-name-text a{color:#ffffff; text-decoration:none;}
+.group-name-text a:hover{font-size:11px; color:#ffffff; text-decoration:underline;}
+
+.group-details {font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#000000; padding:5px;}
+.group-details a{font-size:11px; color:#0065de; text-decoration:none;}
+.group-details a:hover{font-size:11px; color:#0065de; text-decoration:underline;}
+
+.group-courses {font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#000000; padding:5px 5px 2px 0px; line-height:17px;}
+.group-courses a{font-size:11px; color:#000000; text-decoration:none;}
+.group-courses a:hover{font-size:11px; color:#000000; text-decoration:underline;}
+
+.viewall {font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#ff0000; padding:0px 0px 10px 6px;}
+.viewall a{font-size:11px; color:#0065de; text-decoration:none;}
+.viewall a:hover{font-size:11px; color:#0065de; text-decoration:underline;}
+
+.corporate {font-family:Arial, Helvetica, sans-serif; font-size:16px; font-weight:bold; padding:20px 0px 2px 10px; text-align:left;}
+
+

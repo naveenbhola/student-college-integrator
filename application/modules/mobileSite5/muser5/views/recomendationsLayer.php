@@ -1,0 +1,153 @@
+
+ <?php if(!empty($recommendations)):
+			$count = count($recommendations);?>
+        		<?php if(isset($_COOKIE['MOB_A_C'])){
+						$appliedCourseArr = explode(',',$_COOKIE['MOB_A_C']);
+					}
+				?>
+				<?php 
+					global $shiksha_site_current_url;global $shiksha_site_current_refferal ;
+				
+				        //Check for Request E-Brochure from Also on Shiksha institutes. From here, the referral URL will be the current URL
+				        if(strpos($shiksha_site_current_url,'alsoOnShiksha')!==false){
+				                $shiksha_site_current_url = $shiksha_site_current_refferal;
+				        }
+				?>
+				<?php $from_where = $pageType;
+						$pageName = $pageType;
+						
+						if($pageName == 'CP_MOB_Reco_ReqEbrochure') {
+							$courseClick = 'HTML5_RECOMMENDATION_CATEGORY_COURSE_CLICK';
+							$brochureClick = 'HTML5_RECOMMENDATION_CATEGORY_BROCHURE_CLICK';
+						}else if($pageName == 'LP_MOB_Reco_ReqEbrochure') {
+							$courseClick = 'HTML5_RECOMMENDATION_LISTING_COURSE_CLICK';
+							$brochureClick = 'HTML5_RECOMMENDATION_LISTING_BROCHURE_CLICK';
+						}else if($pageName == 'SEARCH_MOB_Reco_ReqEbrochure') {
+							$courseClick = 'HTML5_RECOMMENDATION_SEARCH_COURSE_CLICK';
+							$brochureClick = 'HTML5_RECOMMENDATION_SEARCH_BROCHURE_CLICK';
+						}else if($pageName = 'RANKING_MOB_Reco_ReqEbrochure') {
+							$courseClick = 'HTML5_RECOMMENDATION_SEARCH_COURSE_CLICK';
+							$brochureClick = 'HTML5_RECOMMENDATION_SEARCH_BROCHURE_CLICK';
+						}
+						
+				?>
+  <div style="padding:8px 10px;background:#ebf6fc;-moz-box-shadow:0 1px 3px rgba(0, 0, 0, 0.5);-webkit-box-shadow:0 1px 3px rgba(0, 0, 0, 0.5);box-shadow:0 1px 3px rgba(0, 0, 0, 0.5);color:#585858; margin:0 5px;"><h2>Students who showed interest in this institute also looked at:</h2></div>
+<?php 
+	if(count($recommendations) > 6)
+		$count = 6;
+?>
+<div class="flexslider">
+  <ul class="slides">
+<?php for($i = 0 ; $i< $count; $i=$i+1):?>  
+    <li>
+
+        		<?php 
+	        				$currntInstitute = $recommendations[$i];
+	        				$curInstituteUrl = $currntInstitute->getURL();
+							$curcourse = $currntInstitute->getFlagshipCourse();
+							$curinstituteId = $currntInstitute->getId();
+							
+
+
+$curcourseId = $curcourse->getId();
+							$curinstituteFullName = $currntInstitute->getName();
+							$curcourseFullName = $curcourse->getName();
+							$curinstituteName = strlen($curinstituteFullName) > 40 ? substr($curinstituteFullName, 0, 40).'...' : $curinstituteFullName;
+							$curcourseName = strlen($curcourseFullName) > 45 ? substr($curcourseFullName, 0, 45).'...' : $curcourseFullName;
+							$curcourseURL = $curcourse->getURL();
+							$curmainLocation = $curcourse->getMainLocation();
+							$curmainCity = $curmainLocation->getCity();
+							$curmainCityName = $curmainCity->getName();
+							$curCourses = $currntInstitute->getCourses();
+							
+							$curaddReqInfoVars = array();
+							foreach($curCourses as $c){
+								if(checkEBrochureFunctionality($c)){
+									$curarr['isMultiLocation'.$curinstituteId] = $c->isCourseMultilocation();
+									foreach($c->getLocations() as $course_location){
+										$locality_name = $course_location->getLocality()->getName();
+										if($locality_name !='') $locality_name = ' |'.$course_location->getLocality()->getName();
+										$curaddReqInfoVars[$c->getName().' | '.$course_location->getCity()->getName().$locality_name]=$c->getId()."*".html_escape($currntInstitute->getName())."*".$c->getUrl()."*".$course_location->getCity()->getId()."*".$course_location->getLocality()->getId();
+										if($curarr['isMultiLocation'.$curinstituteId]=='false'){
+											$curarr['rebLocallityId'.$curinstituteId] = $course_location->getLocality()->getId();
+											$curarr['rebCityId'.$curinstituteId] = $course_location->getCity()->getId();
+										}else{
+											$curarr['rebLocallityId'.$curinstituteId] = '';
+											$curarr['rebCityId'.$curinstituteId] = '';
+										}
+									}
+								}
+							}
+							
+							$curaddReqInfoVars=serialize($curaddReqInfoVars);
+							$curaddReqInfoVars=base64_encode($curaddReqInfoVars);
+							
+							$exams = $curcourse->getEligibilityExams();
+							$courseFees = $curcourse->getFees()->getValue();
+							$courseDuration = $curcourse->getDuration();
+	        				
+	        		?>
+ 
+			<section class="content-wrap2" style="background:#f1f1f1;">
+		        		<article class="req-bro-box clearfix" style="cursor: pointer; height:190px;" >
+						<div class="details">
+							<div onclick="location.href='<?php echo $curcourseURL; ?>'; trackEventByGAMobile('<?php echo $courseClick; ?>'); " style="cursor: pointer;">	                        <h4><a href="javascript:void(0);" ><?php echo $curinstituteName?>,</a> <span><?php echo $curmainCityName;?></span></h4>
+							<ul>
+	                        <li><?php echo $curcourseName;?></li>
+	                        <?php if(count($exams) > 0):?>
+	                        <?php 
+	                      	  if($currntInstitute->getInstituteType() == "Test_Preparatory_Institute"){
+	                        	?>
+	                        								<li><i class="icon-eligible"></i><p><label>Exams Prepared for: </label><?php
+	                        							}else{
+	                        							?>
+	                        								<li><i class="icon-eligible"></i><p><label>Eligibility: </label><?php
+	                        							}
+	                        							$examAcronyms = array();
+	                        							foreach($exams as $exam) {
+	                        								if($exam->getMarks() > 0){
+	                                                                                                  $examAcronyms[] = $exam->getAcronym() . "(" . $exam->getMarks() . ")";
+	                                                                                         } else {
+	                                                                                                  $examAcronyms[] = $exam->getAcronym();
+	                                                                                        }
+	                        							}
+	                        	echo implode(', ',$examAcronyms); ?> </p></li>
+	                        <?php elseif (!empty($courseFees)):?>
+	                        <li><i class="icon-rupee"></i><p><label>Course Fees: </label><?php echo $courseFees;?></p></li>
+	                        <?php endif;?>
+	                        
+	                        
+	                        </ul>
+	                        </div>
+	                        <?php if(in_array($curcourseId,$appliedCourseArr)):?>
+	                        	<a href="javascript:void(0);" class="button blue small disabled" id="request_e_brochure<?php echo $curcourseId; ?>" ><i class="icon-pencil" aria-hidden="true"></i><span>Request E-Brochure</span></a>
+	                        	<div class="success-msg" id="thanksMsg<?php echo $curcourseId;?>"><i class="sprite icon-tick2"></i>
+<p>E-brochure successfully mailed.</p></div>
+	                        <?php else:?>
+	                        	<?php if($pageName == 'LP_MOB_Reco_ReqEbrochure'):?>
+	                        	<a href="javascript:void(0);" class="button blue small" id="request_e_brochureReco<?php echo $curcourseId; ?>" onclick="trackRequestEbrochure('<?php echo $curcourseId;?>');validateRequestEBrochureFormData('<?php echo $curinstituteId; ?>','<?=$curarr['rebLocallityId'.$curinstituteId];?>','<?=$curarr['rebCityId'.$curinstituteId];?>','<?=$curarr['isMultiLocation'.$curinstituteId];?>','<?php echo $curcourseId;?>','listing_recommendation','<?php echo $trackingPageKeyId;?>');trackEventByGAMobile('<?php echo $brochureClick; ?>'); " ><i class="icon-pencil" aria-hidden="true"></i><span>Request E-Brochure</span></a>
+	                        	<?php else:?>
+	                        	<a href="javascript:void(0);" class="button blue small" id="request_e_brochureReco<?php echo $curcourseId; ?>" onclick="trackReqEbrochureClick('<?php echo $curcourseId;?>');validateRequestEBrochureFormData('<?php echo $curinstituteId; ?>','<?=$curarr['rebLocallityId'.$curinstituteId];?>','<?=$curarr['rebCityId'.$curinstituteId];?>','<?=$curarr['isMultiLocation'.$curinstituteId];?>','<?php echo $curcourseId;?>','listing_recommendation','<?php echo $trackingPageKeyId;?>');trackEventByGAMobile('<?php echo $brochureClick; ?>');" ><i class="icon-pencil" aria-hidden="true"></i><span>Request E-Brochure</span></a>
+	                        	<?php endif;?>
+	                        	<form id="brochureFormReco<?php echo $curcourseId;?>">
+									<input type="hidden" name="courseAttr" value = "<?php echo $curaddReqInfoVars; ?>" />
+									<input type="hidden" name="current_url" value = "<?php echo url_base64_encode($shiksha_site_current_url); ?>" /> 
+									<input type="hidden" name="referral_url" value = "<?php echo url_base64_encode($shiksha_site_current_refferal); ?>" />
+									<input type="hidden" name="selected_course" value = "<?php echo $curCourseId; ?>" />
+									<input type="hidden" name="list" value="<?php echo $curcourseId; ?>" />
+									<input type="hidden" name="institute_id" value="<?php echo $curinstituteId;?>" />
+									<input type="hidden" name="pageName" value="<?php echo $pageName;?>" />
+									<input type="hidden" name="from_where" value="<?php echo $from_where;?>" />
+									<input type="hidden" name="screenwidth" value=<?php echo $screenWidth;?> />
+									<input type="hidden" name="tracking_keyid" value=<?php echo $tracking_keyid;?> />
+							</form>
+	                        	<div style="display: none;" class="success-msg" id="thanksMsgReco<?php echo $curcourseId;?>"><i class="sprite icon-tick2" ></i><p>E-brochure successfully mailed.</p></div>
+	                        <?php endif; ?>
+						</div>
+		        		</article>
+	        		</section>
+	     </li>
+<?php endfor;?>	     
+  </ul>
+</div>
+<?php endif;?>

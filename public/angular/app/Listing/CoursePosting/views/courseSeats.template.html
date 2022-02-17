@@ -1,0 +1,102 @@
+<div class="row" id="course_seats_form">
+    <div [mysize]="'12'">
+        <div class="x_panel">
+           <div [class.x_title]="opened">
+             <ul class="nav navbar-left panel_toolbox">
+                  <li><a class="collapse-link" (click)="toggle()"><i [class]="opened?' fa fa-chevron-up':' fa fa-chevron-down'"></i></a></li>
+              </ul>
+                <h2>Seats Breakup</h2>
+                <div class="clearfix"></div>
+           </div>
+           <div class="x_content" [formGroup]="courseSeats"  [hidden]="!opened" *ngIf="initialized">
+            <div class="form-group">
+                <div [mysize]="'3'">
+                    <label>Total Seats</label>
+                </div>                  
+                <div [mysize]="'2'">
+                    <input type="text" formControlName="total_seats" [class.error]="courseSeats.controls['total_seats']?.errors?.number" >
+                     <span *ngIf="courseSeats.controls['total_seats']?.errors?.number">{{courseSeats.controls['total_seats']?.errors?.number}}</span>  
+                </div>
+            </div>
+
+              <div formGroupName="seats_by_category">
+                <addColumnTableComponent [editData]="editData?.seats_by_category" [group]="courseSeats.controls['seats_by_category']" [default]="_default" [addmore]="_addMore" [tableHeading]="'Break-up by category'" [colHeading]="''" [validateOutOf]="false" [numberValidation]="'integer'"></addColumnTableComponent>
+              </div>
+
+
+              <div class="profile_title" *ngIf="mainForm?.value?.courseEligibilityForm?.exams_accepted[0]?.exam_name != '' ">
+                  <div class="col-md-6">
+                    <h2>Break-up by entrance exam</h2>
+                  </div>
+              </div>
+              
+              <table  class="table table-striped table-bordered dataTable no-footer" *ngIf="mainForm?.value?.courseEligibilityForm?.exams_accepted[0]?.exam_name != '' ">
+                <thead>
+                  <tr>
+                  <template ngFor let-item [ngForOf]="mainForm?.value?.courseEligibilityForm?.exams_accepted" let-rowIndex="index">
+                    <template [ngIf]="item.exam_name == 'other'">
+                      <th *ngIf="item.exam_name != ''" rowspan="1" colspan="1" style="width: 145px;">{{item.custom_exam}}</th>
+                    </template>
+                      <th *ngIf="item.exam_name != '' && item.exam_name != 'other'" rowspan="1" colspan="1" style="width: 145px;">{{examLookupArr[item.exam_name]}}</th>
+                  </template>
+                  </tr>
+                </thead>
+                <tbody formGroupName="seats_by_entrance_exam">
+                  <tr  class="odd">
+                    <template ngFor let-item [ngForOf]="mainForm?.value?.courseEligibilityForm?.exams_accepted" let-rowIndex="index">
+                        <template [ngIf]="item.exam_name != '' && item.exam_name == 'other'">                      
+                          <td><input type="text"  formControlName="Others$${{item.custom_exam}}" [class.error]="courseSeats.controls['seats_by_entrance_exam'].controls['Others$$'+item.custom_exam]?.errors?.number" />
+                            <span *ngIf="courseSeats.controls['seats_by_entrance_exam'].controls['Others$$'+item.custom_exam]?.errors?.number">{{courseSeats.controls['seats_by_entrance_exam'].controls['Others$$'+item.custom_exam]?.errors?.number}}</span>
+                          </td>
+                        </template>
+                      <td *ngIf="item.exam_name != '' && item.exam_name != 'other'">
+                          <input type="text"  formControlName="{{item.exam_name}}" [class.error]="courseSeats.controls['seats_by_entrance_exam'].controls[item.exam_name]?.errors?.number" />
+                          <span *ngIf="courseSeats.controls['seats_by_entrance_exam'].controls[item.exam_name]?.errors?.number">{{courseSeats.controls['seats_by_entrance_exam'].controls[item.exam_name]?.errors?.number}}</span>
+                      </td>
+                    </template>
+
+                    
+                  </tr>
+                </tbody>
+              </table>
+
+
+              <div class="profile_title">
+                    <div class="col-md-6">
+                      <h2>Break-up by domicile</h2>
+                    </div>
+              </div>
+               <table formGroupName="seats_by_domicile" class="table table-striped table-bordered dataTable no-footer">
+                <thead>
+                  <tr>
+                    <th rowspan="1" colspan="1" style="width: 145px;">Home State</th>
+                    <th rowspan="1" colspan="1" style="width: 145px;">Related State
+                    <br/>
+                    <mymultiselect formControlName="related_state_list" [data]="locationData" [defaultPlaceholder]="'Select States'" [itemKey]="'eligibilitySubjects'"></mymultiselect>
+                    </th>
+                    <th rowspan="1" colspan="1" style="width: 145px;">Others</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr  class="odd">
+                    <td>
+                      <input type="text" formControlName="home_state" [class.error]="courseSeats.controls['seats_by_domicile'].controls['home_state']?.errors?.number" />
+                      <span *ngIf="courseSeats.controls['seats_by_domicile'].controls['home_state']?.errors?.number">{{courseSeats.controls['seats_by_domicile'].controls['home_state']?.errors?.number}}</span>
+                    </td>
+                    <td>
+                      <input type="text" formControlName="related_state" [class.error]="courseSeats.controls['seats_by_domicile'].controls['related_state']?.errors?.number" />
+                      <span *ngIf="courseSeats.controls['seats_by_domicile'].controls['related_state']?.errors?.number">{{courseSeats.controls['seats_by_domicile'].controls['related_state']?.errors?.number}}</span>
+                    </td>
+                    <td>
+                      <input type="text" formControlName="others_state" [class.error]="courseSeats.controls['seats_by_domicile'].controls['others_state']?.errors?.number" />
+                      <span *ngIf="courseSeats.controls['seats_by_domicile'].controls['others_state']?.errors?.number">{{courseSeats.controls['seats_by_domicile'].controls['others_state']?.errors?.number}}</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              
+           </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+<html>
+      <head>
+            <meta charset="utf-8"/>
+            <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            <link rel="dns-prefetch" href="//js.shiksha.ws">
+            <link rel="dns-prefetch" href="//css.shiksha.ws">
+            <link rel="dns-prefetch" href="//images.shiksha.ws">
+            <link rel="dns-prefetch" href="//apis.shiksha.ws">
+            <meta name = "format-detection" content = "telephone=no" />
+            <meta name = "format-detection" content = "address=no" />
+            <meta name="copyright" content="Shiksha.com" />
+            <meta name="resource-type" content="document" />
+            <meta name="pragma" content="no-cache" />
+            <meta name="HandheldFriendly" content="True"/>
+            <meta name="MobileOptimized" content="320"/>
+            <meta http-equiv="cleartype" content="on"/>
+            <meta name="theme-color" content="#177076"/>
+            <meta http-equiv="x-dns-prefetch-control" content="off"/>
+            <link rel="publisher" href="https://plus.google.com/+shiksha"/>
+            <link rel="apple-touch-icon-precomposed" sizes="144x144" href="//<?php echo IMGURL; ?>/public/mobile/images/touch/apple-touch-icon-144x144-precomposed.png"/>
+            <link rel="apple-touch-icon-precomposed" sizes="114x114" href="//<?php echo IMGURL; ?>/public/mobile/images/touch/apple-touch-icon-114x114-precomposed.png"/>
+            <link rel="apple-touch-icon-precomposed" sizes="72x72" href="//<?php echo IMGURL; ?>/public/mobile/images/apple-touch-icon-72x72-precomposed.png"/>
+            <link rel="apple-touch-icon-precomposed" href="//<?php echo IMGURL; ?>/public/mobile/images/apple-touch-icon-57x57-precomposed.png"/>
+            <link rel="shortcut icon" href="//<?php echo IMGURL; ?>/public/mobile/images/apple-touch-icon.png"/>
+            <style type="text/css">@font-face{font-family:'Open Sans';src:url(/public/fonts/open-sans/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.eot);src:url(/public/fonts/open-sans/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.eot?#iefix) format('embedded-opentype'),url(https://images.shiksha.ws/public/fonts/open-sans/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff'),url(https://images.shiksha.ws/public/fonts/open-sans/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.ttf) format('truetype');font-weight:400;font-style:normal}*,body{padding:0;border:0;margin:0;font-family: 'Open Sans', sans-serif;box-sizing:border-box}:root,html{font-size: 16px;line-height: 1.58;}html{-webkit-text-size-adjust: 100%;}a{text-decoration: none;}.msprite {display: inline-block;position: relative;}.header{background:#007075;width:100%;display:table;z-index:9;box-shadow:0 2px 2px 0 rgba(0,0,0,.16),0 0 0 1px rgba(0,0,0,.08);height:40px;line-height:1}body{min-width:320px;background:#f1f2f4}:root,html{font-size:16px;line-height:1.58}.back-col,.hem-menu{background:0 0;border:0;cursor:pointer;line-height:0;margin:0;padding:5px 12px;position:relative;width:20px;text-align:center}.back-col .back-ico,.hem-menu>span.icon-bar,.logo>span.msprite,.q-ask>span,.right-menu>span,.short-lst.q-srch>span.search{background:url(https://images.shiksha.ws/pwa/public/images/new-header-pwa.svg) -9px -9px no-repeat}.header-title,.logo{text-align:left;background:#007075}.notification,.q-ask,.q-srch,.right-menu{text-align:center}.back-col,.header-title,.hem-menu,.logo,.q-ask,.right-menu{display:table-cell;vertical-align:middle}.logo span{color:transparent;width:88px;height:20px;text-indent:-9999px}.q-ask,.q-srch,.right-menu{width:19px;display:table-cell;vertical-align:middle;background:0 0;position:relative}.short-lst.q-srch>span.search{background-position:-183px -6px;width:24px;height:24px;vertical-align:middle;display:inline-block}.full-screen-close,.toggle,.hide,.toggle-right{display:none}.right-menu{padding:8px 17px 5px 12px;background:#007075}.right-menu span{width:20px;height:20px;background-position:-129px -9px}.menu-right{position:fixed;height:100%;width:17em;background:#e5e5da;top:0;bottom:0;left:auto;z-index:9999;overflow-y:scroll;-webkit-overflow-scrolling:touch;right:-310px;-webkit-box-shadow:-5px 0 5px rgba(0,0,0,.15);-moz-box-shadow:-5px 0 5px rgba(0,0,0,.15);box-shadow:-5px 0 5px rgba(0,0,0,.15);transform:translate3d(0,0,0);-webkit-transform:translate3d(0,0,0);-webkit-transition:all .3s;transition:all .3s;-webkit-transition-timing-function:linear;transition-timing-function:linear}.toggle-right:checked+.menu-right{right:-1px}.hem-menu>span.icon-bar{display:block;background-position:-103px -5px;width:20px;height:20px}.q-ask>span{background-position:-155px -8px;width:24px;height:20px;vertical-align:middle;display:inline-block}.notification{background-color:#f29d37;width:18px;height:18px;-moz-border-radius:50%;-webkit-border-radius:50% 50%;border-radius:50%;position:absolute;top:5px;right:6px;color:#fff;font-size:.625rem;line-height:18px;cursor:pointer;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;display: none;}.menu-container{background:#fff;width:17em;backface-visibility:hidden;box-shadow:6px 1px 6px -1px rgba(0,0,0,.37);-webkit-box-shadow:6px 1px 6px -1px rgba(0,0,0,.37);-moz-box-shadow:6px 1px 6px -1px rgba(0,0,0,.37);float:left;height:100%;position:fixed;z-index:9999;-webkit-transition:-webkit-transform .3s ease-out;-o-transition:transform .3s ease-out;transition:transform .3s ease-out;transition:transform .3s ease-out,-webkit-transform .3s ease-out;transform:translateX(-103%);-webkit-transform:translateX(-103%);-moz-transform:translateX(-103%);display:none}.inner-menu .cat-menu .abroadHeading,.main-footer ul li a,.main-footer ul li label{text-transform:uppercase;position:relative;text-decoration:none}.main-footer{background:#fff}.main-footer ul li{list-style:none;width:100%;float:left;position:relative;border-bottom:1px solid #ccc;background:#fff;font-weight:700;font-size:.75rem}.main-footer ul li:first-child{border-top:1px solid #ccc}.main-footer ul li a,.main-footer ul li label{display:block;padding:12px 15px 10px;color:#00a5b5}.footer-arr-dwn,.footer-arr-up{background-position:-50px -48px;width:14px;height:6px;right:15px;top:16px;position:absolute}.link-box{max-height:0;overflow:hidden;padding:0 15px;transition:max-height .2s ease-out}.footer-child{font-size:90%;padding:10px 0 20px;background:#fff;display:inline-block;box-shadow:none}.r-user,.subcat-heading>a,.tac,.user-block .u-div .ru-name{text-align:center}.partner-nav{font-size:80%;line-height:25px;border-bottom:1px solid #ccc;margin-bottom:12px;padding:0 10px 12px}.partner-nav strong,.ui-panel-dismiss-open{display:block}.partner-nav p{margin:10px 0 15px}.partner-nav a{text-decoration:none;color:#333;margin:0 7px}.footer-child aside{font-size:78%;color:#999;line-height:14px}
+            .appshell{background: #05818D;display: block;height: 100%;}
+            .appshell img#loadingImage1{border-radius: 50%;width: 60px;height: 60px;box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.3);position: fixed;top: 50%;left: 50%;margin: -30px 0px 0px -30px;}
+.cokkie-lyr{width:100%;padding: 10px;background:rgba(0,0,0,0.85); color: #fff; position:static; bottom:0; left:0; right: 0;font-size: 11px;font-family: 'open sans', sans-serif;z-index: 100; display: none}
+.cokkie-box{max-width: 945px; margin: 0 auto;display: table; line-height: 15px; }
+.cokkie-box p, .cokkie-lyr .tar{display: table-cell; vertical-align: middle;}
+.cokkie-lyr a{color: #0efbf3;text-decoration: none;}
+.cokkie-lyr a.cookAgr-btn{background: #f09c43; font-size: 13px; font-weight: 600; border-radius: 2px; text-align: center; text-decoration: none;color: #fff;display: inline-block;width: 66px;height: 30px; line-height: 28px;margin-left: 5px;font-family: 'open sans', sans-serif;}
+            </style>
+            <link href="https://css.shiksha.ws/pwa/public/css/shikshaCommon.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body id="shkBdy"><div id="reg-full-layer"></div><div id="root"><div class="appshell">
+      <img border="0" alt="" id="loadingImage1" className="small-loader" style={{borderadius:'50%',height: '40px',width: '40px'}} src="//images.shiksha.ws/public/mobile5/images/ShikshaMobileLoader.gif"/>
+    </div>
+  </div>
+  </body>
+  </html>
+<script type="text/javascript">
+  function lazyLoadJs(e,a,r){for(var s,t,c=[],d=e.scripts[0];s=r.shift();)t=e.createElement(a),"async"in d?(t.async=!1,e.head.appendChild(t)):d.readyState?(c.push(t),t.onreadystatechange=n):e.write("<"+a+' src="'+s+'" defer></'+a+">"),t.src=s}
+  var shikshaMain = 'https://js.shiksha.ws/pwa/public/js/mobile-shiksha-main-7715b50cb04682025850.js';
+  lazyLoadJs(document,"script",[shikshaMain]);
+  window.COOKIEDOMAIN = ".shiksha.com";
+</script>      

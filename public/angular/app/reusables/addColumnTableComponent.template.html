@@ -1,0 +1,40 @@
+<div class="profile_title" *ngIf="tableHeading">
+      <div class="col-md-6">
+        <h2>{{tableHeading}}</h2>
+      </div>
+</div>
+<div [formGroup]="group">
+    <table *ngIf="initialized" id="datatable-fixed-header" class="table table-striped table-bordered dataTable no-footer" role="grid">
+      <thead>
+          <tr role="row">
+            <th style="width: 145px;text-align:center" *ngIf="colHeading"></th>
+            <th style="width: 145px;text-align:center" *ngFor="let item of colsToShow">{{item.label}}</th>
+            <th style="width: 150px;text-align:center" *ngIf="_addmore.length>0">
+              <select  (change)="addColumn($event.target.value)"  class="select2_single form-control">  
+                  <option value="">Add More</option>
+                  <option *ngFor="let item of _addmore" value="{{item.value}}">{{item.label}}</option>
+              </select>
+            </th>
+          </tr>
+        </thead>
+      
+        <tbody>
+          <tr role="row" class="odd">
+              <td *ngIf="colHeading" [attr.rowspan]="showOutOf ? '3' : '1'">{{colHeading}}</td>
+              <td *ngFor="let item of colsToShow"> <input type="text" [formControlName]="item.value" [class.error]="(group.errors?.validateOutOfInFormGroup && group.errors?.validateOutOfInFormGroup[item.value]) || group.controls[item.value]?.errors?.number" />
+              <span *ngIf="group.errors?.validateOutOfInFormGroup && group.errors?.validateOutOfInFormGroup[item.value]">Should be less than out of {{group.controls['outof'].value}}</span>
+              <span *ngIf="group.controls[item.value]?.errors?.number">{{group.controls[item.value]?.errors?.number}}</span>
+              </td>                          
+          </tr>
+          <tr role="row" class="odd" *ngIf="showOutOf">
+            <td [attr.colspan]="colsToShow.length">Out Of</td>
+          </tr>
+          <tr role="row" class="odd" *ngIf="showOutOf">
+            <td [attr.colspan]="colsToShow.length">
+            <input style="margin:auto;width:120px;" [class.error]="(group.errors?.validateOutOfInFormGroup) || (group.controls['outof']?.errors?.number)" formControlName="outof" type="text" />
+            <span *ngIf="group.controls['outof']?.errors?.number">{{group.controls['outof']?.errors?.number}}</span>
+            </td>
+          </tr>
+        </tbody>
+    </table>
+</div>

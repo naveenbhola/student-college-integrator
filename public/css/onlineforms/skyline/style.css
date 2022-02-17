@@ -1,0 +1,32 @@
+.formPreviewMain{}
+.previewHeader{width:100%; float:left; display:block; margin-bottom:20px}
+.previewFormTitle{width:700px; float:left;}
+.instLogoBox{width:200px; float:left;}
+.previewTetx{font-size:22px; color:red; margin-bottom:20px; clear:both}
+.courseNameDetails{margin-top:75px; clear:left; float:left}
+.srNumBox{width:200px; float:right; font-size:18px; padding-top:10px}
+.instNameBox{width:480px; float:left; padding-left:15px; font-size:25px; padding-top:10px}
+.courseNameBox{width:480px; float:left; font-size:25px; padding-top:10px; color:#006496; font-weight:bold}
+.picBox{width:195px; height:192px; float:right; border:1px solid #000000}
+.picBox img{border:1px solid #cacaca}
+.formPreviewMain h5{font-size:16px; margin-bottom:15px; display:block; text-transform:uppercase}
+.formPreviewMain h5 span{font-weight:normal; text-transform:none}
+.formPreviewMain ul li{display:block; margin-bottom:20px; float:left; width:100%; font-size:14px}
+.formPreviewMain ul li label{float:left; padding-right:5px; font-weight:bold; font-size:14px}
+.previewFieldBox,.previewFieldBoxRt{float:left; width:390px; font-size:14px}
+.previewFieldBoxRt{width:100%}
+.previewFieldBox span, .previewSmallFieldBox span, .previewFieldBoxRt span{display:block; border-bottom:dotted 1px #000; padding-bottom:3px}
+
+.previewFieldBox strong, .previewFieldBoxRt strong{text-transform:uppercase; font-size:14px; margin-top:5px; float:left; width:100%; text-align:center; display:block}
+
+.previewLeftCol,.previewSmallLeftCol,.previewSmallFieldBox{width:515px; float:left}
+.previewRightCol,.previewSmallRightCol{float:right; width:435px}
+.previewSmallLeftCol,.previewSmallRightCol{width:255px;}
+.previewSmallFieldBox{width:150px;}
+.previewMedCol{width:32%;}
+.educationTable{border-collapse:collapse; border:1px solid #333}
+.educationTable thead tr td{padding:10px; font-size:14px; font-weight:bold; background-color:#f1f1f1; text-align:center}
+.educationTable tr td{padding:10px; font-size:14px; font-weight:normal; background-color:#fff; text-align:left}
+.fromDate{float:left; width:49%; border-right:1px solid #333; text-align:center}
+.toDate{float:left; width:49%; text-align:center}
+.flRt{float:right}

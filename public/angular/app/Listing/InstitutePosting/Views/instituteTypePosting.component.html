@@ -1,0 +1,28 @@
+<div class="row" id="parent_mapping_form">
+    <div mysize="12">
+        <div class="x_panel">
+            <div [class.x_title]="opened">                    
+                <ul class="nav navbar-left panel_toolbox">
+                      <li><a class="collapse-link" (click)="toggle()"><i [class]="opened?' fa fa-chevron-up':' fa fa-chevron-down'"></i></a></li>
+                </ul>
+                <h2 style="padding-left:0px;">Institute Type<img class="helperText" id="institute_type" src="/public/images/tooltip.png" width="20px" style="padding-right:0px" (click)="toolTipNotify('institute_type',$event)"></h2>                    
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content" [hidden]="!opened">
+              <div class="form-group">
+                    <label mysize="3" class="cmsAlignLeft cmsFont">Institute type<span  class="required">*</span></label>
+
+                    <div mysize="6">
+                        <select  class="cmsFont" name="institute_type" required [(ngModel)]="instituteObj.institute_type" (ngModelChange)="validateInstituteType($event);">
+                            <option *ngFor="let option of instituteStaticData?.institute_type" value="{{option.value}}">{{option.label}}</option>
+                        </select>
+                        <input #instituteTypeFlag="ngModel" type="hidden" [(ngModel)]="validateInstituteTypeFlag" [registerForm]="form" [registerModel]="instituteTypeFlag" [myrequired]="1">
+                        <span class="help-block text-danger cmsFont">
+                             <span *ngIf="instituteTypeFlag.errors?.required">This Institute type is already present in the hierarchy</span>
+                         </span>
+                    </div>
+              </div>                   
+            </div>
+        </div>
+    </div>
+</div>

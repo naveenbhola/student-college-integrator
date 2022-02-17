@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="user\Entities\UserCourseApplied" table="tUserCourseApplied">
+    <change-tracking-policy>DEFERRED_IMPLICIT</change-tracking-policy>
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="courseId" type="integer" column="courseId"/>
+    <field name="courseName" type="string" column="courseName"/>
+    <field name="courseCategory" type="integer" column="courseCategory"/>
+    <field name="courseSubCategory" type="integer" column="courseSubCategory"/>
+    <field name="LDBCourseId" type="integer" column="LDBCourseId"/>
+    <field name="universityName" type="string" column="universityName"/>
+    <field name="scholarshipReceived" type="string" column="scholarshipReceived"/>
+    <field name="scholarshipDetails" type="integer" column="scholarshipDetails"/>
+    <field name="applicationAccepted" type="string" column="applicationAccepted"/>
+    <field name="AdmissionTaken" type="string" column="AdmissionTaken"/>
+    <field name="timeOfAdmission" type="datetime" column="timeOfAdmission"/>
+    <field name="reasonsForRejection" type="string" column="reasonsForRejection"/>
+    <many-to-one target-entity="user\Entities\User" field="user" inversed-by="courseApplied">
+          <join-column name="userId" referenced-column-name="userid" />
+    </many-to-one>
+    <lifecycle-callbacks/>
+  </entity>
+</doctrine-mapping>

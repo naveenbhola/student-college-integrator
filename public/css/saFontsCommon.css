@@ -1,0 +1,157 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url('/public/fonts/open-sans/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.eot');
+    src: url('/public/fonts/open-sans/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.eot?#iefix') format('embedded-opentype'), url('/public/fonts/open-sans/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff') format('woff'), url('/public/fonts/open-sans/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.ttf') format('truetype'), url('/public/fonts/open-sans/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.svg#OpenSans') format('svg');
+}
+.fnt__12,
+.fnt__12__semi,
+.fnt__12__bold{
+  font-size: 12px;
+  line-height: 16px;
+}
+.fnt__14,
+.fnt__14__semi,
+.fnt__14__bold{
+  font-size: 14px;
+  line-height: 20px;
+}
+.fnt__16,
+.fnt__16__semi,
+.fnt__16__bold{
+  font-size: 16px;
+  line-height: 32px;
+}
+.fnt__18,
+.fnt__18__semi,
+.fnt__18__bold{
+  font-size: 18px;
+  line-height: 32px;
+}
+.fnt__20,
+.fnt__20__semi,
+.fnt__20__bold{
+  font-size: 20px;
+}
+.fnt__24,
+.fnt__24__semi,
+.fnt__24__bold{
+  font-size: 24px;
+}
+.fnt__30,
+.fnt__30__semi,
+.fnt__30__bold{
+  font-size: 30px;
+}
+.fnt__32,
+.fnt__32__semi,
+.fnt__32__bold{
+  font-size: 32px;
+}
+.fnt__12,
+.fnt__14,
+.fnt__16,
+.fnt__20,
+.fnt__24,
+.fnt__30{
+  font-weight: 400;
+}
+.fnt__12__semi,
+.fnt__14__semi,
+.fnt__16__semi,
+.fnt__18__semi,
+.fnt__20__semi,
+.fnt__24__semi,
+.fnt__30__semi{
+  font-weight: 600;
+}
+.fnt__32__semi{
+  font-weight: 600;
+}
+.fnt__12__bold,
+.fnt__14__bold,
+.fnt__16__bold,
+.fnt__18__bold,
+.fnt__24__bold,
+.fnt__30__bold{
+  font-weight: 700;
+}
+.clr__white{
+  color: var(--White);
+}
+.clr__3{
+  color: #333;
+}
+.clr__6{
+  color: #666;
+}
+.clr__9{
+  color: #999;
+}
+.clr__blue{
+  color: var(--Teal);
+}
+.clr__black{
+  color: #000;
+}
+.bg__f9{
+  background-color: #f9f9f9);
+}
+.bg__white{
+  background-color: #fff);
+}
+.txt__cntr{
+  text-align: center;
+}
+.flt__lft{
+  float: left;
+}
+.flt__right{
+  float: right;
+}
+.btns__new{
+  height: 32px;
+  text-align: center;
+  line-height: 32px;
+  display: block;
+  cursor: pointer;
+}
+.prime__btn{
+  background-color: #f1a536;
+  color: var(--White);
+}
+.block{
+  display: block;
+}
+.mb__10{
+  margin-bottom: 10px;
+}
+.mb__5{
+  margin-bottom: 5px;
+}
+.ib__block{
+  display: inline-block;
+}
+.v__mdl{
+  vertical-align: middle;
+}
+.v__top{
+  vertical-align: top;
+}
+.lh__22{
+  line-height: 22px;
+}
+.lh__24{
+  line-height: 24px;
+}
+.mt__10{
+  margin-top: 10px;
+}
+.mt__5{
+  margin-top: 5px;
+}
+.mb__20{
+  margin-bottom: 20px;
+}
+.width__50 {
+    width: 50%;
+}

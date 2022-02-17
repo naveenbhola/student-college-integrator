@@ -1,0 +1,273 @@
+/*top-Widget css start*/
+.ilp section {margin-bottom: 12px;box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);background: #fff;}
+.ilp a{color: #008489; text-decoration: none;}
+.ilp ._container {position: relative;font-size: 0.875rem;color: #000;padding: 0;}
+.ilp_head{width: 100%;color: #000;position: relative}
+.ilp_head h1{display: block; font-weight: 700;width: 92%;margin-top: 0px;}
+.ilp_head i.pwa-shrtlst-ico {content: '';position: absolute;background:url(https://images.shiksha.ws/pwa/public/images/pwa-header-mobile-v3.svg) no-repeat;background-position: -234px -40px;width: 20px;height: 20px;right: 0;top: 0;}
+span.ilp-loc{margin-top:3px;display: block;color: #000; font-size: 0.875rem;}
+.ilp .clg-detail {width: 100%;}
+.ilp .clg-detail ul { margin: 15px 0 0;}
+.ilp .clg-detail ul:before, .clg-detail ul li:before {content: " ";display: table;}
+.ilp .clg-detail ul li .clg-col {position: relative;width: 50%;display: table-cell;float: left;vertical-align: top;padding-right: 20px;padding-left: 10px;color: #666;font-size: 0.75rem;}
+.ilp .clg-detail ul li .clg-col:first-child {padding-left: 0;padding-right: 27px;}
+.ilp .clg-detail ul li p {position: relative;}
+.ilp .clg-detail .info-icon, .tbSec2 .info-icon {width: 21px;height: 20px;background:url(https://images.shiksha.ws/pwa/public/images/pwa-header-mobile-v3.svg) no-repeat;display: inline-block;position: absolute;right: -18px;top: -5px;background-position: -166px -66px;}
+
+.ilp a.clp-mrLink {font-size: 0.875rem;display: inline-block;font-weight: 400;margin-top: 3px;}
+/*.ilp a.btnYellow, .ilp .btnYellow {font-weight: 600;font-size: .875rem;color: #fff;background-color: #f37921;cursor: pointer;height:34px;line-height: 34px;border: 0;text-decoration: none;text-align: center;border-radius: 2px;-webkit-appearance: none;display: inline-block;-webkit-tap-highlight-color: transparent;width: 175px;padding: 0;}
+.ilp .trnBtn{border: 1px solid #008489;color: #008489;font-size: 0.875rem;font-weight: 600;padding: 0px 10px;text-align: center;cursor: pointer;background: #fff;text-decoration: none;display: inline-block;line-height: 34px;-webkit-tap-highlight-color: transparent;height: 36px;border-radius: 2px;position: relative;}
+.ilp .btnYellow.ebDisabled{color:  #999;background: #e2e2e2;cursor:  default;border: 1px solid #e2e2e2;pointer-events: none;}
+*/
+.dnld-btn .button--orange{min-width: 165px;}
+
+/*top-Widget css ends*/
+
+/*Sectional Navigation css start*/
+.nav-tabs {box-sizing: border-box;overflow: hidden;width: 100%;}
+.hidespace{margin-top: -11px;}
+/*Sectional Navigation css ends*/
+
+/*Gradient border common css start*/
+.find-schlrSec p{display: block; }
+.find-chncSec-inr, .find-schlrSec-inr {font-size: 0.875rem;color: #000;position: relative;padding: 12px 12px 16px;font-weight: 600;min-height: 58px;}
+.find-schlrSec-inr{height: inherit;text-align: center;}
+.find-schlrSec-inr p{margin-bottom: 10px;}
+.ul-list {list-style: none;width: 100%;max-height: inherit;background-color: #fff;}
+.find-chncSec:before, .find-schlrSec:before {content: "";display: block;height: 4px;background: -webkit-linear-gradient(left,rgba(19,78,84,1) 0,rgba(39,163,175,1) 50%,rgba(20,83,90,1) 100%);width: 100%;left: 0;top: 0;}
+/*Gradient border common css ends*/
+
+/*Course offerd css start*/
+.crs-offTitle{font-size: 0.75rem; color: #666; line-height: 16px;}
+strong.crs-popTl{display: block;font-size: 0.875rem;margin:2px 0 4px;}
+ul.cors-offLst li{list-style: none;padding: 10px 0; border-bottom: 1px solid #F1F2F4;}
+ul.cors-offLst li:last-child{border: none;padding-bottom: 0;}
+ul.cors-offLst li a{color: #000;font-size: 0.875rem;}
+ul.cors-offLst li a .cors-sec{display: table;width: 100%;}
+ul.cors-offLst li a .cors-sec span:first-child{display: table-cell;width: 70%; line-height: 19px;color: #000;font-size: 0.875rem;font-weight: 600;line-height: 1.3125rem;}
+span.cors-fee{font-size: 0.75rem;font-weight: 600; display: table-cell; width: 30%;vertical-align: middle; text-align: right;}
+.blu-arrw {background:url(https://images.shiksha.ws/pwa/public/images/pwa-header-mobile-v3.svg) no-repeat;background-position: -114px -41px;width: 15px;height: 16px;position: relative;right: -1px;top: 1px;display: inline-block;}
+.btn-topMrgn{margin: 15px 0 5px;}
+/*Course offerd css ends*/
+
+
+.fac-List{width:100%;display: table;margin-bottom: 15px;}
+.fac-bx{width: 48%; display: table-cell; vertical-align: middle}
+.fac-icn{width: 33px; height: 30px;display: table-cell; vertical-align: middle;position: relative}
+.lazyLoad .fac-icn i{background:url(https://images.shiksha.ws/pwa/public/images/pwa-mobile-facilities-icons.svg) no-repeat;height: 30px;position: absolute;vertical-align: middle;width: 30px;top: 3px;}
+.fac-icn i.library{background-position: -182px -6px;}
+.fac-icn i.cafeteria{background-position: -148px -6px;}
+.fac-icn i.hostel{background-position: -147px -43px;}
+.fac-icn i.sportsCmplx{background-position: -78px -6px;}
+.fac-icn i.gym{background-position: -43px -43px;}
+.fac-icn i.hosptl{background-position: -44px -6px;}
+.fac-icn i.wifi{background-position: -112px -6px;}
+.fac-icn i.auditorium{background-position:-78px -78px;}
+.fac-icn i.ac{background-position:-9px -43px;}
+.fac-icn i.labs{background-position: -182px -43px;}
+.fac-icn i.cnvnStr{background-position: -216px -43px;}
+.fac-icn i.shuttle{background-position: -8px -6px;}
+.fac-icn i.design_studio{background-position: -8px -78px;}
+.fac-icn i.moot_court{background-position:-78px -43px}
+.fac-icn i.music_room{background-position:-114px -43px;}
+.fac-icn i.dance_room{background-position:-43px -78px;}
+.fac-info{display: table-cell;vertical-align: middle;line-height: 1.58;font-size: 0.875rem;}
+.fac-info a{display: block;}
+
+
+/*Latest Admission Alert*/
+span.sponsered-tag{float: right;color: #999;font-weight: 400;font-size: 12px;line-height: 24px;margin-right: 9px;}
+ul.adm-alrList{font-size: 0.875rem;}
+
+
+/*Admission Widget*/
+.adm-DivSec{max-height: 150px; overflow: hidden; min-height: 70px;}
+.ilp .gradient-col, .clp .gradient-col {display: block;text-align: center;height: 95px;position: absolute;width: 100%;left: 0;bottom: 0;background: linear-gradient(to bottom,rgba(255,255,255,0) -25%,rgba(255,255,255,.09) 16%,rgba(255,255,255,1) 44%,rgba(255,255,255,1) 18%,rgba(255,255,255,1) -1%,rgba(255,255,255,1) 58%,rgba(255,255,255,1) 100%);background: -webkit-linear-gradient(to bottom,rgba(255,255,255,0) -25%,rgba(255,255,255,.09) 16%,rgba(255,255,255,1) 44%,rgba(255,255,255,1) 18%,rgba(255,255,255,1) -1%,rgba(255,255,255,1) 58%,rgba(255,255,255,1) 100%);background: -moz-linear-gradient(to bottom,rgba(255,255,255,0) -25%,rgba(255,255,255,.09) 16%,rgba(255,255,255,1) 44%,rgba(255,255,255,1) 18%,rgba(255,255,255,1) -1%,rgba(255,255,255,1) 58%,rgba(255,255,255,1) 100%);}
+.ilp .adm-DivSec{max-height: 260px;}
+.ilp .gradient-col>.gradVw-mr,.clp .gradient-col>.gradVw-mr {margin-top: 46px;}
+
+.ilp .gradient-col.gardient-flex .button, .clp .gradient-col.gardient-flex .button {
+    padding: 0 10px;
+    margin-top: 35px;
+}
+
+.gradient-col .button:nth-child(2) {margin-left: 8px;}
+.gradient-col.gardient-flex{display: flex;flex-direction: row;justify-content: center;align-items: center;}
+
+/*Student Review css start*/
+.ilp .fltlft {float: left;}
+.ilp .fltryt {float: right;  position: relative; top: -4px;}
+.ilp .button-container{text-align: center;line-height: 13px;margin: 10px 0;}
+/*Student Review css ends*/
+/*contact widget css start*/
+.contact-det a.chng-brnch {font-weight: 600; font-size: .75rem;}
+i.chBrnch-ico {background:url(https://images.shiksha.ws/pwa/public/images/pwa-header-mobile-v3.svg) no-repeat; background-position: -174px -6px;width: 15px;height: 15px;display: inline-block;position: relative;top: 1px;left: -1px;}
+/*contact widget css ends*/
+/*ul.artcl-List{width: 100%;display: inline-block;}
+ul.artcl-List li{width: 100%;list-style: none; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #f1f2f4;display: inline-block; line-height: 20px;}
+ul.artcl-List li strong{display: block;margin-bottom: 6px;font-size: 0.875rem;}
+ul.artcl-List li:last-child{border: none; padding-bottom: 0;margin: 0;}
+ul.artcl-List li strong a{color: inherit;}*/
+/*.artcl-List .read-more-target{display: none}*/
+.fac-List.read-more-target{display: none}
+.read-more-target:checked ~ .read-more-wrap .fac-List.read-more-target{display: table;}
+.read-more-target:checked ~ .read-more-wrap + .button-container{display: none}
+/*.artcl-List .read-more-state:checked ~ .read-more-wrap .read-more-target {display: inline-block;}
+.artcl-List .read-more-state:checked ~ .read-more-wrap .read-more-trigger,
+.artcl-List .read-more-state:checked ~ .read-more-wrap .lt.word-wrap {display: none;}*/
+
+.flex-ul {display: table;width: 100%;margin-left: 10px;}
+.flex-ul .fac-bx.othrdtls{font-size: 0.75rem}
+/*Student who viewed collegs css change*/
+.ilp .coursepage_sldrC ul.ftrSlder li .vwd-clgInfo a.btnYellow {display: block; width: 159px; padding: 0;}
+/*.ilp  section.ftrbnr.listingTuple{margin-bottom: 20px}*/
+.flex-ul.m-5top .fac-bx.otherdtls {vertical-align: top;font-size: 0.75rem;padding-bottom: 5px;width: 48%;padding-right: 10px}
+.fac-info.otrsfctls{display: table;width: 100%}
+.flex-ul.m-5top .fac-bx.otherdtls:nth-child(2n+2){padding-right: 0px;}
+
+
+.facilityLayer {
+    padding: 12px 0px;
+    border-bottom: 1px solid #e6e5e5;
+}
+.facilityLayer:first-child{
+	padding-top: 0px;
+}
+.facilityLayer:last-child{
+	border: none;
+}
+.faciltydataTitle {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 5px;
+}
+.faciltydata p{
+    font-size: 0.75rem;
+    color: #000;
+    line-height: 1.125rem;
+    margin: 4px 0px 6px;
+}
+.facilitycell {
+    display: table;
+    width: 100%;
+}
+.facilitycell p {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 5px;
+    float: left;
+    margin-right: 5px;
+}
+.iblock {
+    display: inline-block;
+    width: 48%;
+    margin-right: 5px;
+}
+.facilitycell  .iblock{width: 100%}
+.fnt10{font-size: 0.625rem; }
+.cellcontainer{margin-top: 10px}
+.iblock strong{margin: 0px 0px 5px;font-size: 0.765rem}
+.faciltydata p.avlbl_fact{margin-top: 10px;color: #666;font-weight: 600}
+.other_faclt{color: #666 ;margin-bottom: 8px;display: block;}
+.mndtry_hstl {margin-top: 13px}
+.ctp-SrpBtnDiv.acp-loader{display: inline-flex;justify-content: flex-end;}
+.acp-loader .loader-line.shimmer{margin: 0px 4px;width: 47%}
+.ripple-effect {
+    margin-top: 0px;
+    margin-left: 0px;
+    width: 1px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.033);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.ripple-effect.light {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.ripple-effect.dark {
+    background-color: rgba(0, 0, 0, 0.075);
+}
+
+.artcl-List input[type="checkbox"]{
+	display:none;
+}
+
+.sponsoredTag{
+    display: inline-block;
+    padding: 3px 5px 0px;
+    border-radius: 2px;
+    background-color: #333;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.625rem;
+    margin: 0px 0px 5px 0px;
+    text-transform: uppercase;
+}
+
+/*make bold to links css*/
+
+/*admission css*/
+.widget-flex {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin: 10px 0 0 0;}
+.widget-flex .flex-btnwraper{width: 49%;}
+.flex-btnwraper button{width: 100%;}
+.ilp a.button--orange{color: #fff;}
+.ilp .flex-btnwraper.flex-btnwraper a {
+    width: 100%;
+    display: block;
+    height: 34px;
+    line-height: 32px;
+    font-weight: 600;
+    font-size: 0.875rem;
+}   
+p.basic_font{font-size: 1rem;
+    color: #000;
+    font-weight: 600;line-height: 1.34}
+
+.articles_box{display: block;}
+.article_block {display: flex;padding-bottom: 10px;border-bottom: 1px solid #dfdfdf;margin-bottom: 10px;}
+.article_block:last-child{margin: 0px;border:none;padding: 0px;}
+.pwa_thumbnail{width: 97px;height: 73px;margin-right: 12px;display: inline-block;  background-color: transparent;overflow: hidden;}
+.pwa_thumbnail img {width: 100%;}
+.article_infocol{display: inline-block;width: 70%;vertical-align: top;}
+.article_infocol a{font-size: 0.875rem;line-height: 1.3125rem;display:inline-block;font-weight: 600;text-decoration: none;}
+.article_infocol p{font-size: 0.875rem;color: #666;}
+
+/*css for new CTA*/
+.btn-v1-col{display:flex;flex-direction:row;padding:20px 12px 15px;align-items:center;justify-content:center}
+.btn-v1-col .button{padding:0 8px;min-width: 90px;}
+.btn-v1-col .button:nth-child(2){margin-left: 7px}
+.rvws_btnv1.btn-v1-col{padding:16px 0 7px;margin:0 -10px}
+.rvws_btnv1.btn-v1-col .button{padding:0 8px}
+.remove_brdr ._borderTop{border:none}
+
+
+@media screen and (min-width: 1024px){
+    .ilp section {margin-bottom: 16px;}
+    .articles_box{display: flex;flex-direction: row;flex-wrap: wrap;}
+    .article_block{
+        display:inline-flex;
+        width: 50%;
+        border:none;
+    }
+    .articles_box:after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+    #Facilities .read-more-wrap{display: flex;flex-direction: row;flex-wrap: wrap;}
+    #Facilities .fac-List{width: 20%;}
+    #Facilities .fac-bx {width: 100%;display: flex;flex-direction: column;align-items: center;text-align: center;}
+    #Facilities .fac-icn > i{left: 0px;}
+    #Facilities .fac-List.fac-expanded{width: 100%;}
+    #Facilities .fac-List.fac-expanded .fac-bx{text-align: left;}
+    .fac-info.otrsfctls .flex-ul{display: inline-block;width: auto;}
+    #Facilities .fac-bx.otherdtls{align-items: flex-start;}
+}

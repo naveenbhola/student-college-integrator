@@ -1,0 +1,14 @@
+{
+  "presets": [
+    "es2015",
+    "react",
+    "stage-0"
+  ],
+"plugins": [
+   "react-loadable/babel",
+    "syntax-dynamic-import",
+    ["import-inspector", {
+      "serverSideRequirePath": true
+    }],
+  ]
+}

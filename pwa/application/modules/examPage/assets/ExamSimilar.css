@@ -1,0 +1,59 @@
+._subcontainer.exam_pwa{background: #fff;}
+.auto_clear:before, .auto_clear:after {content: '';display: table;}
+.auto_clear:after {clear: both;}
+.uilp_exam_card {position: relative;margin-top: 15px;border: none;border-radius: 2px;box-shadow: 0 2px 2px 0 rgba(0,0,0,.16), 0 0 0 1px rgba(0,0,0,.08);background-color: #ffffff;}
+.uilp_exam_card:last-child {margin-bottom: 0px;}
+.exam_topcol {padding: 10px;}
+.exam_date.auto_clear {display: flex;flex-direction: row;justify-content: flex-start;}
+.exam_date.auto_clear .btnYellow{margin-left: auto;height: 34px;}
+.exam_date a.btn-pm{margin-left: auto;text-align: center;background: #f37921;font-size: 1rem;font-weight: 600;color: #fff;height: 32px;line-height: 32px;border-radius: 2px;padding: 0px;width: 145px;}
+.exam_name_width {width: 235px;display: inline-flex;}
+.exam_name_width p{display: inline-flex;align-items: center;}
+.exam_topcol .exam_title {font-size: 1rem;font-weight: 600;line-height: 1.34;color: #000;}
+.exam_impdates {margin: 10px 0px 0px;height: auto;display: flex;flex-direction: row;align-items: center;justify-content: center;}
+.exam_impdates table {border-collapse: collapse;display: table;width: 100%;}
+.exam_impdates table tr:first-child td{font-weight: 600;}
+.exam_impdates table tr td {padding: 6px 8px 4px;color: #000;}
+/*.exam_impdates table tr:nth-child(odd) {background-color: #f3f6f8;}*/
+.exam_impdates table tr td p {font-size: 0.875rem;color: #000;line-height: 1.1325rem;}
+.exam_impdates table tr td p strong {font-weight: 600;}
+td.fix-tdwidth{width: 65px;}
+.exams_a{font-size: 0px;margin-top: 10px;}
+.active-color {display: inline-block;font-size: 0.75rem;text-transform: uppercase;font-weight: 400;background: #e95d61;text-align: center;border-radius: 2px;color: #fff;padding: 2px 6px;}
+.exams_a a.quick-links {color: #008489;display: inline-block;font-size: 0.875rem;line-height: 1.32;margin-bottom: 4px;}
+.exams_a b{display: inline-block;color: #ccc;margin: 0 5px;font-weight: 400;font-size: 0.875rem}
+.uilp_exam_card:first-child {margin: 0px;}
+.exam_pwa .viewSectn{margin: 20px 0 0px;padding-bottom: 0px;}
+._subcontainer.exam_pwa .fix-tdwidth{width: 110px;}
+.accepting-links a{color: #008489;font-size: 0.875rem;font-weight: 600;}
+p.accepting-links .link_arw:after {transform: rotate(-45deg);margin: 0px 0 0 3px;position: relative;top: 0px;}
+.rippleefect.dark.link_arw:after{opacity: 1;transform: rotate(-45deg);background: transparent;}
+.pwa-cont.pad td.fix-tdwidth{width: 110px;padding: 5px;}
+.pwa-cont.pad .exam_topcol{padding: 8px;}
+.similar-loader{text-align: center;margin: 20px 0px 10px;font-size: 1rem;}
+.exam_date.auto_clear .eaply.btnYellow{margin-left: auto;font-weight: 600;
+    font-size: 0.875rem;}
+.exam_date .button--orange{margin-left: auto;padding: 0px 24px;}
+@media only screen and (min-width: 1024px){
+	.desktop--modal.epSimilar .pwa-lyr.ext-layer .pwa-cont.pad{padding: 10px 0 0 15px;}
+	/*.exam_impdates{height: 115px;}*/
+	.listof_exams{display: flex;flex-direction: row;flex-wrap: wrap;}
+	.pwa_pagecontent section.uilp_exam_card{display: inline-block;width: 49%;margin: 0px 0 15px 0;height: 220px;}
+	.pwa_pagecontent section.uilp_exam_card:nth-child(2n+2) {margin-left: 15px;}
+	.exam_impdates table{table-layout: fixed;}
+	.uilp_exam_card{width: 456px;margin-top: 18px}
+	.exam_date .btn-pm:hover{background: #db6d1d;}
+/*	.exam_impdates{margin: 0px;height: 130px}
+*/	.exam_impdates table tr td{padding:6px 8px 4px;height: 53px;vertical-align: middle;}
+	/*.fixed_tile{width: 928px;margin: 0 auto;}*/
+	.exams_a{height: 44px;vertical-align: middle;}
+	.exam_topcol .exam_title:hover{cursor: pointer;color: #008489;}
+	.exams_a a.quick-links{cursor: pointer;}
+	.exams_a a.quick-links, .exam_topcol .exam_title{text-decoration: none;}
+	.exam_impdates table tr td.fix-textlength p{white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+	.epSimilar .pwa-cont.pad{height: -webkit-calc(100% - 47px);height: -moz-calc(100% - 47px);height: calc(100% - 47px)} 	
+	.pwa-cont.pad .uilp_exam_card:first-child, .pwa-cont.pad .uilp_exam_card:nth-child(2){margin: 0px 1px;}
+	.pwa-cont.pad .uilp_exam_card:nth-child(2n+1){margin-right: 13px;}
+	.pwa-cont.pad .uilp_exam_card{margin-top: 15px;margin-left: 1px;}
+	.pwa-cont.pad .listof_exams{padding-bottom: 16px;}
+}

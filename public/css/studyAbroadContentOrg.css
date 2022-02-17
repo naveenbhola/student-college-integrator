@@ -1,0 +1,109 @@
+.exam-wrap{padding:8px 7px 7px; float:left; width:100%}
+.grid-wrap{margin-bottom:35px}
+.about-exam{color:#666; margin:0px 10px 18px}
+.about-exam p{ font-size:14px; line-height:20px;}
+.page-title{font-size:24px; font-weight:bold; color:#333; margin:0 0 15px 10px;}
+.abroad-exam-sprite{background:url(../images/abroad-exam-sprite.png) no-repeat; display:inline-block; position:relative;}
+.grid-exam-title{font-size:18px; color:#666; margin-left:10px; font-weight:bold}
+.no-margin{margin-right:0;}
+.exam-left-col{float:left; width:180px; border:1px solid #ccc; background:#fff;}
+.exam-right-col{margin-left:203px;}
+.exam-left-col ul li{border-bottom:1px solid #e4e4e4;}
+.exam-left-col ul li.last{border-bottom:0 none;}
+.exam-left-col ul li h2{font-size:12px;}
+.exam-left-col ul li a{padding:15px 5px 15px 13px; display:block; color:#666; text-decoration:none;}
+.exam-heading{color:#333; margin:5px 0 15px; border-bottom:1px solid #ccc; padding-bottom:5px;}
+.exam-heading h1, .exam-heading h2{font-size:18px;}
+.article-display{margin:0 0 15px 0;}
+.article-display ul li{margin-bottom:20px; float:left;width:100%;}
+.article-block{width:365px; border:1px solid #e6e6e6; background:#f9f9f9; padding:15px 30px 10px;}
+.article-block strong{display:block; margin-bottom:5px; height: 35px}
+.article-img{margin:0 0 6px 0;}
+.article-caption, .article-cmnt{color:#666; font-size:11px; line-height:18px}
+.article-caption{height: 60px}
+.article-cmnt{margin-top:6px; color:#999; float:left;}
+.article-cmnt .comment-icon{background-position:-249px -56px; width:17px; height:14px; margin-right:3px; vertical-align:middle;}
+.read-more-btn{border:1px solid #cccccc; background-color:#fff; padding:6px 13px; -moz-border-radius:2px; -webkit-border-radius:2px; border-radius:2px;text-decoration:none !important; display: block; color: #000; font-size: 13px; font-weight:bold;
+-moz-transition:all 0.6s ease-out; -webkit-transition:all 0.6s ease-out; transition:all 0.6s ease-out;}
+.read-more-btn span{font-size:22px; font-weight:normal; line-height:0; position:relative; top:3px}
+.read-more-btn:hover{background-color:#F78640; color: #fff; font-weight: bold; border: 1px solid transparent;}
+.flags{background:url(../images/flags-sprite5.png) no-repeat; display:inline-block;font-style:none; width:53px; height:35px; vertical-align:middle}
+/*CSS For Article*/
+.about-exam-title{color:#666;}
+.title-caption{display:block; margin-bottom:15px;}
+.article-widget-head{margin-bottom:10px; padding-bottom:8px; border-bottom:2px solid #eee;}
+span.related-country{display:inline-block; background:#eee; color:#333; font-size:11px; -moz-border-radius:12px; -webkit-border-radius:12px; border-radius:12px; padding:3px 5px; margin-right:6px;}
+span.related-country .cross-mark{color:#666; width:15px; height:15px; -moz-border-radius:50%; -webkit-border-radius:50%; border-radius:50%; display:inline-block;background:#c8c8c8; font-size:13px; line-height:13px; font-weight:bold; text-align:center; margin-left:5px; text-decoration:none !important; margin-right:0}
+.full-article-block .article-img{margin:0;}
+.full-article-block .article-detail{margin-left:320px;}
+.full-article-block .article-caption{font-size:12px; margin-bottom:25px;}
+.full-article-block .article-cmnt{width:100%;}
+.next-step-info{background:none !important; padding:0 !important;}
+.reading-title{margin:5px 0 15px; position:relative;}
+.reading-arrow{background-position:-344px -56px; width:40px; height:17px; position:absolute; top:5px; left:106px;}
+.planning-info{background:#f8f8f8; padding:25px 10px;color:#506683; font-size:12px; }
+.planning-info ul{display:table; width:100%;}
+.planning-info ul li{display:table-cell;}
+.country-icon, .course-icon, .exam-plan-icon,.college-plan-icon,.process-icon, .loan-icon, .visa-icon,.stu-life-icon{background-position:0px -108px; width:61px; height:61px;position:relative;}
+.course-icon{background-position:-68px -108px; top:5px;}
+.exam-plan-icon{background-position:-137px -108px;top:5px;}
+.college-plan-icon{background-position:-205px -108px;top:5px; height:60px;}
+.process-icon{background-position:-275px -108px; top:5px;}
+.loan-icon{background-position:-344px -108px;top:5px;}
+.visa-icon{background-position:-415px -108px;top:5px;}
+.stu-life-icon{background-position:-488px -108px;top:5px;}
+.planning-col.last{margin-right:0;}
+.planning-info ul li strong{display:block; font-size:14px; margin:10px 0;}
+.planning-col{display:table-cell;margin-right:10px; width:24%;}
+.planning-col a{display:table-cell;margin-right:10px; border:2px solid #f2f2f2; background:#fff; padding:20px 4px; width:24%; text-align:center; position:relative;background:#fff; color: #506683 !important; text-decoration: none !important;-webkit-transition: all 0.5s ease-out;-moz-transition: all 0.5s ease-out; transition: all 0.5s ease-out;}
+.planning-col a:hover, .planning-col a.active{background:#eef5ff; border-color:#d1e2fc; box-shadow:0 2px 2px #d7d7d7;}
+.planning-col a:hover .country-icon, .planning-col a.active .country-icon{background-position:-0px -176px;}
+.planning-col a:hover .course-icon, .planning-col a.active .course-icon{background-position:-68px -176px;}
+.planning-col a:hover .exam-plan-icon, .planning-col a.active .exam-plan-icon{background-position:-137px -176px;}
+.planning-col a:hover .college-plan-icon, .planning-col a.active .college-plan-icon{background-position:-205px -176px;}
+.planning-col a:hover .process-icon, .planning-col a.active .process-icon{background-position:-275px -176px;}
+.planning-col a:hover .loan-icon, .planning-col a.active .loan-icon{background-position:-344px -176px;}
+.planning-col a:hover .visa-icon, .planning-col a.active .visa-icon{background-position:-415px -176px;}
+.planning-col a:hover .stu-life-icon, .planning-col a.active .stu-life-icon{background-position:-488px -176px;}
+.tick-arrow{display:none;background-position:-316px -56px; width:24px; height:17px; position:absolute; top:10px; left:10px; }
+.planning-col a.active .tick-arrow{display:block}
+ul.all-country-list{width:100%;border:2px solid #eee;}
+ul.all-country-list li{padding:8px;}
+ul.all-country-list li.first-child{background:#eee; color:#666;}
+a.show-all-link{padding:0 !important; display:inline-block; color:var(--Teal) !important; float:right; font-size:11px;}
+ul.all-country-list li a{padding:3px;}
+ul.sub-city-list{margin-top:8px;border-top:2px solid #eee;}
+ul.sub-city-list li{padding:6px 6px 6px 20px;}
+ul.sub-city-list li.last{border-bottom:0 none;}
+ul.sub-city-list li a{display:inline-block; color:var(--Teal); float:right; padding:0 !important;font-size:11px;}
+ol.carausel-bullets{width:37px; margin:20px auto}
+ol.carausel-bullets li{width:10px; height:10px; overflow:hidden; -moz-border-radius:50%; -webkit-border-radius:50%; border-radius:50%; background:#c9c9c9; float:left; margin-right:8px; cursor:pointer}
+ol.carausel-bullets li.active{background:#999;}
+.exam-content table,.dyanamic-content table{width:100% !important; border-collapse:collapse !important; font:normal 12px 'open sans', sans-serif !important; margin:0 !important; border:1px solid #e3e3e3 !important;}
+.exam-content table tr td,.dyanamic-content table tr td{border:1px solid #e3e3e3 !important; padding:10px !important; font:normal 12px 'open sans', sans-serif !important;}
+.exam-content table tr td p,.dyanamic-content table tr td p{margin: 0;padding:0 !important; width:auto !important}
+
+
+
+/*change-7Nov*/
+.article-block, .full-article-block{width:365px; border:1px solid #e6e6e6; background:#f9f9f9; padding:15px 30px 10px;}
+.full-article-block{width:100%; padding:10px;}
+.article-block strong, .full-article-block strong{display:block; margin-bottom:10px}
+.article-img{margin:0 0 6px 0;}
+.article-caption, .article-cmnt{color:#666; font-size:11px; line-height:18px}
+.article-caption{margin-bottom:8px}
+.article-cmnt{margin-top:6px; color:#999; float:left;}
+.article-cmnt .comment-icon{background-position:-249px -56px; width:17px; height:14px; margin-right:3px; vertical-align:middle;}
+.read-more-btn{border:1px solid #cccccc; background-color:#fff; padding:6px 13px; -moz-border-radius:2px; -webkit-border-radius:2px; border-radius:2px;text-decoration:none !important; display: block; color: #000; font-size: 13px; font-weight:bold;-moz-transition:all 0.6s ease-out; -webkit-transition:all 0.6s ease-out; transition:all 0.6s ease-out; color:#333 !important;}
+.read-more-btn span{font-size:22px; font-weight:normal; line-height:0; position:relative; top:3px}
+.read-more-btn:hover{background-color:#F78640; color: #fff !important; font-weight: bold; border: 1px solid transparent;}
+.flags{background:url(../images/flags-sprite5.png) no-repeat; display:inline-block;font-style:none; width:53px; height:35px}
+.college-list ul{margin:10px 0; float:left;}
+.college-list ul li{margin:0 10px 40px 0; width:325px; float:left}
+.exam-college-info{margin-left:65px;font-size:12px;}
+.exam-college-info span{display:block; color:#999; margin-top:3px;}
+
+
+
+.reset-icon{background-position:-217px -81px; margin-right:5px; width:14px; height:12px; top:2px;}
+.reset-btn{border:1px solid #ccc; padding:3px 6px; text-decoration:none !important; font-size:12px;}

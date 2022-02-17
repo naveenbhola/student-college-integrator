@@ -1,0 +1,97 @@
+<div class="row" id="academic_staff_form">
+    <div mysize="12" *ngIf="activateAcademicStaff">
+        <div class="x_panel">
+            <div [class.x_title]="opened">
+                <ul class="nav navbar-left panel_toolbox">
+                    <li><a class="collapse-link" (click)="toggle()"><i [class]="opened?' fa fa-chevron-up':' fa fa-chevron-down'"></i></a></li>
+                </ul>
+                <h2>Academic Staff</h2>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content" [hidden]="!opened">
+                <div *ngFor="let st of staff;let i = index;">
+                    <div class="form-group">
+                        <h4 mysize="3" class="cmsAlignLeft">Person {{i+1}}</h4>
+                        <div mysize="4" [myclassoffset]="'5'">
+                            <div mysize="3"><label class="control-label">Position</label></div>
+                            <div mysize="6">
+                                <select [ngModel]="st.position" [disabled]="newPosition>=0 && !select.dirty" (ngModelChange)="newPosition=$event;btn.hidden=0" #select="ngModel" name="position">
+                                    <option *ngFor="let z of staff;let j=index" [value]="j+1">{{j+1}}</option>
+                                </select>
+                            </div>
+                            <div #btn [hidden]="!select.dirty" mysize="3"><button (click)="changeStaffPosition(st.position,newPosition);btn.hidden=1;newPosition=-1;" type="button" class="btn cmsButton cmsFont">Move</button></div>
+                        </div>
+                    </div><br>
+
+                    <div class="form-group">
+                        <label mysize="3" class="cmsAlignLeft cmsFont">Choose type</label>
+
+                        <div mysize="6">
+                            <select class="cmsFont" name="type" #type="ngModel" [ngModel]="st.type" (ngModelChange)="st.type=$event;changedetected();">
+                                <option *ngFor="let option of instituteStaticData?.faculty_type" value="{{option.value}}">{{option.label}}</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label mysize="3" class="cmsAlignLeft cmsFont">Enter name</label>
+                        <div mysize="6">
+                            <input type="text" #staffName="ngModel" name="name{{i}}" [ngModel]="st.name" (ngModelChange)="st.name=$event;changedetected();">
+                            <span *ngIf="errors" class="help-block text-danger cmsFont">
+                                <span *ngIf="errors?.validateOneOrNoneCustomControlArray && errors?.validateOneOrNoneCustomControlArray[i]?.name">Name cannot be empty</span>
+                                <span *ngIf="errors?.validateMaxLength && errors?.validateMaxLength[i]?.name?.maxlength">{{errors?.validateMaxLength[i]?.name?.maxlength}}</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label mysize="3" class="cmsAlignLeft cmsFont">Current designation</label>
+                        <div mysize="6">
+                            <input type="text" name="current_designation{{i}}" [ngModel]="st.current_designation" (ngModelChange)="st.current_designation = $event;changedetected();">
+                            <span *ngIf="errors" class="help-block text-danger cmsFont">
+                                <span *ngIf="errors?.validateOneOrNoneCustomControlArray && errors?.validateOneOrNoneCustomControlArray[i]?.current_designation">Designation cannot be empty</span>
+                                <span *ngIf="errors?.validateMaxLength && errors?.validateMaxLength[i]?.current_designation?.maxlength">{{errors?.validateMaxLength[i]?.current_designation?.maxlength}}</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label mysize="3" class="cmsAlignLeft cmsFont">Education background</label>
+                        <div mysize="6">
+                            <input type="text" name="education_background{{i}}" [ngModel]="st.education_background" (ngModelChange)="st.education_background = $event;changedetected();">
+                        </div>
+                        <span *ngIf="errors" class="help-block text-danger cmsFont">
+                            <span *ngIf="errors?.validateMaxLength && errors?.validateMaxLength[i]?.education_background?.maxlength">{{errors?.validateMaxLength[i]?.education_background?.maxlength}}</span>
+                        </span>
+                    </div>
+
+                    <div class="form-group">
+                        <label mysize="3" class="cmsAlignLeft cmsFont">Professional highlights</label>
+                        <div mysize="6">
+                            <textarea type="text" (ngModelChange)="st.highlights = $event;changedetected();" name="highlights{{i}}" [ngModel]="st.highlights"></textarea>
+                        </div>
+                        <span *ngIf="errors" class="help-block text-danger cmsFont">
+                            <span *ngIf="errors?.validateMaxLength && errors?.validateMaxLength[i]?.highlights?.maxlength">{{errors?.validateMaxLength[i]?.highlights?.maxlength}}</span>
+                        </span>
+                    </div>
+
+                    <div mysize="9" class="control-label">
+                        <button *ngIf="staff.length-1" [disabled]="newPosition>=0" type="button" (click)="removeAcademicStaff(i+1);" class="btn cmsButton cmsFont">Remove</button>
+                        <button *ngIf="i+1 == staff.length" [disabled]="newPosition>=0" type="button" (click)="addAcademicStaff()" class="btn cmsButton cmsFont">+ Add More</button>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                 <div class="form-group">
+                        <label mysize="3" class="control-label cmsFont cmsAlignLeft">Faculty highlights<img class="helperText" id="faculty_high" src="/public/images/tooltip.png" width="20px" style="padding-right:0px" (click)="toolTipNotify('faculty_high',$event)"></label>
+                        <div mysize="6">
+                            <textarea type="text" name="faculty_highlights" [mymaxlength]="'2000'" [registerForm] = "form" [registerModel]="faculty_highlights" #faculty_highlights="ngModel" [(ngModel)]="instituteObj.staff_faculty_highlights"></textarea>
+                        </div>
+                         <span class="help-block text-danger cmsFont">
+                             <span *ngIf="faculty_highlights.errors?.maxlength">{{faculty_highlights.errors?.maxlength}}</span>
+                         </span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

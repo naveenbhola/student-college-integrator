@@ -1,0 +1,1 @@
+<a class="get-back" href="<?php echo SHIKSHA_STUDYABROAD_HOME.$customReferer; ?>"><i class="custm-arrw left"></i>Go back to <?php echo ($customReferer == '/'?'Home':$refererTitle); ?></a>

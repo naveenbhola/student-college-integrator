@@ -1,0 +1,134 @@
+<style>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    #parent_mapping_form *{font-family: "Open Sans"}
+</style>
+<div id = "Aa" style="position:absolute;top:0;left:0;width:100%;height:100%;color:black;opacity:0.7">
+    &nbsp;
+</div>
+<div class="page-title">
+    <div class="clearfix"></div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>Search</h2>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <div class="form-group row">
+                            <a (click)="newCourse()" class="btn cmsButton cmsFont" role="button">Add New Course</a>
+                    </div>
+                    <div class="form-group row form-control-X">
+                        <label [mysize]="'1'">Search By:</label>
+                        <div [mysize]="'11'">
+                            <div [mysize]="'12'">
+                                <div [mysize]="'5'">
+                                    <label [mysize]="'4'" class="cmsFont">Course ID</label>
+                                    <div [mysize]="'6'">
+                                        <div class="input-group">
+                                            <input type="number" [(ngModel)] = "filterCourseId" name="name" min="1" class="col-md-2" (keyup)="resetInputFilters('course')"  (keyup.enter)="courseListFilters(filterCourseId,'courseId')">
+                                            <span class="input-group-btn" >
+                                            <button type="button" [disabled]="!filterCourseId" class="btn cmsButton-go" (click)="courseListFilters(filterCourseId,'courseId')">Go!</button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <label [mysize]="'1'"> OR </label>
+                                <div [mysize]="'5'">
+                                    <label [mysize]="'4'" class="cmsFont">Institute ID</label>
+                                    <div [mysize]="'6'">
+                                        <div class="input-group">
+                                            <input type="number"  [(ngModel)] = "filterInstituteId" name="name" min="1" class="col-md-2" (keyup)="resetInputFilters('institute')" (keyup.enter)="courseListFilters(filterInstituteId,'instituteId')">
+                                            <span class="input-group-btn">
+                                            <button type="button" [disabled]="!filterInstituteId" (click)="courseListFilters(filterInstituteId,'instituteId')" class="btn cmsButton-go">Go!</button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <label [mysize]="'1'"> OR </label>
+                                <div [mysize]="'5'">
+                                    <label [mysize]="'4'" class="cmsFont">University ID</label>
+                                    <div [mysize]="'6'">
+                                        <div class="input-group">
+                                            <input type="number"  [(ngModel)] = "filterUniversityId" min="1" name="name" class="col-md-2" (keyup)="resetInputFilters('university')" (keyup.enter)="courseListFilters(filterUniversityId,'universityId')">
+                                            <span class="input-group-btn">
+                                            <button type="button" [disabled]="!filterUniversityId"   (click)="courseListFilters(filterUniversityId,'universityId')" class="btn cmsButton-go">Go!</button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <label [mysize]="'10'" style="text-align:center"> OR </label>
+                                <div [mysize]="'12'" *ngIf="resetAutosuggestorData">
+                                    <label [mysize]="'1'" class="cmsFont">Name</label>
+                                    <div [mysize]="'11'" style="padding-left: 47px;">
+                                        <ng-select 
+                                        [allowClear]="true"
+                                        [items]="instituteAutoSuggestorItems"
+                                        [allowOpenSearch] = "true"
+                                        [infiniteScroll] = "false"
+                                        [disabled]="disabled"
+                                        (data)="refreshValue($event)"
+                                        (selected)="selected($event)"
+                                        (removed)="removed($event)"
+                                        (typed)="typed($event)"
+                                        placeholder="Search by name">
+                                        </ng-select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row form-control-X" style="padding-top:10px">
+                        <label [mysize]="'2'">Filter By:</label>
+                        <div [mysize]="'10'">
+                            <div [mysize]="'12'">
+                                <div [mysize]="'5'">
+                                    <label [mysize]="'4'" style="padding-left:10px" class="cmsFont">Status</label>
+                                    <div style="padding-left:10px;" class="cmsFont" [mysize]="'8'">
+                                        <select name="status" class="select2_single form-control cmsFont" tabindex="-1" [(ngModel)]="selectedStatus" (change)="courseListFilters($event.target.value,'status')">  
+                                        <option value="0" selected>Select </option>
+                                        <option *ngFor="let courseStatus of courseStatusList " value="{{courseStatus}}">{{courseStatus}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <button type="button"  class="btn cmsButton cmsFont" (click)="resetFilters()">Reset Filters</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<courseListTable [courseResultsTable]="courseResultsTable"></courseListTable>
+<pagination-html *ngIf="checkedFlag" [pageNumber]="paginationNum" [paginationNumbers]="paginationLimit" [startPage]="startPage" [endPage]="endPage" (notify)="paginationRequest($event)" [totalPages]="totalPages" [paginationLimit]="paginationLimit" [totalResultCount]="totalResultCount" [paganationResultsShow]="resultsPerPage"></pagination-html>
+<shiksha-loader [showLoader]="showLoader"> </shiksha-loader>
+<!-- <div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" (click)="lgModal.hide()" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title">Type of Course</h4>
+        </div>
+        <div class="modal-body" style="position: relative;overflow-y: auto;max-height: 400px;">
+          <div class="radio">
+            <label>
+              <input type="radio" #typeOfCourse checked (click)="getCourseType(1)" id="optionsRadios1"  value="1" name="optionsRadios"> Academic Course
+              
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" (click)="getCourseType(2)" id="optionsRadios2" value="2" name="optionsRadios"> Preparation Course
+              
+                </label>
+              </div>
+              <button type="button" (click)="proceedCourseType()" class="btn btn-primary">Proceed</button>
+            </div>
+        </div>
+    </div>
+    </div> -->

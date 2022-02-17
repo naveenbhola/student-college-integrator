@@ -1,0 +1,23 @@
+.helpSelect{background:#FFF;border:1px solid #C2DAFE;border-right:1px solid #FFF;left:1px;line-height:24px;position:relative;width:236px}
+.pd_top_5{padding-top:5px}
+.contWith_30{border-left:1px solid #E2E2E2;width:30%}
+.contWith_45{border-left:1px solid #E2E2E2;width:45%}
+.contactHeader{background:#F1FFD2;border:1px solid #D3F096;line-height:28px;padding:0 10px}
+.contactHeaderText{border-bottom:1px solid #E2E2E2;padding:0 10px}
+.mb15{margin-bottom:15px}
+.shiksha-rule-title{color:#E88F21; font-size:19px;font-weight:normal; margin-top:30px;}
+.rule-page-content{width:100%; float:left; font-size:14px; color:#404041}
+.rule-page-content p{margin-top:15px; line-height:22px;}
+.rule-info{font-size:14px; color:#404041; margin:10px 0; width:70%;}
+.rules-table-section{width:100%; float:left; margin-bottom:20px;}
+.rules-table-section table{width:100%; border:1px solid #eee;}
+.rules-table-section table tr th, .rules-table-section table tr td{padding:12px 8px; text-align:left; color:#231F20 !important; border:1px solid #eee; border-collapse:collapse;}
+.rules-table-section table tr th{background:#F9F9F9; font-weight:bold;}
+ul.score-list{width:100%; float:left; margin-left:15px;}
+ul.score-list li{list-style:disc; margin-bottom:4px;}
+.report-abuse-list{margin-left:10px; width:100%; float:left;margin-bottom:25px;}
+.report-abuse-list p{margin-bottom:5px; font-size:14px; line-height:20px;}
+.report-abuse-list ul{width:100%; float:left;margin:10px 0 0 20px; font-size:14px;}
+.report-abuse-list ul li{width:100%; float:left; margin-bottom:5px; list-style:disc; color:#404041; font-size:14px; }
+.report-abuse-list ul li ol{margin:10px 5px; padding:0;}
+.report-abuse-list ul li ol li{list-style:none;}

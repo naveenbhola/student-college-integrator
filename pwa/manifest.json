@@ -1,0 +1,54 @@
+{
+  "name": "Shiksha",
+  "short_name": "Shiksha",
+  "description": "Add Shiksha and get exams and college info with a click!",
+  "start_url": "/?start_url=homescreen",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#05818D",
+  "theme_color": "#05818D",
+  "icons": [{
+      "src": "./pwa/public/images/icons/shk_48x48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "./pwa/public/images/icons/shk_72x72.png",
+      "type": "image/png",
+      "sizes": "72x72"
+    },
+    {
+      "src": "./pwa/public/images/icons/shk_96x96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "./pwa/public/images/icons/shk_128x128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "./pwa/public/images/icons/shk_144x144.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "./pwa/public/images/icons/shk_152x152.png",
+      "type": "image/png",
+      "sizes": "152x152"
+    },
+    {
+      "src": "./pwa/public/images/icons/shk_192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "./pwa/public/images/icons/shk_512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "author": {
+    "name": "Mobile App Team"
+  }
+}

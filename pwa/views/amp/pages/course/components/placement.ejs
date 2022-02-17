@@ -1,0 +1,67 @@
+<div class="data-card m-5btm" id="placements">
+           <h2 class="color-3 f16 heading-gap font-w6">Placements <span class="f13">(as provided by college)</span></h2>
+
+           <div class="card-cmn color-w">
+
+              <%if(placementData != null){
+                  var iframeSourceUrl = 'https://www.shiksha.com/mobile_listing5/CourseMobile/getNaukriPlacementChartsAMP/';
+                  iframeSourceUrl += '{';
+                    iframeSourceUrl += '"percentage_batch_placed":'+ placementData.percentage_batch_placed
+                    iframeSourceUrl += ',"min":' + placementData.min_salary
+                    iframeSourceUrl += ',"median":' + placementData.median_salary
+                    iframeSourceUrl += ',"avg":' + placementData.avg_salary
+                    iframeSourceUrl += ',"max":' + placementData.max_salary
+                    iframeSourceUrl += ',"unit":' + placementData.salary_unit
+                    iframeSourceUrl += ',"unit_name":' + placementData.salary_unit_name
+                    iframeSourceUrl += ',"max_international_salary":' + placementData.max_international_salary
+                    iframeSourceUrl += ',"max_international_salary_unit":' + placementData.max_international_salary_unit
+                    iframeSourceUrl += ',"max_international_salary_unit_name":' + placementData.max_international_salary_unit_name
+                    iframeSourceUrl += ',"total_international_offers":' + placementData.total_international_offers
+                  iframeSourceUrl += '}';
+
+                  console.log(iframeSourceUrl);
+              %>
+                <div class="m-btm graph-div m20 pos-rl">
+                   <h3 class="f14 color-6 pos-abs">Domestic Placements  <span class="font-w4 color-6 f13">  (Annual) (In <b>INR</b>)</span></h3>
+                   <amp-iframe width="600" height="300"  class="frame-graph" layout="responsive" sandbox="allow-scripts allow-popups" scrolling="no" frameborder="0" src = '<%= iframeSourceUrl %>'></amp-iframe>
+                </div>
+                <section class="" amp-access="NOT validuser" amp-access-hide>
+                   <a class="placementReport btn btn-primary color-o color-f f14 font-w7 ask-btn ga-analytic" href="https://www.shiksha.com/muser5/UserActivityAMP/getResponseAmpPage?listingId=73368&actionType=placement&fromwhere=coursepage" data-vars-event-name="PLACEMENT_REPORT">Placement Report</a>
+                </section>
+                <section class=" " amp-access="validuser" amp-access-hide tabindex="0">
+                   <a class="placementReport btn btn-primary color-o color-f f14 font-w7 ask-btn ga-analytic" href="https://www.shiksha.com/b-tech/course/b-e-in-mechanical-engineering-pimpri-chinchwad-college-of-engineering-pimpri-chinchwad-education-trust-s-nigdi-pune-73368?actionType=placement" data-vars-event-name="PLACEMENT_REPORT">
+                   Download Placement Report
+                   </a>
+                </section>
+              <%}%>
+              <% if((data !=null || data !='undefined') && data.length != 0) { %>
+              <h3 class="f14 color-6 font-w6 m-top">Companies / Recruiters who visited the campus</h3>
+              <input type="checkbox" class="read-more-state hide" id="placement" />
+              <div class="m-5top read-more-wrap">
+
+
+                  <% data.map((item, index)=>{ %>
+                    <%  if(index < 10){ %>
+                        <% if( index == (index-1)) {%>
+                           <span class="hid l-18 f12 color-3"><%- item.companyName %></span>
+                         <% } else { %>
+                           <span class="hid l-18 f12 color-3"><%- item.companyName %></span>
+                           <b class="font-w4 color-c pad3 f12"> | </b>
+                         <% } %>
+                      <% } else { %>
+                          <% if( index == (index-1)) {%>
+                               <span class="hid l-18 f12 color-3 listinline read-more-target"><%- item.companyName %></span>
+                          <% } else { %>
+                               <span class="hid l-18 f12 color-3 listinline read-more-target"><%- item.companyName %></span>
+                               <b class="font-w4 color-c pad3 f12 listinline read-more-target"> | </b>
+                          <% } %>
+                      <% } %>
+                   <% }) %>
+               <% if(data.length > 10) {%>
+                  <label for="placement" class="read-more-trigger color-b t-cntr f14 color-b block font-w6 v-arr">View More</label>
+              <% } %>
+              </div>
+              <% } %>
+           </div>
+        </div>
+        </div>

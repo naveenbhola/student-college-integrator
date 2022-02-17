@@ -1,0 +1,1 @@
+<iframe src="//www.facebook.com/plugins/activity.php?site=shiksha.com&amp;action&amp;width=300&amp;height=300&amp;header=true&amp;colorscheme=light&amp;linktarget=_blank&amp;border_color&amp;font&amp;recommendations=false&amp;appId=174092652604657" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:300px;" allowTransparency="true"></iframe>

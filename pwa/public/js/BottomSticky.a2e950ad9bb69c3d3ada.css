@@ -1,0 +1,10 @@
+.ctp-SrpBtnDiv1{background:#fff;position:fixed;bottom:0;left:0;right:0;padding:12px;box-shadow:0 -1px 2px 0 rgba(0,0,0,.16),0 0 1px 1px rgba(0,0,0,.08);z-index:3}
+.btn-table{display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: flex;flex-direction: row;justify-content: center;}
+.btn-table.chp .dnld-btn:nth-child(2){margin-left: auto;}
+.ctp-SrpBtnDiv1.exm-BtmsSticky{display: block}
+.ctp-SrpBtnDiv1.hide{display: none;}
+.btn-table.chp .button.eaply-disabled{width: 41%;}
+.btn-table.chp .dnld-btn{width: 49%;margin: 0px;}
+.btn-table.chp .dnld-btn .button{width: 100%;}
+.btn-table.chp .dnld-btn .button--orange{min-width: auto;padding: 0 16px;}
+#chpBtmCTA .stickyBanner {bottom: 58px;}

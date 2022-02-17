@@ -1,0 +1,175 @@
+<form id="demo-form3" [formGroup]="courseForm" class="form-horizontal form-label-left" autocomplete="off" novalidate>
+    <!-- {{courseForm?.value | json}} -->
+    <!-- {{courseForm?.errors | json}}
+    {{errors | json}} -->
+
+    <courseParentEntitySection [mode]="mode"
+                               [group]="courseForm.controls.hierarchyForm"
+                               [extraData]="extraData['hierarchyKey']"
+                               (toolTipEvent)="toolTipModalShow($event)"></courseParentEntitySection>
+
+    <courseTypeInfo
+            [group]="courseForm.controls.courseTypeForm" [courseStaticData]="courseStaticData" [mainForm]="courseForm"
+            [hierarchyTree]="hierarchyTree" [hierarchyArray]="hierarchyArray" [mode]="mode"
+            [editData]="courseData?.courseTypeForm" (toolTipEvent)="toolTipModalShow($event)" [isCloneMode]="isCloneMode"
+            ></courseTypeInfo>
+
+    <scheduleInfo
+            [group]="courseForm.controls.scheduleForm"
+            [courseObj]="courseObj"
+            [courseStaticData]="courseStaticData"
+            [mode]="mode"
+            [courseData]="courseData"
+            (toolTipEvent)="toolTipModalShow($event)"
+            ></scheduleInfo>
+
+    <courseBasicInfo [group]="courseForm.controls.courseBasicInfoForm"
+                     [courseStaticData]="courseStaticData"
+                     (toolTipEvent)="toolTipModalShow($event)">
+    </courseBasicInfo>
+
+    <courseUsp
+            [group]="courseForm.controls.courseUsp"
+            [courseStaticData]="courseStaticData"
+            [editData]="courseData?.courseUsp"
+            (toolTipEvent)="toolTipModalShow($event)"
+            ></courseUsp>
+
+    <admissionProcess
+            [group]="courseForm.controls.courseAdmissionProcess"
+            [courseStaticData]="courseStaticData"
+            [editData]="courseData?.courseAdmissionProcess"
+            (toolTipEvent)="toolTipModalShow($event)"
+            ></admissionProcess>
+
+    <courseStructure [group]="courseForm.controls.courseStructureForm" [editData]="courseData?.courseStructureForm"
+                     [courseStaticData]="courseStaticData" [mode]="mode"
+                     (toolTipEvent)="toolTipModalShow($event)"></courseStructure>
+
+    <courseBrochure [group]="courseForm.controls.courseBrochure" [courseStaticData]="courseStaticData" (toolTipEvent)="toolTipModalShow($event)"></courseBrochure>
+
+    <courseFeesDetails
+            [group]="courseForm.controls.courseFeesForm"
+            [courseStaticData]="courseStaticData"
+            [editData]="courseData?.courseFeesForm"
+            (toolTipEvent)="toolTipModalShow($event)"
+            ></courseFeesDetails>
+
+    <courseEligibilityDetails [editData]="courseData?.courseEligibilityForm"
+                              [group]="courseForm.controls.courseEligibilityForm" [courseStaticData]="courseStaticData"
+                              [mode]="mode" (toolTipEvent)="toolTipModalShow($event)"></courseEligibilityDetails>
+
+    <course-exams-cut-off [courseStaticData]="courseStaticData"
+                          [course12thCutOff]="courseForm.controls.course12thCutOff"
+                          [group]="courseForm.controls.courseExamCutOff" [mainForm]="courseForm" [mode]="mode"
+                          [editData]="courseData" (toolTipEvent)="toolTipModalShow($event)"></course-exams-cut-off>
+
+    <courseSeats
+            [group]="courseForm.controls.courseSeats"
+            [courseStaticData]="courseStaticData" [mainForm]="courseForm" [editData]="courseData?.courseSeats"
+            ></courseSeats>
+
+    <coursePlacements [editData]="courseData?.coursePlacements" [group]="courseForm.controls.coursePlacements"
+                      [hierarchyTree]="hierarchyTree" [courseStaticData]="courseStaticData"
+                      (toolTipEvent)="toolTipModalShow($event)"></coursePlacements>
+
+    <courseInternship
+            [editData]="courseData?.courseInternship"
+            [group]="courseForm.controls.courseInternship"
+            [courseStaticData]="courseStaticData"
+
+            ></courseInternship>
+
+    <course-partner-institute [group]="courseForm.controls.coursePartnerForm" [mainForm]="courseForm"
+                              [courseStaticData]="courseStaticData" (toolTipEvent)="toolTipModalShow($event)"
+                              [editData]="courseData?.coursePartnerForm"></course-partner-institute>
+
+    <courseImportantDates [group]="courseForm.controls.importantDatesForm" [editData]="courseData?.importantDatesForm"
+                          [mode]="mode" (toolTipEvent)="toolTipModalShow($event)"></courseImportantDates>
+
+    <courseLocations [editData]="courseData?.courseLocations" [group]="courseForm.controls.courseLocations"
+                     [courseStaticData]="courseStaticData" (toolTipEvent)="toolTipModalShow($event)"></courseLocations>
+
+    <courseSeo [group]="courseForm.controls.courseSeo" [editData]="courseData?.courseSeo"></courseSeo>
+
+    <courseMedia [editData]="courseData?.courseMedia" [group]="courseForm.controls.courseMedia"
+                 (toolTipEvent)="toolTipModalShow($event)"></courseMedia>
+
+    <courseComments [group]="courseForm.controls.courseComments"
+                    [editData]="courseData"
+            ></courseComments>
+
+    <div class="row">
+        <div class="x_panel">
+            <div class="form-group">
+                <div [mysize]="'6'" [myclassoffset]="'5'">
+                    <button type="button" (click)="backToHome()" class="btn btn-default">Cancel</button>
+                    <button type="button" [disabled]="!courseForm.valid || submitPending" class="btn cmsButton cmsFont"
+                            (click)="submitCourse('draft')">Save as Draft
+                    </button>
+                    <button type="button" [disabled]="!courseForm.valid || submitPending" class="btn cmsButton cmsFont"
+                            (click)="submitCourse('live')">Save and Publish
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<div bsModal #courseSavedModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"
+     [config]="{backdrop: 'static',keyboard: false}">
+    <form autocomplete="off" novalidate>
+        <div class="modal-dialog modal-lg" style="width:1000px;margin-right:30px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                   <!--  <button type="button" class="btn close" (click)="hideCourseSavedModal();backToHome();">
+                        <span aria-hidden="true">&times;</span>
+                    </button> -->
+                </div>
+                <div class="modal-body font20">
+                    <div class="cmsAlignCenter">Course Saved Successfully!</div>
+                    <div class="cmsAlignCenter">Course ID : {{courseForm.controls['courseId'].value}}</div>
+                </div>
+                <div class="modal-footer">
+
+                    <div mysize="3" class="cmsAlignCenter"><a
+                            (click)="navigateToList();" class="btn cmsFont cmsButton">List Course</a></div>
+
+                    <div mysize="3" class="cmsAlignCenter"><a
+                            (click)="navigateToAdd();" class="btn cmsFont cmsButton">Add New Course</a></div>
+                    <div mysize="6" class="cmsAlignCenter"><a href="javascript:void(0);" (click)="showCloneModal();" class="btn cmsFont cmsButton">Clone this course</a></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div bsModal #courseCloneModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"
+     [config]="{backdrop: 'static',keyboard: false}">
+    <form autocomplete="off" novalidate [formGroup]="cloneForm">
+        <div class="modal-dialog">
+            <div class="modal-content" style="max-height:300px;overflow-y:auto;">
+                <div class="modal-header">
+                    <button type="button" class="btn close" (click)="hideCourseCloneModal();backToHome();">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Select the fields to be cloned:
+                    <div class="form-group" *ngFor="let item of sections">
+                        <label class="checkbox-inline" noBootstrap *ngIf="cloneForm.contains(item.value)">
+                            <input [formControlName]="item.value" type="checkbox" value={{item.value}}>{{item.label}}
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div mysize="12" class="cmsAlignCenter"><a href="javascript:void(0);" (click)="cloneCourse();"
+                                                               class="btn btn-primary">Clone</a></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<toolTipModal *ngIf="checkedFlag" [isModalOpened]="isModalOpened" [toolTipMsg]="toolTipMsg"
+              [tooltipPositionX]="tooltipPositionX" [tooltipPositionY]="tooltipPositionY"></toolTipModal>

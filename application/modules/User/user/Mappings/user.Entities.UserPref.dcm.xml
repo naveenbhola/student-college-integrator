@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="user\Entities\UserPref" table="tUserPref">
+    <change-tracking-policy>DEFERRED_IMPLICIT</change-tracking-policy>
+    <id name="prefId" type="integer" column="PrefId">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="degreePrefAICTE" type="string" column="DegreePrefAICTE"/>
+    <field name="degreePrefUGC" type="string" column="DegreePrefUGC"/>
+    <field name="degreePrefInternational" type="string" column="DegreePrefInternational"/>
+    <field name="degreePrefAny" type="string" column="DegreePrefAny"/>
+    <field name="modeOfEducationFullTime" type="string" column="ModeOfEducationFullTime"/>
+    <field name="modeOfEducationPartTime" type="string" column="ModeOfEducationPartTime"/>
+    <field name="modeOfEducationDistance" type="string" column="ModeOfEducationDistance"/>
+    <field name="userFundsOwn" type="string" column="UserFundsOwn"/>
+    <field name="userFundsBank" type="string" column="UserFundsBank"/>
+    <field name="userFundsNone" type="string" column="UserFundsNone"/>
+    <field name="budget" type="integer" column="program_budget" nullable="true"/>
+    <field name="timeOfStart" type="datetime" column="TimeOfStart"/>
+    <field name="prefYear" type="integer" column="prefYear"/>
+    <field name="userDetail" type="string" column="UserDetail" length="500"/>
+    <field name="sourceInfo" type="string" column="SourceInfo" length="200"/>
+    <field name="submitDate" type="datetime" column="SubmitDate"/>
+    <field name="status" type="string" column="Status"/>
+    <field name="desiredCourse" type="integer" column="DesiredCourse"/>
+    <field name="abroadSpecialization" type="integer" column="abroad_subcat_id"/>
+    <field name="extraFlag" type="string" column="ExtraFlag"/>
+    <field name="educationLevel" type="string" column="educationLevel"/>
+    <field name="suitableCallPref" type="string" column="suitableCallPref"/>
+    <field name="otherFundingDetails" type="string" column="otherFundingDetails" length="256"/>
+    <field name="isProcessed" type="string" column="is_processed"/>
+    <field name="flow" type="string" column="flow"/>
+    <field name="contactByConsultant" type="string" column="contactByConsultant" length="10"/>
+    <one-to-many target-entity="user\Entities\UserSpecializationPref" field="specializationPreferences" mapped-by="preference">
+        <cascade>
+          <cascade-persist/>
+      </cascade>
+    </one-to-many>      
+    <one-to-many target-entity="user\Entities\UserTestPrepSpecializationPref" field="testPrepSpecializationPreferences" mapped-by="preference">
+        <cascade>
+          <cascade-persist/>
+      </cascade>
+    </one-to-many>          
+    <one-to-many target-entity="user\Entities\UserLocationPref" field="locationPreferences" mapped-by="preference">
+        <cascade>
+          <cascade-persist/>
+      </cascade>
+    </one-to-many>  
+    <many-to-one target-entity="user\Entities\User" field="user" inversed-by="preferences">
+          <join-column name="UserId" referenced-column-name="userid" />
+    </many-to-one>
+    <lifecycle-callbacks/>
+  </entity>
+</doctrine-mapping>

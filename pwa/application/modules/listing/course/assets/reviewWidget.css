@@ -1,0 +1,258 @@
+.group-card.gap.pad-off {
+    border-bottom: 1px solid #ccc;
+    margin: 0 0 12px 0
+}
+
+.group-card.gap.pad-off.last-child {
+    border-bottom: none;
+    margin-bottom: 0
+}
+
+.rvwv1Heading {
+    padding: 0 0 10px 0;
+    font-size: 0.875rem;
+    font-weight: 600
+}
+
+.new_rating {
+    display: inline-block;
+    position: relative;
+    width: 100%
+}
+
+.new_rating span.rating-block {
+    margin-right: 6px;
+    display: inline-block;
+    width: auto;
+    font-weight: 600;
+    color: #000
+}
+
+.starBg {
+    background: url(//images.shiksha.ws/public/images/ratingicon.svg) no-repeat;
+    background-position: 0 -10px;
+    width: 65px;
+    height: 10px;
+    display: inline-block;
+    background-size: 65px 20px
+}
+
+i.empty_stars {
+    position: relative;
+    top: -1px
+}
+
+i.full_starts {
+    background-position: 0 0;
+    width: 50%;
+    position: absolute;
+    left: 0px;
+}
+
+.byUser {
+    font-size: 0.75rem;
+    color: #666;
+    font-weight: 400;
+    line-height: 1.125rem;
+    margin-top: 3px
+}
+
+.byUser span {
+    font-weight: 600;
+    color: #000
+}
+
+.tabv1 {
+    border-bottom: 1px solid #e5e5e5;
+    position: relative;
+    border-top: 1px solid #e5e5e5;
+    display: table;
+    width: 100%
+}
+
+.tabv1>div {
+    color: #000;
+    font-size: 0.875rem;
+    display: table-cell;
+    padding: 10px 0 10px 16px
+}
+
+.tabcontentv1 {
+    padding: 0 0 12px 0;
+    font-weight: 400
+}
+
+.tabcontentv1 p {
+    font-size: 0.875rem;
+    color: #000;
+    line-height: 1.3125rem;
+    margin: 4px 0px 6px;
+}
+
+.readMoreLnk {
+    color: #008489;
+    display: inline-block;
+    text-align: left
+}
+
+.maxRating {
+    color: #999
+}
+
+.ratingVal {
+    font-size: 1rem;
+}
+
+.bold_arw {
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #000;
+    position: relative;
+    bottom: 4px;
+    left: 0;
+    transition: .2s all;
+    display: inline-block
+}
+
+span.rating-block.revsarw .bold_arw {
+    transform: rotate(179deg);
+    -webkit-transform: rotate(179deg);
+    -moz-transform: rotate(179deg)
+}
+
+.rateHead {
+    font-weight: 600
+}
+
+.rating_popup {
+    z-index: 1;
+    width: 295px;
+    position: absolute;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.16),0 0 0 1px rgba(0,0,0,.08);
+    background-color: #ffffff;
+    border-radius: 2px;
+    display: none;
+    top: 30px
+}
+
+.rating_popup:before {
+    position: absolute;
+    content: '';
+    -webkit-transform: rotate(46deg);
+    -ms-transform: rotate(46deg);
+    transform: rotate(46deg);
+    width: 12px;
+    height: 12px;
+    box-shadow: -1px -1px 0 0 #e6e5e5;
+    background: #fff;
+    top: -6px;
+    left: 93px;
+    margin: 0 0 0 -.25em
+}
+
+.inline-rating {
+    display: block;
+    box-shadow: 0 0 1px rgba(37,37,37,.28);
+    padding: 5px 10px
+}
+
+.table_row {
+    display: table;
+    width: 100%;
+    font-size: 0
+}
+
+.table_row .table_cell:first-child {
+    width: 71%;
+    padding-right: 0;
+    text-align: left
+}
+
+.table_row>div.table_cell {
+    display: table-cell;
+    width: 30%;
+    padding: 0;
+    position: relative;
+    vertical-align: middle;
+    text-align: right
+}
+
+.art-crd p.rating_label,.rating_label {
+    font-size: 0.765rem;
+    color: #666;
+    line-height: 26px;
+    font-weight: 400
+}
+
+.bar_value {
+    font-size: 0.75rem;
+    color: #000;
+    font-weight: 600;
+    position: relative;
+    margin-left: 7px;
+    top: 2px;
+    min-width: 17px;
+    display: inline-block
+}
+
+.loadbar {
+    width: 50px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #e1e1e1;
+    margin: 0;
+    position: relative;
+    display: inline-block
+}
+
+.fillBar {
+    height: 4px;
+    background: #ef8f2f;
+    width: 88%;
+    display: block
+}
+
+.new-title {
+    font-size: 20px;
+    color: #000;
+    font-weight: 600
+}
+
+.ratingAll {
+    font-size: 1rem;
+    margin-bottom: 0px;
+}
+
+.ratingAll span {
+    font-size: 0.875rem;
+    color: #999;
+    font-weight: 400
+}
+.icon-verified-tag{
+    display: inline-block;
+    height: 14px;
+    width: 14px;
+    margin: 0 3px 0 0;
+    position: relative;
+    top: 3px;
+}
+.lazyLoad .icon-verified-tag{
+    background : transparent url('/pwa/public/images/verified-icon.svg') no-repeat 0 0;
+}
+.byUser span.verified-tag,span.verified-tag {
+    font-size: .75rem;
+    font-weight: 600;
+    color: #3f9c1e;
+    margin: 0px 5px 0px 0px;
+}
+
+
+.button-container.rvws--wrap, .ilp .button-container.rvws--wrap{display: flex;justify-content: center;align-items: center;padding: 0 10px;margin: 10px -12px 0px;}
+.button-container.rvws--wrap .button:nth-child(2){margin-left: 8px;}
+
+@media only screen and (min-width: 320px) and (max-width: 350px){
+    .button-container.rvws--wrap .button{padding: 0 2px;}
+    .button-container.rvws--wrap .button:nth-child(2){margin-left: 4px;}
+}

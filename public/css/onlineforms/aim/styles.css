@@ -1,0 +1,51 @@
+.formPreviewMain {font-size:14px; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif !important}
+.previewHeader{display:block; margin-bottom:12px; border-bottom:1px solid #000000;}
+.instLogoBox{text-align:center; padding-bottom:3px}
+.previewTetx{font-size:22px; color:red; margin-bottom:20px; clear:both;}
+.previewContentWrapper, .previewBody{width:890px; margin:0 auto;}
+.formTitleBlock{float:left; border-bottom:5px solid #b1b4b6; font-size:25px; font-weight:normal; padding:4px 0 1px 0}
+.courseNameDetails{text-align:center; font-size:20px; color:#000000; font-weight:normal; line-height:27px; font-family: Arial, Helvetica, sans-serif !important}
+.courseNameDetails p{text-decoration:underline}
+.courseNameDetails strong{color:#333333; font-weight:normal; text-decoration:none}
+.srNumBox{float:right; font-size:18px; border:1px solid #858585; margin-bottom:5px}
+.srNumBox span, .srNumBox p{padding:5px 30px 5px 10px; float:left; border-right:1px solid #000000}
+.srNumBox p{border:0 none; padding-right:0; width:200px}
+.formInstruction{float:left; width:655px; font-size:14px; background-color:#e2e3e4; padding:10px 15px; height:198px}
+.formInstruction h4{font-size:12px; font-weight:bold; margin-bottom:5px}
+.formInstruction ul li{list-style:none; margin-bottom:4px; display:block; float:left}
+.advanceProgg{text-align:center; padding-bottom:8px}
+.formInstruction ul li div.lebelTetx{width:560px; float:left; padding-top:2px;}
+.formInstruction ul li div.tickBox{width:37px; height:15px; border:1px solid #000000; float:right; padding:1px 2px 4px; text-align:center; overflow:hidden}
+.picBox{width:197px; float:right; background-color:#e2e3e4; height:218px}
+.picBox img{border:1px solid #cacaca; width:195px}
+.picBox p{text-align:center; padding-top:80px; font-size:12px}
+.formPreviewMain h5{font-size:14px !important; margin-bottom:0px !important; display:block !important; clear:left !important; float:left !important; width:100% !important; font-weight:normal !important}
+.formPreviewMain h5 strong{width:25px; float:left; font-weight:normal}
+.formPreviewMain h5 span{text-transform:none;}
+.formRows{display:block; margin-bottom:2px; float:left; width:100%;}
+.formChildRows{width:865px; float:right;}
+.formRows ul li{padding-bottom:10px; float:left; width:100%; display:block}
+.formRows ul li label{float:left; padding-right:5px; font-weight:normal;}
+.previewFieldBox, .previewFieldBox2{float:left; width:853px;}
+.previewFieldBox2 span{border-bottom:1px dotted #000000; display:block;}
+.enrollmentPreviewField{float:left; width:308px;}
+.previewFieldBox span, .enrollmentPreviewField span{display:block; border-bottom:solid 1px #000000;}
+.formColumns2{float:left}
+.datePlaceCol{float:left;}
+.datePlaceCol label{width:40px; float:left}
+.examinationDetailsCol{float:left; width:450px;}
+.enrollmentCol{float:right; width:400px;}
+.boxTable{border: 1px solid #000000; border-collapse: collapse;}
+.boxTable tr td{height: 32px; width:32px; padding-bottom: 0; padding-top: 0;  text-align: center;}
+.programPreferenceBox{Width:200px; float:left; padding-left:40px}
+.programPreferenceBox label{font-weight:normal !important}
+.flRt{float:right}
+.checkBox{width:15px; height:13px; padding:5px 0 0 3px; border:1px solid #000000; float:left; margin-right:10px}
+.adRows{width:700px;; float:left}
+.boxTable{border: 1px solid #000000; border-collapse: collapse;}
+.boxTable tr td{height:21px; width:22px; padding:0; margin:0; text-align: center;}
+.educationTable{border: 1px solid #000000; border-collapse: collapse;}
+.educationTable tr th{text-align:center; font-weight:normal}
+.AIMstudentsNote{font-size:13px; line-height:18px}
+.AIMstudentsNote div.left{width:50px; float:left}
+.AIMstudentsNote div.right{width:830px; float:left;}

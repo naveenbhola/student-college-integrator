@@ -1,0 +1,38 @@
+<div class="profile_title" *ngIf="tableHeading">
+      <div class="col-md-11">
+        <h2>{{tableHeading}}</h2>
+      </div>
+      <div *ngIf="showCrossPosition != 1 || totalLength > 1" class="col-md-1" (click)="removeTable()"><a href="javascript:void(0);">X</a></div>
+</div>
+<div>
+    <table *ngIf="initialized" id="datatable-fixed-header" class="table table-striped table-bordered dataTable no-footer" role="grid">
+      <thead>
+          <tr role="row">
+            <th style="width: 145px;text-align:center"></th>
+            <th style="width: 145px;text-align:center" *ngFor="let item of colsToShow">{{item.label}}</th>
+            <th style="width: 150px;text-align:center" *ngIf="_addmore.length>0">
+              <select  (change)="addColumn($event.target.value)"  class="select2_single form-control">  
+                  <option value="">Add More</option>
+                  <option *ngFor="let item of _addmore" value="{{item.value}}">{{item.label}}</option>
+              </select>
+            </th>
+          </tr>
+        </thead>
+      
+        <tbody>
+          <template ngFor let-group [ngForOf]="array.controls" let-i="index">
+              <tr class="odd" [formGroup]="array.controls[i]">
+                  <td>{{typeToNameMapping[group.value.type]}}</td>
+                  <!-- {{group.controls[item.value]?.errors}} -->
+                  <td *ngFor="let item of colsToShow"> 
+                    <input *ngIf="arrayKeyName == 'course12thCutOff'" type="text" [formControlName]="item.value"/>
+                    <input *ngIf="arrayKeyName != 'course12thCutOff'" type="number" [formControlName]="item.value"/>
+                    <span class="help-block text-danger" *ngIf="group.controls[item.value]?.errors?.msg">{{group.controls[item.value]?.errors?.msg}}</span>
+                    <span class="help-block text-danger" *ngIf="group.controls[item.value]?.errors?.number">{{group.controls[item.value]?.errors?.number}}</span>
+                  </td>
+              </tr>
+          </template>
+          
+        </tbody>
+    </table>
+</div>

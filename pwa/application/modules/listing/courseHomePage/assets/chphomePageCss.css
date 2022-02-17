@@ -1,0 +1,37 @@
+/*CHP Page level CSS*/
+.chp .dnld-btn {text-align: center; width: 100%;margin-bottom: 10px;}
+.chp a.btnYellow, .chp .btnYellow {font-weight: 600;font-size: .875rem;color: #fff;background-color: #F37921;cursor: pointer;height:36px;line-height: 34px;border: 0;text-decoration: none;text-align: center;border-radius: 2px;-webkit-appearance: none;display: inline-block;-webkit-tap-highlight-color: transparent;padding: 0;border: 1px solid #F37921;min-width:175px;}
+a.btnYellow:hover{background: #db6d1d;}
+.chp .trnBtn{border: 1px solid #008489;color: #008489;font-size: 0.875rem;font-weight: 600;padding: 0px 10px;text-align: center;cursor: pointer;background: #fff;text-decoration: none;display: inline-block;line-height: 34px;-webkit-tap-highlight-color: transparent;height: 36px;border-radius: 2px;position: relative;}
+.chp .trnBtn:hover{background: #f0f6ff;}
+.chp .btnYellow.ebDisabled{color:  #999;background: #e2e2e2;cursor:  default;border: 1px solid #e2e2e2;pointer-events: none;}
+.chp .gradient-col {display: block;text-align: center;height: 95px;position: absolute;width: 100%;left: 0;bottom: 0;background: linear-gradient(to bottom,rgba(255,255,255,0) -25%,rgba(255,255,255,.09) 16%,rgba(255,255,255,1) 44%,rgba(255,255,255,1) 18%,rgba(255,255,255,1) -1%,rgba(255,255,255,1) 58%,rgba(255,255,255,1) 100%);background: -webkit-linear-gradient(to bottom,rgba(255,255,255,0) -25%,rgba(255,255,255,.09) 16%,rgba(255,255,255,1) 44%,rgba(255,255,255,1) 18%,rgba(255,255,255,1) -1%,rgba(255,255,255,1) 58%,rgba(255,255,255,1) 100%);background: -moz-linear-gradient(to bottom,rgba(255,255,255,0) -25%,rgba(255,255,255,.09) 16%,rgba(255,255,255,1) 44%,rgba(255,255,255,1) 18%,rgba(255,255,255,1) -1%,rgba(255,255,255,1) 58%,rgba(255,255,255,1) 100%);z-index: 10;}
+.chp .gradient-col>.gradVw-mr {margin-top: 46px;}
+.chp .fltlft {float: left;}
+.chp .fltryt {float: right;}
+.chp .clearfix:after{content: "";display: table;clear: both;}
+.chp h2.tbSec2 span {font-size: .75rem; font-weight: 400;}
+/*END CSS here*/
+
+/*ctp widget css*/
+.chp .ctpSrp-contnr{margin-top: 10px;}
+
+/*article widget css*/
+.artcl-List + .ana-div,.qst-txtar + ._padaround{text-align: center;padding-top: 10px;}
+.read-more-wrap{font-size: 0.875rem;line-height: 1.3125rem;}
+ul.artcl-List li strong{font-size: 0.875rem;line-height: 1.3125rem;}
+
+/*l2menu*/
+.pwa_l2menu .nav-tabs {box-shadow: 0 0 2px 0 rgba(0,0,0,.12), 0 2px 2px 0 rgba(0,0,0,.24);}
+.pwa_l2menu .expnd-circle{display: none}
+.pwa_l2menu ul.l2Menu-list li{display: inline-block;border-bottom: none;}
+.pwa_l2menu ul.l2Menu-list li a{text-decoration: none;padding: 15px 10px 10px 10px;}
+.pwa_l2menu .chp-navList{width: 1170px;margin:0 auto;}
+.pwa_l2menu ul.l2Menu-list.collapse li{display: inline-block;}
+.pwa_l2menu ul.l2Menu-list.collapse li.active{display: inline-block;}
+.pwa_l2menu ul.l2Menu-list li:nth-child(1) a:first-child {padding-left: 0px;}
+/*l2 end*/
+
+/*disabled css*/
+.ctp-SrpBtnDiv a.ctpBro-btn.ebDisabled{pointer-events: none;color: #666;background: #d6d7d7;cursor: default;border: 1px solid #d6d7d7;}
+    

@@ -1,0 +1,58 @@
+.formPreviewMain {font-size:14px; font-family:Arial, Helvetica, sans-serif !important}
+.formRows{padding:20px 0 0 20px;}
+.formRows2{margin-bottom:5px}
+.examCenterRows{clear:left; padding:0 0 0 63px}
+.examCenterRows div.centerCols{float:left; padding-right:90px}
+.previewHeader,.previewBody{width:100%; float:left; display:block; margin-bottom:20px; border-bottom:1px dotted #000000; padding-bottom:5px}
+.previewBody{margin-bottom: 0!important; border-bottom: none !important}
+.instLogoBox{width:200px; float:left; padding:28px 0 20px}
+.instLogoBox img{border:1px solid #000000}
+.previewTetx{font-size:22px; color:red; margin-bottom:20px; clear:both}
+.courseNameDetails{margin-top:8px; float:left; width:730px; float:right;}
+.srNumBox{float:right; font-size:18px; border:1px solid #000000;}
+.srNumBox span, .srNumBox p{padding:5px 30px 5px 10px; float:left; border-right:1px solid #000000}
+.srNumBox p{border:0 none; padding-right:0; width:200px}
+.courseNameBox{font-size:22px; color:#000000; font-weight:bold; text-transform:uppercase; float:left; width:100%; text-align:right; margin-top:18px}
+.courseNameBox p{margin-bottom:10px}
+.courseNameBox p.formTitle{font-size:19px}
+.formInstruction{ float:left; width:730px; font-size:14px;}
+.formInstruction h4{font-size:14px; font-weight:bold; margin-bottom:12px; display:block}
+.formInstruction ul li{list-style-type:decimal !important; margin-left:25px; margin-bottom:5px}
+.picBox{width:197px; float:right;}
+.picBox img{border:1px solid #cacaca; width:195px}
+.formPreviewMain h5, .formPreviewMain h3{font-size:16px !important; margin-bottom:15px !important; display:block !important; text-transform:uppercase !important; clear:left !important; float:left !important; width:100% !important;}
+.formPreviewMain h3{text-transform:none; font-family:Arial, Helvetica, sans-serif !important; margin:0 !important; padding:0 !important; font-weight:700 !important; padding:0 !important; border:none !important; text-transform:none !important}
+.formPreviewMain h5 strong, .formPreviewMain h3 strong{width:60px; float:left;}
+.formPreviewMain h5 span{font-weight:normal; text-transform:none;}
+.formRows ul li{margin-bottom:25px; float:left; width:100%; font-size:14px}
+.formRows ul li.nameRows div{width:254px;}
+.formRows ul li.nameRows div strong{font-size:14px; margin-top:5px; float:left; width:100%; text-align:left; display:block}
+.formRows ul li.addressRows, .formRows ul li.draftDetails{}
+.formRows ul li.addressRows .addressCols{width:345px; float:left;}
+.formRows ul li.contactRows div.contactColumns{width:462px; float:left;}
+.formRows ul li.draftDetails div.leftCol{width:330px; float:left;}
+.formRows ul li.draftDetails div.leftCol strong{width:60px; float:left; font-weight:normal}
+.formRows ul li.draftDetails div.leftCol label{width:180px !important; float:left; font-weight:normal !important}
+.attempt{float:left; width:60%; font-weight:bold}
+.eduPassedDetails, .eduPassedDetails2, .eduPassedDetailsLast{float:left; width:172px; text-align:center; font-weight:normal; border-right:1px solid #000000; padding:6px; height:32px}
+.studentNote{}
+.studentNote ul li{list-style:disc !important; margin-left:25px; margin-bottom:5px; float:none !important; width:auto !important}
+
+.eduPassedDetailsLast{width:92px; border:none}
+.formRows ul li label{float:left; padding-right:5px; font-weight:bold; font-size:14px}
+.car-reg-section{border:1px solid #000000; padding:12px 8px; font-weight:bold; overflow:hidden}
+.car-reg-section p{float:left}
+.car-reg-section span{border-bottom:solid 1px #4f4f4f; padding-bottom:3px; width:400px; display:inline-table; float:left; margin-left:8px}
+.previewFieldBox,.previewFieldBoxRt{float:left; width:390px; font-size:14px}
+.previewFieldBoxRt{width:100%}
+.previewFieldBox span, .previewSmallFieldBox span, .previewFieldBoxRt span{display:block; border-bottom:solid 1px #4f4f4f; padding-bottom:3px}
+.previewFieldBox span, .previewSmallFieldBox span, .previewFieldBoxRt span{display:block; border-bottom:solid 1px #4f4f4f; padding-bottom:3px;}
+.educationTable{border-collapse:collapse; border:1px solid #000000}
+.educationTable thead tr td{padding:5px; font-size:14px; font-weight:bold; background-color:#f1f1f1; text-align:center; color:#333}
+.educationTable tr td{font-size:14px; font-weight:normal; background-color:#fff;}
+.educationTable tr td.highlighted{background-color:#e0e0e0; font-weight:bold}
+.educationTable2{}
+.educationTable2 tr td{height:30px; font-size:14px}
+.flRt{float:right}
+.flLt{float:left}
+.breakHere{page-break-before:always}

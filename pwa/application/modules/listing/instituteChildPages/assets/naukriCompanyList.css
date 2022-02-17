@@ -1,0 +1,79 @@
+.organizer_list, .flex-charts{display: flex;flex-direction: row;justify-content: space-between;align-items: center;border-bottom: 1px solid #d2d2d2;margin-bottom: 18px;padding-bottom: 18px;}
+.flex-charts{border: none;margin: 10px 0px;}
+.organizer_list:last-child{border-bottom: none;padding: 0px;margin: 0px;}
+.organzr_titl{font-size: 0.75rem;color: #000;margin-bottom: 10px;}
+.organizer_logo{width: 100px;height: 75px;overflow: hidden;display: inline-flex;align-items: center;justify-content: center;}
+.organizer_logo img{max-width: 100%;max-height: 100%;}
+.organizer_name{font-size: 0.75rem;color: #000;margin-bottom: 5px;}
+.organizer_dtls {width: 62%;}
+.avg_package{font-size: 0.875rem;color: #000;font-weight: 600;}
+.avg_package span{ color: #ccc;display: inline-block;}
+.packagebar{border-radius: 1px;height: 4px;background: #CDCFD2;margin: 5px 0px;}
+.avg_packagebar{background-color: #17AFB8;width: 80%;height: 4px;border-radius: 1px;-webkit-transition: 0.5s all ease-in;-moz-transition: 0.5s all ease-in;transition: 0.5s all ease-in;}
+.salry_rslts{margin-top: 5px;}
+#view_all_company{
+      color: #008489;
+      display: block;
+      text-align: center;
+}
+.salary_stats_desk #view_all_company:after{
+      transform: rotate(45deg);
+}
+.naukri-logo-txt{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 0.6875rem;
+    color: #666;
+}
+.naukri-logo-txt .naukri-img {
+    background-position: -266px -94px;
+    width: 101px;
+    height: 20px;
+    display: block;
+    top: -10px;
+    position: relative;
+}
+#naukri_alumini{background-color: #fff;}
+.salry_dtlsblock ._padaround{padding: 12px 0px;}
+.organizer_list:nth-child(1){margin-top: 10px;}
+@media only screen and (min-width: 1024px){
+      .salary_stats_desk{display: flex;flex-flow: row wrap;justify-content: space-between;margin: 0 -16px;border-top: 1px solid #d0d1d1;}
+      #view_all_company{width: 100%;    text-align: center;
+    padding: 15px 0px;
+    position: relative;
+    border-top: 1px solid #d0d1d1;
+    top: -1px;cursor: pointer;}
+      .organizer_list {
+          width: 50%;
+          border-right: 1px solid #d0d1d1;
+          margin-bottom: 0px;
+          padding: 18px;
+      }
+      .organizer_list:nth-child(2n+2) {border-right: 0px;}
+      .organizer_list:last-child{border-bottom: 1px solid #d2d2d2;padding: 10px;}
+      .organizer_list:last-child{border-bottom: 1px solid #d2d2d2;padding: 10px;}
+      .pwa_pagecontent  .naukri_alumini ._subcontainer{padding-bottom: 0px;} 
+      .salary_graph{margin-bottom: 10px;}
+      .organizer_dtls{width: calc(100% - 118px);width: -moz-calc(100% - 118px);width: -webkit-calc(100% - 118px);}
+      .report_txt{margin: 4px 0px 10px;}
+      .naukri-logo-txt{right: 16px;top: 7px;}
+      .naukri-logo-txt .naukri-img{display: inline-block;top: 3px;}
+      .organizer_list:nth-child(1){margin-top: 0px;}
+}
+
+.report_txt{font-size: 0.875rem;line-height: 1.3125rem;margin: 4px 0px 10px;padding: 0;}
+
+
+.organizer_list:nth-child(1) .avg_packagebar {
+    background: #00505d;
+}
+.organizer_list:nth-child(2) .avg_packagebar {
+    background: #006e7f;
+}.organizer_list:nth-child(3) .avg_packagebar {
+    background: #008296;
+}.organizer_list:nth-child(4) .avg_packagebar {
+    background: #0094aa;
+}.organizer_list:nth-child(5) .avg_packagebar {
+    background: #07afb9;
+}

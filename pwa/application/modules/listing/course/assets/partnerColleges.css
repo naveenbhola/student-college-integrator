@@ -1,0 +1,13 @@
+.partnerCollegeBnr ._container ._subcontainer{padding: 0;}
+._container{position: relative; font-size: 0.875rem;color: #000;}
+/*._container h3{font-size: 0.875rem;}*/
+ul.prtnr-list{width: 100%;}
+ul.prtnr-list li{width: 100%;list-style: none; font-size: 0.75rem; color: #666;border-bottom: 1px solid #eee; padding: 12px;}
+ul.prtnr-list li:last-child { border: none}
+ul.prtnr-list li a{font-size: 0.875rem; color: #008489; text-decoration: none;margin-bottom:1px; font-weight: 600; display: block}
+h2.tbSec2 span{font-size: 0.75rem;font-weight: 400;}
+.clp section {
+  margin-bottom: 12px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+  background: #fff;
+}

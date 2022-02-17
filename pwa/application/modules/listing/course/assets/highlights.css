@@ -1,0 +1,30 @@
+.nrml-list {
+    margin: 0px 0 10px 20px;
+}
+.nrml-list li {
+    margin-bottom: 6px;
+    font-size: 0.875rem;
+    color: #000;
+    list-style: disc;
+    word-break: break-word;
+    word-wrap: break-word;
+}
+.nrml-list-cntnr {
+    margin-left: 20px;
+}
+/*.nrml-link {
+    font-size: 0.875rem;
+    color: #008489;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+}*/
+.hide{display: none}
+
+ul.nrml-list li.read-more-target{display:none;}
+.hilightBnr .read-more-state:checked ~ .read-more-wrap .read-more-target {display: list-item;}
+.read-more-state:checked ~ .read-more-trigger{display: none}
+.hilightBnr .nrml-list li{margin-bottom: 10px;}
+.hilightBnr .nrml-list li a {
+    display: inline;
+}

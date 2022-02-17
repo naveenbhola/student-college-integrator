@@ -1,0 +1,7 @@
+/* Print CSS */
+@charset "utf-8";
+body{font-size: 10pt; color: black; font-family: Arial; background-color:white; width:100%; height:100%; overflow:visible}
+#wrapperMainForCompleteShiksha .topBar, .shikshaAppsHeader,#breadcrumb,#footerText, #headerGradienthome,#header,#loginCommunication, .jser,#enableCookieMsg,.print, .entHeader,.tabBorder, .homeShik_footerBg, .buttonWrapper, .shikshaAppsHeader{display:none}
+#shikshaAppsHeaderPrint{display:block !important}
+#appsFormInnerWrapper{border:1px solid #000000}
+.breakHere{page-break-before:always}

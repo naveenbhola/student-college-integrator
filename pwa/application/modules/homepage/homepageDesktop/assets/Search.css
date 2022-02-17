@@ -1,0 +1,91 @@
+.pwadesktop-search {
+    height: 446px;
+}
+
+.pwadesktop-srchbox {
+    cursor: pointer;
+    padding: 10px 10px 11px 15px;
+    line-height: 23px;
+    background: #fff;
+    color: #666;
+    border-radius: 2px;
+    position: relative;
+    font-size: 14px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.2),0 0 1px 0 rgba(0,0,0,.81)
+}
+
+[type=reset],[type=submit],button,html [type=button] {
+    -webkit-appearance: button;
+}
+
+.srchBtnv1 {
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    right: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    top: 0;
+    color: #fff;
+    height: 44px;
+    border-top-right-radius: 2px;
+    background: #f37921;
+    outline: 0;
+    width: 110px;
+    border-bottom-right-radius: 2px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,.3)
+}
+.placeon-center {
+    width: 680px;
+    margin: 0 auto;
+    position: absolute;
+    top: 180px;
+    left: 0;
+    right: 0
+}
+
+.placeon-center a {
+    text-decoration: none
+}
+
+.search-mainBox {
+    padding: 10px 8px 8px;
+    background: rgba(0, 0, 0, .7);
+    color: #fff;
+    border-radius: 6px
+}
+
+.search-heading {
+    text-align: center;
+    font-size: 18px
+}
+
+ul.search-itemsList {
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+ul.search-itemsList li {
+    display: inline-block;
+    padding: 5px 10px 6px;
+    position: relative
+}
+
+ul.search-itemsList li:before {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #fff;
+    left: -3px;
+    position: absolute;
+    top: 15px;
+    opacity: .7
+}
+
+ul.search-itemsList li:first-child:before {
+    content: none
+}

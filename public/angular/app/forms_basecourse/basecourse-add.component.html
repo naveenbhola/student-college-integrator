@@ -1,0 +1,101 @@
+<div class="clearfix"></div>
+<div class="row">
+    <div mysize="12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Basecourse</h2>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <br />
+                <form  [formGroup]="basecourseForm" class="form-horizontal form-label-left" (submit)="submitBasecourse()">
+                <div class="form-group">
+                    <label mysize="3">Name <span class="required">*</span></label>
+                    <div mysize="6">
+                        <input type="text" [value]="basecourseData?.name" formControlName="basecourseName" required="required" mysize="7">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label mysize="3">Alias</label>
+                    <div mysize="6">
+                        <input type="text" [value]="basecourseData?.alias" formControlName="basecourseAlias" mysize="7">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label mysize="3">Synonym</label>
+                    <div mysize="6">
+                        <input type="text" [value]="basecourseData?.synonym" formControlName="basecourseSynonym" mysize="7">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label mysize="3">Course Level <span class="required">*</span></label>
+                    <div mysize="6">
+                        <select formControlName="basecourseLevel">
+                            <option value=''>Choose Option</option>
+                            <option *ngFor="let courseLevel of courseLevels" value={{courseLevel?.level_id}}>{{courseLevel?.level_name}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label mysize="3">Course Credential 1 <span class="required">*</span></label>
+                    <!-- <mymultiselect size="6" formControlName="basecourseCredential"  [data]="courseCredentials" [defaultPlaceholder]="'Choose Credential'" [itemKey]="'credential'"></mymultiselect> -->
+                    <div mysize="6">
+                        <select formControlName="basecourseCredential1">
+                            <option value=''>Choose Option</option>
+                            <option *ngFor="let courseCredential of courseCredentials" value={{courseCredential?.value}}>{{courseCredential?.label}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label mysize="3">Course Credential 2</label>
+                    <!-- <mymultiselect size="6" formControlName="basecourseCredential"  [data]="courseCredentials" [defaultPlaceholder]="'Choose Credential'" [itemKey]="'credential'"></mymultiselect> -->
+                    <div mysize="6">
+                        <select formControlName="basecourseCredential2">
+                            <option value='0'>Choose Option</option>
+                            <option *ngFor="let courseCredential of courseCredentials" value={{courseCredential?.value}}>{{courseCredential?.label}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label mysize="3">Is this a popular course?</label>
+                    <div mysize="6">
+                        <select formControlName="basecourseIsPopular">
+                            <option value='0'>No</option>
+                            <option value='1'>Yes</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label mysize="3">Is this a hyper local course?</label>
+                    <div mysize="6">
+                        <select formControlName="basecourseIsHyperlocal">
+                            <option value='0'>No</option>
+                            <option value='1'>Yes</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label mysize="3">Is this an executive course?</label>
+                    <div mysize="6">
+                        <select formControlName="basecourseIsExecutive">
+                            <option value='0'>No</option>
+                            <option value='1'>Yes</option>
+                        </select>
+                    </div>
+                </div>
+                <fieldset *ngIf="hierarchyTree">
+                    <legend>Map to Hierarchies</legend>
+                    <hierarchyFormGroup [hierarchyTree]="hierarchyTree" [hierarchyArray]="hierarchyArray" [hierarchyMapping]="hierarchyMapping" [mode]="mode" [selectedHierarchies]="selectedHierarchies"></hierarchyFormGroup>
+                </fieldset>
+                <div class="ln_solid"></div>
+                <div class="form-group">
+                    <div mysize="6" myclassoffset="3">
+                        <button type="button" (click) = "backToHome()" class="btn btn-primary">Cancel</button>
+                        <button type="submit" [disabled]="!basecourseForm.valid || formSubmit" class="btn btn-success">Submit</button>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

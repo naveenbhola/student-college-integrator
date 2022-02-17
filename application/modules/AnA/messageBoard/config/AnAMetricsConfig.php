@@ -1,0 +1,2 @@
+<?php 
+$config['internalUserEmailIds'] = array('sunitagoyal@mailinator.com', 'namrita22@mailinator.com', 'mehrotra.neha09@gmail.com', 'durpesh@mailinator.com', 'Vedant@mailinator.com', 'rashmita@mailinator.com', 'prateeks.shiksha@gmail.com', 'saransh@mailinator.com', 'monali@mailinator.com', 'sonalika@mailinator.com', 'monisha.shiksha@gmail.com', 'mini@mailinator.com', 'sweet.swameeka@gmail.com', 'podswati@gmail.com', 'smeeka1983@gmail.com', 'dahlia83@rediffmail.com', 'artha@mailinator.com', 'sumit@mailinator.com', 'megha.shiksha@gmail.com', 'meera@mailinator.com');

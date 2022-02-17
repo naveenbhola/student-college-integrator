@@ -1,0 +1,111 @@
+<style>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+#parent_mapping_form *{font-family: "Open Sans"}
+</style>
+ <div id = "Aa" style="position:absolute;top:0;left:0;width:100%;height:100%;color:black;opacity:0.7">
+    &nbsp;
+    </div>
+<div class="row" id="parent_mapping_form">
+    <div [mysize]="'12'">
+        <div class="x_panel">
+            <div [class.x_title]="opened">                    
+                <h2>Search</h2>                    
+                <div class="clearfix"></div>
+            </div>
+            
+                <div class="x_content" [hidden]="!opened">
+                    <div class="form-group row">
+                        <div [mysize]="'12'" class="control-label">
+                                            <a (click)="openDummyInstitute('false')" class="btn cmsButton" role="button">Add New {{postingListingType}}</a>
+                                            <a (click)="openDummyInstitute('true')" class="btn cmsButton" role="button">Add Dummy {{postingListingType}}</a>
+                        </div>
+                        </div>
+                          <div class="form-group row form-control-X">
+                              <label [mysize]="'2'">Search By:</label>
+                                  <div [mysize]="'10'">
+                                    <div [mysize]="'12'">
+                                    <div *ngIf="postingListingType == 'Institute'">
+                                    <div [mysize]="'5'">
+                                        <label [mysize]="'4'" class="cmsFont">Institute ID</label>
+                                        <div [mysize]="'8'">
+                                            <div class="input-group">
+                                                <input [(ngModel)] = "instituteId" type="number" name="name" min="1" class="col-md-2" (keyup.enter)="instituteListFilters('','instituteId')">
+                                                <span class="input-group-btn">
+                                                      <button type="button" [disabled]="!instituteId" (click)="instituteListFilters('','instituteId')" class="btn cmsButton-go">Go!</button>
+                                                 </span>
+                                             </div>
+                                             </div>
+                                        </div>
+                                         <label [mysize]="'2'"> OR </label>
+                                    </div>
+                                    <div [mysize]="'5'">
+                                         <label [mysize]="'4'" class="cmsFont">University ID</label>
+                                                <div [mysize]="'8'">
+                                                    <div class="input-group">
+                                                        <input [(ngModel)] ="universityId" type="number" min="1" name="name" class="col-md-2" (keyup.enter)="instituteListFilters('','universityId')">
+                                                         <span class="input-group-btn">
+                                                      <button type="button" [disabled]="!universityId" (click)="instituteListFilters('','universityId')" class="btn cmsButton-go">Go!</button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                          <label [mysize]="'10'" style="text-align:center"> OR </label>
+                                 <div [mysize]="'12'">
+                                     <label [mysize]="'1'" class="cmsFont">Name</label>
+                                            <div [mysize]="'11'" style="padding-left: 47px;">
+                                                <ng-select [allowClear]="true"
+                                                    [items]="instituteAutoSuggestorItems"
+                                                    [allowOpenSearch] = "true"
+                                                    [infiniteScroll] = "false"
+                                                    [disabled]="disabled"
+                                                    (data)="refreshValue($event)"
+                                                    (selected)="selected($event)"
+                                                    (removed)="removed($event)"
+                                                    (typed)="typed($event)"
+                                                    placeholder="Search by name">
+                                                 </ng-select>
+                                            </div>
+                                 </div>
+                                        </div>
+                                    </div>
+                            </div>
+                           <div class="form-group row form-control-X" style="padding-top:10px">
+                          <label [mysize]="'2'">Filter By:</label>
+
+                     <div [mysize]="'10'">
+                     <div [mysize]="'12'">
+                     <div [mysize]="'5'">
+                         <label [mysize]="'4'" style="padding-left:10px" class="cmsFont">Status</label>
+
+                         <div style="padding-left:10px;" class="cmsFont" [mysize]="'8'">
+                            <select name="status" class="select2_single form-control cmsFont" tabindex="-1" placeholder="Select Status" (change) = "instituteListFilters($event.target.value,'status')">  
+                                <option value="0" selected>Select </option>
+                                <option *ngFor="let instituteStatus of instituteStatusList " value="{{instituteStatus}}">{{instituteStatus}}</option>
+                            </select>
+                         </div>
+                      </div>
+                      
+                      <label [mysize]="'2'"></label>
+                      <div [mysize]="'5'">
+                         <div *ngIf="postingListingType == 'Institute'">
+                             <label [mysize]="'4'" class="cmsFont">Institute Type</label>
+                             <div [mysize]="'8'">
+                                 <select name="type" class="select2_single form-control cmsFont" tabindex="-1" placeholder="Select Type" (change) = "instituteListFilters($event.target.value,'type')">  
+                                    <option value="0">Select </option>
+                                    <option *ngFor="let instituteType of instituteTypeList " value="{{instituteType}}">{{instituteType.charAt(0).toUpperCase() + instituteType.slice(1)}}</option>
+                                    
+                                </select>
+                             </div>
+                         </div>
+                         </div>
+                         </div>
+                  </div>
+                      </div>
+                </div>
+            </div>
+    </div>
+</div>
+
+<institute-search-result-table [instituteResultsTable]="instituteResultsTable" [paginationHTML]="paginationHTML" [postingListingType]="postingListingType"></institute-search-result-table>
+
+<pagination-html *ngIf="checkedFlag" [pageNumber]="paginationNum" [paginationNumbers]="paginationLimit" [startPage]="startPage" [endPage]="endPage" (notify)="paginationRequest($event)" [totalPages]="totalPages" [paginationLimit]="paginationLimit" [totalResultCount]="totalResultCount" [paganationResultsShow]="resultsPerPage"></pagination-html>

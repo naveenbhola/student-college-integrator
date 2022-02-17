@@ -1,0 +1,105 @@
+.fltlft{float:left}
+.fltryt{float:right}
+.clr:after,.clearFix:after{content:"";display:block;clear:both}
+.head-strip{color:#fff}
+.head-strip h1{color:#fff;font-size: 1.75rem;}
+.white-bg{background:#fff}
+.shadow-box{box-shadow:0 2px 2px 0 rgba(0,0,0,0.16),0 0 0 1px rgba(0,0,0,0.08);background:#fff}
+.collegeShortlist ul{list-style:none}
+.col-step{width:200px}
+.col-forms{width:970px;border-left:1px solid #d2d2d2}
+.col-step,.forms-container,.button-wrapper{padding:24px}
+.button-wrapper{border-top:1px solid #d2d2d2}
+.button-wrapper.btn-wid-msg{padding: 4px 12px 24px;}
+.button-container .btn-wid-msg{text-align: center;}
+.step-list li{color:#666}
+.step-list li i,i.select-tick{display:inline-block;width:24px;height:24px;border:1px solid #008489;color:#008489;background:#fff;position:relative;margin-right:16px;border-radius:50%;text-align:center;line-height:22px;font-style:normal}
+.step-list li.active i{background:#008489;color:#fff}
+.step-list li.completed i{color:transparent}
+.step-list li.completed{font-weight:600;color:#000}
+.step-list li.completed i:after{content:"";width:5px;height:10px;transform:rotate(45deg);position:absolute;z-index:1;left:8px;top:3px;border-style:solid;border-color:#008489;border-image:initial;border-width:0 2px 2px 0}
+.step-list li{margin-bottom:35px;position:relative}
+.step-list li:after{content:"";display:block;position:absolute;width:1px;height:35px;background:#008489;left:12px}
+.step-list li:last-child:after{content:none}
+ul.exam-selection-list{display:flex;width:100%;flex-wrap:wrap;margin-left:-20px}
+ul.exam-selection-list li{position:relative}
+ul.exam-selection-list li label{cursor:pointer;display:inline-block}
+.exam-img-cont{padding:0 0 20px;text-align:center;position:relative;width:115px}
+img.img-exam{max-width:80%;max-height:80%;top:50%;left:50%;transform:translate(-50% , -50%);position:absolute;}
+.img-box{width:74px;height:74px;border:1px solid #000;border-radius:2px;overflow:hidden;margin:0 auto;position: relative;}
+span.exam-name{display:block;padding:5px 0}
+i.select-tick{display:none}
+.table-cell{display:table-cell;padding:2px 5px;vertical-align:middle}
+.table-cell .button{width:158px}
+.button-wrapper .table{margin:0 auto;text-align:center;width:auto}
+.field-input{display:inline-block;padding:4px 30px 20px 0;vertical-align:top;min-width:250px;position:relative}
+.collegeShortlist select.input,.collegeShortlist input[type="text"]:not(.ctp-locFld){border:1px solid #979797;border-radius:2px;background:#fff;padding:10px;width:285px}
+.collegeShortlist input[type="text"]:not(.ctp-locFld){width:164px}
+.expected-label{cursor:pointer;position:relative;font-weight:400;padding-left:24px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;display:inline-block;margin-left:5px}
+.expected-label:after{content:'';display:block;width:16px;height:16px;position:absolute;top:0;left:0;background-color:#fff;border:1px solid #999}
+.expected-label:before{content:'';display:none;left:0;top:5px;width:5px;height:10px;border:solid #008489;border-width:0 2px 2px 0;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg);position:absolute;z-index:1;left:6px;top:1px}
+input[type="checkbox"]:checked + label.expected-label:before,input[type="radio"]:checked + label.expected-label:before{display:block}
+input[type="checkbox"]:checked + label.expected-label:after,input[type="radio"]:checked + label.expected-label:after{border:1px solid #008489}
+.hide{display:none}
+.form-fields{margin-top:20px}
+.field-name{margin-bottom:5px}
+.step-personalDetail .expected-label:after{border-radius:50%}
+.step-personalDetail .expected-label:before{border-radius:50%;width:6px;height:6px;border:none;background:#008489;top:6px}
+.step-personalDetail .expected-label{margin-left:0}
+.input-box{padding:5px 0;position:relative;z-index:1;width:285px}
+.input-box.active{z-index:2}
+.input{border:1px solid #707578;border-radius:2px;display:block;padding:13px 10px 10px;color:#000;outline:none;width:100%;box-sizing:border-box;line-height:14px}
+.select-box .input{padding-right:25px;-webkit-appearance: unset;position: relative;}
+ul.option-list li{padding:7px 10px;border-bottom:1px solid #f7f7f7;font-size:14px;cursor:pointer;position:relative;line-height:1.58}
+.clg-bg{background:#0a373a url(https://images.shiksha.ws/public/images/collegepredictor/cp-banner-v1.jpg) no-repeat;background-size:cover;width:100%;color:#fff;height:246px}
+.clg-txBx{padding:90px 0 20px 12px;width:700px;margin:0 auto}
+input[type='checkbox']{position:absolute;height:100%;top:0;visibility:hidden}
+input[type='checkbox']:checked + .exam-img-cont .select-tick{display:inline-block;background:#008489;position:absolute;left:75px;top:-8px;z-index:2}
+input[type='checkbox']:checked + .exam-img-cont .select-tick:after{content:"";width:5px;height:10px;transform:rotate(45deg);position:absolute;z-index:1;left:8px;top:3px;border-style:solid;border-color:#fff;border-image:initial;border-width:0 2px 2px 0}
+input[type='checkbox']:checked + .exam-img-cont .img-box{box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 0 1px 0 rgba(0,0,0,0.8)}
+.single-select-list.option-list{padding:7px 10px;background:#fff;cursor:pointer;border:1px solid #d2d2d2}
+.cp-err-msg{color:red;font-size:.75rem;display:block;margin:5px 0 0}
+.collegeShortlist .pwa_pagecontent{padding-bottom:25px}
+.gender-field .field-input{min-width:auto;padding:4px 16px 16px 0}
+.img-box .shimmer{height: 80%;}
+.form-area{margin: 30px 0px;}
+.input-box.select-box:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: 12px;
+    top: 16px;
+    width: 0px;
+    height: 0px;
+    border: 4px solid #000;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    transform: rotate(-45deg);
+}
+@media only screen and (min-width:1024px) {
+    .box{padding:16px}
+}
+@media screen and (max-width: 767px) {
+    .form-area{margin: 0;}
+    ul.exam-selection-list{margin-left:0}
+    ul.exam-selection-list li{width:33%}
+    .dark-arow{width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-top:4px solid #000;bottom:2px;right:42px;transition:all .2s;position:absolute;pointer-events:none;display:inline-block;top:50%;left:auto;margin-top:0}
+    .forms-container{min-height:500px}
+    .col-step,.forms-container{padding:0}
+    .clg-txBx{width:100%}
+    .form-fields{margin:0}
+    .button-wrapper{position:relative;bottom:0;width:100%;background:#fff;z-index:2;left:0;padding:24px 12px}
+    .button-wrapper.button-fixed{position:fixed;box-shadow:0 -2px 6px 0 rgba(0,0,0,0.16)}
+    .clg-txBx{text-align:center}
+    .fltlft,.fltryt{width:100%;float:none}
+    .clg-bg{background:#0a373a url(https://www.shiksha.com/pwa/public/images/clg-bg-v1.webp) no-repeat;background-size:cover;width:100%;color:#fff;height:150px;}
+    .iOS .clg-bg{background:#0a373a url(https://images.shiksha.ws/public/mobile5/images/clg-bg-v1.jpg) no-repeat;background-size:cover;}
+    .clg-txBx{padding:0 12px;width:100%;height:100%;display:flex;justify-content:center;align-items:center;flex-direction:column}
+    .form-heading,.form-fields{padding:0 12px}
+    .form-heading h2{padding:20px 0 10px;margin:0}
+    .exam-img-cont{width:96px}
+    .field-input{min-width:100%;padding-right:0}
+    .dark-arow{right:10px}
+    .collegeShortlist input[type="text"]{width:100%}
+    .table-cell .button{width:95px}
+}

@@ -1,0 +1,9 @@
+.mAnswer{padding-bottom:15px}
+.mAnswer p{line-height:18px;padding-bottom:8px}
+.mAnswer ul li a.report{background:url(/public/images/post_preview.gif) no-repeat left top;float:left;font-weight:700;height:23px;padding:0 20px}
+.mAnswer ul li span{background:url(/public/images/digImg.gif) repeat-x left top;border:1px solid #e0e0e0;float:left;height:23px;line-height:23px;padding:0 5px}
+.mAnswer ul li span a.digUp{background:url(/public/images/digUp.gif) no-repeat right top;color:#000;float:left;padding-right:30px;text-decoration:none}
+.mAnswer ul li span a.digDown{background:url(/public/images/digDown.gif) no-repeat right top;color:#000;float:left;padding:0 20px 0 5px;text-decoration:none}
+.mAnswer ul li span.abuse{background:url(/public/images/post_preview.gif) no-repeat left top;float:right;padding:3px 5px 3px 27px;text-align:right}
+.mAnswer div.replyMsg{background:#FFF;border:1px solid #d4d4d4;margin-top:5px;padding:10px;width:70%}
+.mAnswer div.replyMsg input.submit{background:url(/public/images/msgsubmitBtn.gif) left top;border:0 none;color:#FFF;font-weight:700;height:21px;width:73px}

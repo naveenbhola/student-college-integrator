@@ -1,0 +1,213 @@
+.clp ._subcontainer a.viewMoreCount
+.clp ._subcontainer .rvw-plcDiv:last-child{
+    border-bottom: none;
+    margin-bottom: 0px;
+    padding-bottom: 4px;
+}
+
+.clp ._subcontainer .qstn-div .ana-det p a, .clp ._subcontainer .qstn-div .ana-det a{color: #008489; text-decoration: none;}
+.clp ._subcontainer a.viewMoreCount, .ilp ._subcontainer a.viewMoreCount{color: #fff; font-weight: 600;font-size: 1.125rem;}
+.ana-div {
+    width: 100%;line-height: 21px;
+}
+
+.qstn-div {
+    color: #000;
+    font-size: 0.875rem;
+    line-height: 1.3125rem;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.qstn-det, .ana-det {
+    display: block;
+}
+.qstn-det {
+    margin-bottom: 5px;
+}
+
+.qstn-det strong, .ana-det strong {
+    display: inline-block;
+    font-weight: 600;
+    width: 20px;
+    vertical-align: top;
+    font-size: inherit;
+}
+
+.qstn-div .qstn-det a, .qstn-div .ana-det p {
+    text-decoration: none;
+    color: #000;
+    display: inline-block;
+    width: 93%;
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.3125rem;
+    vertical-align: top;
+    line-height: 1.3125rem;
+    font-size: 0.875rem;
+    word-wrap: break-word;
+}
+.qstn-det, .ana-det {
+    display: block;
+}
+
+.qstn-div .ana-det p {
+    font-weight: 400;
+}
+
+.qstn-div .ana-det p.ansr-usr {
+    color: #666;
+    font-size: 0.75rem;
+    margin: 5px 0 0 20px;
+    line-height: 1.58;
+}
+.qstn-div .ana-det p.ansr-usr strong {
+    display: block;
+    width: 100%;
+    color: #000;
+    font-weight: 600;
+}
+.qstn-div .rd-link{
+    margin: 8px 0 0 18px;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.3125rem;
+}
+/*.nrml-link {
+    font-size: 0.875rem;
+    color: #008489;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+<<<<<<< Updated upstream
+    font-weight: 400;
+}
+=======
+    font-weight: 600;
+}*/
+
+
+.qstn-div:last-child {
+    border: none;
+}
+.qstn-div {
+    color: #000;
+    font-size: 1rem;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.clp .button-container {
+    text-align: center;
+    /* padding: 16px 0 0; */
+    line-height: 13px;
+    margin: 10px 0 4px;
+}
+
+.clp .trnBtn {
+    border: 1px solid #008489;
+    color: #008489;
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0px 10px;
+    text-align: center;
+    cursor: pointer;
+    background: #fff;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 34px;
+    -webkit-tap-highlight-color: transparent;
+    height: 36px;
+    border-radius: 2px;
+    position: relative;
+}
+.blu-arrw{
+    background: url(https://images.shiksha.ws/pwa/public/images/pwa-header-mobile-v3.svg) no-repeat;
+}
+
+.blu-arrw {
+    background-position: -114px -41px;
+    width: 15px;
+    height: 16px;
+    position: relative;
+    right: -1px;
+    top: 1px;
+    display: inline-block;
+}
+
+
+
+.ask-qryDv {
+    border-top: 1px solid #ccc;
+    padding: 8px 12px 12px;
+}
+.ask-qryDv .curr-stu {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.curr-stu .curr-stuImg {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    vertical-align: top;
+}
+
+.curr-stu .curr-stuDet {
+    display: inline-block;
+    color: #666;
+    font-size: 0.75rem;
+    margin-left: 10px;
+    vertical-align: top;
+}
+
+.curr-stu .curr-stuDet strong {
+    font-weight: 600;
+    color: #000;
+    font-size: 0.875rem;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.read-more-state:checked ~ .read-more-wrap .read-more-target {display: block;}
+.read-more-state:checked ~ .read-more-trigger{display: none}
+.clp .button-container.mb4{margin-bottom: 4px;}
+
+.qst-txtar {
+    width: 100%;
+    border: 1px solid #979797;
+    color: #999;
+    font-size: 0.875rem;
+    height: 57px;
+    padding: 8px 10px;
+    border-radius: 2px;
+    margin: 0px 0 0;
+}
+
+.clp .button-container {
+    text-align: center;
+    /* padding: 16px 0 0; */
+    line-height: 13px;
+    margin: 10px 0;
+}
+
+
+.blk{display: block;}
+#fullLayer-container .post-col {
+    padding: 0;
+    border: none;
+}
+.button-container.ana--wrap, .ilp .button-container.ana--wrap{margin: 10px -12px 0px;padding: 10px 12px 0px;display: flex;justify-content: center;}
+.button-container.ana--wrap .button{padding: 0 8px;}
+.button-container.ana--wrap .button:nth-child(2){margin-left: 8px;}
+@media only screen and (min-width: 1024px){
+    .ask-qryDv{padding: 12px 16px 16px;}
+    .ilp .button-container{margin: 10px 0px;}
+}
+@media only screen and (min-width: 320px) and (max-width: 350px){
+  .button-container.ana--wrap .button{padding: 0 4px;}
+  .button-container.ana--wrap .button:nth-child(2){margin-left: 6px;}
+}

@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* CSS Document */
+.bdr{border:1px solid #F00;}
+.bdr1{border:1px solid #090;}
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tfoot, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video { background: transparent; border: 0; margin: 0; outline: 0; padding: 0;}
+body {
+	margin:0 auto;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	background: url(/public/images/campaignIBSAT/mainBG.gif) repeat left top;
+}
+.W990{width:990px; margin:0 auto; padding:0}
+.OrgangeFont{font-size:20px; color:#FD8103; font-weight:bold;}
+.Txt12{font-size:12px; padding-top:2px;}
+.almReview{background-position: -88px -52px !important; width:33px; height:29px; float:left;}
+.ExprtAdv{background-position: -42px -52px !important; width:33px; height:29px; float:left;}
+.CnctMBA{background-position: left -52px !important; width:33px; height:29px; float:left;}
+.Searchcolz{background-position: -42px top !important; width:33px; height:29px; float:left;}
+.Getcolz{background-position: left top !important; width:33px; height:29px; float:left;}
+.bubble{background:#ffefc4; border:1px solid #e5d5a9; height:29px; width:352px; text-align:center; color:#303030; font-size:15px; line-height:26px; margin-top:10px;}
+.Getcolz, .Searchcolz, .CnctMBA, .ExprtAdv, .almReview{background:url(/public/images/campaignIBSAT/IMG-sprite.gif) no-repeat;}
+h2{font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:35px; color:#343434; margin-top:22px;}
+h3{font-size:16px; color:#343434;}
+h2 span{font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:30px; color:#3f3f3f; font-weight:normal; padding-bottom:3px;}
+#Theader{background:#ededed; height:93px; box-shadow: 0 6px 13px -5px #cfcdcc; position:relative; z-index:10;}
+#lftColumn{float:left; padding:37px 0px 0px 39px; width:420px;}
+#rhtColumn{float:right; width:480px; padding-right:29px;}
+.mainWrapper{margin:0 auto; clear:both; background:#ededed; width:990px; box-shadow: 0 0px 12px 2px #dcdcdc}
+.fl_LFT{float:left;}
+.fl_RHT{float:right;}
+.clr{clear:both; height:1px; overflow:hidden; font-size:1px;}
+.WrapperIMG{background:url(/public/images/campaignIBSAT/pathImage.jpg) no-repeat left top; height:auto;}
+.Txt13{font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:13px; color:#7e7e7e;}
+#FooterWrap{ clear:both; padding:19px 0 27px 0; width:787px; margin:0 auto; clear:both;}
+#formWrapper{background:#faf2dc; padding:30px 0px 20px 20px;}
+#lftColumn .ftrContWrap{width:383px; padding-bottom:29px;}
+#lftColumn ul, #lftColumn li {
+    list-style: none outside none;
+}
+.sepratorDiv{background:url(/public/images/campaignIBSAT/sepImg.gif) repeat-x left top; height:18px; overflow:hidden;}
+#lftColumn div.ftrContWrap ul li{
+    color: #4B4B4B;
+    line-height: 34px;
+    list-style: none outside none !important;
+    margin-bottom: 10px;
+	color:#515151;
+	clear:left;
+}
+#lftColumn div.ftrContWrap ul li p{
+	float:left;
+	margin:0; padding:0;
+}
+.ftrTxt{font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:12px; color:#9fa6af; text-align:center; padding-top:10px;}
+
+
+/* FORM1 */
+.txt11{font: normal 11px; color:#000000; margin:0px 0px 20px 10px;}
+.lineSpace_10{clear:both;}
+#addwikkicontent_flag {padding-left: 20px;}
+#ug_detials_courses{float:left;}
+#subCategory1{width:113% !important; font-size:12px;}
+.formFieldTextRight{font-size:12px; width:212px !important;}
+.formFieldTextLeft{width:128px !important}
+_fontSize_14p{font-size:14px;}
+#display_username {font-size:12px !important; font-weight:700 !important;}

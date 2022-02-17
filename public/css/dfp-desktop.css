@@ -1,0 +1,97 @@
+*{margin: 0;padding: 0;border: 0;box-sizing: border-box;font-family: 'Open Sans',sans-serif;}
+body{
+  color: #000;
+}
+a,a:hover{color:#008489;text-decoration: none;}
+ul{list-style: none;}
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://images.shiksha.ws/public/shikshaFont/open-sans-v13-latin-regular.eot');
+    src: local('Open Sans'),local('OpenSans'),url('https://images.shiksha.ws/public/shikshaFont/open-sans-v13-latin-regular.eot?#iefix') format('embedded-opentype'),url('https://images.shiksha.ws/public/shikshaFont/open-sans-v13-latin-regular.woff2') format('woff2'),url('https://images.shiksha.ws/public/shikshaFont/open-sans-v13-latin-regular.woff') format('woff'),url('https://images.shiksha.ws/public/shikshaFont/open-sans-v13-latin-regular.ttf') format('truetype'),url('https://images.shiksha.ws/public/shikshaFont/open-sans-v13-latin-regular.svg#OpenSans') format('svg')
+}
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: url(https://images.shiksha.ws/public/shikshaFont/open-sans-v13-latin-600.eot);
+    src: local('Open Sans Semibold'),local('OpenSans-Semibold'),url(https://images.shiksha.ws/public/shikshaFont/open-sans-v13-latin-600.eot?#iefix) format('embedded-opentype'),url(https://images.shiksha.ws/public/shikshaFont/open-sans-v13-latin-600.woff2) format('woff2'),url(https://images.shiksha.ws/public/shikshaFont/open-sans-v13-latin-600.woff) format('woff'),url(https://images.shiksha.ws/public/shikshaFont/open-sans-v13-latin-600.ttf) format('truetype'),url(https://images.shiksha.ws/public/shikshaFont/open-sans-v13-latin-600.svg#OpenSans) format('svg')
+}
+.maincard{
+  background: #fff;
+  max-width: 1200px;
+  min-width: 600px;
+  margin: 2px;
+  border-radius: 2px;
+  box-shadow: 0 0 2px 0 rgba(0,0,0,.12), 0 2px 2px 0 rgba(0,0,0,.24);
+}
+.heading{
+  border-bottom: 1px solid #e5e6e6;
+  padding: 10px 15px 10px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+}
+.spnsrd-tag{
+  float: right;
+  color: #666;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 27px;
+}
+.dcard{
+  padding: 15px;
+}
+.dfp-dlist li {
+    padding: 0px 0px 10px 0px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e6e5e5;
+    display: table;
+    width: 100%;
+}
+.dfp-dlist li > div{
+  display: table-cell;
+  vertical-align: middle;
+}
+.dfp-dlist li > div.last{
+  width: 60px;
+}
+.dfp-dlist li:last-child {
+  border-bottom: none;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+.dfp-dlist strong {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+    font-weight: 600;
+}
+.dfp-dlist p {
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: 400;
+    line-height: 21px;
+    height: 42px;
+    overflow: hidden;
+}
+.primaryButton {
+  text-align: center;
+  vertical-align: middle;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  height: 32px;
+  border-radius: 2px;
+  touch-action: manipulation;
+  white-space: nowrap;
+  line-height: 30px;
+  padding: 0 15px;
+  display: inline-block;
+  background: #F37921;
+  color: #fff;
+  border: 1px solid #F37921;
+  -webkit-appearance:none;
+}
+a.primaryButton,a.primaryButton:hover{color:#fff;}

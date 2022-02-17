@@ -1,0 +1,73 @@
+<div class="row" id="course_type_form" *ngIf="hierarchyTree">
+	<div [mysize]="'12'">
+		<div class="x_panel">
+			<div [class.x_title]="opened">
+				<ul class="nav navbar-left panel_toolbox">
+					<li><a class="collapse-link" (click)="toggle()"><i [class]="opened?' fa fa-chevron-up':' fa fa-chevron-down'"></i></a></li>
+				</ul>
+				<h2>Course Type Information</h2>
+				<div class="clearfix"></div>
+			</div>
+			<div class="x_content"  [hidden]="!opened">
+				<div [formGroup]="courseTypeForm">
+					<div class="form-group">
+						<div [mysize]="'3'">
+							<label>Course Variant<span class="required">*</span><img class="helperText" id="course_variant" src="/public/images/tooltip.png" width="20px" style="padding-right:0px" (click)="toolTipNotify('course_variant',$event)"></label>
+						</div>
+						<div [mysize]="9">
+							<div [mysize]="'3'" *ngFor="let item of courseVariantOptions">
+								<label class="radio-inline" [mysize]="'6'" noBootstrap>
+									<input type="radio" class="flat" formControlName="course_variant" value="{{item.value}}"/>{{item.label}}
+								</label>
+							</div>
+							<span class="help-block text-danger">
+								<span *ngIf="courseTypeForm.controls['course_variant'].errors?.required">Variant is Required</span>
+							</span>
+						</div>
+					</div>
+					<div *ngIf="courseTypeForm.controls.course_variant.value">
+						<div formArrayName="mapping_info">
+							<div *ngFor="let group of courseTypeForm.controls.mapping_info.controls;let i=index">
+								<div [formGroupName]="i">
+									<div class="form-group" *ngIf="courseTypeForm.controls['course_variant'].value == CVCONST.double">
+										<div [mysize]="'3'">
+											<label *ngIf="group.controls.type.value == 'entry'">Entry / First Course <img class="helperText" id="entry_course" src="/public/images/tooltip.png" width="20px" style="padding-right:0px" (click)="toolTipNotify('entry_course',$event)"></label>
+											<label *ngIf="group.controls.type.value == 'exit'">Exit / Second Course <img class="helperText" id="exit_course" src="/public/images/tooltip.png" width="20px" style="padding-right:0px" (click)="toolTipNotify('exit_course',$event)"></label>
+										</div>
+									</div>
+									<courseTypeSubInfo [editData]="editData?.mapping_info && editData?.mapping_info[i] ? editData?.mapping_info[i] : null" [hierarchyArray]="hierarchyArray" [hierarchyTree]="hierarchyTree" [mode]="mode" [group]="group" [courseStaticData]="courseStaticData" [parentForm]="courseTypeForm" (toolTipEvent) = "toolTipModalParentShow($event)"></courseTypeSubInfo>
+								</div>
+							</div>
+						</div>
+						<div formGroupName="course_tags">
+							<div class="form-group">
+								<div [mysize]="'3'">
+									<label>Other Course Tags</label>
+								</div>
+								<div [mysize]="9">
+									<label class="checkbox-inline" [mysize]="'2'" noBootstrap>
+										<input type="checkbox" formControlName="is_executive"/>Executive
+									</label>
+									<label class="checkbox-inline" [mysize]="'2'" noBootstrap>
+										<input type="checkbox" formControlName="is_lateral"/>Lateral Entry
+									</label>
+									<div *ngIf="courseTypeForm.controls.course_variant.value == CVCONST.double">
+										<label class="checkbox-inline" [mysize]="'2'" noBootstrap>
+											<input type="checkbox" formControlName="is_twinning"/>Twinning
+										</label>
+										<label class="checkbox-inline" [mysize]="'2'" noBootstrap>
+											<input type="checkbox" formControlName="is_dual"/>Dual
+										</label>
+										<label class="checkbox-inline" [mysize]="'2'" noBootstrap>
+											<input type="checkbox" formControlName="is_integrated"/>Integrated
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

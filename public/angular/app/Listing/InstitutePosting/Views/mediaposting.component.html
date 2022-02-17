@@ -1,0 +1,143 @@
+<div class="row" id="media_photo_form">
+   <div mysize="12">
+      <div class="x_panel">
+         <div [class.x_title]="opened">
+            <ul class="nav navbar-left panel_toolbox">
+               <li><a class="collapse-link" (click)="toggle()"><i [class]="opened?' fa fa-chevron-up':' fa fa-chevron-down'"></i></a></li>
+            </ul>
+            <h2>{{label}} <a href="/public/enterpriseDoc/ListingsCMSPhotoInstructions.pdf" target="_blank"><img id="{{label}}" class="helperText" src="/public/images/tooltip.png" width="20px" style="padding-right:0px"></a></h2>
+            <div class="clearfix"></div>
+         </div>
+         <div class="x_content" [hidden]="!opened">
+            <div class="form-group" *ngIf="showLogoWidget">
+               <div mysize="3"> 
+                  <label mysize="6" class="cmsFont" style="text-align:left;padding-left:19px;">Upload logo</label> 
+               </div>
+               <shiksha-upload 
+                (mediaResponse) = "uploadLogoCallback($event)"
+                [uploadXhrUrl]="'nationalInstitute/InstitutePosting/uploadInstituteLogo'"
+               >
+               </shiksha-upload>               
+            </div>
+            <div class="form-group" *ngIf="showLogoWidget">
+              <div *ngIf="instituteObj.logo_url">
+                    <div mysize="3"> 
+                       <img src="{{instituteObj.media_server_domain + instituteObj.logo_url}}"/>
+                    </div>
+                    <div mysize="2">
+                       <a target="_blank" (click)="clearUploadLogo()" class="btn btn-default">X</a>
+                    </div>
+              </div>
+            </div>
+            <div class="form-group">
+               <div mysize="3"> 
+                  <label mysize="7" style="text-align:left;padding-left:19px;">Upload {{mediaType}}</label> 
+               </div>
+            </div>
+            <div *ngIf="resetMediaWidget">
+                <div class="form-group">
+                   <label mysize="3" class="cmsFont cmsAlignLeft">Locations</label>                     
+                   <mymultiselect *ngIf="checkedFlag" (selectedValues)="setSelectedValues($event);" [data]="locationList" [defaultPlaceholder]="'Select locations'" [itemKey]="'locations'" [disabled]="allLocationsFlag" [buttonTitle]="disabledTitle" [showOnlyCount]="true"></mymultiselect>
+                   <div mysize="3" *ngIf="instituteObj.postingListingType != 'University'">
+                   	<span class="or-span">OR</span>
+                   	<label style="cursor:pointer;"><input type="checkbox" [(ngModel)]="allLocationsFlag" (change)="allLocationFlagChanged($event);"/>  All Locations</label>
+                   </div>
+                </div>
+                <div class="form-group">
+                   <label mysize="3" class="cmsFont cmsAlignLeft">Tags</label>                     
+                   <mymultiselect *ngIf="changedFlag" [data]="tags_events_list" (selectedValues)="setSelectedValues($event);" [defaultPlaceholder]="'Add tags'" [itemKey]="'tags'" [showOnlyCount]="true"></mymultiselect>   
+                </div>
+                <div class="form-group">
+                   <label mysize="3" class="cmsFont cmsAlignLeft">{{mediaType}} title</label>                     
+                   <div mysize="6">
+                      <input #titleMedia="ngModel" type="text" placeholder="Enter title" name="{{mediaType}}_mediaTitle" [(ngModel)]="mediaTitle" [mymaxlength]="'50'" [registerForm]="form" [registerModel]="titleMedia" />
+                       <span class="help-block text-danger">
+                         <span *ngIf="titleMedia.errors?.maxlength">{{titleMedia.errors?.maxlength}}</span>
+                     </span>
+                   </div>
+                </div>
+                <div class="form-group" *ngIf="mediaType == 'Video'">
+                   <label mysize="3" class="cmsFont cmsAlignLeft">{{mediaType}} url</label>                     
+                   <div mysize="6">
+                      <input type="text" placeholder="Enter url" name="mediaUrl" [(ngModel)]="mediaUrl"  />
+                   </div>
+                </div>
+                <div class="form-group" *ngIf="mediaType == 'Photo'">
+                    <label mysize="3" class="cmsFont cmsAlignLeft">Upload photo</label>                     
+                   <shiksha-upload 
+                    (mediaResponse) = "uploadPhotoCallback($event)"
+                    [uploadXhrUrl]="'nationalInstitute/InstitutePosting/uploadInstituteMedia/photos'"
+                   >
+                   </shiksha-upload>                   
+                </div>
+
+                <div class="form-group">
+                   <div mysize="6">
+                      <a target="_blank" (click)="addMedia(media_type,mediaTitle,mediaUrl)" class="btn cmsButton cmsFont pull-right">Upload</a>
+                   </div>
+                   <span class="help-block text-danger">{{instituteVideoErrMsg}}</span>
+                   <span class="help-block text-danger">{{institutePhotoErrMsg}}</span>
+                </div>
+            </div>
+
+            
+            <div class="form-group" *ngIf="instituteObj[media_type].length > 0">
+               <h4 mysize="3">Added {{mediaType}}</h4>
+               <div  mysize="3"> 
+                  <button type="button" (click)="showMediaModal()" class="btn cmsButton cmsFont">Remove All</button>
+               </div>
+            </div>
+            <div>
+                <span *ngIf="media_type == 'videos'" class="help-block text-danger">{{videoSelectionError}}</span>
+                <span *ngIf="media_type == 'photos'" class="help-block text-danger">{{photoSelectionError}}</span> 
+            </div>
+            <br/>
+            <div class="form-group" *ngFor="let pt of instituteObj[media_type];let rcIndex = index;">
+               <div mysize="12">
+                  <div mysize="1">
+                     <select name="position" [ngModel]="pt.position" (ngModelChange)="changeMediaPosition(pt.position,$event)">
+                     <option *ngFor="let i of instituteObj[media_type];let i=index"  [value]="i+1">{{i+1}}</option>
+                     </select>
+                  </div>
+                  <div *ngIf="checkedFlag">
+                  <mymultiselect [data]="locationList" [selected]="pt.locations" (selectedValues)="setSelectedValues($event,rcIndex,media_type);"  [defaultPlaceholder]="'locations'" [itemKey]="'locations'" [disabled]="pt.all_locations_flag" [showOnlyCount]="true"></mymultiselect>
+                  </div>
+
+                  <div mysize="2" *ngIf="instituteObj.postingListingType != 'University'">
+                  <span class="or-span" style="margin-right:5px;">OR</span>
+                  <label style="cursor:pointer;"><input type="checkbox" [(ngModel)]="pt.all_locations_flag"/>  All</label>
+                  </div>
+
+                  <mymultiselect  *ngIf="changedFlag" [data]="tags_events_list" [selected]="pt.tags" (selectedValues) = "setSelectedValues($event,rcIndex,media_type);" [defaultPlaceholder]="'tags'" [itemKey]="'tags'" [showOnlyCount]="true"></mymultiselect>   
+
+                  <div mysize="2">
+                     <input #viewTitleMedia="ngModel" name="{{media_type}}_addedMediaTitle{{rcIndex+1}}" [(ngModel)]="pt.title" [mymaxlength]="'50'" required="required" [myrequired]="'1'" [registerForm]="form" [registerModel]="viewTitleMedia" type="text" value="{{pt.title}}"/>
+                     <span class="help-block text-danger">
+                         <span *ngIf="viewTitleMedia.errors?.maxlength">{{viewTitleMedia.errors?.maxlength}}</span>
+                         <span *ngIf="viewTitleMedia.errors?.required">{{viewTitleMedia.errors?.required}}</span>
+                     </span>
+                  </div>
+                  <div mysize="1" *ngIf="mediaType=='Video'">                           
+                     <input name="addedMediaUrl{{rcIndex+1}}" [(ngModel)]="pt.media_url" type="text" value="{{pt.media_url}}" disabled="disabled"/>
+                  </div>
+                  <div mysize="2">
+                     <a target="_blank" href="{{mediaType !='Video' ? (instituteObj.media_server_domain + pt.media_url) : pt.media_url}}" class="btn cmsButton cmsFont" style="padding:6px 8px;">View</a>
+                     <a target="_blank" name="remove{{rcIndex}}" (click)="showMediaModal(rcIndex)" class="btn cmsButton cmsFont" style="padding:6px 8px;">Remove</a>
+                  </div>
+               </div>
+            </div>
+             <div>
+                    <shiksha-modal
+                     [isModalOpened]="isModalOpened"
+                     [modalContent]="modalContent"
+                     [modalSize]="'large'"
+                     [elementId]="modalEle"
+                     (modalResponse)="modalResponse($event)"
+                 ></shiksha-modal>
+              </div>                 
+         </div>
+      </div>
+   </div>
+</div>
+
+<shiksha-loader [showLoader]="showLoader"> </shiksha-loader>

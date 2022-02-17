@@ -1,0 +1,36 @@
+*{
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+body{
+	width:80%;
+	margin: 0 auto;
+	display: flex;
+	background: rgba(163, 163, 117,0.5);
+	align-items:center;
+	
+}
+#form{
+	border:1px solid black;
+	padding: 20px;
+}
+span{
+	color: black;
+}
+input,textarea{
+	border-radius: 5px;
+	border:1px solid black;
+	padding:5px;
+	margin:10px;
+}
+button,input[type=button]{
+	padding:10px;
+}
+h2{
+	text-align: center;
+}
+#msg{
+	margin:10px;
+}

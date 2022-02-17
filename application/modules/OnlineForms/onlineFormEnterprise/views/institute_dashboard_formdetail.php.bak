@@ -1,0 +1,123 @@
+<?php $data = $onlineFormEnterpriseInfo['result'];?>
+<input type="hidden" name="instituteId" id="instituteId" value="<?php echo $data['instituteId'];?>">
+<?php $info = $onlineFormEnterpriseInfo['mainInfo'][0];?>
+<?php $formId = isset($_REQUEST['formId'])?$_REQUEST['formId']:''?>
+<?php $userId = isset($_REQUEST['userId'])?$_REQUEST['userId']:''?>
+<?php $documentSpec= '<i>Class Xth mark sheet, Class XIIth mark sheet, and Graduation certificate
+attested by public notary</i>
+
+                        </p>';?>
+<div id="UserFormId" style="display:none;"><?php echo $formId .'-'.$userId;?></div>
+<div id="singleUserFormId" style="display:none;"></div>
+<div id="appsFormWrapper">
+	<!--Starts: breadcrumb-->
+    <div id="breadcrumb">
+    	<ul>
+        	<li><a href="#" title="Application Forms">Application Forms</a></li>
+            <li class="last"><?php echo $info['userName'].$info['formId']; ?></li>
+        </ul>
+    </div>
+    <!--Ends: breadcrumb-->
+    
+    
+    <div id="contentWrapper">
+    	<h2 class="welcome">Welcome <a href="#"><?php echo $info['userName']; ?></a></h2>
+        <div class="myForms myFormsMargin">
+        	<table width="100%" border="1" cellpadding="12">
+            	<thead>
+                	<tr>
+                        <td width="100" valign="top">Application <br />Number</td>
+                        <td width="100" valign="top">Form Stage</td>
+                        <td width="100" valign="top">Location</td>
+                        <td width="150" valign="top">Sumbmission date</td>
+                        <td width="100" valign="top">GD/PI</td>
+                        <td width="120" valign="top">Form Status</td>
+                        <td width="80" valign="top">Payment</td>
+                        <td width="120" valign="top">View form</td>
+                    </tr>
+                </thead>
+                <tr class="evenRow">
+                	<td><a href="#"><?php echo $info['userName'].$info['formId']; ?></a></td>
+                    <td>Under Process</td>
+                    <td><?php echo $info['location']; ?></td>
+                    <td><?php echo $info['submissionDate']; ?></td>
+                    <td>Update GD/PI</td>
+                    <td>Viewed</td>
+                    <td>Online</td>
+                    <td><a title="View" class="viewIcon">&nbsp;</a></td>
+                </tr>
+            </table>
+            <div class="buttonBlock">
+            	<input type="button" value="Draft received" class="orangeButton" id="1"/> &nbsp;
+                <input type="button" value="Request photographs" class="orangeButton" id="2"/> &nbsp;
+                <input type="button" value="Request Documents" class="orangeButton" id="3"/> &nbsp;
+                <div class="spacer10 clearAll" ></div>
+				<input type="button" value="Confirm Acceptance" class="orangeButton" id="4"/> &nbsp;
+                <input type="button" value="Update GD/PI" class="orangeButton" id="5"/> &nbsp;
+                <input type="button" value="Reject Application" class="orangeButton" id="6"/>
+                <div class="spacer10 clearAll" ></div>
+                <input type="button" value="Cancel Application" class="cancelButton" />
+
+            </div>
+        </div>
+        
+         <div id="UserFormId" style="display:none;"><?php echo $formId.'-'.$userId;?></div>
+         <div id="SingleUserFormId" style="display:none;"></div>
+        <div class="payDetails">
+        	<h3>Payment Details</h3>
+            <div class="payDetailsLeftCol">
+                <ul>
+                    <li><strong>Order Value : </strong> <span>INR 2498.99</span></li>
+                    <li><strong>Date : </strong> <span>9/23/2011 11:20:11 AM</span></li>
+                    <li><strong>Payment Mode : </strong> <span>AXIS Payment Gateway</span></li>
+                    <li><strong>Payment Status : </strong> <span>Payment Successful</span></li>
+                    <li><strong>Transaction ID: </strong> <span>2000054312</span></li>
+                    <li><strong>Status : </strong> <span>Transaction Successful</span></li>
+                    <li><a href="#" class="font10">Request to cancel payment </a></li>
+                </ul>
+            </div>
+            
+            <div class="payDetailsMidCol">
+                <ul>
+                    <li><strong>Order Value : </strong> <span>INR 2498.99</span></li>
+                    <li><strong>Payment Mode : </strong> <span>Draft</span></li>
+                    <li><strong><a href="#">Confirmed draft received</a></strong></li>
+                </ul>
+            </div>
+            
+            <div class="payDetailsRtCol">
+                <ul>
+                    <li><strong>Order Value : </strong> <span>INR 2498.99</span></li>
+                    <li><strong>Date : </strong> <span>9/23/2011 11:20:11 AM</span></li>
+                    <li><strong>Payment Mode : </strong> <span>Draft</span></li>
+                    <li><strong>Draft No : </strong> <span>0919101012</span></li>
+                    <li><strong>Payee Bank : </strong> <span>AXIS Bank of India, Noida</span></li>
+                    <li><strong>Transaction ID: </strong> <span>2000054312</span></li>
+                    <li><strong>Status : </strong> <span>Transaction Successful</span></li>
+                    <li><strong><a href="#">Confirmed draft received</a></strong></li>
+                </ul>
+            </div>
+            
+        </div>
+        
+        
+        <div class="communicationHistory" id="communicationHistory">
+        	<h3>Communication History</h3>
+            <ul>
+                <?php for($k=0;$k<count($info['alertsMessageText']);$k++){?>
+                                        <li><span id="<?php echo "alert".$k;?>"><?php echo date("F d",strtotime($info['alertsCreatedDate'][$k]));?></span>:&nbsp;<?php echo preg_replace(array('/<Institute_name>/','/Location/','/DD\/MM\/YY Min:Sec/','/<Documents_Specs>/','/<communication address>/'),array($data['instituteName'],$info['GDPILocation'][$k],date("Y/m/d",strtotime($info['alertsCreatedDate'][$k])),$documentSpec,$data['instituteCommunicationAdress']),$info['alertsMessageText'][$k]); ?></li>
+                <?php }?>
+                <li><span>August 5:</span> You have sent an application for MBA to Amity</li>
+                <li><span>August 10:</span> Amity institute has reviewed your application.</li>
+                <li><span>August 12:</span> Please complete your application form. <strong><a href="#">Click here</a></strong>.</li>
+				<li><span>August 14:</span> You have sent a message to amity. <strong><a href="#">Click here to view</a></strong></li>
+            </ul>
+            <a href="/onlineFormEnterprise/OnlineFormEnterprise/enterpriseUserDashBoard?courseId=<?php echo $info['courseId'];?>" class="font14"> <span class="font16">&laquo;</span> My Application dashboard</a>
+        </div>
+        
+    </div>
+    
+</div>
+<script>
+$('<?php echo $_REQUEST['alertId'];?>').scrollIntoView(true);
+</script>

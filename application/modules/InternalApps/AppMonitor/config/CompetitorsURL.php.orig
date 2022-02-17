@@ -1,0 +1,151 @@
+<?php
+
+$config = array();
+
+$config['URLS'] = array(
+                            array('pageName'=>'Home Page', 'site'=>'Shiksha','URL'=>'https://www.shiksha.com','team_name'=>'Domestic'),
+                             array('pageName'=>'MBA CTP', 'site'=>'Shiksha','URL'=>'https://www.shiksha.com/mba/colleges/mba-colleges-bangalore','team_name'=>'Domestic'),
+                            array('pageName'=>'MBA CTP', 'site'=>'Shiksha','URL'=>'https://www.shiksha.com/mba/colleges/mba-colleges-accepting-cat-delhi-ncr','team_name'=>'Domestic'),
+                            array('pageName'=>'MBA CTP', 'site'=>'Shiksha','URL'=>'https://www.shiksha.com/mba/colleges/mba-in-human-resources-colleges-chennai','team_name'=>'Domestic'),
+                            array('pageName'=>'Engineering CTP', 'site'=>'Shiksha','URL'=>'https://www.shiksha.com/b-tech/colleges/b-tech-colleges-bangalore','team_name'=>'Domestic'),
+                            array('pageName'=>'Engineering CTP', 'site'=>'Shiksha','URL'=>'https://www.shiksha.com/b-tech/colleges/b-tech-colleges-accepting-jee-mains-delhi-ncr','team_name'=>'Domestic'),
+                            array('pageName'=>'Engineering CTP', 'site'=>'Shiksha','URL'=>'https://www.shiksha.com/b-tech/colleges/b-tech-in-automobile-engineering-colleges-chennai','team_name'=>'Domestic'),
+
+                            array('pageName'=>'National SRP', 'site'=>'Shiksha','URL'=>'https://www.shiksha.com/search?q=MBA%2FPGDM&bc[]=101&autosuggestorPick=true&rf=searchWidget','team_name'=>'Domestic'),
+                            array('pageName'=>'National SRP', 'site'=>'Shiksha','URL'=>'https://www.shiksha.com/search?q=B.E.%20%2F%20B.Tech&bc[]=10&autosuggestorPick=true&rf=searchWidget','team_name'=>'Domestic'),
+
+                            array('pageName'=>'National SRP', 'site'=>'CollegeDunia','URL'=>'https://collegedunia.com/e-search?query=mba&c=college','team_name'=>'Domestic'),
+                            array('pageName'=>'National SRP', 'site'=>'CollegeDunia','URL'=>'https://collegedunia.com/e-search?query=btech&c=all','team_name'=>'Domestic'),
+                            array('pageName'=>'National SRP', 'site'=>'Careers360','URL'=>'https://www.careers360.com/search/college/mba','team_name'=>'Domestic'),
+                            array('pageName'=>'National SRP', 'site'=>'Careers360','URL'=>'https://www.careers360.com/search/all/btech','team_name'=>'Domestic'),
+                            array('pageName'=>'UILP', 'site'=>'Shiksha','URL'=>'https://www.shiksha.com/college/indian-institute-of-management-ahmedabad-vastrapur-307?pageCheckInternal=1','team_name'=>'Domestic'),
+                            array('pageName'=>'UILP', 'site'=>'Shiksha','URL'=>'https://www.shiksha.com/getListingDetail/28361/institute/college-Faculty-Of-Management-Studies-University-Of-Delhi-Fms-Delhi-India?pageCheckInternal=1','team_name'=>'Domestic'),
+                            array('pageName'=>'UILP', 'site'=>'Shiksha','URL'=>'https://www.shiksha.com/university/lovely-professional-university-jalandhar-28499?pageCheckInternal=1','team_name'=>'Domestic'),
+                            array('pageName'=>'UILP Child', 'site'=>'Shiksha','URL'=>'https://www.shiksha.com/college/indian-institute-of-management-ahmedabad-vastrapur-307/admission?pageCheckInternal=1','team_name'=>'Domestic'),
+                            array('pageName'=>'UILP Child', 'site'=>'Shiksha','URL'=>'https://www.shiksha.com/college/indian-institute-of-management-ahmedabad-vastrapur-307/reviews?pageCheckInternal=1','team_name'=>'Domestic'),
+                            array('pageName'=>'UILP Child', 'site'=>'Shiksha','URL'=>'https://www.shiksha.com/college/symbiosis-institute-of-business-management-lavale-village-pune-3959/courses?ct[]=174&lo[]=877&pageCheckInternal=1','team_name'=>'Domestic'),
+                            array('pageName'=>'CLP', 'site'=>'Shiksha','URL'=>'https://www.shiksha.com/mba/course/post-graduate-program-in-management-indian-institute-of-management-ahmedabad-vastrapur-1653?pageCheckInternal=1','team_name'=>'Domestic'),
+                            array('pageName'=>'CLP', 'site'=>'Shiksha','URL'=>'https://www.shiksha.com/mba/course/master-business-administration-faculty-management-studies-fms/111548?pageCheckInternal=1','team_name'=>'Domestic'),
+                            array('pageName'=>'CLP', 'site'=>'Shiksha','URL'=>'https://www.shiksha.com/b-tech/course/b-tech-in-computer-science-and-engineering-lovely-professional-university-jalandhar-202130?pageCheckInternal=1','team_name'=>'Domestic'),
+                            array('pageName'=>'MBA RP', 'site'=>'Shiksha','URL'=>'https://www.shiksha.com/mba/ranking/top-mba-colleges-india/2-2-0-0-0?pageCheckInternal=1','team_name'=>'Domestic'),
+                            array('pageName'=>'Engineering RP', 'site'=>'Shiksha','URL'=>'https://www.shiksha.com/b-tech/ranking/top-engineering-colleges-in-india/44-2-0-0-0?pageCheckInternal=1','team_name'=>'Domestic'),
+                            array('pageName'=>'CAT EP', 'site'=>'Shiksha','URL'=>'https://www.shiksha.com/mba/cat-exam?pageCheckInternal=1','team_name'=>'Domestic'),
+                            array('pageName'=>'JEE Main EP', 'site'=>'Shiksha','URL'=>'https://www.shiksha.com/b-tech/jee-main-exam?pageCheckInternal=1','team_name'=>'Domestic'),
+                            array('pageName'=>'EP Child', 'site'=>'Shiksha','URL'=>'https://www.shiksha.com/b-tech/jee-main-exam-question-papers?pageCheckInternal=1','team_name'=>'Domestic'),
+                            array('pageName'=>'EP Child', 'site'=>'Shiksha','URL'=>'https://www.shiksha.com/mba/cat-exam-application-form?pageCheckInternal=1','team_name'=>'Domestic'),
+                            array('pageName'=>'EP Child', 'site'=>'Shiksha','URL'=>'https://www.shiksha.com/b-tech/jee-main-exam-results?pageCheckInternal=1','team_name'=>'Domestic'),
+                            array('pageName'=>'MBA CHP', 'site'=>'Shiksha','URL'=>'https://www.shiksha.com/mba-pgdm-chp?pageCheckInternal=1','team_name'=>'Domestic'),
+                            array('pageName'=>'Engineering CHP', 'site'=>'Shiksha','URL'=>'https://www.shiksha.com/engineering-chp?pageCheckInternal=1','team_name'=>'Domestic'),
+                            array('pageName'=>'QDP', 'site'=>'Shiksha','URL'=>'https://ask.shiksha.com/i-am-30-years-old-and-i-just-completed-my-12th-with-commerce-in-2nd-attempt-am-i-eligible-for-bca-or-suggest-some-qna-3487647?pageCheckInternal=1','team_name'=>'Domestic'),
+                            array('pageName'=>'ADP', 'site'=>'Shiksha','URL'=>'https://www.shiksha.com/mba/articles/mba-courses-offered-by-iims-blogId-19127?pageCheckInternal=1','team_name'=>'Domestic'),
+
+                             array('pageName'=>'Home Page', 'site'=>'CollegeDunia','URL'=>'https://collegedunia.com/','team_name'=>'Domestic','team_name'=>'Domestic'),
+                             array('pageName'=>'MBA CTP', 'site'=>'CollegeDunia','URL'=>'https://collegedunia.com/management/bangalore-colleges','team_name'=>'Domestic','team_name'=>'Domestic'),
+                            array('pageName'=>'MBA CTP', 'site'=>'CollegeDunia','URL'=>'https://collegedunia.com/exams/cat/top-colleges-in-delhi-ncr-accepting-cat','team_name'=>'Domestic'),
+                            array('pageName'=>'MBA CTP', 'site'=>'CollegeDunia','URL'=>'https://collegedunia.com/mba/human-resources-management/tamil-nadu-colleges','team_name'=>'Domestic'),
+                            array('pageName'=>'Engineering CTP', 'site'=>'CollegeDunia','URL'=>'https://collegedunia.com/btech/bangalore-colleges','team_name'=>'Domestic'),
+                            array('pageName'=>'Engineering CTP', 'site'=>'CollegeDunia','URL'=>'https://collegedunia.com/exams/jee-main/top-btech-colleges-in-delhi-ncr-accepting-jee-main','team_name'=>'Domestic'),
+                            array('pageName'=>'Engineering CTP', 'site'=>'CollegeDunia','URL'=>'https://collegedunia.com/courses/bachelor-of-technology-btech-automobile-engineering-colleges-in-chennai','team_name'=>'Domestic'),
+                            array('pageName'=>'UILP', 'site'=>'CollegeDunia','URL'=>'https://collegedunia.com/university/25494-indian-institute-of-management-iim-ahmedabad','team_name'=>'Domestic'),
+                            array('pageName'=>'UILP', 'site'=>'CollegeDunia','URL'=>'https://collegedunia.com/college/17600-university-of-delhi-faculty-of-management-studies-fms-new-delhi','team_name'=>'Domestic'),
+                            array('pageName'=>'UILP', 'site'=>'CollegeDunia','URL'=>'https://collegedunia.com/university/25787-lovely-professional-university-lpu-jalandhar','team_name'=>'Domestic'),
+                            array('pageName'=>'UILP Child', 'site'=>'CollegeDunia','URL'=>'https://collegedunia.com/university/25494-indian-institute-of-management-iim-ahmedabad/reviews','team_name'=>'Domestic'),
+                            array('pageName'=>'UILP Child', 'site'=>'CollegeDunia','URL'=>'https://collegedunia.com/university/25494-indian-institute-of-management-iim-ahmedabad/admission','team_name'=>'Domestic'),
+                            array('pageName'=>'UILP Child', 'site'=>'CollegeDunia','URL'=>'https://collegedunia.com/college/45605-symbiosis-institute-of-computer-studies-and-research-sicsr-pune/courses-fees','team_name'=>'Domestic'),
+                            array('pageName'=>'CLP', 'site'=>'CollegeDunia','URL'=>'https://collegedunia.com/university/25494-indian-institute-of-management-iim-ahmedabad/courses-fees?course_id=1861','team_name'=>'Domestic'),
+                            array('pageName'=>'CLP', 'site'=>'CollegeDunia','URL'=>'https://collegedunia.com/college/17600-university-of-delhi-faculty-of-management-studies-fms-new-delhi/courses-fees?slug=master-of-business-administration-mba&course_type=Full-Time','team_name'=>'Domestic'),
+                            array('pageName'=>'CLP', 'site'=>'CollegeDunia','URL'=>'https://collegedunia.com/university/25787-lovely-professional-university-lpu-jalandhar/courses-fees','team_name'=>'Domestic'),
+                            array('pageName'=>'MBA RP', 'site'=>'CollegeDunia','URL'=>'https://collegedunia.com/mba-colleges','team_name'=>'Domestic'),
+                            array('pageName'=>'Engineering RP', 'site'=>'CollegeDunia','URL'=>'https://collegedunia.com/btech-colleges','team_name'=>'Domestic'),
+                            array('pageName'=>'CAT EP', 'site'=>'CollegeDunia','URL'=>'https://collegedunia.com/exams/cat','team_name'=>'Domestic'),
+                            array('pageName'=>'JEE Main EP', 'site'=>'CollegeDunia','URL'=>'https://collegedunia.com/exams/jee-main','team_name'=>'Domestic'),
+                            array('pageName'=>'EP Child', 'site'=>'CollegeDunia','URL'=>'https://collegedunia.com/exams/jee-main/cutoff','team_name'=>'Domestic'),
+                            array('pageName'=>'EP Child', 'site'=>'CollegeDunia','URL'=>'https://collegedunia.com/exams/jee-main/important-books','team_name'=>'Domestic'),
+                            array('pageName'=>'EP Child', 'site'=>'CollegeDunia','URL'=>'https://collegedunia.com/exams/cat/practice-papers','team_name'=>'Domestic'),
+                            array('pageName'=>'MBA CHP', 'site'=>'CollegeDunia','URL'=>'https://collegedunia.com/courses/mba','team_name'=>'Domestic'),
+                            array('pageName'=>'Engineering CHP', 'site'=>'CollegeDunia','URL'=>'https://collegedunia.com/courses/btech','team_name'=>'Domestic'),
+                            array('pageName'=>'QDP', 'site'=>'CollegeDunia','URL'=>'','team_name'=>'Domestic'),
+                            array('pageName'=>'ADP', 'site'=>'CollegeDunia','URL'=>'https://collegedunia.com/news/e-266-upsee-mba-reservation','team_name'=>'Domestic'),
+
+                            array('pageName'=>'Home Page', 'site'=>'Careers360','URL'=>'https://www.careers360.com/','team_name'=>'Domestic'),
+                            array('pageName'=>'MBA CTP', 'site'=>'Careers360','URL'=>'https://bschool.careers360.com/colleges/list-of-mba-colleges-in-bengaluru','team_name'=>'Domestic'),
+                            array('pageName'=>'MBA CTP', 'site'=>'Careers360','URL'=>'https://bschool.careers360.com/colleges/list-of-mba-colleges-in-delhi-accepting-cat','team_name'=>'Domestic'),
+                            array('pageName'=>'MBA CTP', 'site'=>'Careers360','URL'=>'https://bschool.careers360.com/colleges/list-of-human-resource-management-colleges-in-chennai','team_name'=>'Domestic'),
+                            array('pageName'=>'Engineering CTP', 'site'=>'Careers360','URL'=>'https://engineering.careers360.com/colleges/list-of-engineering-colleges-in-bengaluru','team_name'=>'Domestic'),
+                            array('pageName'=>'Engineering CTP', 'site'=>'Careers360','URL'=>'https://engineering.careers360.com/colleges/list-of-engineering-colleges-in-delhi-accepting-jee-main','team_name'=>'Domestic'),
+                            array('pageName'=>'Engineering CTP', 'site'=>'Careers360','URL'=>'https://engineering.careers360.com/colleges/list-of-be-btech-in-automobile-engineering-colleges-in-chennai','team_name'=>'Domestic'),
+                            array('pageName'=>'UILP', 'site'=>'Careers360','URL'=>'https://www.careers360.com/university/indian-institute-of-management-ahmedabad','team_name'=>'Domestic'),
+                            array('pageName'=>'UILP', 'site'=>'Careers360','URL'=>'https://bschool.careers360.com/colleges/faculty-of-management-studies-university-of-delhi-delhi','team_name'=>'Domestic'),
+                            array('pageName'=>'UILP', 'site'=>'Careers360','URL'=>'https://www.careers360.com/university/lovely-professional-university-phagwara','team_name'=>'Domestic'),
+                            array('pageName'=>'UILP Child', 'site'=>'Careers360','URL'=>'https://www.careers360.com/university/indian-institute-of-management-ahmedabad/reviews','team_name'=>'Domestic'),
+                            array('pageName'=>'UILP Child', 'site'=>'Careers360','URL'=>'https://www.careers360.com/university/indian-institute-of-management-ahmedabad/courses','team_name'=>'Domestic'),
+                            array('pageName'=>'UILP Child', 'site'=>'Careers360','URL'=>'https://www.careers360.com/colleges/symbiosis-centre-for-management-and-human-resource-development-pune/courses','team_name'=>'Domestic'),
+                            array('pageName'=>'CLP', 'site'=>'Careers360','URL'=>'https://www.careers360.com/university/indian-institute-of-management-ahmedabad/pgpm-course','team_name'=>'Domestic'),
+                            array('pageName'=>'CLP', 'site'=>'Careers360','URL'=>'https://bschool.careers360.com/colleges/faculty-of-management-studies-university-of-delhi-delhi/courses/mba','team_name'=>'Domestic'),
+                            array('pageName'=>'CLP', 'site'=>'Careers360','URL'=>'https://www.careers360.com/university/lovely-professional-university-phagwara/btech-computer-science-and-engineering-course','team_name'=>'Domestic'),
+                            array('pageName'=>'MBA RP', 'site'=>'Careers360','URL'=>'https://bschool.careers360.com/colleges/ranking','team_name'=>'Domestic'),
+                            array('pageName'=>'Engineering RP', 'site'=>'Careers360','URL'=>'https://engineering.careers360.com/colleges/ranking','team_name'=>'Domestic'),
+                            array('pageName'=>'CAT EP', 'site'=>'Careers360','URL'=>'https://bschool.careers360.com/exams/cat','team_name'=>'Domestic'),
+                            array('pageName'=>'JEE Main EP', 'site'=>'Careers360','URL'=>'https://engineering.careers360.com/exams/jee-main','team_name'=>'Domestic'),
+                            array('pageName'=>'MBA CHP', 'site'=>'Careers360','URL'=>'https://www.careers360.com/finance-course','team_name'=>'Domestic'),
+                            array('pageName'=>'Engineering CHP', 'site'=>'Careers360','URL'=>'','team_name'=>'Domestic'),
+                            array('pageName'=>'QDP', 'site'=>'Careers360','URL'=>'https://www.careers360.com/question-college-me-admission-lene-k-liye-cat-ka-hona-jaruri-hai','team_name'=>'Domestic'),
+                            array('pageName'=>'ADP', 'site'=>'Careers360','URL'=>'https://news.careers360.com/universities-granted-graded-autonomy-need-maintain-high-academic-standards-javadekar','team_name'=>'Domestic'),
+                            
+                            //  // Adding SA URLS
+                            array('pageName'=>'SA Home Page', 'site'=>'Shiksha','URL'=>'https://studyabroad.shiksha.com/','team_name'=>'Studyabroad'),
+                            array('pageName'=>'SA Home Page', 'site'=>'TopUniversities','URL'=>'https://www.topuniversities.com/','team_name'=>'Studyabroad'),
+                            array('pageName'=>'SA Home Page', 'site'=>'Yocket','URL'=>'https://yocket.in/','team_name'=>'Studyabroad'),
+
+                            array('pageName'=>'SA ULP','site'=>'Shiksha','URL'=>'https://studyabroad.shiksha.com/canada/universities/university-of-toronto','team_name'=>'Studyabroad'),
+                            array('pageName'=>'SA ULP','site'=>'CollegeDunia','URL'=>'https://collegedunia.com/canada/college/104-university-of-toronto-st-george-toronto','team_name'=>'Studyabroad'),
+                            array('pageName'=>'SA ULP','site'=>'TopUniversities','URL'=>'https://www.topuniversities.com/universities/university-toronto','team_name'=>'Studyabroad'),
+                            array('pageName'=>'SA ULP','site'=>'Yocket','URL'=>'https://yocket.in/university-reviews/university-of-toronto-3005/business-and-management','team_name'=>'Studyabroad'),
+
+                            
+                            
+
+                            array('pageName'=>'SA Exam','site'=>'Shiksha','URL'=>'https://studyabroad.shiksha.com/exams/gmat','team_name'=>'Studyabroad'),
+                            array('pageName'=>'SA Exam','site'=>'CollegeDunia','URL'=>'https://collegedunia.com/exams/gmat','team_name'=>'Studyabroad'),
+
+                            array('pageName'=>'SA Article','site'=>'Shiksha','URL'=>'https://studyabroad.shiksha.com/cost-of-living-in-canada-for-international-students-articlepage-544','team_name'=>'Studyabroad'),
+                            array('pageName'=>'SA Article','site'=>'Hotcoursesabroad','URL'=>'https://www.hotcoursesabroad.com/india/find-your-course/how-to-choose-the-right-study-abroad-destinations/cost-of-studying-in-canada/','team_name'=>'Studyabroad'),
+
+                            array('pageName'=>'SA SOP','site'=>'Shiksha','URL'=>'https://studyabroad.shiksha.com/writing-a-winning-statement-of-purpose-applycontent1712','team_name'=>'Studyabroad'),
+                            array('pageName'=>'SA SOP','site'=>'Hotcoursesabroad','URL'=>'https://www.hotcoursesabroad.com/india/prepare-to-apply/how-to-write-a-statement-of-purpose/','team_name'=>'Studyabroad'),
+
+                             array('pageName'=>'SA CTP','site'=>'Shiksha','URL'=>'https://studyabroad.shiksha.com/australia/mba-colleges-dc','team_name'=>'Studyabroad'),
+                            array('pageName'=>'SA CTP','site'=>'Yocket','URL'=>'https://yocket.in/universities/masters-in-management/study-in-australia','team_name'=>'Studyabroad'),
+
+                            array('pageName'=>'SA Ranking','site'=>'Shiksha','URL'=>'https://studyabroad.shiksha.com/top-mba-colleges-in-usa-abroadranking30','team_name'=>'Studyabroad'),
+                            array('pageName'=>'SA Ranking','site'=>'TopUniversities','URL'=>'https://www.topuniversities.com/university-rankings/mba-rankings/us/2019','team_name'=>'Studyabroad'),
+                            array('pageName'=>'SA Ranking','site'=>'TopUniversities','URL'=>'https://www.topuniversities.com/university-rankings/mba-rankings/us/2019','team_name'=>'Studyabroad'),
+
+                            #CLP
+array('pageName'=>'SA CLP','site'=>'Shiksha','URL'=>'https://studyabroad.shiksha.com/canada/universities/university-of-toronto/msc-computer-science','team_name'=>'Studyabroad'),
+ array('pageName'=>'SA CLP','site'=>'CollegeDunia','URL'=>'https://collegedunia.com/canada/college/104-university-of-toronto-st-george-toronto/programs?course_id=8116','team_name'=>'Studyabroad'),
+
+#Search 
+array('pageName'=>'SA Search','site'=>'Shiksha','URL'=>'https://studyabroad.shiksha.com/search-abroad/?q=harvard&u[]=100&qer=yes&tid=1481607&ref=searchPage','team_name'=>'Studyabroad'),
+array('pageName'=>'SA Search','site'=>'Admitkard','URL'=>'https://www.admitkard.com/filter/courses?courseLevel=pg&university=5ba9fbd45eea472ae44ce990&areaOfStudy=5ba11c95cccffa1302b8f900&state=','team_name'=>'Studyabroad'),
+
+#Country Home
+array('pageName'=>'SA Country Home','site'=>'Shiksha','URL'=>'https://studyabroad.shiksha.com/usa','team_name'=>'Studyabroad'),
+
+#Country Page
+array('pageName'=>'SA Country Page','site'=>'Shiksha','URL'=>'https://studyabroad.shiksha.com/usa/universities','team_name'=>'Studyabroad'),
+
+#Scholarship Home Page
+array('pageName'=>'SA Scholarship Home Page','site'=>'Shiksha','URL'=>'https://studyabroad.shiksha.com/scholarships','team_name'=>'Studyabroad'),
+
+#Scholarship Home Page
+array('pageName'=>'SA Country Scholarship Page','site'=>'Shiksha','URL'=>'https://studyabroad.shiksha.com/scholarships/australia-cp','team_name'=>'Studyabroad'),
+
+#Scholarship Search Page
+array('pageName'=>'SA Scholarship Search Page','site'=>'Shiksha','URL'=>'https://studyabroad.shiksha.com/scholarships/masters-courses?ct=5,3&ss=240','team_name'=>'Studyabroad'),
+
+#Scholarship Detail Page
+array('pageName'=>'SA Scholarship Detail Page','site'=>'Shiksha','URL'=>'https://studyabroad.shiksha.com/scholarships/ontario-graduate-scholarship-other-master-programs','team_name'=>'Studyabroad')
+);
+
+?>

@@ -1,0 +1,16 @@
+.allo-dv
+{padding: 20px 10px;}
+.allo-dv ul li
+{list-style: none; margin-bottom: 10px;}
+.allo-dv ul li label
+{font-weight: 600;}
+.allo-dv ul li ul.cou-lst
+{border: 1px solid #ccc; padding: 5px 10px;width: 200px; display: block; margin-top: 15px; height: 120px; overflow-y: scroll;}
+.allo-dv ul li ul.cou-lst li
+{list-style: none; margin-bottom: 8px; color: #333;}
+.allo-dv ul li ul.cou-lst li input[type="checkbox"]
+{margin:0 5px 0 0; position: relative; top: 2px;}
+.cn-btn
+{font-size: 14px; margin-left: 10px;}
+.disabled{background-color: #ddd;}
+.focusedDiv{width: 500px;}

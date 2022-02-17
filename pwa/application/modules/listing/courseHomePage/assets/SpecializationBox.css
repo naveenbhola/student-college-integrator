@@ -1,0 +1,44 @@
+.specialization-box{
+    border:1px solid #ccc;
+    background: #fff;
+    margin: 12px 0px 0px;
+}
+.specialization-box .box-header{
+    padding: 10px;
+    background: #003D5C;
+}
+.specialization-box .box-header h3{
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+}
+ul.specialization-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+ul.specialization-list li{
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+ul.specialization-list li:last-child{
+    border-bottom: none;
+}
+
+ul.specialization-list li a{
+    font-size: 0.875rem;
+    color:#008489;
+    font-weight: 400;
+}
+ul.specialization-list li p{
+    font-size: 0.875rem;
+    color:#333;
+}
+ul.specialization-list li .align_center{
+    margin: 0 auto;display: block;width: 130px;
+}
+.grayLabel{font-size: 0.875rem;color: #666;margin-right: 7px;}
+.specialization-box a > strong{display: block;}
+

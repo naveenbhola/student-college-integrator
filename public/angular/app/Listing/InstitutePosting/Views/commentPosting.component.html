@@ -1,0 +1,60 @@
+<div class="row" id="seo_specification_form">
+  <div mysize="12">
+      <div class="x_panel">
+         <div [class.x_title]="opened">
+               <ul class="nav navbar-left panel_toolbox">
+                      <li><a class="collapse-link" (click)="toggle()"><i [class]="opened?' fa fa-chevron-up':' fa fa-chevron-down'"></i></a></li>
+                </ul>
+             <h2>Comments</h2>
+             <div class="clearfix"></div>
+         </div>
+               <div class="x_content" [hidden]="!opened">             
+                  <div class="form-group">
+                     <label mysize="3" class="cmsFont cmsAlignLeft">Enter comments<span class="required">*</span></label>
+                     <div mysize="6">
+                     	<textarea #postingComments="ngModel" type="text" name="postingComments" [(ngModel)]="instituteObj.posting_comments" [myrequired]="1" [mymaxlength]="'250'" [registerForm]="form" [registerModel]="postingComments"></textarea>
+                     	<span class="help-block text-danger cmsFont">
+                             <span *ngIf="postingComments.errors?.maxlength">{{postingComments.errors?.maxlength}}</span>
+                             <span *ngIf="postingComments.errors?.required">{{postingComments.errors?.required}}</span>
+                         </span>
+                     </div>
+                     <div mysize="3" class="bottom-align-text">
+			            <button *ngIf="instituteObj.institute_id!=0" type="button" (click) = "viewComments()" class="btn cmsButton cmsFont">View Comments</button>
+			         </div>
+                  </div>
+              </div>
+          </div>
+    </div>
+</div>
+
+<div bsModal #commentModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" [config]="{backdrop: 'static',keyboard: false}">
+  <div class="modal-dialog modal-lg" style="width:1000px;margin-right:30px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn cmsButton cmsFont close" (click)="commentModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">Comments</h4>
+      </div>
+      <div class="modal-body" style="position: relative;overflow-y: auto;max-height: 450px;">
+      	<table class="table">
+      		<tr class="info">
+      			<th width="5%">#</th>
+      			<th width="55%">Comment</th>
+      			<th width="20%">User Name</th>
+      			<th width="20%">Date</th>
+      		</tr>
+      		<tr *ngFor="let commentRow of commentHistoryData">
+      			<td>{{commentRow.key}}</td>
+      			<td class="active">{{commentRow.comment}}</td>
+      			<td title="{{commentRow.userId}}">{{commentRow.name}}</td>
+      			<td>{{commentRow.addTime}}</td>
+      		</tr>
+      	</table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" (click) = "commentModal.hide()" class="btn cmsButton cmsFont ">Close</button>
+      </div>               
+    </div>
+  </div>
+</div>

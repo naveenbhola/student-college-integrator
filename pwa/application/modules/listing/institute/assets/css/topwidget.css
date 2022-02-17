@@ -1,0 +1,21 @@
+.ilp_head .inst-name{width:91%;}
+a.lyr-link{color: #008489;}
+.more-btn{margin-left: 5px;}
+.clg_location_icon{
+	background: url(//images.shiksha.ws/pwa/public/images/clp-sprite-pwa-v1.svg) no-repeat;
+	height: 16px;
+	position: static;
+	width: 12px;
+	background-position: -79px -51px;
+    display: inline-block;
+}
+a.chng-brnch {
+    font-weight: 400;
+    font-size: 0.75rem;
+}
+
+.ilp .clg-detail ul li span .info-icon{position: relative;
+    left: 0;
+    right: auto;
+    top: 3px;
+}

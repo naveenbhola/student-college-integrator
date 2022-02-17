@@ -1,0 +1,14 @@
+.pwa_card{margin-bottom: 12px;box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);background: #fff;}
+.sub_block{padding: 12px;}
+.signup-h3{font-size: 0.875rem;color: #000;margin-bottom: 5p;font-weight: 600;}
+.inf-txts {font-size: 0.875rem;color: #000;font-weight: 400;}
+.nw-btn {background: #008489;padding: 6px 19px;color: #fff;margin: 12px 0 16px;border-radius: 2px;font-size: 1rem;font-weight: 600;display: inline-block;}
+.z-ind {z-index: 0;}
+.background {position: relative;z-index: 1;margin: 0 0 15px;}
+.background:before {border-top: 1px solid #dfdfdf;content: "";margin: 0 auto;position: absolute;top: 50%;left: 0;right: 0;bottom: 0;width: 85%;z-index: -1;}
+.background>span {background: #fff;padding: 0 8px;font-size: 1rem;color: #666;}
+.inf-li>li {padding: 0 8px;font-size: 1rem;color: #000;display: inline-block;position: relative;line-height: 18px;text-align: center;width: 24%;}
+.inf-li>li:first-child:before{width: 0;height: 0;border: transparent;}
+.inf-li>li:before {content: '';position: absolute;width: 5px;border-left: 1px solid #ccc;left: 0;top: 0;height: 100%;}
+.text-center{text-align: center;}
+.inf-li>li>strong {display: block;font-weight: 600;font-size: 1rem;}

@@ -1,0 +1,51 @@
+/*Career CMS CSS*/
+#career-cms-wrapper{padding-bottom:30px; font:normal 12px Tahoma, Geneva, sans-serif}
+.sectoion-title{display:block; border-bottom:1px solid #dcdcdc; padding-bottom:6px; margin-bottom:15px; overflow:hidden}
+.sectoion-title h2{float:left; font-size:18px; color:#f96600 !important; font-weight:normal; padding-top:6px}
+.career-tab{width:100%; float:left; border-bottom:1px solid #cbcbcb; margin-bottom:20px}
+.career-tab ul{padding-left:15px}
+.career-tab ul li{float:left; padding:10px 12px; font:normal 18px Arial, Helvetica, sans-serif; background:#ececec; border:1px solid #cbcbcb; border-bottom:0 none; margin-right:10px; cursor:pointer; position:relative}
+.career-tab ul li.active{background:#fff; top:1px; cursor:auto}
+.career-tab ul li a{color:#989898; text-decoration:none !important; outline:0 none}
+.career-tab ul li.active a{color:#000;}
+#career-cms-wrapper .universal-select, #career-cms-wrapper .universal-txt-field{width:98%}
+.cms-section{float:left; width:100%; margin-bottom:20px}
+.cms-section h3{font:bold 14px Tahoma, Geneva, sans-serif; margin-bottom:15px; display:block}
+.cms-section ul li{width:100%; float:left; margin-bottom:14px;}
+.cms-section ul li label{width:150px; text-align:right; float:left; display:block; padding:5px 5px 0 0; font-size:13px}
+.cms-section ul li div.career-fields{width:775px; float:left}
+.btn-cont, .btn-cont2{border-top:1px solid #dcdcdc; padding-top:13px; padding-left:156px; margin-top:8px; float:left; width:84%}
+.btn-cont2{padding-left:25px; margin-top:20px; width:97%}
+.steps-main-block{padding-left:25px}
+.steps-block{background:#f7f7f7; padding:12px 12px 5px 12px; width:475px; margin-bottom:20px}
+.steps-block ul li{margin-bottom:15px}
+.steps-block ul li label{width:100px}
+.steps-block ul li div.career-fields{width:365px; float:left}
+.remove-steps{font:normal 13px Arial, Helvetica, sans-serif; float:right; padding-top:8px}
+.user-note{font-size:11px; margin-left:3px}
+.custom-title{font-size:14px; margin-bottom:15px}
+.sal-range{margin-right:30px; float:left; font-size:13px}
+.sal-range select{font-size:13px}
+.add-course-block label{padding-top:18px !important}
+.label-level-2{padding-top:27px; display:block}
+.add-course-box{background:#f7f7f7; padding:10px; width:420px !important}
+
+.path-cont{font:normal 16px Georgia, 'Times New Roman', Times, serif; width:760px; float:left; margin-bottom:20px}
+.path-cont label{float:left; width:60px; display:block; padding-top:22px}
+.path-steps{font-size:14px; border:1px solid #f1ec94; background:#fffdd6; height:65px; float:left; -moz-box-shadow:2px 2px 2px #BABABA; -webkit-box-shadow:2px 2px 2px #BABABA; box-shadow:2px 2px 2px #BABABA;}
+.path-steps ul li{float:left; background:url(../images/careers/step-arrow.png) right top no-repeat; height:57px; padding:4px 22px 5px 4px; width: 116px;}
+.path-steps ul li.last{background-image:none; position:relative; width:86px; padding-right:30px}
+.path-steps ul li.last p{width:100%;}
+/*.course-pic{width:40px; height:40px; position:absolute; right:0; bottom:0}
+.course-pic img{width:40px; height:40px;}*/
+.path-steps ul li h5{color:#c74a0c; word-wrap:break-word;}
+.path-steps ul li p{color:#333; font-size:12px; margin-top:1px; display: block; word-wrap:break-word; width: 116px;}
+.path-2{width:400px; background-position:right top; border-left:1px solid #f1ec94}
+.or-txt{width:28px;text-align:center; float:left; padding-top:7px}
+
+
+.featured-career-form{width:100%;float: left; padding-left:100px; padding-bottom:50px;-moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box;}
+.featured-career-form ul li{margin-bottom:10px; font-size:12px; color: #666;}
+.featured-career-form ul li label{width:60px; display:inline-block;}
+.featured-career-form ul li .featured-select{width:200px; padding:6px; border: 1px solid #ccc; background: #fff; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px;}
+.client-txtfield{padding:6px; border:1px solid #ccc; width:162px;-moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px; margin-right:10px;}

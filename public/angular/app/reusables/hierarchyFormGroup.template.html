@@ -1,0 +1,5 @@
+<div *ngIf="hierarchyTree">
+	<hierarchyFormField *ngFor="let hierarchy of hierarchyMapping.controls;let i=index;" [showAll]="showAll" [showNone]="showNone" [showPrimary]="showPrimary" [hierarchyTree]="hierarchyTree" [hierarchy]="hierarchy" [hierarchyArray]="hierarchyArray" [selectedHierarchy]="selectedHierarchies ? selectedHierarchies[i]:null" [numberOfHierarchies]="hierarchyMapping.length" [index]="i" [defaultOption]="defaultOption" (removeHierarchyEvent)="removeHierarchy($event)"></hierarchyFormField>
+	<button type="button" (click)="addItemToHierarchy()" class="btn btn-link">Add More</button>
+	<span class="help-block text-danger" *ngIf="!hierarchyMapping.valid">Hierarchy is Required</span>	
+</div>

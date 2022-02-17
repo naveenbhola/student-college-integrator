@@ -1,0 +1,8 @@
+.tbl-seo{margin: 0 auto;max-height: 88%; overflow-y:scroll}
+.tbl-seo h1{display: inline-block; width: 90%; vertical-align: middle; border-collapse: collapse;    margin: 0;font-size: 24px;font-weight: 600;}
+/*.tbl-seo table {width: 100%;margin-top: 10px;display: table;border-collapse: collapse; font-size: 14px;}
+.tbl-seo table tr th{font-weight: 600; text-align: center;}
+.tbl-seo table tr td:first-child, .tbl-seo table tr th:first-child{text-align: left}
+.tbl-seo table tr td, .tbl-seo table tr th{border: 1px solid #eee; border-collapse: collapse; padding: 5px;text-align: left;}
+*/
+.ranking-table-seo{display: none;}

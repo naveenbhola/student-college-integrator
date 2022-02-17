@@ -1,0 +1,1404 @@
+{
+    "status": "success",
+    "data": {
+        "instituteUrl": "https://shikshatest05.infoedge.com/college/indian-institute-of-management-udaipur-23336",
+        "instituteName": "Indian Institute of Management, Udaipur",
+        "instituteId": 36085,
+        "courseUrl": "/mba/course/post-graduate-program-in-management-indian-institute-of-management-udaipur-164788",
+        "courseId": 164788,
+        "courseName": "Post Graduate Program in Management",
+        "packType": 7,
+        "currentLocation": {
+            "fees": null,
+            "course_id": 164788,
+            "listing_location_id": 116963,
+            "state_id": 121,
+            "city_id": 202,
+            "locality_id": 0,
+            "state_name": "Rajasthan",
+            "city_name": "Udaipur",
+            "locality_name": null,
+            "is_main": 1,
+            "contact_details": {
+                "listing_id": null,
+                "listing_location_id": 116963,
+                "website_url": "http://www.iimu.ac.in",
+                "address": "Indian Institute of Management Udaipur,\nBalicha",
+                "latitude": "24.5007",
+                "longitude": "73.6627",
+                "admission_contact_number": "9983066656",
+                "admission_email": "pgpadmission@iimu.ac.in",
+                "generic_contact_number": "",
+                "generic_email": "kavita.chotrani@iimu.ac.in",
+                "google_url": "https://shikshatest02.infoedge.com/mediadata/images/listingGoogle/listingLocationlive116963.jpg",
+                "actual_listing_location_id": 116963
+            }
+        },
+
+"collegeWidget": {
+        "collegeWidgetData": {
+            "providesAffiliaion": 0,
+            "constituentCollegeText": "Most viewed colleges and departments of",
+            "affiliatedCollegesText": null,
+            "tabText": "Colleges",
+            "topInstituteData": {
+                "43137": {
+                    "name": "Institute of Management Studies, Banaras Hindu University",
+                    "shortName": "IM BHU",
+                    "listingType": "institute",
+                    "mediaUrl": null,
+                    "mediaThumbUrl": null
+                },
+                "53808": {
+                    "name": "Department of Chemistry - Indian Institute of Technology, Varanasi",
+                    "shortName": "Department of Chemistry",
+                    "listingType": "institute",
+                    "mediaUrl": null,
+                    "mediaThumbUrl": null
+                },
+                "53809": {
+                    "name": "Department of Pharmaceutical Engineering and Technology - Indian Institute of Technology, Varanasi",
+                    "shortName": "Department of Pharmaceutical Engineering and Technology",
+                    "listingType": "institute",
+                    "mediaUrl": null,
+                    "mediaThumbUrl": null
+                },
+                "53817": {
+                    "name": "Department of Electronics Engineering - Indian Institute of Technology, Varanasi",
+                    "shortName": "Department of Electronics Engineering",
+                    "listingType": "institute",
+                    "mediaUrl": null,
+                    "mediaThumbUrl": null
+                },
+                "53818": {
+                    "name": "Department of Mechanical Engineering - Indian Institute of Technology, Varanasi",
+                    "shortName": "Department of Mechanical Engineering",
+                    "listingType": "institute",
+                    "mediaUrl": null,
+                    "mediaThumbUrl": null
+                },
+                "53819": {
+                    "name": "Department of Metallurgical Engineering - Indian Institute of Technology, Varanasi",
+                    "shortName": "Department of Metallurgical Engineering",
+                    "listingType": "institute",
+                    "mediaUrl": null,
+                    "mediaThumbUrl": null
+                }
+            },
+            "topInstituteOrder": {
+                "1": 53808,
+                "2": 53819,
+                "3": 53809,
+                "4": 43137,
+                "5": 53817,
+                "6": 53818
+            },
+            "instituteCount": 22,
+            "showViewMoreCTA": 1
+        },
+        "agrregateReviewsData": {
+            "aggregateRatingDisplayOrder": {
+                "avgSalaryPlacementRating": "Placements",
+                "campusFacilitiesRating": "Infrastructure",
+                "facultyRating": "Faculty & Course Curriculum",
+                "crowdCampusRating": "Crowd & Campus Life",
+                "moneyRating": "Worth the Money"
+            },
+            "intervalsDisplayOrder": {
+                "4-5": ">4-5",
+                "3-4": ">3-4",
+                "2-3": ">2-3",
+                "1-2": "1-2"
+            },
+            "ratingIdToDisplayNameMapping": {
+                "1": "Worth the Money",
+                "2": "Crowd & Campus Life",
+                "3": "Placements",
+                "4": "Infrastructure",
+                "5": "Faculty & Course Curriculum",
+                "6": "Infrastructure",
+                "7": "Placements",
+                "8": "Infrastructure",
+                "9": "Infrastructure",
+                "10": "Placements"
+            },
+            "aggregateReviewData": {
+                "43137": null,
+                "53808": null,
+                "53809": null,
+                "53817": {
+                    "totalCount": 10,
+                    "aggregateRating": {
+                        "averageRating": {
+                            "count": 10,
+                            "sum": 42.4,
+                            "mean": 4.2
+                        },
+                        "facultyRating": {
+                            "count": 10,
+                            "sum": 38,
+                            "mean": 3.8
+                        },
+                        "campusFacilitiesRating": {
+                            "count": 10,
+                            "sum": 36,
+                            "mean": 3.6
+                        },
+                        "avgSalaryPlacementRating": {
+                            "count": 10,
+                            "sum": 47,
+                            "mean": 4.7
+                        },
+                        "crowdCampusRating": {
+                            "count": 10,
+                            "sum": 44,
+                            "mean": 4.4
+                        },
+                        "moneyRating": {
+                            "count": 10,
+                            "sum": 47,
+                            "mean": 4.7
+                        }
+                    },
+                    "intervalRatingCount": {
+                        "1-2": 0,
+                        "2-3": 0,
+                        "3-4": 5,
+                        "4-5": 5
+                    }
+                },
+                "53818": {
+                    "totalCount": 10,
+                    "aggregateRating": {
+                        "averageRating": {
+                            "count": 10,
+                            "sum": 40.4,
+                            "mean": 4
+                        },
+                        "facultyRating": {
+                            "count": 10,
+                            "sum": 35,
+                            "mean": 3.5
+                        },
+                        "campusFacilitiesRating": {
+                            "count": 10,
+                            "sum": 36,
+                            "mean": 3.6
+                        },
+                        "avgSalaryPlacementRating": {
+                            "count": 10,
+                            "sum": 43,
+                            "mean": 4.3
+                        },
+                        "crowdCampusRating": {
+                            "count": 10,
+                            "sum": 43,
+                            "mean": 4.3
+                        },
+                        "moneyRating": {
+                            "count": 10,
+                            "sum": 45,
+                            "mean": 4.5
+                        }
+                    },
+                    "intervalRatingCount": {
+                        "1-2": 0,
+                        "2-3": 0,
+                        "3-4": 6,
+                        "4-5": 4
+                    }
+                },
+                "53819": {
+                    "totalCount": 7,
+                    "aggregateRating": {
+                        "averageRating": {
+                            "count": 7,
+                            "sum": 28.2,
+                            "mean": 4
+                        },
+                        "facultyRating": {
+                            "count": 7,
+                            "sum": 24,
+                            "mean": 3.4
+                        },
+                        "campusFacilitiesRating": {
+                            "count": 7,
+                            "sum": 24,
+                            "mean": 3.4
+                        },
+                        "avgSalaryPlacementRating": {
+                            "count": 7,
+                            "sum": 34,
+                            "mean": 4.9
+                        },
+                        "crowdCampusRating": {
+                            "count": 7,
+                            "sum": 28,
+                            "mean": 4
+                        },
+                        "moneyRating": {
+                            "count": 7,
+                            "sum": 31,
+                            "mean": 4.4
+                        }
+                    },
+                    "intervalRatingCount": {
+                        "1-2": 0,
+                        "2-3": 1,
+                        "3-4": 2,
+                        "4-5": 4
+                    }
+                }
+            }
+        }
+    },
+    "collegeCutOffWidget": {
+        "previewText": null,
+        "cutOffUrl": null
+    }
+,
+        "locations": {
+            "116963": {
+                "listingLocationId": 116963,
+                "stateId": 121,
+                "cityId": 202,
+                "localityId": 0,
+                "stateName": "Rajasthan",
+                "cityName": "Udaipur",
+                "localityName": null,
+                "main": true
+            }
+        },
+        "entryCourseTypeInformation": {
+            "type": "entry",
+            "credential": {
+                "id": 10,
+                "name": "Diploma"
+            },
+            "hierarchy": [
+                {
+                    "stream_id": 1,
+                    "substream_id": 0,
+                    "specialization_id": 0,
+                    "primary_hierarchy": 1
+                }
+            ],
+            "course_id": 164788,
+            "base_course": 101,
+            "course_level": {
+                "id": 15,
+                "name": "PG"
+            }
+        },
+        "courseVariant": 3,
+        "educationType": {
+            "id": 20,
+            "name": "Full Time"
+        },
+        "deliveryMethod": {
+            "id": 33,
+            "name": "Classroom"
+        },
+        "timeOfLearning": null,
+        "difficultyLevel": null,
+        "durationValue": 2,
+        "durationUnit": "years",
+        "showDurationDisclaimer": null,
+        "categoryPageLinks": [
+            {
+                "url": "/mba/colleges/mba-colleges-rajasthan",
+                "title": "MBA colleges in Rajasthan"
+            },
+            {
+                "url": "/business-management-studies/colleges/colleges-rajasthan",
+                "title": "Business & Management Studies colleges in Rajasthan"
+            }
+        ],
+        "recognitions": [],
+        "mediumOfInstruction": [
+            {
+                "id": 62,
+                "name": "English"
+            }
+        ],
+        "highlights": [
+            {
+                "description": "Students have an opportunity of spending the fifth trimester at one of partner management schools",
+                "description_type": "usp"
+            },
+            {
+                "description": "Partner schools are EDHEC, EM Normandie, HHL Leipzig School of Management, European Business School, Friedrich-Alexander-University Erlangen-Nurnberg",
+                "description_type": "usp"
+            },
+            {
+                "description": "As a part of compulsory Rural Immersion students spend a week in a village & work closely with NGOs to appreciate on-the-ground realities & challenges faced by those at the bottom of the pyramid.",
+                "description_type": "usp"
+            }
+        ],
+        "affiliationData": null,
+        "courseAccreditation": null,
+        "instituteAccrediation": null,
+        "courseFees": {
+            "year": 2017,
+            "feesUnit": 1,
+            "feesUnitName": "INR",
+            "fees": {
+                "periodType": "term",
+                "fees": {
+                    "1": {
+                        "general": {
+                            "value": 510000,
+                            "category": "general"
+                        }
+                    },
+                    "2": {
+                        "general": {
+                            "value": 560000,
+                            "category": "general"
+                        }
+                    }
+                },
+                "totalFees": {
+                    "general": {
+                        "value": 1070000,
+                        "category": "general"
+                    }
+                },
+                "oneTimePayment": {},
+                "showDisclaimer": false,
+                "totalIncludes": [
+                    "Tuition"
+                ],
+                "hostelFees": {}
+            },
+            "locationWiseFees": null,
+            "description": "Students have to pay Rs. 50,000 at the time of accepting the offer of admission.\nStudents have to pay Rs. 3,000 per year as Students Activity Fee and Rs. 3,000 in 2nd year as Alumni Association Fee.\nHostel Charges:\nMale: Rs.9,000 (1st-3rd term; twin sharing) & Rs.15,000 (4th-6th term; single room)\nFemale: Rs.9,000 (1st term; twin sharing) & Rs.15,000 (2nd term onwards; single room)\nMess Charges:\n1st year\nVegetarian - Rs.14,750 per term\nNon-vegetarian - Rs.17,000 per term\n2nd year\nVegetarian - Rs.14,750 per term for regular and Rs.17,550 per term for casual\nNon-vegetarian - Rs.17,000 per term for regular and Rs.19,550 per term for casual",
+            "categoryNameMapping": {
+                "general": "General"
+            }
+        },
+        "eligibility": {
+            "year": 2017,
+            "tenthDetails": null,
+            "twelthDetails": null,
+            "graduationDetails": {
+                "description": "Candidates appearing for the final year of bachelor’s degree/equivalent qualification examination and those who have completed degree requirements and are awaiting results can also apply on provisional basis.",
+                "scoreType": "percentage",
+                "categoryWiseScores": {
+                    "sc": {
+                        "score": 45,
+                        "category": "sc",
+                        "maxScore": 100
+                    },
+                    "general": {
+                        "score": 50,
+                        "category": "general",
+                        "maxScore": 100
+                    },
+                    "st": {
+                        "score": 45,
+                        "category": "st",
+                        "maxScore": 100
+                    },
+                    "obc": {
+                        "score": 50,
+                        "category": "general",
+                        "maxScore": 100
+                    },
+                    "international_students": {
+                        "score": 50,
+                        "category": "international_students",
+                        "maxScore": 100
+                    },
+                    "pwd": {
+                        "score": 45,
+                        "category": "pwd",
+                        "maxScore": 100
+                    }
+                },
+                "courseSpecMapping": []
+            },
+            "postGraduationDetails": null,
+            "exams": {
+                "exam:327": {
+                    "examId": 327,
+                    "examName": "CAT",
+                    "examUrl": "https://shikshatest05.infoedge.com/mba/exams/cat",
+                    "scoreType": "percentile",
+                    "categoryWiseScores": {
+                        "sc": {
+                            "score": 75,
+                            "category": "sc",
+                            "maxScore": 100
+                        },
+                        "general": {
+                            "score": 90,
+                            "category": "general",
+                            "maxScore": 100
+                        },
+                        "obc": {
+                            "score": 81,
+                            "category": "obc",
+                            "maxScore": 100
+                        },
+                        "st": {
+                            "score": 65,
+                            "category": "st",
+                            "maxScore": 100
+                        },
+                        "international_students": {
+                            "score": 90,
+                            "category": "general",
+                            "maxScore": 100
+                        },
+                        "pwd": {
+                            "score": 65,
+                            "category": "pwd",
+                            "maxScore": 100
+                        }
+                    },
+                    "cutOffData": {
+                        "cutOffYear": 2017,
+                        "cutOffUnit": "percentile",
+                        "roundsApplicable": true,
+                        "relatedStates": null,
+                        "roundsCutOffData": {
+                            "1": {
+                                "sc": {
+                                    "all_india": {
+                                        "score": 61,
+                                        "category": "all_india",
+                                        "maxScore": 100
+                                    }
+                                },
+                                "general": {
+                                    "all_india": {
+                                        "score": 96,
+                                        "category": "all_india",
+                                        "maxScore": 100
+                                    }
+                                },
+                                "obc": {
+                                    "all_india": {
+                                        "score": 78,
+                                        "category": "all_india",
+                                        "maxScore": 100
+                                    }
+                                },
+                                "st": {
+                                    "all_india": {
+                                        "score": 46,
+                                        "category": "all_india",
+                                        "maxScore": 100
+                                    }
+                                },
+                                "international_students": {
+                                    "all_india": {
+                                        "score": 96,
+                                        "category": "all_india",
+                                        "maxScore": 100
+                                    }
+                                },
+                                "pwd": {
+                                    "all_india": {
+                                        "score": 63,
+                                        "category": "all_india",
+                                        "maxScore": 100
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "minWorkEx": null,
+            "maxWorkEx": null,
+            "minAge": null,
+            "maxAge": null,
+            "internationalDescription": "Indian and foreign national living, working or studying outside India during the period January 1, 2017 to February 15, 2018 will be considered as ‘Overseas Candidate’ for admission. \nHowever, an overseas candidate who is expected to be in India in during CAT 2017 will not be eligible to apply under overseas category. Candidate residing in neighboring countries like Nepal from where there are no entry restrictions to India will also not be considered as ‘Overseas Candidate.\nThe candidate must have a valid Graduate Management Aptitude Test (GMAT) score. The scores of the GMAT taken during January 1, 2016 to December 31, 2017 will only be considered for processing. Candidates must have AWA/TOEFL score, if the language of instruction during undergraduate education has not been English.",
+            "description": null,
+            "categoryNameMapping": {
+                "sc": "SC",
+                "general": "General",
+                "st": "ST",
+                "obc": "OBC",
+                "international_students": "International Students",
+                "pwd": "PwD"
+            }
+        },
+        "courseStructure": {
+            "period": "year",
+            "periodWiseCourses": {
+                "1": [
+                    "Business Ethics",
+                    "Indian Social and Political Environment",
+                    "Legal Aspects of Business",
+                    "Managerial Oral Communication",
+                    "Macroeconomics",
+                    "Microeconomics for Managers",
+                    "Corporate Finance – I & II",
+                    "Human Resources Management",
+                    "Information Systems for Managers",
+                    "Operations Management"
+                ],
+                "2": [
+                    "Capstone Experience",
+                    "Electives"
+                ]
+            }
+        },
+        "admissionProcess": {
+            "1": {
+                "admissionName": "WAT and PI",
+                "description": "Shortlisted candidates will be called for Written Ability Test (WAT) and Personal Interview (PI) based their composite score calculated from the CAT/GMAT percentile, class 10th marks, 10+2 marks, graduation marks and Gender Diversity Factor.\nSelection criteria and weightage\nCAT/GMAT overall score – 28 points\nClass X marks – 10 points\nClass XII marks – 10 points\nGender diversity factor – 2 points"
+            },
+            "2": {
+                "admissionName": "Final Selection",
+                "description": "The final selection of the candidate would be based on CAT/GMAT score, performance in WAT & PI, academic diversity and work experience.\n\nSelection criteria and weightage\nCAT/GMAT score - 15 points\nPersonal Interview (PI) - 24 points\nWritten Ability Test (WAT) - 5 points\nAcademic diversity at Bachelor’s degree level – 2 points for BA (Gen/H) / B.Sc(Gen/H)/ BS, B.Com(Gen/H), BCA, BBA, B.Pharma, LL.B, MBBS, BDS or any other Non-Engineering subject areas\nWork experience – maximum 4 points based on length of service as on January 31, 2018"
+            }
+        },
+        "coursePartners": [],
+        "recruitmentCompanies": [
+            {
+                "companyName": "ACCENTURE",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/ACCENTURE.gif"
+            },
+            {
+                "companyName": "Aegis",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/Aegis.gif"
+            },
+            {
+                "companyName": "Amul",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/Amul.gif"
+            },
+            {
+                "companyName": "Aranca",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/1440055793phpn98Ahe.png"
+            },
+            {
+                "companyName": "BAIF Development Research Foundation Pune",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/1490249674phplrSeEO.jpeg"
+            },
+            {
+                "companyName": "Bajaj Auto",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/Bajaj.gif"
+            },
+            {
+                "companyName": "Berger Paints",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/1458537315phpHBmvzX.png"
+            },
+            {
+                "companyName": "Bharat Forge",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/1482234351phprpBB7C.jpeg"
+            },
+            {
+                "companyName": "Bharat Petroleum Corporation Limited",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/Bharat_PetroleumCorporationLimited.gif"
+            },
+            {
+                "companyName": "bombay dyeing",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/bombay_dyeing.jpg"
+            },
+            {
+                "companyName": "Bosch Ltd",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/1340799197php95yEvf.jpeg"
+            },
+            {
+                "companyName": "Boston Consulting Group",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/1455169341phpvc7MDq.jpeg"
+            },
+            {
+                "companyName": "Cognilytics",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/1461735644phpMvoTG1.png"
+            },
+            {
+                "companyName": "Cognizant",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/CognizantTechnology.gif"
+            },
+            {
+                "companyName": "CRISIL",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/CRISIL.gif"
+            },
+            {
+                "companyName": "Crompton Greaves",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/Crompton_Greaves.gif"
+            },
+            {
+                "companyName": "CSS Corp",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/1440135500phpqBVfWf.png"
+            },
+            {
+                "companyName": "Cummins",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/Cummins.gif"
+            },
+            {
+                "companyName": "Cummins  India Ltd",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/1482234370phpzEsEtq.jpeg"
+            },
+            {
+                "companyName": "Dell",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/Dell.gif"
+            },
+            {
+                "companyName": "Deloitte",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/1355719328phpWyWFFA.jpeg"
+            },
+            {
+                "companyName": "DeloitteConsulting",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/DeloitteConsulting.gif"
+            },
+            {
+                "companyName": "Ernst & Young",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/1440055795php5oiGMj.png"
+            },
+            {
+                "companyName": "Fiat",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/1419321030phpr2MBpN.jpeg"
+            },
+            {
+                "companyName": "Genpact",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/GENPACT.gif"
+            },
+            {
+                "companyName": "Hindustan Petroleum",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/1464587531phpVkPzmM.jpeg"
+            },
+            {
+                "companyName": "IBM",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/IBM.gif"
+            },
+            {
+                "companyName": "ICICI",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/ICICI.gif"
+            },
+            {
+                "companyName": "ICICI Prudential",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/ICICIPrudential.gif"
+            },
+            {
+                "companyName": "ICRA",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/ICRA.gif"
+            },
+            {
+                "companyName": "Info Edge (India) Ltd.",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/Info_Edge(India)Ltd_(99acres_com).gif"
+            },
+            {
+                "companyName": "ITC",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/ITC.gif"
+            },
+            {
+                "companyName": "Jindal Steel",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/JindalSteel.gif"
+            },
+            {
+                "companyName": "KPMG",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/KPMG.gif"
+            },
+            {
+                "companyName": "Larsen and Toubro",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/1298359404php3AyfId.jpeg"
+            },
+            {
+                "companyName": "Manhattan Associates",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/1460793955phpAGRYXn.jpeg"
+            },
+            {
+                "companyName": "Manipal Hospital",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/1482911524phpy7jnJz.png"
+            },
+            {
+                "companyName": "meru cab",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/1461317631phpUY20zE.png"
+            },
+            {
+                "companyName": "MTS",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/MTS.gif"
+            },
+            {
+                "companyName": "NTPC",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/NTPC.gif"
+            },
+            {
+                "companyName": "pwc",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/1470986799phpSrVs3v.png"
+            },
+            {
+                "companyName": "SchenkerLogistics",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/SchenkerLogistics.gif"
+            },
+            {
+                "companyName": "SYNTEL",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/SYNTEL.gif"
+            },
+            {
+                "companyName": "Tata Power",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/Tata_Power.gif"
+            },
+            {
+                "companyName": "TCS",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/TCS.gif"
+            },
+            {
+                "companyName": "TitanIndustries",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/TitanIndustries.gif"
+            },
+            {
+                "companyName": "TVS Group",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/1456387148phpovmRxF.png"
+            },
+            {
+                "companyName": "UAE Exchange",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/1447070409php27iZQk.png"
+            },
+            {
+                "companyName": "Wipro",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/1459772594phpTWDXae.png"
+            },
+            {
+                "companyName": "YesBank",
+                "logoUrl": "https://shikshatest02.infoedge.com/mediadata/images/YesBank.gif"
+            }
+        ],
+        "seatsData": {
+            "categoryWiseSeats": null,
+            "examWiseSeats": null,
+            "domicileWiseSeats": null,
+            "relatedStates": null,
+            "totalSeats": 240
+        },
+        "seoData": {
+            "canonicalUrl": "/mba/course/post-graduate-program-in-management-indian-institute-of-management-udaipur-164788",
+            "metaTitle": "Post Graduate Program in Management at IIM U, Udaipur | Shiksha",
+            "metaDescription": "Read 13 reviews and 14 questions about Post Graduate Program in Management at IIM U, Udaipur. Find out details like admission process, eligibility, fees, rankings, placements, infrastructure and much more at Shiksha.com",
+            "metaKeywords": null,
+            "prevUrl": null,
+            "nextUrl": null,
+            "ampUrl": "/mba/course/amp/post-graduate-program-in-management-indian-institute-of-management-udaipur-164788"
+        },
+        "scholarshipData": [
+            {
+                "listingId": null,
+                "description": "Central Sector Scholarship Scheme of Top Class Education for Scheduled Castes Students: This scholarship is offered by Ministry of Social Justice and Empowerment for Schedule Castes Students. For details visit: http://socialjustice.nic.in/scdtopsch.php",
+                "scholarship_type_id": 201,
+                "scholarship_type_name": "Scholarship"
+            },
+            {
+                "listingId": null,
+                "description": "Central Sector Scholarship Scheme of Top Class Education for Scheduled Tribes Students: This scholarship is offered by Ministry of Tribal Affairs. For details visit: http://tribal.nic.in/Content/TopClassEducationforSTStudents.aspx",
+                "scholarship_type_id": 201,
+                "scholarship_type_name": "Scholarship"
+            },
+            {
+                "listingId": null,
+                "description": "Merit-cum means based scholarship scheme belonging to the minority communities: This scholarship is offered by Ministry of Minority Affairs. For details visit: http://www.minorityaffairs.gov.in/SCHEMES/PERFORMANCE/Scholarship-Schemes/merit-cum-means-scholarship-scheme",
+                "scholarship_type_id": 201,
+                "scholarship_type_name": "Scholarship"
+            },
+            {
+                "listingId": null,
+                "description": "Scheme of Scholarship for Top Class Education for Students with Disabilities: This scholarship is offered by the government for students with disabilities. For details visit: http://www.disabilityaffairs.gov.in/content/page/scholarship-of-top-class-education.php",
+                "scholarship_type_id": 201,
+                "scholarship_type_name": "Scholarship"
+            },
+            {
+                "listingId": null,
+                "description": "Mukhya Mantri Sarvajan Uchcha Shiksha Scheme: This scholarship is offered by Government of Rajasthan (for students who belong to Rajasthan). For details visit: http://rajpms.nic.in/Public/Reports/View_Schemes.aspx",
+                "scholarship_type_id": 201,
+                "scholarship_type_name": "Scholarship"
+            }
+        ],
+        "placements": {
+            "type": "placements",
+            "course": "164788",
+            "course_type": "clientCourse",
+            "avg_salary": 1194000,
+            "batch_year": 2017,
+            "max_salary": 2020000,
+            "median_salary": null,
+            "min_salary": null,
+            "percentage_batch_placed": null,
+            "salary_unit": 1,
+            "salary_unit_name": "INR",
+            "total_international_offers": null,
+            "report_url": "https://shikshatest02.infoedge.com/mediadata/pdf/1507543592phpCCdwam.pdf",
+            "max_international_salary": 2840000,
+            "max_international_salary_unit": 1,
+            "max_international_salary_unit_name": "INR"
+        },
+        "intership": {
+            "type": "internship",
+            "course": null,
+            "course_type": null,
+            "avg_salary": null,
+            "batch_year": 2017,
+            "max_salary": null,
+            "median_salary": null,
+            "min_salary": null,
+            "percentage_batch_placed": null,
+            "salary_unit": null,
+            "salary_unit_name": null,
+            "total_international_offers": null,
+            "report_url": "https://shikshatest02.infoedge.com/mediadata/pdf/1507543645php0dh5PA.pdf",
+            "max_international_salary": null,
+            "max_international_salary_unit": null,
+            "max_international_salary_unit_name": null
+        },
+        "onlineFormData": null,
+        "importantDates": {
+            "source": "layer",
+            "examsHavingDates": {},
+            "isCourseDates": false,
+            "importantDates": null,
+            "showImportantViewMore": false
+        },
+        "media": {
+            "photos": {
+                "Academic Block": [
+                    {
+                        "mediaId": 591171,
+                        "thumbUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507527603php0p6Y7H_100x78.jpg",
+                        "mediaUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507527603php0p6Y7H.jpeg",
+                        "widgetThumbUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507527603php0p6Y7H_205x160.jpg",
+                        "mediaTitle": "Academic Block"
+                    },
+                    {
+                        "mediaId": 591170,
+                        "thumbUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507527574phpyveVLj_100x78.jpg",
+                        "mediaUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507527574phpyveVLj.jpeg",
+                        "widgetThumbUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507527574phpyveVLj_205x160.jpg",
+                        "mediaTitle": "Main Building"
+                    }
+                ],
+                "Hostel Building": [
+                    {
+                        "mediaId": 591193,
+                        "thumbUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507528995phpuCmS2u_100x78.jpg",
+                        "mediaUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507528995phpuCmS2u.jpeg",
+                        "widgetThumbUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507528995phpuCmS2u_205x160.jpg",
+                        "mediaTitle": "Hostel Area"
+                    },
+                    {
+                        "mediaId": 591195,
+                        "thumbUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507529034phpsXPV4a_100x78.jpg",
+                        "mediaUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507529034phpsXPV4a.jpeg",
+                        "widgetThumbUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507529034phpsXPV4a_205x160.jpg",
+                        "mediaTitle": "Hostel"
+                    }
+                ],
+                "Hostel Room": [
+                    {
+                        "mediaId": 591194,
+                        "thumbUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507529019phpxbpJMh_100x78.jpg",
+                        "mediaUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507529019phpxbpJMh.jpeg",
+                        "widgetThumbUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507529019phpxbpJMh_205x160.jpg",
+                        "mediaTitle": "Hostel Room"
+                    }
+                ],
+                "Classroom": [
+                    {
+                        "mediaId": 591192,
+                        "thumbUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507528963phpxaIyNW_100x78.jpg",
+                        "mediaUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507528963phpxaIyNW.jpeg",
+                        "widgetThumbUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507528963phpxaIyNW_205x160.jpg",
+                        "mediaTitle": "Classroom"
+                    },
+                    {
+                        "mediaId": 591191,
+                        "thumbUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507528949phpysOaal_100x78.jpg",
+                        "mediaUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507528949phpysOaal.jpeg",
+                        "widgetThumbUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507528949phpysOaal_205x160.jpg",
+                        "mediaTitle": "Classroom"
+                    }
+                ],
+                "Event": [
+                    {
+                        "mediaId": 591197,
+                        "thumbUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507529076phphx8kcJ_100x78.jpg",
+                        "mediaUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507529076phphx8kcJ.jpeg",
+                        "widgetThumbUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507529076phphx8kcJ_205x160.jpg",
+                        "mediaTitle": "Event"
+                    },
+                    {
+                        "mediaId": 591196,
+                        "thumbUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507529058phpD0OsAX_100x78.jpg",
+                        "mediaUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507529058phpD0OsAX.jpeg",
+                        "widgetThumbUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507529058phpD0OsAX_205x160.jpg",
+                        "mediaTitle": "Event"
+                    },
+                    {
+                        "mediaId": 591207,
+                        "thumbUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507530684phpjHdlPy_100x78.jpg",
+                        "mediaUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507530684phpjHdlPy.jpeg",
+                        "widgetThumbUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507530684phpjHdlPy_205x160.jpg",
+                        "mediaTitle": "Event"
+                    }
+                ],
+                "Campus Building": [
+                    {
+                        "mediaId": 591170,
+                        "thumbUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507527574phpyveVLj_100x78.jpg",
+                        "mediaUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507527574phpyveVLj.jpeg",
+                        "widgetThumbUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507527574phpyveVLj_205x160.jpg",
+                        "mediaTitle": "Main Building"
+                    }
+                ],
+                "Library": [
+                    {
+                        "mediaId": 591172,
+                        "thumbUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507527638phpbhnAx0_100x78.jpg",
+                        "mediaUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507527638phpbhnAx0.jpeg",
+                        "widgetThumbUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507527638phpbhnAx0_205x160.jpg",
+                        "mediaTitle": "Library"
+                    }
+                ],
+                "Main Building": [
+                    {
+                        "mediaId": 591170,
+                        "thumbUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507527574phpyveVLj_100x78.jpg",
+                        "mediaUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507527574phpyveVLj.jpeg",
+                        "widgetThumbUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507527574phpyveVLj_205x160.jpg",
+                        "mediaTitle": "Main Building"
+                    }
+                ]
+            },
+            "videos": [
+                {
+                    "mediaId": 59838,
+                    "mediaUrl": "https://www.youtube.com/v/a4wMgnXDU-A",
+                    "mediaTitle": "Campus View",
+                    "thumbUrl": "https://i.ytimg.com/vi/a4wMgnXDU-A/default.jpg"
+                }
+            ],
+            "photoSections": [
+                "Event",
+                "Academic Block",
+                "Classroom",
+                "Hostel Building",
+                "Campus Building",
+                "Hostel Room",
+                "Library",
+                "Main Building"
+            ]
+        },
+        "rankingsBySource": [
+            {
+                "sourceId": 21,
+                "publisherId": 8,
+                "publisherName": "MHRD",
+                "rankingPageId": 2,
+                "rank": 13,
+                "instituteId": 36085,
+                "courseId": 164788,
+                "year": 2018,
+                "url": "https://shikshatest05.infoedge.com/mba/ranking/top-mba-colleges-in-india/2-2-0-0-0"
+            },
+            {
+                "sourceId": 14,
+                "publisherId": 2,
+                "publisherName": "Business Today",
+                "rankingPageId": 2,
+                "rank": 28,
+                "instituteId": 36085,
+                "courseId": 164788,
+                "year": 2017,
+                "url": "https://shikshatest05.infoedge.com/mba/ranking/top-mba-colleges-in-india/2-2-0-0-0"
+            }
+        ],
+        "rankingsByLocation": [
+            {
+                "rankingPageId": 2,
+                "rankingPageName": "MBA",
+                "url": "https://shikshatest05.infoedge.com/mba/ranking/top-mba-colleges-in-udaipur/2-2-0-202-0",
+                "cityId": 202,
+                "stateId": 0,
+                "locationName": "Udaipur",
+                "examId": 0,
+                "examName": null
+            },
+            {
+                "rankingPageId": 2,
+                "rankingPageName": "MBA",
+                "url": "https://shikshatest05.infoedge.com/mba/ranking/top-mba-colleges-in-rajasthan/2-2-121-0-0",
+                "cityId": 0,
+                "stateId": 121,
+                "locationName": "Rajasthan",
+                "examId": 0,
+                "examName": null
+            }
+        ],
+        "rankingInterlinking": [
+            {
+                "url": "https://shikshatest05.infoedge.com/mba/ranking/top-mba-colleges-in-rajasthan/2-2-121-0-0",
+                "title": "MBA colleges in Rajasthan"
+            }
+        ],
+        "alsoViewedCourses": [
+            {
+                "instituteName": "Indian Institute of Management, Raipur",
+                "instituteId": 32740,
+                "instituteUrl": "https://shikshatest05.infoedge.com/college/indian-institute-of-management-raipur-32740",
+                "imageUrl": "https://shikshatest02.infoedge.com/mediadata/images/1508220437phpThuylV_210x157.jpg",
+                "cityName": "Raipur",
+                "establishYear": 2010,
+                "courseName": "Post Graduate Program in Management",
+                "courseUrl": "/mba/course/post-graduate-program-in-management-indian-institute-of-management-raipur-130065",
+                "courseId": 130065,
+                "listingType": "institute"
+            },
+            {
+                "instituteName": "Indian Institute of Management, Rohtak",
+                "instituteId": 32736,
+                "instituteUrl": "https://shikshatest05.infoedge.com/college/indian-institute-of-management-rohtak-32736",
+                "imageUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507619472phpcmKTVo_210x157.png",
+                "cityName": "Rohtak",
+                "establishYear": 2010,
+                "courseName": "Post Graduate Program in Management",
+                "courseUrl": "/mba/course/post-graduate-program-in-management-indian-institute-of-management-rohtak-130055",
+                "courseId": 130055,
+                "listingType": "institute"
+            },
+            {
+                "instituteName": "Indian Institute of Management, Tiruchirappalli",
+                "instituteId": 36076,
+                "instituteUrl": "https://shikshatest05.infoedge.com/college/indian-institute-of-management-tiruchirappalli-36076",
+                "imageUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507782425phpQ60qXq_210x157.jpg",
+                "cityName": "Tiruchirappalli",
+                "establishYear": 2011,
+                "courseName": "Post Graduate Program in Management",
+                "courseUrl": "/mba/course/post-graduate-program-in-management-indian-institute-of-management-tiruchirappalli-164564",
+                "courseId": 164564,
+                "listingType": "institute"
+            },
+            {
+                "instituteName": "Indian Institute of Management, Kashipur",
+                "instituteId": 36080,
+                "instituteUrl": "https://shikshatest05.infoedge.com/college/indian-institute-of-management-kashipur-uttarakhand-other-36080",
+                "imageUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507888439phpNz29Od_210x157.jpg",
+                "cityName": "Uttarakhand - Other",
+                "establishYear": 2011,
+                "courseName": "Post Graduate Program in Management",
+                "courseUrl": "/mba/course/post-graduate-program-in-management-indian-institute-of-management-kashipur-uttarakhand-other-164638",
+                "courseId": 164638,
+                "listingType": "institute"
+            },
+            {
+                "instituteName": "Indian Institute of Management, Nagpur",
+                "instituteId": 47711,
+                "instituteUrl": "https://shikshatest05.infoedge.com/college/indian-institute-of-management-nagpur-47711",
+                "imageUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507358730phpXT7W03_210x157.jpg",
+                "cityName": "Nagpur",
+                "establishYear": 2015,
+                "courseName": "Post Graduate Program in Management",
+                "courseUrl": "/mba/course/post-graduate-program-in-management-indian-institute-of-management-nagpur-241824",
+                "courseId": 241824,
+                "listingType": "institute"
+            },
+            {
+                "instituteName": "Indian Institute of Management, Amritsar",
+                "instituteId": 47709,
+                "instituteUrl": "https://shikshatest05.infoedge.com/college/indian-institute-of-management-amritsar-47709",
+                "imageUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507607054phpvF3Azn_210x157.jpg",
+                "cityName": "Amritsar",
+                "establishYear": 2015,
+                "courseName": "Post Graduate Program in Management",
+                "courseUrl": "/mba/course/post-graduate-program-in-management-indian-institute-of-management-amritsar-241811",
+                "courseId": 241811,
+                "listingType": "institute"
+            },
+            {
+                "instituteName": "Indian Institute of Management,Visakhapatnam",
+                "instituteId": 47712,
+                "instituteUrl": "https://shikshatest05.infoedge.com/college/indian-institute-of-management-visakhapatnam-47712",
+                "imageUrl": "https://shikshatest02.infoedge.com/mediadata/images/1489398192phpgt6i1p_210x157.jpg",
+                "cityName": "Visakhapatnam",
+                "establishYear": 2015,
+                "courseName": "Post Graduate Program in Management",
+                "courseUrl": "/mba/course/post-graduate-program-in-management-indian-institute-of-management-visakhapatnam-241826",
+                "courseId": 241826,
+                "listingType": "institute"
+            },
+            {
+                "instituteName": "Indian Institute of Management, Ranchi",
+                "instituteId": 32728,
+                "instituteUrl": "https://shikshatest05.infoedge.com/college/indian-institute-of-management-ranchi-32728",
+                "imageUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507712859phpfBTvIX_210x157.jpg",
+                "cityName": "Ranchi",
+                "establishYear": 2010,
+                "courseName": "Post Graduate Diploma in Management",
+                "courseUrl": "/mba/course/post-graduate-diploma-in-management-indian-institute-of-management-ranchi-130026",
+                "courseId": 130026,
+                "listingType": "institute"
+            },
+            {
+                "instituteName": "Indian Institute of Management, Sirmaur",
+                "instituteId": 47703,
+                "instituteUrl": "https://shikshatest05.infoedge.com/college/indian-institute-of-management-sirmaur-sirmour-47703",
+                "imageUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507539108php7uPdj6_210x157.jpg",
+                "cityName": "Sirmour",
+                "establishYear": 2015,
+                "courseName": "Post Graduate Program in Management",
+                "courseUrl": "/mba/course/post-graduate-program-in-management-indian-institute-of-management-sirmaur-sirmour-241783",
+                "courseId": 241783,
+                "listingType": "institute"
+            },
+            {
+                "instituteName": "Indian Institute of Management, Sambalpur",
+                "instituteId": 48265,
+                "instituteUrl": "https://shikshatest05.infoedge.com/college/indian-institute-of-management-sambalpur-48265",
+                "imageUrl": "https://shikshatest02.infoedge.com/mediadata/images/1507695181php2NQhYS_210x157.jpg",
+                "cityName": "Sambalpur",
+                "establishYear": 2015,
+                "courseName": "Post Graduate Program in Management",
+                "courseUrl": "/mba/course/post-graduate-program-in-management-indian-institute-of-management-sambalpur-246565",
+                "courseId": 246565,
+                "listingType": "institute"
+            }
+        ],
+        "similarCourses": [],
+        "tooltipData": {
+            "feesTooltip": "The shown fees is for the general category and will vary for other reservation categories. Please refer to the fees section below for category specific fees information."
+        },
+        "anaWidget": {
+            "totalNumber": 14,
+            "listingType": "course",
+            "questionsDetail": {
+                "4115929": {
+                    "answerId": 4117993,
+                    "answerText": "This is a difficult question to answer because each person has his/her choices and preferences. If you are from IIM, Udaipur and got placed with a Rs 14lakhs per annum package, you are definitely going to say IIM U is the one to go to because you had a great experience. Same is the case for other IIM's. Any IIM can boast of its academic rigor, infrastructure facilities, tourist spots nearby, etc. I think you are worried about the most popular parameter, i.e., placements. Let me assure you that if you manage to be in the top 20 percentile of your batch, you will not regret your decision to be in that IIM.",
+                    "activityTime": "a year ago",
+                    "answerOwnerUserId": 6249017,
+                    "questionId": 4115929,
+                    "aboutMe": null,
+                    "commentCount": 0,
+                    "msgCount": 1,
+                    "viewCount": 124,
+                    "status": "live",
+                    "userId": 7051391,
+                    "firstname": "MANISHA",
+                    "lastname": "PAWAR",
+                    "creationDate": "2017-05-21 19:10:31",
+                    "url": "https://ask.shikshatest03.infoedge.com/is-it-a-good-decision-to-take-admission-in-iim-kashipur-over-iim-udaipur-qna-4115929",
+                    "title": "Is it a good decision to take admission in IIM, Kashipur over IIM, Udaipur?",
+                    "answerOwnerName": "Shubham Mukherjee",
+                    "answerOwnerLevel": "Beginner-Level 5",
+                    "answerOwnerImage": "",
+                    "likeCount": 0,
+                    "dislikeCount": 0,
+                    "threadStatus": null
+                },
+                "4117895": {
+                    "answerId": 4117992,
+                    "answerText": "These are the final WL conversion trends for last year.\nGLWL-551 – GLWL- 630\nOBWL-284-OBWL - 324\nDAWL- 33-DAWL- 38\nSCWL-1-SCWL-90\nSTWL-1-STWL-40.\nThere is no chance to convert IIMU. Sorry to break your heart.",
+                    "activityTime": "a year ago",
+                    "answerOwnerUserId": 6249017,
+                    "questionId": 4117895,
+                    "aboutMe": null,
+                    "commentCount": 0,
+                    "msgCount": 1,
+                    "viewCount": 145,
+                    "status": "live",
+                    "userId": 4632366,
+                    "firstname": "Rajat",
+                    "lastname": "Buchade",
+                    "creationDate": "2017-05-22 22:11:34",
+                    "url": "https://ask.shikshatest03.infoedge.com/what-are-my-chances-of-converting-i-am-in-the-waiting-list-of-iim-udaipur-at-nc-obc-1220-qna-4117895",
+                    "title": "What are my chances of converting? I am in the waiting list of IIM, Udaipur at NC-OBC 1220",
+                    "answerOwnerName": "Shubham Mukherjee",
+                    "answerOwnerLevel": "Beginner-Level 5",
+                    "answerOwnerImage": "",
+                    "likeCount": 0,
+                    "dislikeCount": 0,
+                    "threadStatus": null
+                }
+            },
+            "allQuestionURL": "https://shikshatest05.infoedge.com/college/indian-institute-of-management-udaipur-36085/questions?course=164788"
+        },
+        "reviewWidget": {
+            "listingName": "Post Graduate Program in Management",
+            "listingUrl": "/mba/course/post-graduate-program-in-management-indian-institute-of-management-udaipur-164788",
+            "instituteName": "Indian Institute of Management, Udaipur",
+            "instituteUrl": "https://shikshatest05.infoedge.com/college/indian-institute-of-management-udaipur-36085",
+            "reviewData": {
+                "listingType": "course",
+                "reviewHeading": "Course",
+                "totalReviews": 13,
+                "gaUserLevel": "Non-Logged In",
+                "reviewsData": [
+                    {
+                        "reviewId": 248865,
+                        "anonymousFlag": "NO",
+                        "averageRating": 3.6,
+                        "avgSalaryPlacementRating": 0,
+                        "campusFacilitiesRating": 0,
+                        "creationDate": "2018-04-20 09:42:40",
+                        "crowdCampusRating": 0,
+                        "facultyDescription": "We have more than 20 faculty members. The ratings of these faculty members match those from old IIMs. Most of them are either having Ph.D. or work experience in industry for 10 or more years. The teaching style and curriculum is awesome. The case study structure is of HAWARD business research.",
+                        "facultyRating": 0,
+                        "helpfulFlagCount": 0,
+                        "incentiveFlag": "1",
+                        "infraDescription": "Half the campus is built. Rest is under construction. Target is to complete it by 2020. The master plan can be seen on website. It is 8-10 km before the city of Udaipur. It is constructed over the hills of Aravalli. The weather is great. Currently, only football and cricket for outdoor games is there. For Indore games. Table tennis facility us there.",
+                        "isShikshaInstitute": "YES",
+                        "postedDate": "2018-04-20 09:42:40",
+                        "moneyRating": 0,
+                        "notHelpfulFlagCount": 0,
+                        "placementDescription": "Very good placements as compared to all new IIMs. Average summer placements went to Rs. 56000. Top 50 percentile got average package of Rs. 77000 for this summer internship. Major companies like j&j and marico joined this year. YES bank, Icici are some major banks for hiring. DE shaw joined us this year.",
+                        "reason": 0,
+                        "recommendCollegeFlag": "YES",
+                        "reviewSeoTitle": null,
+                        "reviewSeoUrl": null,
+                        "reviewDescription": "Two major fest take place - one is management fest and one is cultural fest. Other than that different club organises different events for operations, finance, etc.",
+                        "reviewQuality": "average",
+                        "reviewSource": "t_source=paid&utm_source=facebook&utm_medium=social&utm_campaign=crsource_lookalike-new",
+                        "reviewTitle": "Very good learning place with decent placement opportunities.",
+                        "status": "published",
+                        "userId": 0,
+                        "visitorSessionId": "88909c4fcf44e75be7529f096bc10b1142177a2e20180420093207",
+                        "courseId": 164788,
+                        "instituteId": 36085,
+                        "locationId": 116963,
+                        "yearOfGraduation": 2019,
+                        "reviewerId": 245761,
+                        "reviewerDetails": {
+                            "id": 245761,
+                            "userName": "Meet",
+                            "email": "meet.shah7@yahoo.com"
+                        }
+                    },
+                    {
+                        "reviewId": 80090,
+                        "anonymousFlag": "NO",
+                        "averageRating": 5,
+                        "avgSalaryPlacementRating": 0,
+                        "campusFacilitiesRating": 0,
+                        "creationDate": "2017-01-14 03:06:54",
+                        "crowdCampusRating": 0,
+                        "facultyDescription": "The institute focuses a lot of attention on improving the research quality. It is ranked among the top 5 in the country in terms of research. This is because higher research quality translates into better curriculum ad, therefore, a better learning experience for the students. Moreover, the faculty members are there in their office for several hours on fixed days to help students whenever they need it.",
+                        "facultyRating": 0,
+                        "helpfulFlagCount": 4,
+                        "incentiveFlag": "0",
+                        "infraDescription": "Apart from the world-class classrooms and hostels with state-of-the-art infrastructure, the college also contains an incubation cell for budding entrepreneurs. It helps students connect to domain experts, help them develop and test their ideas and assist them in seed funding. \nThe college also contains 12 Bloomberg terminals which help students find data present around the globe.",
+                        "isShikshaInstitute": "YES",
+                        "postedDate": "2017-01-14 03:06:54",
+                        "moneyRating": 0,
+                        "notHelpfulFlagCount": 8,
+                        "placementDescription": "The placement scenario is pretty awesome here. The average package for the batch 2014-16 stood at 11.9 lakh. \nIIMU is one of the best colleges for entrepreneurs. It provides a stipend of 10,000 per month during summer internships to cover the basic cost of living and to encourage them to pursue their dreams. They are also allowed to sit for placements within 2 years of graduating.                                        ",
+                        "reason": 0,
+                        "recommendCollegeFlag": "YES",
+                        "reviewSeoTitle": null,
+                        "reviewSeoUrl": null,
+                        "reviewDescription": "",
+                        "reviewQuality": "average",
+                        "reviewSource": "utm_source=OysterConnect&utm_medium=OysterConnect&utm_campaign=SakshiJawa15=BhanuArora",
+                        "reviewTitle": "One of the fastest growing management institutes in the country.",
+                        "status": "published",
+                        "userId": 0,
+                        "visitorSessionId": "8fe14626d9bf175a81a76539c4ec23f1069e837c20170114030654",
+                        "courseId": 164788,
+                        "instituteId": 36085,
+                        "locationId": 116963,
+                        "yearOfGraduation": 2017,
+                        "reviewerId": 77660,
+                        "reviewerDetails": {
+                            "id": 77660,
+                            "userName": "Shashank Singh",
+                            "email": "shashank.jadaun.2015@iimu.ac.in"
+                        }
+                    }
+                ],
+                "reviewRating": {
+                    "80090": {
+                        "reviewId": 80090,
+                        "ratingsMap": {
+                            "Worth the Money": 5,
+                            "Crowd & Campus Life": 5,
+                            "Placements": 5,
+                            "Infrastructure": 5,
+                            "Faculty & Course Curriculum": 5
+                        }
+                    },
+                    "248865": {
+                        "reviewId": 248865,
+                        "ratingsMap": {
+                            "Worth the Money": 4,
+                            "Crowd & Campus Life": 4,
+                            "Placements": 3,
+                            "Infrastructure": 3,
+                            "Faculty & Course Curriculum": 4
+                        }
+                    }
+                },
+                "allReviewUrl": "https://shikshatest05.infoedge.com/college/indian-institute-of-management-udaipur-36085/reviews?course=164788"
+            }
+        },
+        "aggregateReviewWidget": {
+            "aggregateRatingDisplayOrder": {
+                "avgSalaryPlacementRating": "Placements",
+                "campusFacilitiesRating": "Infrastructure",
+                "facultyRating": "Faculty & Course Curriculum",
+                "crowdCampusRating": "Crowd & Campus Life",
+                "moneyRating": "Worth the Money"
+            },
+            "intervalsDisplayOrder": {
+                "4-5": ">4-5",
+                "3-4": ">3-4",
+                "2-3": ">2-3",
+                "1-2": ">1-2"
+            },
+            "aggregateReviewData": {
+                "totalCount": 12,
+                "aggregateRating": {
+                    "averageRating": {
+                        "count": 12,
+                        "sum": 51,
+                        "mean": 4
+                    },
+                    "facultyRating": {
+                        "count": 12,
+                        "sum": 52,
+                        "mean": 4
+                    },
+                    "campusFacilitiesRating": {
+                        "count": 12,
+                        "sum": 51,
+                        "mean": 4
+                    },
+                    "avgSalaryPlacementRating": {
+                        "count": 12,
+                        "sum": 49,
+                        "mean": 4
+                    },
+                    "crowdCampusRating": {
+                        "count": 12,
+                        "sum": 50,
+                        "mean": 4
+                    },
+                    "moneyRating": {
+                        "count": 12,
+                        "sum": 53,
+                        "mean": 4
+                    }
+                },
+                "intervalRatingCount": {
+                    "1-2": 0,
+                    "2-3": 1,
+                    "3-4": 3,
+                    "4-5": 8
+                }
+            }
+        },
+        "predictorInfo": [
+            {
+                "id": null,
+                "name": "iim predictor",
+                "url": "https://shikshatest05.infoedge.com/mba/resources/iim-call-predictor",
+                "rankPredictorUrl": null
+            }
+        ],
+        "redirectUrl": null,
+        "statusCode": 200,
+        "coursePaid": false,
+        "educationTypeString": "Full Time"
+    },
+    "message": null
+}

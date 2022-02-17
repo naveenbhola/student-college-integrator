@@ -1,0 +1,204 @@
+<style type="text/css">
+  .pickListButtons {
+  padding: 10px;
+  text-align: center;
+}
+
+.pickListButtons button {
+  margin-bottom: 5px;
+}
+
+.pickListSelect {
+  height: 200px !important;
+}
+</style>
+<div class="row" id="course_placements_form">
+  <div [mysize]="'12'">
+    <div class="x_panel">
+      <div [class.x_title]="opened">
+        <ul class="nav navbar-left panel_toolbox">
+          <li>
+            <a class="collapse-link" (click)="toggle()">
+              <i [class]="opened?' fa fa-chevron-up':' fa fa-chevron-down'"></i>
+            </a>
+          </li>
+        </ul>
+        <h2>Placements<img class="helperText" id="placements" src="/public/images/tooltip.png" width="20px" style="padding-right:0px" (click)="toolTipNotify('placements',$event)"></h2>
+        <div class="clearfix"></div>
+      </div>
+      <div class="x_content" [formGroup]="coursePlacements"  [hidden]="!opened">
+        <div class="row" *ngIf="initialized">
+          <div class="col-sm-12">
+            <div class="form-group">
+              <div mysize="2">
+                <label>For the batch ending</label>
+              </div>
+              <div mysize="3">
+                <select formControlName = "batch">
+                  <option value="">Select Year</option>
+                  <option *ngFor="let year of yearArr" value="{{year}}">{{year}}</option>
+                </select>
+                <span class="help-block text-danger">
+                  <span *ngIf="coursePlacements?.errors?.validateOneOrNoneFormGroup?.batch">Batch cannot be empty</span>
+                </span>
+              </div>
+              <div mysize="1"></div>
+              <div mysize="3">
+                <label>For the Course</label>
+              </div>
+              <div mysize="3">
+                <select formControlName = "course">
+                  <option value="">Select</option>
+                  <option *ngFor="let item of courseOptions | sortArrByColumn:'asc':'label'" [value]="item.value">{{item.label}}</option>
+                </select>
+                <span class="help-block text-danger">
+                  <span *ngIf="coursePlacements?.errors?.validateOneOrNoneFormGroup?.course">Course cannot be empty</span>
+                </span>
+              </div>
+            </div>
+            <div *ngIf="coursePlacements.controls.batch.value != ''">
+              <div class="form-group">
+                <div mysize="2">
+                  <label>% of batch placed</label>
+                </div>
+                <div mysize="3">
+                  <input type="text" formControlName="batch_percentage" />
+                  <span class="help-block text-danger">
+                    <span *ngIf="coursePlacements.controls['batch_percentage']?.errors?.number">Enter valid percentage</span>
+                  </span>
+                </div>
+              </div>
+              <table  class="table table-striped table-bordered dataTable no-footer">
+                <thead>
+                  <tr>
+                    <th  rowspan="1" colspan="1" style="width: 145px;"></th>
+                    <th  rowspan="1" colspan="1" style="width: 145px;">Min Salary</th>
+                    <th  rowspan="1" colspan="1" style="width: 145px;">Median Salary</th>
+                    <th  rowspan="1" colspan="1" style="width: 145px;">Average Salary</th>
+                    <th  rowspan="1" colspan="1" style="width: 145px;">Max Salary</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr  class="odd">
+                    <td>
+                      <select formControlName="batch_unit">
+                        <option *ngFor="let option of courseStaticData?.fees_currencies" value="{{option.value}}">{{option.label}}</option>
+                      </select>
+                    </td>
+                    <td>
+                      <input type="text" formControlName="batch_min_salary" />
+                      <span class="help-block text-danger">
+                        <span *ngIf="coursePlacements.controls['batch_min_salary']?.errors?.number">{{coursePlacements.controls['batch_min_salary']?.errors?.number}}</span>
+                        <span *ngIf="coursePlacements?.errors?.batch_min_salary">{{coursePlacements?.errors?.batch_min_salary}}</span>
+                      </span>
+                    </td>
+                    <td>
+                      <input type="text" formControlName="batch_median_salary" />
+                      <span class="help-block text-danger">
+                        <span *ngIf="coursePlacements.controls['batch_median_salary']?.errors?.number">{{coursePlacements.controls['batch_median_salary']?.errors?.number}}</span>
+                        <span *ngIf="coursePlacements?.errors?.batch_median_salary">{{coursePlacements?.errors?.batch_median_salary}}</span>
+                      </span>
+                    </td>
+                    <td>
+                      <input type="text" formControlName="batch_average_salary" />
+                      <span class="help-block text-danger">
+                        <span *ngIf="coursePlacements.controls['batch_average_salary']?.errors?.number">{{coursePlacements.controls['batch_average_salary']?.errors?.number}}</span>
+                        <span *ngIf="coursePlacements?.errors?.batch_average_salary">{{coursePlacements?.errors?.batch_average_salary}}</span>
+                      </span>
+                    </td>
+                    <td>
+                      <input type="text" formControlName="batch_max_salary" />
+                      <span class="help-block text-danger">
+                        <span *ngIf="coursePlacements.controls['batch_max_salary']?.errors?.number">{{coursePlacements.controls['batch_max_salary']?.errors?.number}}</span>
+                        <span *ngIf="coursePlacements?.errors?.batch_max_salary">{{coursePlacements?.errors?.batch_max_salary}}</span>
+                      </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="form-group">
+                <h4 [mysize]="'3'">International Offers</h4>
+              </div>
+              <div class="form-group">
+                <div mysize="3">
+                  <label>Number of offers</label>
+                </div>
+                <div mysize="3">
+                  <input type="text" formControlName="international_offers" />
+                  <span class="help-block text-danger">
+                    <span *ngIf="coursePlacements.controls['international_offers']?.errors?.number">{{coursePlacements.controls['international_offers']?.errors?.number}}</span>
+                  </span>
+                </div>
+              </div>
+              <div class="form-group">
+                <div [mysize]="'3'">
+                  <label>Max Salary</label>
+                </div>
+                <div [mysize]="'2'">
+                  <input type="text" formControlName="max_salary">
+                    <span class="help-block text-danger">
+                      <span *ngIf="coursePlacements.controls['max_salary']?.errors?.number">{{coursePlacements.controls['max_salary']?.errors?.number}}</span>
+                    </span>
+                  </div>
+                  <div [mysize]="'3'">
+                    <select name="medium" formControlName="max_salary_unit">
+                      <option *ngFor="let option of courseStaticData?.fees_currencies" value="{{option.value}}">{{option.label}}</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group" *ngIf="!showPlacementReport">
+                  <div [mysize]="'3'">
+                    <label>Upload Placement Report</label>
+                  </div>
+                  <shiksha-upload 
+                    (mediaResponse) = "uploadPlacementCallback($event)"
+                    [uploadXhrUrl]="'nationalCourse/CoursePosting/uploadCourseDocument'"
+                   ></shiksha-upload>
+                </div>
+                <div class="form-group">
+                  <div *ngIf="coursePlacements.controls.report_url.value != null " style="margin-left:275px">
+                    <div [mysize]="'3'">
+                      <a target="_blank" href="{{courseStaticData['media_server_domain']+coursePlacements.controls.report_url.value}}" class="btn btn-default">View uploaded report</a>
+                    </div>
+                    <div [mysize]="'2'">
+                      <a target="_blank" (click)="clearBrochureData();" class="btn btn-default">X</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" *ngIf="showRCWidget">
+                <div class="container">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">Recruiting Companies</h3>
+                    </div>
+                    <div class="panel-body">
+                      <div id="pickList">
+                        <div class="row">
+                          <div class="col-sm-5">
+                            <select class="pickListSelect" (change)="changeLeft($event.target.options)" id="pickData" multiple="">
+                              <option *ngFor="let item of leftBox | sortArrByColumn:'asc':'company_name'" value="{{item.company_id}}">{{item.company_name}}</option>
+                            </select>
+                          </div>
+                          <div class="col-sm-2 pickListButtons">
+                            <button type="button" id="pAdd" (click)="addItem()" class="btn cmsButton cmsFont" >Add</button>
+                            <button type="button" id="pRemove" (click)="removeItem()" class="btn cmsButton cmsFont" >Remove</button>
+                          </div>
+                          <div class="col-sm-5">
+                            <select class="pickListSelect" id="pickListResult" multiple="" (change)="changeRight($event.target.options)"  >
+                              <option  *ngFor="let item of rightBox | sortArrByColumn:'asc':'company_name'" value="{{item.company_id}}">{{item.company_name}}</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<shiksha-loader [showLoader]="showLoader"> </shiksha-loader>

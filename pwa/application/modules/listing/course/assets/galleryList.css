@@ -1,0 +1,249 @@
+.gal-layer {
+    background: #fff;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 111112;
+    width: 100%; height: auto;margin:0 auto;padding:10px;
+}
+
+.gal-layer-large {
+    overflow-y: hidden
+}
+
+.gal-layer-large .opn-glry {
+    height: 100%
+}
+
+p.mediaCount {
+    display: inline-block
+}
+
+ul.mediaBlock>li {
+    display: none
+}
+
+.gal-layer:after,.gal-layer:before {
+    content: " ";
+    display: table
+}
+
+.gal-layer:after {
+    clear: both
+}
+
+.gal-layer .gal-hd {
+    margin-bottom: 15px
+}
+
+.gal-layer .gal-hd:after,.gal-layer .gal-hd:before {
+    content: " ";
+    display: table
+}
+
+.gal-layer .gal-hd:after {
+    clear: both
+}
+.gal-hd .para-L2 {
+    width: 100%;
+    font-size: 1.125rem;
+    text-align: center;
+    color: #000
+}
+
+.grid-icon {
+    content: '';
+    position: absolute;
+    background: url(//images.shiksha.ws/public/mobile5/images/Gallery-Grid-Icon.svg);
+    width: 22px;
+    height: 22px;
+    left: 16px;
+    top: 13px
+}
+
+.gal-layer .gal-hd a {
+    font-size: 2.1875rem;
+    line-height: 17px;
+    color: #babbbd;
+    text-decoration: none;
+    float: right
+}
+
+ .galry-block:after, .galry-block:before {
+    content: " ";
+    display: table
+}
+
+ .galry-block:after {
+    clear: both
+}
+
+ .galry-block strong {
+    font-weight: 400;
+    font-size: 1rem;
+    color: #000
+}
+
+ .galry-block ul {
+    margin: 10px 0 20px
+}
+
+ .galry-block ul>li {
+    list-style: none
+}
+
+ .galry-block ul>li .img-blck {
+    display: inline-block;
+    margin: 2px
+}
+
+ .galry-block ul>li .img-blck img {
+    width: 94px;
+    background: #f1f1f1;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%
+}
+
+ .opn-glry {
+    margin-top: 40px;
+    background: #fff;
+    position: relative
+}
+
+ .opn-glry ul {
+    margin-left: -5px;
+    margin-right: -5px
+}
+
+ .opn-glry ul li>.img-blck {
+    width: 100%;
+    margin: 0;
+    display: block;
+    text-align: center
+}
+
+ .opn-glry ul p {
+    margin: 10px 5px;
+    color: #000;
+    font-size: 0.75rem;
+}
+
+li.atvSlide {
+    display: block;
+}
+li.rm-atvSlide {
+    display: none;
+}
+
+ .opn-glry .slider-count {
+    padding: 10px 0 10px;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #000;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 0;
+    background: #fff
+}
+
+ .opn-glry .slider-count:after {
+    clear: both
+}
+
+/*gallery css*/
+.bck-icn, .nxt-icn, .rating-default:before, .rating-primary:before {
+    display: inline-block;
+    background: url(//images.shiksha.ws/public/mobile5/images/shiksha-icons-2.png) no-repeat;
+}
+.nxt-icn {
+    content: '';
+    background-position: -99px -199px;
+    width: 29px;
+    height: 21px;
+    margin-left: 4px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+    margin-left: 10px;
+}
+.bck-icn {
+    content: "";
+    background-position: -69px -198px;
+    width: 29px;
+    height: 21px;
+    margin-right: 4px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+    margin-right: 10px;
+}
+
+.active {
+    display: block
+}
+.hide {
+    display: none
+}
+
+.aimg {
+    max-width: 100%;
+    width: 100%;
+    background: #f1f1f1;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    margin-bottom: 20px;
+}
+.slider-count {
+    padding: 10px 0 10px;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #000;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 0;
+    background: #fff;
+}
+.slider-count:after, .slider-count:before {
+    content: " ";
+    display: table;
+}
+.slider-count:after, .slider-count:before {
+    content: " ";
+    display: table;
+}
+p.mediaCount {
+    display: inline-block;
+}
+.mediaclass {
+    height: 48px;
+    overflow: hidden;
+    margin-bottom: 37px;
+}
+.mediaclass p {
+    line-height: 24px;
+}
+.mediaTitle {
+    text-align: center;
+}
+.pwa-cont .galry-block ul{
+     margin-left: 0px;
+}
+.swipe-iframe{
+        position: absolute;
+    z-index: 999;
+    background: transparent;
+    width: 100%;
+    height: 14.5%;
+    left: 0px;
+    display: block;
+}

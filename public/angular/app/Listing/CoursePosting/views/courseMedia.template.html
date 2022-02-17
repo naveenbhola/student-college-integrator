@@ -1,0 +1,56 @@
+<div class="row" id="course_media_form" *ngIf="showMedia">
+  <div [mysize]="'12'">
+      <div class="x_panel">
+         <div [class.x_title]="opened">
+               <ul class="nav navbar-left panel_toolbox">
+                      <li><a class="collapse-link" (click)="toggle()"><i [class]="opened?' fa fa-chevron-up':' fa fa-chevron-down'"></i></a></li>
+                </ul>
+             <h2>Gallery<img class="helperText" id="gallery" src="/public/images/tooltip.png" width="20px" style="padding-right:0px" (click)="toolTipNotify('gallery',$event)"></h2>
+             <div class="clearfix"></div>
+         </div>
+               <div class="x_content" [hidden]="!opened">
+                  <div class="form-group">
+                    <div class="col-md-4">
+                    <a class="btn cmsButton cmsFont" (click)="selectAllMedia()">Select All</a>
+                    <a class="btn cmsButton cmsFont" (click)="removeAllMedia()">Remove All</a>
+                    </div>
+                  </div>
+                  <table class="data table table-striped no-margin" [formGroup]="courseMedia">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Media Title</th>
+                        <th>Media Type</th>
+                        <th>Media Image</th>
+                        <th>Media URL</th>
+                        <th>Action(check to map)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let item of mediaData;let loopIndex = index">
+                        <td>{{loopIndex + 1}}</td>
+                        <td>{{item.media_title}}</td>
+                        <td>{{item.media_type}}</td>
+                        <td>
+                            <a>
+                              <img src="{{item.thumb_url}}" alt="{{item.media_title}}">
+                            </a>
+                        </td>
+                        <td>
+                          <a class="btn btn-default" target="_blank" href="{{item.media_url}}">View Media</a>
+                        </td>
+                        <td>
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox"  formControlName="{{item.media_id}}" style="width:20px;height:20px;">
+                            </label>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>             
+                  
+              </div>
+          </div>
+    </div>
+</div>

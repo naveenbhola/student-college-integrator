@@ -1,0 +1,51 @@
+
+.campus-wrapper{padding:30px 20px 0 20px; float:left;}
+.clear{clear:both;}
+.intro-box{background:#e8e5e5;border-radius:2px; padding:6px; border:1px solid #d6d5d5; margin-bottom:72px; position:relative;}
+.intro-rep-box{background:#f7f7f7;}
+.intro-content{width:470px; float:left; margin:20px 0 0 9px; position:relative;}
+.intro-content p{font:normal 16px Georgia, "Times New Roman", Times, serif; color:#524e4e; text-align:justify; line-height:22px;}
+.intro-image{background:url(../images/marketingCAImages/campus-rep.png) no-repeat; width:200px; height:69px; float:left; margin:60px 15px 60px 10px;}
+.podium-image{background:url(../images/marketingCAImages/podium-image.png) no-repeat; width:222px; height:215px; float:right; margin:0 8px 3px 0;}
+.search-box-bg{position:absolute; right:-1px; width:337px; background:#e8e5e5; border:1px solid #d2d1d1; padding:1px 5px 5px 7px; border-top:none; bottom:-57px; border-radius:0 0 8px 8px;}
+.search-box{border:1px solid #d2d1d1; border-radius:3px; width:337px; float:right; background:#fff;box-shadow:2px 2px 3px #eee inset}
+.search-textfield{color:#b0b0b0; font-size:13px; padding:9px 5px 15px 5px; width:265px; border:none; outline:none}
+.search-button{background:-webkit-linear-gradient(#818689, #707476); background:-o-linear-gradient(#818689, #707476); background:-moz-linear-gradient(#818689, #707476); background:linear-gradient(#818689, #707476);color:#fff !important; text-decoration:none !important; padding:0; border-radius:2px; font-size:18px; border:0 none; height:42px; width:81px; position:relative; top:3px; cursor:pointer}
+.top-rep-box, .camp-rep{width:100%; float:left;}
+.top-rep-box{margin-bottom:20px;}
+.top-rep-box h1, .camp-rep h2{color:#4c4c4c; font-size:16px; font-weight:bold; padding:0 0 5px 0; border-bottom:1px solid #d1d1d0; float:left; width:100%}
+.top-rep-box ul{margin:18px 0px 18px 15px; width:100%; float:left;}
+.top-rep-box ul li{float:left; width:32%; margin-left:10px;}
+.rep-image{float:left; width:101px;}
+.rep-image img{border:1px solid #d2d2d2;}
+.rep-detail{margin-left:110px;}
+.rep-detail p, .campus-rep-detail p{margin-bottom:3px; color:#606060; font-size:13px;}
+.campus-rep-detail p{font-size:15px;}
+.rep-name{font-size:15px; margin-bottom:2px; text-decoration:none !important;}
+.off-btn{border:1px solid #c4c4c4; padding:3px 6px; color:#606060 !important; font-size:10px; font-family:Tahoma, Geneva, sans-serif; display:inline-block; letter-spacing:1px; font-weight:bold; text-decoration:none !important; margin-bottom:2px;}
+.camp-rep ul{padding:0px 15px;width:97%; float:left;}
+.camp-rep ul li{padding:10px 0; float:left; width:100%; border-bottom:1px solid #e8e8e7;}
+.campus-rep-img{float:left; width:106px;}
+.campus-rep-img img{border:1px solid #d2d2d2;}
+.campus-rep-detail{margin-left:10px; width:463px; float:left;}
+.institute-logo{float:left; width:340px; padding:38px 0; position:relative; text-align:center;}
+.ask-btn, .ask-btn-active{background:-webkit-linear-gradient(#969798, #7c7d7d); background:-o-linear-gradient(#969798, #7c7d7d); background:-moz-linear-gradient(#969798, #7c7d7d); background:linear-gradient(#969798, #7c7d7d);border:1px solid #7b7b7c; border-radius:6px; color:#fff !important;padding:5px 8px; font-size:15px; text-decoration:none !important;display:inline-block; margin-top:3px;}
+.ask-btn-active, .ask-btn:hover{background:-webkit-linear-gradient(#e99a48, #d37732); background:-o-linear-gradient(#e99a48, #d37732); background:-moz-linear-gradient(#e99a48, #d37732); background:linear-gradient(#e99a48, #d37732);border:1px solid #A15D19;}
+.camp-rep ul li.last-child{border-bottom:none;}
+.pagination2{float:right; margin:15px 0 15px 0;}
+.pagination{float:right; margin:15px 0 0px 0;}
+.pagination ul li{float:left; width:auto; padding:3px 6px; margin:0 0 0 6px; border:1px solid #E6E6E6;}
+.pagination ul li.active, .pagination ul li:hover{border:1px solid #FD8103;}
+.pagination ul li.active a, .pagination ul li:hover a{color:#000 !important; text-decoration:none;}
+.copyright{float:left; width:100%; margin-top:30px; border-top:1px solid #e8e8e7;}
+.copyright p{width:100%; color:#afafaf; font-size:12px; text-align:center;padding:12px 0;}
+.campus-sprite{background:url(../images/marketingCAImages/campus-sprite.png) no-repeat; display:inline-block;font-style:none; vertical-align:middle; position:relative}
+.search-icon{background-position:-30px -36px; width:53px; height:48px;}
+.star-icon{background-position:0 0; width:35px; height:18px; margin-right:6px;}
+.campus-icon{background-position:-40px 0; width:30px; height:30px; margin-right:6px;}
+.ans-icon{background-position:-72px 0; width:19px; height:17px; vertical-align:bottom; margin-right:3px;}
+.curve-image{background-position:0 -36px; width:26px; height:51px; position:absolute; left:-26px;top:-1px;}
+.comma-open, .comma-close{background-position:0 -87px; width:20px; height:18px; position:absolute; left:-23px;}
+.comma-close{background-position:-23px -87px; position:absolute; left:257px; bottom:-3px;}
+.camp-err-msg{background:#fbf9e4;width:555px;padding:10px;margin-bottom:20px;}
+.camp-err-msg p{font-size:13px; font-weight:bold; color:#504a4a;line-height:20px;}

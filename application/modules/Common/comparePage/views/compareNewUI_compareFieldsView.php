@@ -1,0 +1,12 @@
+<?php 
+$this->load->view('sections/compareAcademicUnit');
+$this->load->view('sections/compareRank');
+$this->load->view('sections/compareRecognition');
+$this->load->view('sections/compareAffiliation');
+$this->load->view('sections/compareAccreditation');
+$this->load->view('sections/compareAlumniSalary');
+$this->load->view('sections/compareEligibility');
+$this->load->view('sections/compareFee');
+$this->load->view('sections/compareSeats');
+$this->load->view('sections/compareDuration');
+?>

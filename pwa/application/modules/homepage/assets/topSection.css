@@ -1,0 +1,44 @@
+section{ margin-bottom: 12px; box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);}
+._container{padding: 0;}
+._container {width: 100%;padding: 0 15px; margin: 0 auto}
+.home-rvBx{margin-bottom: 20px;}
+ .home-rvBx ul{display: table; width: 100%; max-width: 750px; margin: 0 auto;}
+.home-rvBx ul li{width: 25%; display: table-cell;border-right: 1px solid #ffffff; font-size: 0.75rem; color: #fff;text-align: center}
+.home-rvBx ul li:last-child{border: none;}
+.home-rvBx ul li strong{font-size: 0.875rem; font-weight: 600; display: block;}
+.clg-exBx{padding: 0px 10px 10px 10px; background: #247075;}
+.table-cell, .tbSec>ul>li {text-align: center; vertical-align: middle;}
+.tbSec>ul.SearchTab>li.active, .tbSec>ul>li.active {cursor: default}
+.tbSec>ul.SearchTab>li { width: 33%}
+ .tbSec>ul.SearchTab>li h2 {border-bottom: 1px solid #fff;opacity: .6; color: #fff;font-weight: 400}
+ .tbSec>ul.SearchTab>li h2 a {color: #fff;text-decoration: none; display: block}
+ .tbSec>ul.SearchTab>li:hover {color: #fff; opacity: 1}
+ .tbSec>ul.SearchTab>li.active h2 { box-shadow: -1px -4px 0 -2px #fff inset;color: #fff; opacity: 1; font-weight: 600;}
+ a._hmsrchTab[data-param=questions]:after {content: "New";display: inline-block;position: relative;top: -5px;right: 0px;color: #fff;font-size: 0.6875rem;text-transform: capitalize;padding: 0 0px 0 3px;font-weight: 400;}
+ .que-nw{position: relative; width: 110px;}
+ .tbSec>ul { display: table;width: 100%}
+ .tbSec>ul>li { display: table-cell; font-weight: 600; color: #fff; margin: 0 -3px; transition: all .2s;}
+ .tbSec>ul>li h2 {  text-transform: uppercase; padding: 2px 0 10px;
+    cursor: pointer; display: block;-webkit-tap-highlight-color:transparent;}
+
+ .tbSec>ul>li:hover { color: #F37921}
+ .tbSec>ul>li.active h2 {box-shadow: -1px -5px 0 -2px #008489 inset; color: #008489}
+ tbc .srBx input {width: 100%; padding: 7px 30px 7px 10px; border-radius: 0}
+ .tbc .srBx .search-field-btn { background: #F37921;padding: 7px 5px 7px 9px;position: absolute;right: 0;
+  top: 0;width: 36px; height: 100%;border-radius: 0 2px 2px 0;}
+ .tbc .srBx{box-shadow:0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0,0,0,0.08)}
+ .tbc .srBx .msprite {display: inline-block;position: relative}
+ p.tbSec2{background: #fff;padding: 10px 12px;font-weight: 600;border-bottom: 1px solid #DFDFDF;;font-size: 0.875rem;line-height: 1.3125rem; color: #000;}
+.tbc .srBx .msprite{    background: url(https://images.shiksha.ws/pwa/public/images/mhome-icons-sprite_4.svg) no-repeat;}
+ .tbc .srBx .search-icn {background-position: -131px -103px; width: 16px;height: 17px; top: 3px;left:1px;}
+ .tbc .srBx{position: relative}
+ .msgBnr h1 {color: #fff;margin-bottom: 15px;margin-top: 10px;text-shadow: 0 1px 4px rgba(0,0,0,.4);}
+ section.msgBnr { padding: 10px 0 0; /*background:url(https://images.shiksha.ws/pwa/public/images/hdr-img-2.jpg)no-repeat;background-size: cover;*/ height: auto; background-color:#008489; background: linear-gradient(#00A5B4 40%, #008489 60%, #045161 100%)}
+ .tbc>div { display: none}
+ .tbc>div.active {display: block}
+ .anchrHp, .tbc a.inpt { text-decoration: none}
+ .tbc { padding: 16px 0 0}
+ .tbc a.inpt { background: #fff; border: 1px solid #fff; color: #666; display: block; font-size: 0.8125rem;
+    line-height: 24px; padding: 5px 10px; font-weight: 400;border-radius: 2px;width: 100%;}
+ .tbc ul li {width: 100%; display: block}
+ .msgBnr {text-align: center}

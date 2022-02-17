@@ -1,0 +1,133 @@
+section.stdBnr { margin-bottom: 12px; box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);}
+section.stdBnr ._container{padding: 0;}
+section.stdBnr .studyTab {background: #fff; padding: 0px;border-bottom: 1px solid #f2f2f2;}
+section.stdBnr .stdyc {padding: 0; background: #fff;}
+._container {width: 100%;padding: 0 15px; margin: 0 auto}
+
+/*Choose Stream Icons*/
+.tbc.stdyc ul.others li span:last-child i {background-position: -112px -101px; width: 15px}
+ .tbc.stdyc ul.others li span:last-child i.collapse {background-position: -112px -112px}
+ .tbc.stdyc ul.others li .o-anim span:first-child i { background-position: -2px -2px}
+ .tbc.stdyc ul.others li .o-art span:first-child i {background-position: -48px -48px}
+ .tbc.stdyc ul.others li .o-bank span:first-child i {background-position: -48px -2px}
+ .tbc.stdyc ul.others li .o-hsptl span:first-child i {background-position: -186px -2px}
+ .tbc.stdyc ul.others li .o-it span:first-child i { background-position: -140px -2px}
+ .tbc.stdyc ul.others li .o-mngmnt span:first-child i {background-position: -186px -48px}
+ .tbc.stdyc ul.others li .o-media span:first-child i {background-position: -232px -48px}
+ .tbc.stdyc ul.others li .o-mdcn span:first-child i { background-position: -140px -48px}
+ .tbc.stdyc ul.others li .o-rtl span:first-child i { background-position: -96px -2px}
+ .tbc.stdyc ul.others li .o-se span:first-child i { background-position: -96px -48px}
+ .tbc.stdyc ul.others li .o-gexams span:first-child i { background-position: -3px -146px}
+ 
+ .tbc.stdyc ul.others li ul.lbl02 span:last-child i {width: 9px; background-position: -112px -120px}
+ .tbc .cfl li .mba-exam i { background-position: -324px -2px}
+ .tbc .cfl li .mba-ranking i { background-position: -278px -2px}
+ .tbc .cfl li .mba-predictor i {background-position: -418px -49px}
+ .tbc .cfl li .mba-college i { background-position: -463px -48px}
+ .tbc .cfl li .mba-review i {background-position: -416px -2px}
+ .tbc .cfl li .mba-college-com i {background-position: -278px -48px}
+ .tbc .cfl li .mba-salary i {background-position: -324px -48px}
+ .tbc .cfl li .mba-student i {background-position: -462px -2px}
+ .tbc .cfl li .eng-m-prog i {background-position: -554px -2px}
+ .tbc .cfl li .eng-rank-predictor i {background-position: -508px -48px}
+ .tbc .cfl li .eng-col-predictor i {background-position: -2px -48px}
+ .tbc .cfl li .design-e-guid i {background-position: -508px -2px}
+ .tbc.stdyc ul.others li .o-acnt i { background-position: -152px -94px;}
+ .tbc.stdyc ul.others li .o-aviation i {background-position: -244px -94px;}
+ .tbc.stdyc ul.others li .o-arch i {background-position: -197px -94px;}
+ .tbc.stdyc ul.others li .o-beauty i { background-position: -289px -94px;}
+ .tbc.stdyc ul.others li .o-engg i {background-position: -335px -94px;}
+ .tbc.stdyc ul.others li .o-human i {background-position: -383px -94px;}
+ .tbc.stdyc ul.others li .o-nursing i {background-position: -427px -94px;}
+ .tbc.stdyc ul.others li .o-teaching i {background-position: -554px -3px;}
+/*Choose Stream Icons end*/
+ .q-ask,.q-srch,.right-menu {position: relative}
+ ._ask i, .tbc .cfl li i, .tbc.stdyc ul.others li i,.background, .top_pg p i, i.search-ico{    background: url(https://images.shiksha.ws/pwa/public/images/mhome-icons-sprite_4.svg) no-repeat;}
+.header {background: #007075 ; width: 100%; display: table ; z-index: 9; box-shadow: 0 2px 2px 0 rgba(0,0,0,.16), 0 0 0 1px rgba(0,0,0,.08); height: 40px;line-height: 1;}
+ .fltlft { float: left}
+ .fltryt {float: right}
+ .clr {clear: both}
+ .table {display: table; width: 100%}
+ .table-cell {display: table-cell}
+ h3 {color: #000;}
+ section { margin-bottom: 12px; box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);}
+ .tbSec>ul { display: table;width: 100%}
+ .tbSec>ul>li { display: table-cell; font-weight: 600; color: #fff; margin: 0 -3px; transition: all .2s;-webkit-tap-highlight-color:transparent;}
+ .tbSec>ul>li h2 {  text-transform: uppercase; padding: 2px 0 10px;
+    cursor: pointer; display: block;-webkit-tap-highlight-color:transparent;margin: 0px;}
+
+ .tbSec>ul>li:hover { color: #F37921}
+ .tbSec>ul>li.active h2 {box-shadow: -1px -5px 0 -2px #008489 inset; color: #008489}
+ .tbSec>ul.studyTab li {color: #000}
+ .tbSec>ul.studyTab li h2 { padding: 10px 0;}
+ .tbc { padding: 16px 0 0}
+ .tbc a.inpt { background: #fff; border: 1px solid #fff; color: #666; display: block; font-size: 0.8125rem;
+    line-height: 24px; padding: 5px 10px; font-weight: 400;border-radius: 2px;width: 100%;}
+ .tbc ul li {width: 100%; display: block}
+/* .tbc ul a {padding: 0 10px}*/
+ .tbc>div { display: none}
+ .tbc>div.active {display: block}
+ .tbc.stdyc li.last a>div, .tbc.stdyc ul.others ul li a>div.select-Class, .tbc.stdyc ul.others li.last label>div { border-bottom: none}
+ .tbc.stdyc a:active>div, .tbc.stdyc a:visited>div, .tbc.stdyc a>div, .tbc.stdyc ul.others li label>div {border-bottom: 1px solid #e0e0e0;}
+ .tbc.stdyc ul.others ul li:last-child a>div {border-bottom: none;}
+ .tbc.stdyc ul.others ul li a>div>div>span {padding: 10px 0;display: block}
+ .tbc.stdyc li a,.tbc.stdyc li label {display: block;cursor: pointer;-webkit-tap-highlight-color: transparent;}
+ .tbc.stdyc h3 {margin: 0px;}
+ .tbc.stdyc p {font-size: 0.75rem;color: #000;padding-top: 3px}
+ ._ask .exDta li.table-cell > div {font-size: 0.75rem;text-align: center; font-weight:600;margin-top:4px;}
+ .tbc.stdyc i {color: transparent;width: 7px;height: 14px;text-indent: -999999px;display: block;float: right;font-style: normal;}
+ .tbc.stdyc span:first-child i { width: 44px; height: 44px}
+ .tbc.stdyc a>div, .tbc.stdyc label>div {display: table; width: 100%; padding: 10px}
+ .tbc.stdyc a>div>*,.tbc.stdyc label>div>* { display: table-cell; vertical-align: middle}
+ .tbc.stdyc a>div>span, .tbc.stdyc label>div>span { width: 24px; height: 44px;text-align: right}
+ .tbc.stdyc a>div>span:last-child { padding-right: 5px}
+ .tbc.stdyc a>div>div,  .tbc.stdyc label>div>div { padding-left: 5px}
+ .tbc.stdyc a.open>div {border-bottom: none}
+ .tbc.stdyc ul ul, .tbc.stdyc ul.lbl02 {background: #f2f2f2; display: none}
+ .tbc.stdyc ul ul div+span, .tbc.stdyc ul ul li i, .tbc.stdyc ul.lbl02 div+span, .tbc.stdyc ul.lbl02 li i { width: 9px;background-position: -112px -120px}
+ .tbc.stdyc ul ul li, .tbc.stdyc ul.lbl02 li {padding: 0 0px 0 61px; font-weight: 400;font-size: 0.8125rem}
+ .tbc.stdyc ul ul a, .tbc.stdyc ul ul a div, .tbc.stdyc ul.lbl02 a, .tbc.stdyc ul.lbl02 a div {    padding: 0}
+ .tbc.stdyc ul ul span, .tbc.stdyc ul.lbl02 span { color: #000}
+ .tbc.stdyc ul ul .view-more, .tbc.stdyc ul.lbl02 .view-more { height: 44px; font-weight: 600;cursor: pointer}
+ .tbc.stdyc ul ul .view-more span, .tbc.stdyc ul.lbl02 .view-more span {color: #008489}
+ .tbc.stdyc ul.others a>div { padding: 10px}
+a._hmsrchTab[data-param=questions]:after {content: "New";display: inline-block;position: relative;top: -5px;right: 0px;color: #fff;font-size: 0.6875rem;text-transform: capitalize;padding: 0 0px 0 3px;font-weight: 400;}
+ ._ask i.upd-arw{background-position: -477px -113px; width: 10px; height: 16px;}
+.dspyinl {display: inline}
+label{display: block}
+@media only screen and (min-device-width: 320px) and (max-device-width:480px) {
+ .tbc.stdyc p { padding-top: 0}}
+ ._container {width: 100%;padding: 0 15px; margin: 0 auto}
+ ul {list-style: none; display: block; text-align: left}
+ .tbc.stdyc ul.others ul.lbl02 a div {padding:0px 12px 0px 0px;}
+ .table-cell, .tbSec>ul>li {text-align: center; vertical-align: middle;}
+ .anchrHp, .tbc a.inpt { text-decoration: none}
+
+ input[type=radio].st:checked + .chooseStream{display: block;}
+input[type=radio].st + .chooseStream{display: none}
+.hide{display: none}
+
+.tbc.stdyc ul.read-more-target{display:none;}
+.tbc.stdyc ul li.read-more-target{display:none;}
+.tbc.stdyc ul.read-more-target-out{display:none;}
+.tbc.stdyc ul li.read-more-target-out{display:none;}
+.read-more-state:checked ~ .read-more-wrap .read-more-target {display: list-item;}
+.read-more-state:checked ~ .read-more-trigger{display: none}
+
+.read-more-state-out:checked ~ .read-more-wrap .read-more-target-out {display: list-item;}
+.read-more-state-out:checked ~ .read-more-trigger{display: none}
+
+.loader{padding-bottom: 10px;text-align: center;font-size: 14px;color: #666;padding-top: 10px;}
+
+.accrdn-check:checked ~ label ~ ul.lbl02{display: block;}
+.view-all {color: #008489;padding: 10px 0;font-size: 0.875rem; font-weight: 400;}
+.cntr{text-align: center;}
+.pl59{padding-left: 59px;}
+.tbc.stdyc li a {display: block;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+.accrdn-check:checked ~ label>div span:last-child i {
+    transform: rotate(180deg);
+}
+.addNew{color: #ff094b;font-size: 0.8rem;}

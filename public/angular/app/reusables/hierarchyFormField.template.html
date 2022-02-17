@@ -1,0 +1,26 @@
+<div class="form-group" [formGroup]="hierarchy">
+  <div mysize="3" class="no-padding-left">
+    <select class="form-control" #streamId formControlName="streamId"  placeholder="Choose Stream" name="streamId" >
+      <option value=''>Choose Stream</option>
+      <option *ngFor="let stream of streamList|sortArrByColumn:'asc':'name'" value={{stream.stream_id}}>{{stream.name}}</option>
+    </select>
+  </div>
+  <div mysize="3" class="no-padding-left">
+    <select class="form-control" formControlName="substreamId" placeholder="Choose Substream" name="substreamId">
+      <option value="" >Choose Substream</option>
+      <option *ngFor="let substream of substreamList"  value={{substream.substream_id}}>{{substream.name}}</option>
+    </select>
+  </div>
+  <div mysize="3" class="no-padding-left">
+    <select class="form-control" formControlName="specializationId" placeholder="Choose Specialization" name="specializationId" >
+      <option value="">Choose Specialization</option>
+      <option *ngFor="let specialization of specializationList"  value={{specialization.specialization_id}}>{{specialization.name}}</option>
+    </select>
+  </div>
+  <div mysize="3" class="no-padding-left">
+    <label class="radio-inline" noBootstrap *ngIf="showPrimary">
+        <input type="radio" class="flat" formControlName="is_primary" [value]="'1'" />Primary
+    </label>
+    <button *ngIf="numberOfHierarchies>1" type="button" (click)="removeHierarchy(index)" class="btn cmsButton" cmsFont>Remove</button>
+  </div>
+</div>

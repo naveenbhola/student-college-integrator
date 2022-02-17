@@ -1,0 +1,158 @@
+.home-wrapper{font:normal 12px 'open sans', sans-serif}
+.home-form-section{background:url(../images/homebg.jpg) 0 0 no-repeat; width:988px; min-height:415px;}
+.home-sprite{background:url(../images/abroad-home-sprite1.png) no-repeat; display:inline-block}
+.rt-arr{background-position:-117px 0; width:11px; height:21px; vertical-align:middle; position:relative; float:right}
+.viewed-icon{background-position:0 0; width:24px; height:23px; margin-right:10px; position:relative; top:2px}
+.article-icon{background-position:-30px 0; width:28px; height:21px; margin-right:10px; position:relative; top:4px}
+.prev-scroll, .next-scroll, .prev-scroll-active, .next-scroll-active{background-position:0 -25px; width:33px; height:63px; cursor:auto; display:block; position:absolute; top:204px; left:35%;}
+
+.articledwnldbtn{margin:12px auto 0;text-align:left;}
+.article-carausel .prev-scroll, .article-carausel .next-scroll, .article-carausel .prev-scroll-active, .article-carausel .next-scroll-active{top:170px !important}
+.prev-scroll, .next-scroll, .prev-scroll:focus, .next-scroll:focus{outline:0 none}
+.prev-scroll-active, .next-scroll-active{cursor:pointer}
+.next-scroll{background-position:-106px -25px}
+.prev-scroll-active{background-position:-71px -25px}
+.next-scroll-active{background-position:-35px -25px}
+.search-form-box{width:385px; margin:15px 0 18px 90px; float:left}
+.search-form-box h2.title-box{background-color:rgba(102,102,102,0.8); padding: 5px 10px; color:#fff; font-size:24px; background-color:#808384\9; font-weight:normal}
+.form-body{background-color:rgba(255,255,255,0.9); padding:6px 13px; background-color:#fff\9;}
+
+.form-body .subtitle{margin-bottom:8px; display:block; float:left; width:100%}
+.form-body .subtitle h3{font:bold 11px 'open sans', sans-serif; color:#3e4f65; float:left}
+.form-body ul li{margin-bottom:5px; float:left; width:100%}
+.form-body .universal-select, .form-body .universal-text{padding:8px !important; color:#666666; background-color:#fff; font:normal 16px 'open sans', sans-serif}
+.choose-options p strong{font-size:14px; color:#666666; font-weight:normal}
+.choose-options{display:table; width:100%}
+.option-cols{display:table-cell;}
+.option-cols p{margin-left: 20px;}
+.home-btn-style{width:100%; text-align:left; font:normal 18px 'open sans', sans-serif; padding:8px 12px !important;}
+.statics-box{background:#f3f8ff; padding:7px 15px 7px 60px; margin:10px 0}
+.statics-box p{color:#999; font-size:14px; margin-bottom:5px}
+.statics-box label{margin-right:50px; color:#666; font-size:14px;}
+.statics-box label span{font-size:36px; margin-right:4px;}
+.carausel-section{margin:30px 0 40px 0; /*direction:!important*/}
+.carausel-section .arrow-box{width:95px; float:left; height:360px; position:relative}
+.carausel-content{width:798px; float:left}
+.carausel-section h2, .map-section h2{font-size:24px; color:#666666; font-weight:normal; margin-bottom:15px}
+.map-section h2{margin-bottom:5px}
+.carausel-details{border: 1px solid #CCCCCC; border-right:0; float: left; padding:0px 13px; width:198px}
+#slideContainer .carausel-details{padding:10px 13px !important; height:400px;}
+.carausel-details.last{border-right: 1px solid #CCCCCC !important;}
+.article-tupple-title{font:normal 16px 'open sans', sans-serif; color:#7a7979; height:55px; overflow:hidden; word-wrap: break-word; line-height: 20px;}
+ul.viewed-carausel li{width:172px; float:left; background:#efefef; margin-right:35px; height:370px;}
+ul.viewed-carausel li.last{margin-right:0}
+ol.carausel-bullets{width:37px; margin:20px auto}
+.article-carausel ol.carausel-bullets{width:55px !important}
+ol.carausel-bullets li{width:10px; height:10px; overflow:hidden; -moz-border-radius:50%; -webkit-border-radius:50%; border-radius:50%; background:#c9c9c9; float:left; content:''; margin-right:8px; cursor:pointer}
+ol.carausel-bullets li.active{background:#666666}
+.viewed-tupple-title{background:#eee; color:#333; padding:8px; position:relative; font-size:12px; border:1px solid #d2d2d2; border-bottom:none;}
+.viewed-tupple-title .pointer{background-position:-62px 0; width:11px; height:10px; position:absolute; left:20px; bottom:-9px}
+.viewed-tupple-title h3{display:block; font:bold 14px 'open sans', sans-serif; margin-bottom:5px}
+.viewed-tupple-title p{line-height:16px; height:35px; overflow:hidden; color:#999; font-size:11px;}
+.viewed-course-box{border:1px solid #d2d2d2; border-top:0 none; padding:8px; color:#999999;}
+.viewed-child{height:175px; overflow:hidden}
+.article-carausel-content{ height:126px;margin-top:12px; color:#666666; line-height:16px; font-size:13px; word-wrap: break-word;}
+.added-txt{color:#a7a7a7; margin:5px 0 8px 0; font-size:12px}
+.university-thumb, .university-thumb img{width:172px; height:115px;margin:auto;text-align:center;}
+.viewed-course-details{margin-top:12px}
+.viewed-course-details p strong{display:block; margin-bottom:4px; margin-top:4px;}
+.viewed-course-details p{margin-bottom:8px;}
+.uni-name a{font-size:12px; margin-bottom:3px; display:inline-block}
+.knw-more{border:1px solid #cccccc; background:#f8f8f8; padding:3px 8px; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px; float:right; text-decoration:none !important}
+.more-opt-box2{background: #F3F3F3; border: 1px solid #CCCCCC; color: #676767; font-size: 11px; padding: 1px 6px 3px; cursor:pointer; float:right}
+.opt-arr-d,.opt-arr-u{background-position:-197px 0; width:8px; height:7px; margin-right:2px; cursor:pointer}
+.opt-arr-u{background-position:-206px 0; top: -1px;}
+.opt-txt2 {font-size: 16px; width: 46px; float:left; position:relative; top:-9px; color:#3e4f65; text-align:center; color:#3e4f65}
+.map{background:url(../images/worldmap.gif) 0 0 no-repeat; width:830px; height:408px; position:relative}
+.map-section{margin:40px 0 100px 95px; clear:left}
+.map-guideline{color:#898989; font-size:16px; line-height:23px; margin-bottom:40px}
+.map-guideline span{color:#ed6921}
+
+.select-opt-layer{border:1px solid #ccc; padding:8px; background:#fff; position:absolute; top:30px; left:0; z-index:99}
+.select-opt-layer .active{background:#c4e7ff}
+.select-opt-layer ol li{float:left; width:100%}
+.select-opt-layer p{color:#666666; margin:5px 0 15px 0; font-size:11px}
+.country-flag-cont{font-size:10px; background:#fff; float:left; width:124px; margin:0 5px 5px 0; cursor:pointer; position:relative}
+.country-flag-cont p{margin:0;}
+.country-flag-cont strong{float:left; width:60px; margin-left:3px; font-weight:normal;}
+.flag-main-box{padding:5px 0 5px 5px; height:62px}
+.flag-chkbox{position:absolute; left:5px; bottom:4px; z-index:99}
+.flag-box{width:53px; height:35px; display:inline-block; vertical-align:text-top}
+.flag-popup{border:1px solid #c3c2c2; background:#fff; -moz-border-radius:8px; -webkit-border-radius:8px; border-radius:8px; width:345px; position:absolute; top:298px; left:320px;}
+.flag-popup .content{width:100%; display:table; position:relative}
+.country-name{width:88px; background:#f5f4f4; padding:12px 8px; display:table-cell; -moz-border-radius:8px 0 0 8px; -webkit-border-radius:8px 0 0 8px; border-radius:8px 0 0 8px; vertical-align:top}
+.country-name p{color:#565555; font-size:15px}
+.country-flag{width:55px;}
+.country-flag img{border:1px solid #dadada}
+.country-details{width:255px; background:#fff; padding:12px 8px; display:table-cell; -moz-border-radius:0px 8px 8px 0px; -webkit-border-radius:0px 8px 8px 0px; border-radius:0px 8px 8px 0px; color:#777777; vertical-align:top}
+.country-details ul li{list-style:disc; margin-left:15px; line-height:16px; margin-bottom:6px;}
+.flag-popup .pointer{background-position:-84px 0; width:28px; height:17px; position:absolute;top:-17px; right:40px}
+.map-pin{background-position:-130px 0; width:19px; height:28px; display:block}
+.usa-pin, .canada-pin, .uk-pin, .germany-pin, .singapore-pin, .aus-pin, .newzealand-pin{position:absolute; left: 136px; top: 149px; cursor:pointer; color:#545353}
+.usa-pin p, .canada-pin p, .uk-pin p, .germany-pin p, .singapore-pin p, .aus-pin p, .newzealand-pin p{margin:2px 0 0 8px; display:block}
+.canada-pin{left: 107px; top: 102px;}
+.uk-pin{left:336px; top: 86px;}
+.germany-pin{left: 362px; top: 97px;}
+.singapore-pin{left: 587px; top: 236px;}
+.aus-pin{left: 654px; top: 289px;}
+.newzealand-pin{left: 738px; top: 336px;}
+.quick-links{background:#526c37; font-size:13px; padding:13px 10px 13px 94px; line-height:20px}
+.quick-links a{color:#fff !important;}
+.quick-links span{color:#7e7e7e; margin:0 5px}
+.quick-heading{font-size:18px; color:#fff;clear:both;padding:10px 0 5px 90px;}
+.logo-image2{background-position:0 -92px; width:162px; height:60px;}
+
+/*------study plan css-------*/
+.study-plan-widget{width:798px; margin:30px auto 30px auto; clear:left}
+.planning-info{background:#f8f8f8; padding:25px 10px;color:#506683; font-size:12px;}
+
+.application-process-info{border-top:3px solid #4573b1}
+.planning-info ul, .application-process-info ul{display:table; width:100%;}
+.planning-info ul li, .application-process-info ul li{display:table-cell; float:left; margin-right:10px; border:2px solid #f2f2f2; background:#fff;  width:24%; text-align:center;-webkit-transition: all 0.5s ease-out;-moz-transition: all 0.5s ease-out; transition: all 0.5s ease-out;}
+.application-process-info ul li{width:19% !important; margin-right:9px; height:145px;}
+.planning-info ul li a, .application-process-info ul li a{display:block; text-align:center;color:#506683 !important; text-decoration: none !important; padding:20px 4px; outline:0 none;}
+.application-process-info ul li a{padding:15px 4px;}
+.country-icon, .course-icon, .exam-plan-icon,.college-plan-icon,.process-icon, .loan-icon, .visa-icon,.stu-life-icon{background-position:-143px -26px; width:61px; height:61px;position:relative;}
+.course-icon{background-position:-211px -26px; top:5px;}
+.exam-plan-icon{background-position:-279px -26px;top:5px;}
+.college-plan-icon{background-position:-348px -26px;top:5px; height:60px;}
+.process-icon{background-position:-417px -26px; top:5px;}
+.loan-icon{background-position:-488px -26px;top:5px;}
+.visa-icon{background-position:-558px -26px;top:5px;}
+.stu-life-icon{background-position:-630px -26px;top:5px;}
+.planning-info ul li.last{margin-right:0;}
+.planning-info ul li strong, .application-process-info ul li strong{display:block; font-size:14px; margin:10px 0;}
+.application-process-info ul li strong{font-size:12px;}
+.planning-info ul li:hover{background:#eef5ff; border-color:#d1e2fc; box-shadow:0 2px 2px #d7d7d7;}
+.planning-info ul li:hover .country-icon{background-position:-143px -94px;}
+.planning-info ul li:hover .course-icon{background-position:-211px -94px;}
+.planning-info ul li:hover .exam-plan-icon{background-position:-279px -94px;}
+.planning-info ul li:hover .college-plan-icon{background-position:-348px -94px;}
+.planning-info ul li:hover .process-icon{background-position:-417px -94px;}
+.planning-info ul li:hover .loan-icon{background-position:-488px -94px;}
+.planning-info ul li:hover .visa-icon{background-position:-558px -94px;}
+.planning-info ul li:hover .stu-life-icon{background-position:-630px -94px;}
+.hm-refine li{ font:500 12px/14px 'open sans', sans-serif; color:#666666;}
+.hm-refine-opt .common-sprite, .hm-refine-list .common-sprite{margin-right:5px !important;}
+.hm-refine-list{ padding:6px 20px;}
+.customInputs-large input[type="radio"] + label span, .customInputs input[type="radio"] + label span {background-position:-87px -148px;height:13px;width:13px;}
+.customInputs-large input[type="radio"]:checked + label span {background-position:-102px -148px;height:13px;width:13px;}
+.custom-active::before{width:40px;right:0;top:0;bottom:0;background:#fff url(../images/drop-arrow-dwn.png) 15px 11px no-repeat !important;}
+
+
+.home-comment-icon{vertical-align:middle;background-position:-153px -3px !important;width:17px;height:20px;margin-right:4px;}
+.home-pdf-icon{vertical-align:middle;background-position:-1px -91px !important;width:24px;height:25px;}
+.button-style span {margin-left:3px;border-left:1px solid #e27034;	box-shadow:-1px 0 0 #f8a262;display:inline-block;height: 26px;padding: 6px 0 0 8px;vertical-align: middle;}
+.articledwntxt{ font-size: 11px; color: #333;text-align:left;margin-top:5px;}
+
+/*Added css 25 sept 2015*/
+.sop-home-icn, .lor-home-icn, .essay-home-icn, .stu-cv-home-icn, .visa-home-icn{background-position:0 -161px; width:44px; height:51px;}
+.lor-home-icn{background-position:-51px -161px; position:relative; top:6px; width:45px;}
+.essay-home-icn{background-position:-107px -161px; position:relative; top:12px;}
+.stu-cv-home-icn{background-position:-161px -161px;}
+.visa-home-icn{background-position:-216px -161px; width:49px;}
+.application-process-info ul li:hover .sop-home-icn{background-position:0px -215px;}
+.application-process-info ul li:hover .lor-home-icn{background-position:-51px -215px;}
+.application-process-info ul li:hover .essay-home-icn{background-position:-108px -215px;}
+.application-process-info ul li:hover .stu-cv-home-icn{background-position:-161px -215px;}
+.application-process-info ul li:hover .visa-home-icn{background-position:-216px -215px;}

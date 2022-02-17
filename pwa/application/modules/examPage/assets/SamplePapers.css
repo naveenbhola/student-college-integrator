@@ -1,0 +1,6 @@
+.prep_container p{font-size: 1rem;color: #000;line-height: 1.34;margin-bottom: 10px;}
+.predictor-table{display: table;border-collapse: collapse;margin-bottom: 15px;border:none;}
+.predictor-table tr:nth-child(odd) {background-color: #F3F6F8;}
+.predictor-table tr td{padding: 5px;border: 1px solid #B8C8D1;}
+.predictor-table tr td h3{font-size: 1rem;color: #000;line-height: 1.36}
+

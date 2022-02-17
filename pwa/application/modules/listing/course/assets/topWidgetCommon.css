@@ -1,0 +1,125 @@
+a.chng-brnch{display:inline-block; font-weight: 400;font-size: 0.75rem}
+.nrml-strng{ font-weight: 400;}
+ul.caption-list li i.info-icon{right:-17px;top:-1px;}
+.clg-detail ul li p{position:relative}
+.clp-mrLink.mg-2{margin-left: 5px;font-weight: 600;}
+.aggregate_rating li {
+    list-style: none;
+    margin-right: 2px;
+    display: block;
+}
+.aggregate_rating li span {
+    color: #ccc;
+    display: inline-block;
+    text-align: left;
+}
+.aggregate_rating .rating-block {
+    color: #000;
+    font-size: .875rem;
+}
+
+.aggregate_rating li span.pipe-sep,.pipe-sep{padding: 0px 3px;}
+.rank-widget .aggregate_rating li a.ans_qst{display: inline-block;width: auto;font-size: 0.875rem;}
+
+
+.pwa_headerv1{display: block;box-shadow: 0 1px 1px 0 rgba(170,170,170,0.50);background: #fff;margin-bottom: 12px;}
+.header-bgcol{background-color:rgba(235,233,249,1);height: 106px;background-position: center center;background-size: cover;background-repeat: no-repeat;}
+.header-bgcol.desktop{background-image: url('/pwa/public/images/desktop/desktop_institute_bg.jpg');}
+.header-bgcol.mobile{background-image: url('/pwa/public/images/mobile_institute_bg.jpg');}
+/*.header-bgcol .header-main-image{height: 106px !important; width: -webkit-fill-available;}
+*/
+.pwa-headerwrapper{display: block;position: relative;}
+.pwa_topwidget{position: relative;padding: 12px;}
+.header_img{width:120px;height:90px;float:none;text-align:center;box-shadow:rgba(0,0,0,0.16) 0 0 2px 0px,rgba(0,0,0,0.16) 0 2px 4px 0;background:#fff;margin:-65px auto 16px;border-radius:2px;overflow:hidden;border:4px solid #fff;display: flex;justify-content: center;align-items: center;}
+.header_img img{max-width:100%;max-height: 100%;}
+.text-cntr, .text-cntr ul{text-align: center;}
+.flex{display: flex;justify-content: center;align-items: center;}
+.flex-row{flex-direction: row;}
+.flex-column{flex-direction: column;}
+.flex button{width: 145px;-webkit-appearance:none;}
+.flex button:nth-child(2){margin-left: 6px;}
+.pwa-primary{background-color: #f37921;border: 1px solid #f37921;color: #fff;}
+.pwa-secondary{border: 1px solid #008489;color:#008489;background-color: #fff;}
+.topwidgtet_scrollnav{border-top: 1px solid #f3f3f3;}
+.clg_dtlswidget{margin: 0px;}
+.pwa_topwidget h1{font-size: 1.25rem;line-height: 1.625rem;}
+.pwa_topwidget h1 a ,h2 a{color: #008489;}
+.region-widget{font-size: 0.75rem;color: #000;}
+.rank-widget{margin: 0px 0px 10px 0px;}
+.rank-widget .clg-col.single-col{margin-top: 5px;display: inline-block;}
+.rank-widget .view_rvws{font-weight: 400;}
+.rank-widget  i.empty_stars{top: 0px;}
+.facts-widget {font-size: 0px;margin: 8px 0px 15px;text-align: center;}
+.facts-widget .flexbox-divs{font-size: 0.875rem;color: #000;line-height: 1.32;display: inline;}
+.facts-widget .flex-divider{color: #ccc;font-size: 0.875rem;display: inline-block;margin: 0 5px;}
+.acp-wrapper a {color: #008489;text-decoration: none;}
+.acp-wrapper .searchTags{color: #111;}
+.ctp-SrpBtnDiv{width: 100%; display: inline-block;clear: both;padding: 10px;}
+a.ctp-btn {width: 145px; border-radius: 2px;cursor:pointer;height: 34px; line-height: 32px;display: inline-block;text-align: center; font-size: 0.875rem;font-weight: 600;}
+a.ctp-btn.ctpComp-btn:hover{background: #f0f6ff;}
+a.ctp-btn:nth-child(2){margin-left: 6px;}
+a:not(.ebDisabled).ctp-btn.ctpBro-btn:hover{background: #db6d1d;}
+.topcard_btns a.ctpBro-btn.ebDisabled{pointer-events: none;color: #999;background: #e2e2e2;cursor: default;border: 1px solid #e2e2e2;}
+a.ctpComp-btn{border: 1px solid #008489; color: #008489;background: #fff; float: left;}
+.ilp a.ctpBro-btn, a.ctpBro-btn{border: 1px solid #f37921; color: #fff;background:#f37921; float: right}
+a.ctpBro-btn.disabld{color: #999; background: #E2E2E2;cursor: default; border: 1px solid #e2e2e2;}
+.ctp-SrpBtnDiv a.ctp-btn, .layer-blink a.ctpComp-btn{line-height: 32px;}
+.facts-widget *{display: inline;}
+
+.ans_qst.qstn{font-size: 0.875rem;;font-weight: 600;position: relative;padding-left: 25px;width: auto;display: inline-block;}
+
+.clg_location_icon , .qstn_ico{
+    background: url(https://images.shiksha.ws/pwa/public/images/pwa-header-mobile-v3.svg) no-repeat;
+    height: 16px;
+    position: static;
+    width: 12px;
+    background-position: -317px -42px;
+    display: inline-block;
+    margin-right: 1px;
+}
+.qstn_ico {
+    width: 21px;
+    height: 18px;
+    background-position: -206px -98px !important;
+    position: absolute;
+    top: 3px;
+    left: 0px;
+    transform: scale(1.25);
+}
+.text-cntr.clg_dtlswidget .ilp-loc{margin-right: 3px;}
+.text-cntr.clg_dtlswidget .ilp-loc span{ color:#000;} 
+.ul.n-more-ul.rnk-pb5 {
+    padding-bottom: 5px;
+}
+ul.n-more-ul>li {padding: 5px 0;font-size: 0.875rem;font-weight: 400;margin-bottom: 5px;list-style: none; }
+.n-more-ul a{color: #008489}
+@media only screen and (min-width:1024px){
+  .clp{width: 1200px;margin: 0 auto;}
+  .header-bgcol{height: 166px;}
+  .text-cntr, .text-cntr ul{text-align: left;}
+/*  .header-bgcol .header-main-image{height: 166px !important; width: -webkit-fill-available;}
+*/  a.ctp-btn:nth-child(2){margin-left: 7px;}
+  .ctp-SrpBtnDiv a.ctp-btn, .layer-blink a.ctpComp-btn{line-height: 30px;}
+  .header_img{width: 191px;height: 144px;margin: -75px 20px 0 0px;float: left;display: inline-flex;overflow:hidden;padding: 10px;}
+  .text-cntr.clg_dtlswidget{text-align: left;margin-left: 0px;min-height: 70px;margin-top: 0px;}
+  .topcard_btns{margin-left: auto;}
+  .pwa_topwidget .flex.flex-column{flex-flow: row wrap;align-items: center;}
+  .facts-widget{margin: 0px 0px 0px 0px;text-align: left;}
+  .clp-mrLink.more-btn {display: inline-block;}
+  .flex-divider, .flexbox-divs{display: inline-block;}
+  .qstn_ico{top: 0px;}
+  .addtnl-col{
+    display: block;
+    width: 100%;
+  }
+  .pwa_topwidget{
+    padding: 16px;
+  }
+   .header_img img{max-width: 100%;max-height: 100%;}
+   .aggregate_rating li span.fillBar{display: block;}
+   .pwa_topwidget h1{
+    display: table-cell;
+    vertical-align: middle;
+   }
+}
+

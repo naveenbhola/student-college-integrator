@@ -1,0 +1,198 @@
+import React from 'react';
+import  './../assets/chphomePageCss.css';
+import {Link} from 'react-router-dom';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import TopSection from './TopSection';
+import PopularColleges from './PopularColleges';
+import Articles from '../../institute/components/ArticlesComponent';
+import HomePage from './HomePage';
+import PopularCourses from './PopularCourses';
+import TopRatedCourse from './TopRatedCourse';
+import TopCollegesByLoc from './TopCollegesByLoc';
+import AnA from './../../course/components/AnAComponent';
+import OtherTopics from './OtherTopics';
+import {fetchCourseHomePageData} from './../actions/CourseHomePageAction';
+import PreventScrolling from './../../../reusable/utils/PreventScrolling';
+import ContentLoader from './../utils/contentLoader';
+import ErrorMsg from './../../../common/components/ErrorMsg';
+import NotFound from './../../../common/components/NotFound';
+
+class CourseHomePage extends React.Component
+{
+	constructor(props)
+	{
+		super(props);
+		this.state = {
+        	isShowLoader : false,
+    	}
+	}
+
+	componentDidMount(){
+		if(!this.isServerSideRenderedHTML())
+		{
+			const {location} = this.props;
+			let url = location.pathname;
+        	let params = this.getEncodedUrlParams(url);
+        	this.initialFetchData(params);
+		}
+        else
+        {
+            if(!this.isErrorPage())
+            {
+
+            }
+        }
+			window.isHeaderFixed = false;
+    }
+
+    getEncodedUrlParams(url){
+    	let paramsObj = {};
+		paramsObj['url'] = url;
+    	return btoa(JSON.stringify(paramsObj));
+    }
+
+    componentWillReceiveProps(nextProps)
+  	{
+	    let nextHash = nextProps.location.pathname;
+	    let prevHash = this.props.location.pathname;
+	    if(prevHash != nextHash)
+	    {
+	     	let params = this.getEncodedUrlParams(nextHash);
+	     	this.initialFetchData(params);
+	    }
+  	}
+
+    isErrorPage()
+  	{
+      let html404 = document.getElementById('notFound-Page');
+      return (html404 && html404.innerHTML);
+  	}
+
+  	isServerSideRenderedHTML()
+  	{
+      let htmlNode = document.getElementById('CHP');
+      return ((htmlNode && htmlNode.innerHTML) || this.isErrorPage());
+  	}
+
+  	initialFetchData(params)
+  	{
+      var self = this;
+      this.setState({isShowLoader : true});
+      let fetchPromise = this.props.fetchCourseHomePageData(params);
+      fetchPromise.then(function(res){
+      	self.setState({isShowLoader : false});
+      });
+  	}
+
+	getSections(){
+		const {config} = this.props;
+		var sectionData  = new Array();
+		var self = this;
+		var count = 0;
+		var resultSet = {};
+		if(self.props.courseHomePageData.topArticles!=null && self.props.courseHomePageData.topArticles.numFound!=0){
+			resultSet.articleData = self.props.courseHomePageData.topArticles;
+			resultSet.allArticlePageUrl = self.props.courseHomePageData.topArticles.allArticlePageUrl;
+		}
+
+		let html = (this.props.courseHomePageData.sectionOrder).map(function (key, index){
+			switch (key) {
+      			case 'homePage':
+					return (self.props.courseHomePageData[key]!=null && <HomePage key={index} sectionname={key} sectiondata={self.props.courseHomePageData[key]} /> );
+				case 'popularColleges':
+					return ((self.props.courseHomePageData.popularColleges!=null && (self.props.courseHomePageData.popularColleges.wikiData!=null ||  self.props.courseHomePageData.popularColleges.tuple!=null)) && <PopularColleges key={index} sectionname={key} sectiondata={self.props.courseHomePageData.popularColleges} order={index} labelname={self.props.courseHomePageData.displayName} attributeMapping={self.props.courseHomePageData.attributeMapping} chpType={self.props.courseHomePageData.chpType}/>)
+				case 'popularUGCourses':
+					return ((self.props.courseHomePageData.popularUGCourses!=null && (self.props.courseHomePageData.popularUGCourses.wikiData!=null ||  self.props.courseHomePageData.popularUGCourses.tuple!=null)) && <PopularCourses key={index} order={index} courseData={self.props.courseHomePageData.popularUGCourses} labelname={self.props.courseHomePageData.displayName} sectionname={key}/>)
+				case 'popularPGCourses':
+					return ((self.props.courseHomePageData.popularPGCourses!=null && (self.props.courseHomePageData.popularPGCourses.wikiData!=null || self.props.courseHomePageData.popularPGCourses.tuple!=null)) && <PopularCourses key={index} order={index} courseData={self.props.courseHomePageData.popularPGCourses} labelname={self.props.courseHomePageData.displayName} sectionname={key}/>)
+				case 'popularSpecialization':
+					return ((self.props.courseHomePageData.popularSpecialization!=null && (self.props.courseHomePageData.popularSpecialization.wikiData!=null || self.props.courseHomePageData.popularSpecialization.tuple!=null)) && <PopularCourses key={index} courseData={self.props.courseHomePageData.popularSpecialization} order={index} labelname={self.props.courseHomePageData.displayName} sectionname={key}/>)
+				case 'topRateCourses':
+					return ((self.props.courseHomePageData.topRateCourses!=null && (self.props.courseHomePageData.topRateCourses.wikiData!=null || self.props.courseHomePageData.topRateCourses.tuple!=null)) && <TopRatedCourse key={index} sectiondata={self.props.courseHomePageData.topRateCourses} order={index} labelname={self.props.courseHomePageData.displayName} sectionname={key}/>);
+				case 'topCollegesByLocation':
+					return ((self.props.courseHomePageData.topCollegesByLocation!=null && (self.props.courseHomePageData.topCollegesByLocation.wikiData!=null || self.props.courseHomePageData.topCollegesByLocation.tuple!=null)) && <TopCollegesByLoc key={index} sectiondata={self.props.courseHomePageData.topCollegesByLocation} order={index} labelname={self.props.courseHomePageData.displayName} sectionname={key}/>);
+				case 'popularExams':
+					return ((self.props.courseHomePageData.popularExams!=null && (self.props.courseHomePageData.popularExams.wikiData!=null || self.props.courseHomePageData.popularExams.tuple!=null)) && <PopularExams key={index} sectiondata={self.props.courseHomePageData.popularExams} order={index} labelname={self.props.courseHomePageData.displayName} sectionname={key}/>);
+			}
+			count = index;
+		});
+		sectionData.push(html);
+		if(this.props.courseHomePageData.anaWidget!=null){
+			let heading = 'Ask Queries on '+this.props.courseHomePageData.displayName;
+			sectionData.push(<AnA anaWidget={this.props.courseHomePageData.anaWidget} config={this.props.config} page = "courseHomePage" key={count+5} heading={heading}/>)
+		}
+		if(Object.keys(resultSet).length!=0 ){
+			sectionData.push(<Articles config={config} data = {resultSet} page = 'CourseHomePage' key={count}/>);
+		}
+		if(typeof self.props.courseHomePageData != 'undefined' && typeof self.props.courseHomePageData.relatedCHP != 'undefined' && self.props.courseHomePageData.relatedCHP.length>0){
+			sectionData.push(<OtherTopics relatedData={self.props.courseHomePageData.relatedCHP} key={count+1}/>);
+		}
+		return sectionData;
+	}
+
+	renderLoader () {
+	      PreventScrolling.enableScrolling(true);
+	      if(PreventScrolling.canUseDOM())
+	      {
+	          document.getElementById('page-header').style.display = "table";
+	          document.getElementById('page-header').style.position = "relative";
+	      }
+	      return <ContentLoader/>;
+  	}
+
+	render()
+	{
+		if(this.state.isShowLoader)
+        {
+            return (
+                <React.Fragment>
+                    {this.renderLoader()}
+                </React.Fragment>
+
+                );
+        }
+    
+        if((this.props.courseHomePageData && typeof this.props.courseHomePageData.statusCode != 'undefined' && this.props.courseHomePageData.statusCode== 404))
+        {
+            return <NotFound />;
+        }
+
+		const {config, courseHomePageData} = this.props;
+
+		if(typeof courseHomePageData == 'undefined' || Object.keys(this.props.courseHomePageData).length==0) {
+		    return (
+		        <React.Fragment>
+		            {this.renderLoader()}
+		        </React.Fragment>
+		        );
+		}
+		else if(typeof courseHomePageData == 'undefined' || courseHomePageData == null) {
+		  return <ErrorMsg/>;
+		}
+
+		let chpSections   = this.getSections();
+		return (
+				<React.Fragment>
+					<div id="CHP" className="chp">
+						<TopSection sectionData={this.props.courseHomePageData} count={this.props.courseHomePageData.counts} imageUrl={this.props.courseHomePageData.imageUrl} displayName={this.props.courseHomePageData.displayName}/>
+						{chpSections}
+					</div>
+				</React.Fragment>
+			)
+	}
+}
+
+function mapStateToProps(state)
+{
+  return {
+      courseHomePageData : state.courseHomePageData,
+      config : state.config
+  }
+}
+
+function mapDispatchToProps(dispatch){
+  return bindActionCreators({ fetchCourseHomePageData }, dispatch);
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(CourseHomePage);

@@ -1,0 +1,15 @@
+.mang-wrapper{  width: 100%; margin: auto; background: #fbfbfb;}
+.mangmnt{width:100%;display:block;padding:48px 0px 48px}
+.mangmnt h2{color:#4c4c4c;font-size:18px;font-weight:600;padding-bottom: 5px;border-bottom: 1px solid #e9e9e9;}
+.mngmnt-dtls{margin:30px 0px;background:#fff;/* min-height: 300px; */display:block}
+.mngmnt-dtls-col{padding:18px 18px 30px;}
+.mngmnt-image{width:124px;float: left;display: inline-block;height: 124px;border: 2px solid #ededed;}
+.mngmnt-prfl{float: right;width: 82%;display: block;}
+.lead-name{padding: 0;display: block;padding-bottom: 15px;      border-bottom: 1px solid #f3f3f3;}
+.lead-name h3.name{color:#008489;padding: 0;margin: 0;line-height: 25px;font-size:19px;font-weight:600;}
+.lead-name p.positn{color:#4c4c4c;line-height: 24px;font-size:14px;font-weight:600;margin: 0;}
+.lead-name p.qualification{color:#999999;line-height: 26px;display: block;font-size: 12px;word-break: normal;padding-right: 121px;margin: 10px 0 0;font-weight: normal;}
+.clr { clear: both; display: block; height: 0px; width: 100%; }
+.brf-descrptn{padding: 18px 0px 0px;display:block }
+.brf-descrptn .about-lead{color:#999999;font-size:14px;font-weight:normal;display: block;margin: 0;padding-right: 104px;line-height:24px;}
+.brf-descrptn .about-lead1{color:#999999;font-size:14px;font-weight:normal;display: block;margin: 12px 0 0;padding-right: 104px;line-height:24px;}

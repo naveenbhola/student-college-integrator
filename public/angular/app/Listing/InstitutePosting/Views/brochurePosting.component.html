@@ -1,0 +1,47 @@
+<div class="row" id="institute_brochure_form">
+        <div mysize="12">
+            <div class="x_panel">
+                <div [class.x_title]="opened">
+                    <ul class="nav navbar-left panel_toolbox">
+                      <li><a class="collapse-link" (click)="toggle()"><i [class]="opened?' fa fa-chevron-up':' fa fa-chevron-down'"></i></a></li>
+                    </ul>
+                    <h2>{{instituteObj.postingListingType}} Brochure <img id="brochure" class="helperText" src="/public/images/tooltip.png" width="20px" style="padding-right:0px" (click)="toolTipNotify('brochure',$event)"></h2>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content" [hidden]="!opened">                  
+                  <div class="form-group">
+                    <div mysize="3"> 
+                        <label class="cmsFont" style="text-align:left;padding-left:22px;">Upload brochure</label> 
+                    </div> 
+
+                     <div mysize="3" style="padding-top:8px;"> 
+                         <input name="brochureFile" type="file" (change)="fileChange(instituteBrochure)" #instituteBrochure> 
+                         <span class="help-block text-danger">{{instituteBrochureErrMsg}}</span>
+                     </div>
+                   </div>
+                   <div class="form-group">
+                     <div mysize="3" style="padding-top:8px">
+                        <div class="progress" *ngIf="showProgressBar && !instituteBrochureErrMsg">
+                            <div class="progress-bar progress-bar-danger" data-transitiongoal="25" aria-valuenow="100" [style.width]="uploadProgress + '%'">{{uploadProgress}}</div>
+                        </div>
+                     </div> 
+                     <div *ngIf="instituteObj.brochure_url">
+                         <div mysize="3">
+                             <a target="_blank" href="{{instituteObj.media_server_domain + instituteObj.brochure_url}}" class="btn cmsButton cmsFont">View uploaded brochure</a>
+                         </div> 
+                         <div style="padding-left:0px;" mysize="2">
+                            <select name="brochureYear" class="select2_single form-control" #brochureYear="ngModel" [(ngModel)]="instituteObj.brochure_year" [myrequired]="'1'" [registerForm]="form" [registerModel]="brochureYear">
+                                <option value="">Select Year</option>
+                                <option *ngFor="let year of brochureYearOptions" value="{{year}}" > {{year}}</option>
+                            </select>
+                         </div>
+                         <div mysize="2">
+                             <a target="_blank" (click)="clearBrochureData();instituteBrochure.value='';" class="btn btn-default">X</a>
+                         </div> 
+                     </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<shiksha-loader [showLoader]="showLoader"> </shiksha-loader>

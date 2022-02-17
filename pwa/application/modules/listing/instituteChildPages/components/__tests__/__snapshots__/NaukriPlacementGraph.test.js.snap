@@ -1,0 +1,466 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Naukri graph with All Data present snapshot test 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <NaukriPlacementGraph
+    salaryData={
+      Object {
+        "avgSalary": 14.35,
+        "maxSalary": 37,
+        "minSalary": 8,
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <n
+        allowEmptyRows={false}
+        chartActions={null}
+        chartEvents={Array []}
+        chartLanguage="en"
+        chartPackages={
+          Array [
+            "corechart",
+          ]
+        }
+        chartType="ColumnChart"
+        chartVersion="current"
+        columns={Array []}
+        data={
+          Array [
+            Array [
+              "",
+              "",
+              Object {
+                "role": "style",
+              },
+              Object {
+                "role": "annotation",
+              },
+              Object {
+                "role": "tooltip",
+              },
+            ],
+            Array [
+              "Min",
+              8,
+              "#008489",
+              "8 lakh",
+              "8 lakh",
+            ],
+            Array [
+              "Median",
+              14.35,
+              "#008489",
+              "14.35 lakh",
+              "14.35 lakh",
+            ],
+            Array [
+              "Max",
+              37,
+              "#008489",
+              "37 lakh",
+              "37 lakh",
+            ],
+          ]
+        }
+        dateFormat={null}
+        diffdata={null}
+        formatters={Array []}
+        graph_id="LineChart2"
+        height="250px"
+        legend_toggle={false}
+        loadCharts={true}
+        loader={
+          <div>
+            Rendering Chart
+          </div>
+        }
+        numberFormat={null}
+        options={
+          Object {
+            "annotations": Object {
+              "alwaysOutside": true,
+              "textStyle": Object {
+                "color": "black",
+                "fontSize": 11,
+              },
+            },
+            "bar": Object {
+              "groupWidth": "50%",
+            },
+            "chartArea": Object {
+              "width": "80%",
+            },
+            "legend": Object {
+              "position": "none",
+            },
+            "seriesType": "bars",
+            "tooltip": Object {
+              "textStyle": Object {
+                "fontName": "Verdana",
+                "fontSize": 12,
+                "fontWeight": 600,
+              },
+            },
+            "vAxis": Object {
+              "minValue": 0,
+              "title": "Salary in (lakh)",
+            },
+          }
+        }
+        rows={Array []}
+        width="100%"
+      />,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "allowEmptyRows": false,
+        "chartActions": null,
+        "chartEvents": Array [],
+        "chartLanguage": "en",
+        "chartPackages": Array [
+          "corechart",
+        ],
+        "chartType": "ColumnChart",
+        "chartVersion": "current",
+        "columns": Array [],
+        "data": Array [
+          Array [
+            "",
+            "",
+            Object {
+              "role": "style",
+            },
+            Object {
+              "role": "annotation",
+            },
+            Object {
+              "role": "tooltip",
+            },
+          ],
+          Array [
+            "Min",
+            8,
+            "#008489",
+            "8 lakh",
+            "8 lakh",
+          ],
+          Array [
+            "Median",
+            14.35,
+            "#008489",
+            "14.35 lakh",
+            "14.35 lakh",
+          ],
+          Array [
+            "Max",
+            37,
+            "#008489",
+            "37 lakh",
+            "37 lakh",
+          ],
+        ],
+        "dateFormat": null,
+        "diffdata": null,
+        "formatters": Array [],
+        "graph_id": "LineChart2",
+        "height": "250px",
+        "legend_toggle": false,
+        "loadCharts": true,
+        "loader": <div>
+          Rendering Chart
+        </div>,
+        "numberFormat": null,
+        "options": Object {
+          "annotations": Object {
+            "alwaysOutside": true,
+            "textStyle": Object {
+              "color": "black",
+              "fontSize": 11,
+            },
+          },
+          "bar": Object {
+            "groupWidth": "50%",
+          },
+          "chartArea": Object {
+            "width": "80%",
+          },
+          "legend": Object {
+            "position": "none",
+          },
+          "seriesType": "bars",
+          "tooltip": Object {
+            "textStyle": Object {
+              "fontName": "Verdana",
+              "fontSize": 12,
+              "fontWeight": 600,
+            },
+          },
+          "vAxis": Object {
+            "minValue": 0,
+            "title": "Salary in (lakh)",
+          },
+        },
+        "rows": Array [],
+        "width": "100%",
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <n
+          allowEmptyRows={false}
+          chartActions={null}
+          chartEvents={Array []}
+          chartLanguage="en"
+          chartPackages={
+            Array [
+              "corechart",
+            ]
+          }
+          chartType="ColumnChart"
+          chartVersion="current"
+          columns={Array []}
+          data={
+            Array [
+              Array [
+                "",
+                "",
+                Object {
+                  "role": "style",
+                },
+                Object {
+                  "role": "annotation",
+                },
+                Object {
+                  "role": "tooltip",
+                },
+              ],
+              Array [
+                "Min",
+                8,
+                "#008489",
+                "8 lakh",
+                "8 lakh",
+              ],
+              Array [
+                "Median",
+                14.35,
+                "#008489",
+                "14.35 lakh",
+                "14.35 lakh",
+              ],
+              Array [
+                "Max",
+                37,
+                "#008489",
+                "37 lakh",
+                "37 lakh",
+              ],
+            ]
+          }
+          dateFormat={null}
+          diffdata={null}
+          formatters={Array []}
+          graph_id="LineChart2"
+          height="250px"
+          legend_toggle={false}
+          loadCharts={true}
+          loader={
+            <div>
+              Rendering Chart
+            </div>
+          }
+          numberFormat={null}
+          options={
+            Object {
+              "annotations": Object {
+                "alwaysOutside": true,
+                "textStyle": Object {
+                  "color": "black",
+                  "fontSize": 11,
+                },
+              },
+              "bar": Object {
+                "groupWidth": "50%",
+              },
+              "chartArea": Object {
+                "width": "80%",
+              },
+              "legend": Object {
+                "position": "none",
+              },
+              "seriesType": "bars",
+              "tooltip": Object {
+                "textStyle": Object {
+                  "fontName": "Verdana",
+                  "fontSize": 12,
+                  "fontWeight": 600,
+                },
+              },
+              "vAxis": Object {
+                "minValue": 0,
+                "title": "Salary in (lakh)",
+              },
+            }
+          }
+          rows={Array []}
+          width="100%"
+        />,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "allowEmptyRows": false,
+          "chartActions": null,
+          "chartEvents": Array [],
+          "chartLanguage": "en",
+          "chartPackages": Array [
+            "corechart",
+          ],
+          "chartType": "ColumnChart",
+          "chartVersion": "current",
+          "columns": Array [],
+          "data": Array [
+            Array [
+              "",
+              "",
+              Object {
+                "role": "style",
+              },
+              Object {
+                "role": "annotation",
+              },
+              Object {
+                "role": "tooltip",
+              },
+            ],
+            Array [
+              "Min",
+              8,
+              "#008489",
+              "8 lakh",
+              "8 lakh",
+            ],
+            Array [
+              "Median",
+              14.35,
+              "#008489",
+              "14.35 lakh",
+              "14.35 lakh",
+            ],
+            Array [
+              "Max",
+              37,
+              "#008489",
+              "37 lakh",
+              "37 lakh",
+            ],
+          ],
+          "dateFormat": null,
+          "diffdata": null,
+          "formatters": Array [],
+          "graph_id": "LineChart2",
+          "height": "250px",
+          "legend_toggle": false,
+          "loadCharts": true,
+          "loader": <div>
+            Rendering Chart
+          </div>,
+          "numberFormat": null,
+          "options": Object {
+            "annotations": Object {
+              "alwaysOutside": true,
+              "textStyle": Object {
+                "color": "black",
+                "fontSize": 11,
+              },
+            },
+            "bar": Object {
+              "groupWidth": "50%",
+            },
+            "chartArea": Object {
+              "width": "80%",
+            },
+            "legend": Object {
+              "position": "none",
+            },
+            "seriesType": "bars",
+            "tooltip": Object {
+              "textStyle": Object {
+                "fontName": "Verdana",
+                "fontSize": 12,
+                "fontWeight": 600,
+              },
+            },
+            "vAxis": Object {
+              "minValue": 0,
+              "title": "Salary in (lakh)",
+            },
+          },
+          "rows": Array [],
+          "width": "100%",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;

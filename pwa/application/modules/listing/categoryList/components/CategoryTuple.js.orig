@@ -1,0 +1,390 @@
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
+import { Link } from "react-router-dom";
+import { getRequest } from '../../../../utils/ApiCalls';
+import {getRupeesDisplayableAmount} from './../../course/utils/listingCommonUtil';
+import Pagination from './Pagination';
+import APIConfig from './../../../../../config/apiConfig';
+import DownloadEBrochure from './../../../common/components/DownloadEBrochure';
+import Shortlist from './../../../common/components/Shortlist';
+import Analytics from './../../../reusable/utils/AnalyticsTracking';
+import Lazyload from './../../../reusable/components/Lazyload';
+import {storeCourseDataForPreFilled} from './../../course/actions/CourseDetailAction';
+import {storeInstituteDataForPreFilled} from './../../institute/actions/InstituteDetailAction';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import FullPageLayer from './../../../common/components/FullPageLayer';
+import {DFPBannerTempalte} from './../../../reusable/components/DFPBannerAd';
+import tupleCss from './../assets/categoryTuple.css';
+import CategoryTableComponent from './CategoryTableComponent';
+import {addingDomainToUrl} from '../../../../utils/commonHelper';
+import {removeDomainFromUrl} from '../../../../utils/urlUtility';
+import config from './../../../../../config/config';
+import AggregateReview from './../../course/components/AggregateReviewWidget';
+import {srpConstants, ctpConstants} from './../config/categoryConfig';
+import PCW from './../../../search/components/PCW'
+
+class CategoryTuple extends Component {
+  constructor(props, context)
+  {
+    super(props, context);
+    this.state = {
+      listings:[],
+      remainingCourseIds: [],
+      fullLayer: false
+    }
+    this.trackingKeyId = 272;
+    if(this.props.isSrp){
+        this.config = srpConstants();
+    } else{
+        this.config = ctpConstants();
+    }
+    this.aggregateRatingConfig = this.props.aggregateRatingConfig;
+  }
+
+  openTableComponentLayer() {
+    this.setState({
+        fullLayer: true
+    })
+  }
+
+  closeTableComponentLayer(){
+    this.setState({
+        fullLayer: false
+    })
+  }
+
+  getTableComponent(){
+    return <CategoryTableComponent show="true" categoryData={this.props.categoryData}/>;
+  }
+
+  showExamMore(courseId){
+    document.getElementById('openEPMore'+courseId).classList.add("hide");
+    document.getElementById('epList'+courseId).classList.remove("hide");
+  }
+
+  prepareExamList(examList, examUrls, courseId, thisObj){
+    var elist = new Array();
+    let examSet = new Set();
+    for(var i in examList){
+        let e = examList[i];
+        if(examSet.has(e.exam_name))
+            continue;
+        examSet.add(e.exam_name);
+        if(typeof(examUrls[e.exam_id]) != 'undefined'){
+          elist.push(<li key={'e'+i}><a onClick={thisObj.trackEvent.bind(thisObj,'Popular_Colleges','Exam_click')} href={addingDomainToUrl(examUrls[e.exam_id], config().SHIKSHA_HOME)}>{e.exam_name}</a></li>);
+          elist.push(<li key={'epipe'+i}><span> | </span></li>);
+        }else{
+          elist.push(<li key={'e'+i}><p>{e.exam_name}</p></li>);
+          elist.push(<li key={'epipe'+i}><span> | </span></li>);
+        }
+    }
+    elist.pop();
+    return(<ul className="hide" id={"epList"+courseId}>{elist}</ul>);
+  }
+  
+  handleClickOnCourse(instituteData,courseData)
+  {
+      this.trackEvent('ChooseCLP','Click');
+    if(typeof courseData != 'undefined' && typeof courseData == 'object' && typeof instituteData != 'undefined' && typeof instituteData == 'object')
+      {
+        courseData.instituteName =  instituteData.name;
+        courseData.instituteUrl  = instituteData.url;
+        this.props.storeCourseDataForPreFilled(courseData);
+      }
+  }
+
+  handleClickOnInstitute(instituteData)
+  {
+      this.trackEvent('ChooseILP','click');
+      if(typeof instituteData != 'undefined' && typeof instituteData == 'object') {
+        var data =  [];
+        data.instituteName = instituteData.name;
+        data.ownership = instituteData.ownership;
+        data.autonomous = instituteData.autonomous;
+        data.nationalImportance = instituteData.nationalImportance;
+        data.univeristyTypeWithSpecification = instituteData.universityTypeWithSpecification;
+        data.ugcApproved = instituteData.ugcApproved;
+        data.naacAccreditation = instituteData.naacAccreditation;
+        data.establishYear = instituteData.estbYear;
+        data.aiuMember = instituteData.aiuMember;
+        if(typeof instituteData != 'undefined' && instituteData != null && instituteData.courseTupleData && instituteData.courseTupleData.displayLocationString){
+            data.location = instituteData.courseTupleData.displayLocationString;
+        }
+
+        this.props.storeInstituteDataForPreFilled(data);
+      }
+  }
+
+  getCourseTuple(info, tupleType, instituteUrl,instituteData){
+    var ratingData = null;
+    if(typeof info.aggregateReviewData!='undefined' && info.aggregateReviewData && typeof this.aggregateRatingConfig!= 'undefined' && this.aggregateRatingConfig){
+      ratingData =  {...this.aggregateRatingConfig, 'aggregateReviewData': info.aggregateReviewData };
+    }
+    var self = this;
+    var moreClass = 'none';
+    if(typeof tupleType != 'undefined' && tupleType=='more'){
+      moreClass = "brdr-Top";
+    }
+    if(!info.courseUrl)
+      return;
+    let examsCount = 0;
+    if(info.showExams && info.eligibility.length>0 && typeof(self.props.categoryData) != 'undefined' && self.props.categoryData.examsUrl){
+        examsCount = this.getExamsUniqueCount(info.eligibility);
+    }
+    return(
+      <div id={info.courseId} key={info.courseId} className={moreClass}>
+        <div>
+          <div className="ctp-SrpDiv">
+       <Link to={info.courseUrl} className="fnt-w6" onClick={self.handleClickOnCourse.bind(self,instituteData,info)}>{info.name.length>55?info.name.substring(0,52)+'...': info.name}</Link>
+              <div className="ctp-detail">
+                  <ul>
+                  {ratingData &&
+                      <li>
+                        <AggregateReview uniqueKey = {'Course_'+info.courseId} isPaid = {false} reviewsCount={info.reviewCount} reviewUrl = {info.allReviewsUrl} aggregateReviewData = {ratingData} showAllreviewUrl = {false} config={config()}/>
+                      </li>
+                  } 
+                      {(ratingData!=null && info.fees!=null)? <li><span> | </span></li>:''} 
+          {info.fees!=null?<li>{getRupeesDisplayableAmount(info.fees)}</li>:''}
+                      {((ratingData!=null || info.fees!=null) && info.durationValue>0)?<li><span> | </span></li>:''}
+                      {info.durationValue>0?<li>{info.durationValue} {info.durationUnit}</li>:''}
+                      {((ratingData!=null || info.fees!=null || info.durationValue>0) && info.courseExtraInfo.extraInfo.educationType!=null)?<li><span> | </span></li>:''}
+                      {info.courseExtraInfo.extraInfo.educationType!=null?<li>{info.courseExtraInfo.extraInfo.educationType}</li>:''}
+                  </ul>
+              </div>
+              
+              {examsCount > 0 ?
+              <div className="ctp-detail">
+                  <label>Exams</label>
+              <div className="ctp-Det-info" id={"openEPMore"+info.courseId} key={info.courseId}>
+
+                <p id={"examPratital"+info.courseId} > { self.props.categoryData.examsUrl[info.eligibility[0]['exam_id']] ? <a onClick={self.trackEvent.bind(self,'Popular_Colleges','Exam_click')} href={addingDomainToUrl(self.props.categoryData.examsUrl[info.eligibility[0]['exam_id']], config().SHIKSHA_HOME)}>{info.eligibility[0]['exam_name']}</a> : <span>{info.eligibility[0]['exam_name']}</span> } </p>
+                
+                {(examsCount>1)? <span className="link" onClick={self.showExamMore.bind(self, info.courseId)}> +{examsCount - 1} more</span>:''}
+
+              </div>
+              
+              {(examsCount>1) ? self.prepareExamList(info.eligibility, self.props.categoryData.examsUrl, info.courseId, self) : null}
+
+              </div>:''}
+
+          </div>
+          {info.questionCount>0 || info.reviewCount>0 || info.mediaCount>0?
+          <div className="ctp-SrpDiv">
+             <div className="ctp-detail QRP-list">
+                  <ul>
+                      {info.questionCount>0?<li><a href={addingDomainToUrl(info.allQuestionsUrl,config().SHIKSHA_HOME)} onClick={this.trackEvent.bind(this,'AllQuestions','click')}>{info.questionCount} <span className="Qrp-txt">{info.questionCount > 1 ? 'Questions' : 'Question' }</span></a> </li>:''}
+                      {info.reviewCount>0?<li><a href={addingDomainToUrl(info.allReviewsUrl,config().SHIKSHA_HOME)} onClick={this.trackEvent.bind(this,'AllReviews','click')}>{info.reviewCount}<span className="Qrp-txt">{info.reviewCount > 1 ?'Reviews' : 'Review'}</span></a> </li>:'' }
+                      {info.mediaCount>0?<li><a href={addingDomainToUrl(instituteUrl+'#gallery',config().SHIKSHA_HOME)} onClick={this.trackEvent.bind(this,'Gallery','click')}>{info.mediaCount}<span className="Qrp-txt">{info.mediaCount > 1 ? 'Photos' : 'Photo'} </span></a> </li>:''}
+                  </ul>
+              </div>
+          </div>:''}
+    </div>
+          <div className="ctp-SrpBtnDiv">
+	<Shortlist listingId={info.courseId} trackid={(typeof(this.props.srtTrackId) != 'undefined' && this.props.srtTrackId) ? this.props.srtTrackId : this.config.shortlistTrackingId} recoShrtTrackid={(typeof(this.props.recoShrtTrackid) !='undefined' && this.props.recoShrtTrackid) ? this.props.recoShrtTrackid : 1089} recoEbTrackid={(typeof(this.props.recoEbTrackid) !='undefined' && this.props.recoEbTrackid) ? this.props.recoEbTrackid : 273} recoPageType="EBrochure_RECO_Layer" recoActionType="EBrochure_RECO_Layer" actionType="NM_category_shortlist" pageType="NM_Category" sessionId="" visitorSessionid="" isCallReco={this.props.isCallReco} clickHandler={this.trackEvent.bind(this,'Shortlist','Response')} isButton={true}/>         
+
+ 	<DownloadEBrochure listingId={info.courseId} trackid={(typeof(this.props.ebTrackid) !='undefined' && this.props.ebTrackid) ? this.props.ebTrackid : this.config.downloadBrochureTrackingId} recoEbTrackid={(typeof(this.props.recoEbTrackid) !='undefined' && this.props.recoEbTrackid) ? this.props.recoEbTrackid : 273} recoShrtTrackid={(typeof(this.props.recoShrtTrackid) !='undefined' && this.props.recoShrtTrackid) ? this.props.recoShrtTrackid : 1089} isCallReco={this.props.isCallReco} clickHandler={this.trackEvent.bind(this,'DownloadBrochure','Response')}/>
+      </div>
+  </div>
+
+  );
+  }
+  getExamsUniqueCount(examList) {
+      let examSet = new Set();
+      for (var i in examList) {
+          examSet.add(examList[i].exam_name);
+      }
+      return examSet.size;
+  }
+  getCourseData(info,loadeMoreCoursesData){
+    let self = this;
+    let instituteId = info.instituteId;
+    let numberOfCoursesToLoad = 5;
+
+    if(typeof self.state.remainingCourseIds[instituteId]!='undefined'){
+          var courseIdArr = self.state.remainingCourseIds[instituteId]
+    }else{
+          var courseIdArr = loadeMoreCoursesData[instituteId];
+    }
+
+    let cloneCourseIdArr = courseIdArr.slice();
+    let courseIdsToLoadArr = cloneCourseIdArr.splice(0, numberOfCoursesToLoad);
+    let courseIdsToLoadStr = courseIdsToLoadArr.join();
+
+    let numOfRemainingCourses = cloneCourseIdArr.length;
+    let remainingCourseIdsStr = cloneCourseIdArr.join();
+
+    let showLoadMore = true;
+    let courseIdStr = '';
+    for(var i in courseIdsToLoadArr){
+      courseIdStr += '&courseIds='+courseIdsToLoadArr[i];
+    }
+
+    var url = APIConfig.GET_CTP_LOADMORE;
+    var params = 'instituteId='+info.instituteId+courseIdStr;
+
+    getRequest(url+'?'+params).then((response) => {
+      let ResponseData   = response.data.data;
+      let courseData   = response.data.data.courseTupleList;
+
+      let courseTuples = courseData.map(
+                            function(courseInfo, index){
+                              let courseId = courseInfo.courseId;
+                              let listingCloneObject = Object.assign({}, self.state.listings);
+                              let courseObj = listingCloneObject[info.instituteId];
+                              if(typeof courseObj=='undefined'){
+                                courseObj = [];
+                              }
+
+                              self.setState({
+                                listings: {
+                                  ...self.state.listings,
+                                  [info.instituteId]:courseObj.concat(self.getCourseTuple(courseInfo, 'more', info.url,info))
+                                },
+                                remainingCourseIds: {
+                                    ...self.state.remainingCourseIds,
+                                    [instituteId]:cloneCourseIdArr,
+                                  }
+                              });
+                            }
+                          );
+    })
+  }
+  /* widget pos in 0-index based */
+  getPCWArray(dataArray, widgetPos, widgetSize){
+      if(!dataArray) {
+          return null;
+      }
+      const widgetStartIndex = widgetPos*widgetSize;
+      if(widgetStartIndex > dataArray.length)
+          return false;
+      const widgetEndingIndex = (widgetStartIndex + widgetSize) < dataArray.length ? (widgetStartIndex + widgetSize) : dataArray.length;
+      return dataArray.slice(widgetStartIndex, widgetEndingIndex);
+  }
+  getTupleHTML(){
+    var self = this;
+    var tupleData = '';
+    var listData  = new Array();
+    const {loadMoreCourses} = this.props;
+
+    var loadeMoreCoursesData  = {};
+    for(var i in loadMoreCourses)
+    {
+      loadeMoreCoursesData[loadMoreCourses[i].instituteId] = loadMoreCourses[i].courseIds.slice(1);
+    }
+
+    var tupleData = (typeof(this.props.recoData) != 'undefined' && this.props.recoData) ? this.props.recoData : self.props.categoryData.categoryInstituteTuple;
+    let showPCW = false;
+    let pcwCount = 0;
+    if(typeof(this.props.recoData) === 'undefined'  && this.props.categoryData.categoryInstituteTuple[0].courseTupleData.paid && this.props.categoryData.categoryInstituteTuple.length > 10) {
+        showPCW = this.props.categoryData.pcwData ? true : false;
+    }
+    for(let index in tupleData){
+        let info = tupleData[index];
+        if(showPCW && index % this.config.TUPLES_BEFORE_PCW === 0){
+            let pcwData = this.getPCWArray(this.props.categoryData.pcwData.popularInstituteTuple, pcwCount, this.config.PCW_COUNT);
+            if(pcwData) {
+                listData.push(<PCW key={'PCW_' + pcwCount}
+                                   aggregateReviewConfig={this.props.categoryData.pcwData.aggregateRatingConfig}
+                                   showPCW={showPCW} tupleData={pcwData}/>);
+                pcwCount++;
+            }
+        }
+        if(!info.courseTupleData.courseUrl)
+            continue;
+        let moreCourseLength = '';
+        moreCourseLength = (typeof self.state.remainingCourseIds!='undefined' && info.instituteId in self.state.remainingCourseIds) ?self.state.remainingCourseIds[info.instituteId].length: (typeof loadeMoreCoursesData[info.instituteId] != 'undefined' ? loadeMoreCoursesData[info.instituteId].length : 0);
+
+        if(this.props.showStateData && this.props.categoryData.requestData.pageNumber === 1 && index == this.props.categoryData.totalInstituteCount ){
+            listData.push(<h2 className="fallback-heading" key="headingState">{this.props.categoryData.fallbackResultCount} {typeof this.props.categoryData.requestData != 'undefined' && typeof this.props.categoryData.requestData.categoryData != 'undefined' && this.props.categoryData.requestData.fallbackHeading}</h2>);
+        }
+    listData.push(
+    <div className="ctpSrp-tuple" key={index}>
+       <div className="ctp-SrpLst">
+
+                 <div className="ctp-SrpDiv">
+                      <div className="ctpSrp-Lft">
+                        <Link to={removeDomainFromUrl(info.url)} onClick={self.handleClickOnInstitute.bind(self,info)}>
+                          {(this.props.isImageLazyLoad) ? <Lazyload offset={100} once> <img src={info.instituteThumbUrl}/></Lazyload> : <img src={info.instituteThumbUrl}/> }                            
+                        </Link>
+                      </div>
+                      <div className="ctpSrp-Rgt">
+                        <p className="ctpIns-tl">
+                          <Link to={removeDomainFromUrl(info.url)} onClick={self.handleClickOnInstitute.bind(self,info)}>{info.name.length>55?info.name.substring(0,52)+'...': info.name}</Link>
+                        </p>
+                          <p className="ctp-cty">{info.courseTupleData.displayLocationString}</p>
+                          {info.multiLocationInstituteUrl!=null?<a href={info.multiLocationInstituteUrl}>+more branches</a>:''}
+                          {info.admissionUrl!=null?<p><a onClick={self.trackEvent.bind(self,'Popular_Colleges','Admission_details_Click')} href={info.admissionUrl} className="vw-adLnk">View admission detail</a></p>:''}
+
+                        <Shortlist listingId={info.courseTupleData.courseId} trackid={(typeof(this.props.srtTrackId) != 'undefined' && this.props.srtTrackId) ? this.props.srtTrackId : this.config.shortlistTrackingId} recoShrtTrackid={(typeof(self.props.recoShrtTrackid) !='undefined' && self.props.recoShrtTrackid) ? self.props.recoShrtTrackid : 1089} recoPageType="EBrochure_RECO_Layer" recoActionType="EBrochure_RECO_Layer" actionType="NM_category_shortlist" pageType="NM_Category" sessionId="" visitorSessionid="" isCallReco={self.props.isCallReco} clickHandler={self.trackEvent.bind(self,'Shortlist','Response')}/>
+                      </div>
+                </div>
+                <div id="courseTuple">
+                {self.getCourseTuple(info.courseTupleData,'', info.url,info)}
+                {self.state.listings[info.instituteId]}
+                </div>
+        </div>
+        {moreCourseLength>0?
+        <div className="ctp-shwMr">
+                  {moreCourseLength>1?
+            <a onClick={self.getCourseData.bind(self, info,loadeMoreCoursesData )}>+{moreCourseLength} more courses</a>:<a onClick={self.getCourseData.bind(self, info,loadeMoreCoursesData )}>+{moreCourseLength} more course</a>}
+        </div>:''}
+      </div>)
+        if (typeof this.props.recoData == "undefined" && index == 4){
+            listData.push(
+                <DFPBannerTempalte key={"Dfpbanner+"+index} bannerPlace="CTP_Mobile1"/>
+            )
+        }
+        if (typeof this.props.recoData == "undefined" && index == 9){
+            listData.push(
+                <DFPBannerTempalte key={"Dfpbanner+"+index} bannerPlace="CTP_Mobile2"/>
+            )
+        }
+    }
+    return listData
+  }
+
+  trackEvent(actionLabel,label)
+  {
+      if(typeof this.props.gaTrackingCategory === 'undefined' || !this.props.gaTrackingCategory)
+         return;
+      const categoryType = this.props.gaTrackingCategory;
+      /*if(typeof(this.props.isCHP) != 'undefined' && this.props.isCHP){
+          categoryType = 'CHP';
+      }*/
+      Analytics.event({category : categoryType, action : actionLabel, label : label});
+  }
+
+  render(){
+    let listData            = this.getTupleHTML();
+    let totalInstituteCount = (typeof this.props.recoData == 'undefined' && this.props.categoryData.totalInstituteCount!='undefined') ? this.props.categoryData.totalInstituteCount : 0;
+    let headingMobile       = (typeof this.props.recoData == 'undefined' && this.props.categoryData.requestData ) ? ((this.props.categoryData.requestData.categoryData!=undefined) ?this.props.categoryData.requestData.categoryData.headingMobile : null):null;
+    return( <div className="ctpSrp-contnr">
+                     {listData}
+                     { (typeof this.props.recoData == 'undefined') ?
+                         <React.Fragment>
+                             {this.props.showInTable != 'undefined' && this.props.showInTable ?
+                                 (<React.Fragment>
+                                     <FullPageLayer data={this.getTableComponent()}
+                                                heading={`${totalInstituteCount} ${headingMobile}`}
+                                                isOpen={this.state.fullLayer}
+                                                onClose={this.closeTableComponentLayer.bind(this)}/>
+                                 < a onClick = {this.openTableComponentLayer.bind(this)} className="shwDat-link" id="rnkTbl-btn">Show data in table</a>
+                                 </React.Fragment>) : null}
+                             {(this.props.showPagination!='undefined' && this.props.showPagination) && <Pagination categoryData={this.props.categoryData} isSrp = {this.props.isSrp} />}
+                         </React.Fragment>: null
+                     }
+                  </div>)
+    }
+}
+
+CategoryTuple.defaultProps = {
+  isImageLazyLoad : true, showInTable : true, isSrp: false
+};
+
+function mapDispatchToProps(dispatch){
+  return bindActionCreators({ storeCourseDataForPreFilled,storeInstituteDataForPreFilled }, dispatch); 
+}
+
+export default connect(null,mapDispatchToProps)(CategoryTuple);

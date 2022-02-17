@@ -1,0 +1,49 @@
+<div [formGroup]="group">
+	<div class="form-group" *ngIf="credentialOptions.length">
+		<div mysize="3">
+			<label>Credential<span class="required">*</span></label>
+		</div>
+		<div mysize="3">
+			<select formControlName="credential">
+				<option value="">Select</option>
+				<option *ngFor="let option of credentialOptions" value="{{option.value}}">{{option.label}}</option>
+			</select>
+			<span class="help-block text-danger">
+				<span *ngIf="group.controls['credential'].errors?.required">Credential is Required</span>
+			</span>
+		</div>
+	</div>
+	<div class="form-group" *ngIf="!(group.controls['credential'].value == CCONST.none || group.controls['credential'].value == CCONST.certificate)">
+		<div mysize="3">
+			<label>Course Level<span class="required">*</span></label>
+		</div>
+		<div mysize="3">
+			<select formControlName="course_level">
+				<option value="">Select</option>
+				<option *ngFor="let option of courseLevelOptions" value="{{option.value}}">{{option.label}}</option>
+			</select>
+			<span class="help-block text-danger">
+				<span *ngIf="group.controls['course_level'].errors?.required">Course Level is Required</span>
+			</span>
+		</div>
+	</div>
+	<div class="form-group">
+		<div mysize="3">
+			<label>Hierarchy<span class="required">*</span><img class="helperText" id="hierarchy" src="/public/images/tooltip.png" width="20px" style="padding-right:0px" (click)="toolTipNotify('hierarchy',$event)"></label>
+		</div>
+		<div mysize="9">
+			<hierarchyFormGroup [defaultOption]="'none'" [selectedHierarchies]="selectedHierarchies" [hierarchyArray]="hierarchyArray" [hierarchyTree]="hierarchyTree" [showPrimary]="showPrimary" [showAll]="false" [showNone]="true" [hierarchyMapping]="group.controls['hierarchyMapping']" [mode]="mode"></hierarchyFormGroup>
+		</div>
+	</div>
+	<div class="form-group">
+		<div mysize="3">
+			<label>Course</label>
+		</div>
+		<div mysize="3">
+			<select formControlName="courseMapping">
+				<option value="">Select</option>
+				<option *ngFor="let option of baseCourseOptions" value="{{option.value}}">{{option.label}}</option>
+			</select>
+		</div>
+	</div>
+</div>

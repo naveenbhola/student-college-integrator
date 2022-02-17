@@ -1,0 +1,96 @@
+<h4 class="cmsAlignLeft">Search options</h4>
+<br/>
+<div class="form-group">
+ <!-- <div mysize="4">
+     <label mysize="4">Group Id </label>
+     <div mysize="8">
+         <div class="input-group">
+             <input type="number" min="1" [disabled]="1" [(ngModel)]="groupIdSearch" name="groupIdSearch">
+             <span class="input-group-btn">
+                <button type="button" [disabled]="!groupIdSearch" (click)="getInputInstituteParentHierarchy(groupIdSearch,'group')" class="btn btn-primary">Go!</button>
+             </span>
+         </div>
+     </div>
+ </div> -->
+
+  <div mysize="4">
+     <label mysize="4" class="cmsFont">University ID</label>
+     <div mysize="8">
+         <div class="input-group">
+             <input [(ngModel)]="universityIdSearch"  min="1" name="universityIdSearch" type="number">
+             <span class="input-group-btn">
+                  <button type="button" [disabled]="!universityIdSearch" (click)="getInputInstituteParentHierarchy(universityIdSearch,'university')" class="btn cmsButton-go">Go!</button>
+             </span>
+         </div>
+     </div>
+ </div>    
+
+    <label mysize="2"> OR </label>
+
+ <div [mysize]>
+     <label mysize="4" class="cmsFont">Search by name</label>
+     <div mysize="8">
+           <ng-select [allowClear]="true"
+                [items]="instituteAutoSuggestorItems"
+                [disabled]="disabled"
+                (data)="refreshValue($event)"
+                (selected)="selected($event)"
+                (removed)="removed($event)"
+                (typed)="typed($event)"                                  
+                placeholder="Search parent entity">
+            </ng-select>
+     </div>
+ </div>
+</div>
+
+<!-- <div class="form-group">
+ <div mysize="4">
+     <label mysize="4">University Id</label>
+     <div mysize="8">
+         <div class="input-group">
+             <input [(ngModel)]="universityIdSearch"  min="1" name="universityIdSearch" type="number">
+             <span class="input-group-btn">
+                  <button type="button" [disabled]="!universityIdSearch" (click)="getInputInstituteParentHierarchy(universityIdSearch,'university')" class="btn btn-primary">Go!</button>
+             </span>
+         </div>
+     </div>
+ </div>                       
+</div>
+ -->
+<div class="form-group" *ngIf="postingListingType != 'University'">
+ <div mysize="4">
+     <label mysize="4" class="cmsFont" style="padding-right:21px">Institute ID</label>
+     <div mysize="8">
+         <div class="input-group">
+             <input [(ngModel)]="instituteIdSearch"  min="1" name="instituteIdSearch" type="number">
+             <span class="input-group-btn">
+                  <button type="button" [disabled]="!instituteIdSearch" (click)="getInputInstituteParentHierarchy(instituteIdSearch,'institute')" class="btn cmsButton-go">Go!</button>
+             </span>
+         </div>
+     </div>
+ </div>                       
+</div>  
+
+
+
+<div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" style="width:873px;margin-right:80px">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" (click)="lgModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title cmsFont">Other Hierarchy Options<img id="institute_hierarchy" class="helperText" src="/public/images/tooltip.png" width="20px" style="padding-right:0px" (click)="toolTipNotify('institute_hierarchy',$event)"></h4>
+      </div>
+      <div class="modal-body" style="position: relative;overflow-y: auto;max-height: 400px;">      
+        <p *ngFor="let hierarchy of instituteParentHierarchyList;let hierarchyIndex = index;" class="cmsFont">
+            <span *ngFor="let i of hierarchy ;let index = index;let last = last">
+                {{i.name}} <span *ngIf="!last" class="glyphicon glyphicon-chevron-right"></span>
+                <button *ngIf="last" type="button" (click)="selectedHierarchy(hierarchyIndex,i.id)" class="btn cmsButton cmsFont">select</button>
+            </span>
+        </p>
+        <p *ngIf = "!instituteParentHierarchyList.length > 0" class="cmsFont"> Hierarchy not found</p>
+      </div>
+    </div>
+  </div>
+</div>

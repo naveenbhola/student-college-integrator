@@ -1,0 +1,400 @@
+{
+    "baseDir"        : "/var/www/html/shiksha/public/",
+    "mappings" : {
+        "jQuery-v-1.7" : {
+            "bundleName"  :"shikshaJQ1.7.js",
+            "minifiedName":"shikshaJQ1.7.min.js",
+            "cwd"         :"js",
+            "files":["jquery-1.7.1.min.js","jquery.lazyload.js","lazyload.js","jquery.tinyscrollbar.min.v4.2.js"]
+        },
+        "jQuery-v-1.8" : {
+            "bundleName":"shikshaJQ1.8.js",
+            "minifiedName":"shikshaJQ1.8.min.js",
+            "cwd"         :"js",
+            "files":["jquery-1.8.0.min.js","jquery.lazyload.js","lazyload.js","jquery.tinyscrollbar.min.v4.2.js"]
+        },
+        "shiksha-com" : {
+            "bundleName":"shiksha-com.js",
+            "minifiedName":"shiksha-com.min.js",
+            "cwd"         :"js",
+            "files":["trackingCode.js","userRegistrationDesktop.js","footer.js","common.js","searchV2.js","user.js"]
+        },
+        "shikshaHeader-com" : {
+            "bundleName":"shikshaHeader-com.js",
+            "minifiedName":"shikshaHeader-com.min.js",
+            "cwd"         :"js",
+            "files":["shikshaHeader.js", "trackingCode.js","userRegistrationDesktop.js","footer.js","common.js","searchV2.js","user.js"]
+        },
+        "pwa-desktop-common-search" : {
+            "bundleName" : "pwa-desktop-common-search.js",
+            "minifiedName" : "pwa-desktop-common-search.min.js",
+            "cwd" : "js",
+            "files" : ["jquery-1.7.1.min.js", "AutoSuggestor.js", "autoSuggestorCallbacks.js"]
+        },
+        "pwa-desktop-common-regn" : {
+            "bundleName" : "pwa-desktop-common-regn.js",
+            "minifiedName" : "pwa-desktop-common-regn.min.js",
+            "cwd" : "js",
+            "files" : ["header.js", "user.js", "userRegistrationDesktop.js"]
+        },
+        "pwa-desktop-other" : {
+            "bundleName" : "pwa-desktop-other.js",
+            "minifiedName" : "pwa-desktop-other.min.js",
+            "cwd" : "js",
+            "files" : ["common.js", "registrationCallbacks.js", "footerPWA.js"]
+        },
+        "coursePage" :{
+            "bundleName":"listing-com.js",
+            "minifiedName":"listing-com.min.js",
+            "cwd"         :"js",
+            "files":["listingCommon.js","courseDetailPage.js","institute_detail_page.js"]
+        },
+        "institutePage" :{
+            "bundleName":"listing-com.js",
+            "minifiedName":"listing-com.min.js",
+            "cwd"         :"js",
+            "files":["listingCommon.js","courseDetailPage.js","institute_detail_page.js"]
+        },
+        "mListingDetailPage" :{
+            "bundleName"  :"mListingDetailPage.js",
+            "minifiedName":"mListingDetailPage.min.js",
+            "cwd"         :"mobile5/js",
+            "files":["mListingCommon.js","mInstitute.js","mCourse.js"]
+        },
+    	"sa-shiksha-com" : {
+    	    "bundleName":"sa-shiksha-com.js",
+                "minifiedName":"sa-shiksha-com.min.js",
+                "cwd"         :"js",
+                "files":["jquery-1.8.0.min.js","noConflict.js","jquery.tinyscrollbar.min.v3.js","jquery.lazyload.min.js"]
+    	},
+        "sa-common-shiksha-com" : {
+            "bundleName":"sa-common-shiksha-com.js",
+            "minifiedName":"sa-common-shiksha-com.min.js",
+            "cwd"         :"js",
+            "files":["studyAbroadCommon.js","common.js"]
+        },
+	"async-sa-shiksha-com" : {
+            "bundleName":"async-sa-shiksha-com.js",
+            "minifiedName":"async-sa-shiksha-com.min.js",
+            "cwd"         :"js",
+            "files":["trackingCode.js","jquery-ui.min.js","studyAbroadSearchLayer.js"]
+        },
+    "sa-counselor-review-page" : {
+        "bundleName":"sa-counselor-review-page.js",
+        "minifiedName":"sa-counselor-review-page.min.js",
+        "cwd"         :"js",
+        "files":["jquery-1.8.0.min.js","jquery-ui.min.js","noConflict.js","studyAbroadCommon.js","common.js"]
+    },
+    "async-sa-counselor-review-page" : {
+        "bundleName":"async-sa-counselor-review-page.js",
+        "minifiedName":"async-sa-counselor-review-page.min.js",
+        "cwd"         :"js",
+        "files":["studyAbroadCounselorHome.js","trackingCode.js","jquery.tinyscrollbar.min.v3.js","jquery-ui.min.js","studyAbroadSearchLayer.js"]
+    },
+    "sa-scholarship-detail-page" : {
+        "bundleName":"sa-scholarship-detail-page.js",
+        "minifiedName":"sa-scholarship-detail-page.min.js",
+        "cwd"         :"js",
+        "files":["jquery-1.8.0.min.js","jquery-ui.min.js","noConflict.js","studyAbroadCommon.js","common.js"]
+    },
+    "async-sa-scholarship-detail-page" : {
+        "bundleName":"async-sa-scholarship-detail-page.js",
+        "minifiedName":"async-sa-scholarship-detail-page.min.js",
+        "cwd"         :"js",
+        "files":["jquery.lazyload.js","studyAbroadScholarships.js","trackingCode.js","jquery.tinyscrollbar.min.v3.js","studyAbroadScholarshipCommon.js","jquery-ui.min.js","studyAbroadSearchLayer.js"]
+    },
+        "sa-scholarship-cat-page" : {
+            "bundleName":"sa-scholarship-cat-page.js",
+            "minifiedName":"sa-scholarship-cat-page.min.js",
+            "cwd"         :"js",
+            "files":["jquery-1.8.0.min.js","jquery-ui.min.js","noConflict.js","studyAbroadCommon.js"]
+        },
+        "async-sa-scholarship-cat-page" : {
+            "bundleName":"async-sa-scholarship-cat-page.js",
+            "minifiedName":"async-sa-scholarship-cat-page.min.js",
+            "cwd"         :"js",
+            "files":["studyAbroadScholarshipCategoryPage.js","trackingCode.js","jquery.tinyscrollbar.min.v3.js","studyAbroadScholarshipCommon.js","jquery-ui.min.js","studyAbroadSearchLayer.js"]
+        },
+        "sa-univ-page" : {
+            "bundleName":"sa-univ-page.js",
+            "minifiedName":"sa-univ-page.min.js",
+            "cwd"         :"js",
+            "files":["jquery-1.8.0.min.js","noConflict.js","jquery-ui.min.js","jquery.tinyscrollbar.min.v3.js","jquery.lazyload.min.js","common.js","studyAbroadListings.js","jquery.tinycarouselV2.min.js","studyAbroadCommon.js","studyAbroadSignup.js"]
+        },
+	"async-sa-univ-page" : {
+            "bundleName":"async-sa-univ-page.js",
+            "minifiedName":"async-sa-univ-page.min.js",
+            "cwd"         :"js",
+            "files":["trackingCode.js","jquery.royalslider.min.js","jquery-ui.min.js","studyAbroadSearchLayer.js"]
+        },
+        "sa-countryhome-page" : {
+            "bundleName":"sa-countryhome-page.js",
+            "minifiedName":"sa-countryhome-page.min.js",
+            "cwd"         :"js",
+            "files":["jquery-1.8.0.min.js","jquery-ui.min.js","noConflict.js","studyAbroadCommon.js","countryHome.js","common.js","jquery.lazyload.min.js"]
+        },
+        "async-sa-countryhome-page" : {
+            "bundleName":"async-sa-countryhome-page.js",
+            "minifiedName":"async-sa-countryhome-page.min.js",
+            "cwd"         :"js",
+            "files":["trackingCode.js","jquery.tinyscrollbar.min.v3.js","jquery-ui.min.js","studyAbroadSearchLayer.js"]
+        },
+        "userProfileAsync" :{
+            "bundleName":"userProfileAsync.js",
+            "minifiedName":"userProfileAsync.min.js",
+            "cwd"         :"js",
+            "files":["CalendarPopup.js","studyAbroadCommon.js","studyAbroadAccountSetting.js","jquery-ui.min.js","studyAbroadSearchLayer.js"]
+        },
+        "userProfileMobile" :{
+            "bundleName":"userProfileMobile.js",
+            "minifiedName":"userProfileMobile.min.js",
+            "cwd"         :"mobile5/js",
+            "files":["userRegistrationMobile.js","registrationHelper.js","userProfile.js", "swiper.min.js"]
+        },
+        "userProfileDesktop":{
+            "bundleName":"userProfileDesktop.js",
+            "minifiedName":"userProfileDesktop.min.js",
+            "cwd"         :"js",
+            "files":["jquery.tinycarousel.min.js", "userRegistration.js", "userProfile.js"]  
+        },
+        "sa-mobile-vendor":{
+            "bundleName":"sa-mobile-vendor.js",
+            "minifiedName":"sa-mobile-vendor.min.js",
+            "cwd"         :"mobileSA/js/vendor",
+            "files":["jquery-ui.min.js", "jquery.ui.touch-punch.min.js"]  
+        },
+        "shikshaMobilejQuery":{
+            "bundleName":"shikshaMobilejQuery.js",
+            "minifiedName":"shikshaMobilejQuery.min.js",
+            "cwd"         :"mobile5/js",
+            "files":["jquery.mobile-1.4.5.min.js"]
+        },
+        "shikshaMobileFooter":{
+            "bundleName":"shikshaMobileFooter.js",
+            "minifiedName":"shikshaMobileFooter.min.js",
+            "cwd"         :"mobile5/js",
+            "files":["footerNM.js","userRegistrationFormMobile.js","mobileSearchV2.js", "bootstrap-tour-standalone.min.js","websiteTour.js"]
+        },
+        "mobileRemoveJquery":{
+            "bundleName":"MobileRemoveJquery.js",
+            "minifiedName":"MobileRemoveJquery.min.js",
+            "cwd"         :"mobile5/js",
+            "files":["footerNM.js","userRegistrationFormMobile_jq.js","mobileSearchV2_jq.js"]
+        },
+        "shikshaDesktopWebsiteTour":{
+            "bundleName":"websiteTourDesktop.js",
+            "minifiedName":"websiteTourDesktop.min.js",
+            "cwd"         :"js",
+            "files":["bootstrap-tour-standalone.min.js","websiteTour.js"]
+        },
+        "shikshaMobileWebsiteTour":{
+            "bundleName":"websiteTourMobile.js",
+            "minifiedName":"websiteTourMobile.min.js",
+            "cwd"         :"mobile5/js",
+            "files":["bootstrap-tour-standalone.min.js","websiteTour.js"]
+        },
+        "ArticlesD":{
+            "bundleName":"articleDetailPage.js",
+            "minifiedName":"articleDetailPage.min.js",
+            "cwd"         :"js",
+            "files":["blog.js","recoSlider.js", "bottomStickyRegistrationLayer.js"]
+        },
+        "home":{
+            "bundleName":"shiksha-homepage.js",
+            "minifiedName":"shiksha-homepage.min.js",
+            "cwd"         :"js",
+            "files":["shikshaHomePage.js", "counter_mini.js"]
+        },
+        "ranking":{
+            "bundleName":"rankingPage.js",
+            "minifiedName":"rankingPage.min.js",
+            "cwd"         :"js",
+            "files":["recoSlider.js", "ranking_page.js"]
+        },
+        "sa-scholarship-home" : {
+            "bundleName":"sa-scholarship-home.js",
+            "minifiedName":"sa-scholarship-home.min.js",
+            "cwd"         :"js",
+            "files":["jquery-1.8.0.min.js","noConflict.js","jquery.lazyload.js","studyAbroadCommon.js"]
+        },
+        "async-sa-scholarship-home" : {
+            "bundleName":"async-sa-scholarship-home.js",
+            "minifiedName":"async-sa-scholarship-home.min.js",
+            "cwd"         :"js",
+            "files":["studyAbroadScholarshipHomepage.js","trackingCode.js","jquery.tinyscrollbar.min.v3.js","jquery-ui.min.js","studyAbroadSearchLayer.js"]
+        },
+        "sa-counselor-review-posting" : {
+            "bundleName":"sa-counselor-review-posting.js",
+            "minifiedName":"sa-counselor-review-posting.min.js",
+            "cwd"         :"js",
+            "files":["jquery-1.8.0.min.js","noConflict.js","studyAbroadCommon.js"]
+        },
+        "async-sa-counselor-review-posting" : {
+            "bundleName":"async-sa-counselor-review-posting.js",
+            "minifiedName":"async-sa-counselor-review-posting.min.js",
+            "cwd"         :"js",
+            "files":["counselorReviewPosting.js","jquery-ui.min.js","studyAbroadSearchLayer.js"]
+        },
+        "sa-login" : {
+            "bundleName":"sa-login.js",
+            "minifiedName":"sa-login.min.js",
+            "cwd"         :"js",
+            "files":["userRegistration.js"]
+        },
+        "async-sa-login" : {
+            "bundleName":"async-sa-login.js",
+            "minifiedName":"async-sa-login.min.js",
+            "cwd"         :"js",
+            "files":["ajax-api.js","jquery-ui.min.js","studyAbroadSearchLayer.js"]
+        },
+        "sa-user-profile-page" : {
+            "bundleName":"sa-user-profile.js",
+            "minifiedName":"sa-user-profile.js",
+            "cwd"         :"js",
+            "files":["userRegistration.js"]
+        },
+        "async-sa-profile-page" : {
+            "bundleName":"async-sa-user-profile.js",
+            "minifiedName":"async-sa-user-profile.js",
+            "cwd"         :"js",
+            "files":["ajax-api.js","jquery-ui.min.js","studyAbroadSearchLayer.js"]
+        },
+        "sa-home-page" : {
+            "bundleName":"sa-home-page.js",
+            "minifiedName":"sa-home-page.min.js",
+            "cwd"         :"js",
+            "files":["jquery-1.8.0.min.js","noConflict.js","jquery.lazyload.min.js"]
+        },
+        "async-sa-home-page" : {
+            "bundleName":"async-sa-home-page.js",
+            "minifiedName":"async-sa-home-page.min.js",
+            "cwd"         :"js",
+            "files":["trackingCode.js","studyAbroadHomepage.js","studyAbroadCommon.js","jquery-ui.min.js","studyAbroadSearchLayer.js","jquery.tinyscrollbar.min.v3.js"]
+        },
+        "sa-apply-home" : {
+            "bundleName":"sa-apply-home.js",
+            "minifiedName":"sa-apply-home.min.js",
+            "cwd"         :"js",
+            "files":["jquery-1.8.0.min.js","noConflict.js","studyAbroadCommon.js","common.js","jquery.lazyload.min.js","studyAbroadApplyHome.js"]
+        },
+        "async-sa-apply-home" : {
+            "bundleName":"async-sa-apply-home.js",
+            "minifiedName":"async-sa-apply-home.min.js",
+            "cwd"         :"js",
+            "files":["trackingCode.js","jquery.tinyscrollbar.min.v3.js","jquery-ui.min.js","studyAbroadSearchLayer.js"]
+        },
+        "sa-user-profile" : {
+            "bundleName":"sa-user-profile.js",
+            "minifiedName":"sa-user-profile.min.js",
+            "cwd"         :"js",
+            "files":["jquery-1.8.0.min.js","noConflict.js","studyAbroadCommon.js","common.js"]
+        },
+        "async-sa-user-profile" : {
+            "bundleName":"async-sa-user-profile.js",
+            "minifiedName":"async-sa-user-profile.min.js",
+            "cwd"         :"js",
+            "files":["trackingCode.js","jquery.tinyscrollbar.min.v3.js","jquery-ui.min.js","studyAbroadSearchLayer.js","studyAbroadUserProfile.js"]
+        },
+	"sa-edit-profile" : {
+            "bundleName":"sa-edit-profile.js",
+            "minifiedName":"sa-edit-profile.min.js",
+            "cwd"         :"js",
+            "files":["jquery-1.8.0.min.js","noConflict.js","studyAbroadCommon.js","common.js","ajax-api.js","userRegistration.js","jquery-ui.min.js","studyAbroadSearchLayer.js","shikshaImageUploader.js","croppie.min.js"]
+        },
+	"sa-edit-profile-mobile" : {
+            "bundleName":"sa-edit-profile-mobile.js",
+            "minifiedName":"sa-edit-profile-mobile.min.js",
+            "cwd"         :"mobileSA/js",
+            "files":["commonSA.js","registrationSA.js","userProfilePageSA.js"]
+        },
+        "sa-article-page" : {
+            "bundleName":"sa-article-page.js",
+            "minifiedName":"sa-article-page.min.js",
+            "cwd"         :"js",
+            "files":["jquery-1.8.0.min.js","noConflict.js","common.js","studyAbroadCommon.js","studyAbroadGuide.js","studyAbroadContent.js"]
+        },
+        "async-sa-article-page" : {
+            "bundleName": "async-sa-article-page.js",
+            "minifiedName": "async-sa-article-page.min.js",
+            "cwd": "js",
+            "files": [
+                "trackingCode.js","jquery.tinyscrollbar.min.v3.js","studyAbroadHomepage.js","studyAbroadCategoryPage.js","jquery-ui.min.js","studyAbroadSearchLayer.js","saNavBarSlider.js"
+            ]
+        },
+        "sa-exam-content" : {
+            "bundleName":"sa-exam-content.js",
+            "minifiedName":"sa-exam-content.min.js",
+            "cwd"         :"js",
+            "files":["jquery-1.8.0.min.js","noConflict.js","jquery.lazyload.js"]
+        },
+        "async-sa-exam-content" : {
+            "bundleName":"async-sa-exam-content.js",
+            "minifiedName":"async-sa-exam-content.min.js",
+            "cwd"         :"js",
+            "files":["studyAbroadCommon.js","studyAbroadExamPage.js","trackingCode.js","jquery.tinyscrollbar.min.v3.js","jquery.royalslider.min.js","jquery.tinycarouselV2.min.js","jquery-ui.min.js","studyAbroadSearchLayer.js"]
+        },
+        "sa-apply-content" : {
+            "bundleName":"sa-apply-content.js",
+            "minifiedName":"sa-apply-content.min.js",
+            "cwd"         :"js",
+            "files":["jquery-1.8.0.min.js","noConflict.js"]
+        },
+        "async-sa-apply-content" : {
+            "bundleName":"async-sa-apply-content.js",
+            "minifiedName":"async-sa-apply-content.min.js",
+            "cwd"         :"js",
+            "files":["studyAbroadCommon.js","studyAbroadGuide.js","studyAbroadContent.js","saApplyContentPage.js","trackingCode.js","jquery.tinyscrollbar.min.v3.js","jquery-ui.min.js","studyAbroadSearchLayer.js"]
+        },
+        "sa-search-page" : {
+            "bundleName":"sa-search-page.js",
+            "minifiedName":"sa-search-page.min.js",
+            "cwd"         :"js",
+            "files":["jquery-1.8.0.min.js","noConflict.js"]
+        },
+        "async-sa-search-page" : {
+            "bundleName":"async-sa-search-page.js",
+            "minifiedName":"async-sa-search-page.min.js",
+            "cwd"         :"js",
+            "files":["studyAbroadSearchV2.js","jquery-ui.min.js","studyAbroadSearchLayer.js","studyAbroadCommon.js","jquery.tinyscrollbar.min.v3.js","trackingCode.js","customSliderSA.js","jquery.ba-bbq.min.js","jquery.lazyload.min.js"]
+        },
+        "sa-search-starter-page" : {
+            "bundleName":"sa-search-starter-page.js",
+            "minifiedName":"sa-search-starter-page.min.js",
+            "cwd"         :"js",
+            "files":["jquery-1.8.0.min.js","noConflict.js","jquery-ui.min.js","studyAbroadSearchLayer.js","studyAbroadCommon.js","studyAbroadSearchPage.js"]
+        },
+        "mSAComJQ" :{
+          "bundleName":"mSAComJQ.js",
+          "minifiedName":"mSAComJQ.min.js",
+          "cwd"         :"mobileSA/js",
+          "files":["jquery-1.11.1.min.js","noConflict.js","jqueryMobileSA.js"]  
+        },
+        "asyncMSAComReg" :{
+          "bundleName":"asyncMSAComReg.js",
+          "minifiedName":"asyncMSAComReg.min.js",
+          "cwd"         :"mobileSA/js",
+          "files":["jquery-ui.min.js","jquery.ui.touch-punch.min.js","userRegistration.js","ajax-api.js","commonSA.js","registrationSA.js","jquery.lazy.min.js"]  
+        },
+        "asyncMSACom" :{
+          "bundleName":"asyncMSACom.js",
+          "minifiedName":"asyncMSACom.min.js",
+          "cwd"         :"mobileSA/js",
+          "files":["jquery-ui.min.js","jquery.ui.touch-punch.min.js","commonSA.js","jquery.lazy.min.js"]  
+        },
+        "sa-education-loan-page" : {
+            "bundleName":"sa-education-loan-page.js",
+            "minifiedName":"sa-education-loan-page.min.js",
+            "cwd"         :"js",
+            "files":["jquery-1.8.0.min.js","noConflict.js"]
+        },
+        "async-sa-education-loan-page" : {
+            "bundleName": "async-sa-education-loan-page.js",
+            "minifiedName": "async-sa-education-loan-page.min.js",
+            "cwd": "js",
+            "files": [
+                "studyAbroadCommon.js","jquery.tinyscrollbar.min.v3.js","jquery-ui.min.js","studyAbroadSearchLayer.js","trackingCode.js","saEducationLoan.js","validation.js"
+            ],
+            "responsiveFiles":["saEducationLoan.js","validation.js"]
+        }
+    }
+} 

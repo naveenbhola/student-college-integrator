@@ -1,0 +1,12 @@
+#sticky_header{z-index: 1000;top:0px;background: white;position: fixed;left: 0px;width: 100%;box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.16);}
+#sticky_header .pwa_topwidget{display: flex;flex-direction: row;width: 1200px;margin: 0 auto;padding: 12px 16px;}
+#sticky_header .rank-widget{margin: 0px;}
+#sticky_header .text-cntr.clg_dtlswidget{margin: 0px;width: 70%;min-height: 0px;}
+#sticky_header .flex.flex-column{margin-left: auto;}
+#sticky_header .clg-col.single-col{margin-top:2px;}
+#sticky_header a.ans_qst.qstn {
+    color: #008489;
+}
+.hid {
+    display: none !important;
+}

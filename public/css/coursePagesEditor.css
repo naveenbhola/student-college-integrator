@@ -1,0 +1,9 @@
+/*added for tinymce*/
+.lquote{background:url(/public/images/lquote.png) 0 0 no-repeat; width:25px; height:20px; display:inline-block; float:left; _background-image:none;
+_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader (enabled=true, sizingMethod=crop, src='/public/images/lquote.png');}
+.quote-box{border:1px solid #eeeeee; padding:10px; background:#f8f8f8; font-family:Georgia, 'Times New Roman', Times, serif; font-size:16px;margin:5px 0;}
+.half-width{width:44%; margin-bottom:10px}
+.quote-box .left-quote, .quote-box .right-quote, .qa-cont .qa-wrap h4 .ques-icn, .qa-cont .ans .ans-icn, a.prev-icn, a.next-icn, .slide-show-cont .prev-scroll, .slide-show-cont .next-scroll{background:url(../images/article-sprite-new.png) 0 0 no-repeat;}
+.quote-box .left-quote, .quote-box .right-quote{margin:0; padding:0; background-position:0 -158px; width:44px; height:39px; vertical-align:text-bottom; display:inline-block}
+.quote-box .right-quote{background-position:0 -98px; vertical-align:text-top;}
+.quote-box span.detail-text{line-height:25px;}

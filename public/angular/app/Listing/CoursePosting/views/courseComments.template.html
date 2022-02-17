@@ -1,0 +1,60 @@
+<div class="row" id="seo_specification_form">
+  <div [mysize]="'12'">
+      <div class="x_panel">
+         <div [class.x_title]="opened">
+               <ul class="nav navbar-left panel_toolbox">
+                      <li><a class="collapse-link" (click)="toggle()"><i [class]="opened?' fa fa-chevron-up':' fa fa-chevron-down'"></i></a></li>
+                </ul>
+             <h2>Comments</h2>
+             <div class="clearfix"></div>
+         </div>
+               <div class="x_content" [hidden]="!opened">             
+                  <div class="form-group" [formGroup]="courseComments">
+                     <div [mysize]="'3'"><label >Enter Comments<span class="required">*</span></label></div>
+                     <div [mysize]="'6'">
+                     	<textarea type="text" formControlName="comment"></textarea>
+                      <span class="help-block text-danger"  *ngIf="!courseComments.controls.comment.valid">
+                             <span *ngIf="courseComments.controls.comment.errors.required">Comment is required</span>
+                             <span *ngIf="courseComments.controls.comment.errors.maxlength">Use less than or equal to 250 characters</span>                            
+                         </span>
+                     </div>
+                     <div [mysize]="'3'" class="bottom-align-text">
+			               <a href="javascript:void(0);" *ngIf="courseId > 0" (click) = "viewComments()" class="btn cmsButton cmsFont">View Comments</a>
+			         </div>
+                  </div>
+              </div>
+          </div>
+    </div>
+</div>
+
+<div bsModal #commentModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" [config]="{backdrop: 'static',keyboard: false}">
+  <div class="modal-dialog modal-lg" style="width:1000px;margin-right:30px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <a href="javascript:void(0);" class="btn close" (click)="commentModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </a>
+        <h4 class="modal-title">Comments</h4>
+      </div>
+      <div class="modal-body" style="position: relative;overflow-y: auto;max-height: 450px;">
+      	<table class="table">
+      		<tr class="info">
+      			<th width="5%">#</th>
+      			<th width="55%">Comment</th>
+      			<th width="20%">User Name</th>
+      			<th width="20%">Date</th>
+      		</tr>
+      		<tr *ngFor="let commentRow of commentHistoryData">
+      			<td>{{commentRow.key}}</td>
+      			<td class="active">{{commentRow.comment}}</td>
+      			<td title="{{commentRow.userId}}">{{commentRow.name}}</td>
+      			<td>{{commentRow.addTime}}</td>
+      		</tr>
+      	</table>
+      </div>
+      <div class="modal-footer">
+        <a href="javascript:void(0);" (click) = "commentModal.hide()" class="btn cmsButton cmsFont">Close</a>
+      </div>               
+    </div>
+  </div>
+</div>

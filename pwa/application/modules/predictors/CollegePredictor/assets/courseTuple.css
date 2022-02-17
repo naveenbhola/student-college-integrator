@@ -1,0 +1,77 @@
+.shortlist-tuple ,.filter-widget{
+    margin-bottom: 16px;
+    background: #fff;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.16), 0 0 0 1px rgba(0,0,0,.08);
+}
+.instituteCard,.courseCard{
+    border-bottom: 1px solid #eee;
+    padding: 12px;
+    position: relative;
+}
+i.course-shrtlst {
+    background: url(https://images.shiksha.ws/pwa/public/images/pwa-header-mobile.svg) no-repeat;
+}
+i.course-shrtlst {
+    position: absolute;
+    background-position: -234px -40px;
+    width: 20px;
+    height: 20px;
+    right: 10px;
+    top: 10px;
+}
+p.instituteLocation:before {
+    content: "";
+    background: url(https://images.shiksha.ws/pwa/public/images/pwa-header-mobile.svg) no-repeat;
+    display: inline-block;
+    background-position: 0 -53px;
+    width: 25px;
+    height: 16px;
+    position: relative;
+    top: 1px;
+}
+p.instituteLocation:before {
+    background-position: -314px -42px;
+    width: 13px;
+    top: 2px;
+    left: -4px;
+}
+.er-detail label{
+    color: #666;
+    margin-right: 3px;
+}
+.loadMore,.filter-widget{
+    padding: 12px;
+    text-align: center;
+}
+.filter-widget{
+    padding: 12px 0px;
+    text-align: center;
+}
+.filter-widget .filter-items{
+    margin-top: 10px;
+}
+.filter-item-list{
+    list-style: none;
+    display: block;
+    min-width: 100%;
+    white-space:nowrap;
+    overflow: auto;
+}
+.filter-item-list li{
+    list-style: none;
+    display: inline-block;
+}
+.filter-items{
+    width:100%;
+    position: relative;
+}
+.gredient-corner{
+
+}
+.filter-capsule{
+    padding: 6px 8px 4px;
+    margin: 0px 5px;
+    display: inline-block;
+    border:1px solid #000;
+    border-radius:2px;
+}

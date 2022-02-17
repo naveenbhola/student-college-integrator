@@ -1,0 +1,19 @@
+.formPreviewMain {font-size:14px; font-family:Arial, Helvetica, sans-serif !important}
+.previewHeader{display:block; margin-bottom:20px; padding-bottom:5px;}
+.previewBody{}
+.instLogoBox{text-align:center; padding-bottom:20px}
+.previewTetx{font-size:22px; color:red; margin-bottom:20px; clear:both}
+.courseNameDetails{text-align:center; font-size:22px; color:#000000; font-weight:bold; line-height:27px}
+.srNumBox{float:right; font-size:18px; border:1px solid #000000;}
+.srNumBox span, .srNumBox p{padding:5px 30px 5px 10px; float:left; border-right:1px solid #000000}
+.srNumBox p{border:0 none; padding-right:0; width:200px}
+.picBox{width:197px; float:left;}
+.signBox{width:400px; float:right; text-align:right; padding:50px 50px 0 0}
+.picBox img{border:1px solid #cacaca; width:195px}
+.formPreviewMain h5{font-size:16px !important; margin-bottom:15px !important; display:block !important; clear:left !important; float:left !important; width:100% !important;}
+.previewFieldBox{float:left; width:853px;}
+.previewFieldBox span{display:block; border-bottom:solid 1px #4f4f4f;}
+.contentsTable{border: 1px solid #000000; border-collapse: collapse;}
+.contentsTable tr th{text-align:left}
+.flRt{float:right}
+

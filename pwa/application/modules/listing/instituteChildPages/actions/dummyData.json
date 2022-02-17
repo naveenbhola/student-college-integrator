@@ -1,0 +1,2187 @@
+{
+    "data": {
+        "requestData": {
+            "appliedFilters": {
+                "baseCourse": [
+                    101
+                ],
+                "etDm": [
+                    "et_20"
+                ],
+                "city": [
+                    278
+                ],
+                "qerUsed": false,
+                "anyEntityMatchedByQer": false,
+                "returnPopularInstitutes": false
+            },
+            "removedFilters": {
+                "qerUsed": false,
+                "anyEntityMatchedByQer": false,
+                "returnPopularInstitutes": false
+            },
+            "categoryPageId": 259227,
+            "pageNumber": 1,
+            "redirectUrl": null,
+            "show404": false,
+            "categoryData": {
+                "id": 259227,
+                "redirectUrl": null,
+                "baseCourseId": 101,
+                "breadcrumb": [
+                    {
+                        "name": "Home",
+                        "url": "/"
+                    },
+                    {
+                        "name": "MBA",
+                        "url": "/mba-masters-of-business-administration-chp"
+                    },
+                    {
+                        "name": "Colleges in India",
+                        "url": "/mba/colleges/mba-colleges-india"
+                    },
+                    {
+                        "name": "Colleges in Bangalore",
+                        "url": ""
+                    }
+                ],
+                "cityId": 278,
+                "credential": 0,
+                "deliveryMethod": 0,
+                "educationType": 20,
+                "examId": 0,
+                "hashUrl": 260537889,
+                "headingDesktop": "MBA Colleges in Bangalore",
+                "headingMobile": "MBA Colleges in Bangalore",
+                "metaDescription": "Find [n] MBA/PGDM Colleges in Bangalore. Compare Ranking, Fees, Courses, Placements, Cut off and Admission process at Shiksha.com",
+                "metaTitle": "MBA Colleges in Bangalore - Ranking, Fees, Courses, Placements, Cut Off, Admission",
+                "resultCount": 231,
+                "ruleId": 26,
+                "show404": false,
+                "specializationId": 0,
+                "stateId": 106,
+                "status": "live",
+                "streamId": 0,
+                "substreamId": 0,
+                "url": "/mba/colleges/mba-colleges-bangalore"
+            },
+            "sortType": "sponsered",
+            "lazyLoad": false,
+            "ctpgRandom": 2528,
+            "pageLimit": 30,
+            "requestFrom": "direct",
+            "headingCriteria": "MBA",
+            "locationString": "Bangalore",
+            "fallbackHeading": null,
+            "getFallbackResults": true,
+            "locationCTP": false
+        },
+        "filters": {
+            "institute": [
+                {
+                    "id": "et_20",
+                    "name": "Full Time",
+                    "count": 231,
+                    "url": null,
+                    "enabled": true,
+                    "checked": true,
+                    "filterType": "et_dm"
+                },
+                {
+                    "id": "et_21::dm_34",
+                    "name": "Distance / Correspondence",
+                    "count": 37,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "et_dm"
+                },
+                {
+                    "id": "et_21::dm_33",
+                    "name": "Part Time-Classroom",
+                    "count": 32,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "et_dm"
+                },
+                {
+                    "id": "et_21::dm_39",
+                    "name": "Online",
+                    "count": 18,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "et_dm"
+                }
+            ],
+            "specialization": [
+                {
+                    "id": "188",
+                    "name": "Finance",
+                    "count": 116,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "251",
+                    "name": "Human Resources",
+                    "count": 112,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "451",
+                    "name": "Sales and Marketing",
+                    "count": 112,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "283",
+                    "name": "IT and Systems",
+                    "count": 45,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "274",
+                    "name": "International Business",
+                    "count": 44,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "236",
+                    "name": "HealthCare and Hospital",
+                    "count": 40,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "385",
+                    "name": "Operations",
+                    "count": 34,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "170",
+                    "name": "Entrepreneurship",
+                    "count": 27,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "440",
+                    "name": "Retail",
+                    "count": 26,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "538",
+                    "name": "Business Analytics",
+                    "count": 20,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "487",
+                    "name": "Supply Chain",
+                    "count": 17,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "511",
+                    "name": "Transport and Logistics",
+                    "count": 10,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "513",
+                    "name": "Travel and Tourism Management",
+                    "count": 10,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "247",
+                    "name": "Hospital / Healthcare Management",
+                    "count": 6,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "326",
+                    "name": "Media Planning",
+                    "count": 6,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "181",
+                    "name": "Family Business",
+                    "count": 5,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "480",
+                    "name": "Sports",
+                    "count": 4,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "141",
+                    "name": "Digital Marketing",
+                    "count": 3,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "183",
+                    "name": "Fashion Design",
+                    "count": 3,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "214",
+                    "name": "General Insurance",
+                    "count": 3,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "266",
+                    "name": "Infrastructure",
+                    "count": 3,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "17",
+                    "name": "Agriculture and Food Business",
+                    "count": 2,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "422",
+                    "name": "Project Management",
+                    "count": 2,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "74",
+                    "name": "Capital Markets",
+                    "count": 1,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "130",
+                    "name": "Data Analytics",
+                    "count": 1,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "144",
+                    "name": "Disaster Management",
+                    "count": 1,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "165",
+                    "name": "Energy and Environment",
+                    "count": 1,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "190",
+                    "name": "Financial Planning and Analysis",
+                    "count": 1,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "229",
+                    "name": "Ground Staff",
+                    "count": 1,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "234",
+                    "name": "Health Information Administration",
+                    "count": 1,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "278",
+                    "name": "Investment Banking",
+                    "count": 1,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "399",
+                    "name": "Pharma",
+                    "count": 1,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "426",
+                    "name": "Public Policy",
+                    "count": 1,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "441",
+                    "name": "Retail Banking",
+                    "count": 1,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "448",
+                    "name": "Rural Management",
+                    "count": 1,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "496",
+                    "name": "Telecom",
+                    "count": 1,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "507",
+                    "name": "Tour Management",
+                    "count": 1,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "515",
+                    "name": "UI / UX",
+                    "count": 1,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "257",
+                    "name": "Import and Export",
+                    "count": 55,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "9",
+                    "name": "Advertising",
+                    "count": 32,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "529",
+                    "name": "Wealth Management",
+                    "count": 23,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "318",
+                    "name": "Materials Management",
+                    "count": 15,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "63",
+                    "name": "Biotechnology",
+                    "count": 13,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "67",
+                    "name": "Business Economics",
+                    "count": 13,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "158",
+                    "name": "Electronic Media ( TV Radio Online ) ",
+                    "count": 13,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "444",
+                    "name": "Risk Management",
+                    "count": 13,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "382",
+                    "name": "Oil and Gas",
+                    "count": 7,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "508",
+                    "name": "Tour Operations",
+                    "count": 5,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "526",
+                    "name": "Visual Merchandising",
+                    "count": 5,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "248",
+                    "name": "House Keeping",
+                    "count": 4,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "417",
+                    "name": "Print Media",
+                    "count": 4,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "425",
+                    "name": "Public Health",
+                    "count": 4,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "502",
+                    "name": "Textile Management",
+                    "count": 4,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "6",
+                    "name": "Actuarial Science",
+                    "count": 3,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "35",
+                    "name": "Apparel Design",
+                    "count": 3,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "189",
+                    "name": "Financial Modelling",
+                    "count": 3,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "292",
+                    "name": "Jewellery Design",
+                    "count": 3,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "305",
+                    "name": "Life Insurance",
+                    "count": 3,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "368",
+                    "name": "NGO Management",
+                    "count": 3,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "500",
+                    "name": "Textile Design",
+                    "count": 3,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "509",
+                    "name": "Tourism Studies",
+                    "count": 3,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "93",
+                    "name": "Clinical Research",
+                    "count": 2,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "116",
+                    "name": "Corporate Banking",
+                    "count": 2,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "164",
+                    "name": "Emergency Medical Technology",
+                    "count": 2,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "545",
+                    "name": "Fire and Safety Engineering ",
+                    "count": 2,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "203",
+                    "name": "Footwear Design",
+                    "count": 2,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "264",
+                    "name": "Information Technology",
+                    "count": 2,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "273",
+                    "name": "International Banking",
+                    "count": 2,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "279",
+                    "name": "Investment Operations",
+                    "count": 2,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "355",
+                    "name": "Mutual Funds",
+                    "count": 2,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "397",
+                    "name": "Personnel Management",
+                    "count": 2,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "541",
+                    "name": "Pharmaceutics",
+                    "count": 2,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "454",
+                    "name": "SAP ERP",
+                    "count": 2,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "484",
+                    "name": "Stock Analysis and Trading",
+                    "count": 2,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "15",
+                    "name": "Agriculture",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "18",
+                    "name": "Air and Space Law",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "43",
+                    "name": "Auditing and Control",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "45",
+                    "name": "Automobile Engineering",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "68",
+                    "name": "Business Law",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "99",
+                    "name": "Commodity and Currency Markets",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "112",
+                    "name": "Consumer Law",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "127",
+                    "name": "Cyber Security",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "131",
+                    "name": "Data Mining",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "132",
+                    "name": "Data Visualization",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "134",
+                    "name": "Debt Markets",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "136",
+                    "name": "Derivatives Futures and Options",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "168",
+                    "name": "Enterprise Java Beans ( EJB ) ",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "171",
+                    "name": "Environmental Engineering",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "173",
+                    "name": "Environmental Law",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "174",
+                    "name": "Environmental Sciences",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "207",
+                    "name": "Forestry",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "208",
+                    "name": "Forex Management",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "218",
+                    "name": "GeoInformatics",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "227",
+                    "name": "Graphic Design",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "235",
+                    "name": "Health Insurance",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "237",
+                    "name": "Healthcare Law",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "252",
+                    "name": "Human Rights and International Humanitarian Law",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "269",
+                    "name": "Intellectual Property Law",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "271",
+                    "name": "International / International Trade Law",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "276",
+                    "name": "International Relations",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "282",
+                    "name": "Islamic Banking and Finance",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "316",
+                    "name": "Marine Engineering",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "371",
+                    "name": "Nuclear Law",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "400",
+                    "name": "Pharmaceutical engineering",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "543",
+                    "name": "Pharmacy Practice",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "424",
+                    "name": "Public Administration",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "483",
+                    "name": "Statistics",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "499",
+                    "name": "Terminal Operations and Management",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "525",
+                    "name": "Visual Communication",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                },
+                {
+                    "id": "530",
+                    "name": "Web Design",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "specialization"
+                }
+            ],
+            "exam": [
+                {
+                    "id": "327",
+                    "name": "CAT",
+                    "count": 101,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "306",
+                    "name": "MAT",
+                    "count": 99,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "12971",
+                    "name": "Karnataka PGCET",
+                    "count": 81,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "5822",
+                    "name": "CMAT",
+                    "count": 79,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "309",
+                    "name": "XAT",
+                    "count": 72,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "9238",
+                    "name": "KMAT",
+                    "count": 58,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "9180",
+                    "name": "ATMA",
+                    "count": 51,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "310",
+                    "name": "GMAT",
+                    "count": 40,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "3275",
+                    "name": "NMAT by GMAC",
+                    "count": 7,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "2494",
+                    "name": "GRE",
+                    "count": 5,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "307",
+                    "name": "SNAP",
+                    "count": 4,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "10002",
+                    "name": "ICET",
+                    "count": 3,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "5944",
+                    "name": "IIFT",
+                    "count": 3,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "9983",
+                    "name": "MAH CET",
+                    "count": 3,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13198",
+                    "name": "ALLIANCE AMAT",
+                    "count": 2,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "3298",
+                    "name": "GATE",
+                    "count": 2,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "6401",
+                    "name": "IBSAT",
+                    "count": 2,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "10248",
+                    "name": "NAT",
+                    "count": 2,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13751",
+                    "name": "ACET",
+                    "count": 1,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13781",
+                    "name": "CMRUAT",
+                    "count": 1,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "3300",
+                    "name": "IELTS",
+                    "count": 1,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "12995",
+                    "name": "NICC Entrance Exam",
+                    "count": 1,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "9886",
+                    "name": "OJEE",
+                    "count": 1,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "9643",
+                    "name": "PESSAT MBA",
+                    "count": 1,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13614",
+                    "name": "REVA MAT",
+                    "count": 1,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "11903",
+                    "name": "WLCI Aptitude Test",
+                    "count": 1,
+                    "url": null,
+                    "enabled": true,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "10637",
+                    "name": "TANCET MBA",
+                    "count": 209,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "6612",
+                    "name": "UPSEE",
+                    "count": 180,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "10692",
+                    "name": "TSICET",
+                    "count": 59,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "9208",
+                    "name": "JEMAT",
+                    "count": 41,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "9276",
+                    "name": "TANCET",
+                    "count": 30,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "9247",
+                    "name": "MHT CET",
+                    "count": 19,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "9252",
+                    "name": "MPMET",
+                    "count": 18,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13606",
+                    "name": "IPU CET",
+                    "count": 15,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "9267",
+                    "name": "RMAT",
+                    "count": 15,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "12293",
+                    "name": "Amity JEE",
+                    "count": 14,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13105",
+                    "name": "KMAT KERALA",
+                    "count": 14,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13081",
+                    "name": "B MAT",
+                    "count": 7,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "10250",
+                    "name": "GCET",
+                    "count": 6,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13599",
+                    "name": "GPAT",
+                    "count": 5,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "418",
+                    "name": "SAT",
+                    "count": 5,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "10306",
+                    "name": "AJEE",
+                    "count": 4,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13104",
+                    "name": "HPCET",
+                    "count": 4,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13114",
+                    "name": "SRMJEEM",
+                    "count": 4,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13122",
+                    "name": "X GMT",
+                    "count": 4,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13544",
+                    "name": "CUCET",
+                    "count": 3,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13632",
+                    "name": "DUET",
+                    "count": 3,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13069",
+                    "name": "HPU MAT",
+                    "count": 3,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "12826",
+                    "name": "IMUCET",
+                    "count": 3,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13730",
+                    "name": "ITM NEST",
+                    "count": 3,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "12850",
+                    "name": "Pearl Academy Entrance Exam",
+                    "count": 3,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "6615",
+                    "name": "SRMJEEE",
+                    "count": 3,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13166",
+                    "name": "AAT",
+                    "count": 2,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13605",
+                    "name": "BHU PET",
+                    "count": 2,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13621",
+                    "name": "DAVV CET",
+                    "count": 2,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13130",
+                    "name": "EMAT",
+                    "count": 2,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13669",
+                    "name": "GLAET",
+                    "count": 2,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "12415",
+                    "name": "IEMJEE",
+                    "count": 2,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "6244",
+                    "name": "JEE Main",
+                    "count": 2,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13577",
+                    "name": "JUET",
+                    "count": 2,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "9747",
+                    "name": "KIITEE MANAGEMENT",
+                    "count": 2,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13634",
+                    "name": "KLUBSAT",
+                    "count": 2,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "9774",
+                    "name": "LPU NEST",
+                    "count": 2,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "9816",
+                    "name": "MET",
+                    "count": 2,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13839",
+                    "name": "MUJEE",
+                    "count": 2,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "10183",
+                    "name": "NIFT Entrance Exam",
+                    "count": 2,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13578",
+                    "name": "NIMCET",
+                    "count": 2,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13691",
+                    "name": "PU CET ( UG ) ",
+                    "count": 2,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13116",
+                    "name": "PU MET",
+                    "count": 2,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13713",
+                    "name": "SU JEE",
+                    "count": 2,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13663",
+                    "name": "UKSEE",
+                    "count": 2,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13057",
+                    "name": "UPESMET",
+                    "count": 2,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13543",
+                    "name": "AUCET",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13594",
+                    "name": "BEEE",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13682",
+                    "name": "Banasthali University Aptitude Test",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13716",
+                    "name": "DYPCET",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "10827",
+                    "name": "FDDI AIST",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13706",
+                    "name": "FEAT",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13595",
+                    "name": "GAT ( PGT ) ",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13103",
+                    "name": "GSIB Entrance Test",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13625",
+                    "name": "Goenkan Aptitude Test for Admission ( GATA ) ",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13106",
+                    "name": "HBSAT",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "5945",
+                    "name": "IRMASAT",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13763",
+                    "name": "IUET",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13615",
+                    "name": "JKLU MET",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13272",
+                    "name": "KUK Entrance Exam",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "9249",
+                    "name": "MICAT",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13723",
+                    "name": "MMET",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13819",
+                    "name": "MRNAT",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13657",
+                    "name": "NIMSEE",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13610",
+                    "name": "NIPER JEE",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13109",
+                    "name": "PIM MAT",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13063",
+                    "name": "PU CET ( PG ) ",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13631",
+                    "name": "RUPGCET",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13660",
+                    "name": "SAAT",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13549",
+                    "name": "SET",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13714",
+                    "name": "SLIET SET",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13049",
+                    "name": "SMAT",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13094",
+                    "name": "SPJAT",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13562",
+                    "name": "SPSAT",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13580",
+                    "name": "SRMHCAT",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "12526",
+                    "name": "SUAT",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13709",
+                    "name": "Sports Management Admission Test ( SMAT ) ",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13705",
+                    "name": "TERI University Entrance Exam",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "11438",
+                    "name": "TISSNET",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "10307",
+                    "name": "TS EAMCET",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13623",
+                    "name": "TUEE",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13624",
+                    "name": "TUET",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13550",
+                    "name": "UGAT",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13087",
+                    "name": "UPMCAT",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                },
+                {
+                    "id": "13729",
+                    "name": "VEE",
+                    "count": 1,
+                    "url": null,
+                    "enabled": false,
+                    "checked": false,
+                    "filterType": "exam"
+                }
+            ]
+        },
+        "nameMapping": {
+            "specialization": "Specialization",
+            "approvals": "Approvals",
+            "fees": "Total Fees",
+            "substream": "Substreams",
+            "ranking_source": "Ranking Source",
+            "et_dm": "Mode of Study",
+            "review": "Rating",
+            "course_level": "Course Level",
+            "college_ownership": "Ownership",
+            "location": "Location",
+            "accreditation": "Accreditation",
+            "base_course": "Course",
+            "course_status": "Course Status",
+            "facilities": "Facilities",
+            "offered_by_college": "Colleges",
+            "exam": "Exams Accepted",
+            "sub_spec": "Specialization",
+            "stream": "Streams",
+            "credential": "Credential"
+        },
+        "aliasMapping": {
+            "institute": "i",
+            "approvals": "ap",
+            "exam": "ex",
+            "base_course": "bc",
+            "review": "rw",
+            "stream": "s",
+            "offered_by_college": "ob",
+            "delivery_method": "dm",
+            "city": "ct",
+            "facilities": "fa",
+            "locality": "lo",
+            "ranking_source": "rs",
+            "course_rank_source": "crs",
+            "specialization": "sp",
+            "accreditation": "ac",
+            "course_level": "cl",
+            "state": "st",
+            "et_dm": "ed",
+            "popular_institute": "pop",
+            "ranking_page": "rp",
+            "education_type": "et",
+            "course_status": "cs",
+            "college_ownership": "co",
+            "primary_institute": "pi",
+            "course_type": "cty",
+            "fees": "fe",
+            "substream": "sb",
+            "credential": "cr",
+            "sub_spec": "ss"
+        },
+        "defaultAppliedFilters": {
+            "education_type": 20,
+            "base_course": 101,
+            "state": 106,
+            "city": 278
+        },
+        "filterOrder": [
+            "location",
+            "fees",
+            "specialization",
+            "review",
+            "exam",
+            "course_status",
+            "college_ownership",
+            "approvals",
+            "accreditation",
+            "et_dm",
+            "facilities"
+        ],
+        "selectedFiltersCount": 2,
+        "examsUrl": null
+    }
+}

@@ -1,0 +1,135 @@
+.rename_varients_inner h3{
+background: none repeat scroll 0 0 #e1e1e1;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 10px;
+    margin-top: 0;
+    padding-left: 10px;
+    width: 99%;
+    cursor: pointer;
+}
+.rename_varients_inner input[type='checkbox']{
+    margin-left: 10px;
+}
+.rename_varients_inner .arrow{
+    float: right;
+    margin-right: 20px;
+}
+.avoid-clicks {
+  pointer-events: none;
+  color: #ccc !important;
+}
+.rename_varients_inner{
+    border: 1px solid #aaa;
+    width: 90%;
+    margin-bottom: 20px;
+}
+.orange-btn{
+    background: none repeat scroll 0 0 #fc8104;
+    border-radius: 3px;
+    color: #fff !important;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 0 0 7px;
+    padding: 8px 14px;
+    text-decoration: none !important;
+}
+.main-wrapper {
+    border: 0 solid red;
+    margin: 0 auto;
+    min-height: 600px;
+    padding-bottom: 40px;
+    width: 988px;
+}
+.universal-select, input.universal-txt-field {
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px #e0e0e0 inset;
+    color: #333;
+    font-size: 14px;
+    padding: 2px !important;
+    width: 50%;
+    height: 35px;
+}
+.navigation_bar ul {
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+    overflow: hidden;
+    background-color: #404c56;
+    width: 990px;
+}
+
+.navigation_bar li {
+    float: left;
+}
+
+.navigation_bar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 16px;
+    text-decoration: none;
+}
+.cms-form-wrap{
+    background-color: #fff !important;
+}
+.navigation_bar li a:hover {
+    background-color: #111;
+}
+.navigation_bar li a.active {
+    background-color: #111;
+}
+.navigation_bar {
+  background-color: #404c56;
+}
+body{
+  background-color: #f1f1f1;
+  margin: 0px;
+  padding: 0px;
+}
+body *{
+    font-family: "Open Sans",sans-serif !important;
+    font-size: 12px;
+}
+ul, li, p, form, h1, h2, h3, h4, h5, h6 {
+    list-style: outside none none;
+}
+.cms-form-wrap label{
+    color: #62625f !important;
+}
+.loading { background:url('/public/images/loader.gif') no-repeat }
+#reassign_parent_field {display: none;}
+.errorMsg{
+    color: red;
+}
+.customLabel{
+    color: #62625f !important;
+    margin-right: 10px;
+}
+.customH3{
+ background: none repeat scroll 0 0 #e1e1e1;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 10px;
+    margin-top: 0;
+    padding-left: 10px;
+    width: 95%;
+    cursor: pointer;   
+}
+.errFields{
+    border-color: #f67575 !important;
+    box-shadow: 2px 2px 7px #ff6767 !important;
+}
+#loadingText{
+    color: #fc8104;
+    display: none;
+    font-size: 14px;
+    
+}
+#extraMappings li .customLabel{
+    margin-left: 120px;
+}

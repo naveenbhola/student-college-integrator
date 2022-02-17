@@ -1,0 +1,197 @@
+.rvwBlock {
+    display: block;
+    font-size: 0;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+/*
+.rvwLeft {
+    margin-bottom: 25px;
+}*/
+.ratingAll {
+    margin-bottom: 0px;
+}
+
+.ratingAll span {
+    font-size: 0.875rem;
+    color: #999;
+    font-weight: 400;
+}
+
+
+.rvwScore {
+    display: block;
+    width: 100%;
+    font-size: 0;
+}
+._container .rvwScore h3 {
+    display: inline-block;
+    width: 55px;
+    font-size: 2.125rem;
+    text-align: center;
+    vertical-align: middle;
+}
+.infrontRvws {
+    display: inline-block;
+    font-size: 0;
+    margin-top: 8px;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+.infrontRvws .empty_stars, .infrontRvws .full_starts {
+    width: 108px;
+    height: 18px;
+    display: inline-block;
+    background: #ccc;
+    text-align: left;
+    background: url(https://images.shiksha.ws/public/images/ratingicon.svg)no-repeat;
+    background-position: 0 -16px;
+}
+.infrontRvws .full_starts {
+    background-position: 0px 0px;
+    width: 97px;
+    height: 16px;
+}
+i.empty_stars {
+    position: relative;
+    top: -1px;
+}
+.refrnceTxt {
+    font-size: 12px;
+    color: #999;
+    font-weight: 600;
+}
+.rvwProgress {
+    display: block;
+}
+.starBar {
+    display: table;
+    width: 100%;
+    margin-bottom: 4px;
+}
+.starC {
+    font-size: 12px;
+    color: #008489;
+    font-weight: 600;
+    padding-right: 15px;
+}
+.starBar .loadbar {
+    width: 100px;
+    margin-right: 15px;
+}
+.fillBar {
+    height: 4px;
+    background: #ef8f2f;
+    width: 88%;
+}
+.starPrgrs {
+    font-size: 12px;
+}
+.starBar.disablefilter, .starBar.disablefilter .starC a {
+    color: #e3e3e3;
+    pointer-events: none;
+}
+.starBar {
+    display: table;
+    width: 100%;
+    margin-bottom: 4px;
+}
+
+.rvwRight {
+    display: block;
+    position: relative;
+}
+.rvwRight:before {
+    content: '';
+    position: absolute;
+    height: 87%;
+    width: 1px;
+    /* background: #ccc; */
+    top: 15px;
+    left: -5px;
+}
+.starBar {
+    display: table;
+    width: 100%;
+    margin-bottom: 4px;
+}
+.cRating, .componetText {
+    font-size: 0.875rem;
+    color: #000;
+    line-height: 1.3125rem;
+    font-weight: 400;
+}
+.cRating {
+    margin:0px 10px;
+}
+.allRvws {
+    margin: 0;
+    padding: 10px;
+    border-top: 1px solid #e6e5e5;
+    border-bottom: 1px solid #e6e5e5;
+
+}
+.starBar:last-child .starC {
+    margin-left: 7px;
+}
+.rvwImg {
+    width: 26px;
+    height: 28px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 9px;
+    background: url(https://images.shiksha.ws/pwa/public/images/pwa-header-mobile-v3.svg) no-repeat;
+    background-position: -10px -35px;
+}
+.getAllrvws {
+    display: inline-block;
+    vertical-align: middle;
+    width: 85%;
+    font-size: 0.75rem;
+    color: #000;
+}
+.getAllrvws .new-title {
+    font-size: 0.75rem;
+}
+.new-title {
+    font-size: 20px;
+    color: #000;
+    font-weight: 600;
+}
+.starBar div {
+    display: inline-flex;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flex;
+}
+.starC a {
+    color: #008489;
+    font-size: 0.75rem;
+}
+.rtng-cmpt{
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+.rvwProgress .heading{
+    font-size: 1rem;
+    margin-bottom: 7px;
+    font-weight: 600;
+    margin-top: 12px;
+}
+.break_rating_star .empty_stars.starBg  {
+    top: 4px;
+}
+.rvwProgress .heading{margin-top: 0px;}
+.componetText{min-width: 189px;}
+.avoidLink{
+    opacity: 0.8;
+    pointer-events: none;
+}
+@media only screen and (min-width: 1024px){
+    .rvwBlock.recomended-flex{align-items: flex-start;justify-content: space-around;margin-top: 15px;}
+    .rvwBlock.recomended-flex .rtng-cmpt, .rtng-cmpt{margin-top: 0px;}
+    .rvwBlock.recomended-flex .rvwScore{display: block;width: 100%;}
+    ._container .rvwBlock.recomended-flex .rvwScore h3{font-size: 2.125rem;width: 100%;display: block;margin-top: 15px;}
+    .rvwBlock.recomended-flex .infrontRvws{display: block;width: 100%;text-align: center;margin: 15px 0px 0px;}
+    .rvwBlock.recomended-flex .empty_stars, .rvwBlock.recomended-flex .refrnceTxt{display: block;margin: 0 auto;}
+
+}

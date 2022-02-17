@@ -1,0 +1,32 @@
+.formPreviewMain {font-size:14px; font-family:Arial, Helvetica, sans-serif !important}
+.previewHeader{display:block; margin-bottom:20px; padding-bottom:5px;}
+.previewBody{display:block; font-family:"Times New Roman", Times, serif, Times, serif; font-size:16px}
+.instLogoBox{text-align:center; padding-bottom:20px}
+.previewTetx{font-size:22px; color:red; margin-bottom:20px; clear:both}
+.courseNameDetails{text-align:center; font-size:22px; color:#000000; font-weight:bold; line-height:27px}
+.courseNameDetails strong{text-transform:uppercase; font-size:26px; font-family:"Arial Black", Gadget, sans-serif}
+.srNumBox{float:right; font-size:18px; border:1px solid #000000;}
+.srNumBox span, .srNumBox p{padding:5px 30px 5px 10px; float:left; border-right:1px solid #000000}
+.srNumBox p{border:0 none; padding-right:0; width:200px}
+.formInstruction{ float:left; width:730px; font-size:14px;}
+.formInstruction h4{font-size:14px; font-weight:bold; margin-bottom:12px; padding-left:8px; display:block}
+.formInstruction ul li{list-style:decimal !important; margin-left:25px; margin-bottom:5px}
+.picBox{width:197px; float:right;}
+.picBox img{border:1px solid #cacaca; width:195px}
+.formPreviewMain h5{font-size:16px !important; margin-bottom:15px !important; display:block !important; text-transform:uppercase !important; clear:left !important; float:left !important; width:100% !important;}
+.formPreviewMain h5 strong, .formPreviewMain h3 strong{width:25px; float:left;}
+.formPreviewMain h5 span{text-transform:none;}
+.formRows{display:block; margin-bottom:22px; float:left; width:96%; padding:0px 0 0 28px;}
+.formRows ul li{display:block; margin-bottom:10px; float:left; width:100%;}
+.formRows ul li label{float:left; padding-right:5px; font-weight:bold;}
+.previewFieldBox{float:left; width:850px;}
+.previewFieldBox span{display:block; border-bottom:solid 1px #4f4f4f;}
+.formColumns2{float:left}
+.boxTable{border: 1px solid #000000; border-collapse: collapse;}
+.boxTable tr td{height: 32px; width:32px; padding-bottom: 0; padding-top: 0;  text-align: center;}
+.educationTable{border: 1px solid #000000; border-collapse: collapse;}
+.educationTable tr td{}
+.programPreferenceBox{Width:200px; float:left; padding-left:40px}
+.programPreferenceBox label{font-weight:normal !important}
+.flRt{float:right}
+

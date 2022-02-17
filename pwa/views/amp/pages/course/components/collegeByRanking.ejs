@@ -1,0 +1,12 @@
+     <div class="data-card pad10 mr-20">
+        <h2 class="color-3 f15 font-w6">View colleges by rankings</h2>
+        <ul class="in-ul">
+          <% data.map((item) => { %>
+           <li class="color-9">
+             <a class="color-b f14 l-14 block ga-analytic" data-vars-event-name="RANKING_LINKS" href="<%- item.url %>">
+               <%- item.title %> 
+             </a>
+           </li>
+         <% }) %>
+        </ul>
+     </div>

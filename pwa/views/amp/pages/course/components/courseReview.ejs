@@ -1,0 +1,248 @@
+<%
+ revivewRating = (reviewdata)=>{
+   if((reviewdata == null || reviewdata === "undefined") && (reviewdata.reviewsData == null || reviewdata.reviewsData =='undefined' )){
+      return null
+   }
+   var reviewshtml = []
+   for (var i in reviewdata.reviewsData){
+     reviewshtml.push(
+        reviewdata.reviewsData[i].reviewId
+     )
+   }
+   return reviewshtml;
+   console.log(reviewshtml)
+ }
+
+    var componentRating = aggregateData.aggregateRatingDisplayOrder;
+    var copmonentkeys =   aggregateData.aggregateReviewData.aggregateRating;
+    var intervalrating =  aggregateData.aggregateReviewData.intervalRatingCount;
+    var datalist= {};
+    var ratingorder = aggregateData.intervalsDisplayOrder;
+    var showlength = 450;
+
+%>
+
+
+<div class="data-card m-5btm " id="reviews-li">
+           <% if(aggregateData !=null && aggregateData != 'undefined') { %>
+                <%
+                  var totalReviews = data.reviewData.totalReviews ;
+                  var showingreviews = data.reviewData.reviewsData.length;
+                  var reviewCount = aggregateData.aggregateReviewData;
+                %>
+                <h2 class="color-3 f16 heading-gap font-w6">Course Reviews<span class="f12 font-w4 color-3"> (Showing <%= showingreviews %>  of  <%= totalReviews %> reviews)</span></h2>
+                <div class="card-cmn color-w m-15btm">
+                    <div class="rvw-h">
+                       <div class="rvwBlock">
+                          <div class="rvwLeft">
+                             <h2 class="ratingAll"> Overall Rating <span>(Out of 5)</span></h2>
+                             <div class="rvwScore">
+                               <% if(reviewCount !=null && reviewCount !='undefined'){ %>
+                                 <h3><%= reviewCount.aggregateRating.averageRating.mean.toFixed(1) %></h3>
+                               <% } %>
+                               <%
+                                 var aggregatePercent = parseInt(reviewCount.aggregateRating.averageRating.mean*20);
+                               %>
+                                <div class="infrontRvws">
+                                   <i class="empty_stars">
+                                   <i class="full_starts" style="width: <%= aggregatePercent %>%"></i>
+                                   </i>
+                                   <div class="refrnceTxt">
+                                      <span> Based on <%= totalReviews %> Reviews</span>
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="rvwProgress">
+                               <% for(var ratingkey in ratingorder ) {%>
+                                 <% var ratingbar =  ((intervalrating[ratingkey]/ reviewCount.totalCount) * 100).toFixed(); %>
+                                  <div class="<%- ratingbar > 0 ? 'starBar': 'starBar disablefilter'%>">
+                                     <div class="starC">
+                                       <a href="https://www.shiksha.com/college/pimpri-chinchwad-college-of-engineering-pimpri-chinchwad-education-trust-s-nigdi-pune-25044/reviews?course=73368&rating=4">
+                                          <%- ratingkey != '1-2' ? '>'+ratingkey : '&nbsp;&nbsp;'+ratingkey %> star
+                                       </a>
+                                      </div>
+                                     <div class="loadbar">
+                                        <div class="fillBar"  style="width:<%- ratingbar %> %"></div>
+                                     </div>
+                                     <div class="starPrgrs"><%-ratingbar %> %</div>
+                                  </div>
+                                <% } %>
+
+                             </div>
+                          </div>
+                          <div class="rvwRight">
+                             <div class="align-cntr">
+                                <h2 class="ratingAll">Component Ratings <span>(Out of 5)</span></h2>
+
+                              <% for(var i in componentRating ) { %>
+                                 <%  datalist = copmonentkeys[i].mean %>
+                                    <div class="starBar">
+                                       <div class="cRating"><%- datalist.toFixed(1) %></div>
+                                       <div class="componetText"><%= componentRating[i] %></div>
+                                    </div>
+                              <% } %>
+                            </div>
+                          </div>
+                       </div>
+
+                       <div class="allRvws">
+                          <div class="rvwImg"></div>
+                          <div class="getAllrvws"> All <span class="new-title"><%- totalReviews > 1 ? totalReviews + ' Reviews' : totalReviews + ' Review' %></span> have been published only after ensuring that the reviewers are <span class="new-title">bona fide students </span> of this college.</div>
+                       </div>
+                    </div>
+                 </div>
+           <% } %>
+
+
+
+          <% if((data.reviewData !=null && data.reviewData !='undefined') && (data.reviewData.reviewsData !=null && data.reviewData.reviewsData !='undefined')) {%>
+           <div class="card-cmn color-w">
+             <%
+               var reviewslist = data.reviewData.reviewsData;
+
+             %>
+             <% reviewslist.map((item) =>{ %>
+              <div class="group-card gap pad-off " >
+
+                 <div class="rvwv1Heading">
+                    <div>
+                       <div class="new_rating">
+                          <span class='rating-block' on="tap:view-review<%= item.reviewId %>" role="button" tabindex="0">
+                          <%- item.averageRating.toFixed(1) %>
+                          <%
+                            var aggregateRatingPercent = parseInt(item.averageRating*20);
+                          %>
+                            <i class="empty_stars starBg">
+                               <i class="full_starts starBg w-92" style="width: <%= aggregateRatingPercent %>%"></i>
+                            </i>
+                          <b class="icons bold_arw"></b>
+                          </span>
+                          <span><%= item.reviewTitle%></span>
+                          <amp-lightbox class="" id="view-review<%= item.reviewId %>" layout="nodisplay">
+                             <div class="lightbox">
+                                <a class="cls-lightbox f25 color-f font-w6" on="tap:view-review<%= item.reviewId %>.close" role="button" tabindex="0">&times;</a>
+                                <div class="m-layer">
+                                   <div class="min-div colo-w">
+                                      <div class="pad10  rvw-fix color-w">
+                                        <%
+                                          var reviewpopupdata =  data.reviewData.reviewRating;
+                                          var ratinglayer = data.reviewData.reviewRating[item.reviewId]['ratingsMap'];
+                                          var reviewdisplayorder=  data.ratingDisplayOrder;
+                                          var percentFactor = 100/(Object.keys(ratinglayer).length);
+                                        %>
+                                        <ol>
+                                        <%
+                                          for(var ks in reviewdisplayorder){
+                                            var rating = reviewdisplayorder[ks];
+                                            var ratingbarvalue = parseFloat(ratinglayer[rating]);
+                                            var ratinghead = ratinglayer[rating];
+                                            var ratingBar = parseInt(ratinghead*percentFactor);
+
+                                        %>
+
+                                          <div class="table_row">
+                                              <div class="table_cell">
+                                                 <p class="rating_label"><%= rating %></p>
+                                              </div>
+                                              <div class="table_cell">
+
+                                                 <div  class="loadbar">
+                                                    <div class="fillBar" style="width:<%= ratingBar %>%"></div>
+                                                 </div>
+                                                 <b class="bar_value"><%= ratinghead %></b>
+                                              </div>
+                                           </div>
+
+                                      <% } %>
+                                    </ol>
+
+
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+                          </amp-lightbox>
+                       </div>
+                       <%
+                         var reviewerDetails = item.reviewerDetails;
+                         var postdate = item.postedDate.split(' ');
+                         var showDescLen = 450;
+                         var totalSegmentslen = 0;
+                         var reviewSegments = [];
+                         var minCharPerSection = 10;
+                         var showEllipses = '...';
+                         var str = [] ;
+                         var elipses = [];
+                         var minCharPerSection = 40;
+                         var remainingLen;
+                         if(typeof item['placementDescription'] !='undefined' && item['placementDescription'] != ''){
+                             reviewSegments['Placements'] = item['placementDescription'];
+                             totalSegmentslen = parseInt(totalSegmentslen) + parseInt(reviewSegments['Placements'].length);
+                         }
+                         if(typeof item['infraDescription']!='undefined' && item['infraDescription']!=''){
+                             reviewSegments['Infrastructure'] = item['infraDescription'];
+                             totalSegmentslen = parseInt(totalSegmentslen) + parseInt(reviewSegments['Infrastructure'].length);
+                         }
+                         if(typeof item['facultyDescription'] !='undefined' && typeof item['facultyDescription'] !='' ){
+                             reviewSegments['Faculty'] = item['facultyDescription'];
+                             totalSegmentslen = parseInt(totalSegmentslen) + parseInt(reviewSegments['Faculty'].length);
+                         }
+                         if(typeof item['reviewDescription'] !='undefined' && ( item['placementDescription'] != '' || item['infraDescription'] != '' || item['placementDescription'] != '')){
+                             reviewSegments['Other'] = item['reviewDescription'];
+                             totalSegmentslen = parseInt(totalSegmentslen) + parseInt(reviewSegments['Other'].length);
+                         }else{
+                             reviewSegments['Description'] = item['reviewDescription'];
+                             totalSegmentslen = parseInt(totalSegmentslen) + parseInt(reviewSegments['Description'].length);
+                         }
+                         var finalStr = [];
+                        %>
+                       <p class="byUser">by <span><%= reviewerDetails['userName'] %></span>, <%- postdate[0] %>| <%= data.listingName %> - Batch of <%= item.yearOfGraduation %></p>
+                    </div>
+                 </div>
+                 <div class="rvwv1-h">
+                    <div class="tabcontentv1">
+                       <div class="tabv_1">
+                          <% for(var key in reviewSegments){ %>
+                            <% if(parseInt(showDescLen)>0){ %>
+                              <% if(key !='Description' && parseInt(reviewSegments[key].length)>0 ) { %>
+
+                                  <% str.push("<span class='rateHead'>"+  key + "</span>")%>
+
+
+                              <%}%>
+                              <% str.push('<span>'+ reviewSegments[key].substr(0,showDescLen)) +'</span>' %>
+                              <%  remainingLen =  parseInt(totalSegmentslen)-parseInt(showDescLen);
+                                  showDescLen = parseInt(showDescLen) - parseInt(reviewSegments[key].length);
+                                  if(showDescLen>0 && showDescLen<minCharPerSection && remainingLen>minCharPerSection){
+                                     showDescLen = minCharPerSection;
+                                  } %>
+                              <%}%>
+                              <% finalStr.push('<p>' + str +'</p>'); %>
+                          <%}%>
+                          <%
+                           if(remainingLen>0){
+                               elipses.push('...');
+                               elipses.push("<a class='readMoreLnk link-blue-small'>"+ 'more' +"</a>");
+                           }
+                          %>
+                          <%- finalStr %>
+                          <%- elipses %>
+                          <!-- <p>
+                             <strong class='rateHead'>Infrastructure :</strong>
+                              <%= item.infraDescription %>
+                             <a class="readMoreLnk link-blue-small" href="https://www.shiksha.com/college/pimpri-chinchwad-college-of-engineering-pimpri-chinchwad-education-trust-s-nigdi-pune-25044/reviews?course=73368#id=263931&seqId=1" >more</a>
+                          </p> -->
+                       </div>
+                    </div>
+                 </div>
+              </div>
+
+           <% })%>
+            <a class="btn-mob-ter" href="<%= data.reviewData.allReviewUrl %>" id="reviews_count">
+              View All
+              <%- data.reviewData.totalReviews > 1 ? data.reviewData.totalReviews + ' Reviews' : data.reviewData.totalReviews + ' Review'  %>
+            </a>
+           <% } %>
+
+           </div>
+        </div>

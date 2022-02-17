@@ -1,0 +1,25 @@
+.contact-det{font-size: 0.875rem; font-weight: 600;color: #000;margin-bottom: 18px;word-wrap: break-word;}
+.contact-det a.vw-mp, .contact-det a{display: block; color: #008489; font-weight: 400;font-size: 0.75rem;text-decoration: none;line-height: 1.125rem; }
+.contact-det a{font-size: 0.875rem;word-wrap: break-word;}
+.loc-ico {
+    background-position: -152px -44px;
+    width: 15px;
+    height: 15px;
+    position: relative;
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    left: -1px;
+}
+.contct-hdng {
+    color: #666;
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+}
+.cntct-gap:last-child{
+    margin-top:8px;
+}
+.cntct-gap p {
+    font-weight: 400;
+}

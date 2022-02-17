@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="user\Entities\User" table="tuser" repository-class="user\Repositories\UserRepository">
+    <change-tracking-policy>DEFERRED_IMPLICIT</change-tracking-policy>
+    <id name="id" type="integer" column="userid">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="displayName" type="string" column="displayname" length="100"/>
+    <field name="email" type="string" column="email" length="150"/>
+    <field name="isdCode" type="string" column="isdCode" length="4"/>
+    <field name="mobile" type="string" column="mobile" length="20" nullable="true"/>
+    <field name="ePassword" type="string" column="ePassword" length="100"/>
+    <field name="city" type="string" column="city" length="50" nullable="true"/>
+    <field name="profession" type="string" column="profession" length="100"/>
+    <field name="viamobile" type="boolean" column="viamobile" nullable="true"/>
+    <field name="viaemail" type="boolean" column="viaemail" nullable="true"/>
+    <field name="newsLetterEmail" type="boolean" column="newsletteremail" nullable="true"/>
+    <field name="avatarImageURL" type="string" column="avtarimageurl" length="1000" nullable="true"/>
+    <field name="userCreationDate" type="datetime" column="usercreationDate" nullable="true"/>
+    <field name="lastModifiedOn" type="date" column="lastModifiedOn" nullable="true"/>
+    <field name="educationLevel" type="string" column="educationlevel" length="120" nullable="true"/>
+    <field name="experience" type="integer" column="experience" nullable="true"/>
+    <field name="randomKey" type="string" column="randomkey" length="32" nullable="true"/>
+    <field name="lastLoginTime" type="datetime" column="lastlogintime"/>
+    <field name="userGroup" type="string" column="usergroup" length="50"/>
+    <field name="dateOfBirth" type="date" column="dateofbirth"/>
+    <field name="institute" type="string" column="institute" length="1200" nullable="true"/>
+    <field name="userStatus" type="string" column="userstatus" length="50" nullable="true"/>
+    <field name="graduationYear" type="integer" column="graduationyear" nullable="true"/>
+    <field name="country" type="string" column="country" length="100" nullable="true"/>
+    <field name="firstName" type="string" column="firstname" length="50" nullable="true"/>
+    <field name="lastName" type="string" column="lastname" length="50" nullable="true"/>
+    <field name="countryOfEducation" type="string" column="countryofEducation" length="100" nullable="true"/>
+    <field name="cityOfEducation" type="string" column="cityofEducation" length="100" nullable="true"/>
+    <field name="quickSignupFlag" type="string" column="quicksignupFlag" length="50" nullable="true"/>
+    <field name="age" type="integer" column="age" nullable="true"/>
+    <field name="gender" type="string" column="gender" nullable="true"/>
+    <field name="passport" type="string" column="passport" nullable="true"/>
+    <field name="landline" type="string" column="landline" length="20" nullable="true"/>
+    <field name="secondaryEmail" type="string" column="secondaryemail" length="150" nullable="true"/>
+    <field name="locality" type="string" column="Locality" length="50" nullable="true"/>
+    <field name="publishInstituteFollowing" type="integer" column="publishInstituteFollowing"/>
+    <field name="publishInstituteUpdates" type="integer" column="publishInstituteUpdates"/>
+    <field name="publishRequestEBrochure" type="integer" column="publishRequestEBrochure"/>
+    <field name="publishBestAnswerAndLevelActivity" type="integer" column="publishBestAnswerAndLevelActivity"/>
+    <field name="publishArticleFollowing" type="integer" column="publishArticleFollowing"/>
+    <field name="publishQuestionOnFB" type="integer" column="publishQuestionOnFB"/>
+    <field name="publishAnswerOnFB" type="integer" column="publishAnswerOnFB"/>
+    <field name="publishDiscussionOnFB" type="integer" column="publishDiscussionOnFB"/>
+    <field name="publishAnnouncementOnFB" type="integer" column="publishAnnouncementOnFB"/>
+    <one-to-many target-entity="user\Entities\UserEducation" field="education" mapped-by="user">
+        <cascade>
+          <cascade-persist/>
+      </cascade>  
+    </one-to-many>
+    <one-to-many target-entity="user\Entities\RegistrationTracking" field="registrationTracking" mapped-by="user">
+        <cascade>
+          <cascade-persist/>
+      </cascade>  
+    </one-to-many>
+    <one-to-many target-entity="user\Entities\UserInterest" field="userInterest" mapped-by="user">
+        <cascade>
+          <cascade-persist/>
+      </cascade>  
+    </one-to-many>
+    <one-to-many target-entity="user\Entities\UserPref" field="preferences" mapped-by="user">
+        <cascade>
+          <cascade-persist/>
+      </cascade>  
+    </one-to-many>  
+    <one-to-many target-entity="user\Entities\UserLocationPref" field="locationPreferences" mapped-by="user" />
+    <one-to-many target-entity="user\Entities\UserSpecializationPref" field="specializationPreferences" mapped-by="user" />
+    <one-to-one target-entity="user\Entities\UserFlags" field="flags" mapped-by="user">
+      <cascade>
+          <cascade-persist/>
+      </cascade>
+    </one-to-one>  
+    <one-to-one target-entity="user\Entities\UserPointSystem" field="pointSystem" mapped-by="user">
+      <cascade>
+          <cascade-persist/>
+      </cascade>
+	</one-to-one>  
+    <one-to-many target-entity="user\Entities\UserMyPageComponent" field="myPageComponents" mapped-by="user">
+        <cascade>
+          <cascade-persist/>
+      </cascade>
+    </one-to-many>  
+    <one-to-one target-entity="user\Entities\UserRegistrationSource" field="registrationSource" mapped-by="user">
+        <cascade>
+          <cascade-persist/>
+      </cascade>
+    </one-to-one>  	
+    <one-to-many target-entity="user\Entities\UserCourseApplied" field="courseApplied" mapped-by="user" >
+        <cascade>
+          <cascade-persist/>
+      </cascade>
+    </one-to-many>
+     <one-to-many target-entity="user\Entities\UserWorkExp" field="userWorkExp" mapped-by="user" >
+        <cascade>
+          <cascade-persist/>
+      </cascade>
+    </one-to-many>
+    <one-to-one target-entity="user\Entities\UserSocialProfile" field="socialProfile" mapped-by="user" >
+            <cascade>
+          <cascade-persist/>
+      </cascade>
+    </one-to-one>
+
+      <one-to-one target-entity="user\Entities\UserAdditionalInfo" field="userAdditionalInfo" mapped-by="user" >
+          <cascade>
+        <cascade-persist/>
+    </cascade>
+  </one-to-one>     
+     
+    <lifecycle-callbacks/>
+  </entity>
+</doctrine-mapping>

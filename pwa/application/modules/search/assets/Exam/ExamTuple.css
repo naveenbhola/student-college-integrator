@@ -1,0 +1,56 @@
+    .uilp_exam_card {width: 100%;position: relative;margin-top: 12px;border-radius: 2px;box-shadow: 0.707px 0.707px 3px rgba(0,0,0,0.3);background-color: #ffffff;}
+    .pwaexams_container .exam_topcol {padding: 12px 12px 10px;}
+    .pwaexams_container .exam_name_width {width: 60%;float: left;display: block;}
+    .pwaexams_container .hide-examname{width:93%;overflow: hidden;display:block;white-space: nowrap;text-overflow: ellipsis;}
+    .pwaexams_container .exam_topcol .exam_title {font-size: 1rem;font-weight: 600;color: #000;display: inline-block;width: 102%;}
+    .pwaexams_container .exam_date .button--orange {margin-left: auto;}
+    .pwaexams_container .exam_impdates table {border-collapse: collapse;display: table;width: 100%;}
+    .pwaexams_container .exam_impdates table tr:first-child td{font-weight: 600;}
+    .pwaexams_container .exam_impdates table tr td {line-height: 1.32;border: 1px solid #b8c8d1;padding: 5px 10px;font-size: 0.875rem;color: #000;}
+    .pwaexams_container .exam_impdates table tr:nth-child(odd) {background-color: #f3f6f8;}
+    .pwaexams_container .exam_impdates table tr td p {font-size: 0.875rem;color: #000;line-height: 1.32;}
+    .pwaexams_container .exam_impdates table tr td p strong {font-weight: 600;}
+    .pwaexams_container .exam_impdates {margin: 10px 0px;height: auto;display: flex;flex-direction: row;align-items: center;justify-content: center;}
+    .pwaexams_container .exams_a{font-size: 0px;}
+    .pwaexams_container .exams_a a.quick-links {cursor: pointer;color: #008489;display: inline-block;font-size: 0.875rem;line-height: 1.32;margin-bottom: 4px;}
+    .pwaexams_container .exams_a b{display: inline-block;color: #999;margin: 0 5px;font-weight: 400;font-size: 0.875rem;}
+    .pwaexams_container .exam_date.auto_clear {height: 50px;display: flex;align-items: center;}
+    .pwaexams_container .showlistof_exams {text-align: center;padding: 25px 0px 0px;}
+    .pwaexams_container i.examsmore-ico {transform: rotate(90deg);-webkit-transform: rotate(90deg);-moz-transform: rotate(90deg);}
+    #viewMoreLink.gradient-col a.btn-tertiary:after, .academic-card .alter-div.align-center a.btn-tertiary:after, .college-block.t-cntr>a:after, .gradient-col>.btn-secondary:after, .examsmore-ico{}
+    .uilp_exam_card:nth-child(2n+2) {margin-left: auto;}
+    .pwaexams_container a.clgs_links , .showlistof_exams a{ text-decoration: none; cursor: pointer;font-size: 0.875rem;display: inline-block;color: #008489;font-weight: 400;position: relative;}
+    .pwaexams_container .clgs_links:after, .showlistof_exams a:after{content:"";display:inline-block;width:5px;height:5px;border-bottom:1px solid #008489;border-right:1px solid #008489;margin:0 0 0 4px;transform:rotate(-45deg)}
+    .showlistof_exams a:after{transform: rotate(45deg);position: relative;top: -3px;}
+    .pwaexams-rslts{padding: 10px;}
+    .pwaexams-rslts h1{font-size: 0.87rem;font-weight: 400;}
+    .listof_exams .uilp_exam_card:nth-child(1){margin-top: 0px;}
+    .pwaexams-rslts strong{font-weight: 600;}
+    .btn-primary{text-align: center;vertical-align: middle;font-size: 14px;font-weight: 600;cursor: pointer;height: 30px;border-radius: 2px;touch-action: manipulation;white-space: nowrap;background-image: none;line-height: 28px;padding: 0 14px;display: inline-block;}
+    .btn-primary {background: #f37921;color: #fff;border: 1px solid #f37921;}
+     .fix-tdwidth {width: 110px;}
+    .blockcell{display: block;}
+    .pwaexams_container td.fix-tdwidth{
+      width:110px;
+    }
+
+    /*content loader css*/
+    button.btn-primary.btn-pm.loader-line.shimmer{padding:0;width:110px;border:1px solid #dfdfdf;margin-left: auto;}
+    button.btn-primary.btn-pm.loader-line.shimmer:hover{background-color: transparent;}
+
+    @media only screen and (min-width: 1024px) {
+        .pwaexams-rslts{padding: 10px 2px;}
+        .pwaexams-rslts h1{font-size: 24px;}
+        .pwaexams_container .exam_impdates table{table-layout: fixed;}
+        .pwaexams_container .listof_exams .uilp_exam_card:nth-child(1){margin-top: 16px;}
+        .pwaexams_container .uilp_exam_card{width: 575px;margin-top: 18px;min-height: 240px;}
+        .pwaexams_container .exam_date .btn-pm:hover{background: #db6d1d;}
+        .pwaexams_container .exam_impdates{margin: 0px;height: 130px}
+        .pwaexams_container .exam_impdates table tr td{padding:5px 10px;}
+        .fixed_tile{width: 100%;margin: 0 auto;}
+        .pwaexams_container .exams_a{margin-top: 5px;}
+        .pwaexams_container .exam_topcol .exam_title:hover{cursor: pointer;color: #008489;}
+        .pwaexams_container .exams_a a.quick-links{cursor: pointer;}
+        .pwaexams_container .exams_a a.quick-links, .exam_topcol .exam_title{text-decoration: none;}
+        .pwaexams_container .exam_impdates table tr td.fix-textlength p{white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+    }

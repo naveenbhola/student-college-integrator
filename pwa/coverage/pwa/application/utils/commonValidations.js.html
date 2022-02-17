@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for pwa/application/utils/commonValidations.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">pwa/application/utils</a> commonValidations.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/96</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/55</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/11</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/93</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
+import shikshaConfig from './../modules/common/config/shikshaConfig';
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >isProfaneReg(</span>str) {
+    
+<span class="cstat-no" title="statement not covered" >    if(!str) {</span>
+<span class="cstat-no" title="statement not covered" >        return;</span>
+    }
+    /* code start to avoid dissallowed chars */
+    var responseValue = <span class="cstat-no" title="statement not covered" >checkDisAllowedWord(str);</span>
+<span class="cstat-no" title="statement not covered" >    if(responseValue !== true){</span>
+<span class="cstat-no" title="statement not covered" >        return responseValue;</span>
+    }
+    /* code end to avoid dissallowed chars */
+    
+    var profaneWordsBag = <span class="cstat-no" title="statement not covered" >eval(base64_decode('WyJzdWNrIiwiZnVjayIsImRpY2siLCJwZW5pcyIsImN1bnQiLCJwdXNzeSIsImhvcm55Iiwib3JnYXNtIiwidmFnaW5hIiwiYmFiZSIsImJpdGNoIiwic2x1dCIsIndob3JlIiwid2hvcmlzaCIsInNsdXR0aXNoIiwibmFrZWQiLCJpbnRlcmNvdXJzZSIsInByb3N0aXR1dGUiLCJzZXgiLCJzZXh3b3JrZXIiLCJzZXgtd29ya2VyIiwiYnJlYXN0IiwiYnJlYXN0cyIsImJvb2IiLCJib29icyIsImJ1dHQiLCJoaXAiLCJoaXBzIiwibmlwcGxlIiwibmlwcGxlcyIsImVyb3RpYyIsImVyb3Rpc20iLCJlcm90aWNpc20iLCJsdW5kIiwiY2hvb3QiLCJjaHV0IiwibG9yYSIsImxvZGEiLCJyYW5kIiwicmFuZGkiLCJ0aGFyYWsiLCJ0aGFyYWtpIiwidGhhcmtpIiwiY2hvZCIsImNob2RuYSIsImNodXRpeWEiLCJjaG9vdGl5YSIsImdhYW5kIiwiZ2FuZCIsImdhbmR1IiwiZ2FhbmR1IiwiaGFyYWFtaSIsImhhcmFtaSIsImNodWRhaSIsImNodWRuYSIsImNodWR0aSIsImJhZGFuIiwiY2hvb2NoaSIsInN0YW4iLCJuYW5naSIsIm5hbmdhIiwibmFuZ2UiLCJwaHVkZGkiLCJmdWRkaSIsImxpZmVrbm90cyIsIjA5ODEwMTEyOTU0IiwiYWJpZGphbiIsInNpZXJyYS1MZW9uZSIsInNlbmVnYWwiLCJzaWVycmEgbGVvbmUiLCJsdWNreSBtYW4iLCJzaXJhIiwibWFkaGFyY2hvZCIsInRoYWJvIiwiZnVja2VkIiwiZnVja2luZyIsInB1YmxpYyBzaXRlIiwiRGFrdSIsInByaXZhdGUgbWFpbCIsInByaXZhdGUgbWFpbGJveCIsInNleHkiLCJqb2JzIHZhY2FuY2llcyIsIm9tbmkgY2l0eSIsImJhc3R1cmQiLCJqZWhhZCIsInRlbmRlcm5lc3MgY2FyZSIsIm1lcmFjYXJlZXJndWlkZS5jb20iLCJtZXJhY2FyZWVyZ3VpZGUiXQ=='));</span>
+&nbsp;
+    var words = <span class="cstat-no" title="statement not covered" >str.split(" ");</span>
+    
+<span class="cstat-no" title="statement not covered" >    for(var wordsCount = 0; wordsCount &lt; words.length; wordsCount++) {</span>
+<span class="cstat-no" title="statement not covered" >        for(var profaneWordsCount = 0; profaneWordsCount &lt; profaneWordsBag.length; profaneWordsCount++) {</span>
+            // if(str.indexOf(profaneWordsBag[profaneWordsCount]) &gt; -1) {
+<span class="cstat-no" title="statement not covered" >            if(words[wordsCount] == profaneWordsBag[profaneWordsCount]) {</span>
+<span class="cstat-no" title="statement not covered" >                return profaneWordsBag[profaneWordsCount];</span>
+            }
+        }
+    }
+<span class="cstat-no" title="statement not covered" >    return false;</span>
+&nbsp;
+}
+&nbsp;
+function <span class="fstat-no" title="function not covered" >checkDisAllowedWord(</span>str){
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if(!str) {</span>
+<span class="cstat-no" title="statement not covered" >        return;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    str = str.replace(/[^\x20-\x7E]/g,'');</span>
+    
+    var disallowdWordsList = <span class="cstat-no" title="statement not covered" >base64_decode("bWVyYWNhcmVlcmd1aWRlfG1lcmFjYXJlZXJndWlkfHJlYWNoQGluZHJhaml0LmlufHd3dy5pbmRyYWppdC5pbnwwOTgxMDIyNTExNA==");</span>
+    
+    var url_pattern     = <span class="cstat-no" title="statement not covered" >new RegExp(disallowdWordsList,"i");</span>
+    var dissallowedWord = <span class="cstat-no" title="statement not covered" >url_pattern.exec(str);</span>
+<span class="cstat-no" title="statement not covered" >    if(dissallowedWord != null){</span>
+<span class="cstat-no" title="statement not covered" >        return dissallowedWord;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    return true;</span>
+&nbsp;
+}
+&nbsp;
+function <span class="fstat-no" title="function not covered" >base64_decode(</span> data ) {
+   
+    var b64 = <span class="cstat-no" title="statement not covered" >"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";</span>
+    var o1, o2, o3, h1, h2, h3, h4, bits, i=<span class="cstat-no" title="statement not covered" >0,</span> enc=<span class="cstat-no" title="statement not covered" >'';</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    do {  // unpack four hexets into three octets using index points in b64</span>
+<span class="cstat-no" title="statement not covered" >        h1 = b64.indexOf(data.charAt(i++));</span>
+<span class="cstat-no" title="statement not covered" >        h2 = b64.indexOf(data.charAt(i++));</span>
+<span class="cstat-no" title="statement not covered" >        h3 = b64.indexOf(data.charAt(i++));</span>
+<span class="cstat-no" title="statement not covered" >        h4 = b64.indexOf(data.charAt(i++));</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        bits = h1&lt;&lt;18 | h2&lt;&lt;12 | h3&lt;&lt;6 | h4;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        o1 = bits&gt;&gt;16 &amp; 0xff;</span>
+<span class="cstat-no" title="statement not covered" >        o2 = bits&gt;&gt;8 &amp; 0xff;</span>
+<span class="cstat-no" title="statement not covered" >        o3 = bits &amp; 0xff;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if (h3 == 64)      <span class="cstat-no" title="statement not covered" >enc += String.fromCharCode(o1);</span></span>
+        else <span class="cstat-no" title="statement not covered" >if (h4 == 64) <span class="cstat-no" title="statement not covered" >enc += String.fromCharCode(o1, o2);</span></span>
+        else               <span class="cstat-no" title="statement not covered" >enc += String.fromCharCode(o1, o2, o3);</span>
+    } while (i &lt; data.length);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return enc;</span>
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >isBlackListedReg(</span>str) {
+<span class="cstat-no" title="statement not covered" >    if(!str) {</span>
+<span class="cstat-no" title="statement not covered" >        return;</span>
+    }
+    var blacklisted    = <span class="cstat-no" title="statement not covered" >false;</span>
+    var strToValidate  = <span class="cstat-no" title="statement not covered" >trim(str);</span>
+    var textBoxContent = <span class="cstat-no" title="statement not covered" >strToValidate.replace(/[(\n)\r\t\"\']/g,' ');</span>
+<span class="cstat-no" title="statement not covered" >    textBoxContent     = strToValidate.replace(/[^\x20-\x7E]/g,'');</span>
+<span class="cstat-no" title="statement not covered" >    textBoxContent.toLowerCase();</span>
+    var blacklistWords = <span class="cstat-no" title="statement not covered" >["advisor", "expert", "Expert", "Advisor", "18002003922"];</span>
+<span class="cstat-no" title="statement not covered" >    for (var i=0; i &lt; blacklistWords.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >        if(textBoxContent.indexOf( blacklistWords[i].toLowerCase() ) &gt;= 0) {</span>
+<span class="cstat-no" title="statement not covered" >            blacklisted = true;</span>
+        }
+    }
+<span class="cstat-no" title="statement not covered" >    if(blacklisted) {</span>
+<span class="cstat-no" title="statement not covered" >        return true;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    return false;</span>
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >validateSpecialChars(</span>str) {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if(!str) {</span>
+<span class="cstat-no" title="statement not covered" >        return;</span>
+    }
+    var strToValidate = <span class="cstat-no" title="statement not covered" >trim(str);</span>
+    var allowedChars  = <span class="cstat-no" title="statement not covered" >/^([A-Za-z0-9\s](,|\.|_|-){0,2})*$/;</span>
+    var result        = <span class="cstat-no" title="statement not covered" >allowedChars.test(strToValidate);</span>
+<span class="cstat-no" title="statement not covered" >    if(result == false) {</span>
+<span class="cstat-no" title="statement not covered" >        return false;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    return true;</span>
+&nbsp;
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >validateMinLength(</span>str, minLength) {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if(!str) {</span>
+<span class="cstat-no" title="statement not covered" >        return;</span>
+    }
+    var strToValidate = <span class="cstat-no" title="statement not covered" >trim(str);</span>
+<span class="cstat-no" title="statement not covered" >    if(strToValidate.length &lt; minLength) {</span>
+<span class="cstat-no" title="statement not covered" >        return false;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    return true;</span>
+    
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >validateMaxLength(</span>str, maxLength) {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if(!str) {</span>
+<span class="cstat-no" title="statement not covered" >        return;</span>
+    }
+    var strToValidate = <span class="cstat-no" title="statement not covered" >trim(str);</span>
+<span class="cstat-no" title="statement not covered" >    if(strToValidate.length &gt; maxLength) {</span>
+<span class="cstat-no" title="statement not covered" >        return false;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    return true;</span>
+&nbsp;
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >validateEmailAddress(</span>email) {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if(!email) {</span>
+<span class="cstat-no" title="statement not covered" >        return;</span>
+    }
+    var filter = <span class="cstat-no" title="statement not covered" >/^((([a-z]|[A-Z]|[0-9]|\-|_)+(\.([a-z]|[A-Z]|[0-9]|\-|_)+)*)@((((([a-z]|[A-Z]|[0-9])([a-z]|[A-Z]|[0-9]|\-){0,61}([a-z]|[A-Z]|[0-9])\.))*([a-z]|[A-Z]|[0-9])([a-z]|[A-Z]|[0-9]|\-){0,61}([a-z]|[A-Z]|[0-9])\.)[\w]{2,4}|(((([0-9]){1,3}\.){3}([0-9]){1,3}))|(\[((([0-9]){1,3}\.){3}([0-9]){1,3})\])))$/</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if(!filter.test(email)) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        return false;</span>
+&nbsp;
+    } else {
+        
+        var domainIndex = <span class="cstat-no" title="statement not covered" >email.indexOf('@')+1;</span>
+        var domain      = <span class="cstat-no" title="statement not covered" >email.substring(domainIndex, email.length);</span>
+<span class="cstat-no" title="statement not covered" >        if(shikshaConfig['invalidEmailDomains'].indexOf(domain.toLowerCase()) != -1) {</span>
+<span class="cstat-no" title="statement not covered" >            return false;</span>
+        }
+&nbsp;
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return true;</span>
+&nbsp;
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >validateMobileNumber(</span>number, isNationalNumber) {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if(!number) {</span>
+<span class="cstat-no" title="statement not covered" >        return;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    if(typeof(isNationalNumber) == 'undefined'){</span>
+<span class="cstat-no" title="statement not covered" >      isNationalNumber = true;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    if(isNationalNumber &amp;&amp; (number.substr(0,1) != 9) &amp;&amp; (number.substr(0,1) != 8) &amp;&amp; (number.substr(0,1) != 7) &amp;&amp; (number.substr(0,1) != 6)) {</span>
+<span class="cstat-no" title="statement not covered" >        return false;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    return true;</span>
+&nbsp;
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >validateMobileLength(</span>number, length) {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if(!number || !length) {</span>
+<span class="cstat-no" title="statement not covered" >        return;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    if(number.length != length) {</span>
+<span class="cstat-no" title="statement not covered" >        return false;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    return true;</span>
+&nbsp;
+}
+&nbsp;
+function <span class="fstat-no" title="function not covered" >trim(</span>str) {
+<span class="cstat-no" title="statement not covered" >    return str.replace(/^\s+|\s+$/g,"");</span>
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Dec 20 2018 18:08:06 GMT+0530 (IST)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+.account-setting-detail{margin:15px 0; width:100%; float:left; padding-bottom:5px; border-bottom:1px solid #ccc;}
+.account-setting-info-title{font-size:30px; color:#4d4d4d;}
+.account-detail-widget{width:100%; float:left; margin:10px 0 0;}
+.account-detail-wideget-head{background:#cccccc; color:#333; font-size:14px; font-weight:bold; padding:10px;}
+.account-setting-detail ul{width:100%; float:left; margin:10px 0; padding:0 9px;}
+.account-setting-detail ul li{margin-bottom:15px; float:left; width:100%;}
+.account-setting-fields{width:43%;}
+.account-setting-fields label{font-size:12px;margin-bottom:4px; display:block;}
+.account-setting-fields .universal-text, .account-setting-fields .universal-select{padding:6px; font-size:12px; color:#666;}
+.edu-detail-fields{padding:0;}
+.edu-detail-fields ul{background:#f8f8f8; padding:10px;}
+.setting-child-wrap{padding:8px 8px 8px 10px;}
+.setting-child-wrap .columns{vertical-align:middle; width:85px; float:left;}
+.setting-child-wrap .columns p{margin-left:20px; font-size:9px; color:#666666}
+.setting-child-wrap .columns p strong{font-size:14px; font-weight:normal; color:#333}
+.accnt-setting-mail-info{margin-bottom:6px;}
+.setting-edit-link{font-size:11px;}
+.accnt-setting-exam-col{margin:10px 0 0;}
+.remove-icon-2{background:#c8c8c8; -moz-border-radius:50%; -webkit-border-radius:50%; border-radius:50%; padding:8px; width:10px; height:10px; float:left; margin-left:5px; margin-top:5px;}
+.remove-icon-2 a{text-decoration:none !important;color:#666 !important;font-size:13px; position:relative; right:6px; line-height:0; top:-1px;font-weight:bold;}
+.add-another-link{display:block; margin-top:5px;font-size:11px;}
+
+/*For the RMC Homepage*/
+.rate-my-chance-form{width:744px; margin: 0 auto;}
+.rate-my-chance-form-head{color:#fff; font-weight:bold; font-size:14px; padding:13px 45px; background: #868686;}
+.rate-my-chance-form .form-wrap{border:1px solid #eee; margin-bottom:25px; margin-top:0;}
+.preferred-title{font-weight:bold; color:#666; font-size:12px; margin-bottom:4px;}
+.save-change-btn{background:#f1a536; color:#fff !important; font-size:18px !important; font-weight:bold; padding:10px 15px; -moz-border-radius:2px; -webkit-border-radius:2px; border-radius:2px; text-decoration:none !important; margin-bottom:30px; display:inline-block;}
+/* RMC Thank you Page */
+.shiksha-apply-box{border:1px solid #eee;}
+.apply-sprite{background:url(../images/abroad-shiksha-apply.png) no-repeat; display:inline-block;}
+.shiksha-apply-section{padding:15px 20px; color:#666; font-size:14px; line-height:22px;}
+.submitted-head{font-size:18px;margin-bottom:8px;}
+.apply-submitted-icon{background-position:0 0; width:22px; height:22px; float:left; margin-right:10px;}
+.interested-college-apply-sec{background:#f8f8f8; padding:25px 20px 10px; height:302px; color:#666; line-height:36px; position:relative;}
+.interested-college-apply-sec p{margin-bottom:8px;}
+.interested-apply-title{font-size:26px; margin-bottom:15px !important;}
+.font-19{font-size:19px;}
+ul.college-profile-info-list{font-size:16px; width:100%; float:left;}
+ul.college-profile-info-list li{width:100%; float:left; margin-bottom:10px;}
+.clg-profile-icon{background-position:-29px 0; width:31px; height:25px; margin-right:10px; vertical-align:middle;}
+.visa-assistance-icon{background-position:-67px 0; width:26px; height:29px; margin-right:10px; vertical-align:middle;}
+.score-details{font-size:14px; line-height:20px; margin-bottom:30px;}
+.apply-abroad-image{background:url(../images/apply-abroad-image.jpg) no-repeat; position:absolute; bottom:0; right:20px; width:204px; height:295px;}

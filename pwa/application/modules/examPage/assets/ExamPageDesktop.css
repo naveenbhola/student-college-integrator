@@ -1,0 +1,55 @@
+.pwa_examwraper{padding: 4px 0px 0px;}
+.pwa_examwraper:before, .pwa_examwraper:after{content: '';display: table;}
+.pwa_examwraper:after{clear: both;}
+.expnd-switch{cursor: pointer;}
+.pwa_examwraper .toc-block{margin-top: 0px;}
+.pwa_breadcumbs{margin-bottom: 6px;}
+/*body::-webkit-scrollbar{display: inherit;}
+body::-webkit-scrollbar-thumb {
+    background: initial; 
+}*/
+.rhs-dfp-fix{position: fixed;top:5px;width: 336px;}
+/*fetured institute widget redesign css | need to remove after dfp live*/
+#pwa_rightCol ul.ftrSlder{padding:0px 0px;}
+#pwa_rightCol .coursepage_sldrC{padding: 0px;height: auto;}
+#pwa_rightCol ul.ftrSlder:after{content:"";display: block;clear: both;}
+#pwa_rightCol ul.ftrSlder li{display:block;list-style-type: none; height:auto; width: 100%;box-shadow:none; border-radius: 0px;margin: 0px; float: none;overflow: hidden;    border: 0px;   border-bottom: 1px solid #d2d2d2;}
+#pwa_rightCol ul.ftrSlder li:last-child{border-bottom: none;}
+#pwa_rightCol ul.ftrSlder li div.vwd-clg{display: none;}
+#pwa_rightCol ul.ftrSlder li div.vwd-clgInfo{padding: 12px;background: #fff;width:100%;}
+#pwa_rightCol ul.ftrSlder li div p{font-size: 0.875rem; font-weight: 600; color: #000; height: auto;    margin: 0px 0px 3px 0px; white-space: nowrap;text-overflow: ellipsis;display: inherit;}
+#pwa_rightCol ul.ftrSlder li div span{font-size: 0.75rem;color: #2A2A2A;line-height: 12px;height:auto;}
+#pwa_rightCol ul.ftrSlder li:last-child{margin-right: 0px;}
+#pwa_rightCol ul.ftrSlder {min-width: inherit;}
+#pwa_rightCol a.btnYellow{max-width: 150px;margin-top: 8px;}
+.eaply-disabled{background: none repeat scroll 0 0 #d6d7d7 !important;color: #666!important;cursor: not-allowed;border: 1px solid #d6d7d7;pointer-events: none;}
+#examPageHeader.sticky{background:#fff;left:0px;right:0px;position: fixed;top: 0px;box-shadow:0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);z-index: 11;transition: transform .25s ease-out;transform: translateY(100%);}
+#examPageHeader.sticky .nav-col.nav-bar,#examPageHeader.sticky section{
+	margin-bottom: 0px;
+}
+#examPageHeader.sticky .event_status,
+#examPageHeader.sticky .discuss-block,
+#examPageHeader.sticky .admit-sctn, 
+#examPageHeader.sticky .last-date{
+	display: none;
+}
+#examPageHeader.sticky .pwa_banner{
+	max-width:1170px;margin: 0 auto;
+}
+#examPageHeader.sticky section,#examPageHeader.sticky .nav-col.nav-bar,#examPageHeader.sticky .chp-nav{
+	box-shadow: none;
+}
+#examPageHeader.sticky ul.l2Menu-list li{
+	border: none;
+}
+#examPageHeader.sticky .chp-nav{
+	border-top: 1px solid #d2d2d2;
+}
+#examPageHeader.sticky .rwd-col{vertical-align: top;}
+.shareWidgetDesk {
+    margin-bottom: 8px;
+}
+.shareWidgetDesk .sharing-band-list{
+    justify-content: left;
+}
+/*end*/

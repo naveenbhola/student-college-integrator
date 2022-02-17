@@ -1,0 +1,27 @@
+#iTutor-content{margin:20px 10px 10px 10px; font:normal 12px Arial, Helvetica, sans-serif; color:#3e3a3a}
+.iTutor-left{width:670px; float:left;}
+.iTutor-right{width:270px; float:right;}
+.tutor-header{clear:both; margin-bottom:30px;}
+.tutor-header h1{font:normal 20px Arial, Helvetica, sans-serif; color:#1b1919; margin-bottom:10px;}
+.tutor-header h1 span{color:#f00000}
+.tutor-header p{line-height:17px}
+h2.tutor-title{font:normal 18px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#292c2c; border-bottom:1px solid #efefef; margin-bottom:15px; padding-bottom:2px}
+h2.tutor-title strong{font-size:22px; font-weight:normal}
+.vid-cont{width:429px; height:298px; background:url(../images/vid-back.jpg) 0 0 no-repeat; padding:15px 0 0 15px; float:left}
+.vid-thumbs{float:right; width:220px;}
+.vid-thumbs h4{font-size:15px; font-weight:normal; margin-bottom:10px}
+.vid-thumbs ul li{width:92px; height:92px; padding:7px;}
+.vid-thumbs ul li.active{background:#edebec}
+#video-section,#feature-section,#benefit-section{clear:both; margin-bottom:20px; width:100%; float:left}
+.feature-details{width:315px; float:left; padding-top:10px}
+.feature-details ul li, #benefit-section ul li{margin:0 0 12px 18px; list-style-type:disc; color:#767676; font-size:12px}
+#benefit-section ul li{margin:0 0 15px 18px; line-height:17px}
+.feature-details ul li p, #benefit-section ul li p{color:#000; font-size:14px}
+.feature-pic{float:left; width:324px;}
+#benefit-section ul li p{font-size:12px}
+.mTop-30{margin-top:30px}
+.akash-tutor-logo{text-align:right; margin-bottom:35px}
+.akash-widget{margin-bottom:30px}
+.vid-icn,.feature-icn,.benefit-icn{background:url(../images/itutor-sprite.gif) 0 0 no-repeat; width:31px; height:32px; display:inline-block; margin-right:10px; vertical-align:middle}
+.feature-icn{background-position:0 -46px; width:24px; height:30px;}
+.benefit-icn{background-position:0 -88px; width:19px; height:31px;}

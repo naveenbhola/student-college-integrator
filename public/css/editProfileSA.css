@@ -1,0 +1,121 @@
+#main-wrapper {
+    box-shadow: none;
+    width: 100%;
+}
+
+.edit_header {
+    color: #333;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 16px 15px 0;
+    text-align: left;
+    width: 562px;
+    margin: 0 auto;
+}
+.exams_split{
+    width: 170px;
+ }
+
+.fix_down {
+    text-align: center;
+    position: relative;
+    margin: 0 10px;
+}
+
+.fix_down a {
+    margin-right: 10px;
+    width: 130px;
+    color: #fff;
+}
+
+.fix_down a:last-child {
+    float: none;
+    margin-right: 0;
+}
+
+.edit_box {
+    width: 587px;
+    margin: 0 auto;
+    padding: 0px 10px;
+}
+
+.fluid_label .sprite {
+    background: url(/public/images/abroad-common-sprite8.png);
+    /* display: inline-block;
+    font-style: none;
+    vertical-align: middle;
+    position: relative */
+}
+.customInputs label p{margin:0 0 0 25px}
+.customInputs input[type="checkbox"]+label span, .customInputs input[type="checkbox"]:checked+label span{
+   width: 18px;
+   height: 17px;
+}
+
+#countryDropdownLayer .sprite {
+    background: url(/public/mobileSA/images/mbl-sprt6.png) no-repeat;
+    /* background-color: rgba(0, 0, 0, 0);
+    background-position-x: 0%;
+    background-position-y: 0%;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle; */
+}
+
+#countryDropdownLayer input[type="checkbox"]:checked+label span {
+    background-position: -18px -96px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#countryDropdownLayer input[type="checkbox"]+label span {
+    background-position: 0px -96px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.flLt.planning-col input[type="radio"]+label span {
+    background-position: -87px -148px;
+    background-color: rgba(0, 0, 0, 0);
+    height: 13px;
+    margin: 0;
+    width: 13px;
+}
+
+.flLt.planning-col input[type="radio"]:checked+label span {
+    background-position: -102px -148px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.flLt.planning-col input[type=checkbox]+label span {
+    background-position: -116px -148px;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    display: block;
+    margin: 0;
+    vertical-align: middle;
+    width: 16px;
+    height: 14px;
+    float: left;
+}
+
+.flLt.planning-col input[type=checkbox]:checked+label span {
+    background-position: -133px -148px;
+    background-color: rgba(0, 0, 0, 0);
+}
+.flLt.planning-col input[type=radio]+label {
+    width: 154px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.Personal_info, .next_info {
+    padding: 18px 0px 10px;
+    margin: 0 10px;
+}
+
+.next_info {
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+}
+textarea.universal-text{
+    width: 100%;
+    resize: none;
+}

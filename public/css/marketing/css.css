@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'RobotoSlab';
+  src: url(../fonts/RobotoSlab-Bold_0.woff);
+}
+
+@font-face {
+  font-family: 'RobotoSlab Regular';
+  src: url(../fonts/RobotoSlab-Regular.woff);
+}
+@font-face {
+  font-family: 'RobotoSlab Thin';
+  src: url(../fonts/RobotoSlab-Thin_0.woff);
+}@font-face {
+  font-family: 'Alstom Medium';
+  src: url(../fonts/Alstom-Medium.woff);
+  
+}

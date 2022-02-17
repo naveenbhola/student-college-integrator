@@ -1,0 +1,24 @@
+
+/*Expert guidance CSS starts*/
+ section.expBnr ._container{padding: 0;width: 100%;margin: 0 auto;}
+ section.expBnr { margin-bottom: 12px; box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);}
+ ._ask {padding: 0px 0px 16px;background: #fff}
+ ._ask .LUpdate, ._ask .exDta {font-size: 0.75rem}
+ ._ask .exDta { margin: 10px 0 0}
+ ._ask .exDta li.table-cell { width: 33%;}
+ ._ask p { padding: 0px 10px;font-size: 0.75rem; color: #000;line-height: 1.125rem;}
+/* ._ask strong { margin-bottom: 2px}*/
+ ._ask span, ._ask strong {display: block;line-height: 1.125rem; color: #000; }
+ ._ask i { display: inline-block; width: 35px; height: 35px; position: relative; top: 4px;}
+ ._ask h3 {padding: 9px 10px 2px;margin: 0px;}
+ .table-cell, .tbSec>ul>li {text-align: center; vertical-align: middle;}
+ ._ask i.Quick { background-position: -75px -102px;}
+ ._ask i.Reliable {background-position: -42px -97px}
+ ._ask i.Experts { background-position: -4px -103px}
+ ._ask i{background: url(https://images.shiksha.ws/public_images/images/mhome-icons-sprite_4.svg) no-repeat;}
+ .table-cell {display: table-cell}
+ .AskBtn {text-decoration: none; display: inline-block;-webkit-tap-highlight-color: transparent;}
+ .AskBtn::-webkit-selection {background: none;}
+ .button-container { text-align: center; padding: 16px 0 0; line-height: 13px;}
+ .table {display: table; width: 100%}
+/*Expert guidance CSS ends*/

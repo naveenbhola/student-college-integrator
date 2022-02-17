@@ -1,0 +1,71 @@
+/*::-webkit-scrollbar{display: none}
+*/
+.ctp_container a{color: #008489; text-decoration: none}
+.ctp-srcIcn{background-position: -256px -45px;}
+.ctp-filter-head{font-size: 0.75rem; color: #000;line-height: 18px;}
+.ctp-filter-head div.fltr-contnt{background: #fff;padding: 10px;border-bottom: 1px solid #d2d2d2;}
+.ctp-filter-head h1{display: block;margin:0 0 3px;}
+.ctp-filter-head p span{font-weight: 600;}
+.fnt-w4{font-weight: 400;}
+.fnt-w6{font-weight: 600;}
+.fnt-w7{font-weight: 700;}
+/*h1.ctp-headng{font-size: 0.875rem; color: #000;font-weight: 600;padding: 10px;}*/
+.ctpRecoLinks{padding:10px;}
+.ctpRecoLinks h2.ctp-Rcohdng{font-size: 0.8125rem; margin-bottom: 0; color: #000; font-weight: 600;}
+.ctpRecoLinks .rctp-RcoLinks{margin-left: 10px;}
+.ctpRecoLinks .rctp-RcoLinks ul{margin: 10px 0 0 10px;}
+.ctpRecoLinks .rctp-RcoLinks ul li{ list-style-type: disc; line-height: 16px; margin-bottom: 10px; color: #999;}
+.ctpRecoLinks .rctp-RcoLinks ul li a{font-size: 0.75rem;color: #008489;}
+.ranking_link {
+    position: relative;
+    font-size: 0.875rem;
+    color: #008489;
+    display: inline-block;
+    margin-top: 2px;
+    font-weight: 400;
+}
+.ranking_link img {
+    position: relative;
+    top: 3px;
+    margin-right: 5px;
+}
+p.resultTxt {
+    font-size: 0.75rem;
+    color: #999;
+    margin: 10px 0px;
+}
+
+p.zrp-clgs {
+    color: #000;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+.strikeThrough {
+    text-decoration: line-through;
+}
+.srpNavBar{margin-top:10px;}
+.breadcumb_col {
+    background: #fff;
+}
+
+.breadcumb_col .breadcrumb_v1 {
+    margin: 0px 0px;
+    padding: 9px 12px 3px;
+}
+.ctp .wrapperAround {margin-top: 0px;}
+.shareWidgetCTP .sharing-band-list{
+    justify-content: left;
+}
+.shareWidgetCTPBtm{
+    margin: 0px 10px;
+    padding: 6px 0px;
+    border-top: 1px solid #d2d2d2;
+    border-bottom: 1px solid #d2d2d2;
+}
+.shareWidgetCTP {
+    margin-top: 5px;
+}
+.BHST_parent{max-height: 10.5rem;overflow: hidden;}
+.BHST_read_more{display: none;cursor: pointer}
+.BHST_parent ul{margin-left: 21px;list-style-type: disc;}
+.BHST_parent ol{margin-left: 21px;}

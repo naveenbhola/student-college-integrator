@@ -1,0 +1,83 @@
+<div class="page-title">
+    <div class="clearfix"></div>
+
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>Category Pages
+                        <small>List all category page URLs</small>
+                    </h2>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_title row">
+                    <div class="col-sm-6 col-md-6 col-xs-12">
+                        <button class="btn btn-primary" type="button" (click)="newCategoryPage()">Add New
+                            Category Page
+                        </button>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-xs-12">
+                        <div class="row full-width" id="datatable_filter">
+                            <div class="col-sm-6 col-md-2 col-xs-12 text-left">Search:</div>
+                            <div class="col-sm-6 col-md-10 col-xs-12"><input type="search" [(ngModel)]="categorySeoQuery"
+                                                                             class="form-control input-sm" aria-controls="datatable" /></div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="x_content overflow_auto">
+                    <div id="datatable_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <table id="datatable"
+                                       class="table table-striped table-bordered jambo_table dataTable no-footer"
+                                       role="grid" aria-describedby="datatable_info">
+                                    <thead>
+                                    <tr role="row">
+                                        <th style="width: 100px;">Stream / Course</th>
+                                        <th style="width: 145px;">Sub-stream</th>
+                                        <th style="width: 100px;">Credential</th>
+                                        <th style="width: 80px;">Education Type</th>
+                                        <th style="width: 50px;">Delivery Method</th>
+                                        <th style="width: 20px;">Base Courses</th>
+                                        <th style="width: 20px;">Specialization</th>
+                                        <th style="width: 20px;">Location</th>
+                                        <th style="width: 20px;">Exam</th>
+                                        <th >URL</th>
+                                        <th >Breadcrumb</th>
+                                        <th >Order</th>
+                                    </tr>
+                                    </thead>
+
+
+                                    <tbody>
+                                    <tr *ngFor="let categoryURL of categoryURLData|arraysearch:categorySeoQuery:'streamName,popularCourseName,substreamName,credentialName,popularCourseName,deliveryMethodName,educationTypeName'"
+                                        role="row" class="odd">
+                                        <td>{{ ( (categoryURL.stream == 'any' ? 'Any' : categoryURL.streamName) || (categoryURL.popular_course == 'any' ? 'Any' : categoryURL.popularCourseName) ) }}</td>
+                                        <td>{{categoryURL.substream == null ? 'None' : ( categoryURL.substream == 'any' ? 'Any' : (categoryURL.substreamName != '' ? categoryURL.substreamName : categoryURL.substream ) ) }}</td>
+                                        <td>{{categoryURL.credential == null ? 'None' : ( categoryURL.credential == 'any' ? 'Any' : (categoryURL.credentialName != '' ? categoryURL.credentialName : categoryURL.credential )  )}}</td>
+                                        <td>{{categoryURL.education_type == null ? 'None' : ( categoryURL.education_type == 'any' ? 'Any' : ( categoryURL.educationTypeName != '' ? categoryURL.educationTypeName: categoryURL.education_type) ) }}</td>
+                                        <td>{{categoryURL.delivery_method == null ? 'None' : ( categoryURL.delivery_method == 'any' ? 'Any' : ( categoryURL.deliveryMethodName != '' ? categoryURL.deliveryMethodName : categoryURL.delivery_method ) ) }}</td>
+                                        <td>{{categoryURL.non_popular_course == '1' ?'Any' : 'None'}}</td>
+                                        <td>{{categoryURL.specialization == '1' ? 'Any' : 'None'}}</td>
+                                        <td>{{categoryURL.location == '1' ? 'Any' : 'None'}}</td>
+                                        <td>{{categoryURL.exam == '1' ? 'Any' : 'None'}}</td>
+                                        <td>{{categoryURL.url}}</td>
+                                        <td>{{categoryURL.breadcrumb}}</td>
+                                        <td>{{categoryURL.priority}}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+

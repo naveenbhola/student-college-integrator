@@ -1,0 +1,18 @@
+.jcarousel-skin-tango .jcarousel-container, .jcarousel-skin-tango2 .jcarousel-container {}
+.jcarousel-skin-tango .jcarousel-direction-rtl, .jcarousel-skin-tango2 .jcarousel-direction-rtl {direction: rtl;}
+.jcarousel-skin-tango .jcarousel-container-horizontal{width: 240px; padding: 0px 40px;}
+.jcarousel-skin-tango2 .jcarousel-container-horizontal{width: 333px; margin:10px 8px 30px; border-bottom:1px solid #dddcdc; padding-bottom:10px;}
+.jcarousel-skin-tango .jcarousel-clip,.jcarousel-skin-tango2 .jcarousel-clip {overflow: hidden;}
+.jcarousel-skin-tango .jcarousel-clip-horizontal {width:  215px; height: 56px;}
+.jcarousel-skin-tango2 .jcarousel-clip-horizontal {width:  333px; height:115px;text-align: justify;}
+/*.jcarousel-skin-tango .jcarousel-item {width: 54px; height: 54px;}*/
+.jcarousel-skin-tango2 .jcarousel-item {width: 333px;/*height:107px;*/padding-bottom:18px; line-height:14px}
+.jcarousel-skin-tango .jcarousel-item-horizontal, .jcarousel-skin-tango2 .jcarousel-item-horizontal {margin-left: 0; margin-right: 10px;}
+.jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-item-horizontal, .jcarousel-skin-tango2 .jcarousel-direction-rtl .jcarousel-item-horizontal {margin-left: 10px;
+margin-right: 0;}
+.jcarousel-skin-tango .jcarousel-item-placeholder, .jcarousel-skin-tango2 .jcarousel-item-placeholder {background: #fff; color: #000;}
+.jcarousel-skin-tango .jcarousel-next-horizontal {position: absolute;top: 9px;right: 30px;cursor: pointer;width:28px; height:27px;background:url(../images/sprite_img.gif) -121px -116px no-repeat;}
+.jcarousel-skin-tango2 .jcarousel-next-horizontal {position: absolute; top: 131px;right: 11px;cursor: pointer;width:16px; height:17px; overflow:hidden;	background:url(../images/sprite_img.gif) -113px -89px no-repeat;}
+.jcarousel-skin-tango .jcarousel-prev-horizontal {position: absolute; top: 9px; left: 5px; cursor: pointer;background:url(../images/sprite_img.gif) -83px -116px no-repeat;width:28px; height:27px; float:left;}
+.jcarousel-skin-tango2 .jcarousel-prev-horizontal {position: absolute; top: 131px; right: 22px; cursor: pointer;width:16px; height:17px; overflow:hidden;	background:url(../images/sprite_img.gif) -139px -89px no-repeat;}
+.jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-prev-horizontal, .jcarousel-skin-tango2 .jcarousel-direction-rtl .jcarousel-prev-horizontal {left: auto; right: 5px; background-image: url(../images/next-horizontal.png);}

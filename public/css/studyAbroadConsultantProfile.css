@@ -1,0 +1,128 @@
+.establishd-year{font-size:11px; color:#666;}
+.consultant-sprite{background:url(../images/consultant-profile-sprite.png); display:inline-block; position:relative; vertical-align:middle;}
+.shiksha-verified-info{font-size:11px; color:#666;position:relative; top:-4px;}
+.verified-icon{background-position:0 -43px; width:16px; height:16px; margin-right:5px;}
+.que-mark{background:#d8d8d8; width:15px; height:15px; color:#fff; -moz-border-radius:50%; -webkit-border-radius:50%; border-radius:50%; text-align:center;  display:inline-block; line-height:15px;}
+.cons-overview-icon, .cons-college-rep-icon, .cons-countries-rep-icon,.cons-services-offered-icon, .cons-student-icon{vertical-align:bottom; height:17px; width:17px;float:left; display:block}
+.consultant-menu-title{display:block; margin-left:20px;}
+.cons-overview-icon{background-position:0 -22px;}
+#course-tab{width:105px; float:left; border:1px solid #cccccc; background:#f8f8f8; height:448px;}
+#course-tab li a.active .cons-overview-icon, #course-tab li a:hover .cons-overview-icon{background-position:0 0;}
+.cons-college-rep-icon{background-position:-18px -22px; top:2px;}
+#course-tab li a.active .cons-college-rep-icon, #course-tab li a:hover .cons-college-rep-icon{background-position:-18px 0px;}
+.cons-countries-rep-icon{background-position:-35px -22px; top:2px}
+#course-tab li a.active .cons-countries-rep-icon, #course-tab li a:hover .cons-countries-rep-icon{background-position:-35px 0;}
+.cons-services-offered-icon{background-position:-54px -22px; top:4px;}
+#course-tab li a.active .cons-services-offered-icon, #course-tab li a:hover .cons-services-offered-icon{background-position:-54px 0px;}
+.cons-student-icon{background-position:-72px -22px; top:1px}
+#course-tab li a.active .cons-student-icon, #course-tab li a:hover .cons-student-icon{background-position:-72px 0px;}
+.pos-tab{top:19px;}
+.represented-title{color:#333; font-size:13px; font-weight:bold; margin-bottom:8px;}
+.represented-title span{vertical-align:middle;}
+ul.rep-list{width:100%;}
+ul.rep-list li{width:100%; float:left; margin:5px 0;}
+.college-rep-sml-icon{background-position:-18px -43px; width:20px; height:16px; margin-right:5px;}
+.country-rep-sml-icon{background-position:-40px -43px; width:17px; height:17px;margin-right:5px;}
+.college-rep-sec{border:1px solid #eee; border-radius:3px; width:100%; display:table; /*padding:10px;*/}
+.college-info-box{display:table-cell; color:#666; line-height:15px; vertical-align:middle; padding:10px;}
+.college-info-box span{color:#999;}
+.brdr-left{border-left:1px solid #f8f8f8;}
+.more-univ-tag{display:inline-block; margin-left:15px;}
+.more-blue-arrw{background-position:-102px -22px; width:6px; height:13px; margin-left:10px; vertical-align:middle;}
+.college-flag-criteria ul{width:100%; float: left;}
+.college-flag-criteria ul li{margin:0; float:left; width:50%;}
+.college-flag-criteria ul li span{margin-left:58px; vertical-align:middle; padding-top:6px; font-weight:bold; font-size:11px; display: block; line-height: 13px;}
+.student-sml-icon{background-position:-73px -43px; width:17px; height:19px; margin-right:5px;}
+.student-details-box{}
+.student-details-box-slider{-moz-border-radius:2px; -webkit-border-radius:2px; border-radius:2px; border-left:1px solid #eee;border-right:0px solid #eee;border-left:0px solid #eee; width:458px; position:relative; margin-bottom:5px; overflow: hidden;}
+.student-details-box ul{float: left;width: 460px; height:120px;}
+.student-details-box ul li{width: 10000px; position: relative;height:106px; border-bottom: 2px solid #eee; border-top:1px solid #eee;}
+.stu-prev-box, .stu-next-box{width:12px; margin:42px 5px 0 0;}
+.stu-next-box{margin:42px 0 0 5px;}
+.con-prev-icon, .con-next-icon, .con-prev-icon-a, .con-next-icon-a{background-position:-13px -64px; width:11px ; height:22px; cursor:pointer;}
+.con-next-icon{background-position:-26px -64px;}
+.con-prev-icon-a{background-position:-39px -64px;}
+.con-next-icon-a{background-position:-52px -64px;}
+.stu-detail-box{width:90%; margin:0 10px; line-height:16px;}
+.stu-detail-col{width:48%; color:#666; font-size:12px; float:left}
+.student-profile{padding:10px 15px; width:228px;float:left; line-height:17px; position:relative; font-size:12px; height:106px; border-left:1px solid #eee; border-right:1px solid #eee; cursor: pointer;}
+.student-profile.active{border:1px solid #9cc5ff; background:#f1f1f1; -moz-box-shadow:2px 2px 3px #eee; -webkit-box-shadow:2px 2px 3px #eee; box-shadow:2px 2px 3px #eee;}
+.slide-count{font-style:italic; font-size:11px; text-align:right}
+.active-pointer{display:none;}
+.student-profile strong{color: #0065de;}
+.student-profile.active strong{color: #666;}
+.student-profile strong{color: #0065de;}
+.student-profile.active strong{color: #666;}
+.student-profile.active .active-pointer{background-position:-73px -43px; width:16px; height:15px; display:block; position:absolute;bottom:-15px; left:18px;}
+.consultant-right-col{width:290px;border:1px solid #eaeaea;}
+.consultant-widget{border:3px solid #eee; padding:5px; color:#666; font-size:12px; }
+.consultant-widget strong{font-size:14px; color:#333; margin-left:3px; display:block; padding-top:4px;}
+.college-logo-sec{padding:10px;}
+.branch-detail-sec{width:100%; margin:5px 0;}
+.branch-info{border:1px solid #eaeaea; width:100%; margin-bottom:8px;}
+.cons-branch-icon{background-position:0 -86px; width:44px; height:28px;vertical-align:middle; float:left}
+.branch-title{background:#eef5ff; padding:7px; color:#333 !important; font-size:12px; width:100%; display:block; text-decoration:none !important; outline: none !important;}
+.branch-dwn-icon, .branch-side-icon{background-position:-88px 0; width:10px; height:10px; margin-right:6px;}
+.branch-side-icon{background-position:-100px 0; }
+.branch-content-sec{padding:4px 8px;}
+.branch-contact-row{border-bottom:1px solid #eee; padding:5px 0 10px;}
+.branch-contact-row p{margin:2px 0;}
+.place-name{margin:0 !important; display:block;}
+.location-icon{background-position:-89px -22px; width:10px; height:15px; margin-right:5px; vertical-align:middle;}
+.get-direction-btn{padding:5px 10px; border:1px solid #ccc; color:#666 !important; text-decoration:none !important; display:inline-block; margin:8px 0 0;}
+.last-branch-item{margin:0;}
+.consultant-contact-icon{background-position:-58px -43px; width:14px; height:17px; vertical-align:middle; margin-right:5px;}
+.visit-web-icon{background-position:-65px -64px; width:17px; height:17px; margin-right:5px;}
+ul.college-list{width:100%; margin:10px 0;}
+ul.college-list li{border:1px solid #f8f8f8; padding:12px; width:100%; float:left}
+.college-figure{width:137px; height:43px; float:left;}
+.detail-sec{margin-left:200px; color:#666; font-size:11px;}
+.college-country{font-size:11px; color:#999;}
+.more-button{background:#f8f8f8; padding:5px; border:1px solid #eee; display:inline-block; float:right; text-decoration:none !important}
+.student-info-col{float:left; width:100%; padding:5px 10px; font-size:12px;}
+ul.consultant-country-list{width:100%; float:left;border:1px solid #eee;}
+ul.consultant-country-list li{float:left; padding:5px;border-bottom:1px solid #eee; width:100%;}
+.country-sec{float:left; color:#666; font-weight:bold;}
+.country-sec strong, .detail-sec strong{font-size:12px; color:#999 !important;}
+.country-sec span{margin-left:60px; display:block;}
+.consultant-subtitle{font-size:12px; color:#333; margin:4px 0; font-weight:bold;}
+ul.paid-services-list{color:#666; margin-left:15px;}
+ul.paid-services-list li{margin-bottom:3px; list-style:disc; font-size:12px;}
+.student-profile-detail-list{width:100%;font-size:11px; color:#666;}
+.student-profile-detail-list2{width:100%; font-size:11px; color:#666}
+.student-profile-detail-list tr td{}
+.student-profile-detail-list tr td.profile-title{padding:5px;border-right:1px solid #aaa;}
+.student-profile-detail-list2 tr td{padding:5px; border-right:1px solid #aaa;}
+.year-info{color:#999;}
+.seperator{border-top:1px solid #ddd; margin:8px 0;}
+.student-profile-detail-list2 tr td.noBorder{border-right:none;}
+.show-more-box{background:#f8f8f8; color:#666; font-size:12px; border:1px solid #eee; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px; padding:5px; position:relative; margin:10px 0 0;}
+.show-more-pointer{background-position:-84px -64px; width:14px; height:12px; position:absolute; top:-12px; left:10px;}
+.consultant-info-title{background:#f8f8f8; vertical-align:middle; text-align:center; border-right:1px solid #eee; background:#f8f8f8; width:100px; color:#333;}
+.college-flag-criteria{padding:10px; width:100%; float:left}
+
+
+
+.student-profile-detail-list li{padding:5px 0; color:#999; font-size:11px; line-height:16px;}
+.student-profile-detail-list li strong{color:#666;}
+.profile-criteria{display:table;}
+.profile-col{display:table-cell; padding:2px 8px; width:150px; border-right:1px solid #ccc;}
+
+.font-13{font-size:13px !important;}
+.profile-note{font-style:italic; font-size:11px; color:#666; line-height:13px;}
+.verified-icon{background-position:-92px -43px; width:15px; height:19px;}
+
+
+
+
+
+/*Scrollbar CSS */
+.cons-scrollbar1 .overview{position: absolute0;}
+.cons-scrollbar1 .cons-scrollbar{float:right; position:relative;}
+.cons-scrollbar1 .track{width:6px;background:#ebebeb;}
+.cons-scrollbar1 .thumb{background:#dbdbdb; width:13px; height:40px;position:absolute; left:-3px; cursor:pointer;}
+.cons-scrollbar1 .viewport{position:relative; overflow:hidden;}
+
+.cons-scrollbar1 .disable{display: none;}
+.flags{background:url(../images/flags-sprite5.png) no-repeat; display:inline-block;font-style:none; width:53px; height:35px}
+.dyanamic-content.marginLft{margin-left:7px !important;}

@@ -1,0 +1,88 @@
+<div class="row" id="course_importantdates_form" [formGroup]="importantDatesForm">
+	<div mysize="12">
+		<div class="x_panel" *ngIf="initialized">
+			<div [class.x_title]="opened">
+				<ul class="nav navbar-left panel_toolbox">
+					<li><a class="collapse-link" (click)="toggle()"><i [class]="opened?' fa fa-chevron-up':' fa fa-chevron-down'"></i></a></li>
+				</ul>
+				<h2> Important Dates <img class="helperText" id="important_dates" src="/public/images/tooltip.png" width="20px" style="padding-right:0px" (click)="toolTipNotify('important_dates',$event)"></h2>
+				<div class="clearfix"></div>
+			</div>
+			<div class="x_content"  [hidden]="!opened">
+				<div class="row" formArrayName="events">
+					<div *ngFor="let event of importantDatesForm.controls['events'].controls;let i = index;">
+						<div [formGroupName]="i">
+							<div *ngIf="event.value['start']">
+								<div class="form-group" formGroupName="start">
+									<div mysize="3">
+										<label *ngIf="event.controls['start'].controls['type'].value == 'start'">{{event.controls['start'].controls['label'].value}}</label>
+										<input *ngIf="event.controls['start'].controls['type'].value == 'others'" placeholder="Enter Event Name" type="text" value="" formControlName="label" [class.error]="event.controls['start']?.errors?.validateOneOrNoneFormGroup?.label || event.controls['start'].controls['label']?.errors?.maxlength">
+										<span class="help-block text-danger">
+											<span *ngIf="event.controls['start']?.errors?.validateOneOrNoneFormGroup?.label">Event Name cannot be empty</span>
+											<span *ngIf="event.controls['start'].controls['label']?.errors?.maxlength">{{event.controls['start'].controls['label']?.errors?.maxlength}}</span>
+										</span>
+									</div>
+									<div mysize="8">
+										<div mysize="3">
+											<select formControlName="date">
+												<option value="">Date (Optional)</option>
+												<option *ngFor="let date of dates" value="{{date}}">{{date}}</option>
+											</select>
+										</div>
+										<div mysize="3">
+											<select formControlName="month" [class.error]="event.controls['start']?.errors?.validateOneOrNoneFormGroup?.month">
+												<option value="">Month</option>
+												<option *ngFor="let month of months" value="{{month.value}}">{{month.label}}</option>
+											</select>
+											<span class="help-block text-danger" *ngIf="event.controls['start']?.errors?.validateOneOrNoneFormGroup?.month">Month cannot be empty</span>
+										</div>
+										<div mysize="3">
+											<select formControlName="year" [class.error]="event.controls['start']?.errors?.validateOneOrNoneFormGroup?.year">
+												<option value="">Year</option>
+												<option *ngFor="let year of years" value="{{year}}">{{year}}</option>
+											</select>
+											<span class="help-block text-danger" *ngIf="event.controls['start']?.errors?.validateOneOrNoneFormGroup?.year">Year cannot be empty</span>
+										</div>
+										<div mysize="2" *ngIf="(event.controls['start'].controls['type'].value == 'start')||(event.controls['start'].controls['type'].value == 'others')">to</div>
+									</div>
+								</div>
+							</div>
+							<div *ngIf="event.value['end']">
+								<div class="form-group" formGroupName="end">
+									<div mysize="3"></div>
+									<div mysize="8">
+										<div mysize="3">
+											<select formControlName="date" [class.error]="event?.errors?.invalidMax" [disabled]="(event.controls['start'].controls['year'].value == '')">
+												<option value="">Date (Optional)</option>
+												<option *ngFor="let date of dates" value="{{date}}">{{date}}</option>
+											</select>
+										</div>
+										<div mysize="3">
+											<select formControlName="month" [class.error]="event.controls['end']?.errors?.validateOneOrNoneFormGroup?.month || event?.errors?.invalidMax" [disabled]="(event.controls['start'].controls['year'].value == '')">
+												<option value="">Month</option>
+												<option *ngFor="let month of months" value="{{month.value}}">{{month.label}}</option>
+											</select>
+											<span class="help-block text-danger" *ngIf="event.controls['end']?.errors?.validateOneOrNoneFormGroup?.month">Month cannot be empty</span>
+										</div>
+										<div mysize="3">
+											<select formControlName="year" [class.error]="event.controls['end']?.errors?.validateOneOrNoneFormGroup?.year || event?.errors?.invalidMax" [disabled]="(event.controls['start'].controls['year'].value == '')">
+												<option value="">Year</option>
+												<option *ngFor="let year of years" value="{{year}}">{{year}}</option>
+											</select>
+											<span class="help-block text-danger" *ngIf="event.controls['end']?.errors?.validateOneOrNoneFormGroup?.year">Year cannot be empty</span>
+										</div>
+										<span class="help-block text-danger" *ngIf="event?.errors?.invalidMax">Start date should be less than end date</span>
+										<div mysize="3">
+											<a href="javascript:void(0);" *ngIf="event.controls['start'].controls['type'].value == 'others'" class="btn cmsFont cmsButton" (click)="removeOthers(i)">Remove</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a href="javascript:void(0);" class="btn cmsButton cmsFont" (click)="addOthers();">+ Add More</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

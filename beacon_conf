@@ -1,0 +1,116 @@
+# Conf file for Beacon. Each val is seperated by space. 
+# Information abt the conf is given in the next line.
+#    id Flag(0 Don't update in DB, 1 update in DB) Sever Method Parameters(, seperated and in the same order in which the method needs)
+#    for example for Event it will be.
+#
+#    (sample conf file entry)
+#    0001004 1 http://172.16.3.227/eventCal/event_cal_server update_event_detail_views event_id 
+#
+#    where event_id is one of the attribute of the img beacon tag.
+#
+#    So sample code for Events Detail page will be:
+#    <img id = 'beacon_img' src="" width=1 height=1 >
+#    <script>
+#       var img = document.getElementById('beacon_img');
+#       var randNum = Math.floor(Math.random()*Math.pow(10,16));
+#       img.src = 'http://SERVER/public/beacon/beacon.php?rand='.randNum.'&product_id=0001004&event_id=EVENT_ID';
+#    </script>
+#
+#    Imp part to note is that the parameter written in img.src url and in conf file is same i.e. event_id. 
+#Blog(00)(00)(id)
+#   Blog HomePage
+0000001 0   
+#   Blog Category
+0000002 0   
+#   Blog Detail Page
+0000003 1 BLOG_SERVER updateViewCount appId,blogId 
+#   Create Blog
+0000004 0   
+#Event(00)(01)(id)
+#   Event Home Page
+0001001 0   
+#   Event List
+0001002 
+#   Event Add
+0001003 
+#   Event Details
+0001004 
+#   Confirm Event Add
+0001005 
+#   Event Search Results 
+0001006 
+#   Event Calender Gaget
+0001007 
+#Search(00)(02)(id)
+#   SearchPage Mock UP
+0002001 
+#Discussion Forums(00)(03)(id)
+#   Discussion Home Page Mock
+0003001
+#   Discussion Category Page Mock
+0003002
+#   Topic Details Page Mock
+0003003 1 MESSAGEBOARD_SERVER updateViewCount appId,topicId,userId 
+#   Create Topic Details Page Mock
+0003004
+#Polls Mockups(00)(04)(id)
+#   Polls Home Page Mock
+0004001
+#   Casting Vote Page Mock
+0004002
+#   See Result Page Mock
+0004003
+#   Polls gadget Page Mock
+0004004
+#   Create Polls Page Mock
+0004005
+#College Rating Mockups(00)(05)(id)
+#   Rating Home Page Mock
+0005001
+#   Read category Page Mock
+0005002
+#   Rating details Page Mock
+0005003
+#   rate your college Page Mock
+0005004
+#Categories Mockups (00)(06)(id)
+#   Category Home Page Mock
+0006001
+#Registration Page Mockups(00)(07)(id)
+#   Registration Page Mock
+0007001
+#My Shiksha Page Mockups(00)(08)(id)
+#   Myshiksha Page Mock
+0008001
+#Alerts Page Mockups (00)(09)(id)
+#   Alerts HomePage Mock
+0009001
+#   Alerts HomePage Mock
+0009002
+#Listing Flow (00)(10)(id)
+#   Product Detail
+0010001
+#   Create Listing
+0010002
+#   Listing
+0010003
+#   Listing details
+0010004 1 Listing_SERVER_URL updateViewCount app_id,type_id,listing_type 
+# Exam Page Details create prodt id 
+0010005 1 EXAM_PAGE_SERVER updateViewCount appId,groupId,type
+#Payment gateway (00)(11)(id)
+#   1
+0011001
+#   2a
+0011002
+#   2b
+0011003
+#   3
+0011004
+#   4
+0011005
+#   5
+0011006 1 Listing_SERVER_URL updateViewCountforAbroadListing app_id,type_id,listing_type
+#   6
+0011007 1 SA_SERVER_URL updateViewCountforAbroadContent articleType,contentId
+

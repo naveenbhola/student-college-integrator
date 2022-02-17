@@ -1,0 +1,75 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	background: #ef4150 url(/public/images/tvc_bg.jpg) repeat-x top;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+
+.voting{
+	margin:0 10px;
+}
+
+.txt1{
+	font-size:16px;
+	padding-bottom:10px;
+}
+
+.txt2{
+	font-size:16px;
+	font-weight:bold;
+	padding-bottom:17px;
+	color:#222222;
+}
+
+
+.txt2 span{
+	font-size:12px;
+	font-weight:normal;
+	color:#858585;
+}
+
+.txt3{
+	font-size:11px;
+	color:#666666;
+	padding:10px 0;
+}
+
+.formLabel{
+	font-size:14px;
+	color:#222222;
+}
+
+.formLabel input{
+	width:170px;
+	height:20px;
+	border:1px solid #b3b3b3;
+}
+
+.extral1{
+	font-size:12px;
+}
+
+.extral1 a{
+	font-size:12px;
+	color:#000000;
+	text-decoration:none;
+}
+
+.extral1 a:hover{
+	font-size:12px;
+	color:#000000;
+	text-decoration:underline;
+}
+
+.voting input{
+	margin-right:10px;
+}
+.voting{
+	line-height:26px;
+	background-color:#f3f3f3;
+}
+.red{color:#ff0000}
+#tvcBtn{background:url(/public/images/tvc_bttn.gif) left top no-repeat;width:136px;height:38px;border:0 none;margin:0;padding:0;cursor:pointer}
+.errorMsg{color: red;font-family: arial;font-size: 11px;}

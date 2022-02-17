@@ -1,0 +1,49 @@
+.abroad-compare-clg-title{width:100%;}
+.abroad-compare-clg-title p, .abroad-compare-clg-title h1{font-size:18px; font-weight: normal;}
+.compare-count{font-size:12px !important; color:#333; margin-top:5px;}
+.compare-college-section{width:100%; margin:20px 0;}
+.compare-head-table{border:1px solid #f8f8f8; width:100%; border-collapse:collapse; table-layout: fixed;}
+.compare-head-table strong{font-size:11px;}
+.compare-head-table tr th, .compare-head-table tr td{ padding:10px; text-align:left; border-right:1px solid #eee; vertical-align:top; width:240px; position: relative;}
+.compare-head-table tr th{border-bottom:3px solid #666; padding:10px 10px 15px 10px}
+.compare-head-table tr:nth-child(even), .sticky-compare-header table tr:nth-child(even){background: #f8f8f8;}
+.compare-head-table tr:nth-child(odd), .sticky-compare-header table tr:nth-child(odd){background: #ffffff;}
+.compare-img{position:relative; width:172px; height:114px;}
+.compare-remove{display:block; width:30px; height:30px; border:2px solid #fff; -moz-border-radius:50%; -webkit-border-radius:50%; border-radius:50%; color:#fff !important; font-size:21px; background:#666; text-align:center; position:absolute; top:-9px; right:-2px; text-decoration:none !important;}
+.compared-univ-name{font-weight:bold; display:block; margin-top:6px;}
+ul.compare-suggestion-list{width:100%; color:#999;}
+ul.compare-suggestion-list li{margin-bottom:8px; list-style:none; font-weight:normal;}
+.comp-similar-text{font-size:14px; color:#666; margin-bottom:8px; font-weight:normal;}
+.compare-detial-title{background:#eee; color:#666; font-size:12px; font-weight:bold; border-bottom:3px solid #ccc; padding:14px 10px; text-align:left;border-top:1px solid #eee;border-left:1px solid #eee;border-right:1px solid #eee; margin-top:20px;}
+.compare-detail-content{color:#666; font-size:12px; line-height:20px; width:100%; word-wrap:break-word;}
+.compare-detail-content ul, .compare-detail-content ol{margin-left:13px;}
+.compare-detail-content ul{list-style:disc; }
+.compare-detail-content ol{list-style:decimal; }
+.compare-detail-content ul li, .compare-detail-content ol li{margin-bottom:8px; margin-left:18px;}
+.compare-detail-content p{margin-bottom:3px;}
+.tution-class{display:block; color:#999; margin-top:5px;}
+.comp-exam-detail{font-size:11px; color:#999; line-height:16px;}
+.NA-mark{margin-right:4px;}
+ul.stu-profile-list{width:100%; float:left; margin-left:0;}
+ul.stu-profile-list li{margin-bottom:8px; font-size:12px; color:#666; list-style:none;}
+ul.stu-profile-list li label{display:block; margin-bottom:2px;}
+.compare-btn-table{width:100%; float:left; margin-top:15px;}
+.compare-btn-table table{background:#f8f8f8; border:1px solid #eee; border-top:3px solid #ccc; width:100%;}
+.compare-btn-table table tr td{ padding:10px; border:1px solid #eee; border-collapse:collapse;}
+.shrtlist-course-link{font-size:11px; margin-bottom:8px;}
+.small-shrtlist-icon{background-position:-41px -203px; width:17px; height:17px; margin-right:5px;}
+.NA-mark{font-weight:bold; margin-right:7px;}
+.sticky-compare-header{border:1px solid #ccc; box-shadow:0 2px 2px #ccc;position:fixed; top:0; width:968px; margin:0;background:#fff;}
+.sticky-compare-header table{width:100%;}
+.sticky-compare-header-table tr th, .sticky-compare-header-table tr td{padding:10px; border:1px solid #eee; border-collapse:collapse}
+.country-head{font-weight:normal; margin-top:5px;}
+.add-tag{font-size:9px; color:#999; float:left; line-height:17px;}
+a.add-tag-title span{color:#999;}
+.photos-icon, .videos-icon {background-position: -213px -91px; width: 17px;height: 12px; margin-right: 4px; top: -1px;}
+.videos-icon {background-position: -233px -91px;margin-left: 3px;}
+
+
+.photo-slider-cont .prev-arr-box, .photo-slider-cont .next-arr-box, .photo-slider-cont .prev-active{width:36px; height:48px; background:rgba(246, 246, 247, 0.6); display:block; position:absolute;top:39%; left:0; text-align:center}
+.photo-slider-cont .next-arr-box{left:auto; right:0;}
+.prev-arr-icn, .next-arr-icn{background-position:-94px -49px !important; width:18px; height:38px;margin:5px 0 0 -2px}
+.next-arr-icn{background-position:-115px -49px !important; margin:5px 0 0 4px}

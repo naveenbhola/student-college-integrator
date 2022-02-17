@@ -1,0 +1,80 @@
+.wikkiContents{max-height: 500px;overflow: hidden;font-size: 1rem;}
+.wikkiContents.miniView{max-height: 240px;position: relative;}
+.wikkiContents.showContent{max-height: initial;overflow: auto;}
+.wikkiContents p{font-size: 1rem;margin-bottom: 8px;line-height: 1.4;}
+.wikkiContents strong{font-size: inherit;font-weight: 600;}
+.wikkiContents img{max-width: 100%;}
+.wikkiContents iframe{width: 100%;margin: 0 auto;}
+.gradient-col .trnBtn{border:none;}
+.wikkiContents ul{margin-left: 20px;}
+.wikkiContents h2,
+.wikkiContents h3,
+.wikkiContents h4,
+.wikkiContents h5,
+.wikkiContents h6
+ {
+    font-weight: 600;color: #111;margin-bottom: 4px;
+}
+.wikkiContents h2{font-size: 1.125rem;line-height: 1.34;}
+.wikkiContents h3{font-size: 1.0625rem;line-height: 1.36;}
+.wikkiContents h4{font-size: 1rem;line-height: 1.38;}
+.wikkiContents h5{font-size: 0.9375rem;line-height: 1.4;}
+.wikkiContents h6{font-size: 0.875rem;line-height: 1.4;}
+
+.wikkiContents table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    display: block;
+    overflow: auto;
+    margin-bottom: 15px;
+}
+.wikkiContents table tr:nth-child(odd) {
+    background-color: #F3F6F8;
+}
+
+.wikkiContents table tr td,
+.wikkiContents table tr th {
+    padding: 5px 10px;
+    border: 1px solid #B8C8D1;
+    width: initial;
+}
+
+.wikkiContents table tr td *,
+.wikkiContents table tr th * {
+    padding: 0px;
+    margin: 0px;
+    font-size: 1rem;
+}
+.wikkiContents table th{
+    background: #003D5C;
+}
+.wikkiContents table th,
+.wikkiContents table th *{
+    color: #fff;
+    font-weight: 600;
+}
+.wikkiContents table th a{
+    text-decoration: underline!important;
+    cursor: pointer;
+}
+.wikkiContents table tr td ul{
+    margin-left: 20px;
+    padding: 10px;
+}
+.wikkiContents table tr td ul li{
+    margin-bottom: 10px;
+}
+
+@media (min-width: 1281px) {
+
+  .wikkiContents table {
+        display: table;
+    }
+
+}
+
+
+.fnt-w6, .wikkiContents a{font-weight: 600;}
+.wikkiContents a{text-decoration: underline;}
+.wikkiContents table a{text-decoration: none;}

@@ -1,0 +1,21 @@
+.container{margin:0 auto; padding:10px; color:#000}
+.cms-shortlist-cont{border:1px solid #000}
+.cms-shortlist-tab{border-bottom:1px solid #000; float:left; width:100%}
+.cms-shortlist-tab ul li{float:left; list-style:none; border-right:1px solid #000;}
+.cms-shortlist-tab ul li a{display:block; padding:12px 20px; color:#000 !important; position:relative; background:#fff;}
+.cms-shortlist-tab ul li.active a{bottom:-1px;}
+
+.cms-review-form{padding:20px 20px 20px; float:left; width:100%; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box}
+.cms-review-form ul li{margin-bottom:20px; float:left; width:100%}
+.cms-review-form ul li label{width:100px; float:left}
+.cms-review-form ul li .cms-filds{margin-left:100px}
+.cms-form-field{border:1px solid #a9a9a9; font:normal 12px Tahoma; padding:3px 4px; width:250px}
+.link-types{margin-right:20px; float:left; width:100px}
+
+.preview-detail ul{width:100%;}
+.preview-detail ul li{margin-bottom:20px; color:#010101; font-family:Arial, Helvetica, sans-serif; font-size:13px;}
+.preview-user-name{margin-bottom:6px;}
+.preview-sbmt-btn{display:block; margin:0 auto;}
+
+.management-layer {width: 470px;margin: 0 auto;border: 2px solid #5e5e5e;padding: 10px 15px 15px;font-family: Tahoma, Geneva, sans-serif;background: #fff;font-size: 14px;}
+.cms-shortlist-grey-cont{background: #FBFBFB;border:1px solid #E8E8E8;margin-top:12px;padding:10px 5px;float:left;width:99%;margin:0px 0px 10px 0px;}

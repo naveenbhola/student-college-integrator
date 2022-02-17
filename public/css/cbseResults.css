@@ -1,0 +1,236 @@
+@charset "utf-8";
+/* CSS Document */
+.bdr{border:1px solid #F00;}
+.bdr1{border:1px solid #090;}
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tfoot, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video { background: transparent; border: 0; margin: 0; outline: 0; padding: 0;}
+#topHeader{background:#f3f3f3; box-shadow: 0 -6px 9px 6px #c8c8c8; height: 97px; position:relative; z-index:1}
+.wrapper{width:970px; margin:0 auto;}
+.logoImg{width:242px; height:64px; padding:20px 0 0 48px;}
+body {
+	margin:0 auto;
+	background:#ebeaea;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+iframe{
+	width:100%;
+	height:760px;
+	overflow-x: scroll;
+	overflow-y: hidden;
+}
+.btn_colg{color:#0065de; text-decoration:none; text-align:center; width:166px; height:29px; line-height:29px;}
+.resoWrap {
+	margin:0 auto;
+	width:905px;
+	background:url(/public/images/cbseResults/mainBG.gif) repeat-y center top;
+	padding:29px 32px;
+	overflow:hidden;
+}
+.clr {
+	clear:both;
+	height:1px;
+	overflow:hidden;
+	margin:0; padding:0;
+}
+
+.logoWrap {
+	width:100%;
+	height:76px;
+}
+.topTxt{
+	font-family:Tahoma, Geneva, sans-serif;
+    font-size: 33px;
+    line-height: 60px;
+	font-weight:bold;
+	color:#565a5d;
+	float:left;
+}
+.logoImg{
+	float:left;
+	width:282px;
+}
+#appWrapper{
+	background-position:left -125px !important;
+	background-repeat:repeat-x !important;
+	border: 4px solid #D7E8F8;
+    border-radius: 8px 8px 8px 8px;
+	height:221px;
+	position:relative;
+}
+#appWrapper div.figure {
+    background: url("/public/images/cbseResults/banner-pic.jpg") no-repeat 20px 18px;
+    bottom: 0;
+    height: 225px;
+	float:left;
+    width: 187px;
+}
+.appShad{
+	background-position:left -77px !important;
+	height:28px;
+	width:833px;
+	margin:0 auto;
+	clear:both;
+}
+#appWrapper div.appRight{
+	width:597px;
+	float:right;
+	padding-top:5px;
+}
+#appWrapper ul, #appWrapper li {
+    list-style: none outside none;
+}
+#appWrapper div.appRight ul li{
+    color: #4B4B4B;
+    float: left;
+    font-size: 13px;
+    line-height: 18px;
+    list-style: none outside none !important;
+    margin-bottom: 15px;
+    width: 48%;
+}
+.bstColg {
+    background-position: 0 4px;
+    float: left;
+    height: 43px;
+    margin:4px 10px 0 0;
+    width: 50px;
+}
+.saveTime {
+    background-position: -51px 1px !important;
+    float: left;
+    height: 43px;
+    margin:4px 10px 0 0;
+    width: 50px;
+}
+.multiSub{
+    background-position: -98px 0px !important;
+    float: left;
+    height: 43px;
+    margin:12px 10px 0 4px;
+    width: 46px;
+}
+.trackSub{
+    background-position: -144px 0px !important;
+    float: left;
+    height: 54px;
+    margin:9px 5px 0 0px;
+    width: 58px;
+}
+#appWrapper div.appRight ul li h2 {
+    display: block;
+    font-size: 16px;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    line-height: 23px;
+	color:#4b4b4b;
+}
+#appWrapper div.appRight ul li p{
+	font-size:15px;
+	color:#3c3c3c;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.createProfileBtn{
+	background-position: -240px 0px !important;
+    float: left;
+    height: 49px;
+    width: 276px;
+	text-indent:-13px;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:20px;
+	color:#ffffff;
+	font-weight:bold;
+	text-decoration:none;
+	text-align:center;
+	margin-bottom:0px;
+	border:none;
+}
+.createProfileBox{
+	width:276px;
+}
+#appWrapper, .appShad, .bstColg, .saveTime, .multiSub, .trackSub, .createProfileBtn{background:url(/public/images/cbseResults/apps-sprite.gif) no-repeat;}
+.howItWorks{font-size:15px; color:#196dba;
+    background:#FFFFFF;
+    border-radius: 5px 0 0 5px;
+    display: block;
+    float: right;
+    font-size: 15px;
+    margin-top: 22px;
+    padding: 4px 8px;
+    position: relative;
+    width: 100px;
+	text-decoration:none;
+}
+.howitWorksLayerWrap, .howitWorksLayerWrap2 {
+    left: -780px;
+    position: absolute;
+    top: 22px;
+    width: 875px;
+    z-index: 9999999;
+}
+
+.btnColg{text-align:right; margin-bottom:30px;}
+.T13{
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:13px;
+	color:#000000;
+	font-weight:bold;
+}
+marquee{font-family:Tahoma, Geneva, sans-serif; font-size:13px; color:#000000; width:700px;}
+marquee a{text-decoration:none;}
+
+#footer{
+	font-size:12px;
+	color:#8d8d8d;
+	line-height:35px;
+	border-top:1px solid #dfdfdf;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	text-align:center;
+	margin-top:30px;
+
+}
+.headTXT{font-family:"Comic Sans MS", cursive; font-size:18px; color:#ba5b14; line-height:60px; background:url(/public/images/cbseResults/headBG.jpg) no-repeat left top; height:53px; width:213px; padding-left:38px;}
+.resultFetch{margin:20px 0; height:auto;}
+.fltLFT{float:left}
+.fltRHT{float:right}
+
+
+/*Scroller_Script*/
+#scroller{height:17px; overflow:hidden;}
+.coursesDiv{float:right; width:390px; padding-top:9px; overflow:hidden; margin-right:15px;}
+#ticker{
+	background:url(/public/images/cbseResults/tickerBG.gif) no-repeat left top; height:34px;
+	float:left;
+	padding-left:11px;
+	width:546px;
+	position: relative;
+    top: 35px;
+	margin-left:30px;
+}
+#ticker .RhtDiv{width:137px; float:left; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:16px; color:#000000; line-height:32px;}
+.simply-scroll-clip {
+		position: relative;
+		overflow: hidden;
+	}
+.simply-scroll .simply-scroll-clip {
+		width: 700px;
+		height: 20px;
+		font-size:13px;
+		font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	}
+
+
+/*form_CSS hack*/
+.lineSpace_10{ height:10px; overflow:hidden;}
+.txt11{font: normal 11px; color:#fcf3b3; margin-bottom:20px;}
+#connectFormMid div .continueBtn, .continueBtn{background:#b91313; font-family:Tahoma, Geneva, sans-serif; font-weight:bold; border:1px solid #ffffff;}
+.txt_align_r{font-size:13px;}
+.lineSpace_10{clear:both;}
+
+#addwikkicontent_flag {padding-left: 20px;}
+
+#subCategory1{width:113% !important; font-size:12px;}
+.formFieldTextRight{font-size:12px; width:212px !important;}
+.formFieldTextLeft{width:128px !important}
+_fontSize_14p{font-size:14px;}
+
+_fontSize_14p{font-size:14px;}

@@ -1,0 +1,90 @@
+.fee-hdng{color: #666; font-size: 0.75rem;line-height: 1;}
+.fee-det{font-size: 0.75rem;color: #666; line-height: 1.58;margin: 5px 0px 10px;}
+ul.fee-BnrLst{padding: 0; margin: 0; width:100%; display: inline-block; line-height: 1.58;margin-top: 10px}
+ul.fee-BnrLst li{margin-bottom: 10px; padding-bottom: 10px; color: #000; font-size: 0.875rem;clear: both; display: table; width:100%;}
+ul.fee-BnrLst li div label{color: #666;}
+ul.fee-BnrLst li div strong{display: block;}
+ul.fee-BnrLst li div:first-child, ul.fee-BnrLst li div:last-child{display: table-cell; width: 49%;}
+ul.fee-BnrLst li p a{display: block;}
+.disclmr-pra{color: #000; font-size: 0.75rem;}
+.disclmr-pra strong{font-weight: 600;}
+.disclmr-pra a{color: #008489; text-decoration: none;}
+
+/*._container h3{font-size: 0.875rem;}*/
+/*.nrml-link{
+>>>>>>> Stashed changes
+  font-size: 0.875rem;
+  color:#008489;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+}*/
+r.str-arw{position: relative;}
+.str-arw .blu-arrw{right: 0px;top: 1px;}
+.dropdown-primary:after,section.feeBnr .blu-arrw{background: url(https://images.shiksha.ws/pwa/public/images/pwa-header-mobile-v3.svg) no-repeat;background-position: -26px -4px;}
+.blu-arrw {background-position: -114px -41px;width: 15px;height: 20px;position: relative;right: -1px;top: 1px;display: inline-block}
+.block{display: block;}
+.dropdown-primary {background: #fff;border: 1px solid #999;display: table-cell;position: absolute;right: 12px;top: 7px;border-radius: 2px;padding-right: 22px;}
+.dropdown-primary>.option-slctd {color: #000;font-size: 0.75rem;font-weight: 400;display: block;padding: 5px 0px 6px 10px;border: none;text-overflow: ellipsis;}
+.dropdown-primary:after{content: '';height: 0;pointer-events: none;position: absolute;width: 0;right: 6px;top: -1px;margin-left: 20px;background-position: -83px -63px; width: 22px; height: 20px; display: inline-block}
+ul.fee-BnrLst li:last-child {  border: none;  padding: 0;}
+.disclmr-pra { border-top: 1px solid #eee;  padding-top: 10px;}
+.read-more-state:checked ~ .read-more-trigger{display: none}
+.read-more-state:checked ~ .read-more-wrap .read-more-trigger{display: none}
+.read-more-state:checked ~ .read-more-wrap .read-more-target {display: block;}
+.read-more-state:checked ~ .read-table .read-more-target {display: table-row;}
+.read-more-state:checked ~ .read-more-wrap .lt {display: none;}
+.read-more-target {
+    display: none;
+}
+.listhide{display: none}
+.hide{
+  display: none;
+}
+.tob{background: green}
+.table-active{display: table;position: relative;}
+.table-el{width: 100%;}
+.table-dis{display: none}
+.tob:target{background:red }
+.ul-list {
+    list-style: none;
+    width: 100%;
+    max-height: inherit;
+    background-color: #fff;font-size: 0.875rem;
+}
+
+ul.fee-div {
+    display:  inline-block;
+    width: 100%;font-size: 0.875rem;
+}
+
+ul.fee-div li span:first-child {
+    width: 60%;
+    display:  inline-block;
+}
+
+ul.fee-div li span:last-child {
+    text-align:  right;
+    display:  inline-block;
+    width: 40%;
+}
+
+ul.fee-div li {
+    margin-bottom: 5px;
+}
+
+ul.fee-div li:last-child {
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+    margin-top: 10px;
+}
+.fee-BnrLst .info-icon {background-position: 0px 0;width: 21px;height: 20px;background: url(https://images.shiksha.ws/pwa/public/images/pwa-header-mobile-v3.svg) no-repeat;display: inline-block;position: relative;right: 3px;top: 3px;}
+.word-break {
+    word-wrap: break-word;
+}
+.color-b{color: #008489;}
+
+.feeBnr.listingTuple.noMrgn-pwa {margin: 0}
+.btnYellow.fee_lftbtn{position: absolute;right: 0px;top: 0px;}
+
+.clp .btnYellow.fee_lftbtn.gfeedisabled{display:none;}

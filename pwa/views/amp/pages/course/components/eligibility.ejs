@@ -1,0 +1,216 @@
+<% if(data.categoryNameMapping !=null){ %>
+
+  <%
+    var categorykeys = data.categoryNameMapping;
+    var examsData = data.exams;
+    var eligMapping = {'tenthDetails' : '10th','twelthDetails':'12th','graduationDetails':'Graduation','postGraduationDetails':'Post Graduation'};
+    var uniqueAttr = ['minWorkEx','maxWorkEx','minAge','maxAge','internationalDescription','description'];
+
+  %>
+
+
+
+<div class="data-card m-5btm pos-rl" id="eligibility">
+           <h2 class="color-3 f16 heading-gap font-w6 pos-rl">Eligibility</h2>
+           <% if(Object.keys(categorykeys).length != 0) {%>
+           <div class="dropdown-primary" on="tap:cat-list" role="button" tabindex="0">
+              <span class="option-slctd block color-6 f12 font-w6 ga-analytic" id="optnSlctd">Choose Category</span>
+           </div>
+          <% } %>
+           <div class="card-cmn color-w">
+             <%
+               var selectedCategory ='';
+               var selectedEligiCategory = categorykeys.hasOwnProperty("general");
+               if(selectedEligiCategory){
+                  selectedCategory = 'general';
+               }
+                if(categorykeys.hasOwnProperty("noneAvailable")){
+                  selectedEligiCategory = "noneAvailable"
+                }
+             %>
+            <%  for(var i in categorykeys){ %>
+              <%
+                var checked='';
+                if(selectedCategory === i ){
+                  checked='checked=true';
+                }
+              %>
+
+              <input type="radio" name="eligible" value="eligi_<%= i %>" id="eligi_<%= i %>" class="hide st" <%= checked%> />
+              <div class="table tob1">
+
+                 <p class="color-3f14 f12 font-w6 n-border-color"><span class="i-block color-6 font-w4">Showing info for</span> "<%- categorykeys[i]+ ' Category' %>"</p>
+
+                 <table class="table tob1" id="#tops">
+                    <tbody class="default-body">
+                       <tr>
+                          <th>
+                             <h3 class="f14 color-6 font-w6">Qualification</h3>
+                          </th>
+
+                          <th>
+                             <h3 class="f14 color-6 font-w6">Minimum Eligibility</h3>
+                          </th>
+
+                       </tr>
+
+                         <tr>
+                           <% for (var classvalue in eligMapping) { %>
+                             <%
+                               if(data[classvalue] != null){
+                             %>
+                               <td>
+                                  <strong class="block color-3 f14 font-w6"><%= eligMapping[classvalue] %></strong>
+                                  <a class="block f12 color-b ga-analytic" data-vars-event-name="ELIGIBILITY_ADDITIONAL_DETAILS" on="tap:additional-dtls" role="button" tabindex="0">Additional details</a>
+                               </td>
+                               <%
+                                var categoryData = data[classvalue].categoryWiseScores ;
+
+                               %>
+                                 <% if( Object.keys(categoryData).length != 0 && categoryData[i].score !=null &&  categoryData[i].score !='undefined'){ %>
+                                   <td class="color-3 f14 font-w4"><%- categoryData[i].score  %>% </td>
+                                 <% } %>
+                              <% } %>
+                           <% } %>
+
+                         </tr>
+
+                            <% if(examsData!=null){ %>
+                                <% for(var exam in examsData) {%>
+                                  <tr>
+                                    <td>
+                                      <a class="block f14 color-b font-w6" href="<%- examsData[exam].examUrl != null ? examsData[exam].examUrl : 'javascript:void(0)' %>">
+                                         <strong> <%= examsData[exam].examName %></strong>
+                                      </a>
+                                    </td>
+                                    <%
+                                      var marksdata;
+                                      if(Object.keys(examsData[exam].categoryWiseScores).length === 0){
+                                         marksdata = '--';
+                                      }else if(examsData[exam].scoreType === 'score/marks' && examsData[exam].scoreType != null){
+                                         marksdata = 'Marks-'+ ''+ examsData[exam].categoryWiseScores[i].score + '/'+examsData[exam].categoryWiseScores[i].maxScore;
+                                      }else if(examsData[exam].scoreType === 'percentile' && examsData[exam].scoreType != null){
+                                         marksdata = examsData[exam].categoryWiseScores[i].score +''+ '%tile';
+                                      }else{
+                                         marksdata = '--';
+                                       }
+                                    %>
+
+                                    <td class="color-3 f14 font-w4">
+                                        <%- marksdata %>
+                                    </td>
+                                  </tr>
+                                <%}%>
+                            <% } %>
+
+
+
+
+
+
+
+                       <amp-lightbox id="<%= i %>-eligible-rounds-dtls" layout="nodisplay" scrollable>
+                          <div class="lightbox"  on="tap:fn-eligible-rounds-dtls.close" role="button" tabindex="0">
+                             <a class="cls-lightbox  color-f font-w6 t-cntr">&times;</a>
+                             <div class="m-layer">
+                                <div class="min-div color-w catg-lt pad10"></div>
+                             </div>
+                          </div>
+                       </amp-lightbox>
+                    </tbody>
+                 </table>
+              </div>
+            <% } %>
+
+              <amp-lightbox id="additional-dtls" layout="nodisplay" scrollable>
+                 <div class="lightbox">
+                    <a class="cls-lightbox  color-f font-w6 t-cntr"   on="tap:additional-dtls.close" role="button" tabindex="0">&times;</a>
+                    <div class="m-layer">
+                       <div class="min-div color-w catg-lt pad10">
+                          <div class="m-5btm">
+                             <strong class="block  color-3 f14 font-w6">12th</strong>
+                             <p class="color-3 l-18 f12 word-break">Mandatory Subjects : Mathematics, Physics<br />
+                                For OCI, Children of Indian workers in the Gulf countries, Jammu and Kashmir Migrant Candidature Candidates have to secure 50% marks.<br />
+                                <br />
+                                Candidate must have studied any one of Chemistry/ Biotechnology/ Biology/ Technical/ Vocational subject along with the mandatory subjects.
+                             </p>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </amp-lightbox>
+
+              <div class="age-exp-col padb0 border-top ">
+                <% if(data.internationalDescription !=null && typeof data.internationalDescription !='undefined') { %>
+                   <section>
+                     <label class="block f14 color-6 font-w6">International students eligibility</label>
+                     <% if(data.internationalDescription.length > 118) { %>
+                       <input type="checkbox" class="read-more-state hide" id="inter_desc">
+                       <p class="read-more-wrap word-break">
+                         <span class="f13 color-3 l-16 lt">
+                             <%- data.internationalDescription.substring(0, 127)+'...' %>
+                         </span>
+                         <span class="read-more-target f13 color-3 l-16 listhide">
+                           <%- data.internationalDescription %>
+                         </span>
+                         <label for="inter_desc" class="read-more-trigger f12 color-b i-block font-w6" >more</label>
+                       </p>
+                      <% } else {%>
+                          <p class="read-more-wrap word-break">
+                            <span class="f13 color-3 l-16 lt"><%- data.internationalDescription %></span>
+                          </p>
+                      <% } %>
+
+                   </section>
+                <% } %>
+
+                <% if(data.description !=null && typeof data.description !='undefined') { %>
+                 <section class="cut-off-widget">
+                    <label class="block f14 color-6 font-w6">Other eligibility criteria</label>
+                     <% if(data.description.length > 127) {%>
+                    <input type="checkbox" class="read-more-state hide" id="other_desc">
+                    <p class="read-more-wrap word-break">
+                       <span class="f13 color-3 l-16 lt">
+                           <%- data.description.substring(0, 127)+'...' %>
+                       </span>
+                       <span class="read-more-target f13 color-3 l-16 listhide">
+                         <%- data.description %>
+                       </span>
+                       <label for="other_desc" class="read-more-trigger f12 color-b i-block font-w6 "  >more</label>
+                    </p>
+                    <%} else {%>
+                      <p class="read-more-wrap word-break">
+                         <span class="f13 color-3 l-16 lt">
+                             <%- data.description %>
+                         </span>
+                      </p>
+                    <% } %>
+                 </section>
+                 <% } %>
+              </div>
+
+              <amp-lightbox id="cat-list" class="" layout="nodisplay" scrollable>
+                  <div class="lightbox" on="tap:cat-list.close" role="button" tabindex="0">
+                      <a class="cls-lightbox color-f font-w6 t-cntr" >&times;</a>
+                      <div class="m-layer">
+                          <div class="min-div color-w catg-lt">
+                              <ul class="color-6">
+                                <%
+                                    var sortcategorykey = {}
+                                    Object.keys(categorykeys).sort().forEach((key)=>{
+                                      sortcategorykey[key]= categorykeys[key];
+                                    })
+                                 %>
+
+                                <% for(var i in sortcategorykey ) {%>
+
+                                    <li><label for="eligi_<%= i %>"  class="block"><%= sortcategorykey[i] %> Category</label></li>
+                                <% } %>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+              </amp-lightbox>
+           </div>
+        </div>
+  <% } %>

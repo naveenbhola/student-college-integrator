@@ -1,0 +1,11 @@
+ul.OtherTopic-list{margin-left: 16px;color: #000;list-style: inherit;}
+ul.OtherTopic-list li{margin-bottom:3px;}
+
+ul.OtherTopic-list li a{line-height: 1.3125rem;font-size:0.875rem;vertical-align: top;font-weight: 400;}
+ul.OtherTopic-list li b{padding: 0px 4px;font-weight: 400;color:#666;}
+.hideitems{display: none;}
+.btnwraper{text-align: center;padding: 10px 0px 0px;display: none;}
+.btnwraper .more{cursor: pointer;font-weight: 400;}
+.more.arrow:after{transform: rotate(45deg);    border-bottom: 2px solid #008489;
+    border-right: 2px solid #008489;}
+.OtherTopic-list a{display: inline-block;}

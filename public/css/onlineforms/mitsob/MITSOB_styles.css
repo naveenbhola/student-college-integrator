@@ -1,0 +1,94 @@
+.formPreviewMain {font-size:14px; font-family:Arial, Helvetica, sans-serif !important; width:909px; margin:0 auto; background-color:#fff; padding-top:10px}
+.previewHeader{display:block; width:909px; background:url(/public/images/onlineforms/institutes/mitsob/header.jpg) 0 0 no-repeat; height:249px; position:relative}
+.previewTetx{font-size:22px; color:red; clear:both; padding-bottom:5px}
+.previewBody{width:850px; margin:0 auto; padding-top:10px; clear:both;}
+.formNumb{float:left; width:270px; font-size:16px; font-weight:700; position:absolute; right:0px; bottom:12px}
+.formNumb p{float:left;}
+.picBox{width:140px; float:right; background-color:#fff; height:160px; border:1px solid #000}
+.picBox img{width:140px; height:160px; float:left}
+.picBox p{text-align:center; padding-top:80px; font-size:12px}
+.form-inst{font-size:22px; font-weight:normal; background:#709ccf; padding:5px 0; text-align:center; color:#fff}
+.form-inst span{font-size:22px; text-transform:uppercase}
+.form-inst b{font-size:18px;}
+.sections{width:100%; margin-bottom:25px; display:block; float:left}
+.sections h3{font-size:22px !important; border:0 none !important; display:block !important; clear:left !important; margin-bottom:0px !important; float:left}
+.sections h3 strong{float:left; padding-right:5px}
+.sections h3 span{background-color:#808080; float:left; padding:0 2px}
+.sections h4{font-size:18px !important; display:block !important; clear:left !important; font-style:italic; margin-bottom:30px}
+.courses{width:100%; float:left;}
+.courses ul{width:375px; float:left}
+.courses ul li{list-style-type:disc !important; width:390px; font-size:20px; font-weight:bold; color:#291770; margin-left:15px; margin-bottom:2px;}
+.instructions{width:670px; float:left;}
+.instructions ul{padding-top:15px;}
+.instructions ul li{list-style-type:decimal !important; margin-left:25px; margin-bottom:8px}
+.formRows{display:block; margin-bottom:2px; float:left; width:100%}
+.formRows ul li{display:block; margin-bottom:15px; width:100%; float:left}
+.formRows ul li label{float:left; padding:6px 10px 0 0; font-weight:normal; font-size:14px}
+.formRows ul li label span{font-size:11px; text-align:center; width:100%; display:block}
+.name-note{width:100%; float:left; text-align:center; padding-top:3px}
+.formRows ul li.name-block{}
+.formRows ul li.name-block label{width:335px; padding-bottom:2px}
+.formRows ul li.name-block label.last{width:auto}
+.form-left{width:420px; float:left;}
+.form-right{width:425px; float:left;}
+ul.know-lists{}
+ul.know-lists li{background:url(/public/images/onlineforms/institutes/mitsob/bullet.gif) 0 2px no-repeat; padding:0 0 3px 40px; margin-bottom:20px; clear:both; float:left; width:94%;}
+ul.know-lists li p{float:left; padding-right:5px}
+.options-box{float:left; padding-right:30px}
+.options-box label{float:left; font-weight:bold; font-size:16px; padding:3px 5px 0 0}
+.apprearance-details{width:205px; float:left;}
+.course-option-title{text-align:center; padding:20px 0 10px 0}
+.course-option-block, .course-option-block2{border-bottom:1px solid #000; border-top:1px solid #000; padding:10px 0; overflow:hidden; margin-bottom:5px}
+.course-option-block2{border:none !important; padding:6px 0 0 0 !important;}
+.opt-col1{width:270px; float:left; padding-left:50px; padding-top:10px}
+.opt-col2{width:320px; float:left;}
+.opt-col3{width:200px; float:left;}
+.check-box{border:1px solid #000; width:38px; height:22px; text-align:center; vertical-align:middle; float:left;padding-top:8px}
+.check-box img{vertical-align:middle; margin-top:7px}
+.check-box-small{border:1px solid #000; width:30px; height:24px; text-align:center; vertical-align:middle; float:left}
+.check-box-small img{vertical-align:middle; margin-top:5px}
+.admit-card{border-top:dashed 2px #000}
+.admit-card h5{font-size:18px; font-weight:bold; text-align:center; margin-bottom:15px}
+.admit-card h5 span{text-align:right; font-size:12px; width:96%; float:left}
+.admit-card h5 b{font-size:14px}
+.admit-card h5 strong{text-decoration:underline}
+.admit-card-left{width:400px; float:left; padding-top:10px}
+.admit-card-right{width:430px; float:left; border-left:dashed 1px #000; padding-left:15px; padding-top:10px}
+.admit-card-right div.logo-cont{width:104px; float:left}
+.card-details{width:312px; float:left; padding-left:5px;}
+ul.admit-rows{padding:0 !important}
+ul.admit-rows li{list-style-type:none !important; display:block !important; margin-bottom:20px !important; float:left !important; width:100% !important; overflow:hidden}
+.card-pic{width:145px; height:180px; float:left; border:1px solid #000}
+.card-pic img{width:145px; height:180px; float:left;}
+.declaration-col{width:450px; float:left}
+.declaration-col p{padding-left:30px;}
+.declaration-title{border-bottom:1px solid #000; padding-bottom:3px; font-weight:bold; color:#667ab2; font-size:16px; margin-bottom:10px}
+.pay-col{width:370px; float:right}
+.pay-col ul li{list-style:none; margin-bottom:5px; width:100%; float:left}
+.pay-col ul li label{width:100px; float:left; padding-top:5px; font-weight:normal}
+.pay-col ul li div.pay-details{float:left; width:200px;}
+.doc-attached{width:295px; float:left;}
+.doc-attached strong span{color:red}
+.doc-attached label{width:100%; float:left;}
+.remarks{width:150px; float:right;}
+.remark-options{width:60px; float:left}
+.check-option{background:url(/public/images/onlineforms/institutes/mitsob/bullet.gif) 0 3px no-repeat; width:21px; height:15px; float:left; padding:4px 5px 0 7px}
+.formRows ul li ul.inst-items li{list-style:lower-alpha !important; margin-bottom:5px}
+.formRows ul li ul{padding-left:25px; display:block; display:list-item}
+.formRows ul li ul li{list-style:decimal !important; display:list-item; float:none !important; vertical-align:top}
+.previewFieldBox, .previewFieldBox2,.previewFieldBox3{float:left; width:100%;}
+.previewFieldBox2 span{display:block; border-bottom:solid 1px #000000; padding:3px 0 1px 0}
+.previewFieldBox3 span {display:block; border-bottom:dotted 1px #000000; padding:7px 0 0px 0; word-wrap: break-word; overflow:hidden}
+.formColumns2{float:left}
+.flRt{float:right}
+.boxTable{border: 1px solid #000000; border-collapse: collapse; background-color:#fff}
+.boxTable tr td{height:27px; width:30px; padding:0; margin:0; text-align: center;}
+.educationTable, .educationTable2, .educationTable3{border: 1px solid #000000; border-collapse: collapse; background:#fff}
+.educationTable tr th{text-align:left; font-weight:normal}
+.educationTable2 tr th, .educationTable3 tr th{text-align:center; font-weight:bold}
+.educationTable3 tr td{background-color:#dedede}
+.formWordWrapper{white-space: pre-wrap; word-wrap: break-word; overflow:hidden}
+.checkCols{padding-left:30px; float:left}
+.checkCols label{width:auto !important; padding-right:10px !important;}
+
+

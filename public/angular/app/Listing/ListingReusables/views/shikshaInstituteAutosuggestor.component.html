@@ -1,0 +1,53 @@
+
+<div class="form-group">
+ <div class="row">
+  <div [mysize]="'5'">
+     <label [mysize]="'4'" style="padding-left:0px">University Id</label>
+     <div [mysize]="'8'">
+         <div class="input-group">
+             <input [(ngModel)]="universityIdSearch"  min="1" name="universityIdSearch" type="number">
+             <span class="input-group-btn">
+                  <button type="button" [disabled]="!universityIdSearch" (click)="getInputInstitute(universityIdSearch,'university')" class="btn btn-primary">Go!</button>
+             </span>
+         </div>
+     </div>
+ </div>    
+
+ <div [mysize]="'1'">
+      <button type="button" disabled="disabled" class="no-action btn btn-round btn-default pull-right">OR</button>
+ </div>
+ <div [mysize]="'6'">
+     <label [mysize]="'4'" style="padding-left:0px">Search By Name</label>
+     <div [mysize]="'8'">
+           <ng-select [allowClear]="true"
+                [items]="instituteAutoSuggestorItems"
+                [disabled]="disabled"
+                (data)="refreshValue($event)"
+                (selected)="selected($event)"
+                (removed)="removed($event)"
+                (typed)="typed($event)"                                  
+                placeholder="Search Parent Entity">
+            </ng-select>
+     </div>
+ </div>
+</div>
+
+</div>
+
+<template [ngIf]="autoSuggestorType == 'domestic'">
+    <div class="form-group" *ngIf="suggestionType == 'institute' || suggestionType == 'instituteUniversity' || suggestionType=='all' ">
+        <div class="row">
+             <div [mysize]="'5'">
+                 <label [mysize]="'4'" style="padding-left:0px">Institute Id</label>
+                 <div [mysize]="'8'">
+                     <div class="input-group">
+                         <input [(ngModel)]="instituteIdSearch"  min="1" name="instituteIdSearch" type="number">
+                         <span class="input-group-btn">
+                              <button type="button" [disabled]="!instituteIdSearch" (click)="getInputInstitute(instituteIdSearch,'institute')" class="btn btn-primary">Go!</button>
+                         </span>
+                     </div>
+                 </div>
+             </div>                       
+        </div> 
+    </div>
+</template>

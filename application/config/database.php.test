@@ -1,0 +1,446 @@
+<?php  if (!defined('BASEPATH')) exit('No direct script access allowed');
+/*
+ * | -------------------------------------------------------------------
+ * | DATABASE CONNECTIVITY SETTINGS
+ * | -------------------------------------------------------------------
+ * | This file will contain the settings needed to access your database.
+ * |
+ * | For complete instructions please consult the "Database Connection"
+ * | page of the User Guide.
+ * |
+ * | -------------------------------------------------------------------
+ * | EXPLANATION OF VARIABLES
+ * | -------------------------------------------------------------------
+ * |
+ * |	['hostname'] The hostname of your database server.
+ * |	['username'] The username used to connect to the database
+ * |	['password'] The password used to connect to the database
+ * |	['database'] The name of the database you want to connect to
+ * |	['dbdriver'] The database type. ie: mysql.  Currently supported:
+ * 				 mysql, mysqli, postgre, odbc, mssql
+ * 				 |	['dbprefix'] You can add an optional prefix, which will be added
+ * 				 |				 to the table name when using the  Active Record class
+ * 				 |	['pconnect'] TRUE/FALSE - Whether to use a persistent connection
+ * 				 |	['db_debug'] TRUE/FALSE - Whether database errors should be displayed.
+ * 				 |	['cache_on'] TRUE/FALSE - Enables/disables query caching
+ * 				 |	['cachedir'] The path to the folder where cache files should be stored
+ * 				 |	['char_set'] The character set used in communicating with the database
+ * 				 |	['dbcollat'] The character collation used in communicating with the database
+ * 				 |
+ * 				 | The $active_group variable lets you choose which connection group to
+ * 				 | make active.  By default there is only one group (the "default" group).
+ * 				 |
+ * 				 | The $active_record variables lets you determine whether or not to load
+ * 				 | the active record class
+ * 				 */
+
+$active_group = "302";
+$active_record = TRUE;
+
+/*
+$db['sums']['hostname'] = "localhost";
+$db['sums']['username'] = "shiksha";
+$db['sums']['password'] = "shiKm7Iv80l";
+$db['sums']['database'] = "SUMS";
+$db['sums']['dbdriver'] = "mysqli";
+$db['sums']['dbprefix'] = "";
+$db['sums']['pconnect'] = TRUE;
+$db['sums']['db_debug'] = TRUE;
+$db['sums']['cache_on'] = FALSE;
+$db['sums']['cachedir'] = "";
+$db['sums']['char_set'] = "utf8";
+$db['sums']['dbcollat'] = "utf8_general_ci";
+*/
+
+/*
+ *     DATABASE SETTINGS
+ *     */
+if (SHIKSHA_ENV == 'local'|| SHIKSHA_ENV == 'dev')
+{
+    /*
+    $db['default']['hostname'] = "localhost";
+    $db['default']['username'] = "shiksha";
+    $db['default']['password'] = "shiKm7Iv80l";
+    $db['default']['database'] = "shiksha";
+    $db['default']['dbdriver'] = "mysqli";
+    $db['default']['dbprefix'] = "";
+    $db['default']['pconnect'] = TRUE;
+    $db['default']['db_debug'] = TRUE;
+    $db['default']['cache_on'] = FALSE;
+    $db['default']['cachedir'] = "";
+    $db['default']['char_set'] = "utf8";
+    $db['default']['dbcollat'] = "utf8_general_ci";
+    $db['default']['machine'] = "default";
+    */
+
+    $db['302']['hostname'] = "localhost";
+    $db['302']['username'] = "shiksha";
+    $db['302']['password'] = "shiKm7Iv80l";
+    $db['302']['database'] = "shiksha";
+    $db['302']['dbdriver'] = "mysqli";
+    $db['302']['dbprefix'] = "";
+    $db['302']['pconnect'] = TRUE;
+    $db['302']['db_debug'] = TRUE;
+    $db['302']['cache_on'] = FALSE;
+    $db['302']['cachedir'] = "";
+    $db['302']['char_set'] = "utf8";
+    $db['302']['dbcollat'] = "utf8_general_ci";
+    $db['302']['machine'] = "302";
+
+    $db['124']['hostname'] = "localhost";
+    $db['124']['username'] = "shiksha";
+    $db['124']['password'] = "shiKm7Iv80l";
+    $db['124']['database'] = "shiksha";
+    $db['124']['dbdriver'] = "mysqli";
+    $db['124']['dbprefix'] = "";
+    $db['124']['pconnect'] = TRUE;
+    $db['124']['db_debug'] = TRUE;
+    $db['124']['cache_on'] = FALSE;
+    $db['124']['cachedir'] = "";
+    $db['124']['char_set'] = "utf8";
+    $db['124']['dbcollat'] = "utf8_general_ci";
+    $db['124']['machine'] = "124";
+
+    $db['168']['hostname'] = "localhost";
+    $db['168']['username'] = "shiksha";
+    $db['168']['password'] = "shiKm7Iv80l";
+    $db['168']['database'] = "shiksha";
+    $db['168']['dbdriver'] = "mysqli";
+    $db['168']['dbprefix'] = "";
+    $db['168']['pconnect'] = TRUE;
+    $db['168']['db_debug'] = TRUE;
+    $db['168']['cache_on'] = FALSE;
+    $db['168']['cachedir'] = "";
+    $db['168']['char_set'] = "utf8";
+    $db['168']['dbcollat'] = "utf8_general_ci";
+    $db['168']['machine'] = "168";
+
+    $db['201']['hostname'] = "localhost";
+    $db['201']['username'] = "shiksha";
+    $db['201']['password'] = "shiKm7Iv80l";
+    $db['201']['database'] = "shiksha";
+    $db['201']['dbdriver'] = "mysqli";
+    $db['201']['dbprefix'] = "";
+    $db['201']['pconnect'] = TRUE;
+    $db['201']['db_debug'] = TRUE;
+    $db['201']['cache_on'] = FALSE;
+    $db['201']['cachedir'] = "";
+    $db['201']['char_set'] = "utf8";
+    $db['201']['dbcollat'] = "utf8_general_ci";
+    $db['201']['machine'] = "201";
+      
+    $db['sumsread']['hostname'] = "localhost";
+    $db['sumsread']['username'] = "shiksha";
+    $db['sumsread']['password'] = "shiKm7Iv80l";
+    $db['sumsread']['database'] = "SUMS";
+    $db['sumsread']['dbdriver'] = "mysqli";
+    $db['sumsread']['dbprefix'] = "";
+    $db['sumsread']['pconnect'] = TRUE;
+    $db['sumsread']['db_debug'] = TRUE;
+    $db['sumsread']['cache_on'] = FALSE;
+    $db['sumsread']['cachedir'] = "";
+    $db['sumsread']['char_set'] = "utf8";
+    $db['sumsread']['dbcollat'] = "utf8_general_ci";
+    $db['sumsread']['machine'] = "sumsread";
+
+    $db['sumswrite']['hostname'] = "localhost";
+    $db['sumswrite']['username'] = "shiksha";
+    $db['sumswrite']['password'] = "shiKm7Iv80l";
+    $db['sumswrite']['database'] = "SUMS";
+    $db['sumswrite']['dbdriver'] = "mysqli";
+    $db['sumswrite']['dbprefix'] = "";
+    $db['sumswrite']['pconnect'] = TRUE;
+    $db['sumswrite']['db_debug'] = TRUE;
+    $db['sumswrite']['cache_on'] = FALSE;
+    $db['sumswrite']['cachedir'] = "";
+    $db['sumswrite']['char_set'] = "utf8";
+    $db['sumswrite']['dbcollat'] = "utf8_general_ci";
+    $db['sumswrite']['machine'] = "sumswrite";
+    
+    $db['mailer']['hostname'] = "localhost";
+    $db['mailer']['username'] = "shiksha";
+    $db['mailer']['password'] = "shiKm7Iv80l";
+    $db['mailer']['database'] = "mailer";
+    $db['mailer']['dbdriver'] = "mysqli";
+    $db['mailer']['dbprefix'] = "";
+    $db['mailer']['pconnect'] = TRUE;
+    $db['mailer']['db_debug'] = TRUE;
+    $db['mailer']['cache_on'] = FALSE;
+    $db['mailer']['cachedir'] = "";
+    $db['mailer']['char_set'] = "utf8";
+    $db['mailer']['dbcollat'] = "utf8_general_ci";
+    $db['mailer']['machine'] = "mailer";
+    
+    $db['ndnc']['hostname'] = "localhost"; // change with NDNC MYSQL SERVER IP
+    $db['ndnc']['username'] = "shiksha";
+    $db['ndnc']['password'] = "shiKm7Iv80l";
+    $db['ndnc']['database'] = "DNC";
+    $db['ndnc']['dbdriver'] = "mysqli";
+    $db['ndnc']['dbprefix'] = "";
+    $db['ndnc']['active_r'] = TRUE;
+    $db['ndnc']['pconnect'] = TRUE;
+    $db['ndnc']['db_debug'] = TRUE;
+    $db['ndnc']['cache_on'] = FALSE;
+    $db['ndnc']['cachedir'] = "";
+    $db['ndnc']['char_set'] = "utf8";
+    $db['ndnc']['dbcollat'] = "utf8_general_ci";
+    $db['ndnc']['machine'] = "ndnc";
+}
+elseif(SHIKSHA_ENV == 'qa')
+{
+    /*	
+    $db['default']['hostname'] = "172.16.3.247";
+    $db['default']['username'] = "shiksha";
+    $db['default']['password'] = "shiKm7Iv80l";
+    $db['default']['database'] = "shiksha";
+    $db['default']['dbdriver'] = "mysqli";
+    $db['default']['dbprefix'] = "";
+    $db['default']['pconnect'] = TRUE;
+    $db['default']['db_debug'] = TRUE;
+    $db['default']['cache_on'] = FALSE;
+    $db['default']['cachedir'] = "";
+    $db['default']['char_set'] = "utf8";
+    $db['default']['dbcollat'] = "utf8_general_ci";
+    */
+
+    $db['302']['hostname'] = "172.16.3.248";
+    $db['302']['username'] = "shiksha";
+    $db['302']['password'] = "shiKm7Iv80l";
+    $db['302']['database'] = "shiksha";
+    $db['302']['dbdriver'] = "mysqli";
+    $db['302']['dbprefix'] = "";
+    $db['302']['pconnect'] = TRUE;
+    $db['302']['db_debug'] = TRUE;
+    $db['302']['cache_on'] = FALSE;
+    $db['302']['cachedir'] = "";
+    $db['302']['char_set'] = "utf8";
+    $db['302']['dbcollat'] = "utf8_general_ci";
+
+    $db['124']['hostname'] = "172.16.2.222";
+    $db['124']['username'] = "shiksha";
+    $db['124']['password'] = "shiKm7Iv80l";
+    $db['124']['database'] = "shiksha";
+    $db['124']['dbdriver'] = "mysqli";
+    $db['124']['dbprefix'] = "";
+    $db['124']['pconnect'] = TRUE;
+    $db['124']['db_debug'] = TRUE;
+    $db['124']['cache_on'] = FALSE;
+    $db['124']['cachedir'] = "";
+    $db['124']['char_set'] = "utf8";
+    $db['124']['dbcollat'] = "utf8_general_ci";
+
+    $db['168']['hostname'] = "172.16.2.222";
+    $db['168']['username'] = "shiksha";
+    $db['168']['password'] = "shiKm7Iv80l";
+    $db['168']['database'] = "shiksha";
+    $db['168']['dbdriver'] = "mysqli";
+    $db['168']['dbprefix'] = "";
+    $db['168']['pconnect'] = TRUE;
+    $db['168']['db_debug'] = TRUE;
+    $db['168']['cache_on'] = FALSE;
+    $db['168']['cachedir'] = "";
+    $db['168']['char_set'] = "utf8";
+    $db['168']['dbcollat'] = "utf8_general_ci";
+
+    $db['201']['hostname'] = "172.16.2.222";
+    $db['201']['username'] = "shiksha";
+    $db['201']['password'] = "shiKm7Iv80l";
+    $db['201']['database'] = "shiksha";
+    $db['201']['dbdriver'] = "mysqli";
+    $db['201']['dbprefix'] = "";
+    $db['201']['pconnect'] = TRUE;
+    $db['201']['db_debug'] = TRUE;
+    $db['201']['cache_on'] = FALSE;
+    $db['201']['cachedir'] = "";
+    $db['201']['char_set'] = "utf8";
+    $db['201']['dbcollat'] = "utf8_general_ci";
+      
+    $db['sumsread']['hostname'] = "172.16.2.222";
+    $db['sumsread']['username'] = "shiksha";
+    $db['sumsread']['password'] = "shiKm7Iv80l";
+    $db['sumsread']['database'] = "SUMS";
+    $db['sumsread']['dbdriver'] = "mysqli";
+    $db['sumsread']['dbprefix'] = "";
+    $db['sumsread']['pconnect'] = TRUE;
+    $db['sumsread']['db_debug'] = TRUE;
+    $db['sumsread']['cache_on'] = FALSE;
+    $db['sumsread']['cachedir'] = "";
+    $db['sumsread']['char_set'] = "utf8";
+    $db['sumsread']['dbcollat'] = "utf8_general_ci";
+
+    
+    $db['mailer']['hostname'] = "172.16.3.248";
+    $db['mailer']['username'] = "shiksha";
+    $db['mailer']['password'] = "shiKm7Iv80l";
+    $db['mailer']['database'] = "mailer";
+    $db['mailer']['dbdriver'] = "mysqli";
+    $db['mailer']['dbprefix'] = "";
+    $db['mailer']['pconnect'] = TRUE;
+    $db['mailer']['db_debug'] = TRUE;
+    $db['mailer']['cache_on'] = FALSE;
+    $db['mailer']['cachedir'] = "";
+    $db['mailer']['char_set'] = "utf8";
+    $db['mailer']['dbcollat'] = "utf8_general_ci";
+    
+    $db['sumswrite']['hostname'] = "172.16.3.248";
+    $db['sumswrite']['username'] = "shiksha";
+    $db['sumswrite']['password'] = "shiKm7Iv80l";
+    $db['sumswrite']['database'] = "SUMS";
+    $db['sumswrite']['dbdriver'] = "mysqli";
+    $db['sumswrite']['dbprefix'] = "";
+    $db['sumswrite']['pconnect'] = TRUE;
+    $db['sumswrite']['db_debug'] = TRUE;
+    $db['sumswrite']['cache_on'] = FALSE;
+    $db['sumswrite']['cachedir'] = "";
+    $db['sumswrite']['char_set'] = "utf8";
+    $db['sumswrite']['dbcollat'] = "utf8_general_ci";
+    
+    $db['ndnc']['hostname'] = "172.16.3.248"; // change with NDNC MYSQL SERVER IP
+    $db['ndnc']['username'] = "root";
+    $db['ndnc']['password'] = "";
+    $db['ndnc']['database'] = "DNC";
+    $db['ndnc']['dbdriver'] = "mysqli";
+    $db['ndnc']['dbprefix'] = "";
+    $db['ndnc']['active_r'] = TRUE;
+    $db['ndnc']['pconnect'] = TRUE;
+    $db['ndnc']['db_debug'] = TRUE;
+    $db['ndnc']['cache_on'] = FALSE;
+    $db['ndnc']['cachedir'] = "";
+    $db['ndnc']['char_set'] = "utf8";
+    $db['ndnc']['dbcollat'] = "utf8_general_ci";
+}
+elseif(SHIKSHA_ENV == 'live')
+{
+    /*
+     * IP Addresses of Machines are as following:
+     * 302: 10.208.66.240
+     * 124: 10.208.68.230
+     * 168: 10.208.64.60
+     * 201: 10.208.66.105
+     * Also, Sums read is currently set to 168 server and NDNC is set to 201 server
+    */
+    /*
+    $db['default']['hostname'] = "localhost";
+    $db['default']['username'] = "shiksha";
+    $db['default']['password'] = "shiKm7Iv80l";
+    $db['default']['database'] = "shiksha";
+    $db['default']['dbdriver'] = "mysqli";
+    $db['default']['dbprefix'] = "";
+    $db['default']['pconnect'] = TRUE;
+    $db['default']['db_debug'] = TRUE;
+    $db['default']['cache_on'] = FALSE;
+    $db['default']['cachedir'] = "";
+    $db['default']['char_set'] = "utf8";
+    $db['default']['dbcollat'] = "utf8_general_ci";
+    */
+
+    $db['302']['hostname'] = "10.208.66.240";
+    $db['302']['username'] = "shiksha";
+    $db['302']['password'] = "shiKm7Iv80l";
+    $db['302']['database'] = "shiksha";
+    $db['302']['dbdriver'] = "mysqli";
+    $db['302']['dbprefix'] = "";
+    $db['302']['pconnect'] = TRUE;
+    $db['302']['db_debug'] = TRUE;
+    $db['302']['cache_on'] = FALSE;
+    $db['302']['cachedir'] = "";
+    $db['302']['char_set'] = "utf8";
+    $db['302']['dbcollat'] = "utf8_general_ci";
+
+    $db['124']['hostname'] = "10.208.68.230";
+    $db['124']['username'] = "shiksha";
+    $db['124']['password'] = "shiKm7Iv80l";
+    $db['124']['database'] = "shiksha";
+    $db['124']['dbdriver'] = "mysqli";
+    $db['124']['dbprefix'] = "";
+    $db['124']['pconnect'] = TRUE;
+    $db['124']['db_debug'] = TRUE;
+    $db['124']['cache_on'] = FALSE;
+    $db['124']['cachedir'] = "";
+    $db['124']['char_set'] = "utf8";
+    $db['124']['dbcollat'] = "utf8_general_ci";
+
+    $db['168']['hostname'] = "10.208.64.60";
+    $db['168']['username'] = "shiksha";
+    $db['168']['password'] = "shiKm7Iv80l";
+    $db['168']['database'] = "shiksha";
+    $db['168']['dbdriver'] = "mysqli";
+    $db['168']['dbprefix'] = "";
+    $db['168']['pconnect'] = TRUE;
+    $db['168']['db_debug'] = TRUE;
+    $db['168']['cache_on'] = FALSE;
+    $db['168']['cachedir'] = "";
+    $db['168']['char_set'] = "utf8";
+    $db['168']['dbcollat'] = "utf8_general_ci";
+
+    $db['201']['hostname'] = "10.208.66.105";
+    $db['201']['username'] = "shiksha";
+    $db['201']['password'] = "shiKm7Iv80l";
+    $db['201']['database'] = "shiksha";
+    $db['201']['dbdriver'] = "mysqli";
+    $db['201']['dbprefix'] = "";
+    $db['201']['pconnect'] = TRUE;
+    $db['201']['db_debug'] = TRUE;
+    $db['201']['cache_on'] = FALSE;
+    $db['201']['cachedir'] = "";
+    $db['201']['char_set'] = "utf8";
+    $db['201']['dbcollat'] = "utf8_general_ci";
+
+    
+    $db['mailer']['hostname'] = "10.208.66.105";
+    $db['mailer']['username'] = "shiksha";
+    $db['mailer']['password'] = "shiKm7Iv80l";
+    $db['mailer']['database'] = "mailer";
+    $db['mailer']['dbdriver'] = "mysqli";
+    $db['mailer']['dbprefix'] = "";
+    $db['mailer']['pconnect'] = TRUE;
+    $db['mailer']['db_debug'] = TRUE;
+    $db['mailer']['cache_on'] = FALSE;
+    $db['mailer']['cachedir'] = "";
+    $db['mailer']['char_set'] = "utf8";
+    $db['mailer']['dbcollat'] = "utf8_general_ci";
+    
+    $db['sumsread']['hostname'] = "10.208.64.60";
+    $db['sumsread']['username'] = "shiksha";
+    $db['sumsread']['password'] = "shiKm7Iv80l";
+    $db['sumsread']['database'] = "SUMS";
+    $db['sumsread']['dbdriver'] = "mysqli";
+    $db['sumsread']['dbprefix'] = "";
+    $db['sumsread']['pconnect'] = TRUE;
+    $db['sumsread']['db_debug'] = TRUE;
+    $db['sumsread']['cache_on'] = FALSE;
+    $db['sumsread']['cachedir'] = "";
+    $db['sumsread']['char_set'] = "utf8";
+    $db['sumsread']['dbcollat'] = "utf8_general_ci";
+
+    $db['sumswrite']['hostname'] = "10.208.66.240";
+    $db['sumswrite']['username'] = "shiksha";
+    $db['sumswrite']['password'] = "shiKm7Iv80l";
+    $db['sumswrite']['database'] = "SUMS";
+    $db['sumswrite']['dbdriver'] = "mysqli";
+    $db['sumswrite']['dbprefix'] = "";
+    $db['sumswrite']['pconnect'] = TRUE;
+    $db['sumswrite']['db_debug'] = TRUE;
+    $db['sumswrite']['cache_on'] = FALSE;
+    $db['sumswrite']['cachedir'] = "";
+    $db['sumswrite']['char_set'] = "utf8";
+    $db['sumswrite']['dbcollat'] = "utf8_general_ci";
+    
+    $db['ndnc']['hostname'] = "10.208.66.105";
+    $db['ndnc']['username'] = "shiksha";
+    $db['ndnc']['password'] = "Km7Iv80l";
+    $db['ndnc']['database'] = "DNC";
+    $db['ndnc']['dbdriver'] = "mysqli";
+    $db['ndnc']['dbprefix'] = "";
+    $db['ndnc']['active_r'] = TRUE;
+    $db['ndnc']['pconnect'] = TRUE;
+    $db['ndnc']['db_debug'] = TRUE;
+    $db['ndnc']['cache_on'] = FALSE;
+    $db['ndnc']['cachedir'] = "";
+    $db['ndnc']['char_set'] = "utf8";
+    $db['ndnc']['dbcollat'] = "utf8_general_ci";
+    $db['ndnc']['port'] = "3307";
+    $db['ndnc']['socket'] = "/tmp/mysql_dnc.sock";
+}
+
+

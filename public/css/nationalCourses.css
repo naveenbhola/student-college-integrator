@@ -1,0 +1,758 @@
+#management-wrapper{padding:0 3px; }
+#management-content-wrap{width:100%; float:left;  color:#000;}
+#management-header{margin:0 0 0 4px}
+.col-logo{width:273px; float:right; margin:4px 0px 20px 0; border:1px solid #D5D5D5; position:relative;}
+.col-logo > img{margin:10px;}
+.col-logo ul{padding:8px 0 6px 27px; background:#f9f9f9}
+.col-logo ul li{list-style:disc; color:#373737; padding-bottom:4px; line-height:16px}
+.col-logo ul li span{font-size:15px; margin:0 1px; line-height:5px; position:relative; top:1px}
+.management-title{float:left; width:100%; margin:12px 0 20px}
+.management-title h1{font:normal 26px/33px "Open Sans" ; margin:4px 0 5px; display:block}
+.management-title a.inst-name{font-size:16px; margin:3px 10px 5px 0;}
+#management-left{width:670px;float:left; }
+#management-right{width:275px; float:right;}
+.manage-contact-btn{outline:none; padding:4px 5px; margin:0 !important; border:1px solid #dfdfdf;font-size:14px !important; color:#000 !important; text-decoration:none !important; background:#f9f9f9; display:inline-block;}
+.sms-icon, .sms-icon2{background-position:-146px 0 !important; width:19px; height:14px; margin-right:5px;}
+.sms-icon2{background-position:-343px 0  !important;}
+.sprite-bg, .cmnt-icon{background:url(../images/management-sprite.png) no-repeat; display:inline-block;font-style:none; vertical-align:middle; position:relative}
+.up-arrow, .dwn-arrow{background-position:-227px -12px; width:19px; height:10px; float:right; margin-top:6px}
+.dwn-arrow{background-position:-227px 0px}
+.degree-icon{background-position:0px -1px; width:24px; height:14px; top:4px}
+.recognition-icon{background-position:-357px -135px; width:14px; height:14px;}
+.affiliation-icon{background-position:-376px -135px; width:11px; height:21px;}
+.institute-icon{background-position:-26px 0; width:15px; height:15px; top:3px}
+.rank-icon{background-position:-43px 0px; width:17px ; height:17px; top:2px}
+.rupee-icon{background-position:0px -18px; width:18px; height:18px; top:3px}
+.salary-icon{background-position:-129px 0px; width:12px; height:12px; top:5px}
+.duration-icon{background-position:-112px 0px;width:14px; height:14px; top:3px}
+.feature-icon{background-position:-128px 0px;width:16px; height:16px;}
+.degree-icon, .affiliation-icon, .institute-icon, .rank-icon, .rupee-icon, .salary-icon, .duration-icon, .feature-icon, .done-icon{margin-right:4px;}
+.orange-clr{background:#eea234; color:#fff !important; font-weight:400;border: 1px solid #eea234}
+.option-txt{font-size:14px; text-indent:20px; display:block}
+.done-icon{background-position:-167px 0px; width:17px; height:17px; top:2px}
+.placement-icon{background-position:-187px 0; width:19px; height:20px; top:3px}
+.col-left-arrow{background-position:-185px -21px; width:13px; height:19px; position:absolute; left:-12px; top:8px}
+.form-wrap{padding:18px 10px 0 10px}
+.form-wrap p{margin-bottom:10px}
+.brochure-form, .collapsed-widget{border:1px solid #d5d5d5; position:relative; margin-bottom:40px; clear:left}
+.brochure-form h5, .collapsed-widget h5{padding:5px 0 7px 0px; font:bold 15px "Open Sans";background:#f9f9f9; line-height:23px; border-bottom:6px  solid #eea234; position:relative ;cursor:pointer;}
+.brochure-form h5{display:table; width:100%}
+.collapsed-widget h5{border-color:#4573b1; border-bottom:none; height:42px;}
+.icon-wrap{display:table-cell; width:60px; vertical-align:top}
+.download-icon, .download-icon-done{background-position:-33px -77px; width:40px; height:40px; margin:4px 0px 0 8px;}
+.download-icon-done{background-position:-109px -135px;}
+.collapsed, .collapsed-widget{width:99%; position:relative; margin-bottom:20px;}
+.collapsed h5, .collapsed-widget h5{border-right:6px solid #eea234; border-bottom:0 none; display:block; width:auto}
+.collapsed-widget h5{border-right:6px solid #5482c1;}
+.collapsed h5 p, .brochure-form h5 p, .collapsed-widget h5 p{display:table-cell; vertical-align:middle; padding-right: 10px}
+.brochure-form .pointer{bottom:-10px; left:15px; background-position:-284px -135px; width:21px; height:10px; position:absolute}/*Orange*/
+
+/*CSS Hack for Chrome*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+ .brochure-form .pointer{bottom:-16px;}
+}
+.collapsed .pointer, .collapsed-widget .pointer{right:-5px; top:14px; background-position:-283px -146px; width:15px; height:30px; position:absolute; left:auto}/*Orange Collapsed*/
+.collapsed-widget .pointer{background-position:-299px -146px; top:13px}/*Blue*/
+.talk-widget .pointer{border-right-color:#4573b1; top:26px}
+.talk-widget{background:#efefef; border:1px solid #dfdfdf; margin-bottom:25px;}
+.talk-widget-content{padding:0 15px 12px 20px; overflow: hidden;}
+.talk-widget ul{float: left; margin-bottom:10px;}
+.talk-widget ul li{float:left; margin:0 16px 0 0; width:60px;}
+.talk-widget ul li img{width:58px; height:43px}
+.talk-comment{margin-top:12px}
+.talk-comment p{width:100px; padding:0 !important; font-size:14px !important;  color:#282828;}
+.participate-btn{color:#fff !important; background:#6993cd; padding:5px 8px; font-weight:bold;}
+.talk-icon2{background-position:-116px -77px; width:45px; height:40px; float:left; margin-right:8px; margin-top:4px;}
+.talk-widget p{padding:10px 5px 13px 5px; font-size:15px; line-height:23px;}
+.analytics-cont{border:1px solid #dfdfdf; font-size:12px}
+.analytics-cont h6{font-size:14px; padding:10px 0 10px 10px; font-weight:normal}
+.analytics-cont ul{padding:0 10px 5px 20px;}
+.analytics-cont ul li{list-style:disc; color:#d5d5d5; margin-bottom:6px}
+.analytics-cont ul li p{color:#666666;}
+.animation-list{margin-bottom:40px;}
+.other-details-wrap, .animation-list{margin-bottom:40px}
+.other-details-wrap h2{font-size:18px; font-style:bold; padding-bottom:6px; border-bottom:1px solid #d5d5d5; color:#333}
+.loc-icon{background-position:-248px 0; width:14px; height:20px; margin-right:5px; vertical-align:middle; top:3px}
+#contact-box{float:left; width:100%}
+#contact-box ul li{color:#000; margin-bottom:8px; float:left; width:100%; line-height:25px}
+#contact-box ul li#Button_2{margin-bottom:0 !important}
+#contact-box .manage-contact-btn{padding:0px 12px 2px}
+#contact-box ul li p{margin-left:27px; font-size:16px;}
+#contact-box p a{ color:#000;}
+#contact-box p strong{ color:#707070; font-weight:normal; margin-right:8px}
+.add-details{width:552px}
+.phone-button:hover{ text-decoration:none;}
+.email-icon{background-position:-264px 0; width:17px; height:14px; margin-right:5px; top:6px}
+.contact-icon{background-position:-336px -45px; width:14px; height:18px; margin-right:5px; top:4px}
+.confirm-icon{background-position:-315px -45px; width:18px; height:14px; margin-right:5px; top:4px; float:left}
+.confirm-msg{margin-bottom:20px; font-size:15px; color:#424242; font-weight:bold}
+.confirm-msg p{margin-left:27px; line-height:20px}
+.acc-arrow{background-position:0 -116px; width:15px; height:10px; float:right;}
+.orange-btn2{padding:14px 30px; background:#eea234;/* -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px;*/ color:#fff !important; text-align:center; font-size:14px; display:block;text-decoration:none !important; font-weight:400;}
+.photo-vid-tab{font-size:16px;margin-bottom:25px;}
+.photo-vid-tab a{color:#0566db; text-decoration:none; padding-bottom:3px}
+.photo-vid-tab a:hover, .photo-vid-tab a.active{ border-bottom:2px solid #eea234; color:#000 !important;}
+.photo-vid-tab span{color:#d6d5d5; margin:0 4px}
+.slider-cont{clear:left; padding:25px 10px 10px}
+.slider-img-box{width:591px; float:left; margin:0 18px 0 3px}
+.slider-img-box ul li{width:100%;}
+.slider-img-box ul li img{margin-left:15px;}
+.slide-prev, .slide-next{float:left; width:40px;  margin:34px 0 0 0px; cursor:pointer}
+.slide-next{background-position:-98px -77px; width:16px; height:37px;}
+.slide-prev{background-position:-75px -77px; width:16px; height:37px;}
+ol.company-list{margin:10px 0 25px 0; padding:0}
+ol.company-list li{margin:0 7px 0 0; width:auto}
+.download-icon-2, .disabled-button .download-icon-2,.download-icon-3{background-position:-162px -60px; width:27px; height:26px; margin-right:5px;}
+.disabled-button .download-icon-2{background-position:-162px -88px;}
+.talk-icon{background-position:-210px 0; width:15px; height:17px; margin-right:5px;}
+.fax-icon{background-position:-267px -135px; width:16px; height:16px; margin-right:5px;}
+.web-icon{background-position:-283px 0; width:21px; height:13px;margin-right:5px; top:6px}
+.salary-levels{float:left; width:75px; border-right:1px solid #d5d5d5; margin-top:0; padding-right:8px;padding-bottom: 10px;}
+.salary-levels p{margin:0 !important; color:#7c7c7c; font-size:12px; text-align:right; line-height:25px}
+ol.salary-bar{margin:0px !important; padding:0; float:left; width:280px;}
+ol.salary-bar li{display:block; margin:8px 0 0px 0 !important; width:100%; line-height:normal !important; padding:0 !important; border:0 none !important}
+ol.salary-bar li label{color:#686868; margin-left:6px; font-size: 12px; vertical-align:top}
+.min-bar, .avg-bar, .max-bar{width:100px; background:#f3f786; border-top:2px solid #e7ed4c; border-radius:0px 3px 0 0; height:10px; float:left}
+.avg-bar{background:#b1d0f7; border-top:2px solid #88b4ec;}
+.max-bar{background:#c8e956; border-top:2px solid #abcc3a;}
+.graph-scale{background-position:-33px -42px; width:259px; height:16px; position:relative; left:-4px; top:-5px}
+.imp-dates{margin:0; padding:10px 0 0 5px}
+.imp-dates li{float:left; width:135px; color:#666666}
+.imp-dates li strong{display:block; margin:8px 0 4px; font-size:14px}
+.steps-arrow{width:28px !important; margin:0 10px 0 5px;}
+.calender-box{width:63px;}
+.calen-child-box{border:1px solid #e1e1e1; color:#666666; text-align:center; font-size:14px; padding-bottom:5px; font-size:14px;}
+.cal-day{background:#e36f46; color:#fff;text-align:center; border-bottom:1px solid #e6e6e6; font-weight:bold; margin:0 0 8px 0; padding:1px 0;}
+.cal-points{background-position:-160px -117px; width:60px; height:2px; overflow:hidden}
+.content-arrow{background-position:0px -45px; width:28px; height:87px;}
+.phone-icon{background-position:-168px -23px; width:14px; height:16px; margin-right:8px;}
+ul.form-list li{margin-bottom:14px; width:100%; float:left}
+.form-wrap .universal-txt-field{ width:95%;}
+.form-wrap .universal-select{width:99%}
+.clear-width{width:100%; float:left}
+.font-13{font-size:13px}
+.font-14{ font-size:14px}
+#accordion{word-wrap:break-word}
+#accordion ul{margin-left:16px}
+#accordion ul li{font-size:14px; color:#000}
+#accordion ul li ul li, #accordion ul li ol li, #accordion ol li ol li, #accordion ol li ul li{margin-left:10px}
+.accordian-details{padding:10px 0 5px}
+#accordion h3{font:normal 18px !important; color:#797979; border-bottom:1px solid #dfdfdf; padding:14px 0; cursor:pointer; overflow:hidden}
+#accordion h3 span{width:96%}
+.mb14{margin-bottom:14px !important}
+.mb12{margin-bottom:12px !important}
+.mb5{margin-bottom:5px !important}
+.font-21{ font-size:21px;}
+.font-20{ font-size:20px;}
+.font-11{ font-size:11px;}
+
+/*Layer Css*/
+.management-layer{width:470px; margin:0 auto; border:2px solid #5e5e5e; padding:10px 15px 15px;background:#fff; font-size:14px}
+.management-layer .layer-title-txt{font-size:18px; font-weight:bold; margin-right:25px;}
+.layer-head{margin-bottom:15px;}
+.photo-slider-cont{width:100%; position:relative;}
+.photo-thumbs{margin-top:20px; padding:0 12px}
+.photo-thumbs ul{float:left; width:400px; margin-left:20px}
+.photo-thumbs ul li{list-style:none; margin-right:14px; float:left; width:63px; height:44px;overflow:hidden}
+.photo-thumbs ul li img{border:1px solid #aaaaaa}
+.photo-thumbs ul li.active{border:3px solid #e0e0e0}
+.photo-thumbs ul li:last-child{margin-right:0 !important;}
+.cross-icon{background-position:-323px 0; width:19px; height:16px; top:5px; right:-4px}
+.prev-thumb, .next-thumb{background-position:-272px -77px; width:13px; height:26px; margin:10px 0px 0 0px;}
+.next-thumb{background-position:-287px -77px; margin:10px 0px 0 0px;}
+.thumb-numbers{font-size:14px; margin:5px 0 0 33px;}
+.photo-slider-cont .prev-arr-box, .photo-slider-cont .next-arr-box, .photo-slider-cont .prev-active{width:36px; height:48px; background:rgba(246, 246, 247, 0.6); display:block; position:absolute;top:39%; left:0; text-align:center}
+.photo-slider-cont .next-arr-box{left:auto; right:0;}
+.prev-arr-icn, .next-arr-icn{background-position:-232px -77px; width:18px; height:38px;margin:5px 0 0 -2px}
+.next-arr-icn{background-position:-252px -77px; margin:5px 0 0 4px}
+.photo-slider-cont .prev-active, .photo-slider-cont .next-active{background:rgba(124, 124, 124, 0.6);}
+.photo-slider-cont .prev-active .prev-arr-icn{background-position:-191px -77px;}
+.photo-slider-cont .next-active .next-arr-icn{background-position:-212px -77px;}
+.phot-caption{font-size:14px;}
+
+/*Company Layer Css*/
+.company-thumbs{width:100%;}
+.company-thumbs ul{float:left; width:390px;}
+.company-thumbs ul li{list-style:none !important; float:left; width:100%; margin:0 0 10px 0 !important; border-bottom:none !important; padding:0 !important; list-style: none !important}
+.company-thumbs ul li img{float:left; width:118px; height:38px;margin:0 10px 0px 0px;}
+.company-thumbs ul li img:last-child{margin:0;}
+.last{margin-bottom:0px !important;}
+
+/*Sticky Navigation Css*/
+.sticky-nav, .horizontal-nav{width:118px;}
+.horizontal-nav{width:988px;}
+.sticky-nav ul, .horizontal-nav ul{background:#8a8889; overflow:hidden; display:table; width:100%; -moz-box-shadow:-5px 0 9px #7c7c7c inset; -webkit-box-shadow:-5px 0 9px #7c7c7c inset; box-shadow:-5px 0 9px #7c7c7c inset;}
+.horizontal-nav ul{-moz-box-shadow:1px 3px 4px #c1c0c0; -webkit-box-shadow:1px 3px 4px #c1c0c0; box-shadow:1px 3px 4px #c1c0c0;}
+.sticky-nav ul li{border-bottom:1px solid #9b999a; display:table-row; display:block;}
+.horizontal-nav ul li{border-right:1px solid #9b999a; display:table-cell; text-align:center; border-bottom:0 none}
+.jump-title{background:#c5c5c5; color:#fff; padding:3px 0px; margin:0 auto 4px auto; display:block; text-transform:uppercase;font-size:12px; text-align:center; width:66px;}
+.sticky-nav ul li a{color:#fff;padding:10px 0 10px 8px; display:block; text-decoration:none; font-size:14px; outline:0 none}
+.horizontal-nav ul li a{padding:10px 0}
+.jump-item{border:0 none !important; text-align:left; padding-left:10px}
+.jump-item .jump-title{margin:0;}
+.sticky-nav ul li.last, .sticky-nav ul li a:hover{background:#6d6d6d;}
+.sticky-nav ul li.last a:hover, .horizontal-nav ul li.last a:hover{background:#F78640; border:none;}
+.sticky-nav ul li.last, .horizontal-nav ul li.last{-moz-border-radius:0; -webkit-border-radius:0; border-radius:0}
+.included-box, .notincluded-box{width:50%; color:#d5e9ff;}
+.alumini-contents{font-size:15px}
+.alumini-contents ul{margin-top:25px;}
+.alumini-contents ul li label{line-height:23px;}
+.alumini-contents p{color:#535353; line-height:25px;margin:20px 0;}
+.alumini-contents p span{background:#f4f4f4; padding:2px 4px; color:#8a8a8a;}
+.rating-box{background:#f8f8f8; padding:15px; margin-bottom:25px}
+.rating-title{font-size:18px; color:#111; margin:0 0 5px 0}
+ul.rating-items{}
+ul.rating-items li{padding:5px 0;}
+ul.rating-items li label{width:355px; text-align:right; font-size:15px; color:#000; float:left; padding:2px 15px 0 0}
+ul.rating-items li label span{color:#a7a7a7;}
+.star-active-icon, .star-inactive-icon{background-position:-300px -21px; width:24px; height:22px; float:left; margin-right:5px;}
+.star-inactive-icon{background-position:-326px -21px;}
+.rate-points{color:#a7a7a7; line-height:24px; float:left; font-size: 14px}
+.rating-cols{width:185px;}
+.rating-child-cols{width: 148px; float: left;}
+.single-rating{text-align:left !important; width:auto !important; color:#000 !important}
+.grayFont-color{color:#515151;}
+.form-width{width:75%; float:left; padding-top:23px; padding-bottom:40px}
+.form-width ul li{margin-bottom:20px !important}
+.girl-brochure, .girl-reg-brochure{background:url(../images/brochure-girl.gif) 0 0 no-repeat; width:164px; height:276px; position:absolute; right:4px; bottom:0}
+.girl-reg-brochure{height:430px; right:40px; bottom:0}
+.font-18{font-size:18px !important; line-height:45px !important;}
+.bro-col-1, .bro-col-2{width:48%;}
+.bro-col-2{margin-left:10px;}
+
+/*Animation Listing Css*/
+.animation-list ul li{font-size:14px;padding:10px 0; border-bottom:1px solid #dfdfdf; line-height:22px; width: 100%; float: left}
+.animation-list ul li .details{color:#333; width: 100%}
+.criteria-icn-box{width:30px; text-align:center; vertical-align:top; float: left}
+.animation-list .title-txt2{font-size:13px; font-weight:bold; width:115px; padding-right:3px; float: left}
+.animation-list .criteria-content{width: 500px; float: left}
+.animation-list .criteria-content big{font-size:20px; font-weight:normal}
+.animation-list .exam-req big{font-size: 17px;}
+.animation-list .exam-req .sep-color{padding: 0px 7px;}
+.animation-list small{font-size:13px; color:#000}
+.label-sep{color:#c4c4c4; float: left; width: 12px}
+
+.animation-list .criteria-content p,.animation-list .criteria-content p{margin-bottom:12px}
+.tiny-content ol,.tiny-content ul{margin:0px 0 12px 21px; padding:0}
+.tiny-content ol li, .tiny-content ul li{list-style:decimal !important; border:0 none; margin:0 0 10px 0px; padding:0; line-height:19px !important}
+.tiny-content ul li{list-style:disc !important;}
+.tiny-content table{width:100%; border-collapsed:collapsed; border-color:#cacaca;}
+.tiny-content table tr td{padding:8px}
+/*Override Tiny Contents*/
+.tiny-content{line-height:20px !important; margin-bottom:15px}
+.tiny-content span, .tiny-content span{font-family:inherit !important; font-size:inherit !important; line-height:inherit !important}
+ol.animation-company-list{margin:0 !important; padding:0 !important;}
+ol.animation-company-list li{float:left; margin:0 7px 0 0 !important; padding:0 !important; width:118px; height:38px; list-style: none !important}
+ol.animation-company-list li:last-child{margin-right:0 !important;}
+.animation-content{padding:10px 10px 5px 0; color:#000; line-height:20px; position:relative; margin-top:15px;}
+.animation-content p{font-size:12px;}
+.animation-content ul{margin-top:15px;}
+.animation-content ul li{list-style:disc;color:#d5d5d5 !important;}
+.animation-content ul li p{color:#000;}
+.font-12{font-size:12px !important;}
+.branch-icon{background-position:-199px -24px; width:4px; height:8px; margin-left:5px; vertical-align:middle;}
+ul.info-cont{display:table; border:1px solid #dfdfdf; width:100%; margin-bottom:40px;}
+ul.info-cont li{display:table-cell; width:30%; text-align:center; position:relative; vertical-align:middle}
+ul.info-cont li a{text-decoration:none; display:block; padding:8px 10px; font-size:14px;}
+ul.info-cont li.course-link-orange, ul.info-cont li.course-link-gray{background:#eea234; width:32%}
+ul.info-cont li.course-link-gray{background:#f3f3f3;}
+ul.info-cont li.course-link-orange a, ul.info-cont li.course-link-gray a{color:#fff; font-size:16px !important}
+ul.info-cont li.course-link-gray a{color:#000;}
+.best-institute-icon{background-position:-205px -22px; width:20px; height:19px; vertical-align:bottom; margin-right:15px;}
+.best-institute-icon2{background-position:-268px -15px; width:27px; height:25px; margin:10px 10px 0 8px;float:left;}
+.chat-cloud-icon{background-position:-227px -23px; width:20px; height:16px; margin:0 10px; vertical-align:middle;}
+.person-icon{background-position:-247px -22px; width:18px; height:18px; margin-right:5px; top:3px}
+.register-heading{display:block; margin-left:45px;}
+ul.form-list{margin-top:18px;}
+.first-name, .last-name{width:47%;}
+.last-name{margin-left:12px;}
+.expert-icon, .app-icon{background-position:0 -135px; width:34px; height:33px; margin:5px 10px 0 8px}
+.app-icon{background-position:-69px -135px; width:36px; height:22px; margin-top:12px}
+ul.branch-list{width:100%; margin-bottom:20px; font-size:13px}
+ul.branch-list li{display:inline; width:23%; display:inline-block; margin-bottom:15px; position:relative; vertical-align:top; margin-right:7px}
+ul.branch-list li strong{font-weight:normal; display:block; margin-bottom:2px}
+.form-width2{width:60%; float:left; padding-top:23px}
+.form-width2 ul li{margin-bottom:15px !important}
+.ask-form{background:#f6f6f7; border:1px solid #dcdcdc; border-radius:4px; padding:15px;}
+.ask-form h5{font-size:18px; font-weight:bold; margin-bottom:10px; border:0 none; color:#333}
+.ask-form .universal-txt-field{width:95%;}
+.ask-col-1, .ask-col-2{width:32%;}
+.ask-col-1 span, .ask-col-2 span{color:#8b8177; font-size:14px;}
+.ask-col-1 label, .ask-col-2 label{display:block; margin-bottom:3px;}
+.ask-col-2{margin-left:10px;}
+ul.ask-que-list li{margin-bottom:10px; float:left; width:100%;}
+.sec-code-box{margin-top:8px}
+.sec-code-box img{vertical-align:middle;}
+.sec-code-box .universal-txt-field{width:100px;vertical-align:middle;}
+.ask-area{width:98%; box-shadow:0 1px 3px #E0E0E0 inset; border:1px solid #DBDBDB;border-radius:3px; padding:5px}
+.char-limit{font-size:11px; color:#767676}
+.que-icon{background-position:-41px -134px; width:25px; height:25px; margin-right:8px; top:-3px}
+.sep-color{color:#c8c8c8}
+.gray-label{color:#626262}
+/*Contact Layer CSS*/
+.contact-form{padding:0px;}
+.contact-form p{margin-bottom:10px}
+.contact-form .universal-txt-field{ width:95%;}
+.contact-form .universal-select{width:204px;}
+ul.contact-list{margin-top:20px;}
+ul.contact-list li{width:100%;margin-bottom:15px; float:left}
+.con-col-1, .con-col-2{width:200px;}
+.con-col-2{margin-left:15px;}
+a.submit-color{color:#fff; text-decoration:none; margin-top:4px; display:inline-block;}
+p.char-font{}
+.course-accordian {color:#000; position:relative; margin:15px 0 12px 0;}
+.course-accordian p{margin-bottom:15px;}
+.course-accordian ul, .course-accordian ol{margin:0 0 15px 0 !important; padding:0 !important}
+.course-accordian ul li, .course-accordian ol li{list-style:disc;color:#000 !important; margin:8px 0 0 23px !important; line-height:21px}
+
+
+
+/* CSS for Alumni Data Widget */
+.alumni-data-widget{margin:20px 0}
+.data-source-logo{background-position:0 -245px; width:86px; height:13px; display:inline-block; vertical-align:middle}
+.alumni-head{border-bottom:1px solid #D5D5D5; margin-bottom:15px; padding-bottom:5px}
+.alumni-head h2{font:bold 18px}
+.alumni-head p{color:#858585; padding-top:6px;}
+.alumni-head p img{top:4px; position:relative;}
+.alumni-details{padding-left:15px;}
+.alumni-details h4{border-bottom:1px solid #d5d5d5;color:#858585; font-size:18px; padding-bottom:5px; font-weight:normal; margin:0 0 10px 0px;}
+.alumni-sub-title{font-size:14px; color:#4a4a4a; font-weight:normal}
+.alumni-graph{margin:0 0 0 60px;}
+.specialization-box{font-size:14px; color:#858585;margin:0 0 15px 0px;}
+.specialization-opt{margin:5px 0 22px 0}
+.specialization-opt label{font-weight:bold; margin:5px 10px 0 0px; display:block;}
+.special-dropdown{border:1px solid #cacaca; padding:5px 8px; width:160px; box-shadow:0 1px 2px #CCCCCC;color:#858585; cursor:pointer; background:#f3f3f3; position:relative}
+.special-dropdown p{display:inline-block; width:125px}
+.dropdwn-arrow{background-position:-21px -195px; width:17px; height:9px; position:absolute; right:8px; top:38%}
+.specialization-cols h3{color:#898989; display:block; margin-bottom:14px; font-size:14px}
+.specialization-cols{width:48%;}
+ul.operations-list li{margin-bottom:12px;}
+ul.operations-list li label{font-size:14px; display:block; margin-bottom:2px; color:#656565}
+.specialization-bar,.specialization-bar2{background:#7cc3e1; height:12px; border-radius:2px 0 0 2px; width:60%; margin-top:3px}
+.specialization-bar2{background:#dec897;}
+.bar-caption{float:left; color:#a5a5a5; margin-left:7px}
+.special-dropdown-layer{background:#fff; width:246px; border:1px solid #cacaca; padding:10px; box-shadow:1px 2px 2px #ccc; position:absolute; left:-1px; top:28px; font-size:13px}
+.special-dropdown-layer ul{margin-left:15px;}
+.special-dropdown-layer ul li{list-style:disc; color:#ccc; margin-bottom:4px;}
+.course-accordian ol li{list-style:decimal !important; margin-left:28px !important}
+.collapsed-widget h5:hover{background:#e7f3ff;}
+.collapsed h5:hover{background:#fff6f0 !important;}
+p.course-contact{background:#fafafa; padding:6px 10px; font-weight:bold; clear:left}
+/* campus rep widget */
+.stdnt-edu-box{margin:7px 0 5px 0;}
+.stdnt-image{width:58px; float:left}
+.stdnt-image > img{height: 43px; width: 58px;}
+.stdt-detail{margin-left:70px}
+.stdnt-edu-box strong{font-size:12px; color:#7c7c7c; font-weight:bold; margin-bottom:3px; display:block}
+.stdnt-edu-box p{color:#2e2e2e; font-size:12px; padding:0; line-height:normal;}
+.current-stdnt-btn{font-size:9px; border:1px solid #c4c4c4; background:#fff; color:#555 !important; text-decoration:none !important; font-weight:bold; padding:4px 6px; text-transform:uppercase; display:inline-block; margin:2px 0 0 0; letter-spacing:1px}
+.gray-divider{overflow:hidden; width:100%; height:1px; margin:10px 0  10px 0; border-bottom:dashed 1px #c7c7c7}
+/*Animation Course List CSS*/
+ul.other-courses li{color:#908e8e; font-size:14px; list-style:disc; margin:0 10px 15px 20px;}
+.phone-icon2{background-position:-306px 0;height: 14px;margin-right:6px;width: 14px; vertical-align:middle; top:-1px;}
+.talk-wrap{margin-top:5px;}
+.person-image{width:58px; float:left}
+.person-detail{margin-left:70px}
+.talk-wrap strong{font-size:12px; color:#7c7c7c; font-weight:bold;}
+.talk-wrap p{color:#2e2e2e; font-size:12px; padding:0; line-height:17px;}
+.current-stu-btn{font-size:9px; border:1px solid #c4c4c4; background:#fff; color:#555 !important; text-decoration:none !important; font-weight:bold; padding:4px 6px; text-transform:uppercase; display:inline-block; margin:2px 0 0 0;}
+.disabled-button, .big-button-inactive{background:#9f9f9f !important; color:#cccccc !important; cursor:default !important}
+.course-accordian {padding:10px 10px 5px 0; color:#000; line-height:20px; position:relative; margin-top:15px;}
+.course-accordian p{font-size:12px;}
+.course-accordian ul{margin-top:15px;}
+.course-accordian ul li{list-style:disc;color:#000 !important;}
+
+.blue-rt-icon{background-position:-352px -22px; width:9px; height:5px; vertical-align:middle;}
+.locality-layer{width:145px; background:#eeeeee; border:1px solid #dbdbdb;padding:5px; position:absolute; top:20px; z-index:99;}
+.locality-layer p{color:#818181; font-size:13px;}
+.gray-dwn-icon{background-position:-352px -28px; width:5px; height:10px; vertical-align:middle; margin-left:8px;}
+.locality-layer ul{margin:6px 0 0 6px;}
+.locality-layer ul li{margin-bottom:8px;width:94%; display:block;}
+
+/*ScrollBar CSS*/
+.scrollbar1 .viewport, .scrollbar2 .viewport_h { overflow: hidden; position: relative;}
+.scrollbar1 .overview, .scrollbar2 .overview_h { list-style: none; padding: 0; margin: 0; position: absolute; left: 0; top: 0;}
+.scrollbar1 .scrollbar{position: relative; float: right; width:7px; visibility:hidden}
+.scrollbar1 .track, .locality-layer .track{background:#EAEAEA; height: 100%; width:2px;position:relative;}
+.scrollbar1 .thumb, .locality-layer .thumb{background:#EDEDED; height:90px; width:5px; cursor:pointer; overflow:hidden; position:absolute; top:0; left:-2px; border:1px solid #C7C7C7}
+.locality-layer .track{background:#D5D5D5;}
+.locality-layer .thumb{background:#fff;}
+.scrollbar1 .thumb .end{ background: transparent; overflow: hidden; height: 5px; width: 25px; }
+.scrollbar1 .disable{display: none;}
+.noSelect { user-select: none; -o-user-select: none; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none;}
+
+.scrollbar2 { /*width: 251px; margin: 0 0 10px; */}
+.scrollbar2 .scrollbar_h{position: relative; margin: 5px 0 0; clear: both; height:7px; visibility:hidden}
+.scrollbar2 .track_h { background: #EAEAEA; width: 100%; height:2px; position: relative; }
+.scrollbar2 .thumb_h { background: #EDEDED; height: 5px; width:90px; cursor: pointer; overflow: hidden; position: absolute; left: 0; top: -3px; border:1px solid #C7C7C7}
+.scrollbar2 .thumb_h .end_h{overflow: hidden; height: 25px; width: 5px;}
+.scrollbar2 .disable_h { display: none;}
+.overview table, .overview_h table{border-color:#CCCCCC; border-collapse:collapse; width:99%}
+.overview table td, .overview_h table td{padding:8px; border-color:#CCCCCC; vertical-align:top}
+/*ScrollBar CSS ENDS*/
+.multi-loc-layer{width:660px;}
+/*CSS3 Animations*/
+.collapsed-widget:hover .pointer, .collapsed h5:hover .pointer, .info-cont li:hover .download-icon-2{animation:slideLeft; -webkit-animation:slideLeft; -webkit-animation-duration: 0.3s; animation-duration: 0.3s; -webkit-animation-fill-mode: both; animation-fill-mode: both;}
+.info-cont li:hover .download-icon-2{animation:bounceY; -webkit-animation:bounceY; -webkit-animation-duration: 0.8s; animation-duration: 0.8s;}
+.info-cont li:hover .disabled-button .download-icon-2{animation:none; -webkit-animation:none;}
+@-webkit-keyframes bounceY {
+  0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0); transform: translateY(0);}
+  40% {-webkit-transform: translateY(-8px); transform: translateY(-8px);}
+  60% {-webkit-transform: translateY(-4px); transform: translateY(-4px);}
+}
+
+@keyframes bounceY {
+  0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0);}
+  40% {-webkit-transform: translateY(-8px); -ms-transform: translateY(-8px);transform: translateY(-8px);}
+  60% {-webkit-transform: translateY(-4px); -ms-transform: translateY(-4px);transform: translateY(-4px);
+  }
+}
+
+@-webkit-keyframes slideLeft {
+  0% {-webkit-transform: translateX(0px); transform: translateX(0px);}
+  100% {-webkit-transform: translateX(-4px); transform: translateX(-4px);}
+}
+
+@keyframes slideLeft {
+  0% {-webkit-transform: translateX(0px); -ms-transform: translateX(0px); transform: translateX(0px);}
+
+  100% {-webkit-transform: translateX(-4px); -ms-transform: translateX(-4px); transform: translateX(-4px); }
+}
+
+/** Course Page Campus Connect **/
+.cmnt-icon{background-position:-294px -46px; width:19px; height:15px;}
+.discussion-head{clear:left; display:block; margin-bottom:8px; overflow:hidden}
+.title-txt{font-size:14px; width:70% !important; margin:0 !important; line-height:20px; font-weight:bold}
+.total-cmts{font-size:14px; width:28%; text-align:right}
+.total-cmts p{display:block; margin-bottom:8px}
+.total-cmts span{display:block; font-size:12px; color:#888888}
+.current-discussion{background:#F6F6F6; display:table; width:100%}
+.current-discussion li{display:table-cell; vertical-align:top;}
+.current-discussion li.course-discussion{width:59%; padding:12px 0 12px 12px}
+.student-figure{width:58px; float:left}
+.student-figure img, .helper-box img{width:58px; height:52px}
+.discussion-details{margin-left:68px; overflow:hidden}
+.blue-btn{background:#fff; color:#555555; text-transform:uppercase; font:normal 9px "Open Sans" ; padding:4px 6px; display:inline-block; letter-spacing:1px; border: 1px solid #c4c4c4}
+.font-15{font-size:15px}
+.discussion-details .student-details{display:block; color:#2e2e2e; line-height:17px; margin:0px;}
+.discussion-details .student-details strong{color:#7c7c7c; width:62px; float:left; display:block;}
+.discussion-details .student-details span{margin-left:60px; display:block}
+.student-name{display:block; margin-bottom:8px}
+.student-name strong{display:inline-block; margin-bottom:6px}
+.student-name a{vertical-align:middle; margin-right:3px}
+.helper-box{background:#EDEDED; padding:12px 0; width:21%; border-right:3px solid #F6F6F6}
+.current-discussion .last{border:0 none; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0;}
+.helper-box p{display:block; margin-bottom:6px}
+.callout-box2{font-size:14px; position:relative; margin-bottom: 20px}
+.callout-content{padding:15px 0 0 0}
+.mt15, .mt10{margin-top:15px; display:block}
+.mt10{margin-top:10px}
+.discuss-comnt-section{margin-bottom:40px; float:left; width:100%}
+.cmnt-title, .old-discuss-title{border-bottom:1px solid #ebebeb; padding-bottom:5px; font-size:18px; overflow:hidden; margin-bottom:3px}
+.view-filter{color:#686666; font-size:14px;}
+.view-filter a.active{color:#000; text-decoration:none; cursor:auto}
+.pipe{color:#b6b6b6; margin:0 3px}
+.comment-block li{border-bottom:1px dashed #dadada; padding:10px 0 8px; float:left; width:100%}
+.ques-icon{color:#fff; font:normal 20px/30px "Open Sans"; background:#cecece; -moz-border-radius:50% 50%; -webkit-border-radius:50% 50%; border-radius:50% 50%; display:block; width:30px; height:30px; text-align:center; float:left}
+.ques-details, .comment-box{margin-left:47px; font-size:14px; color:#121212}
+.comment-box{font-size: 12px}
+.ques-head{display:block; color:#888888; font-size:12px;}
+.ques-head strong{font-weight:normal;}
+.ques-head strong span{vertical-align: middle}
+.ques-head strong a{vertical-align:middle; color:#4f4f4f !important}
+.ques-details p, .comment-box p{line-height:20px;float:left; width:100%}
+a.black-link{color: #121212 !important}
+.load-more{background:#efefef; display:block; text-align:center; padding:7px 0; font-size:14px; margin-top:5px}
+.old-discussions{margin-bottom:30px}
+ul.bullet-items{}
+.old-discussions ul li{color: #D1D1D1; font-size: 15px; list-style-type: disc; margin: 0 0 10px 20px; width: 45%;}
+ul.bullet-items li {color: #767676; line-height: 17px; list-style-type: disc !important; margin: 0 0 7px 18px;}
+.old-discuss-title{font:bold 16px ; overflow:visible; margin-bottom:15px; padding-bottom:8px}
+.old-discussions ul li{list-style-type:disc; font-size:15px; margin:0 0 10px 20px; color:#d1d1d1; width:45%;}
+.reply-cloud{background-position:-22px 0; width:65px; height:53px; float:left}
+.reply-box{margin-left:80px; border:1px solid #000}
+.white-btn{background:#fff; padding:4px 10px; border:1px solid #d2d2d2; font-size:14px; text-decoration:none !important; display:inline-block; margin-top:12px; color:#0065DE !important}
+.comment-box{background:#ececec; padding:10px; clear:left; margin:0px 0 10px 75px}
+.comment-box p{line-height:20px}
+.link-color{color:#0065DE}
+.font-13{font-size:13px}
+.Fnt10{font-size:10px;}
+.cmnt-pointer{background:url(/public/images/upArw.png) 0 0 no-repeat; width:19px; height:9px; overflow:hidden; display:inline-block; position:relative; left:12px}
+.fbkBx {background:#ECECEC; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; margin-bottom: 10px; padding: 6px 9px 6px 6px; width: 507px;}
+.ftBx, .fbkBx .cntBx .ftxArea{border: 1px solid #DBDBDB; border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px; box-shadow:0 1px 2px #E0E0E0 inset; -moz-box-shadow:0 1px 2px #E0E0E0 inset; -webkit-box-shadow:0 1px 2px #E0E0E0 inset; color: #757575;  font-size: 11px; overflow: auto; padding:7px 5px 4px 7px; width: 528px;}
+.fbkBx .cntBx .ftxArea {width:98% !important;}
+/*** End here **/
+/*CSS for Recommendation*/
+.collegeDetailCol h4, .collegeDetailCol h3, .college-title{font-size:16px;}
+.collegeDetailCol h4 span, .collegeDetailCol h3 span, .college-title span{font-size:12px; font-weight:normal}
+.collegeDetailCol em{color:#6F6F6F; font-size:12px; font-weight:bold; margin-top:3px; clear:both; display:block}
+.instituteListsDetails{float:left; width:640px;}
+.collegeDetailCol{width:635px; float:left;}
+.collegeDetailsWrapper{float:left; width:100%; margin-top:15px}
+.instituteLists{padding-left:7px}
+.instituteLists ul{margin-top:15px}
+.instituteLists ul li{border-bottom: 1px solid #EDEDED; float:left; margin-bottom:8px;  padding-bottom:20px; width: 100%;}
+.instituteLists ul li.last{border:0 none; margin:0; padding:0}
+.collegePic{width:118px; height:98px; float:left}
+.collegeDescription{width:490px; float:left; margin-left:20px}
+.collegeDescription h5{font-size:12px; line-height:18px}
+.collegeDescription h5 span{font-size:11px; font-weight:normal; line-height:normal}
+.feeStructure{font-size:11px; color:#717171; margin-top:5px}
+.feeStructure span{color:#000}
+.feeStructure b{color:#d0d0d0; margin:0 3px; font-weight:normal}
+.alumniRating{float: left;}
+.alumniRating img, .alumniRating span{vertical-align:middle}
+.alumniRating span.rateNum{font-size:11px}
+ul.facilities{margin:10px 0 !important}
+ul.facilities li{list-style:none !important; float:left; font-size:11px; color:#000000; margin:0; padding:0 10px 2px 0px; border:none; width:auto}
+ul.facilities li span{width:4px; height:4px; float:left; background-color:#c1c2c6; margin:5px 5px 0 0; overflow:hidden}
+ul.facilities li strong {float:left; font-weight:normal}
+.apply_confirmation {background:url(/public/images/cmsSResult_Checked.gif) no-repeat 0px 2px; padding-left:18px; font-size:13px; margin-bottom:5px; display:none; color:green}
+/*** End here **/
+.scale-figure{font-size: 11px;color: #afafaf;padding: 0px 0 0 81px;width: 300px; float: left; position:relative; top:-5px}
+.scale-figure span {width: 26px;float: left; margin-right: 13px}
+.scale-figure span.third{margin:0 10px 0 1px}
+.scale-figure span.fourth{margin:0 17px 0 3px}
+.scale-figure span.sixth{margin:0 17px 0 0px}
+/*CSS for Institute Pages*/
+.ins-city{font-size:14px; color:#3d3d3d !important;}
+ul.inst-details-cont{margin-bottom:12px;}
+ul.inst-details-cont li{color:#b0b0b0; list-style:disc; margin:0 22px 0 15px; text-align:left; float:left}
+ul.inst-details-cont li label{color:#707070; font-size:16px; vertical-align:middle;}
+.rating-cols2{margin:0px 0 0 5px; display:inline;}
+.rating-points{font-size:16px; color:#717171; vertical-align:middle;}
+.rat-star-active, .rat-star-inactive{background-position:-223px -135px; height:19px; width:21px;}
+.rat-star-inactive{background-position:-223px -154px;}
+.ins-name-box a.inst-title{font-size:16px;}
+.see-all-link{display:inline-block; vertical-align:middle; position:relative; top:-3px;}
+.see-all-link span{color:#D6D6D6; margin:0 1px 0 3px}
+.insSlider-img-box{position:relative; float:left; width:610px}
+.insSlider-img-box ul li{}
+.nxt-arrow, .prev-arrow{width:16px; margin:0 12px 0 0}
+.prev-arrow{margin:0 0px 0 12px}
+.ins-slider-cont{margin-top:-10px}
+.ins-slider-cont .slide-prev, .ins-slider-cont .slide-next, .ins-slider-cont .slide-prev-active, .ins-slider-cont .slide-next-active{width:40px;margin:88px 0px 0 0;cursor:pointer;width:16px; height:37px;}
+.ins-slider-cont .slide-prev-active{background-position:-152px -135px;}
+.ins-slider-cont .slide-next-active{background-position:-174px -135px;}
+.ins-slider-cont .slide-prev, .ins-slider-cont .slide-next{cursor:auto}
+.ins-slider-cont .slide-next{margin:75px 0 0 0;}
+.management-icon, .management-icon-active, .science-icon, .science-icon-active, .hospital-icon, .hospital-icon-active, .design-icon, .design-icon-active, .banking-icon, .banking-icon-active, .medicine-icon, .medicine-icon-active, .media-icon, .media-icon-active, .law-icon, .law-icon-active, .tech-icon, .tech-icon-active,.animation-icon, .animation-icon-active,.test-icon, .test-icon-active{background-position:-0px -178px;width:23px; height:23px;}
+.management-icon-active{background-position:-0px -202px;}
+.science-icon{background-position:-23px -178px;}
+.science-icon-active{background-position:-23px -202px;}
+.hospital-icon{background-position:-45px -178px;}
+.hospital-icon-active{background-position:-45px -202px;}
+.design-icon{background-position:-68px -178px;}
+.design-icon-active{background-position:-68px -202px;}
+.banking-icon{background-position:-92px -178px;}
+.banking-icon-active{background-position:-92px -202px;}
+.medicine-icon{background-position:-119px -178px;}
+.medicine-icon-active{background-position:-119px -202px;}
+.media-icon{background-position:-143px -178px;}
+.media-icon-active{background-position:-143px -202px;}
+.law-icon{background-position:-170px -178px;}
+.law-icon-active{background-position:-170px -202px;}
+.tech-icon{background-position:-195px -178px;}
+.tech-icon-active{background-position:-195px -202px;}
+.retail-icon{background-position:-218px -178px; width:28px; height:20px}
+.retail-icon-active{background-position:-218px -202px;}
+.animation-icon{background-position:-250px -178px;}
+.animation-icon-active{background-position:-250px -202px;}
+.test-icon{background-position:-277px -178px;}
+.test-icon-active{background-position:-277px -202px;}
+.inst-speciality ul li, .inst-speciality ol li{margin:0 0px 9px 20px; list-style:disc; font-size:15px; line-height:20px; color:#000;}
+.inst-speciality ol li{list-style:decimal}
+.mt12{margin-top:12px;}
+.view-rating{border-bottom:1px solid #ccc; padding:0 0 13px 0px; text-align:right; width:100%; margin-bottom:10px; font-size: 14px}
+.view-rating select{width:265px;}
+.photo-vid-caption{background:rgba(0,0,0, 0.6); position:absolute; padding:4px 10px 4px 7px; bottom:0px; left:2px;}
+.photo-vid-caption li{float:left}
+.photo-vid-caption li a{color:#fff; font-size:19px;}
+.photo-vid-caption li span{color:#8a8a8a; font-size:19px; margin:0 10px}
+.institute-accordian ul{margin-left:0 !important; display:table;}
+.institute-accordian ul li{border-bottom:1px solid #DFDFDF;}
+.offered-course{display:table-row;}
+.course-icons{background:#f2f2f2; padding-top:10px;width:42px; display:table-cell; vertical-align:top; text-align:center;}
+.course-header{display:table-cell; padding-left:15px; width:600px;}
+.accordian-arrow{display:table-cell; text-align:right; vertical-align:top;}
+.accordian-arrow .up-arrow, .accordian-arrow .dwn-arrow{margin-top:15px; cursor:pointer;}
+.institute-accordian ul li h3{border:none !important; padding:7px 0 !important;}
+.course-tab{margin-bottom:20px}
+.course-tab ul li{float:left; border:0 none; margin-right:35px; line-height:24px;}
+.course-tab ul li a.active, .course-tab ul li a:hover{color:#000; padding:0 0 3px 0; border-bottom:3px solid #eea234; text-decoration:none;}
+.course-tab ul li span{color:#6c6c6c}
+.course-tab ul li{border-bottom:0 none !important;}
+.course-tab-detail ul li{border-bottom:0 none; margin-left:25px !important;font-size:15px !important; color:#d5d5d5 !important;}
+.course-tab-detail ul li span{color:#656565;}
+.more-review{background:#f8f8f8; padding:10px 0;}
+.more-review p{font-size:15px; text-align:center;}
+.video-icon{background-position:-192px -135px; width:32px; height:31px; position:absolute; left:41%; top:36%; cursor:pointer;}
+.ins-slider-cont .video-icon{left:45%; top:43%}
+.procedure-icon{background-position:-353px -45px; width:15px; height:17px; top:3px}
+.inr-txt{font-weight: normal; font-size:12px; text-transform:uppercase; line-height:13px; color:#626262; }
+.course-review{font-size:15px; margin-top: 12px}
+.course-review-child{width:485px; float:left;}
+.course-review label{display: block; margin-bottom: 5px; font-weight: bold}
+.course-review p{color: #A7A7A7;}
+.course-review-contents{margin-top: 18px; font-size: 14px}
+.course-review-contents p{color:#535353; line-height:22px;margin:0px 0px 18px 0;}
+.course-review-contents span{background:#f4f4f4; padding:2px 4px; color:#8a8a8a;}
+.ins-acc-det{margin:15px 0; line-height:20px;}
+.ins-acc-det ul li, .ins-acc-det ol li{list-style:disc; margin-top:5px;}
+.ins-acc-det ol li{list-style:decimal;}
+.resize-width-class{width:370px !important}
+.section-cont{margin-bottom:12px}
+.section-cont .recommend-items ul li{font-size:13px !important}
+.section-cont .recommend-items ul li .completion-bar{float: left; height:8px;}
+.section-cont .recommend-items ul li .completion-bar .completion-bar-percent{height:8px}
+.reg-icon{background-position:-307px -130px; width:15px; height:15px; margin:-4px 5px 0 0}
+.criteria-content  .exam-detail{padding-bottom:10px; border-bottom:1px dashed #e0dcdc; margin:0px 15px 15px 15px; color:#333;}
+.criteria-content .exam-detail-table{width:430px !important; border:1px solid #dadada !important; -moz-border-radius:2px; -webkit-border-radius:2px; border-radius:2px; margin:5px 0 15px 0;border-collapse: collapse;}
+.criteria-content .exam-detail-table tr th, .criteria-content .exam-detail-table tr td{background:#ebebeb;text-align:left; padding:4px 5px !important; color:#000; font-size:13px; font-weight:normal;border:1px solid #dadada !important;}
+.criteria-content .exam-detail-table tr td{color:#888; background:#fff;}
+.mb8{margin-bottom:8px;}
+
+ul.course-rank-list{width: 400px;vertical-align: middle;float: left;}
+ul.course-rank-list li{width: 20%; border-bottom: none;text-align: center !important;}
+.round-rank{border-radius:50%; width: 15px; height: 15px; border:1px solid #333; color:#333 !important; display:block; padding:10px; text-decoration:none !important;line-height: 17px;text-align: center;margin: auto;}
+ul.course-rank-list li span{line-height: 15px; font-size: 12px;margin-top: 5px;display: block;}
+.rank-view-link{float: right;font-size: 12px;}
+
+.course-link-list{margin-bottom:15px;}
+.course-link-list ul{margin-left:15px;}
+.course-link-list ul li{color:#a9a9a9; list-style:disc; width:48%; float:left; margin-bottom:8px;margin-right:16px;}
+.college-info{color:#707070;}
+.cross-icon-2{color:#333 !important; font-size:32px; text-decoration:none !important; position:relative; top:-10px}
+
+.number-info{color:#121212; font-size:15px; margin-bottom:23px;}
+.number-title{color:#727272; margin-bottom:8px;}
+.mobile-icon{background-position:-298px -178px; width:13px; height:23px; float:left; top:2px;}
+.explore-app-box{background: #F1F1F1;padding: 25px 20px;font-size: 14px;border-bottom: 2px solid #CCC; width: 190px;margin-top:50%;}
+.explore-next-arrw{background-position:-96px -77px; width:19px; height:39px; margin-left: 10px; position: relative; top: -2px;}
+.apply-nw-bg {background: #eea234;color: #fff;vertical-align: middle;}
+.download-icon-3{background-position:-373px -77px;}
+.apply-nw-icon-2{background-position: -316px -178px; width: 31px;height: 19px;margin-right: 5px;}
+.review-sub-head{font-size:12px; color:#999; margin:0 0 10px 10px;}
+ul.course-ranking-list{margin-left:10px;}
+ul.course-ranking-list li{width:100%; font-size:14px; margin-bottom:15px; float:left;}
+ul.course-ranking-list li a{width:40%; float:left; margin-right:5px;}
+
+
+
+/*-------college review css-------*/
+.course-collge-review-title{color:#989494 !important;}
+.course-collge-review-title .avg-rating-title{color:#989494 !important}
+.course-collge-review-title span, .review-header span{margin:0 10px; color:#d1cccc;}
+.course-collge-review-title strong{vertical-align:middle;}
+.thumb-up-icon, .thumb-dwn-icon{background-position:-367px 0; width:16px; height:16px; margin-right:3px;}
+.thumb-dwn-icon{background-position:-367px -40px;}
+.review-detail-layer{background:#fff; padding:8px 8px 8px 0; width:100%; position:relative; margin-top:40px; -moz-box-sizing:border-box;-webkit-box-sizing:border-box;  box-sizing:border-box;}
+.review-header{background:#ecebeb; padding:6px; margin-bottom:8px; box-sizing:-moz-border-box; -webkit-box-sizing:border-box; box-sizing:border-box;}
+.review-header strong{font-size:18px; font-weight:normal; color:#333;}
+.review-header em{color:#989494; font-size:13px; font-style:normal; margin:0 10px; display:inline-block;}
+.review-header p{display:inline-block; vertical-align:middle}
+.review-mark-icon{background-position:-386px 0; width:14px; height:12px; margin-right:4px; position:relative; top:-3px;}
+.review-detail-sec{color:#535353; font-size:14px; line-height:23px; padding:0 0 0 15px; width:100%; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; float:left;margin-top:20px;}
+.review-detail-left{width:58%; font-size:14px; line-height:22px;}
+.review-detail-left p{margin-bottom:5px;}
+.review-detail-right{width:34%; border:1px solid #e2e2e2; padding:10px; color:#969691; position:relative;}
+.review-detail-right ol.rating-display li{margin-bottom:12px;}
+.review-detail-right ol.rating-display li label{font-size:12px; width:120px;}
+.review-detail-right ol.rating-display li p{margin-left:122px}
+.course-rating-star-filled,.course-rating-star{background-position:-367px -21px; width:15px; height:15px; cursor:pointer; margin-right:4px;}
+.course-rating-star{background-position:-386px -21px;}
+ol.rating-display, ol.review-list, .existing-notes ul{margin:0; padding:0}
+ol.rating-display li{list-style:none; margin-bottom:15px; font-size:16px}
+ol.rating-display li label{width:200px; float:left}
+ol.rating-display li p{margin-left:200px}
+ol.review-list li{margin-bottom:30px; list-style:none}
+.show-more-sec{border:1px solid #dbdbdb; padding:10px;}
+.show-more-sec a{color:#9e9e9e !important; font-size:14px; text-align:center; display:block; text-decoration:none !important}
+.other-details-wrap h5 { font-size: 18px; font-style: bold; padding-bottom: 6px; border-bottom: 1px solid #d5d5d5;}
+.college-review-icon{background-position:-373px -105px; width:21px; height:21px;}
+
+/*Institute Reply to College Review css---*/
+.rv-lnkk{ color:#0064e0; font-size:14px; text-decoration:none; cursor:pointer;}
+.rv-reply-all { width: 100%; margin: 15px 0px; }
+.rv-reply-all .txtareaBx .txtara,.rv-reply-all .txtareaBx .txtara:focus { border: 0px !important; margin: 0px !important; width: 100%; height: 140px; position: relative; padding: 10px; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; outline: none !important; }
+.rv-reply-all .orange-button { }
+.rv-reply-all .txtareaBx { position: relative; background: #fff; border: 1px solid #e7e7e7; }
+.rv-reply-all .txtareaBx:after, .rv-reply-all .txtareaBx:before { bottom: 100%; left: 45px; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; }
+.rv-reply-all .txtareaBx:after { border-color: rgba(136, 183, 213, 0); border-bottom-color: #fff; border-width: 8px; margin-left: -34px; }
+.rv-reply-all .txtareaBx:before { border-color: rgba(194, 225, 245, 0); border-bottom-color: #e7e7e7; border-width: 9px; margin-left: -35px; }
+.institute-cin{ background:url('/public/images/university-icon.png') no-repeat; display: inline-block; height: 19px;
+    margin-right: 10px; position: relative; top:3px;
+    width: 24px;}
+/* Course Reviews Sorting Options*/
+.sorting-options{padding-top:8px; color:#838383;}
+.sorting-options p span{cursor:pointer}
+.sorting-options p span.active{color:#2b2b2b;font-weight: bold;}
+.show-more-sec{border:1px solid #d4d4d4; padding:10px; background:#ddd; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px;}
+.show-more-sec a{color:#575757 !important; font-size:14px; text-align:center; display:block; text-decoration:none !important}
+/*ranking links on course page*/
+.browse-top-collge-sec{border:1px solid #dfdfdf; padding:10px 15px 10px 10px; margin-bottom:20px;}
+.browse-top-collge-sec strong{margin-left:5px; display:inline-block;font-size:14px;}
+.browse-clg-icon{background-position:-324px -135px; width:28px; height:28px;display:inline-block;}
+ul.top-colleges-city-list{float:left; margin:10px 0 0 20px;line-height:20px;}
+ul.top-colleges-city-list li{font-size:14px; margin-bottom:8px; color:#ccc; list-style:disc;}
+
+/*select course widget on institute page*/
+.vw-icnarow{ width: 13px; height: 7px; background-position:-247px -94px;}
+.vw-icnarow2{width: 7px; height: 13px; background-position:-263px -88px;}
+.slctCourseNew{ background-image: url('../images/institutebg1.png');  margin: 10px 0px 25px 0px; padding: 15px 18px;background-repeat: no-repeat; background-size: cover; position: relative; height: 320px;}
+.slctCourseNew .vw_blckovrly{ position: absolute; left: 0px; top:0px; right: 0px; bottom: 0px; background-color: rgba(66, 66, 66, 0.66);z-index: 0}
+.slctCourseNew .vw_cntnt{ position: relative; z-index: 0;}
+.vw_universty{display: table; }
+.vw_universty img{display: inline-block;
+  max-height: 55px;}
+  .vw_universty span{  display: table-cell;
+  vertical-align: top;
+  padding-left: 8px;}
+.vw_universty .vw_universty1{ font-size: 24px; font-weight: bold;color: #fff;}
+.vw_universty .vw_universty1 b{font-size: 16px; font-weight: normal; text-transform: uppercase; color: #fff; padding-left: 4px;}
+.vw_frmContnr .vw_universty2{font-size: 14px; font-weight: normal; color: #fff; padding-bottom: 10px;}
+.vw_frmContnr{  position: absolute;
+  top: 120px;
+  left: 9px;}
+.vw_slctBx{ position: relative; display: inline-block; float: left;
+  margin-right: 10px; box-sizing:border-box;
+}
+.vw_slctBx select{ font-size: 16px; color: #fff; border: 1px solid #fff; height: 36px; overflow: hidden;  
+	-webkit-appearance: none;
+  -moz-appearance: none; 
+  -ms-appearance: none; 
+  appearance: none; outline: none;
+  padding-left: 5px; width: 100%; display: block; position: relative; background-color: rgba(0,0,0,0);}
+.vw_slctBx i.vw-icnarow{position: absolute; right: 10px; top:15px;} 
+.vw_slctBx i.vw-icnarow2{position: absolute; right: 10px; top:11px;} 
+.slctCourseNew .txtClrActvWhite{ color: #fff;}
+.vw_slctBx1 select{ width: 250px;font-size:14px;}
+.vw_slctBx2 select{ width: 180px;font-size:14px;}
+.vw_slctBx3 select{ width: 311px;font-size:14px;}
+.vw_slctBx4{font-size: 16px; color: #ccc; cursor: pointer; border: 1px solid #fff;line-height: 34px; height: 36px;position: relative; width: 140px; text-align: center; }
+.vw_slctBx4:hover{background: #eea234;}
+.vw_slctBx .stream-select option{ color: #333 !important; font-weight: normal !important; font-size: 12px !important;}
+.vw_slctBx select::-ms-expand{ display:none !important; }
+
+/*iim predictor css*/
+.banner-img-col{width: 100%;float:left;height: 177px;margin:10px auto;background: #fff url(/public/images/banner_category-page_image.png) no-repeat;background-clip: border-box;background-size: contain;}
+.banner-left{width: 265px;display:block;text-align:center;padding: 30px 20px;float: left;}
+.banner-left p{font-size:16px;color:#848484;line-height: 28px;font-weight:600}
+.banner-bold{color:#4c4c4c;font-size: 19px;font-weight: 700;margin: 0 5px;line-height: 28px;}
+
+.banner-right{width: 300px;display:block;padding: 30px 0px 15px 40px;float: left;}
+.banner-h1{color:#4c4c4c;font-size: 19px;line-height: 28px;font-weight: 700;display: block;}
+.banner-hlp-txt{color:#848484;font-size: 15px;font-weight: 600;padding-left: 7px;}
+.banner-right p{font-size:14px;color:#666666;line-height: 24px;font-weight:600}
+.banner-ul{list-style:none;padding-top: 8px;}
+.banner-ul li { display: block; position: relative;padding-left: 15px; margin-bottom: 6px; line-height: 12px;}
+.banner-ul li p{ font-size: 12px; font-weight: normal; color: #808080; display: inline-block;line-height: 18px;text-align: left !important;}
+.banner-ul li:after { content: ''; height: 4px; width: 4px; border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -webkit-border-radius: 50%; background-color: #6d6d6d; position: absolute;left: 0px;  top: 9px;margin-top: -3px;}
+.findOutBtn{text-decoration: none !important;display:block;padding:5px;text-align: center;color:#fff !important;font-size: 14px;font-weight: 600;background-color: #f29d37;}
+.fees-disclaimer-text{color: #afafaf; font-size: 11px;}
+
+/*line between anchor*/
+.review-detail-left  p a{position: relative;padding: 0 10px 0 10px}
+.review-detail-left  p a:first-child:after{
+  content: ' ';position: absolute;right: 0px;top::0px;height: 18px;background-color: #AEAEAE;width:1px;display: inline-block; 
+}

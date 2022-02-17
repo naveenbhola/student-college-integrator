@@ -1,0 +1,62 @@
+<div class="row" id="course_partner_institute">
+    <div [mysize]="'12'">
+        <div class="x_panel">
+            <div [class.x_title]="opened">
+                <ul class="nav navbar-left panel_toolbox">
+                    <li><a class="collapse-link" (click)="toggle()"><i [class]="opened?' fa fa-chevron-up':' fa fa-chevron-down'"></i></a></li>
+                </ul>
+                <h2>Partner Institutes<img class="helperText" id="partner_institute" src="/public/images/tooltip.png" width="20px" style="padding-right:0px" (click)="toolTipNotify('partner_institute',$event)"></h2>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content"  [hidden]="!opened">
+                <div class="form-group" [formGroup]="coursePartnerForm">
+                    <div [mysize]="'3'">
+                        <label>Available</label>
+                    </div>
+                    <div mysize="9">
+                        <div mysize="3">
+                            <label class="radio-inline" mysize="6" noBootstrap>
+                            <input type="radio" formControlName="course_partner_institute_flag"  value="1"/>Yes
+                            </label>
+                        </div>
+                        <div mysize="3">
+                            <label class="radio-inline" mysize="6" noBootstrap>
+                            <input type="radio" formControlName="course_partner_institute_flag"  value="0"/>No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <h4 *ngIf="coursePartnerForm?.errors" class="help-block text-danger">{{coursePartnerForm.errors.msg}}</h4>
+                <div *ngIf="(+coursePartnerForm.controls.course_partner_institute_flag.value == 1) && !reset">
+                    <div *ngIf="mainForm.controls['hierarchyForm'].controls['primary_course_hierarchy_name'].value" >
+                        <div *ngIf="mainForm.controls['courseTypeForm'].controls['course_variant'].value">
+                            <coursePartnerSubSection 
+                            [group]="coursePartnerForm"
+                            [controlArrayName]="'partnerInstituteFormArr'"
+                            [courseStaticData]="staticData"
+                            [mainForm]="mainForm"
+                            [caption]="'Entry'"
+                            [editData]="editData?.partnerInstituteFormArr"
+                            >
+                            </coursePartnerSubSection>
+                        </div>
+                        <div *ngIf="mainForm.controls['courseTypeForm'].controls['course_variant'].value == CVCONST.double">
+                            <coursePartnerSubSection 
+                            [group]="coursePartnerForm"
+                            [controlArrayName]="'partnerInstituteFormArrExit'"
+                            [courseStaticData]="staticData"
+                            [mainForm]="mainForm"
+                            [caption]="'Exit'"
+                            [editData]="editData?.partnerInstituteFormArrExit"
+                            >
+                            </coursePartnerSubSection>
+                        </div>
+                    </div>
+                    <div class="alert alert-danger alert-dismissible fade in" role="alert" style="font-size:16px" *ngIf="!mainForm.controls['hierarchyForm'].controls['primary_course_hierarchy_name'].value">           
+                        Select Primary Hierary to add partner institute.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,359 @@
+<?php
+global $shiksha_site_current_url;
+global $shiksha_site_current_refferal ;
+$result_type = "main";
+if(!empty($resultType)){
+	$result_type = $resultType;
+}
+
+$examFilters = $filters['exam'];
+$specializationFilters = $filters['specialization'];
+$totalSpecializationFilters = count($specializationFilters);
+$defaultSpecializationSelected = false;
+foreach($specializationFilters as $filter){
+	if($filter->isSelected() == true){
+		$defaultSpecializationSelected = true;
+	}
+}
+
+$totalExamFilters = count($examFilters); 
+$defaultExamSelected = false;
+foreach($examFilters as $filter){
+	if($filter->isSelected() == true){
+		$defaultExamSelected = true;
+	}
+}
+
+$showSpecializationFilters = true;
+if($totalSpecializationFilters <= 1 && $defaultSpecializationSelected){
+	$showSpecializationFilters = false;
+}
+
+$rankingPageData = $ranking_page->getRankingPageData();
+$showFeesColoumn = false;
+$showExamFilters = false;
+foreach($rankingPageData as $pageRow){
+	if(count($pageRow->getExams()) > 0){
+		$showExamFilters = true;
+	}
+	if($pageRow->getFeesValue() > 0){
+		$showFeesColoumn = true;
+	}
+	if($showExamFilters && $showFeesColoumn){
+		break;
+	}
+}
+$showExamColoumn = $showExamFilters;
+$enableSortFunctionality = false;
+
+$sortKey 		=  "rank";
+$sortKeyValue 	=  "";
+$sortOrder 		=  "desc";
+if(!empty($sorter) && count($rankingPageData) > 1){
+	$enableSortFunctionality = true;
+	$sortKey 		=  $sorter->getKey();
+	$sortKeyValue 	=  $sorter->getKeyValue();
+	$sortOrder 		=  $sorter->getOrder();
+}
+
+$examId = "";
+if($result_type == "main"){
+	$examId = $request_object->getExamId();
+} else if($result_type == "exam"){
+	if(!empty($main_request_object)){
+		$examId = $main_request_object->getExamId();	
+	} else {
+		$examId = $request_object->getExamId();
+	}
+} 
+
+if(empty($rankingPageData) && $result_type == "main" && $isAjax!='true') { ?>
+	<section class="content-wrap2 clearfix" >			
+		<article class="req-bro-box clearfix" style="cursor: pointer;" >
+			<div class="confirmation-msg">
+				Sorry, no results were found matching your selection. Please alter your refinement options above.
+			</div>
+		</article>
+	</section>
+	<?php
+} else {
+?>
+	<?php if( count($rankingPageData)>5  && $isAjax!='true' ){ ?>
+	<script>
+	//$('#rankingDataCount').html('<?=count($rankingPageData)?>&nbsp;');
+	</script>
+	<?php } ?>
+
+	<?php if(isset($_COOKIE['MOB_A_C'])){
+		$appliedCourseArr = explode(',',$_COOKIE['MOB_A_C']);
+	}
+	?>
+
+		<?php
+		/*if($result_type == "main"){
+		?>
+		<div class="flRt" style="color:#757575;">Last updated in <?php echo date('F Y', strtotime($ranking_page->getLastUpdatedTime())); ?></div>
+		<?php
+		}*/
+		?>
+
+			<?php
+			$count = 1;
+			foreach($rankingPageData as $pageData){
+				if($count>10  && $isAjax!='true'){
+					break;
+				}
+				if($count<11  && $isAjax=='true'){
+					$count++;
+					continue;
+				}
+				?>
+				
+				
+				
+				<section class="content-wrap2 clearfix" >
+			
+					<article class="req-bro-box clearfix" style="cursor: pointer;" >
+
+							<div class="rank-number"><?php echo $pageData->getRank();?></div>
+							
+							<div class="details" >
+							
+								<div class="rank-details">
+								
+									<div onclick="window.location='<?php echo $pageData->getCourseURL(); ?>';" class="comp-detail-item">
+
+									<h4 style="margin-bottom:0.3em" title="<?php echo html_escape($pageData->getInstituteName()); ?>" >
+										<?php echo $pageData->getInstituteName(); ?>
+									</h4>
+	
+									<p style="font-weight:bold"><?php echo $pageData->getCityName();?></p>
+																					
+									<!--<li>Course: <?php echo $pageData->getCourseAltText(); ?></li>-->
+			
+			
+									<!-- Exam String Begins -->
+									<?php
+									/*if($result_type  == "main" && $showFeesColoumn){
+									?>
+										<li><i class="icon-rupee"></i><p><label>Fees:</label>
+											<?php
+											$feesUnit = $pageData->getFeesUnit();
+											$feesValue = $pageData->getFeesValue();
+											if(!empty($feesUnit) && !empty($feesValue)){
+												echo $feesUnit;
+											}
+											?>
+											<?php echo $pageData->getFeesValue();?>
+										</p></li>
+									<?php
+									} else if($result_type == "exam" || $result_type == "location") {
+										?>
+										<li><i class="icon-rupee"></i><p><label>Fees:</label>  
+											<?php
+											$feesValue = $pageData->getFeesValue();
+											$feesUnit = $pageData->getFeesUnit();
+											if(!empty($feesUnit) && !empty($feesValue)){
+												echo $feesUnit;
+											}
+											?>
+											<?php echo $pageData->getFeesValue();?>
+										</p></li>
+										<?php
+									}*/
+
+
+			
+									$id 			= $pageData->getId();
+									$exams 			= $pageData->getExams();
+									usort($exams, 'sortExamsInUI');
+									$validExams = array();
+									if(!empty($examId)){
+										foreach($exams as $exam){
+											if($exam['id'] == $examId){
+												$validExams[] = $exam;
+												break;
+											}
+										}
+									}
+									if(!empty($validExams)){
+										$exams = $validExams;
+									}
+									
+									$examString 	= "";
+									$examMoreString = "";
+									if(count($exams) > 0){
+										$mainExams = array_slice($exams, 0, 2);
+										if(count($mainExams) > 1){
+											$examString .= $mainExams[0]['name'];
+											if(!empty($mainExams[0]['marks'])){
+												$examString .= " (". $mainExams[0]['marks'] . "), ";
+											} else {
+												$examString .= ", ";
+											}
+											$examString .= $mainExams[1]['name'];
+											if(!empty($mainExams[1]['marks'])){
+												$examString .=  " (". $mainExams[1]['marks'].")";
+											}
+										} else {
+											$examString .= $mainExams[0]['name'];
+											if(!empty($mainExams[0]['marks'])){
+												$examString .= " (". $mainExams[0]['marks'] . "), ";
+											}
+										}
+										
+										$extraExams = array();
+										if(count($exams) > 2){
+											$extraExams = array_slice($exams, 2);
+										}
+										$counter = 0;
+										foreach($extraExams as $exam){
+											$examMoreString .= $exam['name'];
+											if(!empty($exam['marks'])){
+												$examMoreString .= " (". $exam['marks'].")";
+											}
+											$counter++;
+											if($counter % 2 == 0 && $counter != 0){
+												$examMoreString .= "<br/>";
+											} else {
+												$examMoreString .= ", ";
+											}
+										}
+										$examString = trim($examString);
+										$examString = trim($examString, ",");
+										$examMoreString = trim($examMoreString);
+										$examMoreString = trim($examMoreString, ",");
+									}
+									$flag = false;
+									if($result_type == "main" && $showExamColoumn){
+										$flag = true;
+									} else if($result_type == "location" || $result_type == "exam"){
+										$flag = true;
+									}
+									
+									if($flag){
+									?>
+										<?php if(!empty($examString)){ ?>
+										<p>Cut Off: <span>
+											<?php echo $examString;?>										
+											<?php if(!empty($examMoreString)){ ?>												
+											, <?php echo $examMoreString;?>
+											<?php } ?>
+										</span></p>
+										<?php } ?>
+									<?php
+									}
+									?>		
+									<!-- Exam String Ends -->
+									</div>
+
+								<!----shortlist-course---->
+								<?php
+								$data['courseId'] = $pageData->getCourseId();
+								$data['pageType'] = 'mobileRankingPage';
+								$this->load->view('/mcommon5/mobileShortlistStar',$data);
+								?>
+								<!-----end-shortlist------>
+								
+									
+								</div>
+
+									<!-- Request E-Brochure begins -->
+									<div id= "thanksMsg<?=$pageData->getCourseId()?>" class="thnx-msg" <?php if(!in_array($pageData->getCourseId(),$appliedCourseArr)){?>style="display:none"<?php } ?>>
+										<i class="icon-tick"></i>
+										<p>Thank you for your request. You will be receiving E-brochure of the selected institute(s) in your mailbox shortly.</p>
+									</div>
+
+									<?php
+										$institute_id = $pageData->getInstituteId();
+										$institute = $instituteRepository->find($institute_id);
+										$courseList =  Modules::run('mranking5/RankingMain/getCourses',$institute_id);
+										if($courseList){
+											$institute = reset($instituteRepository->findWithCourses(array($institute_id => $courseList)));
+											$courses = $institute->getCourses();
+										}
+										
+										$addReqInfoVars = array();
+										foreach($courses as $c){
+											$arr['isMultiLocation'.$pageData->getInstituteId()] = $c->isCourseMultilocation();
+											foreach($c->getLocations() as $course_location){
+													$locality_name = $course_location->getLocality()->getName();
+													if($locality_name !='') $locality_name = ' |'.$course_location->getLocality()->getName();
+													$addReqInfoVars[$c->getName().' | '.$course_location->getCity()->getName().$locality_name]=$c->getId()."*".html_escape($pageData->getInstituteName())."*".$c->getUrl()."*".$course_location->getCity()->getId()."*".$course_location->getLocality()->getId();
+													if($arr['isMultiLocation'.$pageData->getInstituteId()]=='false'){
+														$arr['rebLocallityId'.$pageData->getInstituteId()] = $course_location->getLocality()->getId();
+														$arr['rebCityId'.$pageData->getInstituteId()] = $course_location->getCity()->getId();
+													}else{
+														$arr['rebLocallityId'.$pageData->getInstituteId()] = '';
+														$arr['rebCityId'.$pageData->getInstituteId()] = '';
+													}
+											}
+										}
+										$addReqInfoVars=serialize($addReqInfoVars);
+										$addReqInfoVars=base64_encode($addReqInfoVars);
+										$pageName = 'RANKING_PAGE';
+										$from_where = 'MOBILE5_RANKING_PAGE';
+									?>
+
+									<p>
+									    <?php if(in_array($pageData->getCourseId(),$appliedCourseArr)){?>
+									    <a class="button blue small disabled" href="javascript:void(0);" id="request_e_brochure<?=$pageData->getCourseId();?>"><i class="icon-pencil" aria-hidden="true"></i><span style="color:#ffffff;">Request E-Brochure</span></a>
+									    <?php }else{ ?>
+									    <a  class="button blue small" href="javascript:void(0);" id="request_e_brochure<?=$pageData->getCourseId();?>" onClick="trackReqEbrochureClick('<?php echo $pageData->getCourseId();?>');validateRequestEBrochureFormData('<?=$pageData->getInstituteId();?>','<?=$arr['rebLocallityId'.$pageData->getInstituteId()];?>','<?=$arr['rebCityId'.$pageData->getInstituteId()];?>','<?=$arr['isMultiLocation'.$pageData->getInstituteId()];?>','<?php echo $pageData->getCourseId();?>');"><i class="icon-pencil" aria-hidden="true"></i><span style="color:#ffffff;">Request E-Brochure</span></a>
+									    <?php } ?>
+									    
+									 
+									    
+									<!--Add-to-compare--->
+								       
+								       <?php
+								       $data['instituteId'] = $pageData->getInstituteId();
+								       $data['courseId']    = $pageData->getCourseId();
+								       $data['isPaid']      = $pageData->isCoursePaid();
+								       $this->load->view('/mcommon5/mobileAddCompare',$data);
+								       ?>
+								       
+								       <!--end-->
+									    
+									</p>
+
+									<form action="/muser5/MobileUser/renderRequestEbrouchre" method="post" id="brochureForm<?=$pageData->getCourseId();?>">
+										<input type="hidden" name="courseAttr" value = "<?php echo $addReqInfoVars; ?>" />
+										<input type="hidden" name="current_url" value = "<?php echo url_base64_encode($shiksha_site_current_url); ?>" />
+										<input type="hidden" name="referral_url" value = "<?php echo url_base64_encode($shiksha_site_current_refferal); ?>" />
+										<input type="hidden" name="selected_course" value = "<?php echo $pageData->getCourseId(); ?>" />
+										<input type="hidden" name="list" value="<?php echo $pageData->getCourseId(); ?>" />
+										<input type="hidden" name="institute_id" value="<?php echo $pageData->getInstituteId(); ?>" />
+										<input type="hidden" name="pageName" value="<?php echo $pageName;?>" />
+										<input type="hidden" name="from_where" value="<?php echo $from_where;?>" />
+									</form>
+									<!-- Request E-Brochure Ends -->									
+
+								
+				
+							</div>
+							
+							
+			
+				
+					</article>
+							    
+				</section>
+				
+				
+				<div id="recomendations_<?php echo $pageData->getCourseId();?>" style="display:none;background:#fff;"></div>
+				
+				<?php $count++;
+			}
+			?>
+			
+	<?php
+}
+?>
+<script>
+function trackReqEbrochureClick(courseId){
+try{
+        _gaq.push(['_trackEvent', 'HTML5_Ranking_Page_Request_Ebrochure', 'click',courseId]);
+}catch(e){}
+}
+</script>

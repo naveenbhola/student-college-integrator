@@ -1,0 +1,37 @@
+.formPreviewMain {font-size:14px; font-family:Arial, Helvetica, sans-serif !important; padding:0 30px}
+.previewHeader{display:block; margin-bottom:12px;}
+.instLogoBox{float:right; width:150px}
+.previewTetx{font-size:22px; color:red; margin-bottom:20px; clear:both}
+.previewBody{width:890px; margin:0 auto;}
+.courseNameDetails{font-size:22px; color:#000000; font-weight:bold; line-height:29px; padding-top:70px; text-transform:uppercase; width:700px; float:left;}
+.appDurationTxt{font-size:20px; font-weight:bold; text-align:center}
+.courseNameDetails strong{color:#ff9000; font-weight:normal;}
+.picBox{width:195px; float:right; border:1px solid #000; height:180px}
+.picBox img{width:195px;}
+.picBox p{text-align:center; padding-top:80px; font-size:12px}
+.formRows{display:block; margin-bottom:2px; float:left; width:100%}
+.formRows ul li{display:block; margin-bottom:15px; float:left; width:100%;}
+.formRows ul li label{float:left; padding-right:5px; font-weight:normal;}
+.formRows ul li h5{font-size:18px; font-weight:700; display:block; padding-bottom:10px}
+.previewFieldBox, .previewFieldBox2{float:left; width:853px;}
+.previewFieldBox2 span{border-bottom:1px dotted #000000; display:block; padding:2px 0 1px 0}
+.previewFieldBox span, .enrollmentPreviewField span{display:block; border-bottom:solid 1px #000000;}
+.formColumns2{float:left}
+.flRt{float:right}
+.checkBox{width:18px; height:15px; padding-top:3px; text-align:center; border:1px solid #000000; float:left; margin-right:10px}
+.adRows{width:700px;; float:left}
+.boxTable{border: 1px solid #000000; border-collapse: collapse;}
+.boxTable tr td{height:21px; width:22px; padding:0; margin:0; text-align: center;}
+.educationTable{border: 1px solid #000000; border-collapse: collapse;}
+.educationTable tr th{text-align:center; font-weight:normal}
+.formWordWrapper{white-space: pre-wrap; word-wrap: break-word; overflow:hidden}
+.workExpRows{padding:0 25px; float:left}
+.workExpRows label{padding-top:5px}
+.workExpRows label span{padding-right:8px}
+.pastAchievementRow{width:100%; float:left}
+.pastAchievementRow label{width:20px; float:left; padding:0}
+.pastAchievementRow p{float:left; width:860px}
+.kiamsFooter{border-bottom:1px solid #000; padding-bottom:2px}
+.kiamsFooterLogo{width:70px; height:81px; float:left}
+.kiamsFooterTxt{width:700px; float:left; padding:7px 0 0 12px; font-weight:bold; line-height:18px}
+.kiamsFooterTxt h4{font-size:18px}

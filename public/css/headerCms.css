@@ -1,0 +1,187 @@
+/* CSS Document */
+
+/* Start_SignInBar */
+#headerGradienthome {width:100%;height:18px; background-image:url(/public/images/headerImages.gif); background-repeat:repeat-x; background-position:0 -233px; margin-bottom:10px; }
+
+/* Start_Tab */
+/*.rowWDF{width:100%; display:inline; float:left}
+.brdwhite_h{border:1px solid #FFFFFF;margin-left:10%;}
+#header ul {list-style-image:none;list-style-position:outside;list-style-type:none;margin:0pt;padding:0pt;}
+#header li {background:transparent url(/public/images/deselectedBg.gif) no-repeat scroll right top;float:left;margin-right:4pt; cursor:pointer}
+#header a {background:transparent url(/public/images/headerImages.gif) no-repeat scroll left top;color:#000000;display:block;padding:0.6em 0.85em 0.25em;text-decoration:none; background-position:0 -97px}
+#header a:hover {color:#000000;}
+#header #selected {background-image:url(/public/images/selectedBg.gif); font-weight:bold;}
+#header #selected a {background-image:url(/public/images/headerImages.gif);color:#FFFFFF;background-position:0 0}
+*/
+
+
+.rowWDF{width:100%; display:block; float:left}
+.rowWDFcms{width:99%; display:block; margin:0 auto}
+.brdwhite_h{border:1px solid #FFFFFF;margin-left:10%;}
+#header #navigationUL {margin:0;padding:0}
+#header #navigationUL li{float:left;cursor:pointer; border-right:1px solid #C7C7C7; margin-bottom:3px}
+#header #navigationUL li a{display:block;padding:3px 6px;text-decoration:none;}
+#header #navigationUL li#selected{background:#FC8104;z-index:102;}
+#header #navigationUL li#selected a{color:#fff;}
+.tabBorder{border:0 none !important; margin-top:3px !important; clear:both; width:100%; background-image:none !important; line-height:normal !important; height:1px; background-color:#c4c4c4; overflow:hidden}
+/* Start_Search */
+*html .brdHeaderTop{border-top:1px solid #F5891C; border-bottom:1px solid #FCB164; height:55px;margin-top:-2px; background-image:url(/public/images/headerImages.gif); background-repeat:repeat-x; background-position:0 -261px; margin-bottom:4px;padding-top:5px;}
+.brdHeaderTop {border-top:1px solid #F5891C; border-bottom:1px solid #FCB164; height:55px;margin-top:-1px; background-image:url(/public/images/headerImages.gif); background-repeat:repeat-x; background-position:0 -261px; margin-bottom:4px;padding-top:5px}
+
+/* Start_Six_Button IE7, IE6 */
+.brdFull{border:1px solid #EEEFEB; height:27px; background-image:url(/public/images/headerImages.gif); background-repeat:repeat-x; background-position:0 -196px;}
+/*
+*html .home{background:url(/public/images/btn_left_all.gif) no-repeat; padding:4px 0 3px 22px;background-position:0 -62px; margin:3px 5px 0 0; width:60px; float:left; cursor:pointer;}
+*html .collegeGroup{background:url(/public/images/btn_left_all.gif) no-repeat; padding:4px 0 3px 22px;background-position:0 -93px; margin:3px 5px 0 0; width:105px; float:left;cursor:pointer}
+*html .schoolGroup{background:url(/public/images/btn_left_all.gif) no-repeat; padding:4px 0 3px 22px;background-position:0 -155px; margin:3px 5px 0 0; width:105px; float:left;cursor:pointer}
+*html .myShiksha{background:url(/public/images/btn_left_all.gif) no-repeat; padding:4px 0 3px 22px;background-position:0 -31px; margin:3px 5px 0 0; width:120px; float:left;cursor:pointer}
+*html .accountSetting{background:url(/public/images/btn_left_all.gif) no-repeat; padding:4px 0 3px 22px;background-position:0 0px; margin:3px 5px 0 0; width:125px; float:left;cursor:pointer}
+*html .message{background:url(/public/images/btn_left_all.gif) no-repeat; padding:4px 0 3px 22px;background-position:0 -124px; margin:3px 0 0 0; width:82px; float:left;cursor:pointer}
+*html .btn_right_bg{background:url(/public/images/btn-right-bg.gif) no-repeat; padding:4px 0 3px 0; margin:-4px 0 0 -2px; background-position:right; }
+*/
+/* Start_Six_Button Mozilla */
+.home{background:url(/public/images/btn_left_all.gif) no-repeat; padding:4px 0 3px 22px;background-position:0 -62px; margin:3px 5px 0 0; width:40px; float:left; cursor:pointer;}
+.collegeGroup{background:url(/public/images/btn_left_all.gif) no-repeat; padding:4px 0 3px 22px;background-position:0 -93px; margin:3px 5px 0 0; width:85px; float:left;cursor:pointer}
+.schoolGroup{background:url(/public/images/btn_left_all.gif) no-repeat; padding:4px 0 3px 22px;background-position:0 -155px; margin:3px 5px 0 0; width:85px; float:left;cursor:pointer}
+.myShiksha{background:url(/public/images/btn_left_all.gif) no-repeat; padding:4px 0 3px 22px;background-position:0 -31px; margin:3px 5px 0 0; width:100px; float:left;cursor:pointer}
+.accountSetting{background:url(/public/images/btn_left_all.gif) no-repeat; padding:4px 0 3px 22px;background-position:0 0px; margin:3px 5px 0 0; width:105px; float:left;cursor:pointer}
+.message{background:url(/public/images/btn_left_all.gif) no-repeat; padding:4px 0 3px 22px;background-position:0 -124px; margin:3px 0 0 0; width:63px; float:left;cursor:pointer}
+.btn_right_bg{background:url(/public/images/btn-right-bg.gif) no-repeat; padding:4px 0 3px 0; margin:-4px 0 0 -2px; background-position:right; }
+.link_black a,.link_black a:hover{color:#000;text-decoration:none;}
+
+.buttr2{float:left; padding-left:5px; text-align:left;}
+.buttr3{float:left; padding-left:5px;}
+button div.btn-submit1 	{ background-image: url(/public/images/btn_bg_submit_leftgr.gif); }
+button div.btn-submit2 	{ background-image: url(/public/images/btn_bg_submit_left_sign.gif); }
+button div p.btn-submit2 { background-image: url(/public/images/btn_bg_submit_rightgr.gif); }
+button div.btn-submit3 	{ background-image: url(/public/images/btn_bg_go_left.gif); }
+button div p.btn-submit4 { background-image: url(/public/images/btn_bg_go_right.gif); }
+button div.btn-submit_head_5 	{ background-image: url(/public/images/btn_bg_call_left.gif); }
+button div p.btn-submit_head_6 { background-image: url(/public/images/btn_bg_call_right.gif); }
+button div.btn-submit3n 	{ background-image: url(/public/images/searchbtn.gif); }
+button div p.btn-submit4n { background-image: url(/public/images/searchbtn_right.gif); }
+button div.btn-submit3new 	{ background-image: url(/public/images/btn_left_header.gif); }
+button div p.btn-submit4new { background-image: url(/public/images/btn_right_header.gif); }
+button div.btn-submitSearchL 	{ background-image: url(/public/images/btn_leftButton.gif); }
+button div p.btn-submitSearchR { background-image: url(/public/images/btn_rightButton.gif); }
+
+.btnTxt {font-weight:bold; font-size:14px; color:#FFFFFF;}
+
+
+.clear_L{clear:left}
+.clear_R{clear:right}
+.float_R{float:right}
+.mar_full_10p{margin:0 10px}
+.pad_full_5p{padding:0 5px}
+.mar_btm_5px{margin-bottom:5px}
+
+
+.inpKeyword {width:64%;border:1px solid #FD7903;padding:5px;font-size:12px;margin-left:2px;}
+.inpLocation{width:30%;border:1px solid #FD7903;padding:5px;font-size:12px;}
+.searchHelpText {font-size:10px;margin-top:-5px;}
+.marginSearch {margin-left:10%;position:absolute;left:0px;padding-top:5px}
+.searchImg { padding-left:5%;padding-top:8px}
+
+.allInputWidth { width:606px;}
+.foreignInputWidth { width:618px;}
+.testprepInputWidth { width:614px;}
+.instituteInputWidth { width:610px;}
+.courseInputWidth { width:610px;}
+.eventsInputWidth { width:606px;}
+.forumsInputWidth { width:613px;}
+.categoryHeaderInputWidth { width:640px;}
+
+.largeWidth { width:95px; }
+.hideLoc {display:none; }
+.largeInput {width:596px;}
+.bgInputBox{background-color:#FCAF60; padding:2px;}
+
+/*Foreign Page Header */
+div#greenGradienthomeFPH {height:60px; background-image:url(/public/images/bgHeaderFPH.jpg); background-repeat:repeat-x; background-position:top left;}
+button div.btn-submitSearchLFPH 	{ background-image: url(/public/images/btn_leftButtonFPH.gif); }
+button div p.btn-submitSearchRFPH { background-image: url(/public/images/btn_rightButtonFPH.gif); }
+.tabActiveBgFPH {display: block;padding:0 3px 0 3px;height:23px;font-weight:bold;background-image:url(/public/images/midActivetabbgFPH.gif);background-repeat:repeat-x; background-position: left; color:#FFFFFF;cursor:pointer;}
+.brdHeaderTopFPH {border-top:1px solid #98C9EA; border-bottom:1px solid #97C9EA;}
+.bgInputBoxFPH {background-color:#ABE1FD; padding:2px;}
+
+/*Management Page Header */
+div#greenGradienthomeMGMT {height:60px; background-image:url(/public/images/bgHeaderMGMT.jpg); background-repeat:repeat-x; background-position:top left;}
+button div.btn-submitSearchLMGMT 	{ background-image: url(/public/images/btn_leftButtonMGMT.gif); }
+button div p.btn-submitSearchRMGMT { background-image: url(/public/images/btn_rightButtonMGMT.gif); }
+.tabActiveBgMGMT {display: block;padding:0 3px 0 3px;height:23px;font-weight:bold;background-image:url(/public/images/midActivetabbgMGMT.gif);background-repeat:repeat-x; background-position: left; color:#FFFFFF;cursor:pointer;}
+.brdHeaderTopMGMT {border-top:1px solid #D3D4D6; border-bottom:1px solid #D3D4D6;}
+.bgInputBoxMGMT {background-color:#D5E0E4; padding:2px;}
+
+/*Retail Page Header */
+div#greenGradienthomeRTL {height:60px; background-image:url(/public/images/bgHeaderRTL.jpg); background-repeat:repeat-x; background-position:top left;}
+button div.btn-submitSearchLRTL 	{ background-image: url(/public/images/btn_leftButtonRTL.gif); }
+button div p.btn-submitSearchRRTL { background-image: url(/public/images/btn_rightButtonRTL.gif); }
+.tabActiveBgRTL {display: block;padding:0 3px 0 3px;height:23px;font-weight:bold;background-image:url(/public/images/midActivetabbgRTL.gif);background-repeat:repeat-x; background-position: left; color:#FFFFFF;cursor:pointer;}
+.brdHeaderTopRTL {border-top:1px solid #F7CEA0; border-bottom:1px solid #F8CDA2;}
+.bgInputBoxRTL {background-color:#FCDDC0; padding:2px;}
+
+/*Animation Page Header */
+div#greenGradienthomeAMTN {height:60px; background-image:url(/public/images/bgHeaderAMTN.jpg); background-repeat:repeat-x; background-position:top left;}
+button div.btn-submitSearchLAMTN 	{ background-image: url(/public/images/btn_leftButtonAMTN.gif); }
+button div p.btn-submitSearchRAMTN { background-image: url(/public/images/btn_rightButtonAMTN.gif); }
+.tabActiveBgAMTN {display: block;padding:0 3px 0 3px;height:23px;font-weight:bold;background-image:url(/public/images/midActivetabbgAMTN.gif);background-repeat:repeat-x; background-position: left; color:#FFFFFF;cursor:pointer;}
+.brdHeaderTopAMTN {border-top:1px solid #8181E1; border-bottom:1px solid #8282E2;}
+.bgInputBoxAMTN {background-color:#D8D8FA; padding:2px;}
+
+/*Banking Page Header */
+div#greenGradienthomeBNK {height:60px; background-image:url(/public/images/bgHeaderBNK.jpg); background-repeat:repeat-x; background-position:top left;}
+button div.btn-submitSearchLBNK 	{ background-image: url(/public/images/btn_leftButtonBNK.gif); }
+button div p.btn-submitSearchRBNK { background-image: url(/public/images/btn_rightButtonBNK.gif); }
+.tabActiveBgBNK {display: block;padding:0 3px 0 3px;height:23px;font-weight:bold;background-image:url(/public/images/midActivetabbgBNK.gif);background-repeat:repeat-x; background-position: left; color:#FFFFFF;cursor:pointer;}
+.brdHeaderTopBNK {border-top:1px solid #DAA1E5; border-bottom:1px solid #DAA1E5;}
+.bgInputBoxBNK {background-color:#E6C3ED; padding:2px;}
+.completion-box{background:#f3f8fe; padding:10px; width:250px; font:normal 13px Tahoma, Geneva, sans-serif}
+.completion-box p{margin:0; padding:0}
+.completion-bar{border:1px solid #bbb9ba; width:100%; height:16px; overflow:hidden; margin-bottom:5px}
+.completion-bar span{background:url(/public/images/bar-bg.gif) 0 0 repeat-x; height:16px; overflow:hidden; width:80%; display:inline-block}
+.completion-title{font:bold 13px "Trebuchet MS", Arial, Helvetica, sans-serif; margin-bottom:8px; display:block}
+.completion-box ul {padding:0; margin:10px 0 0 0}
+.completion-box ul li{padding:0; margin:0 0 5px 20px; color:#bec1c6}
+.completion-box ul li p{color:#000; margin:0; padding:0}
+.loaderImg {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 5px;
+    box-shadow: 0 0 4px #939292;
+    color: #868585;
+    font: 18px Tahoma,Geneva,sans-serif;
+    padding: 10px 25px;
+    position: absolute;
+    text-align: center;
+}
+.loaderImg img {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.loader-col-cms{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.45) none repeat scroll 0% 0%;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0px;
+    bottom: 0px;
+    z-index: 999999;
+}
+.cmsLoader{    
+    background: url('../images/ShikshaMobileLoader.gif');
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    text-indent: -9999px;
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    left: 46%;
+    top: 40%;
+    margin-left: -24px;
+    margin-top: -24px;
+    box-shadow: 0px 0px 8px 2px #B5B5B5;
+    border-radius: 50%;
+}

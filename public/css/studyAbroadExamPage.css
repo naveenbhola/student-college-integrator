@@ -1,0 +1,169 @@
+.exam-wrap{padding:8px 7px 7px; float:left; width:100%}
+.grid-wrap{margin-bottom:35px}
+.about-exam{ color:#666; margin:0px 10px 18px}
+.about-exam p{ font-size:14px; line-height:20px;}
+.page-title{font-size:24px; font-weight:bold; color:#333; margin:0 0 15px 10px;}
+.abroad-exam-sprite{background:url(../images/abroad-exam-sprite.png) no-repeat; display:inline-block; position:relative;}
+.grid-exam-title{font-size:18px; color:#666; margin-left:10px; font-weight:bold}
+ul.grid-list{display:table; margin-top:10px; width:100%}
+ul.grid-list li{display:table-row; margin-bottom:7px; float:left;}
+.exam-grid-1, .exam-grid-2, .exam-grid-3,.exam-grid-4, .exam-grid-5, .exam-grid-6,.exam-grid-7, .exam-grid-8, .exam-grid-9{color:#fff; padding:10px; height:160px; display:table-cell; width:313px; margin:0 7px 0px 0px; font-size:12px; line-height:20px; float:left; position:relative;
+-webkit-transition: background-color 0.7s ease-out;-moz-transition: background-color 0.7s ease-out; -o-transition: background-color 0.7s ease-out; transition: background-color 0.7s ease-out;}
+.exam-grid-1 strong, .exam-grid-2 strong, .exam-grid-3 strong,.exam-grid-4 strong, .exam-grid-5 strong, .exam-grid-6 strong,.exam-grid-7 strong, .exam-grid-8 strong, .exam-grid-9 strong{color:#fff;margin:0 0 8px 0; font-weight:normal; font-size:20px; display:block;}
+.no-margin{margin-right:0;}
+.exam-grid-1{background-color:#466a9b;}.exam-grid-2{background:#669966;}.exam-grid-3{background:#4c5d7b;}.exam-grid-4{background:#597a59;}.exam-grid-5{background:#7aa9d5;}.exam-grid-6{background:#597a59;}.exam-grid-7{background:#4f627a;}.exam-grid-8{background:#669966;}.exam-grid-9{background:#416989;}
+.exam-grid-1:hover{background-color:#253a4b;}.exam-grid-2:hover{background-color:#4ca04c;}.exam-grid-3:hover{background-color:#273132;}.exam-grid-4:hover{background-color:#3f603f;}.exam-grid-5:hover{background-color:#5f90be;}.exam-grid-6:hover{background-color:#3f603f;}.exam-grid-7:hover{background-color:#263033;}.exam-grid-8:hover{background-color:#4ea14e;}.exam-grid-9:hover{background-color:#2a474d;}
+.grid-pattern{background-image:url(../images/grid-pattern.png)}
+.exam-abt-icon, .exam-pattern-icon, .exam-score-icon, .exam-date-icon, .exam-prep-tips-icon, .exam-paper-icon, .exam-syllabus-icon, .exam-college-icon, .exam-article-icon{background-position:0 0; width:42px; height:51px; position:absolute; right:15px; bottom:10px;}
+.exam-pattern-icon{background-position:-51px 0; width:50px;}
+.exam-score-icon{background-position:-109px 0; width:50px;}
+.exam-date-icon{background-position:-167px 0; width:50px;}
+.exam-prep-tips-icon{background-position:-225px 0; width:46px;}
+.exam-paper-icon{background-position:-285px 0; width:50px;}
+.exam-syllabus-icon{background-position:-341px 0; width:65px;}
+.exam-college-icon{background-position:-415px 0; width:65px;}
+.exam-article-icon{background-position:-489px 0; width:38px;}
+.exam-left-col{float:left; width:225px; border:1px solid #ccc; background:#fff;}
+.exam-right-col{margin-left:242px;}
+.exam-left-col ul li{border-bottom:1px solid #e4e4e4;}
+.exam-left-col ul li.last{border-bottom:0 none;}
+.exam-left-col ul li h2{font-size:12px;}
+.exam-left-col ul li a{padding:15px 5px 15px 13px; display:block; color:#666; text-decoration:none;}
+.exam-left-col ul li a.active{background:#336699; color:#fff}
+.exam-left-col ul li a.active .abt-icon{background-position:0 -81px;}
+.exam-left-col ul li a.active .pattern-icon{background-position:-22px -81px;}
+.exam-left-col ul li a.active .score-icon{background-position:-46px -81px;}
+.exam-left-col ul li a.active .date-icon{background-position:-68px -81px;}
+.exam-left-col ul li a.active .prep-tip-icon{background-position:-92px -81px;}
+.exam-left-col ul li a.active .paper-icon{background-position:-114px -81px;}
+.exam-left-col ul li a.active .syllabus-icon{background-position:-137px -81px;}
+.exam-left-col ul li a.active .college-icon{background-position:-166px -81px;}
+.exam-left-col ul li a.active .article-icon{background-position:-196px -81px;}
+ul.exam-sub-menu{border:0 none;background:#eee;}
+ul.exam-sub-menu li{ border-bottom:1px solid #ddd;}
+ul.exam-sub-menu li a{padding:10px 10px 10px 23px; text-decoration:none; color:#333; font-weight: normal;}
+ul.exam-sub-menu li a span{margin-left:14px; display: block;}
+ul.exam-sub-menu li a .menu-arr{background-position:-217px -56px; width:7px; height:8px;float:left;top:6px; visibility:hidden}
+ul.exam-sub-menu li a.active{background:#336699; color:#fff; font-weight:bold;}
+ul.exam-sub-menu li a.active .menu-arr{visibility:visible;}
+.abt-icon, .pattern-icon, .score-icon, .date-icon, .prep-tip-icon, .paper-icon, .syllabus-icon, .college-icon, .article-icon{background-position:0 -56px; width:17px; height:20px; float:left;vertical-align:middle; margin-right:10px}
+.pattern-icon{background-position:-22px -56px; width:20px; top: -2px;}
+.score-icon{background-position:-46px -56px; width:20px;}
+.date-icon{background-position:-69px -56px; width:20px;}
+.prep-tip-icon{background-position:-90px -56px; width:20px; top: -3px;}
+.paper-icon{background-position:-114px -56px; width:20px; top:-4px;}
+.syllabus-icon{background-position:-137px -56px; width:28px;}
+.college-icon{background-position:-166px -56px; width:26px; top:-5px;}
+.article-icon{background-position:-196px -56px; width:20px; top: -4px;}
+.exam-heading{color:#333; margin:5px 0 15px; border-bottom:1px solid #ccc; padding-bottom:5px;}
+.exam-heading h1, .exam-heading h2{font-size:18px;}
+.comment-large-icon, .comment-large-gray-icon{background-position:-270px -56px; width:18px; height:14px; margin-right:5px; vertical-align:middle; top:-2px}
+.comment-large-gray-icon{background-position:-292px -56px; float:left; top:0;}
+.exam-content{color:#666; margin:0 0 15px; line-height:18px; font-size:12px;}
+.exam-sub-heading{display:block; color:#333; font-size:14px; margin-bottom:5px; font-weight:bold}
+.exam-content p{margin-bottom:10px;}
+.comment-section{margin-top:15px;}
+.comment-title{font-weight:bold; font-size:12px; border-bottom:1px solid #ccc; padding-bottom:6px; margin-bottom:14px;}
+.comment-section ul{margin:5px 0 10px 0;}
+.comment-section ul li{margin-bottom:10px;}
+.comment-area{width:100%; border:1px solid #ccc; -moz-border-radius:2px; -webkit-border-radius:2px;border-radius:2px; outline:0 none; padding:10px; color:#999; -moz-box-shadow:0 1px 2px #ddd inset; -webkit-box-shadow:0 1px 2px #ddd inset; box-shadow:0 1px 2px #ddd inset; font:normal 13px 'open sans'; height:50px}
+.posted-comment{background:#fbfbfb; border:1px solid #f6f6f6;-moz-border-radius:2px; -webkit-border-radius:2px;border-radius:2px; padding:10px;margin-top:5px}
+.comment-detail{color:#999; margin-bottom:10px;}
+.posted-comment p{margin:0 0 10px;}
+.article-display{margin:0 0 15px 0;}
+.article-display ul li{margin-bottom:15px; float:left;width:100%;}
+.article-block{width:348px; border:1px solid #e6e6e6; background:#f9f9f9; padding:15px 30px 10px;}
+.article-block strong{display:block; margin-bottom:5px; height: 35px}
+.article-img{margin:0 0 6px 0;}
+.article-caption, .article-cmnt{color:#666; font-size:11px; line-height:18px}
+.article-caption{height: 60px}
+.article-cmnt{margin-top:6px; color:#999; float:left;}
+.article-cmnt .comment-icon{background-position:-249px -56px; width:17px; height:14px; margin-right:3px; vertical-align:middle;}
+.read-more-btn{border:1px solid #cccccc; background-color:#fff; padding:6px 13px; -moz-border-radius:2px; -webkit-border-radius:2px; border-radius:2px;text-decoration:none !important; display: block; color: #000; font-size: 13px; font-weight:bold;
+-moz-transition:all 0.6s ease-out; -webkit-transition:all 0.6s ease-out; transition:all 0.6s ease-out;}
+.read-more-btn span{font-size:22px; font-weight:normal; line-height:0; position:relative; top:3px}
+.read-more-btn:hover{background-color:#f1a536; color: #fff; font-weight: bold; border: 1px solid transparent;}
+.flags{background:url(../images/flags-sprite5.png) no-repeat; display:inline-block;font-style:none; width:53px; height:35px; vertical-align:middle}
+.college-table-wrap{border:1px solid #ccc}
+.college-table{width:100%; border-collapse:collapse; border-color:#cccccc; font-size:14px}
+.college-table tr th, .college-table tr td{background:#e7e7e7; font-weight:bold; padding:10px 7px; text-align:left}
+.college-table tr td{background:transparent; border-right:1px solid #ccc; font-weight:normal; padding:7px 7px; vertical-align:middle}
+.college-table tr td:last-child{border:0 none}
+.college-table tr:nth-child(even){background:#f8f8f8}
+/*CSS For Article*/
+.about-exam-title{color:#666;}
+.title-caption{display:block; margin-bottom:15px;}
+.article-widget-head{margin-bottom:10px; padding-bottom:8px; border-bottom:2px solid #eee;}
+span.related-country{display:inline-block; background:#eee; color:#333; font-size:11px; -moz-border-radius:12px; -webkit-border-radius:12px; border-radius:12px; padding:3px 5px; margin-right:6px;}
+span.related-country .cross-mark{color:#666; width:15px; height:15px; -moz-border-radius:50%; -webkit-border-radius:50%; border-radius:50%; display:inline-block;background:#c8c8c8; font-size:13px; line-height:13px; font-weight:bold; text-align:center; margin-left:5px; text-decoration:none !important; margin-right:0}
+.full-article-block .article-img{margin:0;}
+.full-article-block .article-detail{margin-left:320px;}
+.full-article-block .article-caption{font-size:12px; margin-bottom:25px;}
+.full-article-block .article-cmnt{width:100%;}
+.next-step-info{background:none !important; padding:0 !important;}
+.reading-title{margin:5px 0 15px; position:relative;}
+.reading-arrow{background-position:-344px -56px; width:40px; height:17px; position:absolute; top:5px; left:106px;}
+.planning-info{background:#f8f8f8; padding:25px 10px;color:#506683; font-size:12px;}
+.planning-info ul{display:table; width:100%;}
+.planning-info ul li{display:table-cell;}
+.country-icon, .course-icon, .exam-plan-icon,.college-plan-icon,.process-icon, .loan-icon, .visa-icon,.stu-life-icon{background-position:0px -108px; width:61px; height:61px;position:relative;}
+.course-icon{background-position:-68px -108px; top:5px;}
+.exam-plan-icon{background-position:-137px -108px;top:5px;}
+.college-plan-icon{background-position:-205px -108px;top:5px; height:60px;}
+.process-icon{background-position:-275px -108px; top:5px;}
+.loan-icon{background-position:-344px -108px;top:5px;}
+.visa-icon{background-position:-415px -108px;top:5px;}
+.stu-life-icon{background-position:-488px -108px;top:5px;}
+.planning-col.last{margin-right:0;}
+.planning-info ul li strong{display:block; font-size:14px; margin:10px 0;}
+.planning-col{display:table-cell;margin-right:10px; border:2px solid #f2f2f2; background:#fff; padding:20px 4px; width:24%; text-align:center;-webkit-transition: all 0.5s ease-out;-moz-transition: all 0.5s ease-out; transition: all 0.5s ease-out; position:relative}
+.planning-col:hover, .planning-col.active{background:#eef5ff; border-color:#d1e2fc; box-shadow:0 2px 2px #d7d7d7;}
+.planning-col:hover .country-icon, .planning-col.active .country-icon{background-position:-0px -176px;}
+.planning-col:hover .course-icon, .planning-col.active .course-icon{background-position:-68px -176px;}
+.planning-col:hover .exam-plan-icon, .planning-col.active .exam-plan-icon{background-position:-137px -176px;}
+.planning-col:hover .college-plan-icon, .planning-col.active .college-plan-icon{background-position:-205px -176px;}
+.planning-col:hover .process-icon, .planning-col.active .process-icon{background-position:-275px -176px;}
+.planning-col:hover .loan-icon, .planning-col.active .loan-icon{background-position:-344px -176px;}
+.planning-col:hover .visa-icon, .planning-col.active .visa-icon{background-position:-415px -176px;}
+.planning-col:hover .stu-life-icon, .planning-col.active .stu-life-icon{background-position:-488px -176px;}
+.tick-arrow{display:none;background-position:-316px -56px; width:24px; height:17px; position:absolute; top:10px; left:10px; }
+.planning-col.active .tick-arrow{display:block}
+ul.all-country-list{width:100%;border:2px solid #eee;}
+ul.all-country-list li{padding:8px;}
+ul.all-country-list li.first-child{background:#eee; color:#666;}
+a.show-all-link{padding:0 !important; display:inline-block; color:var(--Teal) !important; float:right; font-size:11px;}
+ul.all-country-list li a{padding:3px;}
+ul.sub-city-list{margin-top:8px;border-top:2px solid #eee;}
+ul.sub-city-list li{padding:6px 6px 6px 20px;}
+ul.sub-city-list li.last{border-bottom:0 none;}
+ul.sub-city-list li a{display:inline-block; color:var(--Teal); float:right; padding:0 !important;font-size:11px;}
+ol.carausel-bullets{width:37px; margin:20px auto}
+ol.carausel-bullets li{width:10px; height:10px; overflow:hidden; -moz-border-radius:50%; -webkit-border-radius:50%; border-radius:50%; background:#c9c9c9; float:left; margin-right:8px; cursor:pointer}
+ol.carausel-bullets li.active{background:#999;}
+.exam-content table,.dyanamic-content table{width:100% !important; border-collapse:collapse !important; font:normal 12px 'open sans', sans-serif !important; margin:0 !important; border:1px solid #e3e3e3 !important;}
+.exam-content table tr td,.dyanamic-content table tr td{border:1px solid #e3e3e3 !important; padding:10px !important; font:normal 12px 'open sans', sans-serif !important;}
+.exam-content table tr td p,.dyanamic-content table tr td p{margin: 0;padding:0 !important; width:auto !important}
+.comment-reply {background: none repeat scroll 0 0 #ececec;margin: 8px 0;padding: 10px;}
+.load-more{background:#efefef; display:block; text-align:center; padding:7px 0; font-size:14px; margin-top:5px}
+.show-all-replies{background:#ECECEC; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; margin-bottom: 10px; padding: 6px 9px 6px 6px; width: 503px; font:normal 14px/19px 'open sans', sans-serif !important}
+
+/*9 April Style*/
+.explore-guide-section{background:#eee; padding:10px;}
+.explore-guide-section h2{color:#333; font-size:18px; font-weight:normal; margin:5px 0;}
+.explore-grids{width:100%; float:left; margin:10px 0 0;}
+.explore-grids ul{display:table; width:100%;}
+.explore-grids ul li{display:table-row; width:100%; margin-bottom:10px; float:left}
+.explore-grid-col{display:table-cell; background:#fff; width:32%; padding:10px 5px; margin-right:13px; float:left; -moz-box-shadow:0 1px 1px #d0d0d0; -webkit-box-shadow:0 1px 1px #d0d0d0; box-shadow:0 1px 1px #d0d0d0; text-decoration: none !important}
+.explore-grid-col.active{background:#eef5ff;border:1px solid #d1e2fc;}
+.explore-grid-col .exam-info{margin-left:30px; font-weight:bold; color:#666; font-size:12px; position:relative; top:2px;}
+.explore-grid-col.last-col{margin-right:0;}
+
+
+.exam-right-col .download-widget {padding: 14px 10px 10px;text-align: center; position:relative}
+.exam-right-col .download-widget p {margin:5px 0 8px ;color: #333;font-size: 14px;}
+.exam-right-col .pdf-icon {background-position: -234px -80px;height: 25px;width: 25px; vertical-align:middle}
+.exam-right-col .dwnld-pdf span {border-left: 1px solid #e27034;box-shadow: -1px 0 0 #f8a262; display: inline-block; height: 26px;padding: 3px 0 0 8px; vertical-align: middle;}
+.exam-right-col a.dwnld-pdf {padding: 2px 6px !important;}
+.shadow{background: url("../images/shadow.png") no-repeat scroll center top rgba(0, 0, 0, 0);display:inline-block;font-style:none; vertical-align:middle; position:relative}
+.shadow-top, .shadow-bottom{background-position:0 0; width:495px; height:14px; top:0;}
+.shadow-bottom{background-position:0 -41px; bottom:0;}

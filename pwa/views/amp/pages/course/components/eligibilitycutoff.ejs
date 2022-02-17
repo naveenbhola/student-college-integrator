@@ -1,0 +1,17 @@
+
+
+<amp-lightbox id="cat-list" class="" layout="nodisplay" scrollable>
+    <div class="lightbox" on="tap:cat-list.close" role="button" tabindex="0">
+        <a class="cls-lightbox color-f font-w6 t-cntr" >&times;</a>
+        <div class="m-layer">
+            <div class="min-div color-w catg-lt">
+                <ul class="color-6">
+                  <?php foreach($categories as $category => $value) {?>
+
+                      <li><label for="eligi_<?=$category;?>" class="block"><?php echo ucfirst($categoriesNameMapping[$category]); ?> Category</label></li>
+                  <?php } ?>
+                </ul>
+            </div>
+        </div>
+    </div>
+</amp-lightbox>

@@ -1,0 +1,13 @@
+{
+  "presets": [
+    "es2015",
+    "react",
+    "flow" // Flow support
+  ],
+"plugins": [
+   "react-loadable/babel",
+    "syntax-dynamic-import",
+    "transform-class-properties"
+
+  ]
+}

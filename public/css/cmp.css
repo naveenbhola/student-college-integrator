@@ -1,0 +1,216 @@
+@charset "utf-8";
+/* CSS Document */
+body{font:normal 12px Arial, Helvetica, sans-serif; background-color:#f1f1f1; margin:0; padding:0; color:#000}
+ul,li,p,form,h1,h2,h3,h4,h5,h6{list-style:none; margin:0; padding:0;}
+a:link,a:active,a:visited,a:hover{color:#0065de; text-decoration:none}
+a:hover{text-decoration:underline}
+img{border:0 none}
+#main-wrapper{}
+#content-wrapper{width:988px; margin:0 auto; background:#fff url(../images/home-shade.gif) left top repeat-y; padding:0 4px}
+.wrapperFxd{background:#fff; width:988px; float:left;}
+#content-child-wrap{padding:0px 8px 10px; display:block; float:left; width:972px;}
+#top-bar{background-position:0 -84px; background-repeat:repeat-x; font-family:Arial, Helvetica, sans-serif; padding:1px 0 3px 0; background-color:#e4e4e5 !important; border-bottom:1px solid #e0e0e1}
+#logo-section{padding:12px 6px 9px; float:left; width:976px}
+.top-bar-child{width:988px; margin:0 auto}
+#top-bar ul li{}
+.naukri-logo{padding:14px 0px 0 5px; float:left}
+.naukri-logo span{background-position:0 -275px; background-repeat:no-repeat; width:173px; height:13px; overflow:hidden; display:block; text-indent:-9999px}
+.top-signin-col{width:778px; padding:8px 0 0 0; float:right}
+.top-signin-col span{color:#c6c6c6; padding:0 5px; vertical-align:middle}
+.top-signin-col label{font-size:12px; vertical-align:middle}
+.top-signin-col a{font-size:11px; vertical-align:middle}
+.top-signin-col div.login{float: left;width: 420px;}
+.top-signin-col div.register{float: left;width: 268px;}
+.top-signin-col div.fb-button{width:82px; float:left;}
+.loginPannel{text-align:right; padding-right:10px}
+.loginPannel span{color:#9C9C9C}
+input.login-field{border:1px solid #d3d0c9; font:normal 11px Arial, Helvetica, sans-serif; padding:3px; width:118px; vertical-align:middle; color:#565656; height:14px; margin:0; background-color:#fff}
+.login-txt{background-position:3px -134px; background-repeat:no-repeat}
+.passwordTxt{background-position:-219px -134px !important; background-repeat:no-repeat !important}
+.shik-logo{width:240px; float:left}
+.header-ad{width:730px; float:right}
+/*#left-shade{background:url(../images/home-shade.gif) left top repeat-y; float:left}
+ * #right-shade{background:url(../images/home-shade.gif) right top repeat-y; float:right}*/
+#top-bar,.naukri-logo span,.register-btn,.f-connect-btn,.login-btn,#top-nav, #top-nav ul li, .home-icon,#top-nav ul li a span, #top-nav ul li span.new-icn, #top-nav ul li a.tabSelected, #top-nav ul li a:hover, #footer, .callIcon, .gray-button,.orange-button,.login-txt,.passwordTxt{background-image:url(../images/home-sprite.png); background-color:transparent}
+.login-btn{background-position:0px -288px; background-repeat:no-repeat; width:54px; height:23px; border:0 none; cursor:pointer; background-color:transparent; vertical-align:middle;}
+.register-btn{background-position:-56px -288px; background-repeat:no-repeat; width:99px; height:23px; border:0 none; cursor:pointer; background-color:transparent; vertical-align:middle}
+.f-connect-btn{background-position:left -233px; background-repeat:no-repeat; width:107px; height:25px; border:0 none; cursor:pointer; margin:0; vertical-align:middle}
+#top-nav{background-position:0 -157px; background-repeat:repeat-x; height:44px;width:100%; float:left; _height:43px; _overflow:hidden}
+#top-nav ul li{float:left; background-position:right -235px; background-repeat:no-repeat; padding:4px 4px 1px 2px; height:35px}
+#top-nav ul li.last{background:none; position:relative}
+#top-nav ul li a{color:#fff; font:bold 14px Arial, Helvetica, sans-serif; float:left; padding:9px 9px 7px; text-decoration:none; cursor:pointer;}
+#top-nav ul li.nav-home-tab{padding-left:6px; padding-right:7px}
+#top-nav ul li.nav-home-tab a{padding:5px 8px 6px !important;}
+#top-nav ul li.nav-home-tab a.tabSelected, #top-nav ul li.nav-home-tab a:hover{padding:4px 7px 5px !important;}
+#top-nav ul li a strong{float:left; margin-right:3px; font-weight:700;}
+#top-nav ul li a.tabSelected, #top-nav ul li a:hover{border:1px solid #a15d19; border-radius:8px; background-color:#ea7626 !important; background-position: left -23px; padding:8px 8px 7px;}
+/* IE9 Hack */
+:root #top-nav ul li a strong{letter-spacing:0.02em\9;}
+#top-nav ul li a span{background-position:-38px -201px; background-repeat:no-repeat; height:6px; width:9px; float:left; margin-top:6px; cursor:pointer; font-size:1px}
+#top-nav ul li span.new-icn{background-position:-38px -222px; background-repeat:no-repeat; height:13px; width:26px; float:left; margin-top:2px; position:absolute; top:2px; right:-11px}
+.home-icon{background-position:0 -202px; background-repeat:no-repeat; height:21px; width:21px; display:block; text-indent:-9999px; padding:0 !important; margin:0 !important;}
+.defaultAdd {font-size:1px;overflow:hidden}
+.showMessages {background:#fffdd6;border:1px solid #facb9d; padding:7px 10px; margin:0 10px}
+.Overlay {display:none;padding:10px;position:absolute;width:250px;z-index:1000001}
+.Overlay input, .whtRound input, .whtRound select{padding:2px !important;}
+#rememberme_marketing input{margin:2px 4px 0 0}
+.w60,.w16 {width:60px}
+.raised_skyWithBGW .b3,.raised_skyWithBGW .b4,.raised_skyWithBGW .b4b,.raised_skyWithBGW .b3b,.raised_skyWithBGW .b2b {background:#FFF;border-left:1px solid #B9DCF0;border-right:1px solid #B9DCF0}
+
+/*Sub Nav CSS*/
+#importantDeadlines,#impDeadlines,#eventTypes,#eventCategories,#commonParentCategoryPanel {width:250px}
+#careerOption{width:300px}
+#MBA ul li,#careerOption ul li, #cafeOption ul li, #gradOption ul li,#testprep ul li,#importantDeadlines ul li,#impDeadlines ul li,#eventTypes ul li,#countries ul li,#eventCategories ul li,#eventCountries ul li,#countryOption ul li,#commonParentCategoryPanel ul li{font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:14px; background:#fff url(../images/dropDwn-bg.gif) left bottom repeat-x; border-top:1px solid #e3e4e8; display: block; position:relative; z-index:1500; padding:0 10px 0 6px; height:34px}
+
+#MBA ul li a,#careerOption ul li a,#gradOption ul li a, #cafeOption ul li a, #testprep ul li a,#importantDeadlines ul li a,#impDeadlines ul li a,#eventTypes ul li a,#countries ul li a,#eventCategories ul li a,#eventCountries ul li a,#countryOption ul li a,#commonParentCategoryPanel ul li a, #subCatagories ul li a{display:block; background:url("../images/shikIcons.png") left -299px no-repeat; padding:7px 8px 0px 13px; color:#0065DE; height:27px; outline:0 none;}
+#MBA ul li a:hover,#gradOption ul li a:hover, #cafeOption ul li a:hover, #testprep ul li a:hover,#importantDeadlines ul li a:hover,#impDeadlines ul li a:hover,#eventTypes ul li a:hover,#countries ul li a:hover,#eventCategories ul li a:hover,#eventCountries ul li a:hover,#countryOption ul li a:hover,#commonParentCategoryPanel ul li a:hover{text-decoration:none; color:#0065DE;}
+#careerOption ul li a:hover{color:#000; text-decoration:none !important; outline:0 none !important;}
+#careerOption ul li a:active, #careerOption ul li a:visited{outline:0 none !important;}
+#careerOption ul li a:link{outline:0 none !important;}
+#MBA ul li.hover,#careerOption ul li.hover, #cafeOption ul li.hover, #gradOption ul li.hover,#testprep ul li.hover,#importantDeadlines ul li.hover,#impDeadlines ul li.hover,#eventTypes ul li.hover,#countries ul li.hover,#eventCategories ul li.hover,#eventCountries ul li.hover,#countryOption ul li.hover,#commonParentCategoryPanel ul li.hover{background:#ffffff; z-index:1600}
+#careerOption ul li.hover{width:270px;}
+#careerOption ul li span{background: url(/public/images/dropDwn-arrow.gif) no-repeat 98% center; display:block; height:34px}
+#careerOption ul li.hover span{background:none}
+li.last{-webkit-border-radius: 0 0 8px 8px; -moz-border-radius: 0 0 8px 8px; border-radius: 0 0 8px 8px;}
+#cafeOption,#MBA,#gradOption,#careerOption,#testprep,#subCatagories, #countryOption{background:#FFF;border:1px solid #adadad; border-top:none; display:none;position:absolute;-webkit-box-shadow: 2px 2px 2px -1px #b3b3b3; -moz-box-shadow: 2px 2px 2px -1px #b3b3b3; box-shadow: 2px 2px 2px -1px #b3b3b3; -webkit-border-radius: 0 0 8px 8px; -moz-border-radius: 0 0 8px 8px; border-radius: 0 0 8px 8px; -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; }
+#cafeOption {width:200px;}
+#testprep,#cafeOption{-webkit-box-shadow: -2px 2px 2px -1px #b3b3b3; -moz-box-shadow: -2px 2px 2px -1px #b3b3b3; box-shadow: -2px 2px 2px -1px #b3b3b3;}
+#MBA table tr td.nav-list, #gradOption table tr td.nav-list, #countryOption table tr td.nav-list{border-right:1px solid #e4e3e8; background-color:#f8f8f8; border-radius:0 0 0 8px}
+#testprep table tr td.nav-list{border-left:1px solid #e4e3e8; background-color:#f8f8f8; border-radius:0 0 8px 0px}
+ul.popular-courses{padding:10px !important; height:auto !important; float:left; width:300px; border:0 none !important}
+ul.popular-courses li{list-style:none !important; padding:0 !important; height:auto !important; background:#fff !important; border:0 none !important; margin-bottom:8px !important; line-height:16px; overflow:hidden; width:100%; display:block}
+ul.popular-courses li a{height:auto !important; background:none !important; padding:0 !important; margin:0 !important}
+ul.popular-courses li h5{font-size:16px; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; color:#121212; margin-bottom:3px; font-weight:normal;}
+ul.popular-courses li div.figure{width:82px; height:26px; float:left; border:1px solid #e4e3e8; background-color:#fff}
+ul.popular-courses li div.figure img{float:left; width:82px; height:26px;}
+ul.popular-courses li div.details{width:205px; float:left; padding-left:8px}
+
+.subCatagories-bot{-webkit-border-radius: 8px !important; -moz-border-radius: 8px !important; border-radius: 8px !important;}
+.subCatagories-last{-webkit-border-radius: 8px 8px 8px 0 !important; -moz-border-radius: 8px 8px 8px 0 !important; border-radius: 8px 8px 8px 0 !important; border-bottom:1px solid #ADADAD !important}
+#subCatagories{width:358px; overflow-y:auto; z-index:1500; border:1px solid #e2e4e6; padding:5px 0; height:170px;_height:160px !important;}
+#subCatagories ul li{background:none !important; border: none !important; height:28px;}
+#subCatagories ul li a{padding:3px 8px 3px 13px; background-position:left -302px !important}
+#subCatagories ul li a:hover{color:#0065DE !important}
+#countries,#eventCountries{width:170px}
+
+/*Sub Nav CSS*/
+#fdbk_tab{top:60% !important;}
+.row,.wdh100 {width:100%}
+.w300{width:300px}
+a.shikIcons2 {background-color:#EFF8FF;border-top:1px solid #DDD;height:16px}
+a.shikIcons2:hover {background-color:#FFF;border-top-color:#DDD}
+a.shikIcons {margin:0 5px}
+#whiteLine {background:#FFF;border-left:1px solid #FFF;display:block;height:26px;left:-1px;position:absolute;top:0;width:1px;z-index:2000}
+.homeBrowseMBA {color:#DDD;display:block;float:left;font-size:12px;height:25px;overflow:hidden;padding-left:0;width:528px}
+.homeBrowseMBA a {background:none;padding:0}
+.shikSCDC a {background-image:url(/public/images/shikIcons.png);background-position:left -308px;background-repeat:no-repeat;text-decoration:none}
+.blackColor,#home_AnATab a.defaultA {color:#000}
+.orangeColor,#wrapperMainForCompleteShiksha .forA a {color:#ff8200}
+.shikIcons, .shik_RatingIcon,.close-icon {background-image: url(/public/images/shikIcons.png);}
+.close-icon{float:right;overflow:hidden;background-position:left -207px;cursor:pointer;height:15px;width:17px;}
+
+/*Buttons*/
+.gray-button{background-position:left 2px; background-repeat:repeat-x; border:solid 1px #bebebe; -moz-border-radius:6px; -webkit-border-radius:6px;border-radius:6px; font:bold 12px Tahoma, Geneva, sans-serif !important; overflow:visible; padding:3px 8px; cursor:pointer; margin:0; text-shadow:1px 1px 2px #b5b5b5; color:#444343; *filter:chroma(color=#000000);}
+.orange-button{background-position:left -25px; background-repeat:repeat-x; background-color:#f29341; border:solid 1px #a15d19; -moz-border-radius:8px; -webkit-border-radius:8px;border-radius:8px; overflow:visible; padding:3px 8px; font:bold 16px Arial, Helvetica, sans-serif !important; color:#fff; line-height:normal; cursor:pointer; margin:0; text-shadow:1px 1px 1px #9d4716; -moz-text-shadow:1px 1px 1px #9d4716; -webkit-text-shadow:1px 1px 1px #9d4716; height:30px\9; *filter:chroma(color=#000000);}
+/* chrome */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+.orange-button{height:30px}
+}
+
+/*Footer*/
+#footer{border-top:3px solid #a3c5f4; padding:0 5px 20px 20px; color:#fff; font:normal 12px Arial, Helvetica, sans-serif; background-position:0 -417px; background-color:#285c9b; background-repeat:repeat-x; clear:left; display:block; overflow:hidden;}
+#footer ul{float:left; width:150px; margin-right:25px}
+#footer ul.footerShow{margin-right:0 !important; width:168px !important}
+#footer ul.help-col{width:120px; margin-right:10px !important}
+#footer ul.last-col{width:122px; margin-right:0 !important}
+.callForFree p{margin-left:8px; text-align:left !important; line-height:normal !important}
+#footer ul.cafe-col{width:125px; margin-right:25px !important}
+#footer ul.SA-col, #footer ul.test-prep-col{margin-right:25px !important}
+#footer ul.carrier-opt-col{width:195px; margin-right:15px}
+#footer ul.carrier-opt-col li span{float:left; margin:0 !important; width:175px}
+#footer ul.carrier-opt-col li span a{margin-left:5px !important}
+.ftrPSgn, .ftrMSgn {background:url(/public/images/shikIcons.png);background-position:left -464px;background-repeat:no-repeat;cursor:pointer;float:left !important;height:10px !important;position:relative;top:3px;width:10px !important; margin-left:8px !important; _margin-left:4px !important; margin-top:0 !important}
+.ftrMSgn {background:url(/public/images/shikIcons.png);background-position:left -491px;}
+.footerHide{display:none !important;padding:0 0 10px 25px; width:168px !important}
+.footerShow{display:block !important;padding:0 0 10px 25px; width:168px !important}
+#footer ul li{margin-bottom:7px; width:100%; display:block; float:left;}
+#footer ul li a{margin-left:8px; clear:left; display:block}
+#footer ul li ul{float:none !important; margin:0 !important; width:100% !important}
+#footer a{color:#c2ddff !important}
+#footer ul li h5{color:#fff; font:normal 17px Trebuchet MS,Arial,Helvetica; margin-bottom:6px}
+#footer p{text-align:center; line-height:20px}
+.partners-link{width:100%; float:left; width:100%; margin:30px 0 25px 0; color:#b4b4b5}
+.partners-link a{margin:0 1px}
+.partners-link strong{font:normal 14px Trebuchet MS,Arial,Helvetica, sans-serif; color:#fff; float:left; width:97px}
+.partners-link p{float:left; text-align:left !important; width:845px}
+.ask-panel{background-color:#eff6ff; padding:12px 8px 10px 10px; margin-top:20px; border-radius:10px;}
+.ask-panel strong{font-weight:700; color:#668bbd; line-height:13px; margin-bottom:5px; display:block}
+.ask-panel textarea{border:1px solid #bad4f8; height:110px; width:93px; padding:5px; background-color:#fff; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; box-shadow:inset 0px 1px 5px #c2c8d1; font:normal 12px Arial, Helvetica, sans-serif; overflow:auto;}
+.callForFree{color:#fff; padding:3px 0px 0 0}
+.callForFree span{color:#fc8206}
+.callIcon{background-position: -179px -298px; height: 15px; padding-right:4px; width: 15px; display:inline-block}
+.clearFix{clear:both; font-size:1px;}
+.spacer5{height:5px; overflow:hidden}
+.spacer10{height:10px; overflow:hidden}
+.spacer15{height:15px; overflow:hidden}
+.spacer20{height:20px; overflow:hidden}
+.flLt{float:left}
+.flRt{float:right}
+.tac{text-align:center}
+input:focus, textarea:focus, select:focus {outline:none;}
+textarea{resize: none;}
+.errorMsg{color:red; font-size:11px}
+.error_box {background-color:#FFAAAA !important; border: 1px solid #FF1111 !important;}
+
+/* New Overlay Classes For UNIFIED REGISTRATION START */
+.divBdr{border-bottom:1px solid #eaeeed;padding-bottom:10px;margin-bottom:10px}
+.blkRound{-moz-border-radius-bottomleft:8px;-moz-border-radius-bottomright:8px;-moz-border-radius-topleft:8px;-moz-border-radius-topright:8px;background:#525252;padding:10px}
+.bluRound{-moz-border-radius-bottomleft:0px;-moz-border-radius-bottomright:0px;-moz-border-radius-topleft:4px;-moz-border-radius-topright:4px;background:#6391cc;padding:7px 10px}
+.bluRound span.title{color:#fff;font-size:14px;font-weight:700}
+.whtRound{-moz-border-radius-bottomleft:4px;-moz-border-radius-bottomright:4px;-moz-border-radius-topleft:0;-moz-border-radius-topright:0;background:#fff;padding:7px 0 7px 10px}
+.Fnt16{font-size:16px}
+.divBdr{border-bottom:1px solid #eaeeed;padding-bottom:10px;margin-bottom:10px}
+.blkRound{-moz-border-radius-bottomleft:8px;-moz-border-radius-bottomright:8px;-moz-border-radius-topleft:8px;-moz-border-radius-topright:8px;background:#525252;padding:10px}
+.bluRound{-moz-border-radius-bottomleft:0px;-moz-border-radius-bottomright:0px;-moz-border-radius-topleft:4px;-moz-border-radius-topright:4px;background:#6391cc;padding:7px 10px}
+.bluRound span.title{color:#fff;font-size:14px;font-weight:700}
+.whtRound{-moz-border-radius-bottomleft:4px;-moz-border-radius-bottomright:4px;-moz-border-radius-topleft:0;-moz-border-radius-topright:0;background:#fff;padding:7px 0 7px 10px}
+.mb15{margin-bottom:15px}
+.float_L,#blogNavigationTab LI SPAN{float:left;font-size: 12px;}
+.float_R,.btnSubmit{float:right}
+.clear_B{clear:both;font-size:1px;height:1px;line-height:1px;overflow:hidden}
+.mb10{margin:0 0 10px}
+.w165{width:165px}
+.tar{text-align:right}
+.modalDialog_transparentDivs{filter:alpha(opacity=40);opacity:0.4;background-color:#000;z-index:105;position:absolute;}
+.modalDialog_contentDiv{border:0px solid #FFF;padding:2px;z-index:1005;position:absolute;background-color:transparent;}
+.modalDialog_contentDiv_shadow{z-index:90;position:absolute;background-color:#transparent;filter:alpha(opacity=30);opacity:0.3;}
+.allShikCloseBtn{background-position: left -207px; cursor: pointer; height: 15px; position: relative; top: 10px; width: 17px; right:6px}
+.cssSprite1 {background-image: url("/public/images/shikIcons.png");}
+.txt_align_r {text-align: right;}
+.errorPlace{display: none;}
+.clear_L {clear: left;font-size: 1px;height: 1px;line-height: 1px;overflow: hidden;}
+.lineSpace_5 {height: 5px;line-height: 5px;}
+element.style{border: 0 none;}
+.continueBtn{background: url("/public/images/hpBtn.png") no-repeat scroll 0 -50px transparent; border: 0 none; color: #FFFFFF; font-size: 16px; font-weight: 700; height: 29px; width: 86px;}
+.fbBtn{background: none repeat scroll 0 0 #6391CC; border: 1px solid #4B78B1; color: #FFFFFF; cursor: pointer; margin: 0; padding: 2px 3px;}
+#dim_bg {-moz-opacity:0.6;background:#000;display:none;filter:alpha(opacity=60);height:800px;left:0;opacity:0.6;position:absolute;top:0;width:100%;z-index:100000}
+/*CSS for Search*/
+.search-btn-col{width:90px; float:right}
+.search-field-col{width:510px; float:left}
+.loc-field-col{width:141px; float:left; padding-left:8px}
+.search-radio-options{z-index:900; width:90%; float:left; clear:left; padding-top:4px}
+.search-radio-options input{margin:0; padding:0}
+
+/*CSS for Counter*/
+.counter_character{display: inline;float: left;position: relative;/*top: -35px;*/background-repeat:no-repeat !important;}
+.counter_character_left{margin-left: 0px;margin-right: 1px;}
+.counter_character_inner{margin-left: 1px;margin-right: 1px;}
+.counter_character_right{margin-left: 1px;margin-right: 0px;}
+.counter_marker{position: relative;	z-index: 1;	background-color:transparent;background-repeat:repeat-x !important; top:0px}
+#why_join_container ul li{list-style:disc !important; margin:5px 0 0 15px;}
+
+.universal-select, input.universal-txt-field{padding:5px; width:100%; border:1px solid #dbdbdb; border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px; box-shadow:inset 0 1px 3px #e0e0e0; -moz-box-shadow:inset 0 1px 3px #e0e0e0; -webkit-box-shadow:inset 0 1px 3px #e0e0e0; color:#333; font-size:14px; font-family:Arial, Helvetica, sans-serif}
+
+#careerOption a, #testprep a, #importantDeadlines a, #impDeadlines a, #eventTypes a, #countries a, #eventCategories a, #eventCountries a, #countryOption a, #commonParentCategoryPanel a{background-position: left -304px; background-repeat: no-repeat; display: block; margin-left: 5px; padding: 5px 10px 5px 15px;}
+#importantDeadlines,#impDeadlines,#eventTypes,#eventCategories,#commonParentCategoryPanel,#countries,#eventCountries,#countryOption{background:#FFF;border:1px solid #adadad; display:none;position:absolute;}
+

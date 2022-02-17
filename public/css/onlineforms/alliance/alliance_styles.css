@@ -1,0 +1,43 @@
+.formPreviewMain {font-size:14px; font-family:"Times New Roman", Times, serif !important;}
+.previewHeader{display:block; border-bottom:1px solid #000; padding:0 30px 8px 30px}
+.instLogoBox{width:170px; float:left; border-right:1px solid #000;}
+.previewTetx{font-size:22px; color:red; margin-bottom:20px; clear:both; padding-left:30px}
+.previewBody{}
+.courseNameDetails{text-align:left; font-size:14px; color:#000000; font-weight:normal; line-height:normal; padding:0px 0 0 20px; width:270px; float:left;}
+.courseNameDetails strong{font-weight:bold; font-size:25px;}
+.formNumb{width:300px; float:left; color:#872e30; font-size:26px; font-weight:bold; padding:30px 0 0 20px}
+.formNumb span{color:#000; border-left:2px solid #a8abad; padding:0 0 0 10px; margin-left:5px}
+.picBox{width:170px; float:right; background-color:#fff; height:200px; border:1px solid #000}
+.picBox img{width:170px; height:200px; float:left}
+.picBox p{text-align:center; padding-top:80px; font-size:12px}
+.formRows{display:block; margin-bottom:2px; float:left; width:100%; border-bottom:1px solid #692e2b;}
+.formRowsLast{border:0 none !important}
+.formRowsChild{padding:12px 21px 0 21px}
+.formRows ul li{display:block; padding-bottom:15px;}
+.formRows ul li.purposeStatement label{float:left; display:block; clear:left}
+.formRows ul li.purposeStatement span{width:30px !important; float:left !important; font-size:14px !important}
+.formRows ul li.purposeStatement p{padding-left:32px; padding-bottom:15px}
+.formRows ul li ul{padding-left:20px}
+.formRows ul li ul li{list-style-type:decimal !important; display:list-item}
+.formRows h3{font-size:21px !important; color:#782e2e; border:none !important; font-weight:normal !important; margin-bottom:10px !important; clear:left; display:block}
+.formRows h3 span{font-size:15px !important; color:#363636 !important;}
+.formRows ul li label{float:left; padding:2px 5px 0 0; font-weight:normal;}
+.formRows ul li label span{font-size:12px}
+.applicantInfoCol{width:725px; float:left;}
+.previewFieldBox, .previewFieldBox2{float:left; width:853px;}
+.previewFieldBox2 span{border-bottom:1px dotted #000000; display:block; padding:2px 0 1px 0}
+.previewFieldBox span, .enrollmentPreviewField span{display:block; border-bottom:solid 1px #000000;}
+.formColumns2{float:left}
+.dateSeparater{padding:8px 5px 0 5px; float:left}
+.choiceBox{float:left; width:98px; text-align:center}
+.formColumns3{float:left; padding-left:50px}
+.formColumns3 span{float:left; padding:7px 0 0 10px}
+.flRt{float:right}
+.checkBox{width:18px; height:15px; padding-top:3px; text-align:center; border:1px solid #000000; float:left; margin-right:10px}
+.checkBoxLabel{float:left; padding-top:2px}
+.educationTable, .educationTable2{border: 1px solid #000000; border-collapse: collapse;}
+.educationTable tr th{text-align:center; font-weight:normal}
+.educationTable2 tr th{text-align:center; font-weight:bold; background-color:#e5e8e8}
+.educationTable2 tr td{text-align:left;}
+.formWordWrapper, .entranceDetails{white-space: pre-wrap; word-wrap: break-word; overflow:hidden}
+.editFormCol{width:75px; float:right; text-align:right; padding-top:108px}

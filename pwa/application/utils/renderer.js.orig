@@ -1,0 +1,9 @@
+import mobileRenderer from './mobileRenderer';
+import desktopRenderer from './desktopRenderer';
+export default (req, store, fromWhere) => {
+	if(global.isMobileRequest === true){
+		return mobileRenderer(req, store, fromWhere);
+	}else{
+		return desktopRenderer(req, store, fromWhere);;
+	}
+}

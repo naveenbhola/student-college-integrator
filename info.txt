@@ -1,0 +1,14 @@
+# Contact info submission
+
+url: www.shiksha.com
+site_owner: Info Edge India Ltd
+address1: A-88 Sector 2
+address2: 
+city: NOIDA
+state: Uttar Pradesh
+country: India
+postal_code: 201301
+phone_number: 91 120 3082000
+display_email: contact@shiksha.com
+site_name: Shiksha.com
+site_description: Helps to make informed career decision

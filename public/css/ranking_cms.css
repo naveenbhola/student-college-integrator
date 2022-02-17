@@ -1,0 +1,93 @@
+/*CSS for Ranking CMS Pages*/
+#ranking-cms-content{font:normal 12px Tahoma, Geneva, sans-serif;width:98%;margin:0px 10px;}
+#ranking-cms-content h3{font:normal 24px "Trebuchet MS", Arial, Helvetica, sans-serif; display:block; margin-bottom:10px}
+.ranking-cate-section{background:#f9f9f9; padding:5px; margin-bottom:5px}
+.ranking-cate-cols{float:left; width:230px}
+.ranking-cate-cols label{font:normal 14px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#666666; margin-bottom:6px; display:block}
+.ranking-cate-cols select,.select-style{padding:4px; border:1px solid #dbdbdb; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px; font: normal 12px Tahoma, Geneva, sans-serif; width:80%; overflow-x: scroll;}
+.cms-ranking-table,.cms-ranking-table2{border-collapse:collapse; font-size:13px}
+.cms-ranking-table tr td, .cms-ranking-table tr th, .cms-ranking-table2 tr td, .cms-ranking-table2 tr th{border:1px solid #e8e8e8; padding:5px 8px;}
+.cms-ranking-table2 tr td{padding:12px 10px;}
+.cms-ranking-table tr th, .cms-ranking-table2 tr th{background:#eaebec; font:normal 14px "Trebuchet MS", Arial, Helvetica, sans-serif; text-align:left; padding:8px}
+.rank-field{width:60px; padding:5px; font:normal 12px Tahoma, Geneva, sans-serif; border:1px solid #dbdbdb; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px;}
+.alt-rows{background:#fbfbfb}
+.add-new-inst{margin-top:20px; clear:both}
+.add-new-inst h5{font:bold 14px Tahoma, Geneva, sans-serif; display:block; margin-bottom:18px; border-bottom:1px solid #dedede; padding-bottom:4px}
+.add-new-inst ul li{margin:0 0 12px 0; list-style-type:none; float:left; width:100%}
+.add-new-inst ul li label{float:left; text-align:right; width:120px; padding:4px 4px 0 0}
+.add-field-box{margin-left:130px;}
+.select-style{width:200px}
+.add-txt-field{padding:4px; border:1px solid #dbdbdb;font: normal 12px Tahoma, Geneva, sans-serif; width:200px}
+.ranking-error-cont{background: #FCDFFF;border:1px solid pink;margin-top:12px;padding:10px 5px;float:left;width:99%;margin:10px 0px;}
+.fntgrey {color: #c1c1c1;}
+.ranking-grey-cont{background: #FBFBFB;border:1px solid #E8E8E8;margin-top:12px;padding:10px 5px;float:left;width:99%;margin:10px 0px;}
+.fntdarkgrey {color: #A9A9A9;}
+
+td.repeat__td p:first-child {
+    padding-top: 0;
+}
+
+td.repeat__td p {
+    margin: 0 -10px;
+    padding: 8px;
+    border-bottom: 1px solid #e6e5e5;
+}
+td.repeat__td p:last-child {
+    border: none;
+    padding-bottom: 0;
+}
+.rankingMta-Disc {
+    width: 100%;
+    display:  block;
+}
+
+.rankingMta-Disc ul li {
+    width: 100%;
+    margin-bottom:  10px;
+    list-style:  none;
+    display:  block;
+}
+
+.rankingMta-Disc ul li label {
+    width: 13%;
+    display:  inline-block;
+    font-size: 16px;
+    vertical-align: top;
+}
+
+.rankingMta-Disc ul li input[type="text"], .rankingMta-Disc ul li textarea {
+    width: 55%;
+    padding:  8px;
+    color:  #333;
+}
+
+.rnk-plchdr {
+    width: 98%;
+    padding:  10px;
+    background: #f7f1f1;
+    box-sizing:  border-box;
+    margin: 20px auto;
+}
+
+.rnk-plchdr label {
+    font-size:  18px;
+    display:  block;
+    margin-bottom: 10px;
+}
+
+.rnk-plchdr label.sub-lbl {
+    font-size:  14px;
+    display:  inline-block;
+    width: 22%;
+}
+
+.rnk-plchdr span {
+    font-weight:  600;
+    font-size: 14px;
+}
+select#locationFilter {
+    width: 300px;
+    background:  #fff;
+    padding:  4px;
+    margin: 10px 0 10px 10px;
+}

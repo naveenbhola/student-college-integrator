@@ -1,0 +1,56 @@
+<div class="row" id="course_student_exchange_form">
+    <div [mysize]="'12'">
+        <div class="x_panel">
+           <div [class.x_title]="opened">
+             <ul class="nav navbar-left panel_toolbox">
+                  <li><a class="collapse-link" (click)="toggle()"><i [class]="opened?' fa fa-chevron-up':' fa fa-chevron-down'"></i></a></li>
+              </ul>
+                <h2>Student Exchange </h2>
+                <div class="clearfix"></div>
+           </div>
+           <div class="x_content" [formGroup]="courseStudentExchange"  [hidden]="!opened">
+              <div class="form-group">
+                <div [mysize]="'3'">
+                    <label>Availability </label>
+                </div>                  
+                <div [mysize]="9">
+                    <div [mysize]="'3'" *ngFor="let item of ['Yes','No']">
+                        <label class="radio-inline" [mysize]="'6'" noBootstrap>
+                        <input type="radio" class="flat" formControlName="is_available" value="{{item}}"/>{{item}}</label>
+                    </div> 
+                </div>
+              </div>
+              <div *ngIf="courseStudentExchange.controls.is_available.value == 'Yes'">
+                    <div class="form-group">
+                      <div [mysize]="'3'">
+                        <label>Duration</label>
+                      </div>                  
+                      <div [mysize]="'2'">
+                          <input type="number" formControlName="duration_value" >
+                          <span class="help-block text-danger" *ngIf="!courseStudentExchange.controls.duration_value.valid">
+                               <span *ngIf="courseStudentExchange.controls.duration_value.errors.required">Duration is required</span>
+                               <span *ngIf="courseStudentExchange.controls.duration_value.errors.pattern">Duration is not valid</span>
+                           </span>                     
+                      </div>
+                      <div [mysize]="'2'">
+                          <select name="medium" formControlName="duration_unit" class="select2_single form-control">  
+                            <option *ngFor="let item of [ 'Days', 'Weeks', 'Months', 'Year']"  value="{{item}}" >{{item}}</option>                          
+                          </select> 
+                      </div>                      
+                    </div>
+
+                    <div class="form-group">
+                      <div [mysize]="'3'">
+                        <label>Description</label>
+                      </div>
+                      <div [mysize]="'6'">
+                          <textarea formControlName="description"></textarea>
+                      </div>                  
+                    </div>
+              </div>
+
+
+           </div>
+        </div>
+    </div>
+</div>

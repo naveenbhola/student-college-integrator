@@ -1,0 +1,265 @@
+ <div class="row" id="usp_form" *ngIf="instituteObj.postingListingType == 'Institute' || (instituteObj.postingListingType == 'University' && instituteObj.main_location.city_id != '' )">
+        <div mysize="12">
+            <div class="x_panel">
+                <div [class.x_title]="opened">
+                    <ul class="nav navbar-left panel_toolbox">
+                      <li><a class="collapse-link" (click)="toggle()"><i [class]="opened?' fa fa-chevron-up':' fa fa-chevron-down'"></i></a></li>
+                    </ul>
+                    <h2>Contact & Locations<img id="contact_details" class="helperText" src="/public/images/tooltip.png" width="20px" style="padding-right:0px" (click)="toolTipNotify('contact_details',$event)"></h2>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content" [hidden]="!opened">
+                  <div *ngIf="instituteObj.main_location.city_id && instituteObj.main_location.city_id != 0">
+                    <div class="form-group"> 
+                     <div mysize="3"> 
+                        <h4 mysize="12" class="cmsFont" style="text-align:left;padding-left:22px;">Main locations:</h4> 
+                     </div> 
+                     <div mysize="6"></div> 
+                    </div>
+
+                    <div class="form-group">
+                       <div mysize="3">
+                          <label mysize="12" style="" class="cmsFont" style="padding-left:21px;text-align:left">{{ instituteObj.main_location.city_id != 0 ?cityListMap[instituteObj.main_location.city_id]['name'] : ""}}</label> 
+                       </div> 
+                       <div mysize="6">
+                         <div mysize="3"> 
+                            <button type="button" class="btn cmsButton-go cmsFont" style="width:170px;" (click)="showModal(instituteObj.main_location)" *ngIf="instituteObj.main_location.city_id && !instituteObj.main_location.locality_id">{{instituteObj.main_location.contact_details.address ? "Update" : "Add"}} Contact Details</button>
+                            <button type="button" class="btn cmsButton-go cmsFont" *ngIf="instituteObj.main_location.city_id && instituteObj.main_location.locality_id && instituteObj.postingListingType != 'University'" (click)="showLocalityLayer(instituteObj.main_location.city_id);" style="width:170px;">Add Localities</button>
+                        </div>
+                       </div>
+                    </div>
+
+                    <div class="form-group" *ngIf="instituteObj.main_location.locality_id != 0"> 
+                       <div mysize="3"> 
+                          <span mysize="12" style="text-align: left;padding-left: 43px">{{localitiesMap[instituteObj.main_location.locality_id]}}</span> 
+                       </div> 
+                       <div mysize="6">
+                         <div mysize="3"> 
+                            <button type="button" class="btn cmsButton-go cmsFont" style="width:170px;" (click)="showModal(instituteObj.main_location)" *ngIf="instituteObj.main_location.city_id && instituteObj.main_location.locality_id !=0">{{instituteObj.main_location.contact_details.address ? "Update" : "Add"}} Contact Details</button>
+                        </div>
+                       </div>
+                    </div>
+
+                  </div>
+
+                  <div *ngIf="instituteObj.postingListingType != 'University'">
+                      <div class="form-group"> 
+                       <div mysize="2"> 
+                          <h4 mysize="12" class="cmsFont" style="padding-left: 23px;">Add more<br/>location[s]</h4> 
+                       </div> 
+                      
+                      <div mysize="10">
+                         <div style="padding-left:0px;" mysize="4">
+                            <select class="cmsFont" name="stateId" class="select2_single form-control" tabindex="-1" placeholder="Select State" [ngModel]="institutePickList.state_id" (ngModelChange)="updateCitiesByState($event);">  
+                                <option value="0">Select State</option>
+                                <option *ngFor="let state of locationData?.locations | mapToIterable | sortArrByColumn:'asc':'val.name'" value="{{state.val.id}}" > {{state.val.name}}</option>
+                            </select>
+                         </div>
+                         <div mysize="3">
+                             <select class="cmsFont" name="CityId" class="select2_group form-control" placeholder="Select City" #cityRef="ngModel" [ngModel]="institutePickList.city_id" (ngModelChange)="updateLocalitiesByCity($event);" [registerForm]="form" [registerModel]="cityRef">
+                             <option value="0">Select City</option>
+                                <option *ngFor="let city of cityList | sortArrByColumn:'asc':'name'" value="{{city.id}}">{{city.name}}</option>
+                             </select>
+                             <span class="help-block text-danger cmsFont">
+                                <span *ngIf="cityRef.errors?.required">{{cityRef.errors?.required}}</span>
+                             </span>
+                         </div>
+                         <div mysize="2">
+                          <button type="button" class="btn cmsButton cmsFont" (click)="addNewLocation();">Add</button>
+                         </div>
+                     </div>
+                     </div>
+
+                    </div>
+                    <div *ngIf="activateLocation">
+                     <div *ngFor="let instituteLocObj of instituteObj.locations | locationObjectHierarchy">
+                        <div class="form-group" > 
+                        <div mysize="12">
+                           <div mysize="3" style="height:37px;"> 
+                              <label mysize="12" style="padding-left: 15px;text-align: left;" class="cmsFont">{{cityListMap[instituteLocObj.val.city_id].name}}</label> 
+                           </div> 
+                           <div mysize="9">
+                             <div mysize="12"> 
+                                <button type="button" class="btn cmsButton-go cmsFont" (click)="showModal(instituteLocObj.val);" *ngIf="instituteLocObj.val.city_id && !instituteLocObj.val.locality_id" style="width:170px;">{{instituteLocObj.val.contact_details.address ? "Update" : "Add"}} Contact Details</button>
+                                <button type="button" class="btn cmsButton-go cmsFont" *ngIf="instituteLocObj.val.city_id && cityListMap[instituteLocObj.val.city_id].localities && instituteLocObj.val.localities.length" style="width:170px;" (click)="showLocalityLayer(instituteLocObj.val.city_id);">Add Localities</button>
+                                <button type="button" class="btn cmsButton-go cmsFont" (click)="showConfirmModal(instituteLocObj.val.city_id, instituteLocObj.val.locality_id, 'delete');" *ngIf="instituteLocObj.val.city_id && !instituteLocObj.val.locality_id" style="width:170px;">Remove</button>
+                                <button type="button" class="btn cmsButton-go cmsFont" (click)="showConfirmModal(instituteLocObj.val.city_id, '', 'deleteall');" *ngIf="instituteLocObj.val.locality_id" style="width:170px;">Remove All</button>
+                                <button type="button" class="btn cmsButton-go cmsFont" *ngIf="cityListMap[instituteLocObj.val.city_id]['localities'] && !instituteLocObj.val.localities.length" style="width:170px;" (click)="showLocalityLayer(instituteLocObj.val.city_id);">Add Localities</button>
+                            </div>
+                           </div>
+                           </div>
+                           <br/>
+                         <div *ngFor="let localityObj of instituteLocObj.val.localities"> 
+                           <div mysize="3" style="height:37px;"> 
+                              <span mysize="12" style="text-align: left;padding-left: 43px;">{{localitiesMap[localityObj.locality_id]}}</span> 
+                           </div> 
+                           <div mysize="9">
+                             <div mysize="12"> 
+                                <button type="button" class="btn cmsButton-go cmsFont" (click)="showModal(localityObj);" *ngIf="localityObj.city_id && localityObj.locality_id" style="width:170px;">{{localityObj.contact_details.address ? "Update" : "Add"}} Contact Details</button>
+                                <button type="button" class="btn cmsButton-go cmsFont" (click)="showConfirmModal(localityObj.city_id, localityObj.locality_id, 'remove_locality');" *ngIf="localityObj.locality_id" style="width:170px;">Remove</button>
+                            </div>
+                           </div>
+                           
+                        </div>
+                        </div>
+
+                      </div>
+                  </div>
+
+            </div>
+        </div>
+    </div>
+
+
+<div bsModal #instituteLocModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" [config]="{backdrop: 'static',keyboard: false}">
+<form #contactForm="ngForm" autocomplete="off" (ngSubmit)="updateLocationContactData(this);" novalidate>
+  <div class="modal-dialog modal-lg" style="width:1000px;margin-right:30px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn close" [disabled]="!contactForm.valid" (click)="contactForm.valid && instituteLocModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">Contact Info</h4>
+      </div>
+      <div class="modal-body" style="position: relative;overflow-y: auto;max-height: 450px;"> 
+        <div class="form-group"> 
+         <div mysize="3"> 
+            <p mysize="12" class="cmsFont">Address</p> 
+         </div> 
+         <div mysize="3">
+           <textarea #locationAddress="ngModel" name="locationAddress" [(ngModel)]="mainContactDetails.address" [myminlength]="'30'" [mymaxlength]="'150'" [registerForm]="form" [registerModel]="locationAddress"></textarea>
+           <span class="help-block text-danger cmsFont">
+               <span *ngIf="locationAddress.errors?.maxlength">{{locationAddress.errors?.maxlength}}</span>
+               <span *ngIf="locationAddress.errors?.minlength">{{locationAddress.errors?.minlength}}</span>
+           </span>
+         </div> 
+        </div>
+
+        <div class="form-group"> 
+         <div mysize="3"> 
+            <p mysize="12" class="cmsFont">College website</p> 
+         </div> 
+         <div mysize="3">
+           <input #locationWebsite="ngModel" type="text" name="locationWebsite" [(ngModel)]="mainContactDetails.website_url" [mystring]="'link'" [mymaxlength]="'500'" [registerForm]="form" [registerModel]="locationWebsite"/>
+           <span class="help-block text-danger cmsFont">
+               <span *ngIf="locationWebsite.errors?.link">{{locationWebsite.errors?.link}}</span>
+               <span *ngIf="locationWebsite.errors?.maxlength">{{locationWebsite.errors?.maxlength}}</span>
+           </span>
+         </div> 
+        </div>
+
+        <div class="form-group"> 
+         <div mysize="3"> 
+            <p mysize="12" class="cmsFont">Latitude (?) <img id="latitude_img" class="helperText" src="/public/images/tooltip.png" width="20px" style="padding-right:0px" (click)="toolTipNotify('latitude_img',$event)"></p> 
+         </div> 
+         <div mysize="3">
+           <input #locationCoordinatesLat="ngModel" type="text" name="locationCoordinatesLat" [(ngModel)]="mainContactDetails.latitude" [mystring]="'geo_coordinates'" [mymaxlength]="'10'" [registerForm]="form" [registerModel]="locationCoordinatesLat"/>
+           <span class="help-block text-danger cmsFont">
+               <span *ngIf="locationCoordinatesLat.errors?.geo_coordinates">{{locationCoordinatesLat.errors?.geo_coordinates}}</span>
+               <span *ngIf="locationCoordinatesLat.errors?.maxlength">{{locationCoordinatesLat.errors?.maxlength}}</span>
+           </span>
+         </div> 
+         <div mysize="3"> 
+            <p mysize="12" class="cmsFont">Longitude</p> 
+         </div> 
+         <div mysize="3">
+           <input #locationCoordinatesLong="ngModel" type="text" name="locationCoordinatesLong" [(ngModel)]="mainContactDetails.longitude" [mystring]="'geo_coordinates'" [mymaxlength]="'10'" [registerForm]="form" [registerModel]="locationCoordinatesLong"/>
+           <span class="help-block text-danger cmsFont">
+               <span *ngIf="locationCoordinatesLong.errors?.geo_coordinates">{{locationCoordinatesLong.errors?.geo_coordinates}}</span>
+               <span *ngIf="locationCoordinatesLong.errors?.maxlength">{{locationCoordinatesLong.errors?.maxlength}}</span>
+           </span>
+         </div> 
+        </div>
+
+        <div class="form-group"> 
+         <div mysize="6"> 
+            <h4 mysize="12">Admissions-enquiry contact (?)</h4> 
+         </div> 
+         <div mysize="6">
+           <h4 mysize="12">Generic-query contact (?)</h4> 
+         </div>
+        </div>
+
+        <div class="form-group"> 
+           <div mysize="3"> 
+              <p mysize="12">Contact number</p> 
+           </div> 
+           <div mysize="3">
+             <input type="text" #locationAdmissionContactNumber="ngModel" name="locationAdmissionContactNumber" [(ngModel)]="mainContactDetails.admission_contact_number" [mystring]="'phone_number'" [mymaxlength]="'20'" [registerForm]="form"   [registerModel]="locationAdmissionContactNumber"/>
+             <span class="help-block text-danger cmsFont">
+               <span *ngIf="locationAdmissionContactNumber.errors?.phone_number">{{locationAdmissionContactNumber.errors?.phone_number}}</span>
+               <span *ngIf="locationAdmissionContactNumber.errors?.maxlength">{{locationAdmissionContactNumber.errors?.maxlength}}</span>
+              </span>
+           </div>
+
+           <div mysize="3"> 
+              <p mysize="12" class="cmsFont">Contact number</p> 
+           </div> 
+           <div mysize="3">
+             <input type="text" #locationGenericContactNumber="ngModel" name="locationGenericContactNumber" [(ngModel)]="mainContactDetails.generic_contact_number" [mystring]="'phone_number'" [mymaxlength]="'20'" [registerForm]="form" [registerModel]="locationGenericContactNumber"/>
+             <span class="help-block text-danger cmsFont">
+               <span *ngIf="locationGenericContactNumber.errors?.phone_number">{{locationGenericContactNumber.errors?.phone_number}}</span>
+               <span *ngIf="locationGenericContactNumber.errors?.maxlength">{{locationGenericContactNumber.errors?.maxlength}}</span>
+              </span>
+           </div> 
+        </div>
+
+        <div class="form-group"> 
+           <div mysize="3"> 
+              <p mysize="12" class="cmsFont">Email ID</p> 
+           </div> 
+           <div mysize="3">
+             <input type="text" #locationAdmissionEmail="ngModel" name="locationAdmissionEmail" [(ngModel)]="mainContactDetails.admission_email" [mystring]="'email'" [mymaxlength]="'150'" [registerForm]="form" [registerModel]="locationAdmissionEmail"/>
+              <span class="help-block text-danger cmsFont">
+               <span *ngIf="locationAdmissionEmail.errors?.email">{{locationAdmissionEmail.errors?.email}}</span>
+               <span *ngIf="locationAdmissionEmail.errors?.maxlength">{{locationAdmissionEmail.errors?.maxlength}}</span>
+              </span>
+           </div>
+
+           <div mysize="3"> 
+              <p mysize="12" class="cmsFont">Email ID</p> 
+           </div> 
+           <div mysize="3">
+             <input type="text" #locationGenericEmail="ngModel" name="locationGenericEmail" [(ngModel)]="mainContactDetails.generic_email" [mystring]="'email'" [mymaxlength]="'150'"/>
+             <span class="help-block text-danger cmsFont">
+               <span *ngIf="locationGenericEmail.errors?.email">{{locationGenericEmail.errors?.email}}</span>
+               <span *ngIf="locationGenericEmail.errors?.maxlength">{{locationGenericEmail.errors?.maxlength}}</span>
+              </span>
+           </div> 
+        </div>
+
+        <div class="form-group" *ngIf="instituteObj.postingListingType != 'University'"> 
+           <div mysize="12"> 
+              <label class="cmsFont"><input type="checkbox" name="contact_info" [(ngModel)]="mainContactDetails.copy_toall_flag"/> Update the Contact info for this location in all the locations under this institute (?)</label> 
+           </div> 
+        </div>
+
+        <div class="form-group"> 
+           <div mysize="12" style="text-align:center;"> 
+              <button type="submit" [disabled]="!contactForm.valid" class="btn cmsButton cmsFont">Update</button>
+           </div> 
+        </div>
+      </div>
+    </div>
+  </div>
+  </form>
+</div>
+
+<locality-modal
+   [isModalOpened] = "isModalOpened"
+   [modalContent]="modalContent"
+   [modalSize]="'large'"
+   [modalTitle]="modalTitle"
+   [elementId]="modalEle"
+   [selectedLocalities]="selectedLocalities"
+   (modalResponse)="modalResponse($event)"
+   (modalHideResponse)="modalHideResponse($event)"
+></locality-modal>
+
+<shiksha-modal
+   [isModalOpened] = "isConfirmModalOpened"
+   [modalContent]="confirmModalContent"
+   [modalSize]="'large'"
+   [elementId]="confirmModalEle"
+   (modalResponse)="confirmModalResponse($event)"
+></shiksha-modal>

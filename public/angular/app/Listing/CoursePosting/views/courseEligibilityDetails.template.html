@@ -1,0 +1,416 @@
+<div class="row" id="course_eligibility_form" [formGroup]="courseEligibilityForm">
+	<div mysize="12">
+		<div class="x_panel" *ngIf="initialized">
+			<div [class.x_title]="opened">
+				<ul class="nav navbar-left panel_toolbox">
+					<li><a class="collapse-link" (click)="toggle()"><i [class]="opened?' fa fa-chevron-up':' fa fa-chevron-down'"></i></a></li>
+				</ul>
+				<h2> Eligibility Details <img class="helperText" id="eligibility_details" src="/public/images/tooltip.png" width="20px" style="padding-right:0px" (click)="toolTipNotify('eligibility_details',$event)"></h2>
+				<div class="clearfix"></div>
+			</div>
+			<div class="x_content"  [hidden]="!opened">
+				<div class="row">
+					<div class="form-group">
+						<div mysize="3">
+							<label>For the batch</label>
+						</div>
+						<div mysize="3">
+							<select formControlName = "batch">
+								<option value="">Select Year</option>
+								<option *ngFor="let year of yearArr" value="{{year}}">{{year}}</option>
+							</select>
+						</div>
+						<div mysize="6">
+							<span *ngIf="courseEligibilityForm.controls.batch.value" class="help-block">If you un-select this year, all the data mapped to this course will be removed (including cut-off and seats for all the exams)</span>
+						</div>
+					</div>
+					<div *ngIf="courseEligibilityForm.controls.batch.value && !hideSectionFlags[0]">
+						<div class="form-group">
+							<h2 mysize="3">Class 10th</h2>
+						</div>
+						<div formGroupName="10th_details">
+							<div class="form-group">
+								<div mysize="3">
+									<label>Score Type</label>
+								</div>
+								<div mysize="3">
+									<select formControlName="score_type">
+										<option *ngFor="let item of courseStaticData?.score_types" value="{{item.value}}">{{item.label}}</option>
+									</select>
+								</div>
+							</div>
+							<div formGroupName="category_wise_cutoff">
+								<addColumnTableComponent [numberValidation]="((courseEligibilityForm.controls['10th_details'].controls['score_type'].value == 'percentage') || (courseEligibilityForm.controls['10th_details'].controls['score_type'].value == 'CGPA')) ? 'decimal' : 'integer'" [editData]="editData && editData['10th_details'] ? editData['10th_details']['category_wise_cutoff'] : null" [group]="courseEligibilityForm.controls['10th_details'].controls['category_wise_cutoff']" [default]="_default" [addmore]="_addMore" [colHeading]="'Eligibility'" [showOutOf]="outOfFlags[0]" ></addColumnTableComponent>
+							</div>
+							<div class="form-group">
+								<div mysize="3">
+									<label>Any Specific Requirement</label>
+								</div>
+								<div mysize="3">
+									<textarea formControlName="description" value="" [class.error]="courseEligibilityForm.controls['10th_details'].controls['description']?.errors"></textarea>
+									<span class="help-block text-danger">
+										<span *ngIf="courseEligibilityForm.controls['10th_details'].controls['description']?.errors?.maxlength">{{courseEligibilityForm.controls['10th_details'].controls['description']?.errors?.maxlength}}</span>
+										<span *ngIf="courseEligibilityForm.controls['10th_details'].controls['description']?.errors?.minlength">{{courseEligibilityForm.controls['10th_details'].controls['description']?.errors?.minlength}}</span>
+									</span>
+								</div>
+							</div><br>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="x_content" *ngIf="courseEligibilityForm.controls.batch.value && !hideSectionFlags[1]" [hidden]="!opened">
+				<div class="row">
+					<div class="form-group">
+						<h2 mysize="3">Class 12th</h2>
+					</div>
+					<div formGroupName="12th_details">
+						<div class="form-group">
+							<div mysize="3">
+								<label>Score Type</label>
+							</div>
+							<div mysize="3">
+								<select formControlName="score_type">
+									<option *ngFor="let item of courseStaticData?.score_types" value="{{item.value}}">{{item.label}}</option>
+								</select>
+							</div>
+						</div>
+						<div formGroupName="category_wise_cutoff">
+							<addColumnTableComponent [numberValidation]="((courseEligibilityForm.controls['12th_details'].controls['score_type'].value == 'percentage') || (courseEligibilityForm.controls['12th_details'].controls['score_type'].value == 'CGPA')) ? 'decimal' : 'integer'" [editData]="editData && editData['12th_details'] ? editData['12th_details']['category_wise_cutoff'] : null" [group]="courseEligibilityForm.controls['12th_details'].controls['category_wise_cutoff']" [default]="_default" [addmore]="_addMore" [colHeading]="'Eligibility'" [showOutOf]="outOfFlags[1]" ></addColumnTableComponent>
+						</div>
+						<div class="form-group">
+							<div mysize="3">
+								<label>Any Specific Requirement</label>
+							</div>
+							<div mysize="3">
+								<textarea formControlName="description" value="" [class.error]="courseEligibilityForm.controls['12th_details'].controls['description']?.errors"></textarea>
+								<span class="help-block text-danger">
+									<span *ngIf="courseEligibilityForm.controls['12th_details'].controls['description']?.errors?.maxlength">{{courseEligibilityForm.controls['12th_details'].controls['description']?.errors?.maxlength}}</span>
+									<span *ngIf="courseEligibilityForm.controls['12th_details'].controls['description']?.errors?.minlength">{{courseEligibilityForm.controls['12th_details'].controls['description']?.errors?.minlength}}</span>
+								</span>
+							</div>
+						</div><br>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group">
+						<h2 mysize="4">Mandatory Subjects <small>(in school)</small></h2>
+					</div>
+					<div class="form-group">
+						<div mysize="2">
+							<label>Subjects</label>
+						</div>
+						<div mysize="4">
+							<mymultiselect formControlName="subjects" [data]="subjects" [defaultPlaceholder]="'Select'" [itemKey]="'eligibilitySubjects'"></mymultiselect>
+						</div>
+					</div>
+					<div class="form-group">
+						<div mysize="2">
+							<label>Others</label>
+						</div>
+						<div mysize="6" formArrayName="other_subjects">
+							<div *ngFor="let control of courseEligibilityForm.controls['other_subjects'].controls;let i = index;">
+								<div mysize="8">
+									<input input type="text" value="" [formControlName]="i">
+									<span class="help-block text-danger" *ngIf="courseEligibilityForm.controls['other_subjects'].controls[i]?.errors?.maxlength">{{courseEligibilityForm.controls['other_subjects'].controls[i]?.errors?.maxlength}}</span>
+								</div>
+								<a href="javascript:void(0);" *ngIf="courseEligibilityForm.controls['other_subjects'].length > 1"  (click)="removeSubject(i)" class="btn cmsFont cmsButton">Remove</a>
+								<a href="javascript:void(0);" *ngIf="i+1 == courseEligibilityForm.controls['other_subjects'].length"  (click)="addSubject();" class="btn cmsFont cmsButton">Add</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="x_content" *ngIf="courseEligibilityForm.controls.batch.value && !hideSectionFlags[2]" [hidden]="!opened">
+				<div class="row">
+					<div class="form-group">
+						<h2 mysize="3">Graduation</h2>
+					</div>
+					<div formGroupName="graduation_details">
+						<div class="form-group">
+							<div mysize="3">
+								<label>Score Type</label>
+							</div>
+							<div mysize="3">
+								<select formControlName="score_type">
+									<option *ngFor="let item of courseStaticData?.score_types" value="{{item.value}}">{{item.label}}</option>
+								</select>
+							</div>
+						</div>
+						<div formGroupName="category_wise_cutoff">
+							<addColumnTableComponent [numberValidation]="((courseEligibilityForm.controls['graduation_details'].controls['score_type'].value == 'percentage') || (courseEligibilityForm.controls['graduation_details'].controls['score_type'].value == 'CGPA')) ? 'decimal' : 'integer'" [editData]="editData && editData['graduation_details'] ? editData['graduation_details']['category_wise_cutoff'] : null" [group]="courseEligibilityForm.controls['graduation_details'].controls['category_wise_cutoff']" [default]="_default" [addmore]="_addMore" [colHeading]="'Eligibility'" [showOutOf]="outOfFlags[2]" ></addColumnTableComponent>
+						</div>
+						<div class="form-group">
+							<div mysize="3">
+								<label>Any Specific Requirement</label>
+							</div>
+							<div mysize="3">
+								<textarea formControlName="description" value="" [class.error]="courseEligibilityForm.controls['graduation_details'].controls['description']?.errors"></textarea>
+								<span class="help-block text-danger">
+									<span *ngIf="courseEligibilityForm.controls['graduation_details'].controls['description']?.errors?.maxlength">{{courseEligibilityForm.controls['graduation_details'].controls['description']?.errors?.maxlength}}</span>
+									<span *ngIf="courseEligibilityForm.controls['graduation_details'].controls['description']?.errors?.minlength">{{courseEligibilityForm.controls['graduation_details'].controls['description']?.errors?.minlength}}</span>
+								</span>
+							</div>
+						</div><br>
+						<div formArrayName="entityMapping">
+							<div *ngFor="let mapping of courseEligibilityForm.controls['graduation_details'].controls['entityMapping'].controls;let i = index;"let l= last;>
+								<div [formGroupName]="i">
+									<div class="form-group">
+										<div mysize="4">
+											<div mysize="4">
+												<label>Graduation Course</label>	
+											</div>
+											<div mysize="8">
+												<select formControlName="base_course">
+													<option value="">Select</option>
+													<option *ngFor="let item of courseStaticData?.base_course_list" value="{{item.value}}">{{item.label}}</option>
+												</select>
+											</div>
+										</div>
+										<div mysize="1"></div>
+										<div mysize="4">
+											<div mysize="4">
+												<label>Graduation Specialization</label>	
+											</div>
+											<div mysize="8">
+												<select formControlName="specialization">
+													<option value="0">Select</option>
+													<option *ngFor="let item of specializationOptions[i]" value="{{item.value}}">{{item.label}}</option>
+												</select>
+											</div>
+										</div>
+										<div mysize="3">
+											<a href="javascript:void(0)" class="btn cmsFont cmsButton" *ngIf="courseEligibilityForm.controls['graduation_details'].controls['entityMapping'].length > 1" (click)="removeEntityMapping(i,'graduation_details');">Remove</a>
+											<a href="javascript:void(0)" class="btn cmsFont cmsButton" *ngIf="i == courseEligibilityForm.controls['graduation_details'].controls['entityMapping'].length-1" (click)="addEntityMapping('graduation_details');">+Add More</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="x_content" *ngIf="courseEligibilityForm.controls.batch.value && !hideSectionFlags[3]" [hidden]="!opened">
+				<div class="row">
+					<div class="form-group">
+						<h2 mysize="3">Post Graduation</h2>
+					</div>
+					<div formGroupName="postgraduation_details">
+						<div class="form-group">
+							<div mysize="3">
+								<label>Score Type</label>
+							</div>
+							<div mysize="3">
+								<select formControlName="score_type">
+									<option *ngFor="let item of courseStaticData?.score_types" value="{{item.value}}">{{item.label}}</option>
+								</select>
+							</div>
+						</div>
+						<div formGroupName="category_wise_cutoff">
+							<addColumnTableComponent [numberValidation]="((courseEligibilityForm.controls['postgraduation_details'].controls['score_type'].value == 'percentage') || (courseEligibilityForm.controls['postgraduation_details'].controls['score_type'].value == 'CGPA')) ? 'decimal' : 'integer'" [editData]="editData && editData['postgraduation_details'] ? editData['postgraduation_details']['category_wise_cutoff'] : null" [group]="courseEligibilityForm.controls['postgraduation_details'].controls['category_wise_cutoff']" [default]="_default" [addmore]="_addMore" [colHeading]="'Eligibility'" [showOutOf]="outOfFlags[3]"  ></addColumnTableComponent>
+						</div>
+						<div class="form-group">
+							<div mysize="3">
+								<label>Any Specific Requirement</label>
+							</div>
+							<div mysize="3">
+								<textarea formControlName="description" value="" [class.error]="courseEligibilityForm.controls['postgraduation_details'].controls['description']?.errors"></textarea>
+								<span class="help-block text-danger">
+									<span *ngIf="courseEligibilityForm.controls['postgraduation_details'].controls['description']?.errors?.maxlength">{{courseEligibilityForm.controls['postgraduation_details'].controls['description']?.errors?.maxlength}}</span>
+									<span *ngIf="courseEligibilityForm.controls['postgraduation_details'].controls['description']?.errors?.minlength">{{courseEligibilityForm.controls['postgraduation_details'].controls['description']?.errors?.minlength}}</span>
+								</span>
+							</div>
+						</div><br>
+						<div formArrayName="entityMapping">
+							<div *ngFor="let mapping of courseEligibilityForm.controls['postgraduation_details'].controls['entityMapping'].controls;let i = index;"let l= last;>
+								<div [formGroupName]="i">
+									<div class="form-group">
+										<div mysize="4">
+											<div mysize="4">
+												<label>PG Course</label>	
+											</div>
+											<div mysize="8">
+												<select formControlName="base_course">
+													<option value="">Select</option>
+													<option *ngFor="let item of courseStaticData?.base_course_list" value="{{item.value}}">{{item.label}}</option>
+												</select>
+											</div>
+										</div>
+										<div mysize="1"></div>
+										<div mysize="4">
+											<div mysize="4">
+												<label>PG Specialization</label>	
+											</div>
+											<div mysize="8">
+												<select formControlName="specialization">
+													<option value="0">Select</option>
+													<option *ngFor="let item of postSpecializationOptions[i]" value="{{item.value}}">{{item.label}}</option>
+												</select>
+											</div>
+										</div>
+										<div mysize="3">
+											<a href="javascript:void(0)" class="btn cmsFont cmsButton" *ngIf="courseEligibilityForm.controls['postgraduation_details'].controls['entityMapping'].length > 1" (click)="removeEntityMapping(i,'postgraduation_details');">Remove</a>
+											<a href="javascript:void(0)" class="btn cmsFont cmsButton" *ngIf="i == courseEligibilityForm.controls['postgraduation_details'].controls['entityMapping'].length-1" (click)="addEntityMapping('postgraduation_details');">+Add More</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="x_content" *ngIf="courseEligibilityForm.controls.batch.value" [hidden]="!opened">
+				<div class="row">
+					<div class="form-group">
+						<h2 mysize="3">Exams Accepted</h2>
+					</div>
+					<div formArrayName="exams_accepted">
+						<table  class="table table-striped table-bordered dataTable no-footer">
+							<thead>
+								<tr>
+									<th style="width:150px;"></th>
+									<th style="width:100px;"></th>
+									<th *ngFor="let item of exam_cols">{{item.label}}</th>
+									<th *ngIf="exams_addmore.length>0">
+										<select  (change)="addColumn($event.target.value)">  
+										    <option value="">Add More</option>
+										    <option *ngFor="let item of exams_addmore" value="{{item.value}}">{{item.label}}</option>
+										</select>
+									</th>
+									<th>Action</th>
+								</tr>
+							</thead>
+							<tbody>
+								<template ngFor let-i [ngForOf]="courseEligibilityForm.controls['exams_accepted'].controls" let-rowIndex="index">
+									<tr class="odd" [formGroupName]="rowIndex">
+										<td>
+											<select formControlName="exam_name" [class.error]="i?.errors?.validateOneOrNoneFormGroup?.exam_name">
+												<option value="">Exam</option>
+												<option *ngFor="let exam of courseStaticData?.exam_list" value="{{exam.value}}">{{exam.label}}</option>
+												<option value="other">Other</option>
+											</select>
+											<span *ngIf="i?.errors?.validateOneOrNoneFormGroup?.exam_name">Select Exam</span>
+											<div *ngIf="i.controls['exam_name'].value == 'other'">
+												<br><input type="text" formControlName="custom_exam" value="" placeholder="Enter Exam Name">
+												<span class="help-block text-danger">
+													<span *ngIf="i?.errors?.validateOneOrNoneFormGroup?.custom_exam">Enter Exam Name</span>
+													<span *ngIf="i?.controls['custom_exam']?.errors?.maxlength">{{i?.controls['custom_exam']?.errors?.maxlength}}</span>
+												</span>
+											</div>
+										</td>
+										<td>
+											<select formControlName="exam_unit" [class.error]="i?.errors?.validateOneOrNoneFormGroup?.exam_unit">
+												<option value="">Unit</option>
+												<option *ngFor="let exam of courseStaticData?.exam_cutoff_unit" value="{{exam.value}}">{{exam.label}}</option>
+											</select>
+											<span *ngIf="i?.errors?.validateOneOrNoneFormGroup?.exam_unit">Select Unit</span>
+										</td>
+										<td *ngFor="let item of exam_cols">
+											<input type="text" [class.error]="(!i?.errors?.validateOneOrNoneFormGroup && i?.errors?.validateOutOfInFormGroup && i.errors.validateOutOfInFormGroup[item.value]) || i.controls[item.value]?.errors?.number" [formControlName]="item.value"/>
+											<span *ngIf="!i?.errors?.validateOneOrNoneFormGroup && i?.errors?.validateOutOfInFormGroup && i.errors.validateOutOfInFormGroup[item.value]">Should be less than out of {{i.controls['outof'].value}}</span><br>
+											<span *ngIf="i.controls[item.value]?.errors?.number">{{i.controls[item.value]?.errors?.number}}</span>
+										</td>
+										<td *ngIf="exams_addmore.length>0"></td>
+										<td>
+											<div class="fa-hover">
+											  <a *ngIf="courseEligibilityForm.controls['exams_accepted'].controls.length > 1" (click)="removeExamsAcceptedRow(rowIndex)"><i class="fa fa-remove" style="font-size:28px"></i></a>
+											</div>
+										</td>
+									</tr>
+									<tr class="odd" *ngIf="i.controls['exam_unit'].value=='score/marks'">
+										<td></td><td></td>
+										<td [attr.colspan]="exam_cols.length" style="text-align:center">Out Of</td>
+									</tr>
+									<tr class="odd" *ngIf="i.controls['exam_unit'].value=='score/marks'" [formGroupName]="rowIndex">
+										<td></td><td></td>
+										<td [attr.colspan]="exam_cols.length">
+										<input style="margin:auto;width:120px;" type="text" formControlName="outof" [class.error]="(i?.errors?.validateOutOfInFormGroup) || (i.controls['outof']?.errors?.number)" />
+										<span *ngIf="i.controls['outof']?.errors?.number">{{i.controls['outof']?.errors?.number}}</span>
+										</td>
+									</tr>
+								</template>
+								<tr>
+									<td colspan="12">
+										<a href="javascript:void(0);"  class="btn btn-round btn-warning" (click)="addExamsAcceptedRow()">Add More</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="x_content" *ngIf="courseEligibilityForm.controls.batch.value" [hidden]="!opened">
+				<div class="row">
+					<div class="form-group">
+						<h2 mysize="3">Others</h2>
+					</div>
+					<div class="form-group">
+						<div mysize="3">
+							<label>Work - Ex</label>
+						</div>
+						<div mysize="3">
+							<input type="text" formControlName="work-ex_min" value="" placeholder="Minimum months">
+							<span class="help-block text-danger">
+								<span *ngIf="courseEligibilityForm.controls['work-ex_min']?.errors?.number">{{courseEligibilityForm.controls['work-ex_min']?.errors?.number}}</span>
+							</span>
+						</div>
+						<div mysize="3">
+							<input type="text" formControlName="work-ex_max" value="" placeholder="Maximum months">
+							<span class="help-block text-danger">
+								<span *ngIf="courseEligibilityForm?.errors && courseEligibilityForm?.errors['work-ex_min']">Max should be greater than min</span>
+								<span *ngIf="courseEligibilityForm.controls['work-ex_max']?.errors?.number">{{courseEligibilityForm.controls['work-ex_max']?.errors?.number}}</span>
+							</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<div mysize="3">
+							<label>Age</label>
+						</div>
+						<div mysize="3">
+							<input type="text" formControlName="age_min" value="" placeholder="Minimum age">
+							<span class="help-block text-danger">
+								<span *ngIf="courseEligibilityForm.controls['age_min']?.errors?.number">{{courseEligibilityForm.controls['age_min']?.errors?.number}}</span>
+							</span>
+						</div>
+						<div mysize="3">
+							<input type="text" formControlName="age_max" value="" placeholder="Maximum age">
+							<span class="help-block text-danger">
+								<span *ngIf="courseEligibilityForm.controls['age_max']?.errors?.number">{{courseEligibilityForm.controls['age_max']?.errors?.number}}</span>
+								<span *ngIf="courseEligibilityForm?.errors && courseEligibilityForm?.errors['age_min']">Max should be greater than min</span>
+							</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<h2 mysize="4">International Students Eligibility</h2>
+					</div>
+					<div class="form-group">
+						<div mysize="3">
+							<label>Details</label>
+						</div>
+						<div mysize="3">
+							<textarea formControlName="international_description" value=""></textarea>
+							<span class="help-block text-danger">
+								<span *ngIf="courseEligibilityForm.controls['international_description']?.errors?.maxlength">{{courseEligibilityForm.controls['international_description']?.errors?.maxlength}}</span>
+								<span *ngIf="courseEligibilityForm.controls['international_description']?.errors?.minlength">{{courseEligibilityForm.controls['international_description']?.errors?.minlength}}</span>
+							</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<h2 mysize="4">Any other eligibility?</h2>
+					</div>
+					<div class="form-group">
+						<div mysize="3">
+							<label>Any other requirement</label>
+						</div>
+						<div mysize="3">
+							<textarea formControlName="description" value="" [class.error]="courseEligibilityForm.controls['description']?.errors?.maxlength"></textarea>
+							<span class="help-block text-danger">
+								<span *ngIf="courseEligibilityForm.controls['description']?.errors?.maxlength">{{courseEligibilityForm.controls['description']?.errors?.maxlength}}</span>
+								<span *ngIf="courseEligibilityForm.controls['description']?.errors?.minlength">{{courseEligibilityForm.controls['description']?.errors?.minlength}}</span>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,170 @@
+.wikkiContents{font-size: 1rem;}
+.wikkiContents.miniView{position: relative;}
+.wikkiContents.shortView{position: relative;max-height: 240px;overflow: hidden;min-height: 70px;}
+.wikkiContents.showContent{max-height: initial;overflow: auto;}
+.wikkiContents p{font-size: 0.875rem;margin: 4px 0px 10px;line-height: 1.3125rem;}
+.wikkiContents strong{font-size: inherit;font-weight: 600;}
+.wikkiContents img{max-width: 100%;height: auto;}
+.wikkiContents iframe{width: 100%;margin: 0 auto;}
+.gradient-col .trnBtn{border:none;}
+.wikkiContents ul{margin-left: 18px;list-style-type: disc;margin-bottom: 5px;}
+.wikkiContents ol{margin-left: 30px;margin-bottom: 5px;}
+.wikkiContents h2,
+.wikkiContents h3,
+.wikkiContents h4,
+.wikkiContents h5,
+.wikkiContents h6
+ {
+    font-weight: 600;color: #000;
+}
+.wikkiContents h2{font-size: 1rem;line-height: 1.375rem;}
+.wikkiContents h3{font-size: 0.9375rem;line-height: 1.3125rem;}
+.wikkiContents h4{font-size: 0.875rem;line-height: 1.3125rem;}
+.wikkiContents h5{font-size: 0.8125rem;line-height: 1.1875rem;}
+.wikkiContents h6{font-size: 0.75rem;line-height: 1.125rem;}
+
+.wikkiContents table {
+    width: 100%!important;
+    border-collapse: collapse;
+    background: #fff;
+    display: block;
+    overflow: auto;
+    margin-bottom: 15px;
+    height: 100%!important;
+    margin-left: 0!important;
+    margin-right: 0!important;
+
+}
+.wikkiContents table tr th p, .wikkiContents table tr td p{margin: 0px;}
+
+
+.wikkiContents table th,
+.wikkiContents table th *{
+    color: #fff;
+    font-weight: 600;
+}
+.wikkiContents table th a{
+    text-decoration: underline!important;
+    cursor: pointer;
+}
+.wikkiContents table tr td ol, ol{
+    margin-left: 30px;
+}
+.wikkiContents table tr td ul,
+.wikkiContents table tr td ol{
+    margin-left: 18px;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+.wikkiContents table tr td ul li{
+    margin-bottom: 10px;
+}
+.wikkiContents table tr td ul {
+    margin-left: 16px;
+    list-style-type: disc;
+}
+.wikkiContents ul li,.wikkiContents ol li{
+    line-height: 1.3125rem;
+    margin-bottom: 10px;
+}
+/*.wikkiContents ul li:last-child,.wikkiContents ol li:last-child{
+    margin-bottom: 0px;
+}*/
+
+@media (min-width: 1281px) {
+
+  .wikkiContents table {
+        display: table;
+    }
+
+}
+
+.fnt-w6, .wikkiContents a{font-weight: 400;color: #008489;}
+.wikkiContents a{text-decoration: underline;}
+.wikkiContents table a{text-decoration: none;}
+.wrap-text {
+    word-break: break-all;
+}
+
+.wikkiContents .embed.half-width {
+    width: 100%;
+    text-align: left;
+    float: none!important;
+    margin: 0!important;
+}
+.wikkiContents .quote-box:before {
+    content: open-quote;
+    font: bold 22px Georgia;
+    color: #000;
+}
+.wikkiContents .quote-box {
+    quotes: "“" "”" "‘" "’";
+}
+.wikkiContents .quote-box {
+    border: 1px solid #eeeeee;
+    padding: 10px;
+    background: #f8f8f8;
+    margin: 5px 0 !important;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: none !important;
+}
+.wikkiContents .quote-box:after {
+    content: close-quote;
+    font: bold 22px Georgia;
+    color: #000;
+}
+.wikkiContents .inter_link{display: inline-block;position: relative;}
+
+.wikkiContents table tr td{
+    color: #000;
+    text-align: left;
+    background-color: #fff;
+    border: 1px solid #003D5C;
+    font-size: 0.875rem;
+    padding: 2px 8px 6px;
+    line-height: 1.3125rem;
+}
+.wikkiContents table tr th {
+    text-align: center;
+    background-color: #003D5C;
+    color: #fff;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    padding: 4px 8px 6px;
+    line-height: 1.3125rem;
+    border: 1px solid #003D5C;
+}
+ol, ul{font-size: 0.875rem;line-height: 1.3125rem;}
+.wikkiContents div{font-size: 0.875rem; line-height: 1.3125rem;}
+
+.wikkiContents:before, .wikkiContents:after {
+    content: '';
+    display: table;
+}
+
+.wikkiContents:after {
+    clear: both;
+}
+.wikkiContents table tr th h1, 
+.wikkiContents table tr th h2, 
+.wikkiContents table tr th h3, 
+.wikkiContents table tr th h4, 
+.wikkiContents table tr th h5, 
+.wikkiContents table tr th h6, 
+.wikkiContents table tr th p{
+    font-size: 0.9375rem;
+    line-height: 1.3125rem;
+    font-weight: 600;
+} 
+/*Unchangeable DFP Tags CSS :  untill editorial requirments change*/
+.hiddenCMSElem{
+    display: none!important;
+}
+/*end*/
+.wikkiContents .post-date {color: #666; font-size: 0.75rem;}
+.wikkiContents .wiki-dfp{text-align: center;}
+.wikkiContents .aboutSection >div > p:last-child {margin-bottom: 0px;}
+.wikkiContents .aboutSection a[href*="https"], .wikkiContents a[href*="https"] {word-break: break-word}

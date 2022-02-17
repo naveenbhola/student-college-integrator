@@ -1,0 +1,25 @@
+/*selected filters*/
+.selectedFilterBlock{margin-bottom: 10px;}
+.multiTags {font-size: 0px;position: relative;}
+.multiTags strong{font-size: 14px;}
+.filterTopMaxHeight{max-height: 37px;overflow: hidden;}
+.searchTags{cursor:pointer;position:relative;font-size:14px;margin:5px 7px 5px 0px;color:#111;display:inline-block;padding:5px 24px 3px 8px;border-radius:2px;background-color:#ffffff;border:1px solid #ccc;}
+#root a.searchTags:hover{text-decoration:line-through;}
+.closeTag{width:20px;height:100%;position:absolute;right:0;top:0;display: flex;justify-content: center;align-items: center;}
+.srpSprite.ics{width:16px;font-size: 20px;height:16px;line-height: 18px;}
+.viewMoreBtn{ display: block;
+    position: absolute;
+    right: 0px;
+    bottom: 1px;
+    color: #008489;
+    padding: 6px 0px 6px 20px;
+    background: linear-gradient(transparent 0% , rgb(255, 255, 255) 100%);
+    font-size: 14px;
+    background: -moz-linear-gradient(to right, rgba(249,249,249,0) 0%,rgba(249,249,249,0) 1%,rgba(249,249,249,0.75) 13%,rgba(255, 255, 255, 0.91) 17%);
+    background: -webkit-linear-gradient(to right, rgba(249,249,249,0) 0%,rgba(249,249,249,0) 1%,rgba(249,249,249,0.75) 13%,rgba(255, 255, 255, 0.91) 17%);
+    background: linear-gradient(to right, rgba(249,249,249,0) 0%,rgba(249,249,249,0) 1%,rgba(249,249,249,0.75) 13%,rgba(255, 255, 255, 0.91) 17%);
+    cursor: pointer;
+    z-index: 1;}
+a.searchTags:hover {
+    text-decoration: line-through;
+}

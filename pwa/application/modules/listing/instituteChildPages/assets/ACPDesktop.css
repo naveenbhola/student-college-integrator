@@ -1,0 +1,37 @@
+.viewCollegeSec .dot_ul li:nth-child(5n+5){margin-right: 0px;}
+.viewCollegeSec .dot_ul li{width: 19%;display: inline-block;vertical-align: top;margin-right: 10px;}
+.pwa_wrapper .flexi-div .ctp-SrpDiv{min-height: 75px;}
+a.reset-link {
+    position: absolute;
+    top: 15px;
+    right: 12px;
+}
+.pwa_wrapper .flexi-div{width: 600px;}
+.pwa_wrapper .ctp-SrpBtnDiv{width: 319px;}
+.reset-link i.reset-ico {
+    background: url(https://images.shiksha.ws/pwa/public/images/pwa-header-mobile-v3.svg) no-repeat;
+    height: 21px;
+    position: static;
+    width: 15px;
+    background-position: -317px -42px;
+    display: inline-block;
+    margin-right: 2px;
+}
+i.reset-ico {
+    width: 21px;
+    height: 18px;
+    background-position: -334px -36px !important;
+    position: absolute;
+    top: 3px;
+    left: 0px;
+    transform: scale(1.25);
+}
+
+._browsesection.clearboth:after {
+    clear: both;
+}
+
+._browsesection.clearboth:before, ._browsesection.clearboth:after {
+    content: '';
+    display: table;
+}

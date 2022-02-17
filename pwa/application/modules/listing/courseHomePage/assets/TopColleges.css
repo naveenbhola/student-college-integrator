@@ -1,0 +1,44 @@
+._padaround {
+    padding: 12px
+}
+
+._browseBy {
+    display: inline-block;
+    position: relative;
+    text-align: left;
+}
+
+._browseRow {
+    overflow: hidden;
+    width: auto;
+    float: left;
+    font-size: 0
+}
+
+._sctntitle {
+    display: block;
+    font-weight: 600;
+    font-size: .875rem;
+    margin-bottom: 6px
+}
+a._clist,._clist {
+    font-size: .75rem;
+    margin: 0 8px 8px 0;
+    color: #000;
+    display: inline-block;
+    float: left;
+    text-decoration: none;
+    padding: 2px 5px;
+    border-radius: 2px;
+    border: 1px solid #000;
+    max-width: 96%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+.viewalltags,._clist.viewalltags{
+    font-size: 0.75rem;
+    color: #008489;
+    border:none;
+    font-weight: 400;
+}

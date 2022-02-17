@@ -1,0 +1,69 @@
+/*latest update CSS starts*/
+ ._ask .LUpdate li {display: block;border-bottom: 1px solid #F2F2F2;font-size: 0.875rem;font-weight: 600;-webkit-tap-highlight-color:transparent;}
+ ._ask .LUpdate li a { display: block;padding: 10px 30px 10px 12px;position: relative;word-break: break-word;margin: 0px;font-weight: 400;}
+ ._ask .LUpdate li a:after{position: absolute;content: "";display: inline-block;width:16px;height: 15px;top:50%;margin-top:-8px;right:6px;background:url(https://images.shiksha.ws/pwa/public/images/mhome-icons-sprite_4.svg) no-repeat -478px -112px;}
+#other>div.loader,.loader {padding-bottom: 10px; text-align: center; font-size: 0.875rem;color: #666}
+#other>div.loader>img,.loader>img {margin: 0 auto; box-shadow: none; display: block}
+a#vmrStrm,a#vmrStrm h3 {color: #008489; text-align: center}
+section {
+    margin-bottom: 12px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+section.artBnr ._container{
+    padding: 0;
+}
+._container {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+._ask {
+    padding: 0px 0px 16px;
+    background: #fff;
+}
+._ask .LUpdate, .bdl ._ask .exDta {
+    font-size: 0.75rem;
+}
+ul {
+    list-style: none;
+    display: block;
+    text-align: left;
+}
+.button-container {
+    text-align: center;
+    padding: 16px 0 0;
+    line-height: 13px;
+}
+/*.trnBtn {
+    border: 1px solid #008489;
+    color: #008489;
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0px 16px;
+    text-align: center;
+    cursor: pointer;
+    background: #fff;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 34px;
+    -webkit-tap-highlight-color: transparent;
+    height: 36px;
+    border-radius: 2px;
+}*/
+._ask i.upd-arw {
+    background-position: -477px -113px;
+    width: 10px;
+    height: 16px;
+}
+._ask i {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    position: relative;
+    top: 4px;
+    background: url(https://images.shiksha.ws/pwa/public/images/mhome-icons-sprite_4.svg) no-repeat;
+}
+
+
+/*latest update CSS ends*/

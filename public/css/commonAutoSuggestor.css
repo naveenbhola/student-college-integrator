@@ -1,0 +1,85 @@
+/**autosuggestor input Text changer layer**/
+.whiteOpecLayer{
+position: fixed;
+top:0;bottom: 0;left:0;right: 0;
+background: rgba(255,255,255,0.6);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.tinymce-text-changer {
+width: 700px;
+border: 1px solid #d2d2d2;
+background: #fff;
+box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+border-radius: 2px;
+overflow: hidden;
+padding: 3px;
+margin-top: -450px;
+}
+
+.text-edit-box input[type="text"] {
+height: 34px;
+width: 100%;
+border: none;
+padding: 5px;
+box-sizing: border-box;
+outline: none;
+}
+
+.text-edit-box {
+display: flex;
+justify-content: space-between;
+}
+
+/*auto suggestor*/
+body.freeze{
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+}
+.tinymce-autosuggetor {
+    position: absolute;
+    width: 706px;
+    background: #fff;
+    max-height: 380px;
+    overflow: auto;
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+    margin: 4px 0px 0px -3px;
+}
+
+ul.groupList {
+    background: #f1f2f3;
+}
+
+.groupList > li > p {
+    padding: 5px 8px;
+}
+
+ul.groupListItems {
+    background: #fff;
+}
+
+.groupListItems > li {
+    padding: 10px 70px 10px 8px;
+    border-bottom: 1px solid #d2d2d2;
+    position: relative;
+    cursor: pointer;
+}
+
+.groupListItems > li:last-child {
+    border: none;
+}
+
+.groupListItems > li:hover {
+    background: #ebebeb;
+}
+._rsType{
+	margin-left: 10px;
+    color: #666;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+/**end**/    

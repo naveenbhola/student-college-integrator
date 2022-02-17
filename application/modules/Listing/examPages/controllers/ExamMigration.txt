@@ -1,0 +1,292 @@
+--------Exam Data from blogTable--------
+
+select blogId, blogTitle, boardId, acronym from blogTable where parentId =0 and status in ('live', 'draft') and blogType='exam' and acronym!='';
++--------+--------------------------------------------+---------+--------------------+
+| blogId | blogTitle                                  | boardId | acronym            |
++--------+--------------------------------------------+---------+--------------------+
+|    464 | Government Exams                           |      37 | Govt               |
+|   5531 | CMAT to change in October 2013             |      47 | CMAT               |
+|    297 | Medical Exams                              |     133 | Medical            |
+|    298 | Engineering Exams                          |      56 | Engineering        |
+|    299 | MBA  Exams                                 |      23 | MBA                |
+|    300 | Foreign Education Exams                    |     163 | Foreign            |
+|   5474 | 10 tips to ace CAT                         |      47 | CAT                |
+|   5481 | CAT 2012: First day first show!            |      47 | CAT                |
+|   5485 | Section-wise analysis of CAT               |      47 | CAT                |
+|   5489 | Will more women make it to IIMs?           |      47 | CAT                |
+|   5493 | BITS Pilani student tops CMAT              |      47 | CMAT               |
+|   6408 | AIMS Test for Management Admissions (ATMA) |      47 | ATMA               |
+|   6820 | Tamil Nadu Common Entrance Test (TANCET)   |      48 | TANCET             |
+|  10055 | Design Exams                               |      69 | Design             |
+|  10113 | Hospitality Exams                          |      84 | Hospitality        |
+|  10114 | Law Examinations                           |      33 | Law                |
+|  11924 | Mass Communication Exams                   |      18 | Mass Communication |
++--------+--------------------------------------------+---------+--------------------+
+298,299,464,10055,10113,10114,11924
+
+select blogId, boardId, acronym, parentId from blogTable where parentId in (297,298,299,300,464,10055,10113,10114,11924) and status in ('live', 'draft') and blogType='exam' and acronym!='' order by parentId;
++--------+---------+--------------------------------+----------+
+| blogId | boardId | acronym                        | parentId |
++--------+---------+--------------------------------+----------+
+|   3280 |     133 | DUMET                          |      297 |
+|   6246 |      49 | NEET                           |      297 |
+|    330 |     133 | AIPMT                          |      297 |
+|   9166 |     133 | AIIMS                          |      297 |
+|   9171 |     133 | AIMS                           |      297 |
+|   9172 |     133 | AIPGDET                        |      297 |
+|   9173 |     133 | AIPGMEE                        |      297 |
+|   9174 |     133 | AIPGMET                        |      297 |
+|   9175 |     133 | AIPMT                          |      297 |
+|   9176 |     133 | AIPVT                          |      297 |
+|   9178 |     133 | AMUPMDC                        |      297 |
+|   9181 |     133 | AU AIMEE                       |      297 |
+|   9184 |     133 | BVUMEE                         |      297 |
+|   9185 |     133 | BHUMEE                         |      297 |
+|   9186 |     133 | BLDEUGET                       |      297 |
+|   9188 |     133 | CETPPMC                        |      297 |
+|   9189 |     133 | CMCLET                         |      297 |
+|   9192 |     133 | DDYPIAICET                     |      297 |
+|   9193 |     133 | DUMET                          |      297 |
+|   9194 |     133 | DUPGMET                        |      297 |
+|   9195 |     133 | DUSET                          |      297 |
+|   9200 |     133 | GUJCET                         |      297 |
+|   9201 |     133 | HPMT                           |      297 |
+|   9202 |     133 | HPCPMT                         |      297 |
+|   9212 |     133 | KLEPGAIET                      |      297 |
+|   9213 |     133 | KLEUGAIET                      |      297 |
+|   9241 |     133 | MPMT                           |      297 |
+|   9242 |     131 | MGDCHJET                       |      297 |
+|   9243 |     133 | MGIMS                          |      297 |
+|   9244 |     133 | MGPGIPGDEE                     |      297 |
+|   9245 |     133 | MHPGMPGDCET                    |      297 |
+|   9246 |     133 | MHSSET                         |      297 |
+|   9250 |     131 | MPDMAT                         |      297 |
+|   9253 |     133 | MPMT                           |      297 |
+|   9263 |     134 | PGIMER                         |      297 |
+|   9264 |     133 | PIMS                           |      297 |
+|   9265 |     133 | PMET                           |      297 |
+|   9269 |     133 | RPMT                           |      297 |
+|   9271 |     133 | SBVUMCET                       |      297 |
+|   9273 |     133 | SRMMEE                         |      297 |
+|   9279 |     131 | UPCAT                          |      297 |
+|   9280 |     133 | UPCMET                         |      297 |
+|   9281 |     133 | UPCPMT                         |      297 |
+|   9283 |     133 | UPMT                           |      297 |
+|   9284 |     134 | UPPGMEE                        |      297 |
+|   9288 |     133 | VMUAICEE                       |      297 |
+|   9290 |     133 | JIPMER                         |      297 |
+|   3298 |      48 | GATE                           |      298 |
+|   6554 |      48 | TNEA                           |      298 |
+|   6244 |      56 | JEE Mains                      |      298 |
+|   6245 |      56 | JEE Advanced                   |      298 |
+|   6611 |      56 | KCET                           |      298 |
+|   6612 |      56 | UPSEE                          |      298 |
+|   6613 |      56 | MT-CET                         |      298 |
+|   6614 |      56 | CGPET                          |      298 |
+|   6615 |      56 | SRMJEEE                        |      298 |
+|   6616 |      56 | KEAM                           |      298 |
+|   6617 |      56 | MPPEPT                         |      298 |
+|   6618 |      56 | MANIPAL - ENAT                 |      298 |
+|   6490 |      48 | AP EAMCET                      |      298 |
+|   6504 |      48 | COMEDK                         |      298 |
+|   6218 |      48 | BITSAT                         |      298 |
+|   6219 |      48 | VITEEE                         |      298 |
+|   9179 |      56 | ATIT                           |      298 |
+|   9187 |      56 | CETK                           |      298 |
+|   9191 |      56 | DCEE                           |      298 |
+|   9196 |     133 | ENAT                           |      298 |
+|   9198 |      56 | GGSIPU                         |      298 |
+|   9199 |      56 | GNDUCET                        |      298 |
+|   9205 |      56 | IIST                           |      298 |
+|   9209 |      56 | JNUEEE                         |      298 |
+|   9210 |      56 | KEAM                           |      298 |
+|   9240 |      56 | MAHER                          |      298 |
+|   9247 |      56 | MHCET                          |      298 |
+|   9248 |      56 | MHTCET                         |      298 |
+|   9251 |      56 | MPPET                          |      298 |
+|   9255 |      56 | NATA                           |      298 |
+|   9256 |      56 | NERIST                         |      298 |
+|   9259 |      56 | OJEE                           |      298 |
+|   9261 |      56 | PACET                          |      298 |
+|   9262 |      59 | PGCET                          |      298 |
+|   9266 |      59 | PCET                           |      298 |
+|   9268 |      56 | RPET                           |      298 |
+|   9276 |      59 | TANCET                         |      298 |
+|   9278 |      23 | UAJET                          |      298 |
+|   9289 |      56 | WAT                            |      298 |
+|   9606 |      56 | AEEE                           |      298 |
+|   9607 |      56 | AEEE                           |      298 |
+|   9615 |      56 | UPES-EAT                       |      298 |
+|   9635 |      56 | PESSAT                         |      298 |
+|   9749 |      56 | JCECE                          |      298 |
+|   9754 |      59 | VITMEE                         |      298 |
+|   9774 |      56 | LPU-NEST                       |      298 |
+|   9816 |      56 | MU-OET                         |      298 |
+|   9931 |      56 | Alliance AUEET                 |      298 |
+|  10245 |      56 | CUSAT CAT                      |      298 |
+|  10248 |      56 | NAT                            |      298 |
+|  10250 |      56 | GCET                           |      298 |
+|  10306 |      56 | AJEE                           |      298 |
+|  10307 |      56 | TS EAMCET                      |      298 |
+|  11089 |      56 | REAP                           |      298 |
+|  11641 |      56 | KEE                            |      298 |
+|  11842 |      56 | VTUEEE                         |      298 |
+|  11884 |      56 | SBAIEE                         |      298 |
+|  11934 |      56 | SET                            |      298 |
+|  11967 |      56 | ATIT                           |      298 |
+|  12149 |      56 | REVA EET                       |      298 |
+|  12189 |      56 | BSAUEEE                        |      298 |
+|  12192 |      56 | AISEEE                         |      298 |
+|  12293 |      56 | Amity JEE                      |      298 |
+|  12415 |      56 | IEMJEE                         |      298 |
+|  12526 |      56 | SUAT                           |      298 |
+|  12986 |      56 | Assam CEE                      |      298 |
+|  12809 |      56 | NERIST Entrance Exam           |      298 |
+|  12826 |      56 | IMUCET                         |      298 |
+|  12861 |      56 | TJEE                           |      298 |
+|  13080 |      56 | AMIE Exam                      |      298 |
+|  13060 |      56 | GEEE                           |      298 |
+|  13078 |      56 | GAT - UGTP                     |      298 |
+|  13104 |      56 | HPCET                          |      298 |
+|   3275 |      23 | NMAT by GMAC                   |      299 |
+|    305 |      47 | CAT                            |      299 |
+|    306 |      23 | MAT                            |      299 |
+|    307 |      23 | SNAP                           |      299 |
+|    309 |      23 | XAT                            |      299 |
+|   5944 |      23 | IIFT                           |      299 |
+|   5945 |      23 | IRMA                           |      299 |
+|   6619 |      23 | No Exam Required               |      299 |
+|   6401 |      47 | IBSAT                          |      299 |
+|   5822 |      23 | CMAT                           |      299 |
+|   9170 |      23 | AIMAT                          |      299 |
+|   9180 |      23 | ATMA                           |      299 |
+|   9197 |      23 | GCET-MBA                       |      299 |
+|   9204 |      23 | HPCMAT                         |      299 |
+|   9208 |      23 | JEMAT                          |      299 |
+|   9238 |      23 | KMAT                           |      299 |
+|   9249 |      23 | MICAT                          |      299 |
+|   9252 |      23 | MPMET                          |      299 |
+|   9254 |      23 | NAT-MBA                        |      299 |
+|   9258 |      26 | OpenMAT                        |      299 |
+|   9260 |      23 | OMAT                           |      299 |
+|   9267 |      23 | RMAT                           |      299 |
+|   9282 |      23 | UP-MCAT                        |      299 |
+|   9643 |      23 | PESSAT MBA                     |      299 |
+|   9747 |      23 | KIITEE MANAGEMENT              |      299 |
+|   9886 |      23 | OJEE MBA                       |      299 |
+|   9983 |      23 | MAH-CET                        |      299 |
+|  10002 |      23 | ICET                           |      299 |
+|  10637 |      23 | TANCET MBA                     |      299 |
+|  10692 |      23 | TSICET                         |      299 |
+|  11438 |      23 | TISSNET                        |      299 |
+|  12081 |      23 | CUSAT MBA                      |      299 |
+|  13069 |      23 | HPU MAT                        |      299 |
+|  12971 |      23 | Karnataka PGCET                |      299 |
+|  13049 |      23 | SMAT                           |      299 |
+|  13052 |      23 | JEMAT                          |      299 |
+|  13056 |      23 | RMAT                           |      299 |
+|  13057 |      23 | UPESMET                        |      299 |
+|  13063 |      23 | PU-CET (P.G.)                  |      299 |
+|  13071 |      23 | MPMET                          |      299 |
+|  13073 |      23 | BET                            |      299 |
+|  13081 |      23 | B-MAT                          |      299 |
+|  13082 |      23 | GNDU GMET                      |      299 |
+|  13083 |      23 | AMU MBA Entrance Exam          |      299 |
+|  13087 |      23 | UPMCAT                         |      299 |
+|  13094 |      23 | SPJAT                          |      299 |
+|  13102 |      26 | IGNOU OPENMAT                  |      299 |
+|  13103 |      23 | GSIB Entrance Test             |      299 |
+|  13105 |      23 | KMAT KERALA                    |      299 |
+|  13106 |      23 | HBSAT                          |      299 |
+|  13109 |      23 | PIM-MAT                        |      299 |
+|  13110 |      24 | PGRRCDE MBA Entrance Test      |      299 |
+|  13114 |      23 | SRMCAT                         |      299 |
+|  13116 |      23 | PU MET                         |      299 |
+|  13120 |      23 | VMOU MET                       |      299 |
+|  13122 |      23 | X-GMAT                         |      299 |
+|  13130 |      25 | EMAT                           |      299 |
+|   3300 |      32 | IELTS                          |      300 |
+|   6740 |      51 | PTE                            |      300 |
+|    310 |     163 | GMAT                           |      300 |
+|    410 |     185 | TOEFL                          |      300 |
+|    418 |     185 | SAT                            |      300 |
+|   2494 |     185 | GRE                            |      300 |
+|   6227 |     172 | LSAT                           |      300 |
+|    465 |      37 | UPSC                           |      464 |
+|   6610 |      75 | Bank PO                        |      464 |
+|   3043 |      37 | BPOE                           |      464 |
+|   3044 |      56 | WBJEE                          |      464 |
+|   3041 |      37 | WBCSE                          |      464 |
+|   3042 |      37 | SSC                            |      464 |
+|   6214 |      50 | CLAT                           |      464 |
+|   9169 |      33 | AILET                          |      464 |
+|   9177 |      33 | AMU                            |      464 |
+|   9182 |      52 | BCC                            |      464 |
+|   9183 |      53 | BSCC                           |      464 |
+|   9190 |      38 | CTET                           |      464 |
+|   9206 |      33 | ILICAT                         |      464 |
+|   9207 |      33 | ILSAT                          |      464 |
+|   9211 |      33 | KL                             |      464 |
+|   9214 |      33 | KLEE                           |      464 |
+|   9237 |      33 | KLSAT                          |      464 |
+|   9239 |      33 | LAWCET                         |      464 |
+|   9257 |      38 | NET                            |      464 |
+|   9270 |      33 | RULET                          |      464 |
+|   9272 |      38 | SET                            |      464 |
+|   9274 |      37 | SSC - Staff Selection Commissi |      464 |
+|   9275 |      33 | SVULAWCET                      |      464 |
+|   9277 |      32 | TISS                           |      464 |
+|   9285 |      37 | UPSC-(IAS)                     |      464 |
+|  10183 |      69 | NIFT Entrance Exam             |    10055 |
+|  10827 |      69 | FDDI AIST                      |    10055 |
+|  11496 |      69 | CEED                           |    10055 |
+|  11561 |      69 | NID Entrance Exam              |    10055 |
+|  11613 |      72 | UCEED                          |    10055 |
+|  11699 |      69 | UID Aptitude Test              |    10055 |
+|  11903 |      69 | AICET                          |    10055 |
+|  12135 |      69 | AIEED                          |    10055 |
+|  12215 |      69 | SID Exam                       |    10055 |
+|  12225 |      69 | GD Goenka DAT                  |    10055 |
+|  12850 |      69 | Pearl Academy Entrance Exam    |    10055 |
+|  12914 |      70 | CEPT Entrance Exam             |    10055 |
+|  12938 |      69 | IIAD Entrance Exam             |    10055 |
+|  12969 |      69 | IICD Entrance Exam             |    10055 |
+|  12967 |      69 | MDAT                           |    10055 |
+|  12968 |      69 | SOFT CET                       |    10055 |
+|  12995 |      70 | NICC Entrance Exam             |    10055 |
+|  13018 |      69 | NIIFT Entrance Exam            |    10055 |
+|  13031 |      69 | AIFD WAT                       |    10055 |
+|  13033 |      69 | AIFD CAT                       |    10055 |
+|  13036 |      69 | SEAT                           |    10055 |
+|  13086 |      69 | MITID DAT                      |    10055 |
+|  13088 |      69 | UPES DAT                       |    10055 |
+|  13091 |      69 | GLS Institute of Design DAT    |    10055 |
+|  13090 |      69 | WWI Entrance Exam              |    10055 |
+|  13093 |      69 | ISDI Challenge                 |    10055 |
+|  12984 |      84 | Ecole Hoteliere Lavasa Exam    |    10113 |
+|  10118 |      84 | IIHM eCHAT                     |    10113 |
+|  10831 |      84 | Oberoi STEP                    |    10113 |
+|  10832 |      84 | IIHM eCHAT                     |    10113 |
+|  11178 |      84 | NCHMCT JEE                     |    10113 |
+|  10119 |      33 | CLAT                           |    10114 |
+|  10249 |      33 | LSAT                           |    10114 |
+|  11443 |      33 | AILET                          |    10114 |
+|  12106 |      33 | TSLAWCET                       |    10114 |
+|  12263 |      33 | APLAWCET                       |    10114 |
+|  12864 |      33 | Allahabad University LAT Exam  |    10114 |
+|  12911 |      33 | AIBE                           |    10114 |
+|  13037 |      33 | DU LLB Entrance Exam           |    10114 |
+|  13038 |      33 | KLEE                           |    10114 |
+|  13058 |      33 | AMU Law Entrance Exam          |    10114 |
+|  13059 |      33 | ITLA                           |    10114 |
+|  13062 |      33 | LFAT                           |    10114 |
+|  13064 |      33 | ULSAT                          |    10114 |
+|  13067 |      33 | ACLAT                          |    10114 |
+|  13068 |      33 | ILICAT                         |    10114 |
+|  13079 |      33 | Lloyd Entrance Test (LET)      |    10114 |
+|  13085 |      33 | BHU UET                        |    10114 |
+|  13123 |      33 | RULET                          |    10114 |
+|  13124 |      33 | REVA CLAT                      |    10114 |
+|  12044 |      18 | IIMC Entrance Exam             |    11924 |
+|  12406 |      18 | Jamia Millia Islamia Entrance  |    11924 |
++--------+---------+--------------------------------+----------+

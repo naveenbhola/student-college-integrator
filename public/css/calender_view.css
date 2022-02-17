@@ -1,0 +1,577 @@
+#management-wrapper { padding: 0 3px; }
+#management-content-wrap { width: 100%; float: left;  color: #000;}
+#management-header { margin: 0 0 0 4px }
+#management-left { width: 670px; float: left;}
+#management-right { width: 275px; float: right;}
+.p0 { padding: 0px; }
+.m0 { margin: 0px; }
+.clr { clear: both; float: none; height: 0px; margin: 0px; padding: 0px; line-height: 0px; }
+.easeall3s { -webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; transition: all .3s ease-in-out; }
+/*icons global start*/
+.calsprite { background-image: url('/public/images/calender_sprite.png'); background-repeat: no-repeat; display: inline-block; }
+.ic-setting { height: 14px; width: 14px; background-position: 0px 0; }
+.ic-alarm { height: 14px; width: 12px; background-position: -20px 0; }
+.ic-google-calender { height: 29px; width: 86px; background-position: -39px 0; }
+.ic-calender-view { height: 14px; width: 14px; background-position: -129px 0; }
+.ic-list-view { height: 14px; width: 14px; background-position: -150px 0; }
+.ic-download { height: 13px; width: 10px; background-position: -170px 0; }
+.ic-share { height: 15px; width: 13px; background-position: -187px 0; }
+.ic-downarw { width: 9px; height: 6px; background-position: -1px -19px; }
+.ic-downarwup { width: 9px; height: 6px; background-position: -13px -19px; }
+.ic-checkenable { width: 14px; height: 14px; background-position: -204px 0px; }
+.ic-checkdisable { width: 14px; height: 14px; background-position: -222px 0px; }
+.ic-arwLeft{width: 8px; height: 15px; background-position: -239px 0px;}
+.ic-arwRight{width: 8px; height: 15px; background-position: -249px 0px;}
+.ic-arwLeft2{width: 8px; height: 15px; background-position: -239px -19px;}
+.ic-arwRight2{width: 8px; height: 15px; background-position: -249px -19px;}
+.ic-arwdrpdwntyp2{ width:17px; height:10px;background-position: -221px -19px;}
+.ic-close{ height: 8px; width: 8px; background-position: -130px -19px;}
+.ic-edit{ height: 10px; width: 10px; background-position: -140px -19px}
+.ic-close2x{ background-position:-153px -19px;height: 11px; width: 11px; }
+.ic-link{ height: 16px; width: 16px; background-position: 0px -30px;}
+.ic-facebook{ height: 15px; width: 7px; background-position:  -20px -30px;}
+.ic-twitter{ height: 17px; width: 20px; background-position:  -34px -30px;}
+.ic-mail{ height: 12px; width: 17px; background-position:  -59px -30px;}
+.ic-share2 { height: 21px; width: 19px; background-position: -187px -18px; }
+.ic-linkicn{ width:5px; height:8px; background-position: -85px -32px;}
+/*icons global ends here*/
+.cal-grybtn { background-color: #fafafa;
+  text-align: center; border: 1px solid #d2d8ed; font-size: 12px; color: #3350b9; text-decoration: none; cursor: pointer; padding: 5px 6px 5px 6px; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; }
+.cal-grybtn:hover { text-decoration: none; }
+.cal-plaingry { background-color: #fafafa; 
+  text-align: center;border: 1px solid #fafafa; font-size: 12px; color: #3350b9; text-decoration: none; cursor: pointer; padding: 5px 6px 5px 6px; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; }
+.cal-plaingry:hover { text-decoration: none; }
+.cal-bluebtn{text-decoration: none;
+  text-align: center; font-weight: 400; color: #f8f8f8 !important; background-color: #05828d; border:1px solid #05828d;cursor: pointer;padding: 6px 10px;/*border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;*/ }
+.cal-bluebtn:hover{text-decoration: none;color: #f8f8f8 !important; background-color: #05828d; cursor: pointer;border:1px solid #05828d;}
+.cal-bluebtn-left{text-align: left; padding-left: 28px;}
+.cal-btngry2{text-decoration: none; 
+  text-align: center;font-weight: bold; color: #f8f8f8; background-color: #fcfcfc; border:1px solid #EDEDED;cursor: pointer;padding: 6px 10px;border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; }
+.cal-btngry2:hover{}
+.cal-grybtnDrk{background-color: #eeeeee;
+  text-align: center; border: 1px solid #c1c1c1; font-size: 12px; color: #666666 !important; text-decoration: none; cursor: pointer; padding: 6px 6px 6px 6px; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;  font-weight: bold;}
+.cal-grybtnDrk:hover{color: #666666 !important;text-decoration: none; }
+/*global button ends*/
+.calender-vw { border-top: 4px solid #3350b9; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+.calender-vw .cal-head { padding: 16px 0px 0px 0px; border-bottom: 1px solid #d2d1d1; }
+.cal-head .head-g1 { margin-top: 0px; padding: 0px 15px; }
+.cal-head .head-g1 h1 { font-size: 24px; color: #3250b9; font-weight: normal; display: inline-block; float: left; }
+.cal-head .head-g1 .cal-grp1 { list-style-type: none; float: right; }
+.cal-head .head-g1 .cal-grp1 li { display: inline-block; margin-right: 16px; }
+.cal-head .head-g1 .cal-grp1 li:last-child { margin-right: 0px; }
+.cal-head .head-g1 .cal-grp1 li a { position: relative; padding: 6px; padding-left: 26px; display: block; max-height: 29px; box-sizing: border-box; }
+.cal-head .head-g1 .cal-grp1 li:nth-child(1) a { }
+.cal-head .head-g1 .cal-grp1 li:nth-child(2) a { }
+.cal-head .head-g1 .cal-grp1 li:nth-child(3) a { width: 100px; text-indent: -9999px; -moz-box-sizing: border-box; box-sizing: border-box; }
+.cal-head .head-g1 .cal-grp1 li:nth-child(1) a i { position: absolute; left: 7px; }
+.cal-head .head-g1 .cal-grp1 li:nth-child(2) a i { position: absolute; left: 7px; }
+.cal-head .head-g1 .cal-grp1 li:nth-child(3) a i { position: absolute; left: 7px; top: -1px; }
+.cal-head .cal-grp2 .cal-grp2L { width: 380px; float: left; }
+.cal-head .cal-grp2 .cal-grp2R { width: 198px; float: right; }
+.cal-head .cal-grp2 { padding: 12px 15px; border-top: 1px solid #d2d1d1; margin-top: 20px; background-color: #fbfbfb; }
+.txtTyp1 { font-size: 11px; color: #999999; font-weight: normal; }
+.cal-grp2L .txtTyp1, .cal-grp2R .txtTyp1 { display: block; margin-bottom: 12px; }
+/*stream dropdown**/
+.cal-dropdown1 { background-color: #fff; padding: 8px 20px 8px 10px; border: 1px solid #dcdcdc; position: relative; width: 106px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; cursor: pointer; display: inline-block; float: left; z-index: 9;}
+.cal-dropdown1:hover { border: 1px solid #a1a0e2; background-color: #eceff5; }
+.cal-dropdown1:hover > span { color: #0f0f0f; }
+.cal-dropdown1:hover > i.ic-downarw { background-position: -13px -19px; }
+.cal-dropdown1 > span { display: block; font-size: 12px; color: #666666; }
+.cal-dropdown1 > i.ic-downarw { position: absolute; right: 10px; top: 50%; margin-top: -3px; }
+.cal-dropdown1 ul { list-style-type: none; position: absolute; top: 100%; left: -1px; right: -1px; border: 1px solid #a1a0e2; display: none; min-width: 104px; }
+.cal-dropdown1:hover ul { display: block; }
+.cal-dropdown1 ul li { }
+.cal-dropdown1 ul li a { padding: 0px 10px; display: block; cursor: pointer; font-size: 11px; background-color: #eceff5; color: #666666; line-height: 26px; text-decoration: none; cursor: pointer;}
+.cal-dropdown1 ul li a:hover { background-color: #f8f8f8; color: #3250b9; }
+/*stream doropdown ends**/
+/*all exam dropdown*/
+.cal-dropdown2 { background-color: #fff; padding: 8px 20px 8px 10px; border: 1px solid #dcdcdc; position: relative; width: 106px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; cursor: pointer; display: inline-block; z-index: 8;}
+.cal-dropdown2:hover { border: 1px solid #a1a0e2; background-color: #eceff5; }
+.cal-dropdown2:hover > span { color: #0f0f0f; }
+.cal-dropdown2:hover > i.ic-downarw { background-position: -13px -19px; }
+.cal-dropdown2 > span { display: block; font-size: 12px; color: #666666; }
+.cal-dropdown2 > i.ic-downarw { position: absolute; right: 10px; top: 50%; margin-top: -3px; }
+.cal-dropdown2 ul { list-style-type: none; position: absolute; top: 100%; left: -1px; right: -1px; border: 1px solid #a1a0e2; display: none; min-width: 250px;background-color: #eceff5; }
+.cal-dropdown2:hover ul { display: block; }
+.cal-dropdown2 ul li { width: 50%; float: left; }
+.cal-dropdown2 ul li a { position: relative; padding: 0px 10px; display: block; cursor: pointer; font-size: 11px; background-color: #eceff5; color: #666666; line-height: 26px; text-decoration: none; overflow: hidden; }
+.cal-dropdown2 ul li a:hover { background-color: #f8f8f8; color: #3250b9; }
+.cal-dropdown2 .cal-checkBx{ cursor: pointer;}
+.cal-checkBx { }
+.cal-checkBx input.c-input { display: none; }
+.cal-dropdown2 .cal-checkBx label.c-heck{ cursor: pointer;}
+.cal-checkBx label.c-heck { position: relative; text-transform: uppercase; padding-left: 30px; display: block; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;  overflow: hidden;
+  max-height: 26px; }
+.cal-checkBx label.c-heck > i { position: absolute; left: 0px; top: 50%; margin-top: -7px; }
+input[type=checkbox].c-input:checked + label.c-heck > i { background-position: -204px 0px; }
+/*all exam dropdown ends*/
+/*right gorup header*/
+.cal-dropdown3 { }
+.btngrp-1 { margin-right: 20px; float: left; }
+.btngrp-1 li { float: left; }
+.btngrp-1 li a { background-color: #e8e8e8; text-align: center; font-size: 12px; color: #666666; display: inline-block; text-decoration: none; border: 1px solid #e8e8e8; padding: 8px 10px; cursor: pointer; }
+.btngrp-2 {width: 202px; }
+.btngrp-2 li { float: left; }
+.btngrp-2 li a { background-color: #e8e8e8; text-align: center; font-size: 12px; color: #666666; display: inline-block; text-decoration: none; border: 1px solid #e8e8e8; padding: 8px 10px; cursor: pointer; }
+.btngrp-2 li a i { }
+.btngrp-1 li a.actveheadbtn, .btngrp-2 li a.actveheadbtn { background-color: #dadada; font-weight: bold; border: 1px solid #c3c3c3; color: #000000;cursor:default; }
+/*right gorup header ends*/
+/*calender main view start*/
+.calender-vw .cal-content { background-color: #eeeeee;padding: 20px 15px; position: relative; }
+/*---calender slider---*/
+.calenderLR{ list-style-type: none;}
+.calenderLR li{ float: none;}
+.calenderLR li a{ text-decoration: none; cursor: pointer; background-color: rgba(192, 192, 192, 0.94);width: 34px;
+  height: 60px;
+  top: 50%;
+  margin-top: -30px;}
+.calenderLR li a i{  position: absolute;
+  top: 50%;
+  margin-top: -7.5px;
+  left: 50%;
+  margin-left: -4px;}
+.calenderLR li:first-child a{ position: absolute; left: 0px;}
+.calenderLR li:last-child a{ position: absolute; right: 0px;}
+/*---calender slider ends---*/
+.cal-widget1{display: inline-block;width: 206px;float: right;}
+.cal-widget1 a{ display: inline-block; position: relative; float: left;}
+.cal-widget1 .ic-share{position: relative;top: 2px;}
+.cal-widget1 .calbt1{ margin-right: 20px;}
+.cal-widget1 .calbt2{ margin-right: 10px; width: 37px; height: 28px;-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.cal-widget1 .calbt2 i{ position: absolute;}
+.cal-widget1 .calbt3{ width: 37px; height: 28px;-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.cal-widget1 .calbt3 i{position: absolute;top: 5px;}
+.cal-widget0{ position:relative; padding:0px 20px;display: inline-block;
+float: left;}
+.cal-widget0 ul{}
+.cal-widget0 ul li{ position: relative;padding: 0px 10px;}
+.cal-widget0 ul li p{ font-size: 20px; color: #9a9a9a;display: inline-block; line-height: 30px;
+}
+.cal-widget0 ul li b{ position: relative; font-size: 12px; color: #9a9a9a; top: -10px;display: inline-block;
+ font-weight: normal;}
+.cal-widget0 a{ cursor: pointer;cursor: pointer;
+height: 30px;
+width: 20px;
+line-height: 30px;}
+.cal-widget0 a i{position: absolute;
+top: 50%;
+margin-top: -7px;}
+.cal-widget0 a.cal-year-left{position: absolute;top: 0px;
+left: 0px;}
+.cal-widget0 a.cal-year-right{position: absolute;top: 0px;
+right: 0px;}
+.calenderBx{ background-color: #fff;box-shadow: 1px 6px 8px #ADADAD; }
+.calenderBx .cal-widget-heads{padding: 20px 20px 30px 20px;}
+/*calender view 1*/
+.pastevents{-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";  filter: alpha(opacity=50);  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;  opacity: 0.5;}
+.calTab1{}
+.calTab1 table{border-collapse: collapse; }
+.calTab1 .caltop{ font-size: 9px; text-transform: capitalize; text-align: center; color: #5e5d5d; }
+.calTab1 .calmid{ width: 14.28%;border-left: 1px solid #e0e0e0;border-top:1px solid #e0e0e0;  padding-bottom: 6px; vertical-align: top;}
+
+.calTab1 .calmid { height: 100%;}
+.calTab1 .calmid.cal-today{ border: 1px solid #3351ba;}
+.calmid .cal-today .cal-date b{ font-weight: bold;}
+
+.brd-top{ border-top:1px solid #e0e0e0;}
+.brd-left{ border-top:1px solid #e0e0e0;}
+.brd-right{ border-top:1px solid #e0e0e0;}
+.brd-bottom{ border-top:1px solid #e0e0e0;}
+.brd-allzero{ border:0px;}
+.cal-feilds{}
+.cal-feilds .cal-feil1{}
+.cal-feilds .cal-feil1 b{ color: #333333; font-size: 14px; font-weight: normal;padding: 8px 0px 0px 8px;
+  display: block;}
+.cal-feilds .cal-feil1 b i{ color: #98a5d2; font-size: 9px; position: relative; top: -9px; font-style: normal; font-weight: normal;}
+.cal-feilds .cal-feil2{  height: 32px;}
+.cal-eventBx{margin-top: 5px;  padding-left: 4px;  margin-right: 4px;cursor:pointer;}
+.cal-eventBx .evnt-txt1{ font-size: 12px; color:#000000; max-height: 14px;
+  overflow: hidden;}
+.cal-eventBx .evnt-txt2{ font-size: 11px; color: #666666;max-height: 14px;
+  overflow: hidden;}
+.cal-feilds .cal-feil3{height: 32px;vertical-align: bottom;}
+.cal-morelnk{ color: #014bf4; font-size: 11px; cursor: pointer;}
+.cal-morelnk{ color: #014bf4;}
+.cal-feilds .cal-feil3 .cal-morelnk{  padding-left: 4px;}
+.evbxtyp1{ border-left: 4px solid #3350b9; background-color: #f4f8fb;}
+.evbxtyp2{ border-left: 4px solid #8f8f8f; background-color: #f9f9f9;}
+
+/*calender event list view**/
+.cal-eventList{ background-color: #fff;padding: 15px;  }
+.cal-eventList h2{ font-size: 22px; color: #9a9a9a; font-weight: normal; text-align: center; display: inline-block; float: left;}
+.cal-eventList .cal-widget1{width: auto;}
+ul.evntLst{ list-style-type: none;margin-top: 20px;}
+ul.evntLst li{ display: block; float: none; border-bottom: 1px solid #f3edef;position: relative;}
+ul.evntLst li:first-child{border-top: 1px solid #f3edef;}
+ul.evntLst li .actveevent{}
+ul.evntLst li > p.eevnthead{ display: block; text-align: left; font-size: 18px; font-weight: normal; color: #666666; line-height: 40px; padding-left: 15px; position: relative;}
+ul.evntLst li:after{ content: ''; position: absolute;background-image: url('../images/calender_sprite.png'); background-repeat: no-repeat; display: inline-block; 
+ width:17px; height: 12px;
+  background-position: -221px -18px; right: 10px;
+  top: 15px;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+ul.evntLst li.evntlsthovrd:after{-ms-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);}
+.evntlsthovrd{  }
+.eevnt-content{  border-top: 1px solid #f3edef;padding-bottom: 30px;}
+.eevnt-content .eev-head{}
+.eevnt-content .eev-head p{ color: #272727; font-size: 12px; padding: 13px 0px 6px 13px; }
+.eevnt-content .eev-cont{}
+.eevnt-content .eev-cont.eevDate p{  display: block;  }
+.eevnt-content .eev-cont.eevLabel a{  display: block;  }
+.eevnt-content .eev-cont.eevEvent  p{  display: block; }
+.brkrEvntLst{ background-color: #fff; border-bottom:2px solid #fff;}
+.eevnt-content .eevDate{ font-size: 12px; color: #5b5b5b; width: 92px;  }
+.eevnt-content .eevLabel{ font-size: 12px; color: #333333; width: 113px; }
+.eevnt-content .eevEvent{ font-size: 12px; color: #5b5b5b;  }
+.eev-default{ }
+.eev-default .eevDate{ background-color: #fcfdfe; border-left:4px solid #3350b8; vertical-align: top;}
+.eev-default .eevDate p{padding: 10px 0px 10px 12px;}
+.eev-default .eevLabel{ background-color: #f4f8fb; color: #1a0dab; text-transform: uppercase;vertical-align: top;}
+.eev-default .eevLabel a{padding: 10px 0px 10px 12px;}
+.eev-default .eevEvent{background-color: #fcfdfe; vertical-align: top;}
+.eev-default .eevEvent p{padding: 10px 0px 10px 12px;}
+.eev-custom{}
+.eev-custom .eevDate{ background-color: #f9f9f9;border-left:4px solid #8f8f8f;}
+.eev-custom .eevDate p{padding: 10px 0px 10px 12px;}
+.eev-custom .eevLabel{ background-color: #f1f1f1;}
+.eev-custom .eevLabel a{padding: 10px 0px 10px 12px; text-decoration: none; color: #333 !important;}
+.eev-custom .eevEvent{background-color: #f9f9f9;}
+.eev-custom .eevEvent p{padding: 10px 0px 10px 12px;}
+/*calender event list view ends*/
+/*calender main view ends here*/
+
+/*----pop up date event list----*/
+.evntLstPopUp{ position: absolute; top:30%;width: 180px; border: 1px solid #3350b9;background-color: #fbfbfb; }
+.evntLstPopUp > p{ background-color: #e3e3e3;font-size: 12px; color: #666666;line-height: 28px;
+  padding: 0px 28px 0px 10px;
+  position: relative;}
+.evntLstPopUp > p b{ font-weight: bold;  color: #474747;}
+.evntLstPopUp > p a.closePopUpEv{ bottom: 0px;}
+a.closePopUpEv{  background-color: #ededed;  text-align: center;color: #666666;   position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 28px;  cursor: pointer;height: 28px;}
+a.closePopUpEv i{margin-top: 10px;}
+.evntLstPopUp ul{ background-color: #fbfbfb; list-style-type: none;padding: 10px;}
+.evntLstPopUp ul li{  margin-bottom: 6px;}
+.evntLstPopUp ul li .evbxtyp1{  margin: 0px;}
+/*----pop up date event list ends----*/
+
+/*popup single event*/
+div.tooltipp {
+      position: absolute;
+      width: 400px;
+      padding: 10px 10px 15px 10px; background-color: #fff; -webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;top: 40%;
+  left: 40%;
+  border: 1px solid #c7c7c7;border-left: 6px solid #3350b8;box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;
+    box-shadow: 2px 2px 7px #ADADAD;
+    -webkit-box-shadow: 2px 2px 7px #ADADAD;
+    -moz-box-shadow: 2px 2px 7px #ADADAD;
+    z-index: 10;
+}
+
+div.tooltipp:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-width: 10px;
+      border-style: solid;
+      border-color: #FFFFFF transparent transparent transparent;
+      bottom: -20px;
+      left: 50px;
+}
+div.tooltipp:before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-width: 10px;
+      border-style: solid;
+      border-color: #c7c7c7 transparent transparent transparent;
+      bottom: -21px;
+      left: 50px;
+}
+div.rghtTooltp:after{right: 50px; left: auto;}
+div.rghtTooltp:before{right: 50px;left: auto;}
+
+.tooltipp{}
+.tooltipp .tol-h{ color: #666666; font-size: 12px;cursor:default;}
+.tooltipp .tol-h b{ color: #3f3f3f; font-size: 12px; font-weight: bold; }
+.tooltipp .tol-head{ font-size: 14px; color: #1a0dab;  margin-top: 12px;
+  margin-bottom: 4px; font-weight: normal;}
+.tooltipp .tol-desc{ font-size: 12px; color: #515050;cursor:default;}
+div.tooltip-v1{ padding-right: 28px;}
+div.tooltip-v1 .tol-note{ margin: 15px 0px;}
+div.tooltip-v1 .tol-remind{}
+.tol-note span{ color: #333333; font-size: 12px;  position: relative;
+  display: block; }
+.tol-note span a{ position: absolute; right: 0px; cursor: pointer;}
+.tol-note span a i{}
+.tol-note p{ color: #818182; font-size: 12px; margin-top: 2px;}
+.tol-remind{ line-height: 20px;
+}
+.tol-remind span{ margin-right: 5px;}
+.tol-remind b{ font-size: 12px; color: #373737;}
+.tol-remind .remind-date{ color: #5b5b5b; font-size: 12px; display: inline-block;}
+.tol-remind .remind-date p{ margin-left: 8px;font-size: 10px; color: #666666; display: inline-block;  background-color: #fbfbfb;
+  border: 1px solid #d8d8d8;
+  padding: 3px 10px;
+  line-height: 13px;
+  border-radius: 3px;}
+.tol-remind .remind-time{color: #5b5b5b; font-size: 12px; display: inline-block;}
+.tol-remind .remind-time select{margin-left: 8px;font-size: 10px; color: #666666; display: inline-block;  background-color: #fbfbfb;
+  border: 1px solid #d8d8d8;
+  padding: 3px 10px;
+  line-height: 10px;
+  border-radius: 3px;}
+.tol-remind .remind-check{margin-right: 0px;}
+.remind-check{ color: #fff; background-color: #43c615; display: inline-block;    padding: 4px 6px;
+  line-height: 10px;
+  font-size: 10px;
+  border: 1px solid #d2d2d2;
+  border-radius: 10px 10px;  position: relative; -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; cursor: pointer;  top: 6px; max-width: 55px;
+}
+.remind-check p.firstchild {  float: left; display: inline-block;}
+.remind-check p.lastchild{ float: right; display: inline-block;margin-left: 10px;  width: 17px;}
+.iphoneicn{  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #fff;
+  position: absolute;
+  right: -1px;
+  top: -3px;-webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; -ms-transform: translate(0px,0px); /* IE 9 */
+   	-webkit-transform: translate(0px,0px); /* Safari */
+    -moz-transform: translate(0px,0px); /* Safari */
+    transform: translate(0px,0px);border: 1px solid #E0E0E0;}
+.iphoneicnOff{background-color: #DFDFDF;}
+.iphoneicnOff .iphoneicn{ -ms-transform: translate(-32px,0px); /* IE 9 */
+   	-webkit-transform: translate(-32px,0px); /* Safari */
+    -moz-transform: translate(-32px,0px); /* Safari */
+    transform: translate(-32px,0px);}
+.remind-check input{   height: 0px;
+  width: 0px;
+  overflow: hidden;
+  line-height: 0px;
+  margin: 0px;
+  padding: 0px;display: none;}
+.tol-note-input{  margin: 15px 0px; }
+.tol-note-input textarea{ font-size: 11px; color: #a7a7a7; border: 1px solid #d3d3d3; border-radius:3px; background-color: #fbfbfb;   padding: 6px; width: 100%;}
+.tol-note-input p{ font-size: 11px; color: #949494;padding-left: 6px;
+  padding-top: 2px;
+}
+/*event with edit/delete*/
+div.toltp3{ padding: 0px;}
+.toltp3-inner{padding: 10px 10px 15px 10px;padding-right: 28px;}
+.remind-del{ color: #1a0dab; text-decoration: none; font-size: 12px; cursor: pointer;}
+.remind-del:hover{ text-decoration: none;}
+.remind-gryBtn{ color: #383838; font-weight: bold; text-decoration: none; background-color: #fafafa; border: 1px solid #d7dcef; cursor: pointer;  padding: 6px 20px;
+  border-radius: 3px;}
+.remind-gryBtn:hover{ text-decoration: none; }
+.remind-FotBtns{  border-top: 1px solid #d2d2d2;padding: 8px 10px 13px 10px;padding-right: 28px; }
+.remind-FotBtns .remind-del{ float: left;line-height: 28px;}
+.remind-FotBtns .remind-gryBtn{ float: right;}
+/*popup single event ends*/
+/**new css calender plugin***/
+.cal-grp2L .txtTyp1{display: inline-block;  line-height: 32px;
+  margin: 0px 5px 0px 0px;
+  float: left;}
+.btngrp-1,.cal-grp2R .txtTyp1{ display: none;}
+.btngrp-2 {
+  width: auto;
+  display: inline-block;
+}
+.cal-head .cal-grp2 .cal-grp2R{ width: 75px;}
+.calenderLR li a{  /*z-index: 1; */}
+/**new css calender plugin ends***/
+#management-left {
+  width: 988px;}
+  .calender-vw .cal-content{ padding: 30px;}
+  .cal-head .head-g1 {
+  padding: 0px 30px;}
+  .cal-head .cal-grp2 {
+  padding: 12px 30px;}
+  .txtTyp1 {
+  font-size: 12px;}
+  /*google-claender-popup*/
+.popupovrlay{ background-color: rgba(0, 0, 0, 0.65); position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; height: 100%; width: 100%;  z-index: 999;}
+.cal-popup{ background-color: #ffffff; width: 418px; position: fixed !important; top:50%; margin-top: -93px; left: 50%; margin-left: -209px; z-index: 9999;}
+.cal-popup h2{ font-size: 18px; color: #3350b9; font-weight: normal; background-color: #eeeeee;padding: 10px 20px;display:block}
+.cal-popup h2 a{}
+  .closePopUpEv2{ background-color: #f7f6f6; 
+  text-align: center;
+  color: #666666;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 40px;
+  cursor: pointer;
+  height: 41px;}
+  .cal-popup h1 a i{  margin-top: 15px;}
+  .cal-popup-cont{padding: 15px 20px;}
+  .ptyp1{}
+
+  .ptyp1 .cal-grp2L .txtTyp1{ }
+  .ptyp1 .cal-dropdown1{ width: 41%;}
+  .ptyp1 .cal-dropdown2{ width: 41%;}
+  .ptyp1 .cal-popup-cont > p{color: #595959; font-size: 12px;margin-bottom: 20px; }
+  .ptyp1 .popup-fotr{ border-top:1px solid #eeeeee;padding: 10px 20px;  text-align: center;
+}
+  .ptyp1 .popup-fotr a{ width: 98px;display: inline-block;  box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;}
+  .ptyp1 .popup-fotr a:first-child{ margin-right: 20px;}
+  .ptyp1 .popup-fotr span{ display: inline-block; margin:auto;}
+  .ptyp2{}
+
+  .ptyp2 .cal-grp2L .txtTyp1{ }
+  .ptyp2 .cal-dropdown1{ width: 41%;}
+  .ptyp2 .cal-dropdown2{ width: 41%;}
+  .ptyp2 .cal-popup-cont > p{color: #595959; font-size: 12px;margin-bottom: 20px; }
+  .ptyp2 .popup-fotr{ border-top:1px solid #eeeeee; padding: 10px 20px; text-align: center; }
+  .ptyp2 .popup-fotr > a{ float: left;font-size: 12px;  color: #3350b9; cursor: pointer; line-height: 28px;}
+  .ptyp2 .popup-fotr span{ float: right;}
+  .ptyp2 .popup-fotr span a{ display: inline-block;  box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;}
+  .ptyp2 .popup-fotr span a:first-child{ margin-right: 20px;padding: 6px 12px 6px 12px;}
+ 
+ .ptyp3 .ic-setting{ margin-right: 10px;}
+  .ptyp4 .ic-alarm{ margin-right: 10px;}
+  /*google-claender-popup ends*/
+  /*edit event layer*/
+  .ptyp5{}
+  .ptyp5 h1{display:block;}
+  .ptyp5 .cal-frmfeild{ margin-bottom: 8px;}
+  .ptyp5 .cal-frmfeild .cal-form-labl{ font-size: 12px; color: #595959;width: 87px;  vertical-align: top;
+  line-height: 24px;
+  display: inline-block;}
+  .ptyp5 .cal-frmfeild .cal-from-input{width: 100%;  border: 1px solid #E7E7E7;font-size: 12px;  padding: 4px 4px;
+  color: #595959; box-sizing:border-box; -moz-box-sizing:border-box;-webkit-box-sizing:border-box;
+}
+  .ptyp5 .cal-frmfeild textarea{  border: 1px solid #E7E7E7; width: 100%;}
+  .cal-frmfeild .inp-1{ max-width: 96px; }
+  .cal-frmfeild .inp-2,.cal-frmfeild .inp-4 { max-width: 276px; width: 100%;}
+  .cal-frmfeild .inp-3{ max-width: 270px;color:#595959; font-size:12px; padding:2px 5px; }
+  /*edit event layer ends*/
+  /*tooltip add event*/
+  .addevntoltip .cal-popup h1{ padding-left: 10px;}
+  .addevntoltip .cal-popup{  width: auto;  position: relative; 
+   top: 0; 
+   margin-top: auto; 
+   left: 0; 
+   margin-left: auto; 
+   z-index: 12; }
+   .addevntoltip .cal-popup-cont{ padding:10px;}
+  /*tooltip add event ends*/
+/*share popup*/
+.calShare{width: 500px;
+  margin-left: -250px;margin-top: -170px;}
+.calShare h1{ position: relative;padding-left: 55px; color: #333333; font-size: 18px;}
+.calShare h1 i.ic-share2{position: absolute;  top: 8px;
+  left: 20px;}
+.calShare .shareW1{ padding: 0px 40px;margin-top: 15px;}
+.calShare .shareW1 p{ font-size: 12px; color: #595959;margin-bottom: 18px;}
+.calShare .shareW1 span{position: relative;
+}
+.calShare .shareW1 span i{position: absolute;
+  top: -1px;
+  left: 8px;}
+.calShare .shareW1 span input{ font-size: 12px; color: #808080;padding: 4px 10px 4px 30px;width: 100%;
+  max-width: 290px;
+
+  border: 1px solid #e7e7e7;}
+.calShare .shareW1 span a{ background-color: #d8d6d6;
+  color: #727171;
+  font-size: 12px;
+  display: inline-block;
+  line-height: 20px;
+  border: 1px solid #CACACA;
+  padding: 1px 10px;}
+
+.calShare .shareW2{ margin: 20px 0px; padding: 0px 30px;}
+.calShare .shareW2 a{   font-size: 14px;border-radius: 2px; -webkit-border-radius: 2px;; -moz-border-radius: 2px; cursor: pointer;
+  color: #fdfdfd;
+  font-weight: bold;
+  display: inline-block;
+  line-height: 38px;
+  width: 138px;
+  text-align: center; position: relative; text-decoration: none;  margin-right: 6px;}
+.calShare .shareW2 a i{  position: absolute;
+  left: 20px;
+  top: 10px;}
+.calShare .shareW2 a .ic-facebook{}
+.calShare .shareW2 a .ic-twitter{}
+.calShare .shareW2 a .ic-mail{  top: 13px;}
+.calShare .shareW2 .sharebtn1{ background-color: #758ab7;}
+.calShare .shareW2 .sharebtn2{ background-color: #88c5f3;}
+ .calShare .shareW2 .sharebtn3{ background-color: #00a651;margin-right: 0px;}
+
+.calShare .shareW3{ padding: 0px 40px;}
+.calShare .shareW3 h3{ font-size: 14px; color: #595959; font-weight: normal;  margin-bottom: 16px;}
+.calShare .shareW3 p{ font-size: 12px; color: #595959; margin-bottom: 10px;}
+.calShare .shareW3 input{  color: #bcbcbc;
+  font-size: 12px;
+  border: 1px solid #e7e7e7;
+  width: 100%;
+  box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;
+  padding: 4px 10px;}
+  .calShare .popup-fotr{ border-top: 0px;  margin-top: 10px;}
+  .eventSubscriptionLayer{display: none;}
+/*share popup ends*/
+/*calendar custom*/
+.fc-toolbar .cal-widget1{position: absolute;  right: 0px;  top: 0px;width: auto;}
+/*calender custom ends*/
+
+
+a.pickDate{background-position: right -1036px; width: 15px; height: 16px;  display: block; cursor: pointer;  position: absolute;  left: 81px;
+  top: 3px;  text-decoration: none !important;  }
+.app-sprite-2{background: url(/public/images/apps-sprite.gif) no-repeat;}
+.form-field-detail{margin-left:85px;}
+.errormsgp{ display: none; padding: 5px 0px 0px 46px !important; margin: 0px !important; font-size: 12px !important; color: red !important;}
+
+
+/*calendar exam page widget foter*/
+.cal-xamPageWidget{ background-color: #dfdfdf; padding:30px 0px;}
+.xamPgWidgt{  width: 640px;   margin: auto;   border: 1px solid #CACACA;   border-radius: 3px;-moz-border-radius: 3px;-webkit-border-radius: 3px;}
+.xamPgWidgt .xamPgCnt{ background-color: #f3f3f3;padding: 20px 10px;text-align: center;}
+.xamPgWidgt h3{ font-size: 22px; color: #d2eceb; font-weight: bold; text-align: center;padding: 10px 0px;line-height: 20px;}
+.xamPgWidgt ul{ background-color: #f3f3f3; display: table; width:100%}
+.xamPgWidgt ul li{border-right: 0px solid #bfe3e3;padding-left: 10px; padding-right: 10px; text-align: center;  width: 200px; position: relative;
+  box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box; display: table-cell; width:25%; vertical-align: top}
+.xamPgWidgt ul li:after{  content: ''; height: 37px;  width: 2px; position: absolute;  right: 0; top: 50%; background-color: #bfe3e3;
+  margin-top: -19px; }
+.xamPgWidgt ul li h2{ font-size: 18px; color: #0065de; font-weight: normal;margin-bottom: 10px;}
+.xamPgWidgt ul li h2 a{ text-decoration: none; cursor: pointer; }
+.xamPgWidgt ul li h2 a span{font-size:16px; display:block;}
+.xamPgWidgt ul li p{ font-size:12px; color: #333333;}
+.xamPgWidgt ul li p a{  color: #333333; text-decoration: none; cursor: pointer;}
+.xamPgWidgt ul li p a:hover{ text-decoration: underline !important; }
+.xamPgWidgt1{ margin-bottom: 38px;}
+.xamPgWidgt1 h3{ background-color: #47bdbd;}
+.xamPgWidgt2{}
+.xamPgWidgt2 h3{ background-color: #f99a5f;}
+.xamPgWidgt2 ul li{ border-right: 0px solid #f5d8c6;}
+.xamPgWidgt2 ul li:after{ background-color: #f5d8c6; }
+.xamPgWidgt ul li:first-child{ padding-left: 0px;}
+.xamPgWidgt ul li:last-child{  padding-right: 0px;}
+.xamPgWidgt ul li:last-child:after{ content: none; }
+
+/*calendar exam page widget foter ends*/
+
+.customEventLinkDisable:link,.customEventLinkDisable:hover{text-decoration:none !important;cursor:default;color:#595959 !important;}
+
+.cal-xamPageWidget h3{ display:block;}

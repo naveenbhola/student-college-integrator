@@ -1,0 +1,158 @@
+<%
+    var setThousandUnit = function (val){
+      if(val < 99999){ return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); }
+    }
+    var numDifferentiation = function (val, decimalPlace = 2) {
+        if(val >= 10000000) val = (val/10000000).toFixed(decimalPlace) + ' Cr';
+        else if(val >= 100000) val = (val/100000).toFixed(decimalPlace) + ' Lakh';
+        else if(val >= 1000) val = this.setThousandUnit(val) + '';
+        return val;
+    }
+    var componentRating = data.aggregateReviewWidget.aggregateRatingDisplayOrder;
+    var reviewCount = data.aggregateReviewWidget.aggregateReviewData;
+    var copmonentkeys =  data.aggregateReviewWidget.aggregateReviewData.aggregateRating;
+    var datalist = {};
+    var mainReviews = data.reviewWidget.reviewData.totalReviews;
+    var locationame =  data.currentLocation;
+
+%>
+<div class="data-card m-5btm">
+   <div class="card-cmn color-w">
+      <p>
+         <a class="block l-16 f12 color-b m-5btm font-w4" href="<%- data.instituteUrl %>" >
+           <%- data.instituteName %>
+           <% if (locationame !=null && typeof locationame != 'undefined') { %>
+               <%- (locationame.locality_name != null && locationame.locality_name != 'undefined') ? ',' + ' '+ locationame.locality_name : '' %>
+           <% } %>
+           <% if (locationame !=null && typeof locationame != 'undefined') { %>
+               <%- (locationame.city_name != null && locationame.city_name != 'undefined') ? ',' + ' ' +locationame.city_name : '' %>
+           <% } %>
+         </a>
+       </p>
+      <h1 class="color-3 f16 font-w6 word-break"><%- data.courseName %></h1>
+      <ul class="cl-ul">
+         <li class='i-block color-6 f12 font-w6'>
+            <%- data.entryCourseTypeInformation.credential.name +' '+ data.entryCourseTypeInformation.course_level.name %>
+         </li>
+         <li>|</li>
+         <li class='i-block color-6 f12 font-w6'>
+            <%- data.educationType.name  %>
+         </li>
+         <li>|</li>
+         <li class='i-block color-6 f12 font-w6'>Duration - <%- data.durationValue +' '+  data.durationUnit %> </li>
+      </ul>
+      <div class="">
+         <ul class="m-15top cli-i">
+         <% if(data.recognitions.length > 0){%>
+            <li class='v-top'>
+              <% data.recognitions.map(function(items){ %>
+               <div class="tab-cell-b t-width-b">
+                  <span class="font-w6 f12 color-3">
+                    <%- items.name %> Approved
+                  </span>
+                  <a class="color-b f12 font-w6" on="tap:approval-more-data" role="button" tabindex="0">
+                    <i class="cmn-sprite clg-info i-block v-mdl"></i>
+                  </a>
+               </div>
+               <%})%>
+            </li>
+            <%}%>
+            <% if(data.courseFees != null) {%>
+            <li class="v-top">
+               <div class="tab-cell-b t-width-b">
+                  <p class="pos-rl color-9 f12 ">Total Fee <a class="pos-rl" on="tap:fee-more-data" role="button" tabindex="0"><i class="cmn-sprite clg-info i-block v-mdl"></i></a></p>
+                  <span class="block color-3 f13 font-w6"><%= data.courseFees.feesUnitName %> <%= numDifferentiation(data.courseFees.fees.totalFees.general.value, 2);%></span>
+               </div>
+               <amp-lightbox class="" id="fee-more-data" layout="nodisplay" scrollable>
+                 <div class="lightbox">
+                    <a class="cls-lightbox f25 color-f font-w6" on="tap:fee-more-data.close" role="button" tabindex="0">&times;</a>
+                    <div class="m-layer">
+                       <div class="min-div color-w pad10">
+                          <p class="m-btm f14 color-3 font-w6">Total Fee</p>
+                          <ul>
+                             <li class="f12 color-6 m-5btm"><%= data.tooltipData.feesTooltip %></li>
+                          </ul>
+                       </div>
+                    </div>
+                 </div>
+              </amp-lightbox>
+            </li>
+            <% } %>
+         </ul>
+
+         <% if(data.affiliationData != null){%>
+           <div class="div-border">
+              <div class='f12 color-3 font-w6 m-5top'>Affiliated To <a class="color-b f12 font-w6"   href="https://www.shiksha.com/university/savitribai-phule-pune-university-25004">Savitribai Phule Pune University</a></div>
+           </div>
+         <%}%>
+
+         <% if((data.aggregateReviewWidget != null || typeof data.data.aggregateReviewWidget !='undefined') && (reviewCount !=null || typeof reviewCount !='undefined') && (data.reviewWidget !=null || typeof data.reviewWidget !='undefined' ) && (data.reviewWidget.reviewData !=null || typeof data.reviewWidget.reviewData !='undefined')){%>
+         <div class="new_rating">
+            <span class='rating-block ' on="tap:rating-toplightboxcourse73368" role="button" tabindex="0">
+              <%= copmonentkeys.averageRating.mean.toFixed(1) %>
+              <% var mainrating =  parseInt(copmonentkeys.averageRating.mean*20)%>
+              <i class="empty_stars starBg">
+                <i class="full_starts starBg" style="width: <%= mainrating %>%"></i>
+               </i>
+            <b class="icons bold_arw"></b>
+            </span>
+            <amp-lightbox id="rating-toplightboxcourse73368" layout="nodisplay">
+               <div class="lightbox">
+                  <a class="cls-lightbox f25 color-f font-w6" on="tap:rating-toplightboxcourse73368.close" role="button" tabindex="0">×</a>
+                  <div class="m-layer">
+                     <div class="min-div colo-w">
+                        <div class="pad10  rvw-fix color-w">
+                          <% for(var i in componentRating){ %>
+                            <%  datalist = copmonentkeys[i].mean %>
+                              <div class="table_row">
+                                 <div class="table_cell">
+                                    <p class="rating_label"><%= componentRating[i] %> </p>
+                                 </div>
+                                 <% var aggregateRatingPercent = parseInt(datalist*20); %>
+                                 <div class="table_cell">
+                                    <span class="loadbar"><span class="fillBar" style="width: <%-aggregateRatingPercent%>%"></span></span>
+                                    <b class="bar_value"><%- datalist.toFixed(1) %></b>
+                                 </div>
+                              </div>
+                            <% } %>
+                              <div class="table_row">
+                                 <div class="fill_cell"><a  class="view_rvws" href="https://www.shiksha.com/college/pimpri-chinchwad-college-of-engineering-pimpri-chinchwad-education-trust-s-nigdi-pune-25044/reviews">View all <%= mainReviews > 1 ? mainReviews + ' reviews' : mainReviews + ' review' %> <i class="sprite-str arw_l"></i></a></div>
+                              </div>
+                           </ol>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </amp-lightbox>
+            <a class="view_rvws" href="https://www.shiksha.com<%= data.courseUrl %>/reviews"><%= mainReviews %> reviews<i class="sprite-str arw_l"></i></a>
+         </div>
+         <%}%>
+
+         <!--application submittion widget-->
+         <%if(data.onlineFormData != null){%>
+           <div class="dot-div m-top">
+              <h2 class="f13 color-6 font-w6 pad8 word-break">JEE Main 2019 (January) - Online submission of application forms (JEE Main I)<span class="f14 color-3 font-w6 pad3">Sep 1 - 30, 2018</span></h2>
+           </div>
+         <%}%>
+
+         <section class="p1" amp-access="shortlisted" amp-access-hide>
+            <a class="ga-analytic" href="https://www.shiksha.com<%= data.courseUrl %>?actionType=shortlist&course=<%= data.instituteId %>" data-vars-event-name="SHORTLIST">
+               <p class="btn btn-primary color-o color-f f14 font-w7 m-15top" tabindex="0" role="button"><i class="shortl-list active"></i>Shortlisted</p>
+            </a>
+         </section>
+
+         <section class="p1" amp-access="NOT validuser AND NOT shortlisted" amp-access-hide>
+            <a class="ga-analytic" href="https://www.shiksha.com/muser5/UserActivityAMP/getResponseAmpPage?listingId=<%= data.instituteId %>&actionType=shortlist&fromwhere=coursepage" data-vars-event-name="SHORTLIST">
+               <p class="btn btn-primary color-o color-f f14 font-w7 m-15top" tabindex="0" role="button"><i class="shrt-list"></i>Shortlist</p>
+            </a>
+         </section>
+
+         <section class="p1" amp-access="validuser AND NOT shortlisted" amp-access-hide tabindex="0">
+            <a class="ga-analytic" href="https://www.shiksha.com<%= data.courseUrl %>?actionType=shortlist" data-vars-event-name="SHORTLIST">
+               <p class="btn btn-primary color-o color-f f14 font-w7 m-15top" tabindex="0" role="button"><i class="shrt-list"></i>Shortlist</p>
+            </a>
+         </section>
+
+      </div>
+   </div>
+</div>

@@ -1,0 +1,134 @@
+<!Doctype html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<%-seoTags%>
+	<meta name="copyright" content="Shiksha.com">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+	<link rel="dns-prefetch" href="//js.shiksha.ws"/>
+	<link rel="dns-prefetch" href="//css.shiksha.ws"/>
+	<link rel="dns-prefetch" href="//images.shiksha.ws"/>
+	<link rel="dns-prefetch" href="//images.shiksha.com"/>
+    <link rel="dns-prefetch" href="//track.shiksha.com"/>
+	<link rel="preconnect" href="//js.shiksha.ws" />
+	<link rel="preconnect" href="//css.shiksha.ws" />
+	<link rel="preconnect" href="//images.shiksha.com" />
+    <link rel="shortcut icon" href="https://images.shiksha.ws/pwa/public/images/apple-touch-icon-v1.png"/>
+
+	<style type="text/css">
+	  <%-internalCSS%>
+      <%-styles%> 
+	</style>
+	<!-- <link rel="stylesheet" type="text/css" id="shkCmn"> -->
+    <% for(var i=0; i < cssLinks.length; i++) { %>
+        <link rel="preload" href="<%-cssLinks[i]%>" as="style">
+    <% } %>
+	<div id="extraCss"></div>
+	<% for(var t=0; t < jquery_regn_search_scripts.length; t++) { %>
+		<%-jquery_regn_search_scripts[t]%>
+	<% } %>
+	<% for(var i=0; i < scripts.length; i++) { %>
+		<link rel="preload" href="<%-scripts[i]%>" as="script">
+	<% } %>
+	<%-schema%>
+	<script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type"    : "Organization",
+      "url"      : "https://www.shiksha.com",
+      "logo"     : "https://www.shiksha.com/public/images/nshik_ShikshaLogo1.gif",
+      "name"     : "Shiksha.com",
+      "sameAs"   : ["https://www.facebook.com/shikshacafe", "https://twitter.com/ShikshaDotCom", "https://en.wikipedia.org/wiki/Shiksha.com", "https://plus.google.com/+shiksha"]
+    }
+    </script>
+</head>
+<body id="wrapperMainForCompleteShiksha">
+	<div id="fullLayer-container" class='desktop--modal'></div><div id="searchLayer"></div><div id="root"><%-header%><%-content%><%-footer%></div>
+	<div id="signUpForm"></div>
+	<div id="popup-container"></div>
+
+	<input type="hidden" id="shiksha_auth_token" name="shiksha_auth_token" value="<%-csrfToken%>" />
+	<script type="text/javascript">
+		function lazyLoadJs(e,a,r){for(var s,t,c=[],d=e.scripts[0];s=r.shift();)t=e.createElement(a),"async"in d?(t.async=!1,e.head.appendChild(t)):d.readyState?(c.push(t),t.onreadystatechange=n):e.write("<"+a+' src="'+s+'" defer></'+a+">"),t.src=s}
+		var shikshaMain = '<%-jsDomain%>/pwa/public/js/desktop-shiksha-main-f78eaf4b102b735c97bc.js';
+		var vendorMain = '<%-jsDomain%>/pwa/public/js/vendors.js';
+		// var commonCss = "<%-cssDomain + '/pwa/public/css/'+getCSSWithVersion('shikshaDesktopCommon')%>";
+		var addLazyLoadClass = function(){
+        	var isExist = document.querySelector('body.lazyLoad');
+        	if(isExist==null)
+        	{
+	          document.querySelector('body').classList.add('lazyLoad');
+	        }
+	    }
+
+        function insertHeadSection(file) {
+            var scrp = document.createElement('link');
+            scrp.rel = 'preload';
+            scrp.as = 'script';
+            scrp.href = file;
+            document.head.appendChild(scrp);
+        }
+        insertHeadSection(shikshaMain);
+        insertHeadSection(vendorMain);
+
+		var extra_css = "<%-extra_css%>";
+		var referrer = '';
+		var validDomains = [];
+		<% for(var d=0; d < validDomains.length; d++) { %>
+		validDomains.push('<%-validDomains[d]%>');
+		<% } %>
+		window.addEventListener("load", function() {
+				lazyLoadJs(document, "script", <%-JSON.stringify(scripts)%>);
+				lazyLoadJs(document,"script",[shikshaMain,vendorMain]);
+				$j = jQuery.noConflict();
+				var registrationForm          = new window.RegistrationForm();
+				var registrationFormAjax      = new window.RegistrationFormAjax();
+				var userRegistrationRequest   = new window.UserRegistrationRequest();
+				var registrationFormValidator = new window.RegistrationFormValidator();
+				var responseForm              = new window.ResponseForm();
+				var responseFormTest          = new window.ResponseFormTest();
+		});
+		document.addEventListener('click', function(e){
+			addLazyLoadClass();
+		}, false);
+		document.addEventListener('scroll', function(e){
+			addLazyLoadClass();
+		}, false);
+
+		
+		if (typeof extra_css == 'string') {
+			if (document.getElementById('extraCss')) {
+				document.getElementById('extraCss').innerHTML = extra_css;
+			}
+		}
+	</script>
+	<script type="text/javascript">
+    window.__PRELOADED_STATE__ = <%-JSON.stringify(preloadedState).replace(/</g, '\\u003c')%>;
+    window.serviceWokrerFile = "<%-serviceWokrerFile%>";
+    window.COOKIEDOMAIN = "<%-COOKIEDOMAIN%>";
+    window.sessionID = "<%-sessionID%>";
+	window.userCookieFlag = "<%-userCookieFlag%>";
+		window.isUserLoggedIn = false;
+		window.isHeaderFixed = true;
+		window.isCompareEnable = false;
+		window.shikshaProduct = 'default';
+		window.productPage = 'default';
+  </script>
+  <% include desktopFooter.ejs %>
+</body>
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments);
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m);
+})(window, document, 'script',  'https://www.google-analytics.com/analytics.js', 'ga');
+</script>
+</html>

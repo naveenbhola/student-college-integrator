@@ -1,0 +1,38 @@
+<!-- <div class="row">
+	<div mysize="12">
+		<div class="x_panel">
+			<div [class.x_title]="opened">
+				<ul class="nav navbar-left panel_toolbox">
+					<li><a class="collapse-link" (click)="toggle()"><i [class]="opened?' fa fa-chevron-up':' fa fa-chevron-down'"></i></a></li>
+				</ul>
+				<h2>Fees Details</h2>
+				<div class="clearfix"></div>
+			</div>
+			<div class="x_content"  [hidden]="!opened">
+				<div [formGroup]="courseFeesForm">
+					<div class="form-group">
+						<div mysize="3">
+							<label>For the batch</label>
+						</div>
+						<div mysize="9">
+							<select>
+							    <option value="">Select Year</option>
+							    <option *ngFor="let year of yearArr" value="{{year}}">{{year}}</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<div mysize="3">
+							<label>Fees Unit</label>
+						</div>
+						<div mysize="9">
+							<select>
+							    <option *ngFor="let option of courseStaticData?.fees_currencies" value="{{option.value}}">{{option.label}}</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div> -->

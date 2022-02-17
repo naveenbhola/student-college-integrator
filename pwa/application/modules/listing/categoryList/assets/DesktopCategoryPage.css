@@ -1,0 +1,137 @@
+a{color: #008489;}
+h1,h2,h3,h4,h5,h6,p{margin: 0px;}
+/*.ctp-wrapper{max-width: 1024px;margin: 0 auto;}*/
+/*.ctp_pwa{max-width: 928px;width: 100%;margin: auto;border: none;}*/
+.ctp_container{margin: 0 0 20px 0;}
+.ctp_sidebar{border-radius:2px;box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.32), 0 0 0 1px rgba(0,0,0,0.08);width: 100%;max-width:288px;min-height: max-content;display: block;vertical-align: baseline;float: left;border: none;margin-bottom: 12px;}
+/*.ctp_rightsidebar{width: 678px; height: auto;}*/
+.ctp_block{width: 100%;float: left;}
+
+.filter-block:last-child {
+    border-bottom: none;
+}
+.ranking_link {
+    position: absolute;
+    font-size: 0.875rem;
+    color: #008489;
+    top: 15px;
+    right: 17px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.ranking_link img {
+    position: relative;
+    top: 3px;
+    margin-right: 5px;
+}
+/*fonts css*/
+.clr_0{color: #000;}
+.clr_6{color: #666;}
+.clr_9{color: #999;}
+.f24_light, .f24_bold{font-size: 1.5rem;}
+.f14_light, .f14_bold{font-size: 0.875rem;}
+.f14_bold, .f24_bold{font-weight: 600;}
+.shoshkele-open{z-index:1; display:inline-block; height:160px}
+.shoshkele-close{z-index:1; display:inline-block; height:60px}
+.ctp-SrpDiv .single-col .rating-block .rating_popup{z-index: 9;}
+.rat_col.rating_popup .inline-rating{box-shadow:none}
+.ctp-shwMr a{cursor: pointer}
+.ctp-SrpBtnDiv a.ctpBro-btn.ebDisabled{pointer-events: none;color: #666;background: #d6d7d7;cursor: default;border: 1px solid #d7d7d7;}
+.ui-header-fixed {z-index :1000}
+/*right DFP*/
+.rightStickyDFP{
+    height: 250px;
+    width: 120px;
+    position: fixed;
+    right: 5px;
+    top: 215px;
+}
+
+.rctp-RcoLinks ul li {
+    width: 23.78%;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 14px;
+    font-size: 0.875rem;
+    margin-right: 15px;
+    font-weight: 400;
+}
+
+.rctp-RcoLinks ul li:nth-child(4n+4) {
+    margin-right: 0px;
+}
+.ctpRecoLinks {
+    margin: 20px 0px;
+    width: 100%;
+    float: left;
+}
+
+h2.ctp-Rcohdng {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.search-heading{
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.625rem;
+    margin: 20px 0 0 0;
+}
+.strikeThrough {
+    text-decoration: line-through;
+}
+.resultTxt{color: #999999;}
+.fltlft{
+    float: left;
+}
+.fltryt{
+    float: right;
+}
+.clearFix:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.filter-area {
+    width: 26%;
+    padding-right: 16px;
+}
+
+.card-area {
+    width: 74%;
+}
+
+.odd-data {
+    width: 50%;
+    padding-right:8px;
+}
+
+.even-data {
+    width: 50%;
+    padding-left:8px;
+}
+.top-ad-wrap{
+    margin-bottom: 12px;
+}
+#shoshkeleBannerDiv {
+    text-align: center;
+}
+.position_rltv{position: relative;}
+.socialShareDeskCTPTop .sharing-band-list{
+    justify-content: left;
+}
+.socialShareDeskCTPTop {
+    padding-top: 6px;
+}
+
+.BHST_parent{max-height: 10.5rem;overflow: hidden;}
+.BHST_read_more{display: none;cursor: pointer;}
+.BHST_parent ul{margin-left: 21px;list-style-type: disc;}
+.BHST_parent ol{margin-left: 21px;}
+section.feedbackType2{
+    background: transparent;
+    box-shadow: none;
+}

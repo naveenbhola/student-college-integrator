@@ -1,0 +1,173 @@
+<div class="row" id="course_basic_info_form">
+    <div [mysize]="'12'">
+        <div class="x_panel">
+            <div [class.x_title]="opened">
+                <ul class="nav navbar-left panel_toolbox">
+                    <li><a class="collapse-link" (click)="toggle()"><i [class]="opened?' fa fa-chevron-up':' fa fa-chevron-down'"></i></a></li>
+                </ul>
+                <h2>Basic Information </h2>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content"  [hidden]="!opened">
+                <div [formGroup]="courseBasicInfoForm">
+                    <div class="form-group">
+                        <div [mysize]="'3'">
+                            <label>Course Name<img class="helperText" id="course_name" src="/public/images/tooltip.png" width="20px" style="padding-right:0px" (click)="toolTipNotify('course_name',$event)"></label>
+                        </div>
+                        <div [mysize]>
+                            <input type="text" formControlName="course_name" />
+                            <span class="help-block text-danger"  *ngIf="!courseBasicInfoForm.controls.course_name.valid">
+                                <span *ngIf="courseBasicInfoForm.controls.course_name.errors.required">Course name is required</span>
+                                <span *ngIf="courseBasicInfoForm.controls.course_name.errors.maxlength">Use less than or equal to 200 characters</span>                            
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div [mysize]="'3'">
+                            <label>Duration</label>
+                        </div>
+                        <div [mysize]="'2'">
+                            <input type="text" formControlName="duration_value" >
+                            <span class="help-block text-danger" *ngIf="!courseBasicInfoForm.controls.duration_value.valid">
+                                <span *ngIf="courseBasicInfoForm.controls.duration_value.errors.required">Duration is required</span>
+                                <span *ngIf="courseBasicInfoForm.controls.duration_value.errors.number">Duration is not valid</span>
+                            </span>                     
+                        </div>
+                        <div [mysize]="'2'">
+                            <select name="medium" formControlName="duration_unit" class="select2_single form-control">
+                                <option *ngFor="let item of courseStaticData?.duration"  value="{{item.value}}" >{{item.label}}</option>
+                            </select>
+                        </div>
+                        <div mysize="6" myclassoffset="3">
+                            <div mysize="12">
+                                <label class="checkbox-inline" mysize="4" noBootstrap>
+                                    <input type="checkbox" formControlName="duration_disclaimer"/>Show Disclaimer
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div [mysize]="'3'">
+                            <label>Approving Bodies<img class="helperText" id="approved" src="/public/images/tooltip.png" width="20px" style="padding-right:0px" (click)="toolTipNotify('approved',$event)"></label>
+                        </div>
+                        <div [mysize]="'3'" style="padding-left:0px;">
+                            <mymultiselect formControlName="recognition"  [data]="courseStaticData?.course_recognition" [defaultPlaceholder]="'Select Approved'" [itemKey]="'recognition'"></mymultiselect>                       
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div [mysize]="'3'">
+                            <label>Affiliation<img class="helperText" id="affiliation" src="/public/images/tooltip.png" width="20px" style="padding-right:0px" (click)="toolTipNotify('affiliation',$event)"></label>
+                        </div>
+                        <div [mysize]="'9'">
+                            <div [mysize]="'3'">
+                                <label class="radio-inline" [mysize]="'6'" noBootstrap>
+                                <input type="radio" formControlName="affiliated_university_scope" class="flat" value="domestic"/>Domestic</label>
+                            </div>
+                            <div [mysize]="'3'">
+                                <label class="radio-inline" [mysize]="'8'" noBootstrap>
+                                <input type="radio" formControlName="affiliated_university_scope"  class="flat" value="abroad"/>Study Abroad</label>
+                            </div>
+                        </div>
+                        <div [mysize]="'9'" *ngIf="courseBasicInfoForm.controls.affiliated_university_scope.value == 'domestic'">
+                            <br/>
+                            <shikshaInstituteAutosuggestor (selectedInstituteItem)="selectedAffiliationInstitute($event)" [suggestionType]="'university'"></shikshaInstituteAutosuggestor>
+                            <div>
+                                <div class="form-group">
+                                    <div [mysize]="'10'">
+                                        <!-- <h4>Selected Affiliation</h4>
+                                            <span>                     
+                                                {{courseBasicInfoForm.controls.affiliated_university_name.value}}
+                                            </span> -->
+                                        <label [mysize]="'3'" style="text-align: left;"> Or University Name</label>
+                                        <div mysize="8">
+                                            <input type="text" [disabled]="courseBasicInfoForm.controls['affiliated_university_id'].value" formControlName="affiliated_university_name" placeholder="Enter Name">
+                                            <span class="help-block text-danger">
+                                                <span *ngIf="courseBasicInfoForm.controls['affiliated_university_name']?.errors?.maxlength">{{courseBasicInfoForm.controls['affiliated_university_name']?.errors?.maxlength}}</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <!-- <div [mysize]="'4'" class="hidden">
+                                        <label [mysize]="'6'">Year Of Affiliation</label>
+                                        <div [mysize]="'6'">
+                                            <div class="input-group">
+                                                <input formControlName="affiliated_university_year" name="instituteYOA" type="number">
+                                                <span class="help-block text-danger" *ngIf="!courseBasicInfoForm.controls.affiliated_university_year.valid">
+                                                    <span *ngIf="courseBasicInfoForm.controls.affiliated_university_year.errors.pattern">Range must be between 1500 to {{currentYear}}</span>
+                                                </span>                                 
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <div *ngIf="invalidIdError">
+                                <div [mysize]="'6'">
+                                    <span class="help-block text-danger">
+                                    <span>{{invalidIdError}}</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div [mysize]="'9'" *ngIf="courseBasicInfoForm.controls.affiliated_university_scope.value == 'abroad'">
+                            <br/>
+                            <shikshaInstituteAutosuggestor (selectedInstituteItem)="selectedAffiliationInstitute($event)" [autoSuggestorType]="'studyAbroad'" [suggestionType]="'university'"></shikshaInstituteAutosuggestor>
+                            <div>
+                                <div class="form-group">
+                                    <div [mysize]="'10'">
+                                        <!-- <h4>Selected Affiliation</h4>
+                                            <span>                     
+                                                {{courseBasicInfoForm.controls.affiliated_university_name.value}}
+                                            </span> -->
+                                        <label [mysize]="'3'" style="text-align: left;"> Or University Name</label>
+                                        <div mysize="8">
+                                            <input type="text" [disabled]="courseBasicInfoForm.controls['affiliated_university_id'].value" formControlName="affiliated_university_name" placeholder="Enter Name">
+                                            <span class="help-block text-danger">
+                                                <span *ngIf="courseBasicInfoForm.controls['affiliated_university_name']?.errors?.maxlength">{{courseBasicInfoForm.controls['affiliated_university_name']?.errors?.maxlength}}</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <!-- <div [mysize]="'4'" class="hidden">
+                                        <label [mysize]="'6'">Year Of Affiliation</label>
+                                        <div [mysize]="'6'">
+                                            <div class="input-group">
+                                                <input  formControlName="affiliated_university_year" name="instituteYOA" type="number">
+                                                <span class="help-block text-danger" *ngIf="!courseBasicInfoForm.controls.affiliated_university_year.valid">
+                                                <span *ngIf="courseBasicInfoForm.controls.affiliated_university_year.errors.pattern">Range must be between 1500 to {{currentYear}}</span>
+                                                </span>                                   
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <div *ngIf="invalidIdError">
+                                <div [mysize]="'6'">
+                                    <span class="help-block text-danger">
+                                    <span>{{invalidIdError}}</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div [mysize]="'3'">
+                            <label>Medium of Instruction</label>
+                        </div>
+                        <div [mysize]="'3'">
+                            <mymultiselect formControlName="instruction_medium" [data]="courseStaticData?.medium_of_instruction" [defaultPlaceholder]="'Select Medium of Instruction'" [itemKey]="'medium'"></mymultiselect>                                          
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div [mysize]="'3'">
+                            <label>Difficulty Level<img class="helperText" id="difficulty_level" src="/public/images/tooltip.png" width="20px" style="padding-right:0px" (click)="toolTipNotify('difficulty_level',$event)"></label>
+                        </div>
+                        <div [mysize]="'9'">
+                            <div [mysize]="'3'" *ngFor="let item of courseStaticData?.course_difficulty_level">
+                                <label class="radio-inline" [mysize]="'12'" noBootstrap>
+                                <input type="radio" formControlName="difficulty_level" class="flat" value="{{item.value}}"/>{{item.label}}</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

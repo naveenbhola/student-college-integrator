@@ -1,0 +1,437 @@
+/*Recommended Exams*/
+body{background: #fff;}
+  .clearwidth{width:100%;float:left}.flLt{float:left}.flRt{float:right}
+
+  /*bottom widget Exams*/
+  .exm-sldr .clg-infrm-data > a.title{font-size: 16px; text-decoration: none; height: 25px;}
+  .exm-sldr .data-add{min-height: 125px;}
+  #exmsldrSec .exm-sldr .clg-place-date{font-size: 14px; line-height: 20px; color: #2A2A2A;}
+  #exmsldrSec a.cousre-data-inf{margin-top: 15px; display: block; text-decoration: none; color:#008489;}
+  .exm-shwLst .arrw-bx{top:32px;}
+
+  .slider-sections{display: block;background: #fafafa}
+  .slide-show{margin: 20px 0px 0;box-sizing: border-box;overflow: hidden;}
+  .slide-show:last-child{padding-bottom: 20px;}
+  .ana-slider-col{list-style: none;}
+  .ana-slider-col:before, .ana-slider-col:after{content: '';display: table;}
+  .ana-slider-col:after{clear: both;}
+  .ana-slider-col{width: 2000px;}
+  .ana-slider-col > li{float: left;padding: 0 0 0;}
+  .ana-slider-col > li:first-child{padding-left: 0px}
+  .data-add{width: 230px;min-height: 280px;background: #fff;padding: 5px;border: 1px solid #dfe0e4}
+  .data-add:hover {box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),0 0 0 1px rgba(0,0,0,0.08);cursor: pointer;}
+  .data-add > a{display: block;height: 143px;overflow: hidden;}
+  .data-add > a img{width: 100%}
+  .clg-infrm-data{display: block;padding: 5px 5px 0px;}
+  .clg-infrm-data > a.title {display: block;font-size: 12px;color: #666;font-weight: 600;height: 33px;line-height: 16px;overflow: hidden;margin-bottom: 5px;}
+  .clg-infrm-data .clg-place-date, .cousre-data-inf{font-size: 13px;line-height: 16px;color: #666;margin-bottom: 3px;}
+  .cousre-data-inf{color:#008489;}
+  .ana-btns.max-btns{width: 100%;margin: 20px 0 7px;}
+  .pos-rel{position: relative;}
+  .arrows{width: 12px; height: 12px;color: #828180; position: absolute; top: 50%;}
+  .prev, .next{ display: block;
+    width: 20px;
+    height: 33px;
+    background: url(../../public/images/ana-left-icons-v1.png) no-repeat 0px -76px;
+    position: absolute;
+    left: 0px;
+    top: 45%;
+    cursor: pointer;}
+    .next{background-position: 2px -39px; right:8px; left: auto;}
+    /*.arrw-bx{width: 40px; height: 75px;background: rgba(255,255,255,0.9); position: absolute;top: 103px; border-radius: 5px;left: 1px;box-shadow: 1px 1px 1px 0 #ccc; cursor: pointer;}*/
+    .arrw-bx.nxt{right: 10px;left: auto;}
+    .arrw-nxt{top: 0px;height: 100%;right: 0px;position: absolute;width: 0px;border-top-right-radius: 2px;   border-bottom-right-radius: 2px; background: -moz-linear-gradient(left, rgba(249,249,249,0) 0%, rgba(249,249,249,1) 83%); background: -webkit-linear-gradient(left, rgba(249,249,249,0) 0%,rgba(249,249,249,1) 83%);background: linear-gradient(to right, rgba(249,249,249,0) 0%,rgba(249,249,249,1) 83%);}
+
+    .ar-rco{background-color: #fff; padding: 20px; box-shadow: 1px 1px 1px 0 #dfdfdc; width: 490px; margin-bottom: 30px;display: inline-block;height: 110px;}
+    .ar-img{float: left; width: 80px; height: 80px;margin-right: 15px;}
+    .ar-det{float: left;color: #000; font-size: 16px; font-weight: 600;width: 78%;}
+    .rd-mr{color:#008489; font-size: 14px; margin-top: 10px; text-decoration: none; display: block; font-weight: normal;}
+
+    #exmsldrSec .icn-prev{left:0px;}
+    #exmsldrSec .icn-prev i, #exmsldrSec .icn-next i{top: 33%}
+    #exmsldrSec .icn-next{right: 0px;}
+    #exmsldrSec .ana-container{background:#fff;}
+    #exmsldrSec .ExamsSlider{margin: 0 18px;}
+    #exmsldrSec .ExamsSlider .r-caraousal{margin-left: 19px;padding-bottom: 10px}
+
+    .new-card-dtls .brchre-btn {width:165px}
+
+/*Recommended Exams End*/
+
+/*Recommended institute*/
+
+
+.card {
+  border: 1px solid #f2f2f2;
+  padding: 20px;
+}
+
+.tbl {
+  display: table;
+  width: 100%;
+}
+.tbl .tbl-row{
+  display: table-row;
+  width: 100%;
+}
+
+.tbl .cell {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.timr-cont {
+  width: 70%;
+}
+
+.img-cont {
+  width: 30%;
+}
+
+
+.btn-primary {
+  text-align: center;
+  vertical-align: middle;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  height: 32px;
+  touch-action: manipulation;
+  white-space: nowrap;
+  background-image: none;
+  line-height: 30px;
+  padding: 0px 16px;
+  display: inline-block;
+  background: #f29d37;
+  color: #fff;
+  border: 1px solid #f29d37;
+}
+a.orange:hover,a.orange:link,a.orange:active,a.orange:visited{
+  color: #fff;
+  text-decoration: none;
+}
+
+.result-table.tbl {
+  width: 500px;
+  margin: 0 auto;
+}
+.result-table.tbl .cell {
+  text-align: left;
+}
+
+.result-table.tbl .tbl-row:last-child .cell{
+  border-bottom:1px solid #f2f2f2;
+}
+.cell.title-box , .cell.value-box{
+  border: 1px solid #f2f2f2;
+  border-bottom: none;
+  padding: 7px 15px;
+  font-size: 14px;
+  color: #666;
+}
+.cell.title-box{
+  width:33%;
+}
+.cell.value-box{
+  border-left:none;
+  color:#000;
+  width:70%;
+}
+.card.no-border{border:none;border-bottom:1px solid #f2f2f2;margin:-20px auto 0px auto}
+.value-box .rank{color: #ee9521;font-size: 18px;font-weight: 600;}
+.txt-info{color:#000;font-size:14px;font-weight:600;}
+.btn-primary.blue{background:#fff;border:1px solid #008489;;color:#008489;margin-left:20px;}
+
+/*slider css*/
+.r-caraousal {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  vertical-align: top;
+  box-sizing: border-box;
+  padding: 0px 50px;
+}
+
+
+/*recomended carousel*/
+.featuredSlider{
+ width: 25000px;
+ display: block;
+}
+.featuredSlider li {
+  display: inline-block;
+  text-align: center;
+  padding: 0 0px 5px;
+  float: left;
+  max-width: 285px;
+}
+.r-card {
+  min-height: 260px;
+  display: inline-block;
+  border: 1px solid;
+  cursor: pointer;
+  margin-right: 17px;
+  background: #fff;
+  border-color: #e5e6e9 #dfe0e4 #e6e5e5 #dfe0e4;
+  width: 240px;
+}
+
+.r-card > a {
+  display: block;
+  overflow: hidden;
+  padding: 5px;
+}
+
+.r-card > a > img {
+  width: 100%;
+}
+
+.r-card > div {
+  padding: 10px;
+}
+
+.r-card > .img-div{
+  padding: 5px;
+  display: block;
+  height: 179px;
+  overflow: hidden;
+}
+
+.r-card > div > p.para-4 {
+  margin-bottom: 10px;
+}
+.r-card > div > p.para-4:last-child{margin-bottom: 0}
+.new-card-dtls > .para-4 {
+  font-weight: 600;
+  color: #111;
+  display: block;
+  height: 45px;
+  overflow: hidden;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+#article-wrapper .new-card-dtls a.para-4{
+  color: #000;
+}
+.r-card > div > p.para-7:last-child {
+  margin-bottom: 0;
+}
+
+.r-card:last-child {
+  margin: 0;
+}
+
+.icn-prev,.icn-next, .arrw-bx{
+  background:#fff;
+  height: 100%;
+  position: absolute;
+  left: 15px;
+  top: 0;
+  width: 5%;
+  z-index:4;
+}
+.icn-next{
+  right: 15px;
+  left: auto;
+}
+
+
+.icn-prev.lftArwDsbl {background-position: -21px -36px;cursor: default}
+.icn-next.rgtArwDsbl {background-position: -19px 0;cursor: default}
+
+.icn-prev i,
+.icn-next i {
+    display: block;
+    width: 20px;
+    height: 33px;
+    background: url(../images/ana-left-icons-v1.png) no-repeat 0px -76px;
+    position: absolute;
+    left: 0px;
+    top: 45%;
+    cursor: pointer;
+}
+
+.icn-next i {
+    background-position: 2px -39px;
+    right: 0px;
+    left: auto;
+}
+.head-1{
+    padding: 15px 20px 15px 0px;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    display: block;
+    color: #000;
+}
+#inst-slider{
+    margin-bottom: 40px;
+}
+#inst-slider .group-card{background:#fff;}
+.new-card-dtls{text-align: left;}
+
+
+.icn-prev.lftArwDsbl i{background-position: -21px -76px;cursor: default}
+.icn-next.rgtArwDsbl i {background-position: -19px -39px;cursor: default}
+.r-caraousal a,
+.r-caraousal a:hover,
+.r-caraousal a:active{
+    text-decoration: none;
+}
+.addTranstnEfct {
+    -webkit-transition: all .6s ease;
+    -moz-transition: all .6s ease;
+    -ms-transition: all .6s ease;
+    transition: all .6s ease;
+}
+.title-head{
+    float: left;
+    width: 100%;
+    padding: 20px 0px 0px  20px;
+    box-sizing: border-box;
+}
+
+
+.capsn {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color:#000;
+}
+
+#clockdiv {
+    color: #fff;
+}
+
+#clockdiv > div {
+    border: 1px solid #ccc;
+    display: inline-block;
+    margin: 0px 4px;
+    width: 120px;
+}
+
+#clockdiv div > span {
+    padding: 26px;
+    line-height: 36px;
+    display: inline-block;
+    color: #000;
+    font-size: 44px;
+    font-weight: 800;
+    width: 100%;
+}
+
+.smalltext {
+    padding: 14px 0px;
+    font-size: 16px;
+    background: #f2f2f2;
+    color: #000;
+}
+
+/**input box css*/
+.result-form{
+    padding:20px;
+    text-align:left;
+    width:450px;
+    margin:0 auto;
+}
+.result-form .tbl .cell{
+    text-align:left;
+}
+.result-form .tbl .cell.botm{
+    vertical-align:bottom;
+}
+.result-form > div {
+    padding:5px 0px;
+}
+.result-form label{
+    display:block;
+    margin-bottom:5px;
+    font-size:14px;
+    color:#666;
+}
+.result-form input[type="text"]{
+    border:1px solid #ccc;
+    padding:6px;
+    width:100%;
+}
+
+
+.icons1 {
+    background-image: url(http://images.shiksha.ws/public/images/user-sprite.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.ic_cal {
+    height: 18px;
+    width: 19px;
+    background-position: -76px 3px;
+    position: absolute;
+    right: 10px;
+    cursor: default;
+    top: 5px;
+}
+.reltv{
+    position:relative;
+}
+.btn-primary{
+       text-align: center;
+        vertical-align: middle;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        height: 32px;
+        touch-action: manipulation;
+        white-space: nowrap;
+        background-image: none;
+        line-height: 30px;
+        padding: 0px 16px;
+        display: inline-block;
+        background: #ee9521;
+        color: #fff;
+        border: 1px solid #ee9521;
+            }
+.btn-sbmt{
+    margin-left:10px;
+    width:160px;
+}
+.dobcell{width:70%;}
+
+.err0r-msg {
+  color: #ec3247;
+  font-size: 10px;
+ }
+.btn-sbmt:link, .btn-sbmt:active, .btn-sbmt:visited, .btn-sbmt:hover {
+    color: #fff;
+    text-decoration: none;
+}
+/**/
+.r-card:hover {
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),0 0 0 1px rgba(0,0,0,0.08);
+}
+
+.r-card.r-card-institute {
+    height: 315px;
+    cursor: default;
+}
+.r-card-institute img {
+    width: 100%;
+    height: 148px;
+}
+.r-card > div > p.para-7 {
+    font-size: 14px;
+    margin-bottom: 3px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color:#666;
+}
+
+.hid
+{
+  display: none !important;
+}
+.row.p-rel .head-1{color: #000;}
+/*Recommended Institutes End*/

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="user\Entities\UserEducation" table="tUserEducation">
+    <change-tracking-policy>DEFERRED_IMPLICIT</change-tracking-policy>
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="name" type="string" column="Name" length="50" nullable="true"/>
+    <field name="instituteId" type="integer" column="InstituteId" nullable="true"/>
+    <field name="level" type="string" column="Level"/>
+    <field name="marks" type="float" column="Marks" nullable="true"/>
+    <field name="marksType" type="string" column="MarksType" nullable="true"/>
+    <field name="courseCompletionDate" type="datetime" column="CourseCompletionDate" nullable="true"/>
+    <field name="courseSpecialization" type="integer" column="CourseSpecialization" nullable="true"/>
+    <field name="ongoingCompletedFlag" type="string" column="OngoingCompletedFlag" nullable="true"/>
+    <field name="city" type="integer" column="City" nullable="true"/>
+    <field name="country" type="integer" column="Country" nullable="true"/>
+    <field name="submitDate" type="datetime" column="SubmitDate" nullable="true"/>
+    <field name="status" type="string" column="Status" nullable="true"/>
+    <field name="board" type="string" column="board" nullable="true"/>
+    <field name="subjects" type="string" column="subjects" nullable="true"/>
+    <field name="instituteName" type="string" column="instituteName" nullable="true"/>
+    <field name="specialization" type="string" column="specialization" nullable="true"/>
+    <field name="examGroupId" type="integer" column="examGroupId"/>
+    <many-to-one target-entity="user\Entities\User" field="user" inversed-by="education">
+          <join-column name="UserId" referenced-column-name="userid" />
+    </many-to-one>
+    <lifecycle-callbacks/>
+  </entity>
+</doctrine-mapping>

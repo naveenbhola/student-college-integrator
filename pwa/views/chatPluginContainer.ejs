@@ -1,0 +1,67 @@
+<div id="chat-container"></div>
+<script>
+  function getCookie(c_name){
+    if (document.cookie.length>0){
+        c_start=document.cookie.indexOf(c_name + "=");
+        if (c_start!=-1){
+            c_start=c_start + c_name.length+1;
+            c_end=document.cookie.indexOf(";",c_start);
+            if (c_end==-1) { c_end=document.cookie.length ; }
+            return unescape(document.cookie.substring(c_start,c_end));
+        }
+    }
+    return "";
+}
+function showShikshaAssistant(){
+  if(window.assistantInit === true){
+    return;
+  }
+  
+  var varient = 1;
+  /* Start : AB Testing */
+  // var cookieValue = getCookie("SAab");
+  // if(cookieValue != "" && (cookieValue == 1  || cookieValue ==  2)){ // generate random no
+  //  varient = cookieValue;
+  // }else{
+  //  var randomNumber = Math.floor(Math.random()*100000) % 100;
+  //  if(randomNumber <= 50){    // show shiksha - assistant
+  //    varient = 2;
+  //  }else{
+  //    varient = 1;
+  //  }
+  //  setCookie("SAab",varient);
+  //  var url = "/common/ChatPlugin/saveSAabValue/"+"sa/"+varient;
+  //  var a = "<img id='beacon_abtest_img' src='"+url+"' width='1' height='1' style='display:none;' />";
+  //  document.body.innerHTML += a;
+  // }
+  /* End : AB Testing */
+
+  if(typeof(getCookie) === "function"){
+    var userCookie = getCookie(" user");
+    userCookie = userCookie.split("|");
+    if(userCookie.length > 1 ){
+      if(userCookie[0] == "monitoring@shiksha.com"){
+        varient = 2;
+      }
+    }
+
+  }
+  
+  if(varient == 2){
+    if(!(document.getElementById("chat-container") == null)){
+      if(window.assistantInit === true){
+        return;
+      }
+      window.assistantInit = true;
+      var imported = document.createElement('script');
+      var d = new Date();
+      imported.src = '<%-jsDomain%>/public/js/chatplugin.js?'+d.getDate()+''+d.getMonth()+''+d.getYear();
+      document.head.appendChild(imported);
+    }
+  }
+}
+
+if(window.assistantInit === false || typeof(window.assistantInit) === "undefined"){
+  showShikshaAssistant(); 
+}
+</script>

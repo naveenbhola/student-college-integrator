@@ -1,0 +1,37 @@
+<div class="row" id="course_batch_profile_form">
+    <div [mysize]="'12'">
+        <div class="x_panel">
+           <div [class.x_title]="opened">
+             <ul class="nav navbar-left panel_toolbox">
+                  <li><a class="collapse-link" (click)="toggle()"><i [class]="opened?' fa fa-chevron-up':' fa fa-chevron-down'"></i></a></li>
+              </ul>
+                <h2>Batch Profile</h2>
+                <div class="clearfix"></div>
+           </div>
+           <div class="x_content" [formGroup]="courseBatchProfile" *ngIf="initialized" [hidden]="!opened">
+              <div formGroupName="gender">
+                <addColumnTableComponent [group]="courseBatchProfile.controls['gender']" [default]="_genderDefault" [addmore]="[]" [tableHeading]="'Gender'" [colHeading]="''"></addColumnTableComponent>
+              </div>
+
+              <div class="form-group">
+                <div [mysize]="'3'">
+                    <label>Average work-ex (in months)</label>
+                </div>                  
+                <div [mysize]="'2'">
+                    <input type="number" formControlName="avg_work_ex" >                  
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div [mysize]="'3'">
+                    <label>% of International Students</label>
+                </div>                  
+                <div [mysize]="'2'">
+                    <input type="number" formControlName="per_international_students" >                  
+                </div>
+              </div>
+
+           </div>
+        </div>
+    </div>
+</div>

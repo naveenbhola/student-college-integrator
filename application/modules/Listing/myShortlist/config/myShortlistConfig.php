@@ -1,0 +1,5 @@
+<?php
+$config['MS_MAX_RECOMMENDATIONS'] = 40;
+define("MS_MINIMUM_SHORTLIST_COUNT", 100);
+
+?>

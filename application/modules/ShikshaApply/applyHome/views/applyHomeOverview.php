@@ -1,0 +1,9 @@
+<?php
+    if(!$onRMCSuccessFlag){
+        $this->load->view('applyHome/applyHomeHeader');
+    }
+    $this->load->view('applyHome/applyHomeContent');
+    if(!$onRMCSuccessFlag){
+        $this->load->view('applyHome/applyHomeFooter');
+    }
+?>

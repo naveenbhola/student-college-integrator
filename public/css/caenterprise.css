@@ -1,0 +1,139 @@
+.calenderBox{position:relative; float:left;}
+a.pickDate{background-position:right -1036px; width:15px; height:16px; display:block; cursor:pointer; position:absolute; left:81px; top:3px; *top:4px; text-decoration:none !important;}
+input.calenderFields{font-size:12px; padding:0px 0px 0px 4px !important; height:21px; _height:19px; _padding:0px 0px 0px 2px}
+a.pickDate{background-position:right -1036px; width:15px; height:16px; display:block; cursor:pointer; position:absolute; left:81px; top:3px; *top:4px; text-decoration:none !important;}
+a.pickDate{background:url(/public/images/apps-sprite.gif) no-repeat;}
+
+.campusambassador-tab{width:100%; float:left; border-bottom:1px solid #cbcbcb; margin-bottom:20px}
+.campusambassador-tab ul{padding-left:15px}
+.campusambassador-tab ul li{float:left; padding:10px 12px; font:normal 18px Arial, Helvetica, sans-serif; background:#ececec; border:1px solid #cbcbcb; border-bottom:0 none; margin-right:10px; cursor:pointer; position:relative}
+.campusambassador-tab ul li.active{background:#fff; top:1px; cursor:auto}
+.campusambassador-tab ul li a{color:#989898; text-decoration:none !important; outline:0 none}
+.campusambassador-tab ul li.active a{color:#000;}
+.discussion-table{width: 100%; margin-bottom: 20px}
+.discussion-table tr td{padding:8px 10px}
+.discussion-table tr th{background: #f1f1f1; padding:14px 10px; text-align: left}
+.discussion-table .orange-button {font-size: 12px !important}
+.alt-row{background: #fafafa}
+//CSS for Campus Connect Module - My Task
+.container{margin:0 auto; padding:10px;}
+.new-task-form h2{color:#f96600; font-family:Arial, Helvetica, sans-serif; font-size:18px; padding-bottom:4px; border-bottom:1px solid #cbcbcb; font-weight:normal;}
+.clear-width{float:left; width:100%;}
+.flLt{float:left;}
+.flRt{float:right;}
+.orange-btn{background:#f78640; color:#fff !important; font-size:14px; padding:5px 18px; border:1px solid #d2d2d2; text-decoration:none !important;}
+.taskForm-details{margin:30px 0 0 0;}
+.taskForm-details ul{float:left; font-family:Arial, Helvetica, sans-serif; padding:0;}
+.taskForm-details ul li{margin-bottom:15px; color:#000; font-size:13px; list-style:none; float:left; width:100%;}
+.taskForm-details ul li label{font-weight:bold; margin-right:10px; padding-top:4px; width:160px; text-align:right;}
+.taskForm-details ul li label span{color:#ff5555;}
+.task-textfield, .task-txtarea, .select-text{width:250px; border:1px solid #d5d5d5; -moz-box-shadow:0 1px 3px #e0e0e0 inset;-webkit-box-shadow:0 1px 3px #e0e0e0 inset;box-shadow:0 1px 3px #e0e0e0 inset; padding:5px; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px;}
+.date-width{width:150px;}
+.calendar-icon{background:url(/public/images/calendar-icon.jpg) no-repeat; position:absolute; width:23px; height:23px; right:3px; top:3px; cursor:pointer;}
+.prize-list ul, .amount-list ul{margin: 10px 0 10px 170px;}
+.prize-list ul li, .amount-list ul li{margin-bottom:8px; list-style:none; font-weight:normal;}
+.remove-link{text-decoration:none; float:right}
+.enterprise-table, .ent-user-table{width:100%;border-collapse:collapse; margin:20px 0; border:1px solid #edeeef;}
+.enterprise-table tr th, .enterprise-table tr td, .ent-user-table tr th, .ent-user-table tr td{padding:8px; text-align:center; background:#eef7fe; font-size:14px; color:#000; font-family:Arial, Helvetica, sans-serif; border:1px solid #edeeef;border-bottom:none;}
+.enterprise-table tr td, .ent-user-table tr td{background:#fff; padding:15px 8px; border-top:none;}
+.ent-user-table tr th, .ent-user-table tr td{font-size:12px;}
+
+//CollegeReview moderation panel css
+.container{margin:0 auto; padding:10px;}
+.new-task-form h2{color:#f96600; font-family:Arial, Helvetica, sans-serif; font-size:18px; padding-bottom:4px; border-bottom:1px solid #cbcbcb; font-weight:normal;}
+.clear-width{float:left; width:100%;}
+.flLt{float:left;}
+.flRt{float:right;}
+.orange-btn, .orange-btn-disable{background:#f78640; color:#fff; font-size:14px; padding:5px 18px; border:1px solid #d2d2d2; text-decoration:none;}
+.orange-btn-disable{background:#ababab; cursor:auto;}
+
+.review-section{font-family:Arial, Helvetica, sans-serif;}
+.review-head{float:left; width:100%;}
+.review-title{color:#f48438; font-size:18px; font-weight:bold;}
+.review-title a{font-size:14px; text-decoration:none; font-weight:normal;}
+.review-sprite{background:url(/public/images/review-sprite.png) no-repeat; vertical-align:middle; position:relative; font-style:none; display:inline-block;}
+.minus-icon, .plus-icon{background-position:0 0; width:10px; height:10px;}
+.plus-icon{background-position:-14px 0;}
+.sort-width{width:150px; padding:2px;}
+.college-review-sec{background:#ececec; margin:10px 0;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box }
+.collge-status{width:100%; padding:15px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box }
+.collge-status ul, .review-status-tabs ul{margin:0; padding:0;}
+.collge-status ul li{display:inline; margin-right:5px; width:33%;}
+.collge-status ul li label{color:#000; font-size:14px !important;}
+.status-select{width:125px; padding:4px; font-size:14px;}
+.collge-text{border:1px solid #ddd; -moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px; padding:6px; width:150px; outline:none;}
+.cross-icon{background-position:-86px 0; width:13px; height:13px; margin:6px;}
+.arrow-icon{background-position:-42px 0; width:11px; height:11px; cursor:pointer; margin-left:5px;}
+.review-details{color:#000; font-size:14px; margin:20px 0; }
+.review-college-title{color:#808080; font-size:18px;}
+.review-status-tabs{font-size:14px; margin:10px 0;}
+.review-status-tabs ul li{display:inline; font-size:15px;}
+.moderate-count, .ignore-count, .publish-count{width:28px; height:28px; border-radius:50%; border-radius:50%;border-radius:50%; background:#f48e0b; color:#fff; display:inline-block; line-height:20px; padding:4px; text-align:center; line-height:30px; font-size:16px; margin:0 5px;}
+.ignore-count{background:#acacac;}
+.publish-count{background:#50d059;}
+.review-table{width:100%;border-collapse:collapse; margin:20px 0 60px; border:1px solid #edeeef !important;}
+.review-table tr th, .review-table tr td{padding:8px; text-align:left; background:#eef7fe; font-size:16px; color:#989898; font-family:Arial, Helvetica, sans-serif; border:1px solid #edeeef !important;border-bottom:none; font-weight:normal;width: 50%; word-break:break-all}
+.review-table tr td{color:#000; font-size:12px; padding:30px 15px 15px; vertical-align:top; background:#fff;}
+.student-details{margin-bottom:8px;}
+.student-details p{margin:0; line-height:21px;}
+.other-details{font-size:12px; margin-bottom:10px;}
+.other-details p span{color:#808080}
+.other-details p{margin:0; line-height:20px;}
+.other-details ul li span{font-size:12px !important;}
+.phone-icon{background-position:-72px 0; width:9px; height:13px; margin-right:10px;}
+.edit-icon{background-position:-56px 0; width:11px; height:11px; margin-right:4px;}
+#top-bar, .campus-sprite {background: url(/public/images/campusAmbassador/campus-sprite.png) no-repeat scroll 0 0 rgba(0, 0, 0, 0);display: inline-block; position: relative;
+vertical-align: middle;}
+.camp-review-sec{margin-top:25px; font-size:13px; line-height:18px;}
+p.review-desc{margin:20px 0 10px 0;}
+.camp-rating{margin:10px 0; float:left;}
+.camp-rating ul{width:100%; margin-top:10px;}
+.camp-rating ul li{margin-bottom:10px;}
+.camp-rating ul li label{}
+.rated-star-icon, .star-icon{background-position:-179px -133px; width:19px; height:19px;}
+.star-icon{background-position:-203px -133px;}
+ol.rating-list{float:left; width:150px;}
+ol.rating-list li{float:left; margin-left:5px; list-style: none !important;}
+.review-comment{color:#fe7c51; width:100px;}
+.comment-width{width:200px;}
+.btn-col{margin:40px 0 0 0;}
+.more-icon{background-position:-27px 0; width:12px; height:8px;}
+#topTileTable tr.placeholder, #bottomTileTable tr.placeholder {
+  display: block;
+  background: red;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: none; }
+#topTileTable tr.placeholder:before, #bottomTileTable tr.placeholder:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-left-color: red;
+    margin-top: -5px;
+    left: -5px;
+    border-right: none; }
+#topTileTable .dragged, #bottomTileTable .dragged {
+  position: absolute;
+  top: 0;
+  opacity: 0.5;
+  z-index: 2000; }
+  
+  
+  
+  
+.or-tag{text-align: center; font-size: 16px; color: rgb(153, 153, 153); float: left; width: 100%;}
+.session-popup-layer{width:660px; height: auto; border:2px solid #333; background:#fff; padding:10px 20px; float:left; text-align:center; z-index: 99999; position: fixed; top: 20%; left: 40%;}
+.search-by-email-sec{padding: 15px; width: 100%; float: left; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; text-align: center;}
+.session-cross-icon{color:#797979 !important; font-size:26px; line-height:10px; text-decoration:none !important}
+.pasted-chat-area{background:#fff; border:1px solid #ccc; width:98%; margin:15px 0; height:250px; padding:4px;}
+.paste-chat-heading{font-size:16px; color:#333; text-align:center; margin:10px 0 0; color:#ff9329;}
+.ok-button{background-color: #f78640;border: 1px solid #d2d2d2;color: #fff !important; cursor: pointer; font: bold 14px Tahoma,Geneva,sans-serif !important; margin: 0; display:inline-block;padding: 4px 25px; text-decoration:none !important}
+
+.vc-nl-ul li{padding: 12px 0px;border-bottom: 1px solid #000;font-size: 13px;word-wrap: break-word;}
+vc-nl-ul li:first-child {padding-top: 0px;}
+.vc-nl-ul li:last-child{padding-bottom: 0px;border:none}
+.cross_pop{position: absolute;top: 10px;top: -4px;right: 8px;font-size: 22px;color: #333;font-weight: 600}
+.cross_pop:hover{color: #333;text-decoration: none;cursor: pointer;}

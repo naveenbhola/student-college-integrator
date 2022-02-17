@@ -1,0 +1,20 @@
+<div class="article-info">
+		<p>This article was written by:
+			<strong><?= htmlentities($contentDetails['authorInfo']['firstname']." ".$contentDetails['authorInfo']['lastname']);?></strong>,
+			<span><?php echo date("d M'y",strtotime($contentDetails['contentUpdatedAt']));?> | <?php echo date("h:i A",strtotime($contentDetails['contentUpdatedAt']));?></span>
+		</p>
+	</div>
+	<div style="margin: 12px 0 0; float: left;">
+			<div class="flLt">
+				<iframe
+					src="https://www.facebook.com/plugins/like.php?href=<?php echo $contentDetails['contentURL']; ?>&amp;layout=button_count&amp;show_faces=false&amp;width=450&amp;action=like&amp;font=tahoma&amp;stream=true&amp;header=true&amp;appId=<?php echo FACEBOOK_API_ID; ?>"
+					colorscheme=light " scrolling="no" frameborder="0"
+					allowTransparency="true"
+					style="border: none; overflow: hidden; width: 80px; height: 20px"></iframe>
+			</div>
+			<div class="flLt" style="width:80px;">
+				<a href="https://twitter.com/share" class="twitter-share-button" >Tweet</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+			</div>							
+			
+	</div>

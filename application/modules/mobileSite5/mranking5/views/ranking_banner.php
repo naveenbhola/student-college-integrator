@@ -1,0 +1,1 @@
+<div class="top-banner-cont" id="ranking_banner_cont" style="width:940px;"></div>

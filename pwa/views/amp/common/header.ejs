@@ -1,0 +1,80 @@
+<!doctype html>
+<html ⚡>
+   <head>
+      <%- include('seoHead' , {seoData : pageSeoData}) %>
+      <%- include('metaHead') %>
+      <%- include('scriptList') %>
+      <%- include('boilerplateStyle') %>
+      <% if(pageName == 'course'){console.log('yes found it')%>
+        <%- include('../pages/course/asset/coursePageCSS') %>
+      <%}%>
+   </head>
+   <body>
+          <amp-analytics type="googleanalytics" id="shikshaAnalytics">
+             <script type="application/json">
+                {
+                  "vars":{
+                    "account":"UA-4454182-1"
+                  },
+                  "triggers": {
+                    "trackPageview": {
+                      "on": "visible",
+                      "request": "pageview",
+                        "vars":{
+                          "title":"AMP COURSE DETAIL PAGE"
+                        }
+                    },
+                     "trackAnchorClicks": {
+                        "on": "click",
+                        "selector": ".ga-analytic",
+                        "request": "event",
+                        "vars": {
+                          "eventCategory":"${eventCatName}",
+                          "eventAction": "${eventName}_AMP_COURSE_DETAIL_MOBILE"
+                        }
+                      }
+                  }
+                }
+             </script>
+          </amp-analytics>
+          <amp-analytics>
+             <script type="application/json">
+                {
+                  "requests": {
+                    "pageview": "https://track.shiksha.com/beacon/Beacon/track/5031505/ampCourseDetailPage/73368?pageURL=https%3A%2F%2Fwww.shiksha.com%2Fb-tech%2Fcourse%2Famp%2Fb-e-in-mechanical-engineering-pimpri-chinchwad-college-of-engineering-pimpri-chinchwad-education-trust-s-nigdi-pune-73368&pageReferer=&extraData=%7B%22url%22%3A%22https%3A%5C%2F%5C%2Fwww.shiksha.com%5C%2Fb-tech%5C%2Fcourse%5C%2Famp%5C%2Fb-e-in-mechanical-engineering-pimpri-chinchwad-college-of-engineering-pimpri-chinchwad-education-trust-s-nigdi-pune-73368%22%2C%22hierarchy%22%3A%5B%7B%22streamId%22%3A%222%22%2C%22substreamId%22%3A%220%22%2C%22specializationId%22%3A%22324%22%2C%22primaryHierarchy%22%3A%221%22%7D%5D%2C%22level%22%3A%2214%22%2C%22credential%22%3A%229%22%2C%22baseCourseId%22%3A%2210%22%2C%22cityId%22%3A%22174%22%2C%22stateId%22%3A%22114%22%2C%22countryId%22%3A2%2C%22educationType%22%3A%2220%22%2C%22deliveryMethod%22%3A%2233%22%7D"
+                  },
+                  "triggers": {
+                    "trackPageview": {
+                      "on": "visible",
+                      "request": "pageview"
+                    }
+                }
+                }
+             </script>
+          </amp-analytics>
+          <amp-analytics>
+             <script type="application/json">
+                {
+                  "requests": {
+                    "pageview": "https://track.shiksha.com/beacon/Beacon/index/5868392/0010004/73368+course"
+                  },
+                  "triggers": {
+                    "trackPageview": {
+                      "on": "visible",
+                      "request": "pageview"
+                    }
+                }
+                }
+             </script>
+          </amp-analytics>
+          <amp-analytics config="https://www.googletagmanager.com/amp.json?id=GTM-T9G78ZC&gtm.url=SOURCE_URL" data-credentials="include">
+             <script type="application/json">
+                {
+                  "vars":
+                    {"stream":"2","specialization":"324","cityId":"174","stateId":"114","countryId":2,"pageType":"courseListing","baseCourseId":"10","credential":"9","educationType":"20","deliveryMethod":"33","instituteId":"25044","exams":"6244,9248","workExperience":"0"}
+                }
+             </script>
+          </amp-analytics>
+          <amp-pixel src="https://www.facebook.com/tr?id=639671932819149&ev=PageView&noscript=1"
+             layout="nodisplay"></amp-pixel>
+<%- html %>

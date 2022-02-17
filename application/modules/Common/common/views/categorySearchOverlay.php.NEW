@@ -1,0 +1,199 @@
+<div id="drpDown" onMouseOver="MM_showHideLayers('drpDown','','show')" onMouseOut="MM_showHideLayers('drpDown','','hide'); MM_showHideLayers('countryOption','','hide');MM_showHideLayers('careerOption','','hide');MM_showHideLayers('eventCategories','','hide');MM_showHideLayers('eventCountries','','hide');MM_showHideLayers('importantDeadlines','','hide');MM_showHideLayers('impDeadlines','','hide');MM_showHideLayers('countries','','hide');MM_showHideLayers('eventTypes','','hide');MM_showHideLayers('testPreparation','','hide')" class="brd" style="display:none">
+		<div style="line-height:8px">&nbsp;</div>
+		<a href="javascript:void(0)" onMouseOver="openSubDiv(this, 'careerOption');" id="careerMenus" style="width:120px"> &nbsp; &nbsp;Career Options</a>
+		<a href="javascript:void(0)" onMouseOver="openSubDiv(this, 'testprep');" id="testprepMenus" style="width:120px"> &nbsp; &nbsp;Test Preparations</a>
+		<a href="javascript:void(0)" onMouseOver="openSubDiv(this, 'countryOption');" id="countryMenus" style="width:120px"> &nbsp; &nbsp;Countries</a>
+		<a href="javascript:void(0)" onMouseOver="openSubDiv(this, 'testPreparation');" id="testPreparationMenus" style="width:120px"> &nbsp; &nbsp;Test Preparation</a>
+		<a href="javascript:void(0)" onMouseOver="openSubDiv(this, 'eventCategories');" id="eventCategoriesMenus" style="width:120px"> &nbsp; &nbsp;Event Categories</a>
+                <a href="javascript:void(0)" onMouseOver="openSubDiv(this, 'eventCountries');" id="eventCountriesMenus" style="width:120px"> &nbsp; &nbsp;Event Countries</a>
+		<a href="javascript:void(0)" onMouseOver="openSubDiv(this, 'importantDeadlines');" id="importantDeadlinesMenus" style="width:120px"> &nbsp; &nbsp;Important Deadlines</a>
+		 <a href="javascript:void(0)" onMouseOver="openSubDiv(this, 'impDeadlines');" id="impDeadlinesMenus" style="width:120px"> &nbsp; &nbsp;Imp Deadlines</a>
+		<a href="javascript:void(0)" onMouseOver="openSubDiv(this, 'eventTypes');" id="eventTypesMenus" style="width:120px"> &nbsp; &nbsp;Event Types</a>
+		<a href="javascript:void(0)" onMouseOver="openSubDiv(this, 'countries');" id="countriesMenus" style="width:120px"> &nbsp; &nbsp;Change Country</a>
+</div>
+<div id="careerOption" onMouseOver="MM_showHideLayers('careerOption','','show');" onMouseOut="MM_showHideLayers('careerOption','','hide');" style="width:350px;">	
+<?php
+			$this->load->library('category_list_client');
+			global $categoryTree;
+			$categoryTree = $this->category_list_client->getCategoryTree($appID,1);
+			global $tabsContentByCategory;
+			$tabsContentByCategory = $this->category_list_client->getTabsContentByCategory();
+			$i = -1;
+			foreach($tabsContentByCategory as $category) {
+				$i++;
+?>
+				<a onclick = "trackEventByGA('topnavlinkclick',this.innerHTML)" id="catagory_<?=$category['id']?>" href="<?=$category['url']?>" onmouseover="showSubCatagories(<?=$i?>,<?=$category['id']?>)" class="Arrow shikIcons2" href="#" style="background: url(/public/images/mddwnArw.gif) no-repeat scroll 94% center #EFF8FF;border-top-color: #A7C9F6;margin-left:0px;"><?php echo $category['name']; ?></a>
+<?php
+		    }
+?>
+<div style="display:none"></div>
+		<div id="subCatagories" style="width:300px;">
+				<div id="whiteLine">&nbsp;&nbsp;</div>
+				<div style="width:300px;height:400px;overflow-y:auto;">		
+						<div id="subCourse">	
+						</div>
+						<div id="subCat">	
+						</div>
+				</div>
+		</div>
+</div>
+<script type="text/javascript">
+		var categoryTree = <?=json_encode($categoryTree)?>;
+		categoryList = categoryTree;
+		tabsContentByCategory = <?=json_encode($tabsContentByCategory)?>;
+</script>
+<div id="MBA" onMouseOver="MM_showHideLayers('MBA','','show');" onMouseOut="MM_showHideLayers('MBA','','hide');" style="width:300px;">
+		<?php
+			foreach($tabsContentByCategory[3]['subcats'] as $cat) {
+				if(in_array($cat['id'],array(23,24,25,26,27))){
+		?>
+			<a onclick = "trackEventByGA('topnavlinkclick',this.innerHTML)" class="shikIcons" href="<?=$cat['url']?>" title="<?php echo $cat['name']." institutes list";?>"><?php echo $cat['name']; ?></a>
+		<?php }} ?>
+		
+		<div class="mb5"></div><div style="margin:0px 5px;">Popular Institutes</div>
+		<table width=100%" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+						<td width="30%">
+								<a onclick = "trackEventByGA('topnavlinkclick',this.innerHTML)" href="http://www.shiksha.com/getListingDetail/24972/course/course-Masters-In-Business-Administration-Noida-India"><img src="/public/images/jaypee-84x28.gif" border="0" height="30" width="80" align="absmiddle" style="border:1px solid #E2E2E2"/></a>
+						</td>
+						<td width="70%">
+								<a onclick = "trackEventByGA('topnavlinkclick',this.innerHTML)" href="http://www.shiksha.com/getListingDetail/24972/course/course-Masters-In-Business-Administration-Noida-India">Jaypee Business School</a>
+						</td>
+				</tr>
+				<tr>
+						<td width="30%">
+								<a onclick = "trackEventByGA('topnavlinkclick',this.innerHTML)" href="http://www.shiksha.com/getListingDetail/22261/institute/college-Siksha-O-Anusandhan-University-Bhubaneswar-India"><img src="/public/images/soa-84x28.gif" border="0" height="30" width="80" align="absmiddle" style="border:1px solid #E2E2E2"/></a>
+						</td>
+						<td width="70%">
+								<a onclick = "trackEventByGA('topnavlinkclick',this.innerHTML)" href="http://www.shiksha.com/getListingDetail/22261/institute/college-Siksha-O-Anusandhan-University-Bhubaneswar-India">Institute of Business and Computer Studies</a>
+						</td>
+				</tr>
+		</table>
+</div>
+<div id="testprep" onMouseOver="MM_showHideLayers('testprep','','show');" onMouseOut="MM_showHideLayers('testprep','','hide');/*MM_showHideLayers('drpDown','','hide');*/">
+		<?php
+			foreach($tabsContentByCategory[14]['subcats'] as $cat) {
+		?>
+			<a onclick = "trackEventByGA('topnavlinkclick',this.innerHTML)" class="shikIcons" href="<?=$cat['url']?>" title="<?php echo $cat['name']." institutes list";?>"><?php echo $cat['name']; ?></a>
+		<?php } ?>
+</div>
+<div id="importantDeadlines" onMouseOver="MM_showHideLayers('importantDeadlines','','show');" onMouseOut="MM_showHideLayers('importantDeadlines','','hide');/*MM_showHideLayers('drpDown','','hide');*/">
+			<a class="shikIcons" href="<?php echo constant('SHIKSHA_EVENTS_HOME_URL') ?>/events/Events/index" title="All events list" >All</a>
+                <?php
+                        global $categoryParentMap;
+                        foreach($categoryParentMap as $categoryName => $category) {
+                ?>
+                        <a class="shikIcons" href="<?php echo constant('SHIKSHA_EVENTS_HOME_URL') ?>/events/Events/index/1/india/All/All/<?php echo $category['id'] ?>/<?php echo $categoryName; ?>" title="<?php echo $categoryName." events list";?>"><?php echo $categoryName; ?></a>
+                <?php } ?>
+
+</div>
+<div id="impDeadlines" onMouseOver="MM_showHideLayers('impDeadlines','','show');" onMouseOut="MM_showHideLayers('impDeadlines','','hide');/*MM_showHideLayers('drpDown','','hide');*/">
+                        <a class="shikIcons" href="<?php echo constant('SHIKSHA_EVENTS_HOME_URL') ?>/events/Events/index/1/<?php echo $countryName; ?>/<?php echo $location_id?>/<?php echo $location_name?>#important_deadlines" title="All events list" >All</a>
+                <?php
+                        global $categoryParentMap;
+                        foreach($categoryParentMap as $categoryName => $category) {
+                ?>
+                        <a class="shikIcons" href="<?php echo constant('SHIKSHA_EVENTS_HOME_URL') ?>/events/Events/index/1/<?php echo $countryName?>/<?php echo $location_id?>/<?php echo $location_name?>/<?php echo $category['id'] ?>/<?php echo $categoryName; ?>#important_deadlines" title="<?php echo $categoryName." events list";?>"><?php echo $categoryName; ?></a>
+                <?php } ?>
+
+</div>
+<div id="countries" onMouseOver="MM_showHideLayers('countries','','show');" onMouseOut="MM_showHideLayers('countries','','hide');/*MM_showHideLayers('drpDown','','hide');*/">
+		<a class="shikIcons" href="<?php echo constant('SHIKSHA_EVENTS_HOME_URL') ?>/events/Events/index" title="All events list" >All</a>
+                <?php
+                        global $countriesForStudyAbroad;
+                        foreach($countriesForStudyAbroad as $countryId => $country) {
+                                $countryFlag = isset($country['flagImage']) ? $country['flagImage'] : '';
+                                $countryname = isset($country['name']) ? $country['name'] : '';
+                                $linkUrl = constant('SHIKSHA_'. strtoupper($countryId) .'_HOME');
+                ?>
+                <a href="<?php echo constant('SHIKSHA_EVENTS_HOME_URL') ?>/events/Events/index/1/<?php echo $country['id']; ?>/<?php echo $countryname; ?>/1/All" title="Events Information - <?php echo $countryname;?>" class="shikIcons"><?php echo $countryname; ?></a>
+                <?php } ?>
+
+</div>
+<div id="eventCategories" onMouseOver="MM_showHideLayers('eventCategories','','show');" onMouseOut="MM_showHideLayers('eventCategories','','hide');/*MM_showHideLayers('drpDown','','hide');*/">
+			<a class="shikIcons" href="<?php echo constant('SHIKSHA_EVENTS_HOME_URL') ?>/events/Events/viewAllEvents/<?php echo $countryName?>/<?php echo $fromOthers; ?>/1/All/<?php echo $location_id?>/<?php echo $location_name?>/0/10" title="All events list" >All</a>
+                <?php
+                        global $categoryParentMap;
+                        foreach($categoryParentMap as $categoryName => $category) {
+                ?>
+                        <a class="shikIcons" href="<?php echo constant('SHIKSHA_EVENTS_HOME_URL') ?>/events/Events/viewAllEvents/<?php echo $countryName; ?>/<?php echo $fromOthers; ?>/<?php echo $category['id']; ?>/<?php echo $categoryName; ?>/<?php echo $location_id?>/<?php echo $location_name?>/0/10" title="<?php echo $categoryName." events lists";?>"><?php echo $categoryName; ?></a>
+                <?php } ?>
+</div>
+<div id="countryOption" onMouseOver="MM_showHideLayers('countryOption','','show');" onMouseOut="MM_showHideLayers('countryOption','','hide');/*MM_showHideLayers('drpDown','','hide');*/">
+		<?php
+                global $countriesForStudyAbroad;
+			foreach($countriesForStudyAbroad as $countryId => $country) {
+                if(strtolower($countryId) == 'india') continue;
+				$countryFlag = isset($country['flagImage']) ? $country['flagImage'] : '';
+				$countryname = isset($country['name']) ? $country['name'] : '';
+				$linkUrl = constant('SHIKSHA_'. strtoupper($countryId) .'_HOME');
+		?>
+		<a  onclick = "trackEventByGA('topnavlinkclick',this.innerHTML)" href="<?php echo $linkUrl; ?>" title="Education Information - <?php echo $countryname;?>" class="shikIcons"><?php echo $countryname; ?></a>
+		<?php } ?>
+
+</div>
+<div id="eventCountries" onMouseOver="MM_showHideLayers('eventCountries','','show');" onMouseOut="MM_showHideLayers('eventCountries','','hide');/*MM_showHideLayers('drpDown','','hide');*/">
+                <?php
+                        foreach($countriesForStudyAbroad as $countryId => $country) {
+                                $countryFlag = isset($country['flagImage']) ? $country['flagImage'] : '';
+                                $countryname = isset($country['name']) ? $country['name'] : '';
+                                $linkUrl = constant('SHIKSHA_'. strtoupper($countryId) .'_HOME');
+                ?>
+                <a href="<?php echo constant('SHIKSHA_EVENTS_HOME_URL') ?>/events/Events/viewAllEvents/<?php echo $fromOthers; ?>/1/All/<?php echo $country['id']; ?>/<?php echo $countryname; ?>/0/10" title="Events list - <?php echo $countryname;?>" class="shikIcons"><?php echo $countryname; ?></a>
+                <?php } ?>
+</div>
+<div id="eventTypes" onMouseOver="MM_showHideLayers('eventTypes','','show');" onMouseOut="MM_showHideLayers('eventTypes','','hide');/*MM_showHideLayers('drpDown','','hide');*/">
+                         <a href="<?php echo constant('SHIKSHA_EVENTS_HOME_URL') ?>/events/Events/viewAllEvents/<?php echo $countryName?>/0/<?php echo $category_id?>/<?php echo $category_name?>/<?php echo $location_id?>/<?php echo $location_name?>/0/10/All" class="shikIcons">Application Submission Deadline</a>
+                         <a href="<?php echo constant('SHIKSHA_EVENTS_HOME_URL') ?>/events/Events/viewAllEvents/<?php echo $countryName?>/3/<?php echo $category_id?>/<?php echo $category_name?>/<?php echo $location_id?>/<?php echo $location_name?>/0/10/All" class="shikIcons">Examination Date</a>
+                         <a href="<?php echo constant('SHIKSHA_EVENTS_HOME_URL') ?>/events/Events/viewAllEvents/<?php echo $countryName?>/4/<?php echo $category_id?>/<?php echo $category_name?>/<?php echo $location_id?>/<?php echo $location_name?>/0/10/All" class="shikIcons">Form Issuance</a>
+			 <a href="<?php echo constant('SHIKSHA_EVENTS_HOME_URL') ?>/events/Events/viewAllEvents/<?php echo $countryName?>/2/<?php echo $category_id?>/<?php echo $category_name?>/<?php echo $location_id?>/<?php echo $location_name?>/0/10/All" class="shikIcons">Result Declaration</a>
+			 <a href="<?php echo constant('SHIKSHA_EVENTS_HOME_URL') ?>/events/Events/viewAllEvents/<?php echo $countryName?>/1/<?php echo $category_id?>/<?php echo $category_name?>/<?php echo $location_id?>/<?php echo $location_name?>/0/10/All" class="shikIcons">Course Commencement</a>
+			 <a href="<?php echo constant('SHIKSHA_EVENTS_HOME_URL') ?>/events/Events/viewAllEvents/<?php echo $countryName?>/5/<?php echo $category_id?>/<?php echo $category_name?>/<?php echo $location_id?>/<?php echo $location_name?>/0/10/All" class="shikIcons">General</a>
+
+</div>
+
+<div id="cafeOption" onMouseOver="MM_showHideLayers('cafeOption','','show');" onMouseOut="MM_showHideLayers('cafeOption','','hide');">
+                         <a onclick = "trackEventByGA('topnavlinkclick',this.innerHTML)" href="<?php echo SHIKSHA_ASK_HOME; ?>" class="shikIcons">Caf&eacute; Buzz</a>
+                         <a onclick = "trackEventByGA('topnavlinkclick',this.innerHTML)" href="<?php echo SHIKSHA_ASK_HOME_URL; ?>/messageBoard/MsgBoard/discussionHome/1/1/1/answer/" class="shikIcons">Q & A</a>
+                         <a  onclick = "trackEventByGA('topnavlinkclick',this.innerHTML)" href="<?php echo SHIKSHA_ASK_HOME_URL; ?>/messageBoard/MsgBoard/discussionHome/1/6/1/answer/" class="shikIcons">Discussions</a>
+						 <a onclick = "trackEventByGA('topnavlinkclick',this.innerHTML)" href="<?php echo SHIKSHA_ASK_HOME_URL; ?>/messageBoard/MsgBoard/discussionHome/1/7/1/answer/" class="shikIcons">Announcements</a>
+						 <?php if(is_array($validateuser) && ($validateuser != "false")) {
+								if($validateuser[0]['usergroup'] !== 'cms'){?>
+						 <a onclick = "trackEventByGA('topnavlinkclick',this.innerHTML)" href="<?php echo SHIKSHA_ASK_HOME_URL; ?>/messageBoard/MsgBoard/discussionHome/1/4/1/answer/" class="shikIcons">My Q &amp; A</a>
+						 <?php }else{ ?>
+						 <a onclick = "trackEventByGA('topnavlinkclick',this.innerHTML)" href="<?php echo SHIKSHA_ASK_HOME_URL; ?>/messageBoard/MsgBoard/discussionHome/1/5/1/answer/" class="shikIcons">Editor's Pick</a>
+						 <?php }} ?>
+			 
+</div>
+<?php
+		global $popularInst;
+		$popularInst = $this->category_list_client->getInstituteForTabs($appID);
+?>
+<div id="gradOption" onMouseOver="MM_showHideLayers('gradOption','','show');" onMouseOut="MM_showHideLayers('gradOption','','hide');">
+		<a onclick = "trackEventByGA('topnavlinkclick',this.innerHTML)" href="<?=$tabsContentByCategory[3]['subcats'][28]['url']?>" class="shikIcons">BBA/BBM</a>
+		<a onclick = "trackEventByGA('topnavlinkclick',this.innerHTML)" href="<?=$tabsContentByCategory[2]['subcats'][56]['url']?>" class="shikIcons">BE/Btech</a>
+		<a onclick = "trackEventByGA('topnavlinkclick',this.innerHTML)" href="<?=$tabsContentByCategory[10]['subcats'][100]['url']?>" class="shikIcons">BCA, DCA, B.Sc CS/IT</a>
+		<a onclick = "trackEventByGA('topnavlinkclick',this.innerHTML)" href="<?php echo SHIKSHA_HOSPITALITY_HOME.'/bachelor-in-hotel-management-in-india-categorypage-6-84-264-0-0-1-1-2-0-none-1-0';?>" class="shikIcons">Bachelor in Hotel Management (BHM)</a>
+<?php
+		if(count($popularInst)){
+		echo '<div class="mb5"></div><div style="margin:0px 5px;">Popular Institutes</div>'.
+		'<table width=100%" border="0" cellpadding="0" cellspacing="0">';
+		foreach($popularInst as $In) {
+		?>
+		<tr>
+				<td width="30%">
+						<a onclick = "trackEventByGA('topnavlinkclick',this.innerHTML)" href="<?=$In['detailurl']?>" title="<?=htmlspecialchars($In['instituteName'])?>"><img src="<?=$In['logo']?>" border="0" height="30" width="80" align="absmiddle" style="border:1px solid #E2E2E2"/></a>
+				</td>
+				<td width="70%">
+						<a onclick = "trackEventByGA('topnavlinkclick',this.innerHTML)" href="<?=$In['detailurl']?>" title="<?=htmlspecialchars($In['instituteName'])?>"><?=htmlspecialchars($In['instituteName'])?></a>
+				</td>
+		</tr>
+<?php } ?>
+</table>
+<? } ?>
+</div>
+<?php
+function getSeoUrlCourse($baseurl,$basecaturl,$appendurl,$location = FALSE){
+	
+}
+?>

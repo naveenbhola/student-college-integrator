@@ -1,0 +1,50 @@
+<div class="row" id="course_structure_form" [formGroup]="courseStructureForm">
+	<div mysize="12">
+		<div class="x_panel" *ngIf="initialized">
+			<div [class.x_title]="opened">
+				<ul class="nav navbar-left panel_toolbox">
+					<li><a class="collapse-link" (click)="toggle()"><i [class]="opened?' fa fa-chevron-up':' fa fa-chevron-down'"></i></a></li>
+				</ul>
+				<h2> Course Structure <img class="helperText" id="course_structure" src="/public/images/tooltip.png" width="20px" style="padding-right:0px" (click)="toolTipNotify('course_structure',$event)"></h2>
+				<div class="clearfix"></div>
+			</div>
+			<div class="x_content"  [hidden]="!opened">
+				<div class="row">
+					<div class="form-group">
+						<div mysize="3">
+							<label>Group By</label>
+						</div>
+						<div mysize="3">
+							<select formControlName = "group_by">
+								<option *ngFor="let item of courseStaticData?.structureOptions" value="{{item.value}}">{{item.label}}</option>
+							</select>
+						</div>
+					</div>
+					<div formArrayName="group_courses">
+						<div *ngFor="let control of courseStructureForm.controls['group_courses'].controls;let j= index;">
+							<div [formArrayName]="j">
+								<div *ngFor="let item of control.controls;let i = index;" class="form-group">
+									<div mysize="3">
+										<label *ngIf="(i == 0) && (courseStructureForm.controls['group_by'].value == 'program')">Courses Offered</label>
+										<label *ngIf="(i == 0) && (courseStructureForm.controls['group_by'].value != 'program')">{{courseStructureForm.controls['group_by'].value}} {{j+1}} Courses</label>
+									</div>
+									<div mysize="6">
+										<input type="text" value="" [formControlName]="i" [class.error]="item?.errors?.maxlength">
+										<span class="help-block text-danger" *ngIf="item?.errors?.maxlength">{{item?.errors?.maxlength}}</span>
+									</div>
+									<div mysize="3">
+										<a href="javascript:void(0);" *ngIf="(i == control.length-1) && control.length<20" (click)="addCourse(j);" class="btn cmsButton cmsFont">+ Add More</a>
+									</div>
+								</div>
+								<br><br>
+								<div mysize="3" *ngIf="(courseStructureForm.controls['group_by'].value != 'program') && (j == (courseStructureForm.controls['group_courses'].length - 1)) && (courseStructureForm.controls['group_courses'].length < 10)">
+									<a href="javascript:void(0);" (click)="addCourseGroup();" class="btn cmsButton cmsFont">+Add {{courseStructureForm.controls['group_by'].value}}</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

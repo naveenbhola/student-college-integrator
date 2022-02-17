@@ -1,0 +1,76 @@
+@font-face { font-family: 'robotolight'; src: url('./fonts/Roboto-Light.ttf');}
+@font-face { font-family: 'contractualText'; src: url('./fonts/Prida01.otf');}
+body{margin: 0; font-family: robotolight !important}
+.header{height:140px; padding:none;marging:none; background-color:#333; opacity: 0.30;}
+.headerText{padding-top:10px;font-size:75px;color:white; text-align: center;width:100%;}
+.headerSubtext{font-family: robotolight;color:white; text-align: center;width:100%;font-weight: bold}
+.buffer{margin: 5px;}
+
+.cssButton{ border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 25px;cursor: pointer;}
+.actionButtonsOpen{margin:12px 5px 5px 8px;}
+.actionButtonsClosed{margin:2px 5px 5px 8px;}
+.actionButtonsClosed .buttonHolder .explanationText {display:none;}
+.actionButtonsOpen .buttonHolder .explanationText{display:block; background-color: #feefb3; color: #9f6000; display: block; font-size: 16px; margin: 5px 0; padding: 10px;}
+.buttonHolder{width:33%;display: inline-block;}
+
+.addButton{width:100%; background-color: #39BF40;}
+.backButton{width:100%; background-color: #73879C;}
+.editButton{width:100%;background-color: #ffcc00;}
+.deleteButton{width:100%;background-color: #D8000C;}
+.submitButton{background-color: #39BF40; width:49.5%;}
+.cancelButton{background-color: #D8000C;width:49.5%;}
+
+.addButton:hover{background-color: #4CAF50;}
+.editButton:hover {background-color: #efbc00;}
+.deleteButton:hover{background-color: #B8000C}
+
+.formBlock{margin:12px 5px 5px 8px;background-color: #feefb3;color: #9f6000; padding:10px 15px;}
+.formBlock div{text-align: center;}
+
+.datatableContainer{margin:25px 8px 5px 8px; background-color: #feefb3;padding:15px;}
+table.jambo_table {border: 1px solid #9f6000;}
+table.jambo_table thead {background: #9f6000;color: #ECF0F1;}
+table.jambo_table tbody tr:hover td {border-top: 1px solid #9f6000;border-bottom: 1px solid #9f6000;}
+table.jambo_table tbody tr.selected td {border-top: 1px solid #9f6000;border-bottom: 1px solid #9f6000;}
+
+.dropdownInputClass{border: 1px solid #bbb; padding: 3px;background-color:#fff;color:#333;width:90%;}
+.inputClass{ border: none; outline: 0; padding: 6px;}
+.addEditFormFields div{width:15%;margin:4px 0px;text-align: left;display: inline-block;}
+.addEditFormFields div div{display: block; width:100%;}
+.addEditFormFields div div input{width:90% !important;}
+
+.addEditFormFields div.contract{width:90%; font-family: contractualText}
+.addEditFormFields div.contract .contractSignature{text-align: right;width:100%;}
+.addEditFormFields div.contract .contractSignature .signatureInput{border: 0px;background-color: #feefb3; border-bottom: 1px solid #9f6000; color:#9f6000; opacity: 0.6; font-family:contractualText;}
+.addEditFormButtons{width:90% !important;}
+.addEditFormButtons div{display:inline-block;}
+
+.ui-autocomplete {
+	max-height: 150px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.loader_overlay{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.18);
+    z-index: 101;
+    display: none;
+}
+
+.loader_overlay img{
+    position: fixed;
+    left: 40%;
+    top: 40%;
+    width: 200px;
+}
+
+.ui-dialog-osx {
+    -moz-border-radius: 0 0 8px 8px;
+    -webkit-border-radius: 0 0 8px 8px;
+    border-radius: 0 0 8px 8px; border-width: 0 8px 8px 8px;
+}

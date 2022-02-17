@@ -1,0 +1,133 @@
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<style>
+#parent_mapping_form *{font-family: "Open Sans"}
+</style>
+<form  id="demo-form2" class="form-horizontal form-label-left" #instituteForm="ngForm" (ngSubmit)="saveInstitute(instituteForm)" autocomplete="off" novalidate *ngIf="activateForm">
+    <!-- <div id = "Aa" style="position:absolute;top:0;left:0;width:100%;height:100%;color:black;opacity:0.7">
+    &nbsp;
+    </div> -->
+    <div class="" style="margin:20% 40% auto;align:center" *ngIf="showLoader">
+                <img align="middle" src="/public/images/ShikshaMobileLoader.gif">
+    </div>  
+<div *ngIf="!showLoader">
+	<div class="row" >
+        <div mysize="12">
+            <div class="x_panel">  
+                <div class="x_content" >
+                    <div class="form-group">
+                        <div mysize="3"></div>                   
+                        <div mysize="6">
+                            <select  class="cmsFont" name="isDummy" [(ngModel)]="sidebarflag" (change)="initializeInstituteObj()" [disabled]="mode == 'edit'">
+                                <option [value]="false">New {{instituteObj.postingListingType}}</option>
+                                <option [value]="true">Dummy {{instituteObj.postingListingType}}</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <institute-posting [mode]="mode" [instituteObj]="instituteObj" [instituteStaticData]="instituteStaticData" [form]="instituteForm" *ngIf="instituteObj.postingListingType != 'University'" (toolTipEvent) ="toolTipModalShow($event)"></institute-posting>
+
+    <parententity-posting [instituteObj]="instituteObj" [mode]="mode" (toolTipEvent) ="toolTipModalShow($event)"></parententity-posting>          
+
+    <basic-posting
+       [instituteObj]="instituteObj"
+       [instituteStaticData]="instituteStaticData" 
+       [locationData] = "locationData"
+       [form]="instituteForm" 
+       [mode]="mode"
+       (toolTipEvent) ="toolTipModalShow($event)"
+    ></basic-posting>
+
+    <div *ngIf = "instituteObj.is_dummy == 'false'">
+    
+        <academicstaff-posting name="academic_staff" [instituteObj]="instituteObj" [mode]="mode" [form]="instituteForm"
+            [(ngModel)]="instituteObj.academic_staff" [errors]="mystaff.errors" 
+            [instituteStaticData]="instituteStaticData" #mystaff="ngModel" myoptional="education_background,highlights" mymust="current_designation,name" validateOneOrNoneCustomControlArray validateMaxLength mymaxcol="name,current_designation,education_background,highlights" mymaxcount="200,200,200,200"
+            (toolTipEvent) ="toolTipModalShow($event)"
+        ></academicstaff-posting>
+        
+        <facilities-posting  name="facilities_all" [(ngModel)]="instituteObj.facilities" [facilities]="instituteObj.facilities" [facilitiesData]="facilitiesData" [instituteStaticData]="instituteStaticData" (toolTipEvent) ="toolTipModalShow($event)" [form]="instituteForm" validateMaxLengthObject mymaxcount="50" mymaxcol="value" #myfacility_all = "ngModel" [errors]="myfacility_all.errors"></facilities-posting>
+
+        <research-posting [mode]="mode" [instituteObj]="instituteObj"></research-posting>
+
+        <event-posting name="events" [mode]="mode" [form]="instituteForm"
+            [(ngModel)]="instituteObj.events" [errors]="myevents.errors" 
+            [instituteStaticData]="instituteStaticData" #myevents="ngModel" myoptional="" mymust="type,name,description" validateOneOrNoneCustomControlArray validateMaxLength mymaxcol="name,description" mymaxcount="50,2000" validateMinLength mymincol="description" mymincount="200"
+            (toolTipEvent) ="toolTipModalShow($event)"
+        ></event-posting>
+
+        <usp-posting name="usp" [mode]="mode" 
+        [instituteObj]="instituteObj" 
+        (toolTipEvent) ="toolTipModalShow($event)" 
+        [form]="instituteForm"
+        [(ngModel)] = "instituteObj.usp"
+        [errors]="myusp.errors" #myusp="ngModel" validateMinLength mymincount="50" mymincol="value" validateMaxLength mymaxcount="200" mymaxcol="value">
+        </usp-posting>
+
+        <brochure-posting [instituteObj]="instituteObj" [form]="instituteForm" (toolTipEvent) ="toolTipModalShow($event)"></brochure-posting>
+
+        <institute-location-posting 
+    [instituteObj]="instituteObj"
+    [locationData]="locationData" (toolTipEvent) ="toolTipModalShow($event)"></institute-location-posting>
+        
+        <media-posting
+        [instituteObj]="instituteObj"
+        [instituteLocationObj]="instituteObj.locations"
+        [tagList]="instituteStaticData?.tag_list" 
+        [locationData] = "locationData"
+        [mediaType]="'Photo'"
+        [label]="'Photos'"
+        [showLogoWidget]="'true'"
+        (toolTipEvent) ="toolTipModalShow($event)"
+        [form]="instituteForm"
+        ></media-posting>
+
+        <media-posting
+          [instituteObj]="instituteObj"
+          [instituteLocationObj]="instituteObj.locations"
+          [tagList]="instituteStaticData?.tag_list" 
+          [locationData] = "locationData"
+          [mediaType]="'Video'"
+          [label]="'Videos'"
+          (toolTipEvent) ="toolTipModalShow($event)"
+          [form]="instituteForm"
+          (fireSaveInstitute) = "fireSaveInstitute($event)"
+        ></media-posting>
+
+        <scholarship-posting name="scholarships" [mode]="mode" [form]="instituteForm"
+           [(ngModel)]="instituteObj.scholarships" [errors]="myscholarships.errors" 
+           [instituteStaticData]="instituteStaticData" #myscholarships="ngModel" myoptional="" mymust="type,description"   validateOneOrNoneCustomControlArray validateMaxLength mymaxcol="description" mymaxcount="2000" validateMinLength mymincol="description" mymincount="100"
+           (toolTipEvent) ="toolTipModalShow($event)"
+        ></scholarship-posting>
+
+        <recruitingcompanies-posting [mode]="mode" [instituteObj]="instituteObj"></recruitingcompanies-posting>
+
+     <seo-specification 
+    [instituteObj]="instituteObj"
+    ></seo-specification>
+
+    <comment-posting
+    [instituteObj]="instituteObj"
+    [form]="instituteForm"
+    ></comment-posting>
+</div> 
+
+<div class="row">
+    <div class="x_panel">
+        <div class="form-group">
+          <div mysize="6" myclassoffset="5">
+            <button type="button" [disabled]="!instituteForm.valid || submitPending" (click)="saveInstitute(instituteForm,'draft');" class="btn cmsButton cmsFont">Save as Draft</button>
+            <button type="button" [disabled]="!instituteForm.valid || submitPending" (click)="saveInstitute(instituteForm,'live');" class="btn cmsButton cmsFont">Save and Publish</button>
+            <button type="button" [disabled]="!isAllowCancel" *ngIf="mode == 'edit'" (click)="cancelEdit(instituteObj.institute_id,instituteObj.postingListingType);" class="btn cmsButton cmsFont">Cancel</button>
+          </div>
+        </div>
+    </div>
+</div>
+</div>
+</form>
+
+
+
+<toolTipModal *ngIf="checkedFlag" [isModalOpened]="isModalOpened" [toolTipMsg]="toolTipMsg" [tooltipPositionX]="tooltipPositionX" [tooltipPositionY]="tooltipPositionY"></toolTipModal>

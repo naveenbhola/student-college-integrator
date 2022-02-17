@@ -1,0 +1,66 @@
+.social-icons{
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background-color:transparent;
+    background-image: url('https://images.shiksha.ws/pwa/public/images/social_shring-02.svg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    transform:scale(1.15);
+}
+.social-icons.facebook{
+    background-position: -84px 0 ;
+}
+.social-icons.twitter{
+    background-position: -56px 0px ;
+}
+.social-icons.email{
+    background-position: -112px 0 ;
+}
+.social-icons.linkedin{
+    background-position: -28px 0 ;
+}
+.social-icons.whatsapp{
+    background-position: 0 0 ;
+}
+.flex-list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+}
+.flex-list li a{
+    display: inline-flex;
+    align-items: center;
+    border-bottom: 1px solid #d2d2d2;
+    width: 100%;
+    padding: 7px 10px;
+}
+.flex-list li:last-child a{
+    border-bottom: none;
+}
+.pwa-cont ul.flex-list li{
+    padding: 0px;
+}
+.pwa-cont ul.flex-list li a{
+    padding: 10px;
+}
+.flex-list li:hover{
+    background: #f2f3f4;
+    cursor: pointer;
+}
+.flex-list li:last-child{
+    border-bottom: none;
+}
+span.social-name {
+    padding: 0px 0px 0px 7px;
+    text-transform: capitalize;
+    font-size: 0.875rem;
+    color: #000;
+}
+.socialHeading {
+    padding: 12px;
+    border: 1px solid #d2d2d2;
+    font-size: 1rem;
+    margin-bottom: 16px;
+}

@@ -1,0 +1,21 @@
+@media only screen and (min-width: 1024px){
+	.pwa_googlechart {
+    width: 50%;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.pwa_googlechart #LineChart2 > div {
+    width: 100% !important;
+}
+
+.pwa_googlechart #LineChart2 > div svg {width: 100%;}
+.note_block{
+	    display: inline-block;
+    width: 49%;
+    vertical-align: middle;
+    margin-left: 7px;
+  }
+
+}
+.note_block{color: #666;}

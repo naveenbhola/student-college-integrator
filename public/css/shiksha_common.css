@@ -1,0 +1,372 @@
+body,form,h1,h2,h3,h4,h5,h6 {font-family:Arial, Helvetica, sans-serif;font-size:12px;margin:0;padding:0}
+body {background:#f1eff0 url(/public/images/bgbody.gif) repeat-y center center}
+.wrapperFxd,.footerWrapper {background:#fff;margin:0 auto;text-align:left;width:988px;}
+h1,h2,h3,h4,h5,h6 {display:inline}
+a:link,a:active,a:visited {color:#0065DE;text-decoration:none}
+a:hover {text-decoration:underline}
+textarea {border:1px solid #CCC;height:65px;width:323px}
+.Overlay {display:none;padding:10px;position:absolute;width:250px;z-index:1000001}
+.showMessages {background:#fffdd6;border:1px solid #facb9d;line-height:25px;padding:0 10px}
+#wrapperMainForCompleteShiksha .topBar {background:#eeecec url(/public/images/grdntBg.png) repeat-x;background-position:0 -1549px;font-size:12px; float:left; width:100%}
+#wrapperMainForCompleteShiksha .topBar .inputText {font-size:11px;height:14px;width:125px; border:1px solid #c3c4c9; padding:2px; font-family:Arial;}
+.loginBtn {background:#cacaca url(/public/images/hpBtn.png) no-repeat;background-position:left 0;border:0 none;cursor:pointer;font-family:arial;font-size:11px;height:20px;width:40px}
+.RegisterBtn {background:#fe8001 url(/public/images/hpBtn.png) no-repeat;background-position:-44px 0;border:0 none;color:#FFF;cursor:pointer;font-family:arial;font-size:11px;height:21px;width:85px}
+#wrapperMainForCompleteShiksha .topBar a {color:#0065de;font-size:11px}
+.naukriLogo {background:url(/public/images/header-top-sprite.gif) no-repeat left top; width:172px; height:13px; margin:7px 0 0 7px; display:block; float:left; text-indent:-99999px}
+.topBarLoginFormAlign {padding:3px 0 3px;width:766px; float:right}
+#wrapperMainForCompleteShiksha .shikshaLogo {background-position:left -116px;border:0;display:block;height:88px;text-decoration:none;width:239px}
+#wrapperMainForCompleteShiksha .bgShikshaNavigation {background:#5a8ac6 url(/public/images/grdntBg.png);background-position:left -42px;height:32px;line-height:31px;overflow:hidden}
+.passwordTxt {background:#FFF url(/public/images/hpBtn.png) no-repeat;background-position:0 -171px}
+.error_box {background:#faa;border:solid 1px #f11 !important}
+
+#shikshaNavigationMenu ul{margin:0; padding:0; list-style-type:none}
+#shikshaNavigationMenu ul li{float:left; background:url(/public/images/shikIcons.png) right -265px no-repeat;}
+#shikshaNavigationMenu ul li.last, #shikshaNavigationMenu ul li.last a{background:none; margin-right:0; padding-right:12px}
+/*CSS Fix for chrome only*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+#shikshaNavigationMenu ul li.last a{line-height:21px; padding-bottom:5px !important}
+}
+#shikshaNavigationMenu ul li.last{float:right}
+#shikshaNavigationMenu ul li a {color:#FFF;font-size:14px;padding:1px 11px 0px 11px; text-decoration:none; float:left; margin-right:3px}
+#shikshaNavigationMenu ul li a span, #shikshaNavigationMenu ul li a span.splCase{background:url(/public/images/shikIcons.png) right -225px no-repeat; float:left; padding:0 15px 0 0; cursor:pointer}
+#shikshaNavigationMenu ul li a span.splCase{padding:0 13px 0 0;}
+body:nth-of-type(1) #shikshaNavigationMenu ul li a span.splCase{padding:0 11px 0 0;} /*For Chrome Only*/
+#shikshaNavigationMenu ul li a span sup{margin:0; padding:0; line-height:normal; font-size:11px}
+#shikshaNavigationMenu ul li a.tabSelected {background:#fd8103 url(/public/images/grdntBg.png);background-position:left -78px;border-left:3px solid #e68925;border-right:3px solid #e68925;font-weight:700;border-bottom:none; padding:2px 9px 0px 10px}
+
+.posRelative {position:relative}
+.bld {font-weight:700}
+.sepratorColor {color:#c9c9cc}
+.errorMsg {color:red;font-family:arial;font-size:11px}
+.whiteColor {color:#fff}
+.Fnt11 {font-size:11px}
+.Fnt15 {font-size:15px}
+.Fnt22 {font-size:22px}
+.txt_align_r {text-align:right}
+.float_L {float:left}
+.float_R {float:right}
+.clear_L {clear:left;font-size:1px;height:1px;line-height:1px;overflow:hidden}
+.clear_R {clear:right;font-size:1px;height:1px;line-height:1px;overflow:hidden}
+.clear_B {clear:both;font-size:1px;height:1px;line-height:1px;overflow:hidden}
+.defaultAdd {font-size:1px;overflow:hidden}
+.lineSpace_5 {height:5px;line-height:5px}
+.lineSpace_10 {height:10px;line-height:10px}
+.lineSpace_11 {height:11px;line-height:11px}
+.marfull_LeftRight7 {margin:0 7px}
+.spirit_middle {background:url(/public/images/spirit_middle.gif)}
+.spirit_allIcons {background:url(/public/images/all_ShikshaIcons.gif)}
+#wrapperMainForCompleteShiksha .shik_searchBtn {background-position:left 0;background-repeat:no-repeat;border:0 none;cursor:pointer;height:30px;width:81px}
+.shikshaSearchSection {height:58px;overflow:hidden}
+.shikshaSearchTextBox {font-size:14px;height:18px;margin-top:1px;padding-top:3px;width:99%}
+.arrowMove a:hover {text-decoration:none}
+.shik_leftMoveTxtArrow {background-position:left -37px;border:0;font-size:13px;padding:0 0 0 16px;text-decoration:none}
+.shik_rightMoveTxtArrow {background-position:-23px -37px;border:0;font-size:13px;padding:0 0 0 16px;text-decoration:none}
+.diffIEHackForMargin3 {margin-left:-3px}
+.grayLine_1 {background:#d6dbdf;font-size:1px;height:1px;line-height:1px;overflow:hidden}
+.shik_AskNowBtn {background-position:left -725px;border:0 none;cursor:pointer;height:26px;width:88px}
+.shik_searchNowBtn {background-position:-92px -725px;border:0 none;cursor:pointer;height:26px;width:74px}
+.shik_crossButton {background-position:right -786px;display:block;height:14px;overflow:hidden;text-decoration:none}
+.shik_bgTextArea {background:#FFF url(/public/images/shik_bgTextArea.gif) repeat-x left top;border:1px solid #bcbaba;height:18px;padding-top:2px;width:99%}
+.homeShik_spiritAll {background:url(/public/images/homeShik_spirit.gif)}
+.homeShik_Icon {background:url(/public/images/homeShik_Icon.gif)}
+#homeShik_leftSide {background:#cbe7fc url(/public/images/grdntBg.png) no-repeat;background-position:0 -887px;height:291px;overflow:hidden;width:100%}
+#homeShik_rightSide {background:url(/public/images/grdntBg.png) no-repeat;background-position:right -1238px;height:291px;overflow:hidden;width:100%}
+#homeShik_midSide {background:url(/public/images/grdntBg.png) repeat-x;background-position:0 -486px;border-bottom:1px solid #cbe7fc;height:290px;margin:0 5px;overflow:hidden}
+.gdntFormBg {background:url(/public/images/gdntFormBg.png) no-repeat left bottom;padding-bottom:1px;width:100%}
+.homeShik_boxtitle {background:url(/public/images/grdntBg.png);background-position:left -120px;font-size:14px;height:28px;line-height:28px;overflow:hidden;padding-left:8px}
+.homeshik_ImageAll {background:url(/public/images/grdntBg.png);background-position:left -153px;height:252px;overflow:hidden}
+.homeShik_ImageBorder {background:#cde9ff;border:1px solid #a3d4ff;height:205px;overflow:hidden}
+.home_shikRegisterFree {background:#FE8001 url(/public/images/homeShik_spirit.gif) no-repeat;background-position:left -340px;border:0 none;color:#FFF;cursor:pointer;font-family:arial;font-size:12px;font-weight:700;height:21px;overflow:hidden;width:98px}
+.homeShik_textBoxBorder {background:#FFF;border:1px solid #cecbce;border-top:1px solid #636563;height:27px;overflow:hidden}
+.homeShik_searchtextBox {border:0;font-size:14px;padding:4px;width:90%}
+/*pankaj change for autosuggestion removed position:relative*/
+.homeshik_MenuTab {height:21px;top:1px}
+.homeshik_MenuTab a {background:url(/public/images/grdntBg.png);background-position:left -461px;border:1px solid #d6dbde;float:left;font-size:12px;margin-right:3px;padding:2px 10px;text-decoration:none}
+.homeshik_MenuTab a:hover {background:#FFF;border:1px solid #d6dbde;font-size:12px;margin-right:3px;padding:2px 10px;text-decoration:none}
+.homeshik_MenuTab a.homeShik_OpenTap {background:#FFF;border-bottom:1px solid #FFF;font-weight:700}
+.homeBrowseCommonCSS {background:url(/public/images/flag_catIcon.png) no-repeat;float:left;font-size:13px;line-height:26px;width:290px}
+.homeBrowseCommonCSS a {background:url(/public/images/shikIcons.png);background-position:right -181px;background-repeat:no-repeat;padding-left:45px;padding-right:20px;text-decoration:none}
+.homeBrowseCommonCoachingCentre {float:left;font-size:13px;line-height:25px;padding-left:10px;width:285px}
+.homeAnimation {background-position:left -376px}
+.homeArt {background-position:left -530px}
+.homeBanking {background-position:left -400px}
+.homeHospitality {background-position:left -553px}
+.homeInformation {background-position:left -426px}
+.homeManagement {background-position:left -578px}
+.homeMedia {background-position:left -449px}
+.homeMedicine {background-position:left -602px}
+.homeProfessional {background-position:left -472px}
+.homeRetail {background-position:left -625px}
+.homeScience {background-position:left -498px}
+.homeShik_Girl {background:url(/public/images/homeShik_Girl.png) no-repeat right top}
+#homeShik_Form .leftColumn {float:left;height:20px;line-height:20px;overflow:hidden;width:165px}
+#homeShik_Form .leftColumn b {color:red;font-weight:400}
+#homeShik_Form .rightColumn {float:left;width:270px}
+#home_AnATab {background-position:left -308px;background-repeat:no-repeat;color:#c6c7c6;font-size:14px;font-weight:700;height:25px;padding-left:20px}
+#home_AnATab a {background:none;display:block;float:left;font-size:14px;font-weight:700;height:25px}
+#home_AnATab a.AnASelected {background:url(/public/images/homeShik_AnArrow.gif) no-repeat center bottom;color:#ff8200;display:block;float:left;font-size:14px;font-weight:700;height:25px;z-index:100}
+#home_AnATab span {color:#c6c7c6;display:block;float:left;font-size:14px;font-weight:700}
+.homeShik_AskNowBtn {background:#FE8001 url(/public/images/hpBtn.png) no-repeat;background-position:0 -83px;border:0 none;color:#FFF;cursor:pointer;font-family:arial;font-size:14px;font-weight:700;height:23px;margin-top:40px;overflow:hidden;width:82px}
+.homeShik_searchAnABtn {background:#FE8001 url(/public/images/hpBtn.png) no-repeat;background-position:0 -83px;border:0 none;color:#FFF;cursor:pointer;font-family:arial;font-size:14px;font-weight:700;height:23px;margin-top:28px;overflow:hidden;width:82px}
+.iE6Hack_top {position:relative;top:1px}
+.shikIcons,.shik_RatingIcon {background:url(/public/images/shikIcons.png)}
+.home_FeaturedTab {background-position:left -308px;background-repeat:no-repeat;font-size:14px;font-weight:700;padding-left:15px}
+.homeshik_leftMoveTxtArrow {background:url(/public/images/shikIcons.png);background-position:0 -408px;border:0;cursor:pointer;font-size:14px;padding:0 0 0 17px;text-decoration:none}
+.homeshik_rightMoveTxtArrow {background:url(/public/images/shikIcons.png);background-position:0 -427px;border:0;cursor:pointer;font-size:14px;padding:0 0 0 16px;text-decoration:none}
+.shik_bgAnswerSign {padding-bottom:6px;padding-left:34px}
+.shik_bgAnswerSign em {background:url(/public/images/shikIcons.png) no-repeat;background-position:0 -378px;height:22px;margin-left:-33px;position:absolute;width:23px}
+.shik_bgQuestionSign {padding-bottom:6px;padding-left:34px;position:relative}
+.shik_bgQuestionSign em {background:url(/public/images/shikIcons.png) no-repeat;background-position:0 -348px;height:22px;margin-left:-33px;position:absolute;width:23px}
+.shik_RatingHandUpDotted {background:url(/public/images/shikIcons.png);background-position:right 0;background-repeat:no-repeat;float:left;height:25px;line-height:25px;padding:0 25px 0 3px}
+.shik_RatingHandUpLine {background:url(/public/images/shikIcons.png);background-position:right -29px;background-repeat:no-repeat;float:left;height:25px;line-height:25px;padding:0 25px 0 3px}
+.shik_RatingHandDownDotted {background:url(/public/images/shikIcons.png);background-position:right -88px;background-repeat:no-repeat;float:left;height:25px;line-height:25px;padding:0 25px 0 3px}
+.shik_RatingHandDownLine {background:url(/public/images/shikIcons.png);background-position:right -59px;background-repeat:no-repeat;float:left;height:25px;line-height:25px;padding:0 25px 0 3px}
+.shik_RatingStar {background:url(/public/images/shikIcons.png);background-position:left -117px;background-repeat:no-repeat;float:left;height:25px;line-height:25px;margin-left:2px;padding:0 5px 0 25px}
+.homeShik_FindBtn {background:#CACACA url(/public/images/hpBtn.png) no-repeat;background-position:-83px -83px;border:0 none;color:#000;cursor:pointer;font-family:arial;font-size:14px;height:23px;overflow:hidden;width:49px}
+.homeShik_footerBg {background:url(/public/images/grdntBg.png) repeat-x;background-position:0 -1720px}
+#homeShik_FooterLink a {display:inline;padding-bottom:10px}
+.shik_allFlagSpirit {background:url(/public/images/flag_catIcon.png) no-repeat;float:left;font-size:13px;margin:5px 10px 0;width:215px}
+.fNewZealand {background-position:0 0;padding:0 0 18px 55px}
+.fIndia {background-position:0 -47px;padding:0 0 18px 55px}
+.fGermany {background-position:0 -95px;padding:0 0 18px 55px}
+.fCanada {background-position:0 -142px;padding:0 0 18px 55px}
+.fAustralia {background-position:0 -190px;padding:0 0 18px 55px}
+.fUnitedStates {background-position:0 -237px;padding:0 0 18px 55px}
+.fUnitedKingdom {background-position:0 -285px;padding:0 0 18px 55px}
+.fSingapore {background-position:0 -332px;padding:0 0 18px 55px}
+.fSouthEastAsia {background-position:0 -712px;padding:0 0 18px 55px}
+.fMiddleEast {background-position:0 -754px;padding:0 0 18px 55px}
+.fEurope {background-position:0 -665px;padding:0 0 18px 55px}
+.fIreland {background-position:0 -838px;padding:0 0 18px 55px}
+.shikSCDC {background:#f6f6f6;border:solid 1px #d6dbde;cursor:pointer;font-size:13px;padding:5px 10px 5px 5px}
+#shik_HomeJSRotationBox div {float:left;height:68px}
+#shik_HomeJSRotationBox div span {cursor:pointer}
+.imagOpen_1 span {background:url(/public/images/jsRotationSmallImg.png) no-repeat;background-position:left 0;display:block;height:68px;text-decoration:none;width:110px}
+.imagOpen_2 span {background:url(/public/images/jsRotationSmallImg.png) no-repeat;background-position:left -144px;display:block;height:68px;text-decoration:none;width:110px}
+.imagOpen_3 span {background:url(/public/images/jsRotationSmallImg.png) no-repeat;background-position:left -72px;display:block;height:68px;text-decoration:none;width:110px}
+.imag_1 span {background:url(/public/images/jsRotationSmallImg.png) no-repeat;background-position:left -235px;display:block;height:68px;text-decoration:none;width:110px}
+.imag_2 span {background:url(/public/images/jsRotationSmallImg.png) no-repeat;background-position:left -413px;display:block;height:68px;text-decoration:none;width:110px}
+.imag_3 span {background:url(/public/images/jsRotationSmallImg.png) no-repeat;background-position:left -324px;display:block;height:68px;text-decoration:none;width:110px}
+.howIsWork_icon_spirit {background:url(/public/images/howIsWork_icon.gif) no-repeat}
+.all_ShikshaBtn_spirit {background:url(/public/images/all_ShikshaBtn.gif)}
+.shik_box1 {overflow:hidden;position:relative}
+.shik_box2 {left:0;position:relative}
+.shik_box3 {float:left;overflow:hidden}
+#home_AnATab a.selectedA {color:#0065DE;font-size:14px;font-weight:700}
+.okBtn {background:url(/public/images/hpBtn.png) no-repeat;background-position:-88px -50px;border:0 none;color:#FFF;cursor:pointer;font-weight:700;height:29px;width:44px}
+.continueBtn {background:url(/public/images/hpBtn.png) no-repeat;background-position:0 -50px;border:0 none;color:#FFF;font-size:16px;font-weight:700;height:29px;width:86px}
+.shik_OverlaySubmitButton {background-position:-121px -72px;border:0 none;cursor:pointer;height:27px;width:80px}
+.askShik_cancelButton {background-position:0 -104px;border:0 none;cursor:pointer;height:27px;width:118px}
+.errorPlace {display:none}
+.inlineWidgetFormClass {background:#fff url(/public/images/grdntBg.png) repeat-x;background-position:0 -1610px;color:#a8a7ac;font-family:Arial, Helvetica, sans-serif;font-size:12px;padding:7px 5px 0;width:97%}
+.submitGlobal {background:url(/public/images/hpBtn.png) no-repeat;background-position:-60px -107px;border:0 none;color:#FFF;cursor:pointer;font-weight:700;height:25px;width:72px}
+.cancelGlobal {background:url(/public/images/hpBtn.png) no-repeat;background-position:0 -111px;border:0 none;color:#000;cursor:pointer;font-weight:700;height:21px;width:59px}
+#dim_bg {-moz-opacity:0.6;background:#000;display:none;filter:alpha(opacity=60);height:800px;left:0;opacity:0.6;position:absolute;top:0;width:100%;z-index:100000}
+.OrgangeFont {color:#FD8103}
+.fontSize_9p {font-size:9px}
+.fontSize_13p {font-size:13px}
+.cssSprite1 {background-image:url(/public/images/shikIcons.png)}
+.txt_align_c {text-align:center}
+.btnAll {background:url(/public/images/btnAll.png);white-space:nowrap}
+button {background:none;border:0 none;cursor:pointer;margin:0;padding:0;text-align:center}
+.btnH21_all {height:21px;line-height:21px;overflow:hidden}
+.btnH21_L {background-position:left -75px;background-repeat:no-repeat}
+.btnH21_R {background-position:right -99px;background-repeat:no-repeat}
+.btnH21_M {background-position:left -123px;margin:0 6px}
+.lgnBtnIEHack {width:40px}
+.btnH21_agn {position:relative;top:-2px}
+.rgsBtnJoin {background:url(/public/images/hpBtn.png) no-repeat;background-position:0 -140px;border:0 none;cursor:pointer;font-size:13px;height:29px;width:150px}
+.bgDropDwn {background:url(/public/images/hpBtn.png) no-repeat;background-position:0 -196px;height:19px;width:135px}
+.yelloBackForAlreadyAnswer {background-color:#fefbcd;margin-bottom:5px;padding:2px 0;width:285px}
+.allShikCloseBtn {background-position:left -207px;cursor:pointer;height:15px;position:relative;top:10px;width:17px}
+.pb10 {padding-bottom:5px}
+.pbml {margin-left:15px;padding-bottom:5px}
+.ftrPSgn {background:url(/public/images/shikIcons.png);background-position:left -464px;background-repeat:no-repeat;cursor:pointer;float:left;height:10px;position:relative;top:3px;width:15px}
+.ftrMSgn {background:url(/public/images/shikIcons.png);background-position:left -491px;background-repeat:no-repeat;cursor:pointer;float:left;height:10px;position:relative;top:3px;width:15px}
+.mid {background:url(/public/images/mid.gif) repeat-x left top;height:139px}
+.lft {background:url(/public/images/left.gif) no-repeat left top;height:139px}
+.rht {background:url(/public/images/right.gif) no-repeat right top;height:139px}
+.pr250 {padding:17px 250px 0 25px}
+.mlr15 {margin:0 15px}
+.w250 {width:250px}
+.w650 {width:650px}
+.w165 {width:165px}
+.w200 {width:200px}
+.w230 {width:230px}
+.w265 {width:265px}
+.intBox {color:#8d8d8d;font-family:Arial;font-size:12px;padding:2px 4px}
+.btn_vCard {background:url(/public/images/btn_vCard.gif) no-repeat left top;border:0 none;color:#fff;cursor:pointer;font-family:Arial;font-size:12px;font-weight:700;padding:5px 0;width:144px}
+.vCdErrBox {background:url(/public/images/vCdErrBg.gif) repeat-x left bottom;border:1px solid #d0e1fd;font-size:18px;height:45px;padding:14px 10px 0}
+.lineSpace_30 {height:30px;line-height:30px}
+.brdBg {background:#e6e6e6;font-size:1px;height:1px;line-height:1px;margin-top:5px;overflow:hidden}
+.blueLine {background:#799ed5;border-bottom:1px solid #fff;font-size:1px;height:4px;line-height:4px;overflow:hidden}
+.orgLine {background:#fea34a;font-size:1px;height:4px;line-height:4px;overflow:hidden}
+.vCardArw {left:1px;position:absolute;top:30px}
+.mb5 {margin:0 0 5px}
+.pl25 {margin-bottom:10px;padding-left:15px}
+.lineSpace_2 {font-size:1px;height:2px;line-height:2px;overflow:hidden}
+.vCardRArw {left:424px;position:absolute;top:30px}
+#shadow-container {left:3px;margin-bottom:3px;margin-right:3px;position:relative;top:3px}
+#shadow-container .shadow2,#shadow-container .shadow3,#shadow-container .container {left:-1px;position:relative;top:-1px}
+#shadow-container .shadow1 {background:#343434}
+#shadow-container .shadow2 {background:#232323}
+#shadow-container .shadow3 {background:#151515}
+#shadow-container .container {background:#fff;padding:0}
+.h33 {height:33px}
+.normaltxt_11p_blk,.normaltxt_11p_blk_arial {color:#000;font-family:Arial;font-size:11px}
+.lineSpace_7 {height:7px;line-height:7px}
+.bgOverLay {background-color:#fff}
+.buttr3 {float:left;padding-left:5px}
+button div.btn-submit13 {background-image:url(/public/images/btn_bg_left_createAlert.gif)}
+button div p.btn-submit14 {background-image:url(/public/images/btn_bg_right_createAlert.gif)}
+.btnTxtBlog {color:#FFF;font-family:Arial, Helvetica, sans-serif;font-size:12px;font-weight:700}
+.shikshaEnabledBtn_sL {background-image:url(/public/images/headerImage.gif);background-position:left -1017px;height:22px;line-height:22px}
+.shikshaEnabledBtn_sR {background-image:url(/public/images/headerImage.gif);background-position:right -987px;color:#FFF;display:block;font-weight:700;height:29px;line-height:22px;padding:0 10px}
+.shikshaDisableBtn_sL {background-image:url(/public/images/headerImage.gif);background-position:left -1078px;height:22px;line-height:22px}
+.shikshaDisableBtn_sR {background-image:url(/public/images/headerImage.gif);background-position:right -1048px;color:#000;display:block;font-weight:700;height:29px;line-height:22px;padding:0 10px}
+.pt5 {padding:5px 0 0}
+.w58 {width:58px}
+.ml70 {margin-left:70px}
+.w73 {width:73px}
+.mr75 {margin-right:75px}
+.pt2 {padding-top:2px}
+.lineSpace_18 {line-height:18px}
+.str_1lx33 {background:url(/public/images/str_1lx33.gif) right top no-repeat}
+.str_12x33 {background:url(/public/images/str_12x33.gif) right top no-repeat}
+.str_13x33 {background:url(/public/images/str_13x33.gif) right top no-repeat}
+.str_14x33 {background:url(/public/images/str_14x33.gif) right top no-repeat}
+.str_15x33 {background:url(/public/images/str_15x33.gif) right top no-repeat}
+.ana_a {background:url(/public/images/ana_a.gif) no-repeat left 2px;padding-left:34px}
+.lineSpace_16 {line-height:16px}
+.ana_q {background:url(/public/images/ana_q.gif) no-repeat left 3px;color:#707070;padding-left:34px}
+.ana_dot {background:url(/public/images/sprt_nlt.gif) left -109px no-repeat;padding-left:10px}
+.ana_bdwn {background:url(/public/images/ana_bdwn.gif) right 4px no-repeat;padding-right:12px}
+.ana_blog {background:url(/public/images/ana_blog.gif) no-repeat left 2px;padding-left:34px}
+.ana_mike {background:url(/public/images/ana_mike.gif) no-repeat left 2px;padding-left:34px}
+.ana_miked {background:url(/public/images/ana_mikeD.gif) no-repeat left 2px;padding-left:25px}
+.ana_cafe_cnt {border-bottom:1px solid #ededed;margin-top:10px;padding-bottom:10px}
+.ana_cafeBg {background:url(/public/images/ana_cafeBg.gif) left bottom repeat-x;height:34px}
+.lineSpace_20 {line-height:20px}
+.mr20 {margin-right:20px}
+#HomeTab {background:url(/public/images/homeIcon.gif) 4px 4px no-repeat transparent; margin:0;font-size: 15px; width:28px; height:20px; display:block; padding-top:11px; cursor:pointer}
+#cafeOption,#MBA,#gradOption {background:#FFF;border:1px solid #4A6D9C;display:none;position:absolute;width:200px}
+#subCatagories {background:#FFF;border:1px solid #DDD;display:none;padding:10px;position:absolute;width:185px;z-index:1500}
+a.shikIcons2 {background-color:#EFF8FF;border-top:1px solid #DDD;height:16px}
+a.shikIcons2:hover {background-color:#FFF;border-top-color:#DDD}
+a.shikIcons {margin:0 5px}
+#whiteLine {background:#FFF;border-left:1px solid #FFF;display:block;height:26px;left:-1px;position:absolute;top:0;width:1px;z-index:2000}
+.homeBrowseMBA {color:#DDD;display:block;float:left;font-size:12px;height:25px;overflow:hidden;padding-left:0;width:528px}
+.homeBrowseMBA a {background:none;padding:0}
+.shikSCDC a {background-image:url(/public/images/shikIcons.png);background-position:left -308px;background-repeat:no-repeat;text-decoration:none}
+.blackColor,#home_AnATab a.defaultA {color:#000}
+.orangeColor,#wrapperMainForCompleteShiksha .forA a {color:#ff8200}
+.Fnt10,.fontSize_10p {font-size:10px}
+.Fnt12,.fontSize_12p {font-size:12px}
+.Fnt14,.fontSize_14p {font-size:14px}
+.Fnt16,.fontSize_16p {font-size:16px}
+.Fnt18,.fontSize_18p {font-size:18px}
+.marfull_LeftRight10,.mar_full_10p,.mlr10 {margin:0 10px}
+.diffIEHackForMarginLeft7,.mar_left_10p {margin-left:10px}
+.homeShik_SearchBtn,.homeShik_SubmitBtn {background:#FE8001 url(/public/images/hpBtn.png) no-repeat;background-position:left -50px;border:0 none;color:#FFF;cursor:pointer;font-family:arial;font-size:18px;font-weight:700;height:29px;overflow:hidden;width:86px}
+.fUK-ireland,.fUK-Ireland {background-position:0 -797px;padding:0 0 18px 55px}
+#careerOption,#testprep,#importantDeadlines,#impDeadlines,#eventTypes,#eventCategories,#commonParentCategoryPanel {background:#FFF;border:1px solid #4a6d9c;display:none;position:absolute;width:250px}
+#careerOption a,#testprep a,#importantDeadlines a,#impDeadlines a,#eventTypes a,#countries a,#eventCategories a,#eventCountries a,#countryOption a,#commonParentCategoryPanel a {background-position:left -304px;background-repeat:no-repeat;display:block;margin-left:5px;padding:5px 10px 5px 15px}
+#countries,#eventCountries,#countryOption {background:#FFF;border:1px solid #4a6d9c;display:none;position:absolute;width:125px}
+.row,.wdh100 {width:100%}
+.fontSize_20p,.Fnt20 {font-size:20px}
+.w300,#gradOption {width:300px}
+.w60,.w16 {width:60px}
+.raised_skyWithBGW .b3,.raised_skyWithBGW .b4,.raised_skyWithBGW .b4b,.raised_skyWithBGW .b3b,.raised_skyWithBGW .b2b {background:#FFF;border-left:1px solid #B9DCF0;border-right:1px solid #B9DCF0}
+#cafeOption a,#MBA a,#gradOption a,#subCatagories a {background-position:left -304px;background-repeat:no-repeat;display:block;padding:5px 10px 5px 15px}
+#fdbk_tab{top:60% !important;}
+
+/* Revamp css */
+.aqAns{border:none;padding:0}
+.aqAns div.imgBx{float:left;width:43px}
+.aqAns div.cntBx{margin-left:53px}
+.aqAns s{display:block;font-style:normal;clear:both;height:1px;font-size:1px;overflow:hidden}
+.dottedLine{background:url(/public/images/dotted.gif) repeat-x left}
+.grayFont{color:#707070}
+.Fnt11,.fontSize_11p_Link,.font_size_11{font-size:11px;font-family:Tahoma, Arial}
+.defaultAdd{font-size:1px;overflow:hidden}
+.Fnt13{font-size:13px}
+.qnaCup{background:url(/public/images/qnaHash.gif) left top no-repeat;font-size:15px;padding:1px 0 1px 47px}
+.home_dot{background-position:left -308px;background-repeat:no-repeat;padding-left:15px;font-size:12px}
+.mb8{margin-bottom:8px}
+.blueLine2px{font-size:1px;border-bottom:2px solid #c5e3fd;margin-bottom:9px;height:3px;overflow:hidden}
+/* New Overlay Classes For UNIFIED REGISTRATION START */
+.divBdr{border-bottom:1px solid #eaeeed;padding-bottom:10px;margin-bottom:10px}
+.blkRound{-moz-border-radius-bottomleft:8px;-moz-border-radius-bottomright:8px;-moz-border-radius-topleft:8px;-moz-border-radius-topright:8px;background:#525252;padding:10px}
+.bluRound{-moz-border-radius-bottomleft:0px;-moz-border-radius-bottomright:0px;-moz-border-radius-topleft:4px;-moz-border-radius-topright:4px;background:#6391cc;padding:7px 10px}
+.bluRound span.title{color:#fff;font-size:14px;font-weight:700}
+.whtRound{-moz-border-radius-bottomleft:4px;-moz-border-radius-bottomright:4px;-moz-border-radius-topleft:0;-moz-border-radius-topright:0;background:#fff;padding:7px 0 7px 10px}
+.follow{background:url(/public/images/follow.gif) left top no-repeat;padding-left:27px;height:16px;line-height:16px;margin-left:10px}
+.following{background:url(/public/images/following.gif) left top no-repeat;padding-left:27px;height:16px;line-height:16px;margin-left:10px}
+.fbBtn{border:1px solid #4b78b1;background:#6391cc;color:#fff;margin:0;cursor:pointer;padding:2px 3px}
+.mb10{margin:0 0 10px}
+.tar{text-align:right}
+.mb15{margin-bottom:15px}
+.modalDialog_transparentDivs{filter:alpha(opacity=40);opacity:0.4;background-color:#000;z-index:105;position:absolute;}
+.modalDialog_contentDiv{border:0px solid #FFF;padding:2px;z-index:1005;position:absolute;background-color:transparent;}
+.modalDialog_contentDiv_shadow{z-index:90;position:absolute;background-color:#transparent;filter:alpha(opacity=30);opacity:0.3;}
+.w165{width:165px}
+.redcolor{color:red}
+/* New Overlay Classes For UNIFIED REGISTRATION END */
+/* Fconnect */
+.fcnt_obdr{border:1px solid #d4d0c7}
+.fcnt_logo{background:#3c5899 url(/public/images/fcnt_logo.gif) left top no-repeat;height:41px;overflow:hidden}
+.pf20{padding:20px}
+.pf15{padding:15px}
+.fcnt_grayrnd{-moz-border-radius:10px;background:#fff;border:1px solid #e2e2e2}
+.fcnt_spirit{background:url(/public/images/fcnt_spirit.gif) left top no-repeat}
+.fcnt_icn1{background-position:0 0;padding-left:55px}
+.fcnt_icn2{background-position:0 -58px;padding-left:55px}
+.fcnt_icn3{background-position:0 -118px;padding-left:55px}
+.fcnt_icn4{background-position:0 -186px;padding-left:55px}
+.fcnt_shiksha{background:url(/public/images/fcnt_shiksha.gif) left top no-repeat;height:59px;line-height:59px;overflow:hidden;padding-left:69px;color:#ff890f;font-size:18px}
+.fcnt_fcgray{color:#808080}
+.fcnt_cntBtn{border:0 none;margin:0;padding:0;cursor:pointer;color:#fff;background:#5f7bad;border:1px solid #2b447d;font-weight:700;padding:3px 8px}
+.fcnt_canBtn{border:0 none;margin:0;padding:0;cursor:pointer;color:#000;background:#e8e8e8;border:1px solid #999999;padding:2px 8px;font-size:11px}
+.mb10{margin-bottom:10px}
+.mb18{margin-bottom:18px}
+.mb15{margin-bottom:15px}
+.mb20{margin-bottom:20px}
+.fcnt_signBtn{border:0 none;margin:0;padding:0;cursor:pointer;background:url(/public/images/fcnt_signBtn.gif);width:196px;height:23px}
+.fcnt_connectBtn{border:0 none;margin:0;padding:0;cursor:pointer;background:url(/public/images/fcnt_connect.gif) no-repeat;width:81px;height:23px;}
+.ln_1{background:#dfddde;height:1px;overflow:hidden;margin:8px 0 8px}
+.ln_2{background:#ededed;height:1px;overflow:hidden;margin:8px 0 8px}
+.bgcolor_gray{background-color:#F7F7F9}
+.rndBlts{margin:0;padding:0;list-style:none}
+.rndBlts li{background:url(/public/images/sprt_nlt.gif) left -155px no-repeat;padding-left:12px}
+.Fnt11,.fontSize_11p_Link,.font_size_11{font-size:11px;font-family:Tahoma, Arial}
+.rBBx{background:#f4f9ff;border:2px solid #e2edf6;padding:6px 10px}
+.footerHide{display:none;padding:0 0 10px 25px;}
+.footerShow{display:block;padding:0 0 10px 25px;}
+
+/*Footer CSS added by shahab*/
+.footerWrapper{background:url(/public/images/grdntBg.png) repeat-x;background-position:0 -1720px;}
+#homeShik_FooterLink{width:100%;padding-top:15px;}
+.homeShik_FooterLinkCols,.homeShik_FooterLinkBigCols{width:15%; float:left;}
+.homeShik_FooterLinkBigCols{width:21%}
+#homeShik_FooterLink h4{font-size:14px; margin-bottom:8px; display:block}
+#homeShik_FooterLink ul,#homeShik_FooterLink ol{list-style-type:none; margin:0; padding:0 0 0 10px}
+#homeShik_FooterLink ol{padding:5px 0 0 25px; float:left}
+#homeShik_FooterLink ul li, #homeShik_FooterLink ol li{margin-bottom:5px; float:left; width:100%}
+#homeShik_FooterLink ul li a{float:left;width:85%;}
+#homeShik_FooterLink ol li a{float:none;width:auto;}
+#homeShik_FooterRow2{margin-top:30px; text-align:center; color:#959393; width:100%; float:left}
+#homeShik_FooterRow2 span{color:#000000}
+#homeShik_FooterRow2 p{padding:15px 0 0 0;margin:0 0 20px 0; color:#000000}
+.padL12{padding-left:12px}
+.clearFix{clear:both}
+.callIcon{background:url(/public/images/header-top-sprite.gif) no-repeat -174px 0; width:17px; height:15px; float:left; padding-right:2px}
+.callForFree{float:right; font-size:11px; color:#000000; padding:3px 6px 0 0}
+.callForFree span{color:#fc8206}
+.bannerWrapper{height:107px; clear:both}
+.adBanners{height:65px; float:right}
+.shikshaLogoBox{width:239px; float:left;}
+.loginPannel{margin-right:10px;; float:right}
+.topBarLoginFormAlign ul{margin:0; padding:0; list-style-type:none}
+.topBarLoginFormAlign ul li{float:left; padding-right:5px}
+.topBarLoginFormAlign ul li label{float:left; padding:3px 5px 0 0}
+.nwtag {background:#FFFF00; color:#000000; font-size:10px; *font-size:11px; padding: 0 2px; font-weight:bold}

@@ -1,0 +1,64 @@
+/* CSS for MMP Overlay Start */
+
+.disabled-field{background: #eee; color:#ccc; cursor: default;}
+.form-sub-main-box form ul li label input[type="checkbox"]{ width: 15px;}
+.form-sub-main-box form ul li label input[type="radio"]{ width: 15px;}
+.form-sub-main-box form ul li label span{ padding-top: 10px !important; float: left; color:#979797 !important;} 
+.form-sub-main-box form ul li label:first-child span{  color:red !important; float: none; padding-top:0px; } 
+.policy-line{ font-size:13px !important; text-align: center !important; font-family:Arial, Helvetica, sans-serif !important; color:#979797 !important; font-weight: normal !important}
+.top-gap{ clear: both; margin-top: 12px; padding-left: 15px; border-top: 1px solid #C6C0C0; color: #fcb050; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 17px; display: block; margin-top: 56px;}
+.form-main-container{ width:500px; margin:0px auto;  }
+.form-sub-main-container{ width:100%;  float:left}
+.form-sub-main-box{ width:93%; margin:10px auto;}
+.form-sub-main-box p{ color:#fcb050; float:left; font-family:Arial, Helvetica, sans-serif; font-weight:bold; font-size:17px;}
+.form-sub-main-box form{ width:100%; float:left;}
+.form-sub-main-box form ul{ width:100%; float:left; margin:0px !important; padding:0px !important;}
+.form-sub-main-box form ul li{ /*min-height:32px !important;*/ margin:3px 0; list-style-type:none; width:100%; float:left;}
+.form-sub-main-box form ul li label{ width:auto!important; float:left; text-align: left !important; }
+.form-sub-main-box form ul li label input{ width:240px; float:left; height:30px; border:1px solid #cccccc; border-radius:8px; padding:0px 5px;}
+.form-sub-main-box form ul li label:first-child{ width:40% !important; line-height:30px; text-align:left; margin-right:4%; font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#979797;}
+.form-sub-main-box form ul li label input.radio{ width:15px;}
+.form-sub-main-box form ul li table td{font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#979797;}
+.form-sub-main-box form ul li{font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#979797;}
+.form-sub-main-box form ul li.line{ background:url(/public/images/line.jpg) repeat-x; margin:15px 0; }
+.form-sub-main-box form ul li.line span{ font-family:Arial, Helvetica, sans-serif; margin-right:100px; line-height:0px; color:#909090; font-size:14px; float:right; height:20px; background:#fff;}
+.form-sub-main-box form ul li label select{width:240px !important; float:left; height:30px; -webkit-appearance: none; -moz-appearance: none; appearance: none; border:1px solid #cccccc; border-radius:8px; padding:0px 5px; background:url(/public/images/drop-down-img.jpg) no-repeat 220px 10px;}
+.top-gap{ padding-top:15px; word-wrap: break-word;}
+.form-sub-main-box form ul li input.submit{ cursor: pointer; margin: 15px 0; background: #EEA234; float: none; border: 1px solid #EEA234; text-align: center; font-size: 17px; color: #fff; display: inline-block; margin-left: auto; margin-right: auto; padding: 7px 15px;}
+.frmoutBx{}
+.frmoutBx .inptBx{width: 240px; height: 30px; border: 1px solid #cccccc; border-radius: 8px; padding: 0px 5px; box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;}
+.frmoutBx select{width: 240px !important; float: left; height: 30px; -webkit-appearance: none; -moz-appearance: none; appearance: none; border: 1px solid #cccccc; border-radius: 8px; padding: 0px 5px; background: url(/public/images/drop-down-img.jpg) no-repeat 220px 10px;}
+.frmoutBx label{width: 180px; float: left; padding: 3px 4px 0 0; text-align: right;}
+.frmCstmDrpp{ margin-left: 208px;}
+.frmCstmDrpp .selectStyleDiv { width: 240px !important; padding: 8px 5px !important;}
+.frmCstmDrpp .exam-layer-cb { float: left; width: 25px; padding-top: 2px; }
+.frmCstmDrpp .exam-layer-name { margin-left: 0px; padding-top: 5px; margin-right: 0px; word-break: break-all; float: left; width: 84px; }
+.frmCstmDrpp .exam-layer-score-box{ margin-left: 0px;width: 125px;margin-top: -5px; }
+.frmCstmDrpp .exam-layer-details-box{float: left;width: 135px;}
+.frmCstmDrpp .form-sub-main-box form ul li { min-height: 24px !important;}
+.frmCstmDrpp .exam-layer-score-field { width: 100%;}
+.frmCstmDrpp .lstItems li { min-height: 22px !important;}
+.frmCstmDrpp .exam-layer-error-msgbox {}
+.slctBxDrpDwn { background: url(/public/images/drop-down-img.jpg); display: inline-block; float: right; height: 18px; width: 17px; background-position: 4px 3px; background-repeat: no-repeat; }
+.frmCstmDrpp  .regLayer { width: 275px !important; }
+
+/* CSS for MMP Overlay End */
+
+/* CSS for OTP layer Start */
+
+.abroad-layer-title { font-size: 16px; font-weight: bold;}
+.digit-text { color: #666; font-size: 11px; font-weight: bold; margin: 10px 0 4px; }
+.resend-otp { font-size: 11px; color: #666; margin: 4px 0; }
+.button-style, a.button-style, .login-btn, a.login-btn { background: #3f5cac; border: 1px solid transparent; padding: 10px 15px; -webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px; color: white; font-size: 12px; font-size: 11px; font-family: Verdana, Geneva, sans-serif; text-decoration: none; vertical-align: middle; display: inline-block;font-weight: bold; text-transform: uppercase; }
+.verify-btn{margin-top: 10px;}
+.userOTPVerification .pin-detail{ margin-left: 16px;padding-bottom: 10px;}
+.userOTPVerification .pin-detail .orange-button{background: #3f5cac; color: #fff;}
+.userOTPVerification .changeMobileLayer{ margin-left: 16px;padding-bottom: 10px;}
+.userOTPVerification .changeMobileLayer .orange-button{background: #3f5cac; color: #fff;}
+/* CSS for OTP layer End */
+
+/*.layer-outer { position: fixed; }*/
+/*.layer-title .close { display: none; }*/
+input.orange-button + a { display: none; }
+.ih {display: none !important;} 
+.currSchoolField .ui-autocomplete { width:235px;}

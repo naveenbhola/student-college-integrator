@@ -1,0 +1,49 @@
+.white--bg {
+    background: #fff;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.mgBtm{
+    margin-bottom: 12px;
+}
+
+.textOverflow ._browseBy {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+}
+
+.textOverflow ._browseBy ._browseRow {
+    width: 100%;
+    overflow: auto;
+    white-space: nowrap;
+    float: none;
+}
+
+.textOverflow ._browseBy ._browseRow::-webkit-scrollbar{display: none;}
+.textOverflow ._browseRow a._clist , #PP .textOverflow ._browseRow a._clist{
+    float: none;
+    margin-bottom: 0px;
+}
+._browsesection.textOverflow{
+    margin: 0 -12px 15px;
+    position: relative;
+}
+
+._browsesection.textOverflow ._sctntitle{padding: 0 12px;position: relative;}
+.textOverflow ._browseRow a._clist:nth-child(1), 
+#PP .textOverflow ._browseRow a._clist:first-child {margin-left: 12px;}
+.textOverflow ._browseRow:after{
+    content: '';position: absolute;top: 0;
+    right: 0;
+    left: auto;
+    height: 100%;
+    width: 50px;
+    background: linear-gradient(270deg,#fff 0,hsla(0,0%,100%,.4));
+    background: -moz-linear-gradient(to left,#fff 0,hsla(0,0%,100%,.4) 100%);
+}
+.view--filters {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}

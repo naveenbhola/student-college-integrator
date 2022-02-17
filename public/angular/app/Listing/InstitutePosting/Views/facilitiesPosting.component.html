@@ -1,0 +1,120 @@
+ <div class="row" id="facilities_form">
+        <div mysize="12">
+            <div class="x_panel">
+                <div [class.x_title]="opened">
+                    <ul class="nav navbar-left panel_toolbox">
+                      <li><a class="collapse-link" (click)="toggle()"><i [class]="opened?' fa fa-chevron-up':' fa fa-chevron-down'"></i></a></li>
+                    </ul>
+                    <h2>Infrastructure Facilities<img id="infra_facilities" class="helperText" src="/public/images/tooltip.png" width="20px" style="padding-right:0px" (click)="toolTipNotify('infra_facilities',$event)"></h2>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content" [hidden]="!opened">
+                    <div *ngFor="let facility of facilities | mapToIterable">
+                    <div class="form-group">
+                        <div mysize="3">
+                            <label class="cmsFont" style="align:left;padding-left:21px;">{{facility.val.name}}</label>{{parentFacility}}
+                        </div>
+                        <div *ngIf="facility.val.display_type == 'yes_no'">
+                            <div [mysize]="4">
+                                <div mysize="6">
+                                    <label class="radio-inline" mysize="3" noBootstrap><input type="radio" [(ngModel)]="facility.val.is_present" class="flat" name="{{facility.val.name}}" value="yes"/>Yes</label>
+                                </div>
+                                <div mysize="5">
+                                    <label class="radio-inline" mysize="3" noBootstrap><input type="radio" [(ngModel)]="facility.val.is_present" class="flat" name="{{facility.val.name}}" value="no"/>No</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div *ngIf="facility.val.display_type == 'none' || facility.val.is_present == 'yes'">
+                        <div class="form-group" *ngFor="let child of facility.val.child_facilities | mapToIterable;let j = index">
+                        
+                            <div mysize="3">
+                                <label style="font-weight:400" class="cmsAlignLeft">{{child.val.name}}</label>
+                            </div>
+                            <div [mysize]="4" *ngIf="child.val.display_type == 'yes_no'">
+                                <div mysize="6">
+                                    <label class="radio-inline" mysize="3" noBootstrap><input type="radio" class="flat" [(ngModel)]="child.val.is_present" name="{{child.val.name}}" value="yes"/>Yes</label>
+                                </div>
+                                <div mysize="5">
+                                    <label class="radio-inline" mysize="3" noBootstrap><input type="radio" class="flat" [(ngModel)]="child.val.is_present" name="{{child.val.name}}" value="no"/>No</label>
+                                </div>
+                            </div>
+
+                            <div mysize="6" *ngIf="child.val.is_present == 'yes'">
+                                <div *ngIf="child.val.custom_fields.length"><div class="clearfix"></div><br></div>
+                                <div *ngFor="let custom_field of child.val.custom_fields;let i = index">
+                                    <div *ngIf="instituteStaticData?.facilities[facility['key']]['children'][child['key']]['custom_fields'][custom_field['id']]['display_type'] == 'textbox'">
+                                        <div mysize="2" >
+                                            <input type="number" name="{{child.val.name}}_{{custom_field.name}}" [(ngModel)]="custom_field.value" (blur) = "validateOntextChange(custom_field.name,custom_field.value,j);" min="1"  [registerForm]="form">
+                                            <input #facilityHostelFlag="ngModel" type="hidden" [(ngModel)]="validatefacilityHostelFlag" [registerForm]="form" [registerModel]="facilityHostelFlag" [myrequired]="1">
+                                        </div>
+                                        <div mysize="4">
+                                            <label>{{custom_field.name}}</label>
+                                            <span class="help-block text-danger cmsFont" >
+                                               <span *ngIf="facChildError[j] !='' && custom_field.name == 'Number of beds'">
+                                               {{facChildError[j]}}
+                                                </span>
+                                                <span *ngIf="fChildError[j] !='' && custom_field.name == 'Number of Rooms'">
+                                               {{fChildError[j]}}
+                                                </span>
+                                           </span>
+                                        </div>
+                                    </div>
+
+                                    <div *ngIf="instituteStaticData?.facilities[facility['key']]['children'][child['key']]['custom_fields'][custom_field['id']]['display_type'] == 'checkbox'">
+                                        <div mysize="6" >
+                                            <label class="checkbox-inline" noBootstrap><input type="checkbox" name="{{child.val.name}}_{{custom_field.name}}" [(ngModel)]="custom_field.value">{{custom_field.name}}</label>
+                                        </div>
+                                    </div>
+                                    
+                                    <div *ngIf="i%2 == 1" class="clearfix"><br></div>
+                                </div>
+                            </div>
+
+                            <div mysize="4" *ngIf="child.val.display_type == 'select'">
+                                <select name="{{child.val.name}}" [(ngModel)]="child.val.values" multiple>
+                                    <option value='' [disabled]="'1'">Select<span class="caret"></span></option>
+                                    <option *ngFor="let option of instituteStaticData?.facilities[facility['key']]['children'][child['key']]['select_values']" value="{{option.value}}">{{option.label}}</option>
+                                </select>
+                            </div>
+
+                            <div *ngIf="child.val.display_type == 'add_more'">
+                              <div *ngIf="activateOthers">
+
+                                <div *ngFor="let others of child.val.other_fields;let i=index;let first=first ">
+                                    <div mysize="4" [class.col-md-offset-3]="!first">
+                                        <input  type="text" name="facility" [ngModel]="others.value" (ngModelChange)="others.value=$event;changedetected(facility.key,facility.val.child_facilities[child.key])" >
+                                        <span class="help-block text-danger cmsFont">
+                                             <span *ngIf="errors?.validateMaxLengthObject && errors?.validateMaxLengthObject[facility.key+'_'+i]?.value?.maxlength">{{errors?.validateMaxLengthObject[facility.key+'_'+i]?.value?.maxlength}}</span>
+                                    </span>
+                                    </div>
+                                    <div mysize="3">
+                                        <button *ngIf="child.val.other_fields.length-1" type="button" (click)="removeOthers(facility.key,facility.val.child_facilities[child.key],i);" class="btn cmsButton cmsFont">Remove</button>
+                                        <button *ngIf="i == child.val.other_fields.length-1" type="button" (click)="addOthers(facility.key,facility.val.child_facilities[child.key]);rebindFormControl('others');" class="btn cmsButton cmsFont">Add</button>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group" *ngIf="instituteStaticData?.facilities[facility['key']]['ask_desc'] == 1">
+                            <div mysize="3">
+                                <label style="font-weight:400" class="cmsAlignLeft cmsFont">Any Highlights (?)</label>
+                            </div>
+                            <div [mysize]="6">
+                                <textarea type="text" #facilityHighlight="ngModel" name="{{facility.val.name}}" [(ngModel)]="facility.val.description" [myminlength]="'200'" [mymaxlength]="'2000'" [registerForm]="form" [registerModel]="facilityHighlight"></textarea>
+                                <span class="help-block text-danger cmsFont">
+                                     <span *ngIf="facilityHighlight.errors?.maxlength">{{facilityHighlight.errors?.maxlength}}</span>
+                                     <span *ngIf="facilityHighlight.errors?.minlength">{{facilityHighlight.errors?.minlength}}
+                                     </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

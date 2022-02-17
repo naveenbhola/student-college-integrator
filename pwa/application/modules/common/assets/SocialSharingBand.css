@@ -1,0 +1,69 @@
+.social-sharing-widget{
+    background: transparent;
+}
+.sharing-box{
+    position: relative;
+}
+.social-icons{
+    display: block;
+    width: 26px;
+    height: 26px;
+    background-image: url('https://images.shiksha.com/pwa/public/images/social_shring-02.svg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    transform:scale(1.15);
+}
+.social-icons.facebook{
+    background-position: -84px 0 ;
+}
+.social-icons.twitter{
+    background-position: -56px 0px ;
+}
+.social-icons.email{
+    background-position: -112px 0 ;
+}
+.social-icons.linkedin{
+    background-position: -28px 0 ;
+}
+.social-icons.whatsapp{
+    background-position: 0 0 ;
+}
+.sharing-band-list{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sharing-band-list li{
+    padding: 5px 7px;
+}
+.sharing-band-list li:last-child{
+    border-bottom: none;
+}
+.sharethis{
+    white-space: nowrap;
+}
+.rytPipe{
+    padding-right: 15px;
+    position: relative;
+    text-align: center;
+}
+.rytPipe:after{
+    content: "";
+    display: block;
+    width: 1px;
+    background: #ccc;
+    position: absolute;
+    height: 30px;
+    right: 0px;
+    top: 3px;
+}
+.rytPipe > *{
+    line-height: 18px;
+}
+.block{
+    display: block;
+}
+.sharing-band-list li:first-child {
+    padding-left: 0px;
+}

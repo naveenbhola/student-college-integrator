@@ -1,0 +1,1429 @@
+<?php
+
+class ListingPage extends MX_Controller
+{
+    private $courses;
+    function _init(& $displayData,$typeId,$type = 'institute'){
+		define("PAGETRACK_BEACON_FLAG",false);
+		$this->load->builder('CategoryBuilder','categoryList');
+		$this->load->builder('LDBCourseBuilder','LDB');
+		$this->load->builder('LocationBuilder','location');
+		$this->load->builder('ListingBuilder','listing');
+		$this->load->library(array('categoryList/categoryPageRequest','listing/listing_client'));
+		$this->load->model('ldbmodel');
+		$this->load->model('QnAModel');
+		$this->load->model('listing/coursemodel');
+		$this->config->load('zopim_chat_config');
+		$categoryBuilder = new CategoryBuilder;
+		$LDBCourseBuilder = new LDBCourseBuilder;
+		$locationBuilder = new LocationBuilder;
+		$listingBuilder = new ListingBuilder;
+		$this->ListingClientObj = new Listing_client();
+		$this->instituteRepository = $listingBuilder->getInstituteRepository();
+		$this->courseRepository = $listingBuilder->getCourseRepository();
+		$this->categoryRepository = $categoryBuilder->getCategoryRepository();
+		$this->LDBCourseRepository = $LDBCourseBuilder->getLDBCourseRepository();
+		$this->locationRepository = $locationBuilder->getLocationRepository();
+		$displayData['instituteRepository'] = $this->instituteRepository;
+		$displayData['courseRepository'] = $this->courseRepository;
+		$displayData['categoryRepository'] = $this->categoryRepository;
+		$displayData['LDBCourseRepository'] = $this->LDBCourseRepository;
+		$displayData['locationRepository'] = $this->locationRepository;
+        $displayData['validateuser'] = $this->checkUserValidation();
+		$displayData['pageType'] = $type;
+		$displayData['typeId'] = $typeId;
+		$displayData['trackForPages'] = true;
+		global $listings_with_localities;
+		$displayData['listings_with_localities']= json_encode($listings_with_localities);
+	}
+	
+	private function _findInstituteDetails($institute_id,$courseList = array()){
+		if($courseList){
+			$institute = reset($this->instituteRepository->findWithCourses(array($institute_id => $courseList)));
+		}else{
+			$institute = $this->instituteRepository->find($institute_id);
+		}
+		return $institute;
+	}
+	
+	private function _getCourses($institute_id, $courseId = ""){
+		if($institute_id){
+			$this->courses = $this->instituteRepository->getLocationwiseCourseListForInstitute($institute_id);
+		}
+		
+		/*
+		 * 	Firstly check if the Listing is still live OR not?
+		 */		
+		if(!(isset($this->courses->ERROR_MESSAGE) && $this->courses->ERROR_MESSAGE == "NO_DATA_FOUND")) {
+		    $courseList = array();
+		    foreach($this->courses as $course){		    
+			    if((($_REQUEST['city'] == $course['city_id']) || !($_REQUEST['city']))
+			       && (($_REQUEST['locality'] == $course['locality_id']) || !($_REQUEST['locality']) || $_REQUEST['locality'] == 'All')){
+				    $courseList = array_merge($courseList,$course['courselist']);
+			    }
+		    }
+
+		    /*
+		     *	If course list is not formed for the requested listing location then redirect to the listing's default URL (Head Ofc)..
+		     */
+		    if(count($courseList) == 0){
+			if($courseId != "") {
+			    $course = $this->courseRepository->find($courseId);
+			    $course->getId() == "" ? show_404() : redirect($course->getUrl(), 'location', 301);
+			} elseif($institute_id != "") {			    
+			    $institute = $this->instituteRepository->find($institute_id);
+			    $institute->getId() == "" ? show_404() : redirect($institute->getUrl(), 'location', 301);
+			} else {
+			    show_404();
+			}
+			exit();
+		    } else {
+			return array_unique($courseList);
+		    }
+		    
+		} else {
+		    /*
+		     *	Listing not live now, so redirect it to the mapped listing URL (if set) else throw 404 error page..
+		     */
+		    $newInstituteId  = $this->instituteRepository->getRedirectionIdForDeletedInstitute($institute_id,"institute");
+		    if(!$newInstituteId){
+			    show_404();
+		    }else{			
+			    $institute = $this->instituteRepository->find($newInstituteId);
+			    $institute->getId() == "" ? show_404() : redirect($institute->getUrl(), 'location', 301);
+			    exit();
+		    }
+		}			    
+	}
+	
+	private function _populateAdditionalData(& $displayData, $institute,$course,$pageType = 'institute'){
+		$this->_populateSEOData($displayData,$institute,$course,$pageType);
+		$this->_populateCurrentLocation($displayData,$institute,$course,$pageType);
+		$this->_makeBreadCrumb($displayData,$institute,$course,$pageType);
+		$this->_isInstitutePaid($institute, $displayData);
+		$this->_getZopimChatScriptForInstitute($displayData, $institute);
+		$displayData['alumniFeedbackRatingCount'] = $this->instituteRepository->getAlumniFeedbackRatingCount($institute->getId());
+		
+                //_p($institute);
+	}
+    
+	private function _getZopimChatScriptForInstitute(& $displayData, $institute){
+		$displayData['zopimScriptTag'] = false;
+		$displayData['zopimInstituteId'] = false;
+		if(!empty($institute)){
+			$instituteId = $institute->getId();
+			if(!empty($instituteId)){
+				$zopimChatEnabledInstitutes = $this->config->item('ZOPIM_CHAT_ENABLED_INSTITUTES');
+				if(in_array($instituteId, $zopimChatEnabledInstitutes)){
+					$zopimConfigId = "SCRIPT_INSTITUTE_" . $instituteId;
+					$zopimScript = $this->config->item($zopimConfigId);
+					if(!empty($zopimScript)){
+						$displayData['zopimScriptTag'] = $zopimScript;
+						$displayData['zopimInstituteId'] = $instituteId;
+					}
+				}
+			}
+		}
+	}
+	
+	private function _populateRankingPageWidgetData(& $displayData, $course){
+		$courseSpecializationIds = array();
+		$courseSubCategoryIds 	 = array();
+		if(!empty($course)){
+			$course_id = $course->getId();
+			$courseModel = new coursemodel();
+			$courseSpecializations = $courseModel->getSpecializationIdsByClientCourse($course_id);
+			foreach($courseSpecializations as $courseId => $specializationDetails){
+				foreach($specializationDetails as $specialization){
+					$courseSpecializationIds[] = $specialization['SpecializationId'];
+				}
+			}
+			if(empty($courseSpecializationIds)){
+				$courseSubCategoryIds = $this->instituteRepository->getCategoryIdsOfListing($course_id, 'course');
+			}
+			$widgetHTML = Modules::run('ranking/RankingMain/getRankingPageWidgetHTML', $courseSubCategoryIds, $courseSpecializationIds, true, 'listingpage');
+			$displayData['rankingWidgetHTML'] = $widgetHTML;
+		} else {
+			$displayData['rankingWidgetHTML'] = "";
+		}
+	}
+	
+	private function _populateCurrentLocation(& $displayData, $institute,$course,$pageType = 'institute'){
+                $multiple_locations = array();
+		if($course){
+			$locations = $course->getLocations();
+			$currentLocation = $course->getMainLocation();
+		}else{
+			$locations = $institute->getLocations();
+			$currentLocation = $institute->getMainLocation();
+		}
+		foreach($locations as $location){
+			$localityId = $location->getLocality()?$location->getLocality()->getId():0;
+			if($_REQUEST['city'] == $location->getCity()->getId()){ 
+                                if((!array_key_exists('locality',$_REQUEST) || empty($_REQUEST['locality'])) && $location->isHeadOffice()) {
+					$currentLocation = $location;
+                                        break;
+                                }
+				if($_REQUEST['locality'] == $localityId){
+					$currentLocation = $location;
+					break;
+				}
+                                $matched_city_array[] = $location;
+                                $currentLocation = $matched_city_array[0];
+			}
+		}
+		$displayData['currentLocation'] = $currentLocation;
+	}
+
+	private function _populateSEOData(& $displayData, $institute,$course,$pageType = 'institute'){
+		$params = array(
+						'instituteId'=>$institute->getId(),
+						'instituteName'=>$institute->getName(),
+						'type'=>'institute',
+						'locality'=>$institute->getMainLocation()->getLocality()?$institute->getMainLocation()->getLocality()->getName():"",
+						'city'=>$institute->getMainLocation()->getCity()->getName()
+					);
+		if($_REQUEST['city']){
+			$additionalURLParams = "?city=".$_REQUEST['city'];
+			if($_REQUEST['locality']){
+				$additionalURLParams .= "&locality=".$_REQUEST['locality'];
+			}
+		}
+		
+		$institute->setAdditionalURLParams($additionalURLParams);
+		$displayData['overviewTabUrl'] = $this->_getOverviewTabURL($institute,$course,$pageType,$displayData['tab']);
+		$displayData['askNAnswerTabUrl'] = listing_detail_ask_answer_url($params) . $additionalURLParams;
+		$displayData['mediaTabUrl'] = listing_detail_media_url($params) . $additionalURLParams;
+		$displayData['alumniTabUrl'] = listing_detail_alumni_speak_url($params) . $additionalURLParams;
+		$displayData['courseTabUrl'] = listing_detail_course_url($params) . $additionalURLParams;
+		
+		$identifier = $pageType;
+		if($identifier == 'institute'){
+			switch($displayData['tab']){
+				case 'ana':
+					$identifier = 'AnaTab';
+					break;
+				case 'media':
+					$identifier = 'PhotoTab';
+					break;
+				case 'alumni':
+					$identifier = 'AlumniTab';
+					break;
+				case 'courses':
+					$identifier = 'CourseTab';
+					break;
+			}
+		}
+		$tagsDescription = get_listing_seo_tags(
+												$institute->getName(),
+												$institute->getMainLocation()->getLocality()?$institute->getMainLocation()->getLocality()->getName():"",
+												$course?$course->getName():"",
+												$institute->getMainLocation()->getCity()->getName(),
+												$institute->getMainLocation()->getCountry()->getName(),
+												$identifier,
+												$institute->getAbbreviation());
+		if($pageType == "course"){
+			$metaData = $course->getMetaData();
+		}else{
+			$metaData = $institute->getMetaData();
+		}
+		
+		if(!empty($metaData['seoTitle']) && $displayData['tab'] == 'overview'){
+			$displayData['title'] = html_escape($metaData['seoTitle']);
+		}else{
+			$displayData['title'] = html_escape($tagsDescription['Title']);
+		}
+		if(!empty($metaData['seoDescription']) && $displayData['tab'] == 'overview'){
+			$displayData['metaDescription'] = html_escape($metaData['seoDescription']);
+		}else{
+			$displayData['metaDescription'] = html_escape($tagsDescription['Description']);
+		}
+		if(!empty($metaData['seoKeywords']) && $displayData['tab'] == 'overview'){
+			$displayData['metaKeywords'] = html_escape($metaData['seoKeywords']);
+		}else{
+			$displayData['metaKeywords'] = html_escape($tagsDescription['Keywords']);
+		}
+	}
+	
+	private function _getOverviewTabURL($institute,$course,$pageType,$tab){
+		
+		if($_COOKIE['OverviewTabURL'.$institute->getId()] && $tab != 'overview'){
+			return $_COOKIE['OverviewTabURL'.$institute->getId()];
+		}else{
+			if($pageType == 'course'){
+				setcookie('OverviewTabURL'.$institute->getId(),$course->getURL(),0,'/',COOKIEDOMAIN);
+			}
+			return $institute->getURL();
+		}
+	}
+	
+	
+	
+	private	function _makeBreadCrumb(& $displayData, $institute,$course,$pageType = 'institute'){
+	    
+	    $refrer = $_SERVER['HTTP_REFERER'];
+	    $refrer = strtolower($refrer);
+	    $currentLocation = $displayData['currentLocation'];
+	    $countryId = $currentLocation->getCountry()->getId();
+	    $cityId = ($countryId==2)?$currentLocation->getCity()->getId():0;
+	    if(stripos($refrer,"search/index") !== FALSE){
+		    $crumb[0]['name'] = "Search Results";
+		    $crumb[0]['url'] = $_SERVER['HTTP_REFERER'];
+	    } else{
+		if(stripos($refrer,"-categorypage-") !== FALSE) {
+		    $categoryPage = explode("-categorypage-",$refrer);
+		    $requestURL = new CategoryPageRequest($categoryPage[1]);
+		    $request = explode("-",$categoryPage[1]);
+		} else {
+		    if($pageType == "course") {
+			$type_id = $course->getId();
+			$categories = $this->instituteRepository->getCategoryIdsOfListing($type_id,$pageType);
+		    } else { 
+			$type_id = $institute->getId();
+			$localityId = $currentLocation->getLocality()?$currentLocation->getLocality()->getId():0;
+			$instCourses = array();
+			foreach($this->courses as $arr){
+			    if($arr["city_id"] == $currentLocation->getCity()->getId()){
+				if($localityId != 0 && $arr["locality_id"] == $localityId){
+				    $instCourses = array_unique(array_merge($instCourses,$arr["courselist"]));
+				}
+				if($localityId == 0)
+				    $instCourses = array_unique(array_merge($instCourses,$arr["courselist"]));
+			    }
+			}
+			$categories = $this->instituteRepository->getCategoryIdsOfListing($instCourses,'course');
+		    }
+		    
+		    if($categories->ERROR_MESSAGE == "NO_DATA_FOUND"){
+			    return array();
+		    }
+		    $requestURL = new CategoryPageRequest();
+		    $i = rand(0,count($categories)-1);
+		    $pos = strpos($_SERVER['HTTP_USER_AGENT'], "Googlebot");
+		    if($pos !== FALSE) $i = 0;
+		    $subCategory = $this->categoryRepository->find($categories[$i]);
+		    $category = $this->categoryRepository->find($subCategory->getParentId());
+		    $requestURL->setData(array('categoryId' => $category->getId(),'subCategoryId' => $subCategory->getId(),'countryId' => $countryId ));
+		}
+		$crumb[0]['url'] = $requestURL->getURL();
+		if($request[1] == 1 || $requestURL->getSubCategoryId() == 1){
+		    $category = $this->categoryRepository->find($requestURL->getCategoryId());
+		    $crumb[0]['name'] = $category->getName();
+		} else {
+		    $subCategory = $this->categoryRepository->find($requestURL->getSubCategoryId());
+		    $category = $this->categoryRepository->find($subCategory->getParentId());
+		    $crumb[0]['name'] = $subCategory->getName();
+		    $requestURL->setData(array('categoryId' => $category->getId(),'subCategoryId'=> 1,'LDBCourseId'=>1));
+		    $crumb[1]['url'] = $requestURL->getURL();
+		    $crumb[1]['name'] = $category->getName();
+		    if($countryId == 2) {
+			$cityName = $currentLocation->getCity()->getName();
+			$requestURL->setData(array('categoryId' => $category->getId(),'subCategoryId'=> $subCategory->getId(),'LDBCourseId'=>1,'cityId'=>$cityId));
+			$crumb[2]['url'] = $requestURL->getURL();
+			$crumb[2]['name'] = $cityName;
+		    }
+		}
+	    }
+	    
+	    //Code for google remarketing
+	    $googleRemarketingParams = array();
+	    $googleRemarketingParams['categoryId'] = array();
+	    $googleRemarketingParams['subcategoryId'] = array();
+	    $googleRemarketingParams['contryId'] = $countryId;
+	    $googleRemarketingParams['cityId'] = $cityId;
+        if(!$categories){
+            if($pageType == "course") {
+                $type_id = $course->getId();
+                $categories = $this->instituteRepository->getCategoryIdsOfListing($type_id,$pageType);
+            } else {
+                $type_id = $institute->getId();
+                $localityId = $currentLocation->getLocality()?$currentLocation->getLocality()->getId():0;
+                $instCourses = array();
+                foreach($this->courses as $arr){
+                    if($arr["city_id"] == $currentLocation->getCity()->getId()){
+                        if($localityId != 0 && $arr["locality_id"] == $localityId){
+                            $instCourses = array_unique(array_merge($instCourses,$arr["courselist"]));
+                        }
+                        if($localityId == 0)
+                            $instCourses = array_unique(array_merge($instCourses,$arr["courselist"]));
+                    }
+                }
+                $categories = $this->instituteRepository->getCategoryIdsOfListing($instCourses,'course');
+            }
+        }
+
+		for($i=0;$i<count($categories);$i++){
+            $subCategory = $this->categoryRepository->find($categories[$i]);
+            $_categories = array();$_subcategories = array();
+            for($i=0;$i<count($categories);$i++){
+                $subCategory = $this->categoryRepository->find($categories[$i]);
+                $_categories[] = $subCategory->getParentId();
+                $_subcategories[] = $categories[$i];
+            }
+            $googleRemarketingParams['categoryId'] = array_unique($_categories);
+            $googleRemarketingParams['subcategoryId'] = array_unique($_subcategories);
+		}
+	    $displayData['googleRemarketingParams'] = $googleRemarketingParams;
+	    $displayData['breadCrumb'] =  $crumb;
+	}
+	
+	
+	function listingOverviewTab($typeId, $type = 'institute')
+	{
+		require FCPATH.'globalconfig/listingDocumentDownload.php';
+
+		if(!is_numeric($typeId)) {
+		    show_404();
+		}
+
+		$this->_init($displayData,$typeId,$type);
+		$course_id = "";
+		if($type == 'course'){
+			$course_id = $typeId;
+			$institute_id = $this->ListingClientObj->getInstituteIdForCourseId(1,$course_id);
+		}else{
+			$institute_id = $typeId;
+		}
+
+		$courses = $this->_getCourses($institute_id, $course_id);
+		$institute = $this->_findInstituteDetails($institute_id,$courses);
+		if(!$course_id){
+			$course = $institute->getFlagshipCourse();
+			$course_id = $course->getId();
+		}
+		if(!$course){
+			$course = $this->courseRepository->find($course_id);
+		}
+		$displayData['institute'] = $institute;
+		$displayData['course'] = $course;
+		$displayData['pageType'] = $type;
+		$displayData['typeId'] = $typeId;
+		$displayData['courseComplete'] = $this->courseRepository->findCourseWithValueObjects($course_id,array('description'));
+		$displayData['instituteComplete'] = $this->instituteRepository->findInstituteWithValueObjects($institute_id,array('description','joinreason'));
+		$displayData['tab'] = 'overview';
+		/**
+		 * Make GET variables i.e. query string params available
+		 */ 
+		parse_str($_SERVER['QUERY_STRING'], $_GET);
+		$inlineView = intval($_GET['inlineView']);
+		$displayData['inlineView'] = $inlineView;
+		
+		$displayData['mainCategoryIdsOnPage'] = $this->instituteRepository->getMainCategoryIdsOfListing($course_id, 'course');
+
+		$this->_populateAdditionalData($displayData, $displayData['institute'],$course,$type);
+		$this->_populateRankingPageWidgetData($displayData, $course);
+
+
+		if($_REQUEST['download'] && $listingDocuments[$typeId]) {
+			$displayData['documentDownload'] = TRUE;
+			if($type == 'course') {
+				$displayData['redirectAfterDocumentDownload'] = $displayData['courseComplete']->getURL();
+			}
+			else {
+				$displayData['redirectAfterDocumentDownload'] = $displayData['instituteComplete']->getURL();
+			}
+		}
+
+		$this->load->view('listing/listingPage/overviewTab',$displayData);
+	}
+	
+	public function downloadCustomDocument($listingTypeId)
+	{
+		require FCPATH.'globalconfig/listingDocumentDownload.php';
+		
+		if(!$listingDocuments[$listingTypeId]) {
+			return FALSE;
+		}
+		
+		$this->load->helper('download');
+		$data = file_get_contents($listingDocuments[$listingTypeId]['url']); // Read the file's contents
+		$name = $listingDocuments[$listingTypeId]['name'];
+
+		force_download($name, $data);
+	}
+
+
+
+	function listingAnATab($institute_id)
+	{
+		$this->_init($displayData, $institute_id);
+		$courses = $this->_getCourses($institute_id);
+		$institute = $this->_findInstituteDetails($institute_id,$courses);
+		$displayData['institute'] = $institute;
+		$displayData['categories'] = $this->instituteRepository->getCategoryIdsOfListing($institute_id,'institute');
+		$displayData['tab'] = 'ana';
+		$this->_populateAdditionalData($displayData, $displayData['institute']);
+		$this->load->view('listing/listingPage/anaTab',$displayData);
+	}
+	
+	
+	function listingCoursesTab($institute_id)
+	{
+		$this->_init($displayData, $institute_id);
+		$courses = $this->_getCourses($institute_id);
+		$institute = $this->_findInstituteDetails($institute_id,$courses);
+		$displayData['institute'] = $institute;
+		$displayData['tab'] = 'courses';
+		$this->_populateAdditionalData($displayData, $displayData['institute']);
+		$this->load->view('listing/listingPage/coursesTab',$displayData);
+	}
+	
+	function listingMediaTab($institute_id)
+	{
+		$this->_init($displayData, $institute_id);
+		$courses = $this->_getCourses($institute_id);
+		$institute = $this->_findInstituteDetails($institute_id,$courses);
+		$displayData['institute'] = $institute;
+		$this->_fetchMediaForLocation($institute,$displayData);
+		$displayData['tab'] = 'media';
+		$this->_populateAdditionalData($displayData, $displayData['institute']);
+		$this->load->view('listing/listingPage/mediaTab',$displayData);
+	}
+	
+	private function _fetchMediaForLocation($institute,& $displayData){
+		$mediaData['photos'] = $institute->getPhotos();
+		$mediaData['videos'] = $institute->getVideos();
+		$locations = $institute->getLocations();
+		$cityLocalityArray = array();
+		foreach($mediaData as $key=>$media){
+			foreach($media as $m){
+                if($m->getInstituteLocationId()){
+                    if(!$locations[$m->getInstituteLocationId()]){
+                       continue; 
+                    }
+                    $location = $locations[$m->getInstituteLocationId()];
+                    
+                    $localityId = $location->getLocality()?$location->getLocality()->getId():"0";
+                    $cityLocalityArray[$location->getCity()->getId()]['cityName'] = $location->getCity()->getName();
+                    if(!$localityId){
+                        $localityName = "All";
+                    }else{
+                        $localityName = $location->getLocality()->getName();
+                    }
+                    $cityLocalityArray[$location->getCity()->getId()]['locality'][$localityId]['name'] = $localityName;
+                    $cityLocalityArray[$location->getCity()->getId()]['locality'][$localityId][$key][] = $m;
+                }
+			}
+		}
+		
+		
+		if($_REQUEST['custommedia'] == 1 && $_REQUEST['city']){
+			$mediaData['photos'] = array();
+			$mediaData['videos'] = array();
+			if($_REQUEST['locality'] && $_REQUEST['locality'] != "All"){
+				$mediaData['photos'] = $cityLocalityArray[$_REQUEST['city']]['locality'][$_REQUEST['locality']]['photos'];
+				$mediaData['videos'] = $cityLocalityArray[$_REQUEST['city']]['locality'][$_REQUEST['locality']]['videos'];
+			}else{
+				foreach($cityLocalityArray[$_REQUEST['city']]['locality'] as $locality){
+					$mediaData['photos'] = array_merge($mediaData['photos'],$locality['photos']);
+					$mediaData['videos'] = array_merge($mediaData['videos'],$locality['videos']);
+				}
+			}
+		}
+		$displayData['cityLocalityArray'] = $cityLocalityArray;
+		$displayData['mediaData'] = $mediaData;
+		$tempCityLocalityArray = reset($cityLocalityArray);
+		if(count($cityLocalityArray) > 1 || count($tempCityLocalityArray['locality']) > 1){
+			$showDropDowns = true;
+		}
+		$displayData['showDropDowns'] = $showDropDowns;
+	}
+	
+	function listingAlumniTab($institute_id){
+		$this->_init($displayData, $institute_id);
+		$courses = $this->_getCourses($institute_id);
+		$institute = $this->_findInstituteDetails($institute_id,$courses);
+		$displayData['institute'] = $institute;
+		$displayData['alumnisReviews'] = $this->instituteRepository->findAlumanisReviewsOnInstitute($institute_id);
+		$displayData['tab'] = 'alumni';
+		$this->_populateAdditionalData($displayData, $displayData['institute']);
+		$this->load->view('listing/listingPage/alumniTab',$displayData);
+	}
+	
+	function loadFormsOnListingPage($typeId, $type = 'institute'){
+		$this->_init($displayData, $typeId,$type);
+		if($type == 'course'){
+			$course_id = $typeId;
+			$course = $this->courseRepository->find($course_id);
+			$institute_id = $course->getInstId();
+		}else{
+			$institute_id = $typeId;
+		}
+		$courses = $this->_getCourses($institute_id);
+		$institute = $this->_findInstituteDetails($institute_id,$courses);
+		$displayData['institute'] = $institute;
+		$displayData['course'] = $course;
+		$this->_checkSaveInfo($displayData);
+		$this->_populateCurrentLocation($displayData, $displayData['institute'],$course,$type);
+		
+		
+		$displayData['listingType'] = $type;
+		$displayData['listingId'] = $typeId;
+		
+		if($this->_isInstitutePaid($institute, $displayData)){
+			
+			$this->_loadResponseWidgets($displayData);
+		}
+		else{
+			$this->_loadRegistationWidgets($displayData);
+		}
+	}
+	
+	private function _isInstitutePaid($institute,& $displayData){
+		$displayData['courses'] = array();
+		if($courses = $institute->getCourses()){
+			foreach($courses as $course){
+				if($course->isPaid()){
+					$displayData['courses'][] = $course;
+				}
+			}
+		}
+		if(count($displayData['courses'])){
+			$displayData['paid'] = true;
+		}else{
+			$displayData['paid'] = false;
+		}
+		return $displayData['paid'];
+	}
+	
+	private function _loadResponsWidgetsForContactDetails($displayData, & $finalData)
+	{
+		$displayData['updatedInLast6Months'] = "";
+		$institute = $displayData['institute'];
+
+		$lastUpdatedDate = $institute->getLastUpdatedDate();
+		$date6monthsBack = date("Y-m-d H:i:s",strtotime('-6 months'));
+		
+		if ($lastUpdatedDate > $date6monthsBack)
+		{
+			$displayData['updatedInLast6Months'] = "true";
+			
+			// get all courses - free and paid
+			$instituteId = $institute->getId();
+			$tempCourses = $this->instituteRepository->getLocationwiseCourseListForInstitute($instituteId);
+			$displayData['courses'] = "";
+			$cityIds = array_keys($tempCourses);
+			$course_ids = array();
+			foreach($cityIds as $cid)
+			{
+				$course_ids = array_merge($course_ids,$tempCourses[$cid]['courselist']);
+			}
+			$courses = $this->courseRepository->findMultiple($course_ids);
+			$displayData['courses'] = $courses;
+		}
+		else
+			$displayData['updatedInLast6Months'] = "false";
+		
+		if($displayData['studyAbroad'] == 1)
+		{
+			$displayData['updatedInLast6Months'] = "false";
+		}
+		
+		$finalData['topLinks'] = ($this->load->view('listing/listingPage/widgets/topLinks',$displayData,true));
+		if($displayData['updatedInLast6Months'] == "true")
+		{
+			$finalData['responseFormNew'] 			= ($this->load->view('listing/listingPage/widgets/responseFormContactDetailsTop',$displayData,true));
+			$finalData['responseFormBottomNew'] 	= ($this->load->view('listing/listingPage/widgets/responseFormContactDetailsBottom',$displayData,true));
+		}
+		//if($displayData['updatedInLast6Months'] == "false")
+		//	$finalData['ShowContactDetails'] = Modules::run('listing/ListingPageWidgets/contactDetails',$displayData['institute'], $displayData['course'],$displayData['currentLocation'],"yes");
+	}
+
+	private function _loadRegistationWidgets($displayData){
+		if($displayData['currentLocation']->getCountry()->getId() > 2){
+			$displayData['form'] = 'studyAbroad';
+			$displayData['studyAbroad'] = 1;
+		}else{
+			$displayData['studyAbroad'] = 0;
+		}
+		$finalData = array();
+		$this->_loadResponsWidgetsForContactDetails($displayData, $finalData);
+		$finalData['rightWidget']  = ($this->load->view('listing/listingPage/widgets/registationWidgetRight',$displayData,true));
+		$finalData['bottomWidget'] = ($this->load->view('listing/listingPage/widgets/registationWidgetBottom',$displayData,true));
+		//$finalData['topLinks'] = ($this->load->view('listing/listingPage/widgets/topLinks',$displayData,true));
+		echo json_encode($finalData);
+	}
+	
+	private function _loadResponseWidgets($displayData){
+		if($displayData['currentLocation']->getCountry()->getId() > 2){
+			$displayData['studyAbroad'] = 1;
+		}else{
+			$displayData['studyAbroad'] = 0;
+		}
+		$leads = $this->ListingClientObj->getCountForResponseForm($displayData['institute']->getId());
+
+		$validateuser = $displayData['validateuser'];
+        $course = $displayData['course'];
+        if(!$course){
+            $course = $displayData['institute']->getFlagshipCourse();
+        }
+
+	if(($validateuser != "false") && $displayData['paid'] && !(in_array($validateuser[0]['usergroup'],array("enterprise","cms","experts","sums"))) && $course->isPaid() && (!($this->QnAModel->checkIfAnAExpert($dbHandle,$validateuser[0]['userid']))) && ($validateuser[0]['mobile'] != "")){
+			$displayData['makeAutoResponse'] = true;
+		}
+
+		$displayData['responseCount'] = $leads;
+		$finalData = array();
+		$this->_loadResponsWidgetsForContactDetails($displayData, $finalData);
+		$finalData['rightWidget'] = ($this->load->view('listing/listingPage/widgets/responseWidgetRight',$displayData,true));
+		$finalData['bottomWidget'] = ($this->load->view('listing/listingPage/widgets/responseWidgetBottom',$displayData,true));
+		//$finalData['topLinks'] = ($this->load->view('listing/listingPage/widgets/topLinks',$displayData,true));
+		
+		if($displayData['pageType'] == "course"){
+			$this->load->library('StudentDashboardClient');
+			$this->load->library('dashboardconfig');
+            $this->load->library('Online_form_client');
+            $onlineClient = new Online_form_client();
+            $displayOnlineButton = $onlineClient->checkIfListingHasOnlineForm('course',$displayData['course']->getId());
+            if(is_array($displayOnlineButton) && isset($displayOnlineButton[0]['courseId'])){
+ 			    $displayData['online_form_institute_seo_url'] = DashboardConfig::$institutes_autorization_details_array;
+			    $displayData['institute_features'] = json_decode($this->studentdashboardclient->returnOfInstitutesOfferandOtherDetails(array($displayOnlineButton[0]['instituteId'])),true);
+                $displayData['instituteId'] = $displayOnlineButton[0]['instituteId'];
+                $displayData['onlineCourseId'] = $displayOnlineButton[0]['courseId'];
+				global $onlineFormsDepartments;
+				$displayData['gdPiName'] = $onlineFormsDepartments[$displayOnlineButton[0]['departmentName']]['gdPiName'];
+                            $displayData['externalURL'] = isset($displayOnlineButton[0]['externalURL'])?$displayOnlineButton[0]['externalURL']:'';
+		    	$finalData['onlineFormButton'] = ($this->load->view('listing/listingPage/widgets/onlineFormButton',$displayData,true));
+	    		$displayData['link'] = true;
+    			$finalData['onlineFormLink'] = ($this->load->view('listing/listingPage/widgets/onlineFormButton',$displayData,true));
+            }
+                }
+
+		echo json_encode($finalData);
+	}
+	
+	public function getPrefferedLocationObject($course, $preferred_city, $preferred_locality)
+	{
+		$multiple_locations = array();
+		if($course){
+		    $locations = $course->getLocations();
+		    $currentLocation = $course->getMainLocation();
+		}
+		foreach($locations as $location)
+		{
+			$localityName = $location->getLocality()?$location->getLocality()->getName():0;
+			$localityId = $location->getLocality()?$location->getLocality()->getId():0;
+			if($preferred_city != "0" && trim($preferred_city) == trim($location->getCity()->getName()))
+			{
+			    
+				if(($preferred_locality== '' || $preferred_locality == "0") && $location->isHeadOffice())
+				{
+				    $currentLocation = $location;
+				    break;
+				}
+				if($preferred_locality != "0" && $preferred_locality == $localityName)
+				{
+				    $currentLocation = $location;
+				    break;
+				}
+				$matched_city_array[] = $location;
+				$currentLocation = $matched_city_array[0];
+			}
+			else
+			{
+				if($_REQUEST['city']!='' && $_REQUEST['city'] == $location->getCity()->getId())
+				{ 
+				    if((!array_key_exists('locality',$_REQUEST) || empty($_REQUEST['locality'])) && $location->isHeadOffice())
+				    {
+					$currentLocation = $location;
+					break;
+				    }
+				    if($_REQUEST['locality'] == $localityId)
+				    {
+					$currentLocation = $location;
+					break;
+				    }
+				    $matched_city_array[] = $location;
+				    $currentLocation = $matched_city_array[0];
+				}
+			}
+			
+		}
+		//error_log('check if here currentLocation final: '. print_r($currentLocation, true));
+		return $currentLocation;
+	}
+	
+	public function emailSMScontactDetails()
+	{
+		$listing_id = $this->input->post('listing_id');
+		$listing_type = $this->input->post('listing_type');
+		$user_id = $this->input->post('user_id');
+		$preferred_city = $this->input->post('preferred_city');
+		$preferred_locality = $this->input->post('preferred_locality');
+		$preferred_course_id = $this->input->post('course_id');
+		$institute_id = $this->input->post('institute_id');
+		
+		$temp[] = $user_id;
+		$this->load->model("user/usermodel");
+		$usermodel_object = new usermodel();
+		
+		$user = $usermodel_object->getUsersBasicInfo($temp);
+		
+		$mobile = $user[$user_id]['mobile'];
+		$email = $user[$user_id]['email'];
+		
+		$data['mobile'] = $mobile;
+		$data['email'] = $email;
+		
+		$validateuser = $this->checkUserValidation(); //for first name of the user
+		
+		$course_id = $preferred_course_id;
+		
+		$this->_init($displayData, $course_id, 'course');
+		$course = $this->courseRepository->find($course_id);
+		$institute = $this->_findInstituteDetails($institute_id);
+		$data['institute_name'] = $institute->getName();
+		error_log('check if here institute_name: '.$data['institute_name']);
+		$currentLocation = $this->getPrefferedLocationObject($course, $preferred_city, $preferred_locality);
+		
+		$locations = $course->getLocations();
+		$location = $locations[$currentLocation->getLocationId()];
+		
+		$data['contact_person'] = "";
+		$data['contact_numbers'] = "";
+		$data['contact_fax'] = "";
+		$data['contact_email'] = "";
+		$data['contact_website'] = "";
+		$data['contact_address'] = "";
+		if($contactDetail = $location->getContactDetail())
+		{
+			if($contactDetail->getContactNumbers())
+			{
+				$data['contact_numbers'] = $contactDetail->getContactNumbers();
+			}
+			else
+			{
+				$locations = $institute->getLocations();
+				$location = $locations[$currentLocation->getLocationId()];
+				$contactDetail = $location->getContactDetail();
+				if($contactDetail->getContactNumbers())
+				{
+					$data['contact_numbers'] = $contactDetail->getContactNumbers();
+				}
+			}
+			if($contactDetail->getContactPerson())
+			{
+				$data['contact_person'] = $contactDetail->getContactPerson();
+			}
+			
+			if($contactDetail->getContactFax())
+			{
+				$data['contact_fax'] = $contactDetail->getContactFax();
+			}
+			
+			if($contactDetail->getContactEmail())
+			{
+				$data['contact_email'] = $contactDetail->getContactEmail();
+			}
+			
+			if($contactDetail->getContactWebsite())
+			{
+				$data['contact_website'] = $contactDetail->getContactWebsite();
+			}
+			
+			if($location->getAddress())
+			{
+				$data['contact_address'] = $location->getAddress();
+			}
+			
+			
+		}
+		
+		
+		$this->load->library('Alerts_client');
+        $alertClient = new Alerts_client();
+		// To the user
+	    $to_email = $data['email'];
+		$from_email = 'info@shiksha.com';
+        $subject = "Contact details for ".$data['institute_name'];
+		
+        $temp['userdata']=$data;
+		if($data['contact_person'] == "")
+			$contact_person = "Name of the Person: Not available";
+		else
+			$contact_person = "Name of the Person: ".$data['contact_person'];
+		
+		if($data['contact_numbers'] == "")
+			$contact_numbers = "Contact No.: Not available";
+		else
+			$contact_numbers = "Contact No.: ".$data['contact_numbers'];
+		
+		if($data['contact_fax'] == "")
+			$contact_fax = "Fax No.: Not available";
+		else
+			$contact_fax = "Fax No.: ".$data['contact_fax'];
+		
+		if($data['contact_email'] == "")
+			$contact_email = "Email: Not available";
+		else
+			$contact_email = "Email: ".$data['contact_email'];
+		
+	    if($data['contact_website'] == "")
+			$contact_website = "Website: Not available";
+		else
+			$contact_website = "Website: ".$data['contact_website'];
+		
+		if($data['contact_address'] == "")
+			$contact_address = "Address: Not available";
+		else
+			$contact_address = "Address: ".$data['contact_address'];
+		
+		//$content_mail = "Test mail";
+		$content_mail = "Dear ".$validateuser[0]['firstname'].",\n\n".
+				   "The contact details requested by you for ".$data['institute_name']." are as follows: \n\n".
+				   $contact_person."<br>".
+				   $contact_numbers."<br>".
+				   $contact_fax."<br>".
+				   $contact_email."<br>".
+				   $contact_website."<br>".
+				   $contact_address."<br><br>".
+				   "Regards,<br>".
+				   "Shiksha.com";
+				   
+		$responsemail=$alertClient->externalQueueAdd(1,$from_email,$to_email,$subject,$content_mail,"html");
+       
+	    $this->load->model('SMS/smsModel');
+		$smsmodel_object = new smsModel();
+		$SMSto = $data['mobile'];
+		
+		if(strlen($data['institute_name'])>40)
+		{
+			$institute_name = substr($data['institute_name'],0,40)."...";
+		}
+		else
+		    $institute_name = $data['institute_name'];
+		    
+		//error_log('check if here institute_name2: '.$institute_name);
+		if($data['contact_numbers'] == "")
+		{
+			$final_contact_numbers_string = "Contact Number: NA";
+		}
+		else
+		{
+			$final_contact_numbers_array = array();
+			$contact_number = explode(",",$data['contact_numbers']);
+			
+			if(strlen($data['contact_numbers']) > 40)
+			{
+				if(sizeof($contact_number) > 3)
+				{
+					//take just 3..check..else..take just 2
+					$final_contact_numbers_array[0] = $contact_number[0];
+					$final_contact_numbers_array[1] = $contact_number[1];
+					$final_contact_numbers_array[2] = $contact_number[2];
+					$final_contact_numbers_string = implode(",",$final_contact_numbers_array);
+					if(strlen($final_contact_numbers_string)>40)
+					{
+						$final_contact_numbers_array[2] = "";
+					}
+				}
+				else
+				{
+					$final_contact_numbers_array[0] = $contact_number[0];
+					$final_contact_numbers_array[1] = $contact_number[1];
+				}
+			}
+			else if(sizeof($contact_number) > 3)
+			{
+				$final_contact_numbers_array[0] = $contact_number[0];
+				$final_contact_numbers_array[1] = $contact_number[1];
+				$final_contact_numbers_array[2] = $contact_number[2];
+			}
+			else
+			{
+				$final_contact_numbers_array = $contact_number;
+			}
+			$final_contact_numbers_string = implode(",",$final_contact_numbers_array);
+		}
+		//$content_sms = "Test sms";
+		$content_sms = "Contact details requested by you are"."\n".
+				$institute_name."\n".
+				$final_contact_numbers_string."\n".
+				"-Shiksha.com";
+												//$dbHandle,$toSms,$content,$userId,$sendTime
+		$msg = $smsmodel_object->addSmsQueueRecord("1", $SMSto, $content_sms, $user_id,0);
+	}
+	
+	private function _checkSaveInfo(& $displayData){
+		$this->load->library('saveProduct_client');
+        $sp = new SaveProduct_client();
+		if($displayData['validateuser'] != "false"){
+			$userId = $displayData['validateuser'][0]['userid'];
+		}else{
+			$userId = 0;
+		}
+        $chk = $sp->checkIfSaved(1, $userId,array($displayData['typeId']),array($displayData['pageType']));
+		if ($chk[0]['id']==$displayData['typeId'])
+            $displayData['saved'] ="saved";
+	}
+	
+	
+	
+	function alsoOnShiksha($institute_id){
+		if(empty($institute_id)) {
+			return ;
+		}
+
+		$this->load->library('categoryList/CategoryPageRecommendations');
+		$this->load->helper('listing/listing');
+		$this->_init($displayData, $institute_id);
+		$courses = $this->_getCourses($institute_id);
+		$institute = $this->_findInstituteDetails($institute_id,$courses);
+		$categories = $this->instituteRepository->getCategoryIdsOfListing($institute_id,"institute");
+
+		if(isset($categories->ERROR_MESSAGE) && $categories->ERROR_MESSAGE == 'NO_DATA_FOUND') {
+			return ;
+		}
+
+		$category = $this->categoryRepository->find($categories[0]);
+		$mainCategoryId = $category->getParentId();
+		if($institute_id == 32548 || $institute_id == 34614 || $institute_id == 35726) {
+	$mainCategoryId = 3;
+}
+		$alsoViewedInstitutes = $this->categorypagerecommendations->getAlsoViewedInstitutes(array($institute),$mainCategoryId);
+
+		if(is_array($alsoViewedInstitutes) && count($alsoViewedInstitutes)) {
+			$displayData['institutes'] = array_slice($this->instituteRepository->findWithCourses($alsoViewedInstitutes),0,3);
+			$displayData['recommendationPage'] = 1;
+			$displayData['alsoOnShiksha'] = 1;
+			$displayData['recommendationsApplied'] = isset($_COOKIE['recommendation_applied'])?explode(',',$_COOKIE['recommendation_applied']):array();
+			$displayData['validateuser'] = $this->checkUserValidation();
+			$template_name = 'listing/listingPage/widgets/alsoOnShiksha';	
+			echo $this->load->view($template_name,$displayData,true);
+		}
+	}
+
+	function debugAlsoViewed($institute_id){
+		if(empty($institute_id)) {
+			return ;
+		}
+
+		$this->load->library('categoryList/CategoryPageRecommendations');
+		$this->load->library('recommendation/alsovieweddebug');
+		$this->load->helper('listing/listing');
+		$this->_init($displayData, $institute_id);
+		$courses = $this->_getCourses($institute_id);
+		$institute = $this->_findInstituteDetails($institute_id,$courses);
+		$categories = $this->instituteRepository->getCategoryIdsOfListing($institute_id,"institute");
+		
+		echo "<table border='1' width='800'>";
+		echo "<tr><td width='200'>Institute ID</td><td>".$institute_id."</td></tr>";
+		echo "<tr><td width='200'>Institute subcategories</td><td><pre>".print_r($categories,true)."</pre></td></tr>";
+		
+		if(isset($categories->ERROR_MESSAGE) && $categories->ERROR_MESSAGE == 'NO_DATA_FOUND') {
+			echo "<tr><td width='200'>No recommendations</td><td>No categories mapped</td></tr>";
+			return ;
+		}
+
+		$category = $this->categoryRepository->find($categories[0]);
+		echo "<tr><td width='200'>Category selected</td><td>".$category->getParentId()."</td></tr>";
+		
+		$seedData = array(array('institute_id' => $institute->getId(),'country_id' => $institute->getMainLocation()->getCountry()->getId()));
+        $exclusionList = array($institute->getId());
+		
+		$also_viewed_institutes = $this->alsovieweddebug->getAlsoViewedListings($seedData,$category->getParentId(),10,$exclusionList);
+		$alsoViewedInstitutes = $this->categorypagerecommendations->getAlsoViewedInstitutes(array($institute),$category->getParentId());
+		echo "</table>";
+		if(is_array($alsoViewedInstitutes) && count($alsoViewedInstitutes)) {
+			$displayData['institutes'] = array_slice($this->instituteRepository->findWithCourses($alsoViewedInstitutes),0,3);
+			$displayData['recommendationPage'] = 1;
+			$displayData['alsoOnShiksha'] = 1;
+			$displayData['recommendationsApplied'] = isset($_COOKIE['recommendation_applied'])?explode(',',$_COOKIE['recommendation_applied']):array();
+			$displayData['validateuser'] = $this->checkUserValidation();
+			$template_name = 'listing/listingPage/widgets/alsoOnShiksha';	
+			echo $this->load->view($template_name,$displayData,true);
+		}
+	}
+	
+	function inlineRecommendCourses($instituteId,$courseId,$widget = '',$extra_info='') {
+
+		if(empty($instituteId) || empty($courseId) || empty($widget)) {
+			return false;
+		}
+		/*
+		 If user not logged in,
+		 redirect to category page
+		 */
+		$userInfo = $this->checkUserValidation();
+
+		if($userInfo == 'false') {
+			return false;
+		}
+
+		$user_id = $userInfo[0]['userid'];
+
+		$this->load->library('categoryList/CategoryPageRecommendations');
+		$this->load->library('categoryList/Category_list_client');
+		$this->load->helper('listing/listing');
+
+		$this->load->model('coursemodel');
+		$course_object = new CourseModel();
+		$result = $course_object->getParentCategoryOfCourses(array($courseId));
+		$categoryId = $result[$courseId][0];
+
+		$categoryName = $this->category_list_client->get_category_name(1,$categoryId);
+		$appliedData = array();
+		$appliedData[$instituteId] = $courseId;
+
+		$this->load->builder('ListingBuilder','listing');
+		$listingBuilder = new ListingBuilder;
+		$instituteRepository = $listingBuilder->getInstituteRepository();
+
+		$appliedInstitutes = $instituteRepository->findWithCourses($appliedData);
+
+		foreach($appliedInstitutes as $instiObj){
+			$country_id = $instiObj->getMainLocation()->getCountry()->getId();
+			break;
+		}
+
+		$data = array();
+		$data['extra_info'] = html_entity_decode(base64_decode($extra_info));
+		/*
+		 Also viewed algo
+		 */
+		$alsoViewedInstitutes = $this->categorypagerecommendations->getAlsoViewedInstitutes($appliedInstitutes,$categoryId);
+
+                //error_log('adityabughtecategory'.$categoryId);
+                //error_log('adityabughte'.print_r($alsoViewedInstitutes,true));
+		if(is_array($alsoViewedInstitutes) && count($alsoViewedInstitutes)>0) {
+			$data['institutes'] = $instituteRepository->findWithCourses($alsoViewedInstitutes);
+		} else {
+			$similar_institutes = $this->categorypagerecommendations->getSimilarInstitutes($appliedInstitutes);
+
+			if(is_array($similar_institutes) && count($similar_institutes)>0) {
+				$data['institutes'] = $instituteRepository->findWithCourses($similar_institutes);
+			} else {
+
+				$this->load->library('recommendation/recommendation_lib');
+				$this->load->model('profilebased_model');
+				$this->profilebased_model->init(NULL,NULL);
+				$profile_based_recommendations = array();
+
+				$user_profile_info = $this->profilebased_model->getUserProfileInfo(array($user_id));
+				$profile_based_results = $this->recommendation_lib->getProfileBasedResults($user_profile_info[$user_id],array(),10);
+
+				foreach ($profile_based_results as $result) {
+					$instituteId = $result['institute_id'];
+					$courseId = $recommendation['course_id'];
+					$profile_based_recommendations[$instituteId] = $courseId;
+				}
+
+				if(is_array($profile_based_recommendations) && count($profile_based_recommendations)>0) {
+					$data['institutes'] = $instituteRepository->findWithCourses($profile_based_recommendations);
+				}
+			}
+		}
+		
+                $final_institutes = array();
+                foreach($data['institutes'] as $institute) {
+			$courses = $institute->getCourses();
+                        $course = $courses[0];
+                        if($course->isPaid()) {
+				$final_institutes[] = $institute; 
+			}
+                }
+               
+                $data['institutes'] = array_slice($final_institutes,0,5);
+		$data['validateuser'] = $userInfo;
+		$data['recommendationsApplied'] = isset($_COOKIE['recommendation_applied'])?explode(',',$_COOKIE['recommendation_applied']):array();
+		$template_name = 'listing/listingPage/widgets/alsoOnShiksha'.ucfirst($widget);
+		echo $this->load->view($template_name,$data,true);
+
+	}
+	
+	function callMeNow($instituteId,$courseId,$mobile,$widget){
+		$this->load->builder('ListingBuilder','listing');
+		$listingBuilder = new ListingBuilder;
+		$this->courseRepository = $listingBuilder->getCourseRepository();
+		$course = $this->courseRepository->find($courseId);
+		$instituteId = $course->getInstId();
+		global $callMeWidgetInstitutes;
+		
+		if(in_array($widget, array(3,4,6))){
+			return false;
+		}
+		if(!array_key_exists($instituteId,$callMeWidgetInstitutes)){
+			return false;
+		}
+		$this->load->library('common/Call');
+		$call = new Call();
+		$nowTime = strtotime("now");
+		$mintime = strtotime($callMeWidgetInstitutes[$instituteId]['mintime']);
+		$maxtime = strtotime($callMeWidgetInstitutes[$instituteId]['maxtime']);
+		if($mintime > $maxtime){
+			$condition = !($nowTime > $mintime || $nowTime < $maxtime);
+		}else{
+			$condition = $nowTime < $mintime || $nowTime > $maxtime;
+		}
+		if($condition){
+			$this->recordCallWidgetLoad($instituteId,$courseId,"CallCancelled");
+			return false;
+		}
+		//error_log("AMIT".$callMeWidgetInstitutes[$instituteId]['numbers'].$mobile.$course->getName() );
+		$call = $call->connectCall($callMeWidgetInstitutes[$instituteId]['numbers'],$mobile,$course->getName());
+		$this->recordCallWidgetLoad($instituteId,$courseId,"CallMade");
+		return true;
+	}
+	
+	function recordCallWidgetLoad($instituteId,$courseId,$widget){
+		$this->load->model('listing/listingmodel');
+		$this->listingmodel->recordCallWidgetLoad($instituteId,$courseId,$widget);
+	}
+	
+	function cronToGetEverySeventhDayInformation() {
+
+		try {
+			$this->load->library('sums_product_client');
+			$objSumsProduct =  new Sums_Product_client();
+			$sales_persons_list = $objSumsProduct->getSalesPersonWiseClientList();
+
+			if(count($sales_persons_list) == 0) {
+				throw new Exception('No sales persons details found.');
+			}
+
+			$this->load->model('listingmodel');
+			$model_object = new ListingModel();
+
+			foreach($sales_persons_list as $sales_person_id =>$value) {
+
+				$listings_list = $model_object->getActiveLisitingsForagroupOfOwner($value['client_list']);
+				$active_institute_count = 0;
+				$paid_course_count = 0;
+
+				foreach($listings_list as $listing) {
+					if($listing['listing_type'] == 'institute') {
+						$active_institute_count++;
+					} else if($listing['listing_type'] == 'course' && ($listing['pack_type'] == GOLD_SL_LISTINGS_BASE_PRODUCT_ID || $listing['pack_type'] == SILVER_LISTINGS_BASE_PRODUCT_ID || $listing['pack_type'] == GOLD_ML_LISTINGS_BASE_PRODUCT_ID)) {
+						$paid_course_count++;
+					}
+				}
+
+				$sales_persons_list[$sales_person_id]['active_institute_count'] = $active_institute_count;
+				$sales_persons_list[$sales_person_id]['paid_course_count'] = $paid_course_count;
+				$paid_course_having_ebrochure = $model_object->getPaidCouresHavingEbrochureUploadedForagroupOfOwner($value['client_list']);
+				$sales_persons_list[$sales_person_id]['paid_course_having_ebrochure'] = $paid_course_having_ebrochure[0]['course_brochure_count'];
+				$institutes_having_ebrochure = $model_object->getInstitutesHavingEbrochureUploadedForagroupOfOwner($value['client_list']);
+				$sales_persons_list[$sales_person_id]['institutes_having_ebrochure'] = $institutes_having_ebrochure[0]['institute_brochure_count'];
+			}
+
+			$this->generateAndSendReport($sales_persons_list);
+
+		} catch(Exception $e) {
+			error_log("cronToGetEverySeventhDayInformation error Message : " . $e->getMessage());
+			error_log("cronToGetEverySeventhDayInformation error Code : " . $e->getCode());
+		}
+	}
+	function generateAndSendReport($sales_persons_list) {
+
+		try {
+			if(count($sales_persons_list) == 0) {
+				throw new Exception('No sales persons details found.');
+			}
+
+			$filename = date(Ymdhis).'ebrochureuploaddata.csv';
+			$mime = 'text/x-csv';
+			$columnListArray = array();
+			$data_array = array();
+			$columnListArray[]='Sales person Name';
+			$columnListArray[]='Sales person Email';
+			$columnListArray[]='Branch';
+			$columnListArray[]='No. of active institutes belonging to his clients';
+			$columnListArray[]='No. of paid courses belonging to his clients';
+			$columnListArray[]='No. of active institutes belonging to his clients that have brochrue uploaded';
+			$columnListArray[]='No. of paid courses belonging to his clients that have brochure uploaded';
+
+			
+			$data_array[] = $columnListArray;
+			foreach ($sales_persons_list as $info) {
+				$data_array[] = array($info['displayname'],$info['email'],$info['BranchName'],$info['active_institute_count'],$info['paid_course_count'],$info['institutes_having_ebrochure'],$info['paid_course_having_ebrochure']);
+			}
+			$file_pointer = fopen("/tmp/".$filename, "w");
+			
+			foreach ($data_array as $fields) {
+				fputcsv($file_pointer, $fields);
+			}
+	    fclose($file_pointer);	
+            $csv = file_get_contents("/tmp/".$filename); 
+            unlink("/tmp/".$filename);
+             
+			$this->load->library('alerts_client');
+			$alertClientObj = new Alerts_client();
+			$type_id = time();
+			$date = date("d-m-Y");
+			$content = "<p>Hi,</p> <p>Please find the attached report for Ebrochureuploaddata Report for last 7 days on Shiksha. </p><p>- Shiksha Tech.</p>";
+			$subject = "";
+			$subject .=$date .' Ebrochureuploaddata Report for last 7 days';
+			$email   = array('Prakash.sangam@naukri.com',
+						'ambrish@shiksha.com',
+						'saurabh.gupta@shiksha.com');
+
+			$attachmentResponse = $alertClientObj->createAttachment("12",$type_id,'COURSE','E-Brochure',$csv,$filename,'text');
+				
+			for($i=0;$i<count($email);$i++){
+				$attachmentId = $attachmentResponse;
+				$attachmentArray=array();
+				array_push($attachmentArray,$attachmentId);
+				$response = $alertClientObj->externalQueueAdd("12","info@shiksha.com",$email[$i],$subject,$content,$contentType="html",'','y',$attachmentArray);
+			}
+
+		} catch(Exception $e) {
+			error_log("cronToGetEverySeventhDayInformation error Message : " . $e->getMessage());
+			error_log("cronToGetEverySeventhDayInformation error Code : " . $e->getCode());
+		}
+
+	}
+
+	function increaseContactCount($listing_id,$listing_type,$tracking_field){		 
+		$this->load->model('listingmodel');
+        	$updateStatus = $this->listingmodel->increaseContactCountOfListing($listing_id,$listing_type,$tracking_field);
+       
+	       	echo $updateStatus;
+	}
+
+	function getListingData($subCateId) {
+	    if($subCateId == ""){
+		die("No Input defined.");
+	    }
+	    
+	    ini_set('memory_limit','3500M');
+	    $this->load->model('coursefindermodel');
+	    $model_object = new coursefindermodel();
+	    $instituteIds = "31572,31586,31573,31571,34723,35167,29074,35169,29191,2881,32416,33323,35170,36293,21970,33966,34041,3698,20332,31855,27864,32690,30699,32570,33116,29602,30065,27017,441,28037,33532,28222,27907,30368,26803,27228,35810,35024,24308,35113,28230,28616,27983,19396,34650,26881,32561,36330,33163,26974,74730,475,33192,30738,33183,32427,34508,34010,33293,30762,25137,31083,36439,24759,169,24621,28585,29088,36084,36591,24802,4268,29759";
+	    $courses = $model_object->getCoursesOfSubcategory($subCateId, $instituteIds);
+	    
+	    $this->load->builder('ListingBuilder','listing');
+	    $listingBuilder = new ListingBuilder;
+	    $this->courseRepository = $listingBuilder->getCourseRepository();	    
+	    $filename = 'listingData_'.$subCateId.'_'.date("Y-m-d").'.csv';
+	    $mime = 'text/x-csv';
+	    $columnListArray = array();
+	    $data_array = array();
+	    $columnListArray[]='insitute name';
+	    $columnListArray[]='institute id';
+	    $columnListArray[]='course name';
+	    $columnListArray[]='course id';
+	    $columnListArray[]='cutoff exam : cutoff score';
+	    $columnListArray[]='course fees';
+	    $columnListArray[]='course Duration';
+	    $columnListArray[]='Affiliated to';
+	    
+	    $data_array[] = $columnListArray;
+	    
+	    $coursesObj = $this->courseRepository->findMultiple($courses);
+	    $i = 0;
+	    foreach($coursesObj as $courseId =>$course) {
+		$i++;
+		$examObjArray = $course->getEligibilityExams();
+		$examData = array();
+		if(count($examObjArray)) {
+		    foreach($examObjArray as $id => $exam) {
+			$examData[] = $exam->getAcronym()." : ".$exam->getMarks()." ".$exam->getMarksType(); 
+		    }
+		}
+		
+		$affiliationsObj = $course->getAffiliations();
+		$affiliationData = array(); $affiliationValue = ""; $affiliationArray = array();
+		if(count($affiliationsObj)) {
+		    foreach($affiliationsObj as $id => $affiliation) {			
+			$affiliationArray[] = ucfirst($affiliation[0]).($affiliation[1] == "" ? '': (" (".$affiliation[1].")"));
+		    }
+		    $affiliationValue = implode(", ", $affiliationArray);
+		}
+		
+		$data_array[] = array($course->getInstituteName(),
+				    $course->getInstId(),
+				    $course->getName(),
+				    $course->getId(),
+				    implode(", ", $examData),
+				    $course->getFees()->getValue()." ".$course->getFees()->getCurrency(),
+				    $course->getDuration(),
+				    $affiliationValue,
+				    );
+	    }
+	    
+	    $file_location = "/tmp/".$filename;
+	    $file_pointer = fopen($file_location, "w");
+	    
+	    foreach ($data_array as $fields) {
+		    fputcsv($file_pointer, $fields);
+	    }
+	    
+	    fclose($file_pointer);
+	    
+	    // Now download the file.. //set appropriate headers first..
+	    header('Content-Description: File Transfer');
+	    header('Content-Type: application/csv');
+	    header('Content-Disposition: attachment; filename='.basename($file_location));
+	    header('Expires: 0');
+	    header('Cache-Control: must-revalidate');
+	    header('Pragma: public');
+	    header('Content-Length: ' . filesize($file_location));
+	    ob_clean();
+	    flush();
+    
+	    //read the file from disk and output the content.
+	    readfile($file_location);
+	    exit("All done for Subcategory id: ".$subCateId);	    	
+	}
+	
+	public function reportNumbers() {
+
+		$return_msg = json_encode(array('msg'=>'failed'));
+		$listing_id = $this->input->post('listing_id','true');
+		$listing_type = $this->input->post('listing_type','true');
+		$numbers = $this->input->post('numbers','true');
+		$numbers_array = explode(",",$numbers);
+		
+		if(empty($listing_id) || empty($listing_type) || count($numbers_array) ==0) {
+			echo $return_msg;
+			return false;
+		}
+       
+		if(count($numbers_array) >0) {
+			if($listing_type == 'institute') {
+				$this->load->model('institutemodel');
+				$return_msg = $this->institutemodel->reportContactNumbers($listing_id,$listing_type,$numbers_array);
+			}else if($listing_type == 'course') {
+				$this->load->model('coursemodel');
+				$return_msg = $this->coursemodel->reportContactNumbers($listing_id,$listing_type,$numbers_array);
+			}
+		}
+
+		echo $return_msg;
+	}
+
+    function generatePdf($listingTypeId, $listingType="course") {	    
+
+	$this->benchmark->mark('code_start');
+	if($listingTypeId == "")
+	die("No listingTypeId defined");
+	    
+	$listingebrochuregenerator = $this->load->library('ListingEbrochureGenerator');
+	if($listingType == "course") {
+	   $urlArray = $listingebrochuregenerator->genearteEbrochure('course', $listingTypeId);
+	} else {
+	   $urlArray = $listingebrochuregenerator->genearteEbrochure('institute', $listingTypeId);
+	}
+
+	$this->benchmark->mark('code_end');
+	echo "<br> Total time = ".$this->benchmark->elapsed_time('code_start', 'code_end');
+	_p($urlArray); die;
+
+	if($urlArray['RESPONSE'] == 'BROCHURE_FOUND') {
+	   $fileName = explode("listingsBrochures/", $urlArray['BROCHURE_URL']);
+	   $filePath = "/var/www/html/shiksha/mediadata/listingsBrochures/".$fileName[1];
+	   header('Content-disposition: attachment; filename='.$fileName[1]);
+	   header('Content-type: application/pdf');
+	   readfile($filePath);
+	}
+    }
+
+	public function writeListingPDFatMediaServer() {	    
+	    $brochureContent = gzuncompress(base64_decode($_POST['FILE_CONTENT']));
+	    $brochurePath = "/var/www/html/shiksha/mediadata/listingsBrochures/".$_POST['BROCHURE_NAME'];
+	    $fp = fopen($brochurePath,'w');
+	    fwrite($fp,$brochureContent);
+	    fclose($fp);
+	    die("1");
+	}
+}

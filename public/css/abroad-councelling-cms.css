@@ -1,0 +1,232 @@
+.counsler-name{margin-bottom:10px; margin-right:40px;}
+.candidate-profile{border:1px solid #999; padding:4px; color:#111; background:#fdfdfd; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; margin-bottom:10px;}
+.candidate-profile-info{background:#fff; font-size:12px; padding:7px 7px 10px 7px; border-bottom: 1px solid #ccc;margin-bottom: 10px;}
+.candidate-profile-info strong{color:#111; font-size:18px; font-weight:normal;}
+.candidate-profile-info span{color:#d3d3d3; font-size:14px; margin:0 5px;}
+.change-stage-col{width:45%; padding:10px 5px;}
+.change-date-col{width:55%; padding:10px 5px;}
+.stage-select-field, .abroad-date-field{background:#fff; border:1px solid #999;padding:4px; font-weight:bold; font-size:11px;}
+.follow-date-field{border:none; outline:none; background:#eee;}
+.cms-rate-chance-btn{background:#eee; color:#333 !important; font-size:11px; border:1px solid #ccc; padding:3px 6px; display:inline-block; font-weight:bold; margin-top:5px; text-decoration:none !important; -moz-border-radius:2px; -webkit-border-radius:2px; border-radius:2px;}
+.RMC-popup-wrap{width:835px;border:2px solid #333; -moz-border-radius:2px; -webkit-border-radius:2px; border-radius:2px; background: #fff;}
+.RMC-popup-wrap-head{background:#eee; color:#666; font-size:12px; padding:10px 15px; border-bottom:1px solid #ccc;}
+.RMC-popup-wrap-head strong{font-size:14px;}
+.popup-cross-icon{font-size:28px; line-height:10px; color:#333 !important; text-decoration:none !important}
+.popup-sprtr{margin:0 10px; font-size:13px; color:#787878;}
+.RMC-popup-detail{padding:10px; width:100%; float:left; box-sizing:border-box;}
+.scrollbar1 .overview{position: absolute;}
+.scrollbar1 .scrollbar{float:right; position:relative;}
+.scrollbar1 .track{width:2px;background:#ebebeb;}
+.scrollbar1 .thumb{background:#dbdbdb; width:6px; height:40px;position:absolute; left:-2px; cursor:pointer;}
+.scrollbar1 .viewport{position:relative; overflow:hidden;}
+.scrollbar1 .disable{display: none;}
+.RMC-popup-content{width:800px; float:left; background:#fff}
+.RMC-content-col{width:48%; border:1px solid #f8f8f8;}
+.RMC-content-head{padding:20px 10px; height:25px;}
+.eng-details-icon, .univ-icon{background-position:-35px -60px; width:24px; height:24px; float:left; vertical-align:middle; display:inline-block;}
+.univ-icon{background-position:-35px -87px; width:26px; height:20px;}
+.RMC-content-title{margin-left:30px; color:#666; font-size:12px;}
+.RMC-content-info{background:#fdfdfd; padding:10px 30px; border-top:1px solid #f8f8f8; width:100%;float:left;box-sizing: border-box; color:#666;}
+.RMC-content-info ul{width:100%; float:left; font-size:12px;}
+.RMC-content-info ul li{width:100%; float:left; margin-bottom:10px;}
+.RMC-content-info ul li span{list-style:disc;}
+.RMC-content-info ul li label{width:120px; display:inline-block}
+.abroad-info-title{border-bottom:1px solid #eee; padding-bottom:5px; font-size:12px; font-weight:bold; margin:10px 0 8px;}
+.previous-RMC{background:#f8f8f8; border:1px solid #eee; width:100%; float:left; margin-top:5px; padding:5px 10px; color:#666; font-size:11px;}
+.previous-RMC ul{margin:5px 0 0;}
+.previous-RMC ul li{width:100%; float:left; margin-bottom:5px; font-size:11px;}
+.rating-section{background:#f8f8f8; border-top:1px solid #eee; padding:10px 30px; box-sizing:border-box; color:#666; font-size:12px;}
+.comment-txtarea{font-family:tahoma; font-size:12px;background:#fff; padding:5px; border:1px solid #eee; color:#999; width:100%; margin-top:10px; box-sizing:border-box;}
+.reminder-section{padding:10px; background:#fff; color:#666; font-size:13px; width:100%; float: left; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box;}
+.reminder-section input[type="radio"]{margin-bottom: 7px; vertical-align: top;}
+.reminder-history-sec{border:1px solid #eee; margin-top:10px; width:100%; float: left;}
+.reminder-history-sec strong{display:block; padding:10px;}
+.reminder-details{background:#fdfdfd; padding:10px; border-top:1px solid #eee; font-size: 12px; width:100%; float: left; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box;}
+.reminder-details p{margin-bottom:6px;}
+.reminder-btn-sec{background:#eee; padding:10px; width:100%; float: left; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box;}
+.upload-doc-heading{padding-bottom:8px; margin-bottom:8px;}
+.reminder-details ul li{width:100%; float:left;margin-bottom:10px;}
+.reminder-details ul li label{width:110px;}
+.student-detail-section{width:100%;}
+.student-detail-col{width:100%;}
+.student-form-wrap{padding:10px; font-size:11px;}
+.student-form-wrap ul li{margin-bottom:12px;}
+.student-form-wrap ul li label{margin-bottom:4px; display:block;}
+.student-form-fields .cms-field{width:200px; font-size:11px;}
+.abroad-course-title{font-size:11px; color:#666; padding-bottom:4px; margin-bottom:10px; border-bottom:1px solid #eee; display:block;}
+.primary-course-col{background:#fdfdfd; border:1px solid #f8f8f8; margin-bottom:10px;}
+ul.exam-list{margin-bottom:10px; font-size:11px;}
+ul.exam-list li{margin-bottom:8px;}
+.exam-remove-icon{background:#c8c8c8; padding:4px; -moz-border-radius:50%; -webkit-border-radius:50%; border-radius:50%;color:#666 !important;font-weight:bold;display:inline-block; width:20px; height:20px; line-height:12px; text-decoration:none !important; font-size:16px; text-align:center; margin-top:4px;}
+.additional-detail-label{width:160px;}
+.rmc-univ-list ul{width:100%; float:left; margin-left:20px;}
+.rmc-univ-list ul li{border-bottom:1px solid #eee; padding-bottom:8px; margin-bottom:8px; font-size:12px;}
+.rmc-univ-list ul li:last-child{border: none;}
+.rmc-univ-list ul li.last{padding-bottom:0; border-bottom:none; margin-bottom:20px;}
+.student-notes-sec{background:#f1fbfc; padding:10px; margin-top:2px; float:left; width:100%; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box;}
+.post-note-box{background:#fff; border:1px solid #999;margin-bottom: 15px;}
+.post-note-box .cms-textarea{box-shadow:none; border:none; color:#ccc; font-size:12px;}
+.post-note-btn-sec{padding:8px; border-top:1px solid #eee;text-align:right;}
+.post-note-btn{font-weight:bold; color:#fff !important; padding:4px 8px; display:inline-block; background:#F37921; border:1px solid #F37921; text-decoration:none !important;font-size: 14px;}
+.profile-note-updates{width:100%; float:left; margin-top:8px; font-size:12px; line-height:20px; color:#111}
+.profile-note-updates ul{width:100%;}
+.profile-note-updates ul#notesList{max-height: 150px;overflow: auto;}
+.profile-note-updates ul li{margin-bottom:8px; border-bottom:1px solid #eee; padding-bottom:8px;}
+.profile-note-updates ul li.last, .profile-note-updates ul li:last-child{padding-bottom:8px; border-bottom:none; margin:0;}
+.news-update-icon, .news-comment-icon,.news-auditor-icon{background-position:-19px -103px; width:16px; height:20px; float:left; vertical-align:middle; padding-top:6px; display:inline-block;}
+.note-update-sec{margin-left:25px;}
+.note-update-info{color:#666; font-size:11px; margin-top:4px;}
+.notes-section{ padding:10px;}
+.notes-box{width:100%; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; border:1px solid #eee; padding:5px; color:#999;margin-top: 10px;}
+.post-btn-sec{padding:10px; border:1px solid #eee; border-top:none;}
+.notes-history-sec{border:1px solid #f8f8f8; width:100%; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; margin:10px 0; background: #fdfdfd;}
+.notes-history-sec strong{color:#999; padding:10px; display:block; border-bottom:1px solid #eee; background:#fff;}
+.news-comment-icon{background-position:-33px -110px;height:15px;}
+.news-auditor-icon{background-position:-19px -120px;height:15px;}
+ul.rating-detail{width:100%; float: left; margin-top:10px;}
+ul.rating-detail li{font-size:12px; color:#666; margin-bottom:6px !important; width:100%; float: left;}
+ul.rating-detail li span{color:#999;}
+.shrtlist-detail-col {background: #f8f8f8 none repeat scroll 0 0; float: left; margin-bottom: 10px; width: 100%;}
+.course-edit-list {float: left;width: 100%;}
+.course-edit-list ul {margin: 10px 0;}
+.course-edit-list ul li {border-bottom: 1px solid #ccc;list-style: outside none none;margin-bottom: 8px;padding-bottom: 8px;}
+.label-link {padding-top: 0 !important;text-align: left !important;width: 90px !important;}
+.label-detail {color: #000 !important;float: left;margin: 0 !important;}
+.shrtlist-radio {margin: 0 !important;vertical-align: middle;}
+table.client-delivery-list tr th {font-weight: bold !important;padding: 8px 4px !important;text-align: center !important;}
+table.client-delivery-list tr td, table.client-delivery-list tr th { font-weight: normal; padding: 4px; vertical-align: top;}
+table.client-delivery-list tr td span, table.client-delivery-list tr th span {width: 100%;}
+.dshbrd-bg { background: #f1f1f1 none repeat scroll 0 0;}
+.student-detail-section.bdr-dv{
+    border:1px solid #999;
+  /* padding: 2px; */}
+.search-tabs.cndt-tabs, .search-tabs.cndt-tabs ul {
+    width: 100%;
+    display:  table;
+    text-align: center;
+}
+.search-tabs.cndt-tabs ul{border-bottom: 1px solid #eee;}
+.search-tabs.cndt-tabs ul li {
+    /* width: 25%; */
+    cursor: pointer;
+    display: table-cell;
+    border: none;
+    outline: none;
+}
+.search-tabs.cndt-tabs ul li a{
+  font-size: 14px;border-bottom: 3px solid transparent;font-weight: 400;color: #111;outline: none;padding: 10px;
+}
+.search-tabs.cndt-tabs ul li.active{
+  background: #fff;
+}
+.search-tabs.cndt-tabs ul li.active a{color: #008489; border-bottom: 3px solid #008489;font-weight: 600;}
+.search-tabs.cndt-tabs {
+    margin-bottom: 20px;
+}
+#summaryTab .section-title, #introCallTab .section-title, #documentsTab .section-title, #notesTab .section-title{background: #fff; padding: 10px; border-bottom: 1px solid #999; font-size: 14px; font-weight: 600;}
+#summaryTab .student-form-wrap, #introCallTab .student-form-wrap, #documentsTab .student-form-wrap, #notesTab .student-form-wrap{background: #f1fbfc;font-size: 12px; color: #111;border-bottom: 1px solid #999;line-height: 1.58;}
+#summaryTab .cancel-btn, #introCallTab .cancel-btn, #documentsTab .cancel-btn, #notesTab .cancel-btn{margin-left: 35px;}
+#summaryTab .section-title .plus-icon, #summaryTab .section-title .minus-icon{float:right;}
+.TL-ReviewList ul li{border: none; font-size: 14px;margin: 0;}
+.TL-ReviewList ul{margin: 0;}
+.TL-ReviewList ul li:nth-child(even) { border-bottom: 1px solid #ccc; margin-bottom: 10px; }
+.TL-ReviewList ul li:last-child { border-bottom: none; margin-bottom: 0px; }
+/* .TL-ReviewList ul li:last-child { border-top: 1px solid #ccc;  padding-top: 10px;} */
+.TL-ReviewList ul li .student-form-fields.admissionOfferedStatus{margin-left: 20px;}
+.TL-ReviewList ul li .student-form-fields.admissionOfferedStatus p{width: 70px;}
+.TL-ReviewList ul li .student-form-fields.admissionOfferedStatus p input[type="radio"]{width: 30px;}
+.introcall-Det{border-bottom: 1px solid #999;}
+.introcall-Det .abroad-course-title{padding: 10px; background: #f1fbfc; margin: 0;  border: none; font-size: 14px; color: #111;}
+.introcall-Det .primary-course-col{margin: 0;}
+.introcall-Det ul.exam-list{background: #f1fbfc;padding: 10px;margin: 0;}
+ul.existingDocInput{ display: inline-block; width: 49.7%;  flex-wrap: wrap;  padding: 10px;  border-bottom: 1px solid #999;  /* border-collapse: collapse; */  margin: -3px -1px;  box-sizing: border-box;  border-right: 1px solid #999;height: 150px; overflow: hidden;}
+ul.existingDocInput li { margin: 0;}
+ul.existingDocInput li label{width:100%;}
+#documentsTab .student-form-wrap{padding: 0;}
+#documentsTab ul.docInput{padding: 10px;}
+ul.existingDocInput li .remove-small-icon{top:-40px;}
+/*css for crm notification*/
+.notf-txt{color: #111; font-weight: 600; float: left; margin: 10px 0;}
+.src-expnd-Div{float: right;color: #ccc;font-weight: 400;}
+.src-expnd-Div .notf-srcBx{width: 260px; float: left;margin: 10px 0;}
+.src-expnd-Div .notf-srcBx input[type="search"]{outline: 0;border: none; padding: 6px;}
+.src-expnd-Div span{display: inline-block; margin: 0 10px;}
+.src-expnd-Div a.expnd-anchor{color: #008489 !important;font-weight: 400; margin-top: 15px; display: inline-block;font-size: 14px; text-decoration: none;}
+ul.notificn-List{width: 100%;}
+ul.notificn-List li{padding: 10px;box-sizing: border-box;margin: 0;}
+ul.notificn-List li:hover{background: #f9f9f9; cursor: pointer}
+ul.notificn-List li:hover .usr-info p a{display: block}
+ul.notificn-List li .usr-initial{float: left; width: 20px; height: 20px; background: #f1f1f1; text-align: center; border-radius: 50%; color: #111; font-weight: 600;line-height: 20px;padding: 10px;}
+ul.notificn-List li .usr-initial-img{float: left;text-align: center; border-radius: 50%; color: #111; font-weight: 600;line-height: 20px;
+    padding: 1px; background: #f1f1f1;}
+ul.notificn-List li .usr-initial-img img{float: left; width: 38px; height: 38px; text-align: center; border-radius: 50%; color: #111; font-weight: 600;line-height: 20px;}
+ul.notificn-List li .usr-info{margin-left:50px;color: #111;margin-top: 5px;}
+ul.notificn-List li .usr-info p span{color: #666; display: block;margin-top: 3px;float: left}
+ul.notificn-List li .usr-info p a{color: #008489; float: right; font-size: 14px; text-decoration: none; display: none;position: relative; top: -9px;}
+.notf-box{width: 100%; border: 1px solid #ccc; color: #111;margin: 20px 0;}
+.notf-box .notf-headng{background: #f1f1f1;display: block;padding: 10px; }
+.notf-box strong{font-weight: 600; font-size: 14px; }
+.notf-box a{float: right; color: #008489; font-weight: 400; font-size: 14px;text-decoration: none}
+.notf-boxTitle .section-title{background: #fff;padding: 10px; border-bottom: 1px solid #f1f1f1;
+    font-weight: 400;}
+#notCommonView .section-title{
+    font-weight:400;}
+.usr-info p:first-child {
+    width: 87%;
+}
+
+
+
+.finance-fields{width:100%;}
+.finance-fieldBox{float:left;width:45%;margin-bottom:15px;}
+.finance-fieldBox label{display:block;font-size:12px; color:#111; margin-bottom:5px;}
+
+
+
+
+
+
+/*Note-Profile-UserDetails PopUp CSS*/
+
+.note_profile_popup{width:835px;border:2px solid #999; border-radius: 4px;background: #fff;}
+.note_profile_popup_head{background:#eee; color:#666; font-size:12px; padding:10px 15px; border-bottom:1px solid #ccc;border-radius:4px 4px 0 0;}
+.note_profile_popup_head strong{font-size:14px;}
+.popup-cross-icon{font-size:28px; line-height:10px; color:#333 !important; text-decoration:none !important}
+.popup-sprtr{margin:0 10px; font-size:13px; color:#787878;}
+.note_profile_popup .search-tabs.cndt-tabs{margin:0;width:380px;}
+.note_profile_popup .search-tabs.cndt-tabs ul li{width:33%;}
+.note_profile_popup .student-detail-section.bdr-dv{padding:16px; background:#f1fbfc;box-sizing: border-box;border: none;min-height:300px;}
+.profile_pop_details{background:#fff;padding:10px;color:#333; border:1px solid #ccc; border-radius:4px; margin-bottom:10px;box-sizing: border-box;}
+.profile_pop_details strong.popUp_sub_title{margin-bottom:12px;font-size: 16px;display:block;border-bottom: 1px solid #ccc;padding-bottom: 10px;}
+.profile_popEdu_info{width:100%;float:left;box-sizing: border-box; color:#333;display:table;}
+.profile_popEdu_info .profile_pupEdu-box{width:50%;display: table-cell;vertical-align: top;}
+.profile_popEdu_info ul{width:100%; font-size:12px;}
+.profile_popEdu_info ul li{width:100%; margin-bottom:10px;}
+.profile_popEdu_info ul li span{list-style:disc;}
+.profile_popEdu_info ul li label{width:120px; display:inline-block}
+.profile_popUp_title{ padding-bottom:5px; font-size:14px; font-weight:bold;color:#000;}
+.history_tab_section{width:100%;display:table;}
+.history_tab_section .profile_pop_details{width:49%;display:table-cell;margin:0 4px 10px 4px;}
+ul.userDetail_box{max-height:180px;overflow:auto;}
+ul.userDetail_box li{display:table;margin-bottom:12px;font-size:12px;color:#666;
+    padding-bottom:12px;border-bottom:1px solid #eee;}
+ul.userDetail_box li:last-child{border-bottom:none;magin:0;padding: 0;}
+ul.userDetail_box li>div.details{width:70%;display:table-cell;vertical-align: middle;padding-right:8px;}
+ul.userDetail_box li>div.details a{font-size:14px; display:block;margin-bottom:5px;}
+ul.userDetail_box li>div.date{display:table-cell;width:30%;vertical-align: middle;}
+span.seperator{display:inline-block;margin:0 5px; color:#666;}
+
+/*css for adding view profile in candidate form*/
+/* .candidate-profile-info p{display: inline-block;}
+.candidate_viewProfile{ display: inline-block;float: right;font-weight: 600;line-height: 22px;} */
+
+
+
+/*EPP css*/
+p.expertFileText{font-size:12px;color:#333;margin-top:8px;}
+.expertFileText span{margin:0 5px; display:inline-block;}
+
+
+.buddyspy_section{margin-bottom:15px;}
+.buddySpyStatus_fields{width:100px;margin-left:10px;display:inline-block;text-align: center;}
+.buddySpyStatus_fields span{display:block;font-size:14px;margin-bottom:7px;}

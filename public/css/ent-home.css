@@ -1,0 +1,40 @@
+#ent-header{padding:30px 10px 30px}
+#ent-header p{font:normal 23px Tahoma, Geneva, sans-serif; color:#a4a4a4; float:right; width:440px;}
+#ent-header p em{font-size:18px}
+#carausel-box{background:url(../images/slider-bg.jpg) 0 0 repeat; border:2px solid #5d88ac; position:relative; clear:left; font:normal 12px Tahoma, Geneva, sans-serif; padding:10px 0 10px 38px; height:300px}
+.slider-box{width:578px; float:left; position:relative}
+.slider-box ul li{height: 290px;}
+.slider-figure{width:578px; height:215px;}
+ol.slide-items{margin:35px 0 0 18px; padding:0; clear:left;}
+ol.slide-items li{background:url(../images/ent-sprite.png)0 -100px no-repeat; list-style-type:none; padding-left:35px; color:#fff; font:normal 18px Tahoma, Geneva, sans-serif; margin:0 0 22px 0px; height: auto !important}
+.slider-box h3{font-size:22px; font-weight:bold; color:#fff; display:block; margin-bottom:9px}
+ol.controls{margin:0px auto; padding:0; width:46px; overflow:hidden}
+ol.controls li{width:8px; height:8px; background:#9ab0c6; border:none; -moz-border-radius:30px; -webkit-border-radius:30px; border-radius:30px; float:left; margin:2px 8px 0 0; cursor:pointer}
+ol.controls li.active{background:#fff; border:solid 2px #a2b8e5; margin-top:0}
+.contact-figure{width:128px; height:179px; background:url(../images/contact-girl.jpg) 0 0 no-repeat; position:absolute; bottom:0px; right:30px}
+#contact-section{position:relative; padding:20px 20px 20px 25px; -moz-box-shadow:0 0 3px #b3b3b3; -webkit-box-shadow:0 0 3px #b3b3b3; box-shadow:0 0 3px #b3b3b3; border/*\**/: 1px solid #b3b3b3\9; margin:90px 20px 20px}
+#contact-section h5{font-size:18px; font-weight:normal; color:#575757; margin-bottom:20px}
+#contact-section h5 p{display:block; color:#000000; margin-top:15px;}
+ul.contact-items{float:left; width:35%; float:left}
+ul.contact-items li{color:#adadad; margin:0 0 12px 18px; font-size:14px; list-style-type:disc}
+ul.contact-items li span{color:#454545;}
+.icon-contact,.icon-user, .icon-edit, .prev-arr, .next-arr{background:url(../images/ent-sprite.png) no-repeat; display:inline-block}
+.prev-arr, .next-arr{background-position:0px 0; width:19px; height:54px; position:absolute; left:-30px; top:38%}
+.next-arr{background-position:-22px 0; left:auto; right:-28px}
+.icon-contact{background-position:-43px 0; width:14px; height:20px; vertical-align:text-top; margin-right:6px}
+.icon-user{background-position:-43px -22px; width:17px; height:17px; margin-right:10px}
+.icon-edit{background-position:-43px -42px; width:19px; height:19px; margin-right:6px; vertical-align:middle}
+.ent-login-panel{width:318px; position:absolute; right:5px; top:-10px; background:#f2f2f2; border:2px solid #e7e6e6; -moz-border-radius:3px 3px; -webkit-border-radius:3px 3px; border-radius:3px 3px}
+.child-panel{padding:18px 15px}
+.ent-login-panel h4{font-size:18px; font-weight:normal; color:#000000; margin-bottom:18px; display:block}
+.ent-login-panel ul{border-bottom:1px solid #e1e1e1; padding-bottom:10px}
+.ent-login-panel ul li{margin-bottom:15px}
+.ent-login-panel ul li label{display:block; margin-bottom:3px; color:#444444; font-size:14px}
+.ent-login-panel .universal-txt-field{width:95%}
+#edit-section{padding:0 0 20px 15px}
+#edit-section h4{font-size:16px !important; margin-bottom:10px !important}
+.login-shadow{background:url(../images/boxshadow.png) center 0 no-repeat; height:19px; width:100%; position:absolute; bottom:-21px}
+.info-txt{font-size:14px; font-weight:bold; color:#fff}
+.ent-home-topRow{background:#f2f2f2; -moz-box-shadow:0 0px 5px #e0e0e0; -webkit-box-shadow:0 0px 5px #e0e0e0; box-shadow:0 0px 5px #e0e0e0; position:relative; z-index:999}
+.ent-home-topRow .topRow-child{width:988px; margin:0 auto; padding:10px 0; font-size:14px; font-family:Tahoma, Geneva, sans-serif; text-align:right; color:#575757}
+.lead-img{background:url(../images/lead-img.png) 0 0 no-repeat; width:82px; height:244px; display:inline-block; position:absolute; top:-65px; right:8px}

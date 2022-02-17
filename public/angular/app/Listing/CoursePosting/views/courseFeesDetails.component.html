@@ -1,0 +1,106 @@
+<div class="row" id="course_fees_details_form">
+    <div mysize="12" [formGroup]="courseFeesForm">
+        <div class="x_panel">
+            <div [class.x_title]="opened">
+                <ul class="nav navbar-left panel_toolbox">
+                    <li><a class="collapse-link" (click)="toggle()"><i [class]="opened?' fa fa-chevron-up':' fa fa-chevron-down'"></i></a></li>
+                </ul>
+                <h2> Course Fees Details <img class="helperText" id="course_fees" src="/public/images/tooltip.png" width="20px" style="padding-right:0px" (click)="toolTipNotify('course_fees',$event)"></h2>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content"  [hidden]="!opened">
+                <div class="row" *ngIf="initialized">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <div mysize="3">
+                                <label>For the batch</label>
+                            </div>
+                            <div mysize="3">
+                                <select formControlName = "batch"  class="select2_single form-control">
+                                    <option value="">Select Year</option>
+                                    <option *ngFor="let year of yearArr" value="{{year}}">{{year}}</option>
+                                </select>
+                                <span class="help-block text-danger">
+                                <span *ngIf="courseFeesForm?.errors?.batchError">Batch is required</span>
+                                </span>                           
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div mysize="3">
+                                <label>Fees Unit</label>
+                            </div>
+                            <div mysize="3">
+                                <select formControlName = "fees_unit" class="select2_single form-control">
+                                    <option *ngFor="let option of courseStaticData?.fees_currencies" value="{{option.value}}">{{option.label}}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br/>
+                        <courseFeesTable [tableCaption] = "'Total Fees'" [group]="courseFeesForm" [courseStaticData]="courseStaticData" [controlName]="'total_fees'" [editData]="editData"></courseFeesTable>
+                        <div class="form-group">
+                            <div mysize="2">
+                                <label>Show Fees Disclaimer</label>
+                            </div>
+                            <div mysize="1">
+                                <div class="checkbox" style="padding-top:0">
+                                    <label>
+                                    <input type="checkbox" formControlName="fees_disclaimer"> Yes
+                                    </label>                                 
+                                </div>
+                            </div>
+                        </div>
+                        <br/>
+                        <div [formGroup]="courseFeesForm.controls.total_fees_includes">
+                            <div class="form-group">
+                                <div mysize="3">
+                                    <label>Includes</label>
+                                </div>
+                                <div mysize="9">
+                                    <div class="row">
+                                        <div mysize="2" *ngFor="let item of ['Hostel','Tuition','Library','Admission','Others']">
+                                            <div class="checkbox" style="padding-top:0">
+                                                <label><input type="checkbox" formControlName="{{item}}"> {{item}}</label>                                 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div formArrayName="OthersText" *ngIf="courseFeesForm.controls.total_fees_includes.controls.Others.value == true" ><br>
+                                <div class="form-group" *ngFor="let item of courseFeesForm.controls.total_fees_includes.controls.OthersText.controls; let rowIndex=index;let lastIndex = last;" [formGroup]="courseFeesForm.controls.total_fees_includes.controls.OthersText.controls[rowIndex]">
+                                <div mysize="2">
+                                    <label>Others {{rowIndex + 1 }}</label>
+                                </div>
+                                <div mysize="3">
+                                    <input type="text" formControlName = "other_text" />
+                                    <span class="help-block text-danger">
+                                        <span *ngIf="item.controls['other_text']?.errors?.maxlength">{{item.controls['other_text']?.errors?.maxlength}}</span>
+                                    </span>
+                                </div>
+                                <div [mysize]="'3'">
+                                    <a href="javascript:void(0);" *ngIf="courseFeesForm.controls.total_fees_includes.controls.OthersText.controls.length > 1" (click)="removeOthersText(rowIndex)" class="btn cmsFont cmsButton">Remove</a>
+                                    <a href="javascript:void(0);" *ngIf="lastIndex" (click)="addOthersText()" class="btn cmsFont cmsButton">+ Add More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div formGroupName="hostel_fees">
+                        <addColumnTableComponent [group]="courseFeesForm.controls['hostel_fees']" [default]="_default" [addmore]="_addMore" [tableHeading]="'Hostel Fees'" [colHeading]="'Yearly'" [validateOutOf]="false" [editData]="editData?.hostel_fees"></addColumnTableComponent>
+                    </div>
+                    <div class="form-group">
+                        <div [mysize]="'3'">
+                            <label>Any other information (?)</label>
+                        </div>
+                        <div [mysize]="'6'">
+                            <textarea formControlName="other_info"></textarea>
+                            <span class="help-block text-danger">
+                                <span *ngIf="courseFeesForm.controls['other_info']?.errors?.minlength">{{courseFeesForm.controls['other_info']?.errors?.minlength}}</span>
+                                <span *ngIf="courseFeesForm.controls['other_info']?.errors?.maxlength">{{courseFeesForm.controls['other_info']?.errors?.maxlength}}</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

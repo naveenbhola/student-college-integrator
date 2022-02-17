@@ -1,0 +1,24 @@
+#browse-contents{padding:20px; clear:both}
+#browse-left-col, #browse-right-col{width:455px; float:left}
+#browse-right-col{float:right}
+#browse-left-col2, #browse-right-col2{width:430px; float:left; border-right:1px solid #edebec; padding-right:28px}
+#browse-right-col2{float:right; border:none 0; padding:0}
+#browse-contents .box-shadow {background:#FFFFFF; box-shadow: 0 0 4px #CDCDCD; border:1px solid #e7e7e7}
+#browse-contents .box-shadow .contents2{clear: left; padding: 15px;}
+#browse-contents p.exam-aff-fee { margin-bottom:10px; font-weight:bold }
+#browse-contents h2{float: left; font-family: Trebuchet MS,Arial,Helvetica; font-size: 20px;  font-weight: normal; padding:0px 0 30px 0px; clear:both; float:left; width:100%}
+#browse-contents h2 strong{font-weight:normal; float:left; padding:4px 0 0 12px}
+#browse-contents h2.bot-padd{padding-bottom:12px !important;line-height:24px;}
+#browse-contents h2.bot-padd span{color:#f48735;}
+span.browse-fee{color:#000; font-size:12px; font-weight:bold; color:#000 !important}
+span.study-ind, span.study-abr{background-image:url(../images/home-sprite.png); background-repeat:no-repeat}
+#browse-contents h2 span.study-ind, #browse-contents h2 span.study-abr{background-position: -65px -202px; display: inline-block; float: left; height: 33px; width: 33px;}
+#browse-contents h2 span.study-abr{background-position: -99px -202px !important;}
+#browse-contents .box-shadow .contents2 ul{clear:both}
+#browse-contents .box-shadow .contents2 ul li{font-size:16px; padding:5px 8px; margin-bottom:3px; display:block; clear:both; font-weight:700; font-family: Trebuchet MS,Arial,Helvetica;}
+#browse-contents .box-shadow .contents2 ul li.alt-row{background:#f8f6f7}
+#course-loc-list{float:left; width:96%; padding:0 0 18px 2px; clear:both; float:left;}
+#course-loc-list ul li{float:left; font-family: Trebuchet MS,Arial,Helvetica; font-size: 16px;  font-weight: normal; position:relative;}
+#course-loc-list ul li a{padding:0; height:19px; line-height:18px; overflow:hidden; float:left; width:28px; text-align:center}
+#course-loc-list ul li.active a{background:#6ab8e6; color:#fff; display:block}
+#course-loc-list ul li.active span{background:url(../images/browse-cloud-arrow.gif) 9px 0 no-repeat; width:20px; height:5px; overflow:hidden; clear:both; display:block;}

@@ -1,0 +1,66 @@
+<div class="page-title">
+    <div class="clearfix"></div>
+
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Basecourse</h2>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">                    
+                    <div id="datatable_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                    <div class="row">                     
+                       <div class="col-sm-6">
+                          <button class="btn btn-primary" type="button" (click)="newBasecourse()">Add New Basecourse</button>
+                       </div>
+                       <div class="col-sm-6">
+                            <div id="datatable_filter" class="dataTables_filter">
+                              <label>Search:<input type="search" [(ngModel)]="basecourseQuery" class="form-control input-sm" aria-controls="datatable">
+                              </label>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="row"><div class="col-sm-12">
+                      <table id="datatable" class="table table-striped table-bordered jambo_table dataTable no-footer" role="grid" aria-describedby="datatable_info">
+                      <thead>
+                        <tr role="row">
+                          <th style="width: 54px;">Id</th>
+                          <th style="width: 145px;">Name</th>
+                          <th style="width: 145px;">Alias</th>
+                          <th style="width: 145px;">Synonym</th>
+                          <th style="width: 20px;">Level</th>
+                          <th style="width: 20px;">Credential</th>
+                          <th style="width: 20px;">Popular?</th>
+                          <th style="width: 20px;">Hyperlocal?</th>
+                          <th style="width: 20px;">Executive?</th>
+                          <th style="width: 20px;">Action</th>
+                        </tr>
+                      </thead>
+
+
+                      <tbody>
+                        <tr *ngFor = "let basecourse of basecourseList|arraysearch:basecourseQuery:'name,synonym,alias'" role="row" class="odd">
+                            <td>{{basecourse.base_course_id}}</td>
+                            <td class="sorting_1">{{basecourse.name}}</td>
+                            <td>{{basecourse.alias}}</td>
+                            <td>{{basecourse.synonym}}</td>
+                            <td>{{basecourse.level}}</td>
+                            <td>{{basecourse.credential}}</td>
+                            <td>{{basecourse.is_popular}}</td>
+                            <td>{{basecourse.is_hyperlocal}}</td>
+                            <td>{{basecourse.is_executive}}</td>
+                            <td><button (click)="navigateToEdit(basecourse.base_course_id)" type="button" class="btn btn-success">Edit</button></td>
+                        </tr>
+                      </tbody>
+                    </table></div></div>
+                   
+                   </div>
+                  </div>
+                </div>
+              </div>
+    </div>
+
+
+ </div>   
+

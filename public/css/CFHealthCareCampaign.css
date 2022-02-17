@@ -1,0 +1,114 @@
+@charset "utf-8";
+/* CSS Document */
+
+.bdr{border:1px solid #F00;}
+.bdr1{border:1px solid #090;}
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tfoot, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video { background: transparent; border: 0; margin: 0; outline: 0; padding: 0;}
+body { margin:0 auto; font-family:Tahoma, Geneva, sans-serif; font-size:13px; line-height:20px; background:#ffffff; color:#595959;}
+.Wrapper{width:953px; margin:0 auto;}
+.topheader, .logoimg{background:url(../images/imageSprite.gif) no-repeat;}
+.topheader{background-position:left -86px; background-repeat:repeat-x; height:96px;}
+.logoimg{background-position:left top; position:relative; top:12px; left:16px; width:290px; height:75px;}
+.logoimg a{text-decoration:none; text-indent:-9999em; display:block; line-height:75px;}
+.lftcolumn{float:left; width:628px;}
+.clr{clear:both; height:1px; font-size:1px; overflow:hidden;}
+.ftrTxt{font-size:12px; color:#a7a7a7; text-align:center; padding:12px 0 0 0}
+.fl_lft{float:left;}
+#banner{background:url(../images/bannerBG.gif) repeat-x center top; height:348px; overflow:hidden;}
+#banner div{margin:0 auto; width:1000px;}
+#contentWrap{margin:31px 0 40px 0;}
+#rhtcoloumn{float:right; width:271px; padding:10px; background:#efefef; border:1px solid #dfdfdf;}
+#rhtcoloumn table div a img{margin-top:6px;}
+#facts{width:876px; margin-bottom:40px;}
+#facts ul{margin:0 0 0 14px; height:76px;}
+#facts ul{float:left; margin-right:40px;}
+#cont3 ul {margin-left:16px; font-size:13px;}
+h3{font-size:14px; color:#33a6cc; text-transform:uppercase; margin-bottom:9px;}
+p{font-size:13px; color:#595959; margin-bottom:20px;}
+
+
+
+
+.tabberlive .tabbertabhide {
+	display:none;
+}
+.tabber {
+	
+}
+.tabberlive {
+	font-size:15px;
+}
+#activetab1 a{background:url(../images/career_IC_1.gif) no-repeat 14px center #efefef; padding-left:38px; }
+ul.tabbernav li#activetab1.tabberactive a {background:url(../images/career_IC.gif) no-repeat 14px center #efefef;}
+#activetab2 a{background:url(../images/desc_IC.gif) no-repeat 14px center #efefef; padding-left:38px; }
+ul.tabbernav li#activetab2.tabberactive a {background:url(../images/desc_IC_1.gif) no-repeat 14px center #efefef;}
+#activetab3 a{background:url(../images/brief_IC.gif) no-repeat 14px center #efefef; padding-left:38px; }
+ul.tabbernav li#activetab3.tabberactive a {background:url(../images/brief_IC_1.gif) no-repeat 14px center #efefef;}
+
+ul.tabbernav {
+	margin:0;
+	padding: 11px 4px;
+	border-bottom: 1px solid #dfdfdf;
+	font: 17px Tahoma, Geneva, sans-serif;
+}
+ul.tabbernav li {
+	list-style: none;
+	margin: 0 0 0 -4px;
+	display: inline;
+	height:47px;
+	background:#efefef;
+	position:relative;
+	
+}
+ul.tabbernav li a {
+	padding: 5px 10px;
+	text-decoration: none;
+	border-bottom: 1px solid #efefef;
+	border-radius:8px 8px 0 0;
+	padding: 10px 10px;
+}
+ul.tabbernav li a:link {
+	color: #000;
+}
+ul.tabbernav li a:visited {
+	color: #33a6cc;
+}
+
+ul.tabbernav li.tabberactive a {
+	border:1px solid #e2e2e2;
+	border-bottom-color:#efefef;
+	border-radius:8px 8px 0 0;
+	padding: 12px 10px;
+	color:#33a6cc;
+	
+}
+
+
+
+.tabbertab {
+		display:none;
+	}
+.tabberlive .tabbertab {
+	padding:20px;
+	border:1px solid #dfdfdf;
+	border-top:0;
+	background-color:#efefef;
+	
+}
+
+.tabberlive .tabbertab h2 {
+	/*display:none;*/
+}
+.tabberlive .tabbertab h3 {
+	display:none;
+}
+
+.tabberlive#tab1 {
+}
+.tabberlive#tab2 {
+}
+.tabberlive#tab2 .tabbertab {
+	height:200px;
+	overflow:auto;
+}
+

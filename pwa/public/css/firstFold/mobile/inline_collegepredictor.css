@@ -1,0 +1,104 @@
+.head-strip {
+    color: #fff;
+}
+.clg-bg{background:#0a373a url(https://www.shiksha.com/pwa/public/images/clg-bg-v1.webp) no-repeat;background-size:cover;width:100%;color:#fff;height:150px;}
+.clg-txBx{padding:0 12px;width:100%;height:100%;display:flex;justify-content:center;align-items:center;flex-direction:column;text-align: center;}
+.head-strip{color:#fff}
+.head-strip h1{color:#fff;font-size: 1.75rem;}
+
+.form-area {
+    margin: 0;
+}
+.forms-container {
+	padding: 0;
+    min-height: 500px;
+}
+.form-heading,.form-fields{padding:0 12px}
+.form-heading h2{padding:20px 0 10px;margin:0}
+.form-fields {
+    margin: 0;
+}
+.white-bg{background:#fff}
+.shadow-box{box-shadow:0 2px 2px 0 rgba(0,0,0,0.16),0 0 0 1px rgba(0,0,0,0.08);background:#fff}
+ul.exam-selection-list {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-left: 0;
+}
+ul.exam-selection-list li {
+    width: 33%;
+}
+input[type='checkbox'] {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    visibility: hidden;
+}
+.exam-img-cont {
+    padding: 0 0 20px;
+    text-align: center;
+    position: relative;
+    width: 96px;
+}
+ul.exam-selection-list li label {
+    cursor: pointer;
+    display: inline-block;
+}
+i.select-tick {
+    display: none;
+}
+.img-box {
+    width: 74px;
+    height: 74px;
+    border: 1px solid #000;
+    border-radius: 2px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+}
+img.img-exam {
+    max-width: 80%;
+    max-height: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    position: absolute;
+}
+span.exam-name {
+    display: block;
+    padding: 5px 0;
+}
+
+.collegeShortlist ul{list-style:none}
+.button-wrapper {
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 2;
+    left: 0;
+    padding: 24px 12px;
+}
+.button-wrapper.button-fixed {
+    position: fixed;
+    box-shadow: 0 -2px 6px 0 rgba(0,0,0,0.16);
+}
+table, .table {
+    display: table;
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 2px;
+}
+.table-cell {
+    display: table-cell;
+    padding: 2px 5px;
+    vertical-align: middle;
+}
+.button-wrapper .table {
+    margin: 0 auto;
+    text-align: center;
+    width: auto;
+}
+.table-cell .button {
+    width: 95px;
+}

@@ -1,0 +1,15 @@
+ .listof_exams {padding: 0px;display: flex;flex-wrap: wrap;flex-direction: row;justify-content: flex-start;}
+ .auto_clear:before, .auto_clear:after {content: '';display: table;}
+ .auto_clear:after {clear: both;}
+ .pwaexams_container{width: 100%;margin: 0px auto 20px;}
+ button.btn-primary.btn-pm.loader-line.shimmer:hover{background-color: transparent;}
+ .examHeading {
+     padding: 10px 12px;
+     font-size: 0.875rem;
+ }
+   @media only screen and (min-width: 1024px) {
+   	   body{background: #f1f1f1;}
+      .pwaexams_container{width: 100%;/*margin: 25px auto 20px;*/}
+      .listof_exams{margin: 0px 0px 25px;}
+
+  }

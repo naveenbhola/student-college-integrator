@@ -1,0 +1,136 @@
+#search-wrap{font-family:Tahoma, Geneva, sans-serif; color:#000}
+#search-box{background:#fafafa; padding:12px 15px; border-bottom:1px solid #f0f0f0;position:relative;width:958px;float:left;}
+.search-outer{border: 1px solid #DBDBDB; border-radius: 5px 5px 5px 5px; box-shadow: 0 4px 4px #F1F0F0 inset; float: left; font-size: 12px; height: 22px; margin-right:10px;   overflow: visible; padding: 3px 5px; width:640px; background:#fff}
+.search-icn, .opened-icn, .closed-icn{background-color: transparent; background-image: url("../images/search-sprite.png"); background-repeat: no-repeat; display: inline-block;}
+.search-icn{background-position:0 0; float:left; height:14px; margin:4px 5px 0 3px; vertical-align:middle; width:14px;}
+.search-outer input{background:transparent; border:0 none; color:#323232; font-family: Tahoma,Geneva,sans-serif; font-size:14px; padding:3px 0 3px 0; width:95%;}
+#search-content{padding:20px 15px 15px; clear:both; *padding-top:10px;}
+#search-content #left-col{width:730px; float:left;}
+#left-col h4, .search-result-title{font:normal 20px "Trebuchet MS", Arial, Helvetica, sans-serif; margin-bottom:5px}
+#left-col h4 span{color:#000; font-size:13px !important}
+.search-result-title{margin-bottom:5px !important; font-size:20px !important}
+.search-result-title span{color:#ed7117}
+#right-col h4 {color: #000; font:normal 18px "Trebuchet MS", Arial, Helvetica, sans-serif; margin-bottom:5px}
+#search-content #right-col{width:200px; float:right;}
+#search-refine{}
+#search-refine h5{font:normal 16px "Trebuchet MS", Arial, Helvetica, sans-serif; margin-bottom:5px}
+.refine-details{border:1px solid #ececec; padding:10px 10px 18px 10px; overflow:hidden; background: #ffffff; background: -moz-linear-gradient(top,  #ffffff 89%, #f2f2f2 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(89%,#ffffff), color-stop(100%,#f2f2f2)); background: -webkit-linear-gradient(top,  #ffffff 89%,#f2f2f2 100%); background: -o-linear-gradient(top,  #ffffff 89%,#f2f2f2 100%); background: -ms-linear-gradient(top,  #ffffff 89%,#f2f2f2 100%); background: linear-gradient(to bottom,  #ffffff 89%,#f2f2f2 100%);}
+.refine-cols,.refine-last-cols{line-height:17px;width:220px; float:left; font-size:12px; color:#696969; font-family:Tahoma, Geneva, sans-serif; padding-right:23px}
+.refine-last-cols{float:right; padding:0}
+.refine-cols ul, .refine-last-cols ul{overflow-y:auto; overflow-x:hidden}
+/*.refine-cols ul, .refine-last-cols ul{height:auto; overflow:auto}*/
+.refine-cols ul li, .refine-last-cols ul li{margin-bottom:2px;}
+.refine-cols h6, .refine-last-cols h6{color:#757575; font:normal 15px "Trebuchet MS", Arial, Helvetica, sans-serif; margin-bottom:6px}
+
+.refine-cols ol{margin:0; padding:0; padding-top:5px}
+.refine-cols ol li{margin:0 0 0 28px; list-style:disc !important; padding:0;}
+.loc-states{padding-left:0px; width:95%}
+.loc-zones{padding:0px 0 0 18px; clear:both}
+.opened-icn,.closed-icn{background-position:0 -36px; width:9px; height:9px; overflow:hidden; float:left; margin-top:3px;}
+.closed-icn{background-position:0 -67px}
+.loc-states p, .loc-zones p{margin-left:13px; display:block;}
+.loc-zones p{margin-left:8px;}
+.course-detail-section{clear:both; margin-top:20px}
+.course-detail-section .gray-button{color:#313131}
+.course-detail-section ul li{margin-bottom:12px}
+.course-detail-main{margin-bottom:10px;}
+.course-detail-section ol{margin:0 0 0px 0; padding:12px 0 8px 5px; font-size:13px;}
+.course-detail-section ol li{margin:0 !important; padding:0 !important;}
+.course-detail-section ol li p{margin-bottom:8px}
+.course-title, .course-title-open{padding:5px 5px 4px 27px; background:#e6f3fb url(../images/search-sprite.png) 8px -134px no-repeat; font:normal 16px Tahoma, Geneva, sans-serif}
+.more-courses-header {padding:5px 5px 4px 10px; background:#e6f3fb; font:normal 16px Tahoma, Geneva, sans-serif}
+.fee-structure span{color:#606060}
+.course-title-open{background-position:8px -95px;}
+.course-title a, .course-title-open a{font-size:14px}
+.course-details{margin-bottom:20px;overflow:hidden}
+
+.result-section{font:normal 13px Tahoma, Geneva, sans-serif;}
+.result-section ul li{border-bottom:1px solid #eeeeee; margin-bottom:15px; padding-bottom:15px; overflow:hidden}
+.result-section h5{font:normal 16px/19px "Trebuchet MS", Arial, Helvetica, sans-serif; margin-bottom:12px}
+/*.result-section h5 span{font-size:13px}*/
+.res-figure{width:124px; float:left;}
+.res-figure img{border:1px solid #e3e3e3; float:left}
+.res-details{margin-left:135px;}
+.res-details ol{margin:0; padding:0;}
+.res-details ol li{margin:0; padding:0; margin-bottom:5px; border:0 none; line-height:18px}
+.res-details ol li label{color:#6f6f6f}
+.res-details ol span.bullet-item{list-style:disc; display:list-item; margin:0 15px 0 18px; color:#343434}
+.res-details em{margin-bottom:5px; display:block; color:#393939}
+.res-details p{margin-bottom:15px; display:block; line-height:18px}
+.view-commt{font-size:11px; margin-left:10px; *vertical-align:super}
+.btn-box{background:#f9f9f9; border:1px solid #dddddd; padding:15px 12px; text-align:center; margin-top:-10px; position:relative}
+.see-more-res{font:normal 20px "Trebuchet MS", Arial, Helvetica, sans-serif !important; background: #ffffff; background: -moz-linear-gradient(top,  #ffffff 35%, #ededed 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(35%,#ffffff), color-stop(100%,#ededed)); background: -webkit-linear-gradient(top,  #ffffff 35%,#ededed 100%); background: -o-linear-gradient(top,  #ffffff 35%,#ededed 100%); background: -ms-linear-gradient(top,  #ffffff 35%,#ededed 100%); /* IE10+ */ background: linear-gradient(to bottom,  #ffffff 35%,#ededed 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+border:1px solid #bebebe; -moz-border-radius: 15px; -webkit-border-radius: 15px; border-radius: 15px; color:#444343; font:normal 20px "Trebuchet MS", Arial, Helvetica, sans-serif; padding:5px 30px; *padding:3px 0px; text-shadow:0px 1px 1px #666; cursor:pointer; margin:0;}
+.Sorting-cont{padding:23px 10px 0px 0px; font:normal 16px 'Trebuchet MS', Arial, Helvetica, sans-serif !important; overflow:hidden}
+.Sorting-cont ul li{float:left; color:#575757; font: normal 16px 'Trebuchet MS', Arial, Helvetica, sans-serif;}
+.Sorting-cont ul li a{margin:0 10px !important;}
+.Sorting-cont ul li a.active{color:#000 !important}
+.instituteLists ul li{padding:12px 7px !important; width:98% !important; margin-bottom: 0px !important;}
+ul.facilities li{float: left;font-size: 12px !important;color: black;margin: 0;padding: 0 10px 2px 0px !important;border: none;width: auto !important;}
+
+.see-all-link span { background-position: -6px 0;width: 4px;height: 7px;margin-left: 2px;vertical-align: middle;}
+.sprite-bg { background: url(/public/images/listing-sprites.png) no-repeat;display: inline-block;overflow: hidden; }
+.search-pagination{font:normal 20px "Trebuchet MS", Arial, Helvetica, sans-serif}
+.collegeDescription h5, .collegeDescription h5 span {font-size: 13px !important; font-weight:normal}
+.feeStructure {font-size: 13px !important;}
+.collegeDetailsWrapper {margin-top:10px !important;}
+.compareBlock p.compareTitle{width:110px !important;}
+.collegeDetailCol h4{font-size:16px !important}
+ul.facilities{float:left; width:100%; margin:10px 0 0 0 !important;}
+
+
+.applylayerWrap {
+    left: -88px;
+    position: absolute;
+    top: 23px;
+    width: 360px;
+    z-index: 999999;
+}
+
+.recommendedOffers2 span {
+    color: #000000;
+    text-decoration: line-through;
+}
+
+.applylayerPointer{ background:url("../images/cloud-arr.gif") 0 0 no-repeat; display: block;
+    height: 31px;
+    margin-bottom: -2px;
+    margin-left: 272px;
+    position: relative;
+    width: 26px;
+}
+
+.applylayerContent {
+    background-color: #FEFFCD;
+    border: 2px solid #FFF590;
+    border-radius: 10px 10px 10px 10px;
+    padding: 8px 12px 9px;
+}
+.applylayerContent ul {
+    margin: 0;
+}
+.applylayerContent ul{margin:0; padding:0}
+.applylayerContent ul li {
+    border: 0 none !important;
+    float: left;
+    line-height: 17px;
+    list-style-type: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+}
+.applylayerContent ul li label {
+    color: #757575;
+}
+.applylayerContent ul li span {
+    text-decoration: none;
+}
+.recommendedOffers2 span {
+    color: #000000;
+    text-decoration: line-through;
+}
+.lastDateNotify {
+    font-size: 16px;
+    margin-top: 6px;
+}

@@ -1,0 +1,272 @@
+{
+	"baseDir"        : "/var/www/html/shiksha/public/",
+	"imageCDN"       : "localshiksha.com",
+	"mappings" : {
+		"shiksha-com" : {
+			"bundleName":"shiksha-com",
+			"minifiedName":"shiksha-com.min.css",
+			"cwd"         :"css",
+			"files":["shikshaLayout.css","chosenSumo.css","websiteTour.css"]
+		},
+		"mobile-shiksha-com" : {
+			"bundleName":"mobile-shiksha-com",
+			"minifiedName":"mobile-shiksha-com.min.css",
+			"cwd"         :"mobile5/css",
+			"files":["search-widget.css","websiteTour.css"]
+		},
+		"mListingDetailPage" : {
+			"bundleName":"mListingDetailPage",
+			"minifiedName":"mListingDetailPage.min.css",
+			"cwd"         :"mobile5/css",
+			"files":["listingCommon.css","minstitute.css","recoSlider.css"]
+		},
+		"marticleDetailPage" : {
+			"bundleName":"marticleDetailPage",
+			"minifiedName":"marticleDetailPage.min.css",
+			"cwd"         :"mobile5/css",
+			"files":["recoSlider.css","entityWidget.css"]
+		},
+		"sa-univ-page" : {
+			"bundleName":"sa-univ-page",
+			"minifiedName":"sa-univ-page.min.css",
+			"cwd"         :"css",
+			"files":["studyabroadHeaderFooter.css","postFFstudyAbroadCommon.css","studyAbroadSignUp.css","postFFstudyAbroadUnivListings.css","jquery-ui.min.css"]
+		},
+		"pwa-desktop-extra-css" : {
+			"bundleName":"pwa-desktop-extra-css",
+			"minifiedName":"pwa-desktop-extra-css.min.css",
+			"cwd"         :"css",
+			"files":["userRegistrationDesktop.css", "chosenSumo.css", "pwaRecoLayer.css"]
+		},
+		"ArticlesD" : {
+			"bundleName":"articleDetailPage",
+			"minifiedName":"articleDetailPage.min.css",
+			"cwd"         :"css",
+			"files":["articles.css","recoSlider.css","entityWidget.css", "bottomStickyRegistrationLayer.css"]
+		},
+		"sa-counselor-review-page" : {
+			"bundleName":"sa-counselor-review-page",
+			"minifiedName":"sa-counselor-review-page.min.css",
+			"cwd"         :"css",
+			"files":["jquery-ui.min.css","studyabroadHeaderFooter.css","studyAbroadCounselorHome.css"]
+		},
+		"sa-scholarship-detail-page" : {
+			"bundleName":"sa-scholarship-detail-page",
+			"minifiedName":"sa-scholarship-detail-page.min.css",
+			"cwd"         :"css",
+			"files":["jquery-ui.min.css","studyabroadHeaderFooter.css","studyAbroadScholarships.css"]
+		},
+		"sa-scholarship-cat-page" : {
+			"bundleName":"sa-scholarship-cat-page",
+			"minifiedName":"sa-scholarship-cat-page.min.css",
+			"cwd"         :"css",
+			"files":["jquery-ui.min.css","studyabroadHeaderFooter.css","studyAbroadScholarshipCategoryPage.css"]
+		},
+		"sa-scholarship-home" : {
+			"bundleName":"sa-scholarship-home",
+			"minifiedName":"sa-scholarship-home.min.css",
+			"cwd"         :"css",
+			"files":["jquery-ui.min.css","studyabroadHeaderFooter.css","scholarshipHomepage.css"]
+		},
+		"sa-countryhome-page" : {
+			"bundleName":"sa-countryhome-page",
+			"minifiedName":"sa-countryhome-page.min.css",
+			"cwd"         :"css",
+			"files":["jquery-ui.min.css","studyabroadHeaderFooter.css","countryHome.css"]
+		},
+		"sa-counselor-review-posting" : {
+			"bundleName":"sa-counselor-review-posting",
+			"minifiedName":"sa-counselor-review-posting.min.css",
+			"cwd"         :"css",
+			"files":["studyabroadHeaderFooter.css","counselorReviewPosting.css","jquery-ui.min.css"]
+		},
+		"sa-home-page" : {
+			"bundleName":"sa-home-page",
+			"minifiedName":"sa-home-page.min.css",
+			"cwd"         :"css",
+			"files":["studyabroadHeaderFooter.css","postFFStudyAbroadHomePage.css","jquery-ui.min.css"]
+		},
+		"sa-apply-home" : {
+			"bundleName":"sa-apply-home",
+			"minifiedName":"sa-apply-home.min.css",
+			"cwd"         :"css",
+			"files":["studyabroadHeaderFooter.css","studyAbroadApplyHome.css","jquery-ui.min.css"]
+		},
+		"sa-user-profile" : {
+			"bundleName":"sa-user-profile",
+			"minifiedName":"sa-user-profile.min.css",
+			"cwd"         :"css",
+			"files":["studyabroadHeaderFooter.css","jquery-ui.min.css","studyAbroadUserSetting.css"]
+		},
+		"sa-edit-profile" : {
+			"bundleName":"sa-edit-profile",
+			"minifiedName":"sa-edit-profile.min.css",
+			"cwd"         :"css",
+			"files":["postFFstudyAbroadCommon.css","editProfileSA.css","croppie.css"]
+		},
+		"sa-edit-profile-mobile" : {
+			"bundleName":"sa-edit-profile-mobile",
+			"minifiedName":"sa-edit-profile-mobile.min.css",
+			"cwd"         :"mobileSA/css",
+			"files":["postFFCommonSA.css","userProfilePageSA.css"]
+		},
+		"sa-content-article-mobile" : {
+			"bundleName":"sa-content-article-mobile",
+			"minifiedName":"sa-content-article-mobile.min.css",
+			"cwd"         :"mobileSA/css",
+			"files":["article-guidePageSA.css"]
+		},
+		"sa-content-exam-mobile" : {
+			"bundleName":"sa-content-exam-mobile",
+			"minifiedName":"sa-content-exam-mobile.min.css",
+			"cwd"         :"mobileSA/css",
+			"files":["examContentPageSA.css"]
+		},
+		"sa-content-guide-mobile" : {
+			"bundleName":"sa-content-guide-mobile",
+			"minifiedName":"sa-content-guide-mobile.min.css",
+			"cwd"         :"mobileSA/css",
+			"files":["newGuidePageSA.css"]
+		},
+		"sa-apply-content-mobile" : {
+			"bundleName":"sa-apply-content-mobile",
+			"minifiedName":"sa-apply-content-mobile.min.css",
+			"cwd"         :"mobileSA/css",
+			"files":["newApplyContentPageSA.css"]
+		},
+		"sa-course-page-mobile" : {
+                        "bundleName":"sa-course-page-mobile",
+                        "minifiedName":"sa-course-page-mobile.min.css",
+                        "cwd"         :"mobileSA/css",
+                        "files":["courseListingPageSA.css"]
+                },
+		"sa-shipment-page-mobile" : {
+			"bundleName":"sa-shipment-page-mobile",
+			"minifiedName":"sa-shipment-page-mobile.min.css",
+			"cwd"         :"mobileSA/css",
+			"files":["shipmentPageSA.css"]
+		},
+		"sa-article-page" : {
+			"bundleName": "sa-article-page",
+			"minifiedName": "sa-article-page.min.css",
+			"cwd": "css",
+			"files": [
+				"studyabroadHeaderFooter.css",
+				"studyAbroadGuide.css",
+				"jquery-ui.min.css"
+			]
+		},
+		"sa-exam-content" : {
+			"bundleName":"sa-exam-conten",
+			"minifiedName":"sa-exam-conten.min.css",
+			"cwd"         :"css",
+			"files":["studyabroadHeaderFooter.css","jquery-ui.min.css","studyAbroadExamContent.css"]
+		},
+		"sa-apply-content" : {
+			"bundleName":"sa-apply-content",
+			"minifiedName":"sa-apply-content.min.css",
+			"cwd"		:"css",
+			"files":["studyabroadHeaderFooter.css","jquery-ui.min.css","studyAbroadApplyContent.css"]
+		},
+		"sa-search-page" : {
+			"bundleName":"sa-search-page",
+			"minifiedName":"sa-search-page.min.css",
+			"cwd"         :"css",
+			"files":["studyabroadHeaderFooter.css","studyAbroadSearchV2.css","jquery-ui.min.css"]
+		},
+		"sa-search-starter-page" : {
+			"bundleName":"sa-search-starter-page",
+			"minifiedName":"sa-search-starter-page.min.css",
+			"cwd"         :"css",
+			"files":["studyAbroadSearchStarterPage.css","jquery-ui.min.css"]
+		},
+		"sa-university-page-mobile" : {
+			"bundleName":"sa-university-page-mobile",
+			"minifiedName":"sa-university-page-mobile.min.css",
+			"cwd"         :"mobileSA/css",
+			"files":["listingPageSA.css"]
+		},
+		"sa-search-page-mobile" : {
+			"bundleName":"sa-search-page-mobile",
+			"minifiedName":"sa-search-page-mobile.min.css",
+			"cwd"         :"mobileSA/css",
+			"files":["searchPageSA.css"]
+		},
+		"sa-forgot-password-mobile" : {
+			"bundleName":"sa-forgot-password-mobile",
+			"minifiedName":"sa-forgot-password-mobile.min.css",
+			"cwd"         :"mobileSA/css",
+			"files":["postFFCommonSA.css","jquery-ui.min.css"]
+		},
+		"sa-compare-course-mobile" : {
+			"bundleName":"sa-forgot-password-mobile",
+			"minifiedName":"sa-forgot-password-mobile.min.css",
+			"cwd"         :"mobileSA/css",
+			"files":["comparePageSA.css"]
+		},
+		"sa-in-line-login-mobile" : {
+			"bundleName":"sa-in-line-login-mobile",
+			"minifiedName":"sa-in-line-login-mobile.min.css",
+			"cwd"         :"mobileSA/css",
+			"files":["postFFCommonSA.css","jquery-ui.min.css"]
+		},
+		"sa-shortlist-mobile" : {
+			"bundleName":"sa-shortlist-mobile",
+			"minifiedName":"sa-shortlist-mobile.min.css",
+			"cwd"         :"mobileSA/css",
+			"files":["postFFCommonSA.css","jquery-ui.min.css"]
+		},
+		"sa-rmc-success-mobile" : {
+			"bundleName":"sa-rmc-success-mobile",
+			"minifiedName":"sa-rmc-success-mobile.min.css",
+			"cwd"         :"mobileSA/css",
+			"files":["applyHomePageSA.css","rateMyChanceSA.css"]
+		},
+		"sa-rmc-mobile" : {
+			"bundleName":"sa-rmc-mobile",
+			"minifiedName":"sa-rmc-mobile.min.css",
+			"cwd"         :"mobileSA/css",
+			"files":["rateMyChanceSA.css"]
+		},
+		"sa-country-home-mobile" : {
+			"bundleName":"sa-country-home-mobile",
+			"minifiedName":"sa-country-home-mobile.min.css",
+			"cwd"         :"mobileSA/css",
+			"files":["countryHomePageSA.css"]
+		},
+		"sa-ranking-mobile" : {
+			"bundleName":"sa-ranking-mobile",
+			"minifiedName":"sa-ranking-mobile.min.css",
+			"cwd"         :"mobileSA/css",
+			"files":["rankingPage.css"]
+		},
+		"sa-com-mobile" : {
+			"bundleName":"sa-com-mobile",
+			"minifiedName":"sa-com-mobile.min.css",
+			"cwd"         :"mobileSA/css",
+			"files":["postFFCommonSA.css","saGNB.css","jquery-ui.min.css"],
+			"responsiveFiles":["saGNB.css"]
+		},
+		"sa-country-page-mobile" : {
+			"bundleName":"sa-country-page-mobile",
+			"minifiedName":"sa-country-page-mobile.min.css",
+			"cwd"         :"mobileSA/css",
+			"files":["countryPage.css"]
+		},
+		"sa-education-loan-mobile" : {
+			"bundleName":"sa-education-loan-mobile",
+			"minifiedName":"sa-education-loan-mobile.min.css",
+			"cwd"         :"mobileSA/css",
+			"files":["saEducationLoan.css"],
+			"responsiveFiles":["saEducationLoan.css"]
+		},
+		"sa-education-loan" : {
+			"bundleName":"sa-education-loan",
+			"minifiedName":"sa-education-loan.min.css",
+			"cwd"         :"css",
+			"files":["studyabroadHeaderFooter.css","jquery-ui.min.css","saEducationLoan.css"],
+			"responsiveFiles":["saEducationLoan.css"]
+		}
+
+	}
+}

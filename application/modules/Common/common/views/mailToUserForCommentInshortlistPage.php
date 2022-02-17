@@ -1,0 +1,4 @@
+<p>Dear <?php echo ucfirst($NameOfUser).' '.ucfirst($lastNameofUser); ?>,</p>
+                        <p>A new comment has been posted by <?php echo ucfirst($commenterName).' '.ucfirst($commenterlastName);?> on a thread about <?php echo $instituteName; ?> in which you have participated earlier. Please click <a linkId='nav-<?php echo $course_id; ?>-ask' href="<?php echo $seoUrl;?>" >here</a> to visit the complete thread or to reply to <?php echo ucfirst($commenterName).' '.ucfirst($commenterlastName);?>.</p>
+                        <p>&nbsp;</p>
+                        <p>Best regards,<br/>Shiksha.com</p>

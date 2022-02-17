@@ -1,0 +1,163 @@
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<style>
+#parent_mapping_form *{font-family: "Open Sans"}
+.course-list-ul{
+	display: block;
+    border: 1px solid #d0d1d1;
+    margin: 0;
+    left: 0;
+    list-style: none;
+    padding: 0;
+}
+.course-list-ul li{padding: 10px;}
+</style>
+ <div id = "Aa" style="position:absolute;top:0;left:0;width:100%;height:100%;color:black;opacity:0.7">
+    &nbsp;
+    </div>
+
+<div class="row" id="parent_mapping_form">
+    <div [mysize]="'12'">
+        <div class="x_panel">
+            <div class="x_title">                    
+                <h2 *ngIf="pageTitle != 'Article'">Update UILP Mini Course Tuple</h2>                    
+                <h2 *ngIf="pageTitle == 'Article'">Featured Articles</h2>                    
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+            <div class="form-group row form-control-X" style="padding-top:10px">
+            	<div [mysize]="'5'">
+                <label [mysize]="'4'" class="cmsFont">Enter Institute ID/University ID</label>
+                <div [mysize]="'8'">
+                    <div class="input-group">
+                        <input [(ngModel)] = "listingId" type="number" name="name" min="1" class="col-md-2" (keyup.enter)="getInstituteInfo()">
+                        <span class="input-group-btn">
+                              <button type="button" [disabled]="!listingId" (click)="getInstituteInfo()" class="btn cmsButton-go">Go!</button>
+                         </span>
+                     </div>
+                     <div class="" style="margin:20% 40% auto;align:center" *ngIf="showLoader">
+                <img align="middle" src="/public/images/ShikshaMobileLoader.gif">
+    		</div>
+            	</div>
+            	</div>
+			</div>
+			<div class="form-group row text-danger form-control-X" style="padding-top:10px" *ngIf="errorMsg">
+				{{errorMsg}}
+			</div>
+		</div>
+        </div>
+        	
+    		<div *ngIf="!showLoader">
+        		<div class="x_panel" *ngIf="listingName && changeFlag && pageTitle != 'Article'">
+			        <div class="form-group row form-control-X" style="padding-top:10px">
+						<b>ListingName :  {{listingName}}</b>
+					</div>
+        			<div  class="col-md-12 row form-group" *ngFor="let number of numberOfCoursesOption | rangearray : 0 | sortArrByColumn:'asc'">
+        				<label class="col-md-3">Course {{number}}:  </label>
+        				<div class="col-md-5 dropdown">
+        					<select [(ngModel)]="popularCourse[number-1]" name="couseList" class="select2_single form-control cmsFont" tabindex="-1" placeholder="Select Course" (change) = "popularCourseOrder($event.target.value,number-1)">  
+                                <option value="0" selected>Select </option>
+                                <option style="word-break: break-word;" *ngFor="let courseInfo of courseList" value="{{courseInfo.course_id}}">{{courseInfo.course_name}}</option>
+                            </select>
+                            <span class="help-block text-danger cmsFont">
+                                <span *ngIf="errorCourse[number-1]">{{errorCourse[number-1]}}</span>
+                             </span>
+                        </div>
+                        <!-- <div class="col-md-5 dropdown" style="position:relative;" (click)="toggle(number)">
+                          <div class="" style="position:relative;padding:10px;border:1px solid #d0d1d1;overflow:hidden;text-overflow:ellipse">select here</div>
+                        	<ul class="course-list-ul" id="{{number}}">
+                        		<li *ngFor="let courseInfo of courseList" value="{{courseInfo.course_id}}">{{courseInfo.course_name}}
+                        		</li>
+                        	</ul>
+                        </div> -->
+                        <br/>
+        			</div>
+                  <div class="col-md-12 row form-group" *ngIf="expiryDate">
+                            <label class="col-md-3">ExpiryDate:</label>
+                            <div class="col-md-5">
+                                <span>{{expiryDate}}</span>
+                            </div>
+                    </div>
+        			<div *ngIf="pageTitle == 'Popular'">
+                      
+	        			<div class="form-group">
+	        					<label class="col-md-3">Duration</label>
+	        					<div class="col-md-3">
+	        						<select name="duration" class="select2_single form-control cmsFont" tabindex="-1" placeholder="Select Duration" [myrequired]="'1'" [registerForm]="form" [registerModel]="durationTemplate" #durationTemplate="ngModel" [(ngModel)] = "cmsDuration">
+		                                <option value="0" selected>Select </option>
+		                                <option *ngFor="let d of duration " value="{{d.value}}">{{d.label}}</option>
+	                            	</select>
+	                            	 <span class="help-block text-danger cmsFont">
+	                                <span *ngIf="durationTemplate.errors?.required">{{durationTemplate.errors?.required}}</span>
+	                             </span>
+	        					</div>
+	        					
+	        			</div>
+                        
+    				    <div class="row">
+    				        <div class="form-group" >
+    				        	<button type="button" [disabled]="submitPending || !durationTemplate.valid"  class="btn cmsButton cmsFont" (click)="saveListingContent()">Save</button>
+                                <button *ngIf="clearOption"  type="button" class="btn cmsButton cmsFont" (click)="resetOptions()">Clear Options</button>
+                            </div>
+    				    </div>
+			    </div>
+			    <div class="row" *ngIf="pageTitle=='Featured'">
+				        <div class="form-group" >
+				        	<button type="button" [disabled]="submitPending"  class="btn cmsButton cmsFont" (click)="saveListingContent()">Save</button>
+                            <button *ngIf="clearOption"  type="button" class="btn cmsButton cmsFont" (click)="resetOptions()">Clear Options</button>
+				        </div>
+				    </div>
+			</div>
+			<div class="x_panel" *ngIf="pageTitle == 'Article' && listingName && changeFlag">
+				<div class="form-group row form-control-X" style="padding-top:10px">
+						<b>ListingName :  {{listingName}}</b>
+				</div>
+				<div class="form-group row form-control-X" style="padding-top:10px">
+            	<div [mysize]="'5'">
+                <label [mysize]="'4'" class="cmsFont">Enter Article Id</label>
+                <div [mysize]="'8'">
+                    <div class="input-group">
+                        <input [(ngModel)] = "articleId" type="number" name="name" min="1" class="col-md-2" (keyup.enter)="getArticleInfo()">
+                        <span class="input-group-btn">
+                              <button type="button" [disabled]="!articleId" (click)="getArticleInfo()" class="btn cmsButton-go">Go!</button>
+                         </span>
+                     </div>
+            	</div>
+
+            	<div class="form-group row form-control-X" style="padding-top:10px" *ngIf="articleName">
+						<b>Article Name :  {{articleName}}</b>
+				</div>
+            	<div class="form-group row text-danger form-control-X" style="padding-top:10px" *ngIf="articleErrorMsg">
+				{{articleErrorMsg}}
+					</div>
+            	</div>
+			</div>
+				<div class="form-group col-md-5" *ngIf="articleDurationShow">
+                 <div class="col-md-12 row form-group" *ngIf="expiryDate">
+                            <label class="col-md-3">ExpiryDate:</label>
+                            <div class="col-md-5">
+                                <span>{{expiryDate}}</span>
+                            </div>
+                    </div>
+	        					<label class="col-md-4">Duration</label>
+	        					<div class="col-md-8">
+	        						<select name="cmsDuration" class="select2_single form-control cmsFont" tabindex="-1" placeholder="Select Duration" [myrequired]="'1'" [registerForm]="form" [registerModel]="durationTemplate" #durationTemplate="ngModel" [(ngModel)] = "cmsDuration">
+                                        <option value="0" selected>Select </option>
+		                                <option *ngFor="let number of articleDuration | rangearray : 0 | sortArrByColumn:'asc'" value="{{number}}">{{number}} <p *ngIf="number == 1">day </p><p *ngIf="number > 1">days </p> </option>
+	                            	</select>
+	                            	 <span class="help-block text-danger cmsFont">
+	                                <span *ngIf="durationTemplate.errors?.required">{{durationTemplate.errors?.required}}</span>
+	                             </span>
+	        					</div>
+	        		<div class="row">
+				        <div class="form-group" >
+				        	<button type="button" [disabled]="submitPending || !durationTemplate.valid"  class="btn cmsButton cmsFont" (click)="saveListingContent()">Save</button>
+                            <button *ngIf="clearOption" type="button" class="btn cmsButton cmsFont" (click)="resetOptions()">Clear Options</button>
+				        </div>
+				    </div>				
+	        	</div>
+			</div>
+			</div>
+     </div>
+</div>
+
+<shiksha-modal [modalContent]= " 'Are you aure you want to clear sticky data?'" (modalResponse)="resetSticky($event)" [isModalOpened] = "isModalOpened" [elementId]="modalEle"></shiksha-modal>

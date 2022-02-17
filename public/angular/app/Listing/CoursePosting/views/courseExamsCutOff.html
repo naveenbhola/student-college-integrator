@@ -1,0 +1,155 @@
+<div class="row" id="course_exam_cutoff" *ngIf="!refreshView">
+    <div [mysize]="'12'">
+        <div class="x_panel">
+            <div [class.x_title]="opened">
+                <ul class="nav navbar-left panel_toolbox">
+                    <li><a class="collapse-link" (click)="toggle()"><i
+                            [class]="opened?' fa fa-chevron-up':' fa fa-chevron-down'"></i></a></li>
+                </ul>
+                <h2>Cut-off<img class="helperText" id="cut_off" src="/public/images/tooltip.png" width="20px"
+                                style="padding-right:0px" (click)="toolTipNotify('cut_off',$event)"></h2>
+
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content" [hidden]="!opened">
+
+                <div class="row">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <course-exams-table-component *ngIf="_default.length>0" [array]="course12thCutOff"
+                                                          [default]="_default" [addmore]="_addMore"
+                                                          [tableHeading]="'12th Cut-off'"
+                                                          [courseExamCutOffIndex]="'0'" [showCrossPosition]="1"
+                                                          [totalLength]="1" [arrayKeyName]="'course12thCutOff'"
+                                                          [editData]="editData?.course12thCutOff"></course-exams-table-component>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div *ngFor="let controlItem of courseExamCutOff.controls;let i=index ">
+
+                            <div mysize="3">
+                                <h4>Exam {{i+1}}</h4>
+                            </div>
+                            <a *ngIf="courseExamCutOff.controls.length > 1 || i != 0" class="btn cmsFont cmsButton"
+                               (click)="removeExam(i)">
+                                Remove
+                            </a>
+
+                            <div class="form-group" [formGroup]="courseExamCutOff.controls[i]"
+                                 style="clear: both; padding-top: 2em;">
+                                <div mysize="4">
+                                    <div mysize="4">
+                                        <label>Exam name :</label>
+                                    </div>
+                                    <div mysize="6">
+                                        <select formControlName="exam_id" (change)="handleExamChange(i)">
+                                            <option value="">Select Exam</option>
+                                            <template ngFor let-item
+                                                      [ngForOf]="mainForm?.value?.courseEligibilityForm?.exams_accepted"
+                                                      let-rowIndex="index">
+                                                <template [ngIf]="item.exam_name == 'other'">
+                                                    <option *ngIf="item.exam_name != ''"
+                                                            value="other$${{item.custom_exam}}">{{item.custom_exam}}
+                                                    </option>
+                                                </template>
+                                                <option *ngIf="item.exam_name != '' && item.exam_name != 'other'"
+                                                        value="{{item.exam_name}}">{{examLookupArr[item.exam_name]}}
+                                                </option>
+                                            </template>
+                                        </select>
+                                        <span *ngIf="controlItem.controls['exam_id']?.errors"
+                                              class="help-block text-danger">Invalid entry</span>
+                                    </div>
+                                </div>
+                                <div mysize="8">
+                                    <div mysize="1">
+                                        <label>Year* :</label>
+                                    </div>
+                                    <div mysize="3">
+                                        <select formControlName="exam_year">
+                                            <option value="">Select Year</option>
+                                            <option *ngFor="let item of yearsValue" value="{{item.value}}">
+                                                {{item.label}}
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div mysize="1">
+                                        <label>Round :</label>
+                                    </div>
+                                    <div mysize="3">
+                                        <select formControlName="round_applicable" (change)="handleRoundChange(i)">
+                                            <!-- <option value="">Select Round</option> -->
+                                            <option *ngFor="let item of roundsValue" value="{{item.value}}">
+                                                {{item.label}}
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div mysize="3"
+                                         *ngIf="courseExamCutOff.controls[i].value.exam_id && courseExamCutOff.controls[i].value.exam_year != 0 && courseExamCutOff.controls[i].value.round_applicable == 1">
+                                        <a class="btn cmsFont cmsButton" (click)="addRoundCutOffData(i)">+ Add Round</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div *ngIf="controlItem.value['exam_id'] != ''" class="form-group"
+                                 [formGroup]="courseExamCutOff.controls[i]">
+                                <div mysize="4">
+                                    <div mysize="4">
+                                        <label>Select Unit :</label>
+                                    </div>
+                                    <div mysize="6">
+                                        <select (change)="updateExamUnitLookUpArr(i)" formControlName="exam_unit">
+                                            <option value="">Select Unit</option>
+                                            <option *ngFor="let item of courseStaticData['exam_cutoff_unit']"
+                                                    value="{{item.value}}">{{item.label}}
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div mysize="8"
+                                     *ngIf="courseExamCutOff.controls[i].value.exam_unit == 'score/marks'">
+                                    <div mysize="1">
+                                        <label>Out of :</label>
+                                    </div>
+                                    <div mysize="3">
+                                        <input formControlName="exam_out_of" (change)="handleExamOutOfChange(i)"
+                                               type="text"/>
+                                        <span class="help-block text-danger" *ngIf="courseExamCutOff.controls[i].controls['exam_out_of']?.errors?.number">{{courseExamCutOff.controls[i].controls['exam_out_of']?.errors?.number}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group"
+                                 *ngIf="courseExamCutOff.controls[i].value.exam_id != '' && courseExamCutOff.controls[i].value.exam_unit != '' && courseExamCutOff.controls[i].value.exam_year != 0">
+                                <div *ngFor="let roundTable of controlItem.controls['cutOffData'].controls; let round='index' "
+                                     style="clear:both;">
+                                <course-exams-table-component [relatedStates]="locationData"
+                                                              [array]="controlItem.controls['cutOffData'].controls[round].controls['round_table_arr']"
+                                                              [default]="_default" [addmore]="_addMore"
+                                                              [colHeading]="'Exam '+i"
+                                                              [tableHeading]="'Round '+ (round+1) +' Cut-off'"
+                                                              [showCrossPosition]="(round+1)"
+                                                              [totalLength]="controlItem.controls['cutOffData'].controls.length"
+                                                              (removeClicked)="removeRoundTable($event,round, i)"
+                                                              [courseExamCutOffIndex]="i"
+                                                              [arrayKeyName]="courseExamCutOff"
+                                                              [editData]="(editData?.courseExamCutOff && editData?.courseExamCutOff[i] && editData?.courseExamCutOff[i]?.cutOffData?.round_table_arr) ? editData?.courseExamCutOff[i]?.cutOffData?.round_table_arr[round] : null"></course-exams-table-component>
+                                    <template [ngIf]="round == 0">
+                                        <div mysize="2">
+                                            <label>Select Related States :</label>
+                                        </div>
+                                        <div mysize="3" [formGroup]="courseExamCutOff.controls[i]">
+                                            <mymultiselect formControlName="related_states" [data]="locationData"
+                                                           [defaultPlaceholder]="'Select States'"
+                                                           [itemKey]="'eligibilitySubjects'"></mymultiselect>
+                                        </div>
+                                    </template>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="javascript:void(0);" *ngIf="enableAddExamButton" (click)="addExamCutOffTable()">+ Add Exam
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,64 @@
+.admissionBnr h3, .courseBnr h3 {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+ul.exp-guid li {
+    font-size: 0.875rem;
+    margin-bottom: 12px;
+    line-height:1.3125rem;
+}
+
+.blk-text {
+    display: block;
+    font-size: inherit;
+    font-color: inherit;
+    margin-bottom: 3px;
+}
+
+.button-container {
+    text-align: center;
+    /* padding: 16px 0 0; */
+    line-height: 13px;
+    margin: 10px 0;
+}
+
+.trnBtn {
+    border: 1px solid #008489;
+    color: #008489;
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0px 10px;
+    text-align: center;
+    cursor: pointer;
+    background: #fff;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 34px;
+    -webkit-tap-highlight-color: transparent;
+    height: 36px;
+    border-radius: 2px;
+    position: relative;
+}
+
+section.admissionBnr .blu-arrw {
+    background-position: -113px -37px;
+    width: 15px;
+    height: 20px;
+    position: relative;
+    right: -1px;
+    top: 1px;
+    display: inline-block;
+}
+
+.blu-arrw {
+	background: url(https://images.shiksha.ws/pwa/public/images/pwa-header-mobile-v3.svg) no-repeat;
+}
+
+.hide{display: none}
+
+ul.nrml-list li.read-more-target{display:none;}
+.read-more-state:checked ~ .read-more-wrap .read-more-target {display: block;}
+.read-more-state:checked ~ .read-more-trigger{display: none}
+
+.admissionBnr ul.flt-list.exp-guid li{list-style: none;}

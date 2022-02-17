@@ -1,0 +1,11 @@
+table.upcomming-events{width:100%;border-collapse:collapse;background:#fff;display: table;}
+table.upcomming-events tr td,table.upcomming-events tr th{padding:5px 10px;border:1px solid #b8c8d1;width:initial}
+table.upcomming-events tr td *,table.upcomming-events tr th *{padding:0;margin:0}
+table.upcomming-events tr td,table.upcomming-events tr td *{font-size:16px}
+table.upcomming-events th{background:#003d5c;text-align:center}
+table.upcomming-events th,table.upcomming-events th *{color:#fff;font-weight:600;font-size:12px}
+tr.faded{opacity:.6}
+table.upcomming-events tr td .tag{display:inline-block;padding:5px 5px 2px;border-radius:2px;font-size:10px;line-height:12px;font-weight:600}
+table.upcomming-events tr td .ongoing{background:green;color:#fff}
+table.upcomming-events tr td:nth-child(1){width: 115px;}
+

@@ -1,0 +1,104 @@
+input{font-family:'Open Sans',Arial,sans-serif}
+.alter_touple p{padding:12px 12px 8px}
+.alter_touple a{color:#4285f4}
+.alter_touple .pagnation-col{padding:0 0 12px;margin-bottom:0}
+.ul_find,ul{list-style:none;margin:0;padding:0}
+.ul_find li{margin-bottom:10px;position:relative}
+.ul_find li select{-webkit-appearance:none;-moz-appearance:none;width:100%;border:1px solid #ccc;outline:none;border-radius:2px;position:relative;background-color:#fff;padding:0 34px 0 10px;height:32px;line-height:30px}
+.ul_find li .ctp-btn{float:none;margin:0 auto;display:block;text-decoration:none}
+.ul_find li:last-child{margin-bottom:0}
+.pwa_paginationul{list-style:none;margin:0;padding:0;display:block;margin:0 auto}
+.pwa_paginationul li{display:inline-block;margin-right:5px;vertical-align:top;width:auto;float:left}
+.pwa_paginationul li a{background:#FFF;border:1px solid #999;padding:4px 13px;font-size:.875rem;border-radius:2px;color:#000;font-weight:600;display:block;vertical-align:top;text-align:center}
+.pwa_paginationul li.active a{background:#008489;border:1px solid #008489;color:#fff}
+.widget_content{padding:12px 12px 16px}
+.img_side{width:60px;height:50px;display:inline-block;margin-right:5px;border-radius:2px;background:#ccc}
+.rslt_block{vertical-align:top;display:inline-block;width:74%}
+ul.cont_list li{margin-bottom:10px;border-bottom:1px solid #e6e6e6;padding-bottom:10px}
+ul.cont_list li:last-child{margin:0;padding:0;border:none}
+.link_column{border-top:1px solid #e6e6e6;padding:10px 12px}
+.link_column a{color:#008489}
+.clear_float::before,.clear_float::after{content:'';display:table}
+.clear_float::after{clear:both}
+.rank_bar{margin:0 0 5px}
+.rank_bar .single-col{margin:0}
+.top_space{margin-top:5px}
+.clg-loc{background-position:-318px -45px;width:10px;height:13px;position:relative;top:2px;display:inline-block;margin-right:2px}
+.star_slct{position:absolute;right:0;top:0;width:20px;height:20px;background-position:-234px -39px;}
+.star_slct.active{background-position:-210px -39px;}
+.pointer_dwn{background-position:-133px -26px;width:17px;height:11px;display:inline-block}
+.slct_i{border-left:4px solid transparent;border-right:4px solid transparent;border-top:4px solid #000;bottom:4px;position:absolute;right:10px;top:14px;display:inline-block;margin:0 3px}
+.decide_slider .slider_card{height:96px;width:266px;padding:10px}
+.icon_show{width:66px;display:inline-block;vertical-align:top;height:100%;position:relative;margin-right:8px}
+.decide_sctn{width:167px;display:inline-block}
+.btm_5{margin-bottom:5px}
+.lh_17{line-height:17px}
+.ranking_slider.decide_slider{margin:0 -10px}
+.page_prev,.page_next,.pwa_paginationul li.prev.active .page_prev,.pwa_paginationul li.nxt.active .page_next{width:13px;height:22px;background-position:-126px -50px;display:block;margin:0 auto}
+.pwa_pagination{margin:10px 0}
+.page_next{background-position:-135px -50px}
+.pwa_paginationul li.prev.active .page_prev{background-position:-113px -50px}
+.pwa_paginationul li.nxt.active a,.pwa_paginationul li.prev.active a{background:#fff;border:1px solid #999}
+.pwa_paginationul li.nxt.active .page_next{background-position:-114px -51px;transform:rotate(-180deg)}
+.pwa_paginationul li:last-child{margin:0}
+.slider_contv1{width:100%;background:#fff;padding:10px 0}
+.ranking_slider{overflow-y:hidden}
+.slide_col{padding:10px 0;width:max-content;width:-webkit-max-content;width:-moz-max-content}
+.slider_card{background:#FFF;padding:12px;width:263px;height:165px;margin-right:15px;position:relative;float:left;box-shadow:0 0 1px 0 rgba(0,0,0,0.29),0 1px 2px 0 rgba(0,0,0,0.29);border-radius:2px}
+.slider_card:nth-child(1){margin-left:16px}
+.slide_btns .ranking_btns{margin-left:0}
+.quick-links{color:#008489;display:inline-block;font-size:.875rem}
+.collections_a b{color:#999;margin:0 1px;font-weight:400}
+.slide_btns{margin-top:6px}
+.single-col{margin-top:10px}
+span.rating-block.rvw-lyr{position:relative;font-size:.875rem;color:#000;outline:none}
+.starBg{background:url(https://images.shiksha.ws/public/images/ratingicon.svg) no-repeat;background-position:0 -10px;width:65px;height:10px;display:inline-block;background-size:65px 20px}
+i.empty_stars{position:relative;top:-1px;margin:0 3px}
+i.full_starts{background-position:0 0;width:50%;position:absolute}
+.single-col .rating-block .bold_arw{border-left:4px solid transparent;border-right:4px solid transparent;border-top:4px solid #000;bottom:4px;position:relative;display:inline-block;margin:0 3px}
+.view_rvws{font-size:.75rem;color:#008489;text-decoration:none;font-weight:600}
+.post-img{padding:0!important;height:150px;background:url(https://images.shiksha.ws/public/mobile5/images/categ-bg.png) no-repeat;background-size:100% 100%;position:relative}
+.top-hd-bnr{padding:10px 0 3px;text-align:center;font:500 13px/18px "Open Sans";color:#000;letter-spacing:-.5px}
+.sml-txt-bnr{font:500 11px/14px "Open Sans";color:#999;width:280px;margin:auto;text-align:center}
+.cat-bt-bnr{background:#f37921;font-size:13px;text-decoration:none;color:#fff;padding:2px 13px;display:inline-block;margin-top:5px}
+.mid-box-bnr{padding-bottom:10px;text-align:center;width:320px;margin:auto;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}
+.loader-line.shimmer.wdt36.only-largescreen{display:none}
+.rank_tuplev1 .ctp-SrpBtnDiv{padding:10px 0 0}
+.rank-hold{margin-bottom:7px;text-align:center}
+.rc-top,.rc-btm{line-height:initial}
+.rank-hold:last-child{margin-bottom:0}
+.rank_tuplev1 .ctp-SrpBtnDiv .loader-line{width:48.5%;float:left}
+.rank_tuplev1 .ctp-SrpBtnDiv .loader-line:last-child{float:right}
+.cntnt-laderbrder{border-bottom:1px solid #e6e6e6}
+.loader-line.shimmer.wdt50{width:50%}
+.loader-line.shimmer.wdt60{width:60%}
+.clear-all-rank{color:#008489;display:inline-block;font-size:.75rem;margin:5px 5px 2px;text-decoration:none;line-height:20px;font-weight:600;position:relative}
+.rp-zrp-back{margin:3px 0 0}
+.rp-zrp-back a{display:inline-block;color:#008489;font-weight:600;text-decoration:underline;padding-left:13px;font-size:.75rem;position:relative}
+.rp-back-icn{background-position:-102px -45px;position:absolute;top:1px;left:0;width:11px;height:16px;display:inline-block}
+.ranking_pwa_wrapper .rank_tuplev1 .rating-block .rating_popup{left:-86px}
+.ranking_pwa_wrapper .rank_tuplev1 .rating-block .rating_popup:before{left:179px}
+.lineimg{margin:0 auto;top: 4px;}
+.lineimg.txt-right{margin-right:0;}
+.lineimg.txt-middle{margin-top:5px;}
+.ranking_pwa section .rating-container{margin: 12px 0;}
+@media screen and (min-width: 1024px) {
+.tuple-inst-img .loader-line.shimmer{margin:0;height:78px}
+.loader-line.shimmer.wdt36.only-largescreen{display:block}
+.ranking-flex .rank-hold .loader-line.shimmer.wdt85{width:55%}
+.ranking-flex .rank-hold .loader-line.shimmer.wdt36{width:25%}
+.ranking-flex.desktop_loader .rank-hold{border:none}
+.showing-rslts{margin:5px 10px;font-size:.875rem;color:#000}
+.showing-rslts strong{color:#000;font-weight:600}
+.rp-zrp-back{margin:30px 0 20px}
+.no_rslts{text-align:center;font-size:1rem;color:#000;margin:100px 0;float: left;width: 100%;}
+.no_rslts strong{font-weight:600}
+.rp-zrp-back span{font-size:.875rem;font-weight:600}
+.rp-zrp-back ul li{font-size:.875rem;line-height:1.34;margin:7px 0 0 23px;list-style:disc;display:list-item}
+.rp-zrp-back ul{width:auto;margin:4px auto 0;display:flex;justify-content:center}
+.rp-zrp-back ul li a{padding-left:0;font-size:.875rem}
+.ctp-SrpBtnDiv a.ctp-btn, .layer-blink a.ctpComp-btn{line-height: 35px;}
+.dfp-loader {display: -webkit-flex; display: flex; flex-direction: row; justify-content: center; width: 100%;}
+.dfp-loader > div.dfp-bg-rp{width: 930px; padding: 0;height: 120px; margin: 10px auto;display: block;background: #eee;}
+.rankingPageDesktop section .rating-container{margin-bottom: 25px;}
+}

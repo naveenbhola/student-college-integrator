@@ -1,0 +1,66 @@
+ul.chng-bList{
+    font-size: 0.875rem;
+}
+ul.chng-bList li .accrdn-check {
+    display: none;
+}
+ul.chng-bList li label p{
+        list-style: none;
+    padding: 10px;
+    position: relative;
+    color: #000;
+}
+ul.chng-bList li label{
+    display: block;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+ul.chng-bList li:last-child label{border:none;}
+ul.chng-bList li label{
+        border-bottom: 1px solid #e0e0e0;
+}
+ul.chng-bList li .accrdn-check ~ ul.brnc-opn{
+     display: none;
+}
+
+ul.chng-bList li .accrdn-check:checked ~ label ~ ul.brnc-opn{
+   display: block;
+   border-bottom: 1px solid #e0e0e0;
+}
+
+ul.chng-bList li .accrdn-check:checked ~ label ~ ul.brnc-opn li a{
+   color: #5a5a5a;
+   font-size: 0.75rem;
+   padding:8px 20px;
+   display: block;
+}
+ul.chng-bList li .accrdn-check + label p:after, ul.chng-bList li .accrdn-check:checked + label p:after  {
+    background: url(https://images.shiksha.ws/pwa/public/images/pwa-header-mobile-v3.svg) no-repeat;
+    content: '';
+    font-size: 1.5rem;
+    color: #008489;
+    position: absolute;
+    font-weight: 400;
+    right: 10px;
+    top: 7px;
+    background-position: -61px 0px;
+    width: 22px;
+    height: 24px;
+    display: inline-block;
+}
+ul.chng-bList li .accrdn-check:checked + label p:after {
+    content: '';
+    background-position: -84px 0px;
+}
+.contact-det a.chng-brnch{font-weight: 400;font-size: 0.75rem}
+i.chBrnch-ico {
+    background-position: -348px -9px;
+    transform: rotate(270deg);
+    width: 15px;
+    height: 15px;
+    position: relative;
+    display: inline-block;
+    position: relative;
+    top: 1px;
+    left: -1px;
+}

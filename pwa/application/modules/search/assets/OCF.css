@@ -1,0 +1,54 @@
+.filter-v1 {height: auto;}
+ul.filterUl {width: 100%;white-space: nowrap;overflow: auto;}
+ul.filterUl li {display: inline-block;margin-right: 7px;border: 1px solid #000;border-radius: 4px;    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);}
+.scroll_div{width: 100%;position: relative;padding: 5px 0 0 12px}
+.scroll_div ul li{padding: 4px 10px 1px;color: #000;}
+.scroll_div:before,
+.scroll_div:after {
+    content: '';
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    top: 0;
+    width: 12px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.75) 50%,rgba(255,255,255,0.8) 100%);
+    background: -webkit-linear-gradient(to right, rgba(255, 255, 255, 0.75) 50%,rgba(255,255,255,0.8) 100%);
+    background: -moz-linear-gradient(to right, rgba(255, 255, 255, 0.75) 50%,rgba(255,255,255,0.8) 100%);
+}
+.scroll_div:after {
+    right: 0px;
+    left: auto;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%,rgba(255,255,255,0.4) 100%);
+    background: -webkit-linear-gradient(to left, rgba(255, 255, 255, 1) 0%,rgba(255,255,255,0.4) 100%);
+    background: -moz-linear-gradient(to left, rgba(255, 255, 255, 1) 0%,rgba(255,255,255,0.4) 100%);
+}
+
+.filter_a i {
+    content: "";
+    background: url(https://images.shiksha.ws/pwa/public/images/pwa-header-mobile-v3.svg) no-repeat;
+    display: inline-block;
+    background-position: -350px -41px;
+    width: 25px;
+    height: 16px;
+    position: relative;
+    top: 1px;
+    display: block;
+    margin: 0 auto;
+}
+.ocf-filter-sec{
+    padding: 10px 0px;
+}
+.filter_name{
+    padding: 0px 0px 0px 12px;
+    display: block;
+}
+#inline-filter{
+    font-size: 0.875rem;
+}
+.ocfTuple {
+    clear: both;
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 16px;
+    background-color: white;
+}

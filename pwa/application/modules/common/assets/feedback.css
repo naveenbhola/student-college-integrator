@@ -1,0 +1,40 @@
+.aligned{display: flex; align-items: center; justify-content: center;}
+.aligned .rating-icon-container{margin-left: 5px;}
+.rating-container h2{text-align: center;}
+.rating-icon-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rating-icon{
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    margin: 0px 3px;
+    background: transparent url('/pwa/public/images/star.svg') no-repeat 0 0;
+}
+.rating-icon.blank{
+    background-position: -33px 0px;
+}
+.rating-icon.fill{
+    background-position: 0px 0px;
+}
+.rating-container {
+    margin-bottom: 8px;
+}
+.rating-icon-container *{line-height: 0;/*to remove extra spacing*/}
+section .rating-container {
+    padding: 10px 0px 16px;
+    background: #fff;
+    box-shadow:0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.16);
+}
+@media screen and (min-width: 1024px) {
+    section .rating-container {
+        padding: 10px 0px 16px;
+        border: 1px solid #d2d2d2;
+        box-shadow:none;
+        margin: 16px auto;
+        max-width: 804px;
+    }
+}

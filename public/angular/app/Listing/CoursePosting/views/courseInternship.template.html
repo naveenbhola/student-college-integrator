@@ -1,0 +1,114 @@
+
+<div class="row" id="course_internsip_form">
+  <div [mysize]="'12'">
+    <div class="x_panel">
+      <div [class.x_title]="opened">
+        <ul class="nav navbar-left panel_toolbox">
+          <li>
+            <a class="collapse-link" (click)="toggle()">
+              <i [class]="opened?' fa fa-chevron-up':' fa fa-chevron-down'"></i>
+            </a>
+          </li>
+        </ul>
+        <h2>Internship</h2>
+        <div class="clearfix"></div>
+      </div>
+      <div class="x_content" [formGroup]="courseInternship"  [hidden]="!opened">
+        <div class="row" *ngIf="initialized">
+          <div class="col-sm-12">
+            <div class="form-group">
+              <div mysize="3">
+                <label>For the batch ending</label>
+              </div>
+              <div mysize="3">
+                <select formControlName = "intern_batch"  class="select2_single form-control">
+                  <option value="">Select Year</option>
+                  <option *ngFor="let year of yearArr" value="{{year}}">{{year}}</option>
+                </select>
+              </div>
+            </div>
+
+            <div *ngIf="courseInternship.controls.intern_batch.value != ''">
+            
+            <table  class="table table-striped table-bordered dataTable no-footer">
+              <thead>
+                <tr>
+                  <th  rowspan="1" colspan="1" style="width: 145px;"></th>
+                  <th  rowspan="1" colspan="1" style="width: 145px;">Min Total Stipend</th>
+                  <th  rowspan="1" colspan="1" style="width: 145px;">Median Total Stipend</th>
+                  <th  rowspan="1" colspan="1" style="width: 145px;">Average Total Stipend</th>
+                  <th  rowspan="1" colspan="1" style="width: 145px;">Max Total Stipend</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr  class="odd">
+                  <td>
+                    <select class="select2_single form-control" formControlName="intern_batch_unit">
+                      <option *ngFor="let option of courseStaticData?.fees_currencies" value="{{option.value}}">{{option.label}}</option>
+                    </select>
+                  </td>
+                  <td>
+                    <input type="text" formControlName="intern_min_stipend" />
+                    <span class="help-block text-danger">
+                    <span *ngIf="courseInternship.controls['intern_min_stipend']?.errors?.number">{{courseInternship.controls['intern_min_stipend']?.errors?.number}}</span>
+                     <span *ngIf="courseInternship?.errors?.intern_min_stipend">{{courseInternship?.errors?.intern_min_stipend}}</span>
+                    </span>
+                  </td>
+                  <td>
+                    <input type="text" formControlName="intern_median_stipend" />
+                    <span class="help-block text-danger">
+                     <span *ngIf="courseInternship.controls['intern_median_stipend']?.errors?.number">{{courseInternship.controls['intern_median_stipend']?.errors?.number}}</span>
+                     <span *ngIf="courseInternship?.errors?.intern_median_stipend">{{courseInternship?.errors?.intern_median_stipend}}</span>
+                    </span>
+                  </td>
+                  <td>
+                    <input type="text" formControlName="intern_average_stipend" />
+                    <span class="help-block text-danger">
+                     <span *ngIf="courseInternship.controls['intern_average_stipend']?.errors?.number">{{courseInternship.controls['intern_average_stipend']?.errors?.number}}</span>
+                     <span *ngIf="courseInternship?.errors?.intern_average_stipend">{{courseInternship?.errors?.intern_average_stipend}}</span>
+                    </span>
+                  </td>
+                  <td>
+                    <input type="text" formControlName="intern_max_stipend" />
+                    <span class="help-block text-danger">
+                     <span *ngIf="courseInternship.controls['intern_max_stipend']?.errors?.number">{{courseInternship.controls['intern_max_stipend']?.errors?.number}}</span>
+                     <span *ngIf="courseInternship?.errors?.intern_max_stipend">{{courseInternship?.errors?.intern_max_stipend}}</span>
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+             <div class="form-group" *ngIf="!showInternshipReport">
+                  <div [mysize]="'3'">
+                    <label>Upload Internship Report</label>
+                  </div>
+                                         
+                   <shiksha-upload 
+                    (mediaResponse) = "uploadInternshipCallback($event)"
+                    [uploadXhrUrl]="'nationalCourse/CoursePosting/uploadCourseDocument'"
+                   >
+                   </shiksha-upload>                   
+              </div>
+
+              <div class="form-group">
+               <div *ngIf="courseInternship.controls.report_url.value != null " style="margin-left:275px">
+                   <div [mysize]="'3'">
+                       <a target="_blank" href="{{courseStaticData['media_server_domain']+courseInternship.controls.report_url.value}}" class="btn btn-default">View uploaded report</a>
+                   </div> 
+                   <div [mysize]="'2'">
+                       <a target="_blank" (click)="clearBrochureData();" class="btn btn-default">X</a>
+                   </div> 
+               </div>
+              </div>
+
+              </div>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <shiksha-loader [showLoader]="showLoader"> </shiksha-loader>

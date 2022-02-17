@@ -1,0 +1,15 @@
+/*Common Section | Reset| commenting this code because duplicacy */
+/*html{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Open Sans',Arial, sans-serif;
+}
+:root{font-size: 16px;}
+*{margin:0;padding:0;border:0;box-sizing: border-box;}*/
+
+/*Common Section | Desktop PWA Frame*/
+.pwa_wrapper{}
+.pwa_container{width: 1170px;margin: 0 auto;}
+.pwa_container:after{content: "";display: block;clear: both;}
+.pwa_leftCol{width:70%;float:left;padding-right:15px;}
+.pwa_rightCol{width:30%;float:right;padding-left:15px;}

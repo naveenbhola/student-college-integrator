@@ -1,0 +1,81 @@
+@charset "utf-8";
+*{margin:0;padding:0}
+.clearfix:after {visibility: hidden; display: block; content: " ";  clear: both; height: 0;} .clearfix {display: inline-block;} * html .clearfix {height: 1%;} .clearfix {display: block;} .clear{clear:both; width:100%; float:left} *,*:before,*:after{  -moz-box-sizing:border-box;  -webkit-box-sizing:border-box;  box-sizing:border-box;}
+a{text-decoration:none; color:#000;}
+/*img{page-break-inside: avoid; -fs-fit-images-to-width:6in;}*/
+.break{page-break-before: always}
+/* list numbering */
+.wiki-content ol, .wiki-content ol ol ol ol, .wiki-content ol ol ol ol ol ol ol, .wiki-content ol ol ol ol ol ol ol ol ol ol {list-style-type:decimal;}
+.wiki-content ol ol, .wiki-content ol ol ol ol ol, .wiki-content ol ol ol ol ol ol ol ol, .wiki-content ol ol ol ol ol ol ol ol ol ol ol {list-style-type:lower-alpha;}
+.wiki-content ol ol ol, .wiki-content ol ol ol ol ol ol, .wiki-content ol ol ol ol ol ol ol ol ol, .wiki-content ol ol ol ol ol ol ol ol ol ol ol ol {list-style-type:lower-roman;}
+.wiki-content ul{list-style-type:disc; margin-left:20px}
+.wiki-content ul li, .wiki-content ol li{margin-bottom: 5px}
+pre{white-space: pre-wrap;}
+strong{font-weight:700; font-family:'Open Sans';}
+table{border-collapse: collapse;}
+pre{padding: 0; margin: 10px 0;text-align: left; overflow: auto;}
+hr{color: #3c78b5; height: 1px;}
+body{margin: 0; padding: 0; font-family:'Open Sans'; font-size:12pt; color:#333; line-height: 135%}
+h1,h2,h3,h4,h5,h6,h7,h8,h9{padding: 0px; margin:0; display:block}
+h1{font-weight:800; font-size:32pt; line-height:34pt; color:#f7943c; font-family:'Open Sans';}
+h2{font-size:18pt; font-weight:400; margin-bottom:8px; color:#000; font-family:'Open Sans';}
+.note-box h2{color:#fff}
+.page-wrapper { width: 210mm; height: 296mm; position:relative}
+.course-name{border-bottom:1px solid #fff; font-weight: 800; font-size:35pt; line-height:33pt; margin-bottom:12px; height:277px; display:table-cell; vertical-align:middle; font-family:'Open Sans';}
+.university-add{text-transform:none; font-weight:300; font-size:16pt; line-height:19pt; display:table-cell; vertical-align:middle; font-family:'Open Sans';}
+table.grid-table{page-break-inside: avoid; width:100%}
+table.grid-table tr{page-break-inside: avoid;}
+table.grid-table td{height:93px; width:113px}
+table.cover-page-content{width:100%}
+table.cover-page-content td.course-title{height:372px !important}
+div{word-wrap: break-word;}
+.header, .footer{width:100%; height:64px;}
+.footer-child{margin:12px 15px}
+.footer-course-name{width:80%; float:right; text-align:right; text-transform:uppercase; padding-top:8px}
+.header table tr td, .footer table tr td{width:25px; height:32px}
+.footer table tr td{height:10px; overflow:hidden}
+.note-box{background:#282829; padding:18px 30px; border-top:9px solid #fec70b;border-bottom:9px solid #fec70b; color:#fff;}
+.left-col{float:left; border-right:1px solid #fff;}
+.right-col{margin-left:32%;}
+.course-left, .course-right{width:25%; padding:10px 0; line-height:16pt; font-style:italic}
+.course-left i, .course-right i{font-style: italic; display: block; margin-bottom: 12px}
+.course-left span, .course-right span{font-size:18pt;}
+.course-right{width:70%;}
+.content-wrap{margin:65px 0 32px 0; float:left; width:100%}
+.content-child{padding:20px 40px}
+.content-details{padding-bottom:25px; border-bottom:7px solid #d5d6d8; margin-bottom:25px;}
+.icon-col{float:left;}
+.detail-col{margin-left:90px;}
+.course-title-box{padding:75px 40px}
+table.course-fee-table, table.info-table{width:100%; margin-top:12px}
+table.companies-table, table.image-table{width:100%}
+table.image-table tr td{text-align:center; padding-bottom:20px}
+table.image-table tr td img{width:400px; height:268px;}
+table.companies-table tr td{padding:0 10px 20px 0}
+table.course-fee-table tr td, table.info-table tr td{padding-right:8px}
+table.info-table tr td{padding:5px 8px 15px 0}
+.course-eligibility ul li{list-style:none; float:left; width:100%; margin-bottom:10px} 
+.course-eligibility .exam-name{width:75px; float:left; font-weight:600; padding-top:3px; font-family:'Open Sans';}
+.course-eligibility .cutoff-col{width:550px; float:left; border:1px solid #745f00; height:26px}
+.graph-bar{background:#e1d697; height:24px;}
+.course-eligibility .cutoff-col p{padding:2px 8px 0}
+.course-eligibility .max-col{width:70px; margin-left:15px; float:left; padding-top:3px}
+.profile-data{color:#fff;}
+.profile-data ul li{margin-bottom:3px; list-style:none;}
+.profile-data ul li label{width:550px; float:left;}
+.profile-data ul li span{color:#ffdf00; font-weight:700; margin-left:550px; display:block; font-family:'Open Sans';}
+.more-link{font-size:9pt; float:right; font-family:'Open Sans'; color:#000; font-style: italic}
+.other-courses{width:100%; border-collapse:collapse; margin-bottom:15px;}
+.other-courses tr th, .other-courses tr td, .dep-table tr td{background:#ae9bae; text-align:center; color:#fff; padding:1px; font-weight:800;border:1px solid #000; padding:3px 5px; border:1px solid #000; font-family:'Open Sans';}
+.other-courses tr td{background:#fff; color:#000; font-weight:normal; text-align:left; font-family:'Open Sans';}
+.dep-table tr td{text-align:left; width:50%;}
+.pointer {border-bottom: 12px solid transparent; border-right: 12px solid #e1d697;border-top: 12px solid transparent;bottom: auto;cursor: auto;left: -12px; position: absolute;top: 31px;}
+.currency-box{width:68px; height:68px; background-color:#fab746; font-size:44pt; color:#fff; text-align:center; font-weight:normal; line-height:68px; font-family:'Open Sans';}
+.play-icon {position:absolute; top:37%; left:45%; }
+.play-icon img{width:77px !important; height:77px !important;}
+.disclaimer-content {font-size:10pt; margin-top:20pt}
+@page 
+{	size: 210mm 297mm;
+    margin: 0in;
+    padding:0em;
+}

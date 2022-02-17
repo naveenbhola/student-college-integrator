@@ -1,0 +1,10 @@
+h2.tbSec2.highlight_color{color: #e94c25}
+.notification_wrapper{display: block;}
+.notification_list{border-bottom: 1px solid #d2d2d2}
+.notification_list:last-child{border-bottom: none;}
+.notification_list a,.notification_list span{padding: 10px 12px;line-height: 1.3125rem;display: block;font-size: 0.875rem;text-decoration: none;}
+.btn_wrapper{text-align: center;border-top: 1px solid #d2d2d2;padding: 12px;}
+.notification_list span > a{display: inline;padding: 0;margin: 0;font-weight: 400;}
+.notification_list a{color: #008489;}
+.notification_list a:not([href]){color: #000}
+

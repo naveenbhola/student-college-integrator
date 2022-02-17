@@ -1,0 +1,19 @@
+.usefull-links{font-size: 0.75rem;color: #333;padding: 5px 9px 0px 9px;}
+.nav-tabs {box-sizing: border-box;overflow: hidden;width: 100%;height:auto;}
+.chp-nav{width: 100%;background: #fff;z-index: 99991;}
+.chp-nav.sticky{position: fixed;top: 0px;box-shadow:0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);z-index: 11}
+.chp-navList{position: relative;padding: 0px;}
+ul.l2Menu-list li a{padding: 7px 10px 4px;color: #008489;display: inline-block;border-bottom: 4px solid transparent;font-size: 1rem;font-weight: 400;}
+ul.l2Menu-list li{border-bottom: 1px solid #d8d8d8;}
+ul.l2Menu-list li:last-child{border-bottom: none;}
+ul.l2Menu-list li a.active{border-bottom: 4px solid #008489;color: #008489;font-weight: 600;}
+ul.l2Menu-list.collapse li{display: none;}
+ul.l2Menu-list.collapse li.active{display: block;border-bottom: none;}
+.expnd-switch{display: inline-block;width: 24px;height: 24px;border: 1px solid #008489;border-radius: 50%;text-align: center;position: relative;background-color: #fff;box-shadow: 2px 2px 3px rgba(0,0,0,0.2)}
+.expnd-circle{position: absolute;right: 0px;top: -25px;padding: 30px 10px 9px 20px;}
+.expnd-switch:before{content: "";width: 2px;height: 14px;position: absolute;background: #008489;top: 4px;left: 10px;}
+.expnd-switch:after{content: "";width: 14px;height: 2px;background: #008489;position: absolute;top: 10px;left: 4px;}
+.expended .expnd-switch:before{
+    content: none;
+}
+.ib-circle{display: inline-block;border-radius: 50%;}

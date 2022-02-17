@@ -1,0 +1,161 @@
+<?php
+$config = array();
+
+$config['SITE_LIST'] = array('99Acres','Shiksha','Jeevansathi','Brijj');
+
+$config['SHIKSHA_TEAM_PAGE_MAP'] = array(
+	'mobile_app'	=> array(
+		'desktop' 	=> array(
+				'SHIKSHA_CAFE_BUZZ_TAB',
+				'SHIKSHA_CAFE_QUESTION_DETAIL',							
+				'SHIKSHA NATIONAL ALL QUESTIONS PAGE',
+				'SHIKSHA NATIONAL ALL REVIEWS PAGE',
+				'SHIKSHA_CAFE_QNA_TAB'
+			),
+		'mobile'	=> array(
+			'SHIKSHA_NATIONAL_MOB_ALL_QUESTIONS_PAGE',
+			'SHIKSHA_NATIONAL_MOB_ALL_REVIEWS_PAGE',
+			'SHIKSHA_NATIONAL_MOB_ADMISSION_PAGE'
+			)
+	),
+	'studyabroad'	=> array(
+		'desktop' 	=> array(
+			'SA_HOME_PAGE',
+			'SA_CATEGORY_PAGE',
+			'SA_COURSE_PAGE',
+			'SA_DEPARTMENT_PAGE',
+			'SA_UNIVERSITY_PAGE',
+			'SA_COUNTRY_PAGE',
+			'SA_CONTENT_PAGE',
+			'SA_RANKING_PAGE',
+			'SA_CONTENT_ORG_PAGES',
+			'SA_COUNTRY_HOME_PAGE',
+			'Study Abroad APPLY CONTENT PAGES',
+			'SA_EXAM_CONTENT_PAGES',
+			'SHIKSHA_NEW_STUDY_ABROAD_PAGE',
+			'SA_EXAM_PAGES',
+			'SA_CONSULTANT_PAGES',
+			'Study Abroad APPLY LANDING HOMEPAGE',
+			'Study Abroad COUNSELOR PAGE',
+			'Study Abroad Shipment Welcome Page',
+			'Study Abroad Schedule Pickup Page',
+			'Study Abroad Shipment Confirmation Page',
+			'SA_SCHOLARSHIP_HOMEPAGE',
+			'SA_SCHOLARSHIP_CATEGORY_PAGE',
+			'SA_SCHOLARSHIP_DETAILS_PAGE'
+						),
+		'mobile'	=> array(
+			'SA_MOB_APPLY_HOMEPAGE',
+			'SA_MOB_COUNSELORPAGE',
+			'SA_MOB_CATEGORYPAGE',
+			'SA_MOB_COUNTRYPAGE',
+			'SA_MOB_LOGINPAGE',
+			'SA_MOB_APPLYCONTENTPAGE',
+			'SA_MOB_ARTICLEPAGE',
+			'SA_MOB_EXAMPAGE',
+			'SA_MOB_GUIDEPAGE',
+			'SA_MOB_COUNTRYHOMEPAGE',
+			'SA_MOB_HOMEPAGE',
+			'SA_MOB_LISTINGPAGE',
+			'SA_MOB_UNIVERSITYPAGE',
+			'SA_MOB_RANKINGPAGE',
+			'SA_MOB_RMCPAGE',
+			'SA_MOB_SUCCESSPAGE',
+			'SA_MOB_SEARCHPAGE',
+			'SA_MOB_SHIPMENTWELCOMEPAGE',
+			'SA_MOB_SHORTLISTPAGE',
+			'SA_MOB_SCHOLARSHIP_HOMEPAGE',
+			'SA_MOB_SCHOLARSHIP_CATEGORY_PAGE',
+			'SA_MOB_SCHOLARSHIP_DETAIL_PAGE'
+						)
+	),
+	'listings'	=> array(
+		'desktop' 	=> array(
+				'SHIKSHA_COURSEPAGES_HOME_PAGE',
+				'SHIKSHA_NATIONAL_INSTITUTE_DETAIL_PAGE',
+				'SHIKSHA_NATIONAL_COURSE_DETAIL_PAGE',
+				'SHIKSHA_RNR_CATEGORY_PAGE',
+				'NATIONAL_RANKING_NEW',
+				'SHIKSHA SEARCH RESULT PAGE V2',
+				'SHIKSHA_LISTING_DETAIL_OVERVIEW_PAGE AND SHIKSHA_LISTING_DETAIL_TEST_OVERVIEW_PAGE',
+				'SHIKSHA_LISTING_DETAIL_ALUMNI_PAGE',
+				'SHIKSHA_LISTING_DETAIL_ANA_PAGE',
+				'SHIKSHA_LISTING_DETAIL_MEDIA_PAGE',
+				'SHIKSHA_LISTING_DETAIL_COURSE_PAGE',
+				'Category Page',
+				'Search Page',
+				'SHIKSHA_NEW_CATEGORY_PAGE',
+				'Listing Detail Page'
+			),
+		'mobile'	=> array(
+				'SHIKSHA_MOB_NATIONAL_COURSE_LISTINGS_TAB',
+				'SHIKSHA_MOB_NATIONAL_COURSE_LISTINGS',
+				'SHIKSHA_MOB_NATIONAL_COLLEGE_LISTINGS',
+				'SHIKSHA_MOB_NATIONAL_CATEGORY_PAGE',
+				'SHIKSHA_MOB_NATIONAL_CATEGORY_PAGE_FULLTIME_MBA',
+				'SHIKSHA_MOB_NATIONAL_RANKING_PAGE',
+				'SHIKSHA_MOB_NATIONAL_UNIVERSITY_LISTINGS',
+				'SHIKSHA NATIONAL UNIVERSITY_DETAIL PAGE',
+				'MOB_SHIKSHA_NATIONAL_COURSE_LISTINGS_TAB',
+				'MOB_SHIKSHA_NATIONAL_COURSE_LISTINGS',
+				'MOB_SHIKSHA_NATIONAL_COLLEGE_LISTINGS',
+				'MOB_SHIKSHA_NATIONAL_CATEGORY_PAGE',
+				'MOB_SHIKSHA_NATIONAL_CATEGORY_PAGE_FULLTIME_MBA',
+				'MOB_SHIKSHA_NATIONAL_MBA_RANKING_PAGE',
+				'MOB_SHIKSHA_NATIONAL_ENG_RANKING_PAGE'
+			)			
+	),
+	'ugc'	=> array(
+		'desktop' 	=> array(
+				'Home Page',
+				'NATIONAL_EXAM_PAGES',
+				'NATIONAL_MYSHORTLIST',
+				'SHIKSHA NATIONAL HOMEPAGE',
+				'SHIKSHA NATIONAL ALL ARTICLES_PAGE'
+			),
+		'mobile'	=> array(
+				'SHIKSHA_MOB_NATIONAL_HOMEPAGE',
+				'SHIKSHA_MOB_NATIONAL_EXAM_PAGES',
+				'SHIKSHA_MOB_NATIONAL_ARTICLE_DETAILS_PAGE',
+				'SHIKSHA_NATIONAL_MOB_ALL_ARTICLES_PAGE',
+				'MOB_SHIKSHA_NATIONAL_HOMEPAGE',
+				'MOB_SHIKSHA_NATIONAL_EXAM_PAGES',
+				'MOB_SHIKSHA_NATIONAL_ARTICLE_DETAILS_PAGE'
+
+			)			
+	),
+	'ldb'	=> array(
+			'desktop' 	=> array(),
+			'mobile'	=> array()			
+	),
+	'common'	=> array(
+			'desktop' 	=> array(),
+			'mobile'	=> array()			
+	),
+	'others'	=> array(
+			'desktop' 	=> array(
+				'SHIKSHA_COURSEPAGES_FAQ_MASTER_PAGE'
+				),
+			'mobile'	=> array()
+	),
+);
+$config['99ACRES_TEAM_PAGE_MAP'] = array();
+$config['JEEVANSATHI_TEAM_PAGE_MAP'] = array();
+$config['BRIJJ_TEAM_PAGE_MAP'] = array();
+
+
+$config['SOURCE_APPLICATION'] = array(
+								"desktop"	=> 'Desktop',
+								"mobile" 	=> 'Mobile'
+								);
+
+$config['ATTRIBUTE_COLORS'] = array('#008000','#B8860B','#B22222','#000080','#000000');
+
+$config['PAGE_ATTRIBUTES'] = array(
+								'Total Page Load Time' 	=> 0,
+								'Head Recieved'			=> 0,
+								'Page Rendering Time'	=> 0,
+								'Server Processing Time'=> 0,
+								'Page Views'			=> 0
+								);
+?>

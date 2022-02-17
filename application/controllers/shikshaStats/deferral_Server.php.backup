@@ -1,0 +1,27 @@
+<?php
+class deferral_Server extends Controller 
+{
+
+    function index()
+    {
+        $this->init();
+        error_log("i am here at server");
+
+        $config['functions']['getData']=array('function'=>'shikshaStatsServer.getData');
+        $this->xmlrpcs->initialize($config);
+        $this->xmlrpcs->set_debug(0);
+        $this->xmlrpcs->serve();
+    }
+
+    function init()
+    {
+        set_time_limit(0);
+        $this->load->library('xmlrpc');
+        $this->load->library('xmlrpcs');
+        $this->load->library('parsexml');
+        $this->load->library('messageboardconfig');
+        $this->load->helper('url');
+    }
+
+}
+?>

@@ -1,0 +1,6 @@
+.more-exam{position: relative;}
+.exm-more-lyr{position: absolute;top: 25px;min-width: 130px;max-width: 228px;left: -50px;background: #fff;box-shadow: 0 3px 8px 0 rgba(0,0,0,.2), 0 0 0 1px rgba(0,0,0,.08);z-index: 10;}
+.exm-more-lyr ul {list-style: none;position: relative;z-index: 2;}
+.exm-more-lyr ul li a{text-decoration: none;padding:10px 10px;font-size:0.875rem;font-weight: 600;color:#008489;display:block}
+.exam span a.no-exam, .exm-more-lyr ul li a.no-exam{color: #000;cursor: default;}
+.exm-more-lyr:after{content: '';position: absolute;background:#fff;margin: auto;top: -8px;left: 0;right: 16px;width: 14px;height: 14px;transform: rotate(225deg);-webkit-transform: rotate(225deg);-moz-transform: rotate(225deg);-o-transform: rotate(225deg);-ms-transform: rotate(225deg);border-right: 1px solid #ccc;border-bottom: 1px solid #ccc;background: #fff;z-index: 1;}

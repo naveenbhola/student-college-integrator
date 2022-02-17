@@ -1,0 +1,18 @@
+.viewCollegeSec .dot_ul li a {
+    color: #008489;
+    font-size: 0.875rem;
+    padding: 5px 0px;
+    display: block;
+}
+
+.viewCollegeSec .dot_ul li {
+    list-style-type: none;
+    font-size: 0.675rem;
+}
+.viewCollegeSec .viewCllgSec_subcontainer{background-color: #fff;}
+
+
+@media only screen and (min-width: 1025px){
+	.viewCollegeSec.interlinkSec{float: left;width: 100%;}
+    .viewCllgSec._subcontainer{padding: 12px 16px 16px;background-color: #fff;}
+}

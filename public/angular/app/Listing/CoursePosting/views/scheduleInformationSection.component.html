@@ -1,0 +1,67 @@
+<div class="row" id="course_schedule_info_form">
+    <div [mysize]="'12'">
+        <div class="x_panel">
+           <div [class.x_title]="opened">
+                 <ul class="nav navbar-left panel_toolbox">
+                  <li><a class="collapse-link" (click)="toggle()"><i [class]="opened?' fa fa-chevron-up':' fa fa-chevron-down'"></i></a></li>
+              </ul>
+                <h2>Schedule Information </h2>
+                <div class="clearfix"></div>
+           </div>
+           <div class="x_content"  [hidden]="!opened">
+              <div [formGroup]="scheduleForm">
+                <div class="form-group">
+                    <div [mysize]="'3'">
+                        <label>Education Type<span class="required">*</span><img class="helperText" id="education_type" src="/public/images/tooltip.png" width="20px" style="padding-right:0px" (click)="toolTipNotify('education_type',$event)"></label>
+                    </div>                  
+                    <div [mysize]="9">
+                        <div [mysize]="'3'" *ngFor="let item of courseStaticData?.education_type">
+                            <label class="radio-inline" [mysize]="'6'" noBootstrap>
+                            <input type="radio" class="flat" formControlName="education_type" value="{{item.value}}"/>{{item.label}}</label>
+                        </div> 
+                    </div>
+                  </div>
+                  <div *ngIf="scheduleForm.controls.education_type.value == ETCONST.partTime">
+                    <div class="form-group">
+                      <div [mysize]="'3'">
+                             <label>Schedule<img class="helperText" id="schedule" src="/public/images/tooltip.png" width="20px" style="padding-right:0px" (click)="toolTipNotify('schedule',$event)"></label>
+                      </div>
+                      <div [mysize]="'3'" style="padding-left:0px;">
+                        <mymultiselect formControlName="schedule" (selectedValues)="setSelectedSchedule($event);" [data]="courseStaticData?.schedule" [defaultPlaceholder]="'Select Schedule'" [itemKey]="'schedule'"></mymultiselect>
+                        
+                      </div>
+                      
+                    </div>
+
+                    <div class="form-group">
+                      <div [mysize]="'3'">
+                             <label>Medium / Delivery Method<img class="helperText" id="delivery_method" src="/public/images/tooltip.png" width="20px" style="padding-right:0px" (click)="toolTipNotify('delivery_method',$event)"></label>
+                      </div>
+                      <div [mysize]="'3'">
+                        <select name="medium" formControlName="delivery_method" class="select2_single form-control">  
+                          <option value="">Select Medium / Delivery Method</option>
+                          <option *ngFor="let item of courseStaticData?.medium_delivery" value="{{item.value}}">{{item.label}}</option>
+                        </select>         
+                         <span class="help-block text-danger">
+                             <span *ngIf="!scheduleForm.controls.delivery_method.valid">Delivery Method is required</span>
+                         </span>             
+                      </div>
+                    </div>
+
+                    <div class="form-group" *ngIf="scheduleForm.controls.delivery_method.value == DMCONST.online">
+                      <div [mysize]="'3'">
+                          <label>Time of Learning<img class="helperText" id="time_of_learning" src="/public/images/tooltip.png" width="20px" style="padding-right:0px" (click)="toolTipNotify('time_of_learning',$event)"></label>
+                      </div>
+                      
+                      <div [mysize]="9">
+                          <div [mysize]="'3'" *ngFor="let item of courseStaticData?.time_learning">
+                              <label class="radio-inline" [mysize]="'8'" noBootstrap><input type="radio" formControlName="time_of_learning" class="flat" value="{{item.value}}"/>{{item.label}}</label>
+                          </div>                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+           </div>
+        </div>
+    </div>
+</div>

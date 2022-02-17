@@ -1,0 +1,256 @@
+<style type="text/css">
+    .pickListButtons {
+        padding: 10px;
+        text-align: center;
+    }
+    .pickListButtons button {
+        margin-bottom: 5px;
+    }
+    .pickListSelect {
+        height: 200px !important;
+    }
+    .pickListSelect > option {
+        margin-bottom: 5px;
+    }
+</style>
+
+<div class="row" id="course_locations_form" *ngIf="initializedForm">
+    <div [mysize]="'12'">
+        <div class="x_panel">
+            <div [class.x_title]="opened">
+                <ul class="nav navbar-left panel_toolbox">
+                    <li>
+                        <a class="collapse-link" (click)="toggle()">
+                        <i [class]="opened?' fa fa-chevron-up':' fa fa-chevron-down'"></i>
+                        </a>
+                    </li>
+                </ul>
+                <h2>Course Locations<img class="helperText" id="course_locations" src="/public/images/tooltip.png" width="20px" style="padding-right:0px" (click)="toolTipNotify('course_locations',$event)"></h2>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content" [formGroup]="courseLocations"  [hidden]="!opened" >
+            <div class="form-group" *ngIf="locationData.length > 1">
+                <div class="container">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Choose Locations</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div id="pickList">
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <select class="form-control pickListSelect" (change)="changeLeft($event.target.options)" id="pickData" multiple="">
+                                            <option *ngFor="let item of leftBox" value="{{item.locationId}}">{{item.city_name}}</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-2 pickListButtons">
+                                        <button id="pAdd" class="btn cmsFont cmsButton" (click)="addItem()">Add</button>
+                                        <button id="pRemove" class="btn cmsFont cmsButton" (click)="removeItem()">Remove</button>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <select class="form-control pickListSelect" id="pickListResult" multiple=""  (change)="changeRight($event.target.options)">
+                                            <option  *ngFor="let item of rightBox" value="{{item.locationId}}">{{item.city_name}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" *ngIf="rightBox.length > 0">
+                <h4> Selected Locations: </h4>
+            </div>
+            <div class="form-group" *ngFor="let item of rightBox;let index=index">
+                <div mysize="3">
+                    <label>{{item.city_name}}</label>
+                </div>
+                <div mysize="3" *ngIf="locationData.length > 1">
+                    <div class="radio">
+                        <label class="radio-inline"  noBootstrap>
+                        <input type="radio"  formControlName="locationsMain" class="flat" value="{{item.locationId}}"/>
+                        <span> Head Office</span>
+                        </label>
+                    </div>
+                </div>
+                <div mysize="1" *ngIf="locationData.length > 1">
+                    <button id="pAdd" type="button" class="btn cmsFont cmsButton" (click)="removeSelectedItem(item.locationId)">Remove</button>
+                </div>
+                <div mysize="2">
+                    <button id="pAdd" type="button" class="btn cmsFont cmsButton" (click)="showItemModal(item.locationId,'contact_details')">{{locationContactsUpdated[item.locationId] ? 'Update' : 'Add' }} Contact Details</button>  
+                </div>
+                <div mysize="2">
+                    <button id="pAdd" type="button" class="btn cmsFont cmsButton" (click)="showItemModal(item.locationId,'fees')">{{locationFeesUpdated[item.locationId] ? 'Update' : 'Add' }} Fees</button>  
+                </div>
+            </div>
+            <span class="help-block text-danger" *ngIf="!courseLocations.controls.locationsMain.valid && rightBox.length > 0">
+            <span *ngIf="courseLocations.controls.locationsMain.errors.required">Head Office is required</span>
+            </span>    
+            <span class="help-block text-danger">
+            <span *ngIf="locationSelectedIds.length <= 0">Please select at least one location</span>
+            </span> 
+        </div>
+    </div>
+</div>
+
+<div bsModal #courseLocModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" [config]="{backdrop: 'static',keyboard: false}">
+    <form  autocomplete="off"  novalidate>
+        <div class="modal-dialog modal-lg" style="width:1000px;margin-right:30px;" [formGroup]="cLTemp.controls.contact_details_temp">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn close" [disabled]="!cLTemp.controls.contact_details_temp.valid" (click)="cLTemp.controls.contact_details_temp.valid && hideCourseLocationModal()"  aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Contact Info</h4>
+                </div>
+                <div class="modal-body" style="position: relative;overflow-y: auto;max-height: 450px;">
+                    <div class="form-group">
+                        <div [mysize]="'3'">
+                            <p [mysize]="'12'">Address</p>
+                        </div>
+                        <div [mysize]="3">
+                            <textarea  formControlName="locationAddress"></textarea>
+                            <span class="help-block text-danger"  *ngIf="!cLTemp.controls.contact_details_temp.controls.locationAddress.valid">
+                            <span *ngIf="cLTemp.controls.contact_details_temp.controls.locationAddress.errors.maxlength">Use less than or equal to 300 characters</span>                            
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div [mysize]="'3'">
+                            <p [mysize]="'12'">College Website</p>
+                        </div>
+                        <div [mysize]="3">
+                            <input type="text" formControlName="locationWebsite" />
+                            <span class="help-block text-danger"  *ngIf="!cLTemp.controls.contact_details_temp.controls.locationWebsite.valid">
+                            <span *ngIf="cLTemp.controls.contact_details_temp.controls.locationWebsite.errors.maxlength">Use less than or equal to 500 characters</span>
+                            <span *ngIf="cLTemp.controls.contact_details_temp.controls.locationWebsite.errors?.link">{{cLTemp.controls.contact_details_temp.controls.locationWebsite.errors?.link}}</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div [mysize]="'3'">
+                            <p [mysize]="'12'">Latitude</p>
+                        </div>
+                        <div [mysize]="3">
+                            <input type="text" formControlName="locationCoordinatesLat"/>
+                            <span class="help-block text-danger">
+                            <span *ngIf="cLTemp.controls.contact_details_temp?.errors?.validateOneOrNoneFormGroup?.locationCoordinatesLat">Latitude cannot be empty</span>
+                            </span>
+                            <span class="help-block text-danger" *ngIf="!cLTemp.controls.contact_details_temp.controls.locationCoordinatesLat.valid">
+                            <span *ngIf="cLTemp.controls.contact_details_temp.controls.locationCoordinatesLat.errors.maxlength">Use less than or equal to 10 characters</span>
+                            <span *ngIf="cLTemp.controls.contact_details_temp.controls.locationCoordinatesLat.errors?.geo_coordinates">{{cLTemp.controls.contact_details_temp.controls.locationCoordinatesLat.errors?.geo_coordinates}}</span>
+                            </span>
+                        </div>
+                        <div [mysize]="'3'">
+                            <p [mysize]="'12'">Longitude</p>
+                        </div>
+                        <div [mysize]="3">
+                            <input type="text" formControlName="locationCoordinatesLong" />
+                            <span class="help-block text-danger">
+                            <span *ngIf="cLTemp.controls.contact_details_temp?.errors?.validateOneOrNoneFormGroup?.locationCoordinatesLong">Longitude cannot be empty</span>
+                            </span>
+                            <span class="help-block text-danger" *ngIf="!cLTemp.controls.contact_details_temp.controls.locationCoordinatesLong.valid">
+                            <span *ngIf="cLTemp.controls.contact_details_temp.controls.locationCoordinatesLong.errors.maxlength">Use less than or equal to 10 characters</span>
+                            <span *ngIf="cLTemp.controls.contact_details_temp.controls.locationCoordinatesLong.errors?.geo_coordinates">{{cLTemp.controls.contact_details_temp.controls.locationCoordinatesLong.errors?.geo_coordinates}}</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div [mysize]="'6'">
+                            <h4 [mysize]="'12'">Admissions-enquiry Contact</h4>
+                        </div>
+                        <div [mysize]="6">
+                            <h4 [mysize]="'12'">Generic-query Contact</h4>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div [mysize]="'3'">
+                            <p [mysize]="'12'">Contact Number</p>
+                        </div>
+                        <div [mysize]="3">
+                            <input type="text" formControlName="locationAdmissionContactNumber" />
+                            <span class="help-block text-danger" *ngIf="!cLTemp.controls.contact_details_temp.controls.locationAdmissionContactNumber.valid">
+                            <span *ngIf="cLTemp.controls.contact_details_temp.controls.locationAdmissionContactNumber.errors.maxlength">Use less than or equal to 20 characters</span>
+                            <span *ngIf="cLTemp.controls.contact_details_temp.controls.locationAdmissionContactNumber.errors?.phone_number">{{cLTemp.controls.contact_details_temp.controls.locationAdmissionContactNumber.errors?.phone_number}}</span>
+                            </span>
+                        </div>
+                        <div [mysize]="'3'">
+                            <p [mysize]="'12'">Contact Number</p>
+                        </div>
+                        <div [mysize]="3">
+                            <input type="text" formControlName="locationGenericContactNumber" />
+                            <span class="help-block text-danger" *ngIf="!cLTemp.controls.contact_details_temp.controls.locationGenericContactNumber.valid">
+                            <span *ngIf="cLTemp.controls.contact_details_temp.controls.locationGenericContactNumber.errors.maxlength">Use less than or equal to 20 characters</span>
+                            <span *ngIf="cLTemp.controls.contact_details_temp.controls.locationGenericContactNumber.errors?.phone_number">{{cLTemp.controls.contact_details_temp.controls.locationGenericContactNumber.errors?.phone_number}}</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div [mysize]="'3'">
+                            <p [mysize]="'12'">Email ID</p>
+                        </div>
+                        <div [mysize]="3">
+                            <input type="text" formControlName="locationAdmissionEmail" />
+                            <span class="help-block text-danger" *ngIf="!cLTemp.controls.contact_details_temp.controls.locationAdmissionEmail.valid">
+                            <span *ngIf="cLTemp.controls.contact_details_temp.controls.locationAdmissionEmail.errors.maxlength">Use less than or equal to 150 characters</span>
+                            <span *ngIf="cLTemp.controls.contact_details_temp.controls.locationAdmissionEmail.errors?.email">{{cLTemp.controls.contact_details_temp.controls.locationAdmissionEmail.errors?.email}}</span>
+                            </span>             
+                        </div>
+                        <div [mysize]="'3'">
+                            <p [mysize]="'12'">Email ID</p>
+                        </div>
+                        <div [mysize]="3">
+                            <input type="text" formControlName="locationGenericEmail" />
+                            <span class="help-block text-danger" *ngIf="!cLTemp.controls.contact_details_temp.controls.locationGenericEmail.valid">
+                            <span *ngIf="cLTemp.controls.contact_details_temp.controls.locationGenericEmail.errors.maxlength">Use less than or equal to 150 characters</span>
+                            <span *ngIf="cLTemp.controls.contact_details_temp.controls.locationGenericEmail.errors?.email">{{cLTemp.controls.contact_details_temp.controls.locationGenericEmail.errors?.email}}</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div [mysize]="'12'" style="text-align:center;"> 
+                            <button type="submit" class="btn cmsFont cmsButton" (click)="updateModal('contact_details')" [disabled]="!cLTemp.controls.contact_details_temp.valid">Update</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div bsModal #courseLocFeesModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" [config]="{backdrop: 'static',keyboard: false}">
+    <form  autocomplete="off"  novalidate>
+        <div class="modal-dialog modal-lg" style="width:1000px;margin-right:30px;" *ngIf="initialized">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn close" [disabled]="!cLTemp.controls.fees_temp.valid" (click)="cLTemp.controls.fees_temp.valid && hideCourseLocationFeesModal()"  aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Fees</h4>
+                </div>
+                <div class="modal-body" style="position: relative;overflow-y: auto;max-height: 450px;">
+                    <div [formGroup]="cLTemp.controls.fees_temp">
+                        <addColumnTableComponent [editData]="feesEditTempData" [group]="cLTemp.controls['fees_temp']" [default]="_default" [addmore]="_addMore" [tableHeading]="'Location Fees'" [colHeading]="'Total'" [validateOutOf]="false"></addColumnTableComponent>
+                        <div class="form-group">
+                            <div [mysize]="'12'" style="text-align:center;"> 
+                                <button type="submit" class="btn cmsFont cmsButton" (click)="updateModal('fees')" [disabled]="!cLTemp.controls.fees_temp.valid">Update</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group" [formGroup]="cLTemp">
+                        <div mysize="2">
+                            <label>Show Fees Disclaimer</label>
+                        </div>
+                        <div mysize="1">
+                            <div class="checkbox" style="padding-top:0px">
+                                <label>
+                                <input type="checkbox" formControlName="fees_disclaimer_temp"> Yes
+                                </label>                                 
+                            </div>
+                        </div>
+                    </div>
+                    <br/>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

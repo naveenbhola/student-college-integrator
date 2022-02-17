@@ -1,0 +1,37 @@
+.cssSprite{background-image:url(/public/images/headerImage.gif)}
+#headerGradienthome {background-image:url(/public/images/headerImage.gif);  width:100%;height:18px; background-repeat:repeat-x; background-position:0 -40px;  margin-bottom:10px; }
+#naukriLogo{background-image:url(/public/images/headerImage.gif);background-repeat:no-repeat; background-position:0 -8px;padding-bottom:18px; padding-left:180px}
+/*.brdHeaderTop{background:#E9FFBA;background-image:url(/public/images/headerImages.gif); border:1px solid #BDE862; height:60px;margin-top:-2px; background-repeat:repeat-x; background-position:0 -261px; margin-bottom:0px;}*/
+.brdHeaderTop{background:#E9FFBA;background-image:url(/public/images/headerImage.gif);  border:1px solid #BDE862; height:72px;margin-top:-2px; background-repeat:repeat-x; background-position:0 -804px; margin-bottom:4px;}
+.bgNavigation {background-image:url(/public/images/headerImage.gif); background-repeat:repeat-x; background-position:0 -144px;}
+.brd_right{border-right:1px solid #A8C46F;border-left:1px solid #A8C46F}
+.activetab  {background-image:url(/public/images/headerImage.gif); border:2px solid #FD8105; padding-bottom:5px; padding-left:7px; padding-right:7px; background-position:0 -180px; color:#FFFFFF; display:block; float:left; cursor: pointer; font-weight:bold;font-size:11px; }
+.deactivetab{background-image:url(/public/images/headerImage.gif); border-top:1px solid #91C12D; padding-bottom:6px; padding-left:6px; padding-right:6px; background-position:0 -216px;  color:#FFFFFF; display:block; float:left; cursor: pointer; font-weight:bold;font-size:11px;}
+.toptxt{margin-top:4px; display:block}
+.navigationBarHeight{height:26px; border-bottom:2px solid #FD8105}
+*html .searchTextBox{background-color:#FFFFFF; font-size:16px;padding:2px 2px 2px 2px; margin-right:12px; height:23px; position:relative; top:-1px}
+.searchTextBox      {background-color:#FFFFFF; font-size:16px;padding:2px 2px 2px 2px; margin-right:12px;height:23px; position:relative; top:2px}
+*html .searchButtonAll{background-image:url(/public/images/headerImage.gif); background-repeat:no-repeat; background-position:0 -256px; height:31px; width:98px; color:#FFFFFF; font-weight: bold; font-size:16px;position:relative; left:-3px; top:0px}
+.searchButtonAll{background-image:url(/public/images/headerImage.gif);  background-repeat:no-repeat; background-position:0 -256px; height:31px; width:98px; color:#FFFFFF; font-weight: bold; font-size:16px;position:relative; left:-3px; top:3px}
+button {background: none; cursor: pointer; border: 0; margin: 0; padding: 0;}
+.seprator_header{background-image:url(/public/images/headerImage.gif); background-position:0px -1109px; width:2px; height:27px}
+.textBoxColor{border:2px solid #A2CE48; }
+
+.raised_career {background: transparent; } 
+.raised_career .b1, .raised_career .b2, .raised_career .b3, .raised_career .b4, .raised_career .b1b, .raised_career .b2b, .raised_career .b3b, .raised_career .b4b {display:block; overflow:hidden; font-size:3px;} 
+.raised_career .b1, .raised_career .b2, .raised_career .b3, .raised_career .b1b, .raised_career .b2b, .raised_career .b3b {height:1px;} 
+.raised_career .b2 {background:#FBE8B0; border-left:1px solid #FBE8B0; border-right:1px solid #FBE8B0;} 
+.raised_career .b3 {background:#ffffff; border-left:1px solid #FBE8B0; border-right:1px solid #FBE8B0;} 
+.raised_career .b4 {background:#ffffff; border-left:1px solid #FBE8B0; border-right:1px solid #FBE8B0;} 
+.raised_career .b4b {background:#F9F2D5; border-left:1px solid #FBE8B0; border-right:1px solid #FBE8B0;} 
+.raised_career .b3b {background:#F9F2D5; border-left:1px solid #FBE8B0; border-right:1px solid #FBE8B0;} 
+.raised_career .b2b {background:#F9F2D5; border-left:1px solid #FBE8B0; border-right:1px solid #FBE8B0;} 
+.raised_career .b1b {margin:0px 5px; background:#FBE8B0;} 
+.raised_career .b1 {margin:0px 5px; background:#ffffff;} 
+.raised_career .b2, .raised_career .b2b {margin:0 3px; border-width:0 2px;} 
+.raised_career .b3, .raised_career .b3b {margin:0 2px; padding:0px;} 
+.raised_career .b4, .raised_career .b4b {height:2px; margin:0 1px;} 
+.raised_career .boxcontent_career {display:block; background-image: url(../images/bgkumkumPanel.gif) ; background-position:bottom; background-repeat: repeat-x; border-left:1px solid #ECCAA8; border-right:1px solid #ECCAA8;} 
+
+.bannerDivider {background-image:url(/public/images/headerImage.gif); height:63px; background-repeat:no-repeat; background-position:0 -72px; width:64px; }
+.logoNewClass{background:url(/public/images/headerImage.gif); background-repeat:no-repeat; background-position:0 -689px; padding-left:229px; padding-bottom:50px}

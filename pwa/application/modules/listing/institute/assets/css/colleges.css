@@ -1,0 +1,111 @@
+._browseRow  a._clink {display: none;margin-left: -30px;padding: 5px 0 5px 32px;background: linear-gradient(to right,rgba(255,255,255,0) 0,rgba(255,255,255,1) 30%);
+    border: none;color: #008489;position: absolute;font-size: 0.765rem;right: 0;bottom: 0px;margin-bottom: 0;font-weight: 600;}
+._padaround{padding: 12px;}
+._browseBy{display: inline-block;position: relative;}
+._browseRow{overflow: hidden;width: auto;float: left;font-size: 0px;}
+._sctntitle{display: block;font-weight: 600;font-size: 0.875rem;margin-bottom: 6px;}
+.clp a._clist,.ilp a._clist{font-size: 0.75rem;margin: 0 8px 8px 0;color: #000;display: inline-block;text-decoration: none;padding: 2px 5px;border-radius: 2px;border: 1px solid #000;max-width: 96%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;float: left;line-height: 1.125rem;}
+.clp ._subcontainer._noPad,.ilp ._subcontainer._noPad{padding: 0px;}
+span.cors-fee{font-size: 0.75rem;font-weight: 600; display: table-cell; width: 30%;vertical-align: middle; text-align: right;}
+
+
+/*courses offered css*/
+._repeatList{border-top:1px solid #F1F2F4;}
+._repeatList .cors-offLst li{padding: 0px;}
+._repeatList .cors-offLst li a{display: block;}
+._borderTop{border-top:1px solid #F1F2F4;}
+._repeatList .cors-offLst li a span.cors-fee{width: 3%;}
+.fullColumn strong{font-weight: 400;font-size: 0.75rem;color: #000;}
+._browsesection:nth-child(2){margin-top: 6px}
+._flexirow {font-size: 0px;position: relative;margin-bottom: 15px;}
+._flexirow .flexi_img {width: 68px;height: 54px;overflow: hidden;display: inline-block;background: transparent;margin-right: 11px;vertical-align: middle;}
+.flexi_column {display: inline-block;width: 70%;vertical-align: middle;}
+._clgname {font-size: 0.875rem;font-weight: 600;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;color: #000;}
+._clgname a{font-size: inherit;color: inherit;}
+.flexi_column .single-col{margin-top: 0px;}
+.flexi_column span.rating-block.rvw-lyr{margin-right: 4px;}
+.flexi_column .single-col .rating-block .rating_popup{left: -86px;}
+.flexi_column .single-col .rating_popup:before{left: 182px}
+.wrapperAround {margin-top: 10px;}
+.ratingv1 {font-size: 0.875rem}
+.offeringall{padding: 10px 12px 0px;font-size: 0.75rem;line-height: 1.125rem;}
+.pwa-cont ul li a.view_rvws{color: #008489;}
+._browseRow.cllpse {max-height: 90px;}
+.flexi_column .sprite-cmn.arw_l{top: 2px}
+.pwa-cont.pad .flexi_column .single-col{margin-top: 0px;line-height: 1.58}
+.pwa-cont.pad ._clgname{line-height: 1.58}
+.collegelistlayer_ul{margin-top: 0px;padding-bottom: 40px;}
+.cokkie-lyr a.cookAgr-btn{color: #fff;}
+.infoTxt{font-size: 0.875rem;line-height: 1.58;}
+._flexirow .flexi_img img{height: auto;}
+/*.rippleefect{position: relative;
+    overflow: hidden;
+    transform: translate3d(0,0,0)}
+.rippleefect:after{content: '';display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: radial-gradient(circle,#000 10%,transparent 10.01%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transform: scale(10,10);
+    opacity: 0;
+    transition: transform .5s,opacity 1s;}
+.rippleefect:active:after {
+        transform: scale(0,0);
+        opacity: .2;
+        transition: 0s
+    }*/
+.collegedpts .tbSec2 .clg-label-tip .clg-info-icon{
+    top: -4px;    
+    left: 0px;
+    width: 21px;
+    height: 20px;
+    background: url(https://images.shiksha.ws/pwa/public/images/pwa-header-mobile-v3.svg) no-repeat;
+    background-position: -168px -70px;
+    display: inline-block;
+    position: absolute;
+    right: -18px;;
+}
+ul.cors-offLst li a .cors-sec span.fullColumn{margin-top: 3px;display: block;width: 85%;}
+.fullColumn b{color: #999;display: inline-block;padding: 0 6px;font-size: 0.65rem;vertical-align: middle;position: relative;top: -1px}
+.cors-fee .blu-arrw{top: -2px;}
+._flexirow ripple a{display: block;}
+.ratingNumber{font-size: 0.875rem;display: inline-block;font-weight: 400;color: #666;}
+._repeatList ul.cors-offLst li a span.rating-block.rvw-lyr{display: inline-block;width: auto;margin-right: 3px;}
+._repeatList .ratingv1{margin-top: 0px;}
+.padding_all{padding: 20px 12px 15px}
+.offrTxt{font-size: 0.75rem;font-weight: 400;color: #999;}
+
+ul.cors-offLst li a .cors-sec span:first-child .ratingv1 .rating-block{display: table-cell;width: auto;padding-right: 2px;}
+ul.cors-offLst li a .cors-sec .view_rvws{color: #666;font-weight: 400;display: table-cell}
+ul.cors-offLst li a .cors-sec .single-col{margin-top: 0px}
+.flexi_column .view_rvws{color: #666;font-size: 0.75rem;font-weight: 400;line-height: 1.125rem;}
+.flexi_column .ratingv1 .rating-block{color: #000;}
+._browsesection{position: relative;}
+.ctp-filter-sec .reset-link, #tab-section .ctp-filter-sec .reset-link{position: absolute;font-size: 0.875rem;top: 0;right: 0px;font-weight: 400;z-index: 99;color: #008489;padding: 10px 15px;}
+.ctp-filter-sec{position: relative;}
+.ctp-filter-sec .reset-link:before{background: transparent;}
+ul.cors-offLst li{list-style: none;padding: 10px 0; border-bottom: 1px solid #F1F2F4;}
+ul.cors-offLst li:last-child{border: none;padding-bottom: 0;}
+ul.cors-offLst li a{color: #000;font-size: 0.875rem;}
+ul.cors-offLst li a .cors-sec{display: table;width: 100%;}
+ul.cors-offLst li a .cors-sec span:first-child{display: table-cell;width: 70%; line-height: 19px;color: #000;font-size: 0.875rem;font-weight: 600;line-height: 1.3125rem;}
+
+
+
+@media only screen and (min-width: 1024px){
+ ._repeatList ul.cors-offLst, .wrapperAround{display: flex;flex-direction: row;flex-wrap: wrap;}
+ ._repeatList .cors-offLst li, .wrapperAround ._flexirow{display: inline-block;width: 50%;border-right: 1px solid #F1F2F4;}
+ ._repeatList .cors-offLst li:nth-child(2n+2), .wrapperAround ._flexirow:nth-child(2n+2){border-right: none;}
+ ._repeatList .cors-offLst li:last-child, .wrapperAround ._flexirow:last-child{border-right:1px solid #F1F2F4;}
+ ._listSection .tac{text-align: center;}
+ .wrapperAround{border-bottom: 1px solid #F1F2F4}
+ .wrapperAround{margin: 0 -16px !important;}
+  #Colleges ._subcontainer{padding-top: 0px;}
+ .wrapperAround ._flexirow{padding: 10px;margin: 0px;border-bottom: 1px solid #F1F2F4;}
+  #Colleges .tac{text-align: center;margin-top: 0px;padding-bottom: 0px;}
+}

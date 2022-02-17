@@ -1,0 +1,39 @@
+.space--box {
+    padding: 4px 12px 12px;
+}
+
+.align{
+    text-align: center;
+}
+
+.cms--input_field {
+    padding: 7px;
+    border-radius: 2px;
+    margin-right: 12px;
+    border: 1px solid #ccc;
+}
+
+.cms--orangebtn {
+    height: 32px;
+    cursor: pointer;
+    background: #F37921;
+    color: #fff;
+    border-radius: 2px;
+    border: 1px solid #F37921;
+    padding: 0 10px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.cms--ornagebtn:hover {
+    background: #db6d1d;
+}
+.space--box p{
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 21px;
+}
+.cms--tinymc{
+    margin: 0 0 12px;
+}

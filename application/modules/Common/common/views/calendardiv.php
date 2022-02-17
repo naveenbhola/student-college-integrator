@@ -1,0 +1,144 @@
+<?php 
+if(!isset($calendarDivLoaded)){
+    global $calendarDivLoaded;
+    $calendarDivLoaded = 1;
+}
+?>
+
+<STYLE>
+#calendarDiv{
+	position:absolute;
+	width:205px;
+	border:1px solid #bde862;
+	padding:1px;
+	background-color: #FFF;
+	font-family:arial;
+	font-size:10px;
+	padding-bottom:20px;
+	visibility:hidden;
+}
+#calendarDiv span,#calendarDiv img{
+	float:left;
+}
+#calendarDiv .selectBox,#calendarDiv .selectBoxOver{
+	
+	line-height:12px;
+	padding:1px;
+	cursor:pointer;
+	padding-left:2px;
+}
+#calendarDiv .selectBoxTime,#calendarDiv .selectBoxTimeOver{	
+	line-height:12px;
+	padding:1px;
+	cursor:pointer;
+	padding-left:2px;
+}
+#calendarDiv td{
+	padding:3px;
+	margin:0px;
+	font-size:10px;
+	border: none;
+	line-height: initial;
+}
+#calendarDiv .selectBox{
+	border:1px solid #FFFFFF;		
+	color: #000;
+	position:relative;
+}
+#calendarDiv .selectBoxOver{
+	border:1px solid #FFFFFF;
+	background-color: #a2ce48;
+	color: #FFF;
+	position:relative;
+}
+#calendarDiv .selectBoxTime{
+	border:1px solid #317082;		
+	color: #317082;
+	position:relative;
+}
+#calendarDiv .selectBoxTimeOver{
+	border:1px solid #216072;	
+	color: #216072;
+	position:relative;
+}
+
+#calendarDiv .topBar{
+	height:16px;
+	padding:2px;
+	background:#a2ce48;
+}
+#calendarDiv .activeDay{	/* Active day in the calendar */
+	color:#FF0000;
+}
+#calendarDiv .todaysDate{
+	height:17px;
+	line-height:17px;
+	padding:2px;
+	background-color: #f0ffcd;
+	text-align:center;
+	position:absolute;
+	bottom:0px;
+	width:201px;
+	left:0px;
+}
+#calendarDiv .todaysDate div{
+	float:left;
+}
+#calendarDiv .timeBar{
+	height:17px;
+	line-height:17px;
+	background-color: #E2EBED;
+	width:72px;
+	color:#FFF;
+	position:absolute;
+	right:0px;
+}
+#calendarDiv .timeBar div{
+	float:left;
+	margin-right:1px;
+}
+#calendarDiv .monthYearPicker{
+	background-color: #A2CE48;
+	border:1px solid #FFFFFF;
+	border-top:none;
+	position:absolute;
+	color: #317082;
+	left:0px;
+	top:15px;
+	z-index:1000;
+	display:none;
+}
+#calendarDiv #monthSelect{
+	width:70px;
+}
+#calendarDiv .monthYearPicker div{
+	float:none;
+	clear:both;	
+	padding:1px;
+	margin:1px;	
+	cursor:pointer;
+}
+#calendarDiv .monthYearActive{
+	background-color:#d3f08f;
+	color: #FFFFFF;
+}
+
+#calendarDiv table{float:left}
+
+#calendarDiv td{
+	text-align:right;
+	cursor:pointer;
+}
+
+#calendarDiv .topBar img{
+	cursor:pointer;
+}
+#calendarDiv .topBar div{
+	float:left;
+	margin-right:1px;
+}
+
+#calendarDiv .disableDay{ /* Disabled days in the calendar */
+color:GREY;
+} 
+</STYLE>

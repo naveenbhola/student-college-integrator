@@ -1,0 +1,17 @@
+.pageLoader2{height:4px;background:#dcdcdc;position:absolute;right:0;bottom:0;width:300px;top:0;left:0;margin:auto;border-radius:8px;z-index:5}
+.pageLoaderWrapper2{height:100%;display:flex;align-items:center;justify-content:center}
+.loaderv1_wrapper{overflow:hidden;position:relative;-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-transition:opacity 250ms linear;transition:opacity 250ms linear;width:100%;opacity:1;height:4px}
+.loaderv1_wrapper-col{-webkit-animation:primary-indeterminate-translate 2s infinite linear;animation:primary-indeterminate-translate 2s infinite linear;-webkit-transition:none;transition:none;-webkit-transform:scaleX(0);transform:scaleX(0);box-sizing:inherit;height:100%;position:absolute;-webkit-transform-origin:top left;transform-origin:top left;width:100%}
+.inner_loaderv1{height:100%;position:absolute;width:100%;background:linear-gradient(90deg,#69EACB 0%,#22DDFE 19%,#6654F1 58%,#69EACB 100%);display:inline-block;-webkit-animation:primary-indeterminate-scale 2s infinite linear;animation:primary-indeterminate-scale 2s infinite linear}
+@keyframes primary-indeterminate-translate {
+	0%{-webkit-transform:translateX(-145.166611%);transform:translateX(-145.166611%)}
+	20%{-webkit-animation-timing-function:cubic-bezier(.5,0,.701732,.495819);animation-timing-function:cubic-bezier(.5,0,.701732,.495819);-webkit-transform:translateX(-145.166611%);transform:translateX(-145.166611%)}
+	59.15%{-webkit-animation-timing-function:cubic-bezier(.302435,.381352,.55,.956352);animation-timing-function:cubic-bezier(.302435,.381352,.55,.956352);-webkit-transform:translateX(-61.495191%);transform:translateX(-61.495191%)}
+	to{-webkit-transform:translateX(55.444446%);transform:translateX(55.444446%)}
+}
+@keyframes primary-indeterminate-scale {
+	0%{-webkit-transform:scaleX(.08);transform:scaleX(.08)}
+	36.65%{-webkit-animation-timing-function:cubic-bezier(.334731,.124820,.785844,1);animation-timing-function:cubic-bezier(.334731,.124820,.785844,1);-webkit-transform:scaleX(.08);transform:scaleX(.08)}
+	69.15%{-webkit-animation-timing-function:cubic-bezier(.06,.11,.6,1);animation-timing-function:cubic-bezier(.06,.11,.6,1);-webkit-transform:scaleX(.661479);transform:scaleX(.661479)}
+	to{-webkit-transform:scaleX(.08);transform:scaleX(.08)}
+}

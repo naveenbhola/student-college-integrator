@@ -1,0 +1,265 @@
+<%- include('../../../amp/common/header', {html : headerHTML , pageSeoData : pageData.seoData, pageName : 'course'}) %>
+  <section class="s-container">
+     <amp-ad style="margin: 0 auto 10px;display: block;background: #ccc;" width="320" height="50"
+        type="doubleclick"
+        data-slot="/21720783678/CLP_Mobile_LB"
+        json='{"targeting":{"userLoggedIn":"Yes","userCity":"74","userLocality":null,"userStream":1,"userBaseCourse":["101"],"userSubstream":null,"userSpecialization":null,"userEducationType":["20"],"userWorkEx":null,"userMarks":"","userPercentile":"","isDomestic":"Yes","parentPage":"DFP_CourseDetailPage","pageType":"homepage","stream":"2","substream":null,"specialization":"324","baseCourse":"10","examConductingBody":"","ownership":null,"client":true,"educationType":"20","deliveryMethod":"33","listingLocationCity":"174","listingLocationState":"114","countryId":2,"examsAcceptedByInstitute":["JEE Main","MHTCET"],"courseLevel":"14","courseCredential":"9","courseDuration":"4 years","examGroupId":"","pageId":"73368","anaTags":null}}'></amp-ad>
+
+     <%- include('components/mainCard' , {data : pageData}) %>
+
+     <% if(pageData.highlights !=null && pageData.highlights.length != 0) {%>
+       <section>
+         <%- include('components/highlights' , {data : pageData.highlights}) %>
+       </section>
+    <% } %>
+     <amp-lightbox class="" id="rank-more-data" layout="nodisplay" scrollable>
+        <div class="lightbox">
+           <a class="cls-lightbox f25 color-f font-w6" on="tap:rank-more-data.close" role="button" tabindex="0">&times;</a>
+           <div class="m-layer">
+              <div class="min-div color-w">
+                 <p class="f14 color-3 font-w6 pad10">Course Rankings</p>
+                 <ul class="pad10 pt0 rnk-br"></ul>
+                 <ul class="pad10 pt0"></ul>
+              </div>
+           </div>
+        </div>
+     </amp-lightbox>
+     <amp-lightbox class="" id="medium-more-data" layout="nodisplay" scrollable>
+        <div class="lightbox">
+           <a class="cls-lightbox f25 color-f font-w6" on="tap:medium-more-data.close" role="button" tabindex="0">&times;</a>
+           <div class="m-layer">
+              <div class="min-div color-w catg-lt">
+                 <p class="f14 color-3 bck1 pad10 font-w6">Mediums of Education</p>
+                 <ul class="color-6">
+                    <li class="f12 color-6 m-5btm">English</li>
+                 </ul>
+              </div>
+           </div>
+        </div>
+     </amp-lightbox>
+     <amp-lightbox class="" id="approval-more-data" layout="nodisplay" scrollable>
+        <div class="lightbox">
+           <a class="cls-lightbox f25 color-f font-w6" on="tap:approval-more-data.close" role="button" tabindex="0">&times;</a>
+           <div class="m-layer">
+              <div class="min-div color-w pad10">
+                 <ul>
+                    <li class="f12 color-6 m-5btm">AICTE : All India Council for Technical Education (AICTE) is a statutory body and a national level council, set up under the Department of Higher Education under the Ministry of Human Resource Development, responsible for monitoring technical education institutes and accrediting all postgraduate and graduate programs that fall under technical education in India. </li>
+                 </ul>
+              </div>
+           </div>
+        </div>
+     </amp-lightbox>
+     <amp-lightbox class="" id="institute-more-data" layout="nodisplay" scrollable>
+        <div class="lightbox">
+           <a class="cls-lightbox f25 color-f font-w6" on="tap:institute-more-data.close" role="button" tabindex="0">&times;</a>
+           <div class="m-layer">
+              <div class="min-div color-w pad10">
+                 <ul>
+                    <li class="f12 color-6 m-5btm">NAAC 'A' Grade : National Assessment and Accreditation Council  (NAAC) - An autonomous body established by the UGC to evaluate quality of higher education institutes in India. It grades an institution from A++ (best rating) to C. Rating D indicates that the institution is not accredited. </li>
+                 </ul>
+              </div>
+           </div>
+        </div>
+     </amp-lightbox>
+
+     <amp-lightbox class="" id="duration-more-data" layout="nodisplay" scrollable>
+        <div class="lightbox">
+           <a class="cls-lightbox f25 color-f font-w6" on="tap:duration-more-data.close" role="button" tabindex="0">&times;</a>
+           <div class="m-layer">
+              <div class="min-div color-w pad10">
+                 <p class="m-btm f14 color-3 font-w6">Duration</p>
+                 <ul>
+                    <li class="f12 color-6 m-5btm">Duration may change depending upon course modules and course timing slots.</li>
+                 </ul>
+              </div>
+           </div>
+        </div>
+     </amp-lightbox>
+     <% if(pageData.reviewWidget !=null && pageData.aggregateReviewWidget.aggregateReviewData !=null) { %>
+       <section>
+          <%- include('components/courseReview', {data: pageData.reviewWidget, aggregateData: pageData.aggregateReviewWidget}) %>
+       </section>
+       <% } %>
+
+     <amp-ad style="margin: 0 auto 10px;display: block;background: #ccc;" width="310" height="182"
+        type="doubleclick"
+        data-slot="/21720783678/CLP_LAA"
+        json='{"targeting":{"userLoggedIn":"Yes","userCity":"74","userLocality":null,"userStream":1,"userBaseCourse":["101"],"userSubstream":null,"userSpecialization":null,"userEducationType":["20"],"userWorkEx":null,"userMarks":"","userPercentile":"","isDomestic":"Yes","parentPage":"DFP_CourseDetailPage","pageType":"homepage","stream":"2","substream":null,"specialization":"324","baseCourse":"10","examConductingBody":"","ownership":null,"client":true,"educationType":"20","deliveryMethod":"33","listingLocationCity":"174","listingLocationState":"114","countryId":2,"examsAcceptedByInstitute":["JEE Main","MHTCET"],"courseLevel":"14","courseCredential":"9","courseDuration":"4 years","examGroupId":"","pageId":"73368","anaTags":null}}'></amp-ad>
+     <amp-ad style="margin: 0 auto 10px;display: block;background: #ccc;" width="310" height="138"
+        type="doubleclick"
+        data-slot="/21720783678/CLP_LAA1"
+        json='{"targeting":{"userLoggedIn":"Yes","userCity":"74","userLocality":null,"userStream":1,"userBaseCourse":["101"],"userSubstream":null,"userSpecialization":null,"userEducationType":["20"],"userWorkEx":null,"userMarks":"","userPercentile":"","isDomestic":"Yes","parentPage":"DFP_CourseDetailPage","pageType":"homepage","stream":"2","substream":null,"specialization":"324","baseCourse":"10","examConductingBody":"","ownership":null,"client":true,"educationType":"20","deliveryMethod":"33","listingLocationCity":"174","listingLocationState":"114","countryId":2,"examsAcceptedByInstitute":["JEE Main","MHTCET"],"courseLevel":"14","courseCredential":"9","courseDuration":"4 years","examGroupId":"","pageId":"73368","anaTags":null}}'></amp-ad>
+
+   <% if(pageData.eligibility !=null) {%>
+     <section>
+        <%- include('components/eligibility', {data: pageData.eligibility}) %>
+     </section>
+    <% } %>
+
+     <%- include('components/findoutWidget') %>
+     <amp-lightbox id="cat-list" class="" layout="nodisplay" scrollable>
+        <div class="lightbox" on="tap:cat-list.close" role="button" tabindex="0">
+           <a class="cls-lightbox color-f font-w6 t-cntr" >&times;</a>
+           <div class="m-layer">
+              <div class="min-div color-w catg-lt">
+                 <ul class="color-6">
+                    <li><label for="eligi_fn" class="block">FN Category</label></li>
+                    <li><label for="eligi_general" class="block">General Category</label></li>
+                    <li><label for="eligi_nri" class="block">NRI Quota Category</label></li>
+                    <li><label for="eligi_obc" class="block">OBC Category</label></li>
+                    <li><label for="eligi_pio" class="block">PIO Category</label></li>
+                    <li><label for="eligi_pwd" class="block">PwD Category</label></li>
+                 </ul>
+              </div>
+           </div>
+        </div>
+     </amp-lightbox>
+
+     <% if(pageData.admissionProcess !=null) {%>
+       <section>
+         <%- include('components/admission', {data: pageData.admissionProcess, importantdates :  pageData.importantDates}) %>
+       </section>
+
+     <% } %>
+     <amp-ad style="margin: 0 auto 10px;display: block;background: #ccc;" width="310" height="182"
+        type="doubleclick"
+        data-slot="/21720783678/CLP_AON"
+        json='{"targeting":{"userLoggedIn":"Yes","userCity":"74","userLocality":null,"userStream":1,"userBaseCourse":["101"],"userSubstream":null,"userSpecialization":null,"userEducationType":["20"],"userWorkEx":null,"userMarks":"","userPercentile":"","isDomestic":"Yes","parentPage":"DFP_CourseDetailPage","pageType":"homepage","stream":"2","substream":null,"specialization":"324","baseCourse":"10","examConductingBody":"","ownership":null,"client":true,"educationType":"20","deliveryMethod":"33","listingLocationCity":"174","listingLocationState":"114","countryId":2,"examsAcceptedByInstitute":["JEE Main","MHTCET"],"courseLevel":"14","courseCredential":"9","courseDuration":"4 years","examGroupId":"","pageId":"73368","anaTags":null}}'></amp-ad>
+     <amp-ad style="margin: 0 auto 10px;display: block;background: #ccc;" width="310" height="138"
+        type="doubleclick"
+        data-slot="/21720783678/CLP_AON1"
+        json='{"targeting":{"userLoggedIn":"Yes","userCity":"74","userLocality":null,"userStream":1,"userBaseCourse":["101"],"userSubstream":null,"userSpecialization":null,"userEducationType":["20"],"userWorkEx":null,"userMarks":"","userPercentile":"","isDomestic":"Yes","parentPage":"DFP_CourseDetailPage","pageType":"homepage","stream":"2","substream":null,"specialization":"324","baseCourse":"10","examConductingBody":"","ownership":null,"client":true,"educationType":"20","deliveryMethod":"33","listingLocationCity":"174","listingLocationState":"114","countryId":2,"examsAcceptedByInstitute":["JEE Main","MHTCET"],"courseLevel":"14","courseCredential":"9","courseDuration":"4 years","examGroupId":"","pageId":"73368","anaTags":null}}'></amp-ad>
+  <% if(pageData.courseFees !=null) { %>
+     <section>
+        <%- include('components/fee', {data: pageData.courseFees, tooltipdata : pageData.tooltipData.feesDisclaimer }) %>
+     </section>
+<% } %>
+     <amp-lightbox id="fee-cat-list" class="" layout="nodisplay" scrollable>
+        <div class="lightbox" on="tap:fee-cat-list.close" role="button" tabindex="0">
+           <a class="cls-lightbox color-f font-w6 t-cntr">&times;</a>
+           <div class="m-layer">
+              <div class="min-div color-w catg-lt">
+                 <ul class="color-6">
+                    <li><label for="feeFiltgeneral" class="block">General Category</label></li>
+                    <li><label for="feeFiltobc" class="block">OBC Category</label></li>
+                    <li><label for="feeFiltsc" class="block">SC Category</label></li>
+                    <li><label for="feeFiltst" class="block">ST Category</label></li>
+                    <li><label for="feeFiltnri" class="block">NRI Quota Category</label></li>
+                    <li><label for="feeFiltsbc" class="block">SBC Category</label></li>
+                 </ul>
+              </div>
+           </div>
+        </div>
+     </amp-lightbox>
+     <amp-lightbox id="one-time-pay" layout="nodisplay">
+        <div class="lightbox">
+           <a class="cls-lightbox  color-f font-w6 t-cntr" on="tap:one-time-pay.close" role="button" tabindex="0">&times;</a>
+           <div class="m-layer">
+              <div class="min-div color-w catg-lt pad10">
+                 <div class="m-btm padb">
+                    <strong class="block m-btm color-3 f14 font-w6">One Time Payment</strong>
+                    <p class="color-3 l-18 f12">Note - Applicable if you want to pay the complete fees at one go.</p>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </amp-lightbox>
+     <% if(pageData.courseStructure != null) { %>
+     <section>
+        <%- include('components/courseStructure', {data: pageData.courseStructure}) %>
+     </section>
+    <% } %>
+     <section>
+        <%- include('components/seatBreakup', {data: pageData.seatsData}) %>
+     </section>
+   <% if(
+        (pageData.placements !=null && typeof pageData.placements !='undefined') && (pageData.recruitmentCompanies !=null && pageData.recruitmentCompanies.length > 0)
+       )
+       {
+   %>
+     <section>
+        <%- include('components/placement', {data: pageData.recruitmentCompanies , placementData : pageData.placements}) %>
+     </section>
+    <% } %>
+
+  <% if (pageData.anaWidget != null && pageData.anaWidget.questionOrder != null){ %>
+     <section>
+       <%- include('components/anaWidget', {data: pageData.anaWidget}) %>
+     </section>
+  <% } %>
+
+  <% if (pageData.anaWidget != null){ %>
+    <section>
+      <%- include('components/asknowWidget', {data: pageData.anaWidget}) %>
+    </section>
+  <% } %>
+
+
+     <% if (pageData.alsoViewedCourses !=null && pageData.alsoViewedCourses.length > 0 ) {%>
+        <section>
+          <%- include('components/alsoViewedWidget', {data: pageData.alsoViewedCourses}) %>
+        </section>
+    <% } %>
+
+     <% if(pageData.media !=null) {%>
+       <section>
+         <%- include('components/gallery', {data: pageData.media}) %>
+       </section>
+    <% } %>
+
+     <amp-image-lightbox id="lightbox11" layout="nodisplay"></amp-image-lightbox>
+     <script type="application/ld+json">
+        {
+        "@context" : "http://schema.org",
+        "@type" : "Course",
+        "name"  : "B.E. in Mechanical Engineering",
+        "description" : "Affiliated to Savitribai Phule Pune University",
+        "provider" :
+        {
+          "@type" : "CollegeOrUniversity",
+          "name" : "Pimpri Chinchwad College of Engineering, Pimpri Chinchwad Education Trust's",
+          "url"  : "http://www.pccoepune.com/",
+          "email" : "desaleketan.10@gmail.com",
+          "telephone": "9226094853",
+          "address" : "Sector-26, Pradhikaran Near Akurdi Railway Station"
+                ,"aggregateRating":
+          {
+            "@type" : "AggregateRating",
+            "bestRating":"5",
+            "ratingValue":"4",
+            "reviewCount":"32",
+            "worstRating":"1"
+          }
+              }
+        }
+     </script>
+     <% if(pageData.currentLocation !=null && pageData.currentLocation.contact_details !=null) {%>
+         <section>
+           <%- include('components/contactDetails', {data: pageData.currentLocation, locations: pageData.locations}) %>
+         </section>
+     <% } %>
+
+
+     <% if(pageData.similarCourses != null && pageData.similarCourses.length > 0 ) { %>
+       <section>
+       <%- include('components/similarCourses', {data: pageData.similarCourses}) %>
+     </section>
+     <% } %>
+
+
+    <% if(pageData.rankingInterlinking != null && pageData.rankingInterlinking.length > 0 ) { %>
+     <section>
+       <%- include('components/collegeByRanking', {data: pageData.rankingInterlinking}) %>
+     </section>
+     <% } %>
+
+     <% if(pageData.categoryPageLinks != null && pageData.categoryPageLinks.length > 0 ) { %>
+     <section>
+       <%- include('components/collegeByLocation', {data: pageData.categoryPageLinks}) %>
+     </section>
+     <% } %>
+
+  </section>
+  <%- include('components/bottomStickyWidget') %>
+
+<%- include('../../../amp/common/footer') %>

@@ -1,0 +1,35 @@
+ <div class="row" id="research_projects_form">
+        <div mysize="12">
+            <div class="x_panel">
+                <div [class.x_title]="opened">
+                    <ul class="nav navbar-left panel_toolbox">
+                      <li><a class="collapse-link" (click)="toggle()"><i [class]="opened?' fa fa-chevron-up':' fa fa-chevron-down'"></i></a></li>
+                    </ul>
+                    <h2>Research Projects</h2>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content" [hidden]="!opened">
+                  <div *ngIf="activateResearch">
+                  <div class="form-group" *ngFor="let research of instituteObj.research_projects;let i = index;"> 
+                   <div mysize="3"> 
+                      <label *ngIf="i == 0" mysize="12" class="cmsFont" style="padding-left:22px;text-align:left">Research title</label> 
+                   </div> 
+                   <div [mysize]> 
+                      <div style="padding-left:0px;" [mysize]>                          
+                         <input name="research{{i+1}}" [(ngModel)]="instituteObj.research_projects[i].value" type="text" placeholder="Enter research"/>
+                      </div>
+                      <div *ngIf="instituteObj.research_projects.length-1" mysize="3"> 
+                          <button type="button" (click)="instituteObj.removeResearchProjects(i)" class="btn cmsButton cmsFont">Remove</button>
+                      </div>
+                      <div *ngIf="i+1 == instituteObj.research_projects.length" mysize="3"> 
+                        <div *ngIf = "i<19">
+                          <button type="button" (click)="instituteObj.addResearchProjects();rebindFormControl('research');" class="btn cmsButton cmsFont">+ Add More</button>
+                        </div>
+                      </div>
+                   </div> 
+                  </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+                  </div>

@@ -1,0 +1,20 @@
+client_Id,entity_id,entity_type,entity_value
+<Client Id>,<CLP Id>,course_name,<Customized Value>
+<Client Id>,<CLP Id>,course_level,<Customized Value>
+<Client Id>,<CLP Id>,mr_course,<Customized Value>
+<Client Id>,<CLP Id>,ldb_course_level,<Customized Value>
+<Client Id>,<UILP Id>,primary_institute,<Customized Value>
+<Client Id>,<UILP Id>,parent_institute,<Customized Value>
+<Client Id>,<CLP Id>,oaf_course,<Customized Value>
+<Client Id>,Male,oaf_gender,<Customized Value>
+<Client Id>,Female,oaf_gender,<Customized Value>
+<Client Id>,Transgender,oaf_gender,<Customized Value>
+<Client Id>,Unified Payments,oaf_paymentmode,<Customized Value>
+<Client Id>,Credit Card,oaf_paymentmode,<Customized Value>
+<Client Id>,Debit Card,oaf_paymentmode,<Customized Value>
+<Client Id>,Wallet,oaf_paymentmode,<Customized Value>
+<Client Id>,Net Banking,oaf_paymentmode,<Customized Value>
+<Client Id>,<Stream Id>,stream,<Customized Value>
+<Client Id>,<Base Course Id>,base_course,<Customized Value>
+<Client Id>,<UILP Id>,ldb_parent_institute,<Customized Value>
+<Client Id>,<UILP Id>,ldb_primary_institute,<Customized Value>

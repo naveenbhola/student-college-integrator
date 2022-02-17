@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="utf-8"/>
+            <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+            <%-seoTags%>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            <link rel="dns-prefetch" href="//js.shiksha.ws">
+            <link rel="dns-prefetch" href="//css.shiksha.ws">
+            <link rel="dns-prefetch" href="//images.shiksha.ws">
+            <link rel="dns-prefetch" href="//apis.shiksha.com">
+            <link rel="dns-prefetch" href="//track.shiksha.com">
+            <meta name = "format-detection" content = "telephone=no" />
+            <meta name = "format-detection" content = "address=no" />
+            <meta name="copyright" content="Shiksha.com" />
+            <meta name="resource-type" content="document" />
+            <meta name="pragma" content="no-cache" />
+            <meta name="HandheldFriendly" content="True"/>
+            <meta name="MobileOptimized" content="320"/>
+            <meta http-equiv="cleartype" content="on"/>
+            <meta http-equiv="x-dns-prefetch-control" content="off"/>
+            <meta name="theme-color" content="#05818D"/>
+            <%-noCrawl ? "<meta name=\"ROBOTS\" CONTENT=\"NOINDEX\">" : ""%>
+            <link rel="publisher" href="https://plus.google.com/+shiksha"/>
+            <link rel="shortcut icon" href="https://images.shiksha.ws/pwa/public/images/apple-touch-icon-v1.png"/>
+            <link rel="manifest" href="/manifest.json">
+            <style type="text/css">
+              <%-internalCSS%>
+              <%-styles%> 
+              @media (min-width: 375px) {:root,html { font-size: 17px; } }._subcontainer{padding: 12px;}
+            </style>
+             <link rel="stylesheet" type="text/css" id="shkCmn">
+
+            <% for(var i=0; i < cssLinks.length; i++) { %>
+              <link rel="preload" href="<%-cssLinks[i]%>" as="style">
+            <% } %>
+
+
+      <script>
+                  window.onerror = function (msg, url, line, col, exception) { var img = new Image(); var srcUrl = 'https://www.shiksha.com/AppMonitor/logJSErrorsData/logJSerrors?msg=' + encodeURIComponent(msg) +'&line=' + encodeURIComponent(line) +'&url=' + encodeURIComponent(url) +'&col=' + encodeURIComponent(col) +'&exception='+encodeURIComponent(exception)+'&currentUrl='+ encodeURIComponent(window.location.href); img.src = srcUrl; }
+            </script>
+
+            <%-schema%>
+
+            <script type="application/ld+json">
+            {
+              "@context" : "http://schema.org",
+              "@type"    : "Organization",
+              "url"      : "https://www.shiksha.com",
+              "logo"     : "https://www.shiksha.com/public/images/nshik_ShikshaLogo1.gif",
+              "name"     : "Shiksha.com",
+              "sameAs"   : ["https://www.facebook.com/shikshacafe", "https://twitter.com/ShikshaDotCom", "https://en.wikipedia.org/wiki/Shiksha.com", "https://plus.google.com/+shiksha"]
+            }
+            </script>
+            <script type="text/javascript">
+      function lazyLoadJs(e,a,r){for(var s,t,c=[],d=e.scripts[0];s=r.shift();)t=e.createElement(a),"async"in d?(t.async=!1,e.head.appendChild(t)):d.readyState?(c.push(t),t.onreadystatechange=n):e.write("<"+a+' src="'+s+'" defer></'+a+">"),t.src=s}
+
+      var shikshaMain = '<%-jsDomain%>/pwa/public/js/mobile-shiksha-main-b8e4374aa0bb719bb135.js';
+      var vendorMain = '<%-jsDomain%>/pwa/public/js/vendors.b17849ef2385b275ce18.js';
+      var commonCss = "<%-cssDomain + '/pwa/public/css/'+getCSSWithVersion('shikshaCommon')%>";
+      function insertHeadSection(file) {
+        var scrp = document.createElement('link');
+        scrp.rel = 'preload';
+        scrp.as = 'script';
+        scrp.href = file;
+        document.head.appendChild(scrp);
+      }
+      insertHeadSection(shikshaMain);
+      insertHeadSection(vendorMain);
+    </script>
+    <% for(var i=0; i < scripts.length; i++) { %>
+      <link rel="preload" href="<%-scripts[i]%>" as="script">
+    <% } %>
+    <script type="text/javascript">
+      var detectBrowser = function(){
+          if(navigator.userAgent.match(/Android/i)){
+            return 'Android'
+          }else if(navigator.userAgent.match(/iPhone|iPad|iPod/i)){
+            return 'iOS'
+          }else{
+            return null
+          }
+          // Android: function() {
+          //     return navigator.userAgent.match(/Android/i);
+          // }
+          // iOS: function() {
+          //     return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+          // },
+          // any: function() {
+          //     return (isMobile.Android() || isMobile.iOS());
+          // }
+      }    
+      var addLazyLoadClass = function(){
+        var isExist = document.querySelector('body.lazyLoad');
+        if(isExist==null){
+          document.querySelector('body').classList.add('lazyLoad');
+        }
+      }
+      var addBrowserClass = function(){
+        var whichBrowser = detectBrowser();        
+        if(whichBrowser != null){
+          document.querySelector('body').classList.add(whichBrowser);
+        }
+      }
+      var referrer = '';
+      lazyLoadJs(document, "script", <%-JSON.stringify(scripts)%>);
+      lazyLoadJs(document,"script",[shikshaMain, vendorMain]);
+      /*window.addEventListener("load", function() {
+      });*/
+
+      window.addEventListener('load', function(){ // on page load
+      addBrowserClass();
+      document.addEventListener('touchstart', function(e){
+        if (typeof commonCss == 'string') {
+          if (document.getElementById('shkCmn') && document.getElementById('shkCmn').href == '') {
+            document.getElementById('shkCmn').href = commonCss;
+            document.body.removeEventListener('touchstart',function(){})
+          }
+        }
+      }, false)
+      document.addEventListener('click', function(e){
+        if (typeof commonCss == 'string') {
+          if (document.getElementById('shkCmn') && document.getElementById('shkCmn').href == '') {
+            document.getElementById('shkCmn').href = commonCss;
+            document.body.removeEventListener('click',function(){})
+          }
+        }
+      }, false)
+      document.addEventListener('scroll', function(e){
+        if (typeof commonCss == 'string') {
+          if (document.getElementById('shkCmn') && document.getElementById('shkCmn').href == '') {
+            document.getElementById('shkCmn').href = commonCss;
+            document.removeEventListener('scroll',function(){})
+          }
+        }
+        addLazyLoadClass();
+      }, false)
+ 
+    }, false);
+
+    window.__PRELOADED_STATE__ = <%-JSON.stringify(preloadedState).replace(/</g, '\\u003c')%>;
+    window.serviceWokrerFile = "";
+    window.COOKIEDOMAIN = "<%-COOKIEDOMAIN%>";
+    window.mobileApp = <%-mobileApp%>;
+    window.SHIKSHA_HOME = "<%-SHIKSHA_HOME%>";
+    // lazyLoadJs(document,"script",['https://www.googletagservices.com/tag/js/gpt.js']);
+    window.slots = [];window.googletag = window.googletag || {};window.googletag.cmd = window.googletag.cmd || [];
+  </script>
+  </head>
+  <body id="shkBdy"><div id="reg-full-layer"></div><div id="fullLayer-container"></div><div id="popup-container"></div><div id="gallery-container"></div><div id="root"><%-header%><%-content%><%-footer%></div><div id="shiksha-loader"></div>
+    <% include mobileFooter.ejs %>
+  </body>
+  <script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments);
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m);
+})(window, document, 'script',  'https://www.google-analytics.com/analytics.js', 'ga');
+  
+  function getPageCTA(){
+    return window.data;
+  }
+
+  function ClickActionOnCTA(id){
+    if(document.getElementById(id)){
+      document.getElementById(id).click();
+    }
+  }
+
+</script>
+</html>

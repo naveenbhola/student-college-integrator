@@ -1,0 +1,3 @@
+.user-action-msg-box{display: table;margin: 16px 0px;}
+.user-action-msg-box .child-box{display: table-cell; vertical-align: middle;}
+.user-action-msg-box .msg-icon{padding-right: 10px;}

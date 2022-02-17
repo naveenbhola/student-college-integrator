@@ -1,0 +1,12 @@
+.breadcrumb_v1{margin: 0px 0px 10px;}
+.breadcrumb_v1 > span.breadcrumb-arrow {
+    margin: 0 6px 0 6px;
+    font-size: 0.75rem;
+    line-height: 9px;
+    overflow: hidden;
+    height: 10px;
+    display: inline-block;
+    color: #666;
+}
+.breadcrumb_v1 a{color: #008489;text-decoration: none;}
+.breadcrumb_v1>span {font-size: 0.75rem;display: inline-block;}

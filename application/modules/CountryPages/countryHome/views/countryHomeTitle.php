@@ -1,0 +1,1 @@
+<h1 class="country-title">Study in <i class="flags <?=strtolower(str_replace(' ','',$countryObj->getName()))?>" style="vertical-align:middle"></i> <?=ucwords($countryObj->getName())?> <!--<a href="#" class="country-btn">Change Country <i class="country-sprite country-dwn-arrw"></i></a>--></h1>

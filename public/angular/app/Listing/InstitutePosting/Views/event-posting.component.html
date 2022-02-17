@@ -1,0 +1,73 @@
+<div class="row" id="event_form">
+    <div mysize="12" *ngIf="activateEvents">
+        <div class="x_panel">
+            <div [class.x_title]="opened">
+                <ul class="nav navbar-left panel_toolbox">
+                    <li><a class="collapse-link" (click)="toggle()"><i [class]="opened?' fa fa-chevron-up':' fa fa-chevron-down'"></i></a></li>
+                </ul>
+                <h2>Events<img class="helperText" id="events" src="/public/images/tooltip.png" width="20px" style="padding-right:0px" (click)="toolTipNotify('events',$event)"></h2>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content" [hidden]="!opened">
+                <div *ngFor="let event of events;let i = index;">
+                    <div class="form-group">
+                        <h4 mysize="3" class="cmsAlignLeft">Event {{i+1}}</h4>
+                        <div mysize="4" [myclassoffset]="'5'">
+                            <div mysize="3"><label class="control-label" class="cmsFont">Position</label></div>
+                            <div [mysize]>
+                                <select [ngModel]="event.position" [disabled]="newPosition>=0 && !select.dirty" (ngModelChange)="newPosition=$event;btn.hidden=0" #select="ngModel" name="position">
+                                    <option *ngFor="let z of events;let j=index" [value]="j+1">{{j+1}}</option>
+                                </select>
+                            </div>
+                            <div #btn [hidden]="!select.dirty" mysize="3"><button (click)="changeEventPosition(event.position,newPosition);btn.hidden=1;newPosition=-1;" type="button" class="btn cmsFont cmsButton">Move</button></div>
+                        </div>
+                    </div><br>
+
+                    <div class="form-group">
+                        <label mysize="3" class="cmsAlignLeft cmsFont">Choose type<span *ngIf="errors && errors?.validateOneOrNoneCustomControlArray &&  errors?.validateOneOrNoneCustomControlArray[i]?.type" class="required text-danger">*</span></label>
+
+                        <div [mysize]>
+                            <select class="cmsFont" name="eventType" #type="ngModel" [ngModel]="event.type" (ngModelChange)="event.type=$event;changedetected();">
+                                <option value="">Select Event type </option>
+                                <option *ngFor="let option of instituteStaticData?.event_type" value="{{option.value}}">{{option.label}}</option>
+                            </select>
+                            <span *ngIf="errors" class="help-block text-danger cmsFont">
+                              <span *ngIf="errors?.validateOneOrNoneCustomControlArray && errors?.validateOneOrNoneCustomControlArray[i]?.type">Event type cannot be empty</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label mysize="3" class="cmsAlignLeft cmsFont">Name</label>
+                        <div [mysize]>
+                            <input type="text" name="eventName{{i}}" [ngModel]="event.name" (ngModelChange)="event.name=$event;changedetected();">
+                            <span *ngIf="errors" class="help-block text-danger cmsFont">
+                              <span *ngIf="errors?.validateOneOrNoneCustomControlArray && errors?.validateOneOrNoneCustomControlArray[i]?.name">Event name cannot be empty</span>
+                              <span *ngIf="errors?.validateMaxLength && errors?.validateMaxLength[i]?.name?.maxlength">{{errors?.validateMaxLength[i]?.name?.maxlength}}</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label mysize="3" class="cmsAlignLeft cmsFont">Event description</label>
+                        <div [mysize]>
+                            <textarea type="text" name="eventDescription" [ngModel]="event.description" (ngModelChange)="event.description=$event;changedetected();"></textarea>
+                             <span *ngIf="errors" class="help-block text-danger">
+                              <span *ngIf="errors?.validateOneOrNoneCustomControlArray && errors?.validateOneOrNoneCustomControlArray[i]?.description">Event description cannot be empty</span>
+                              <span *ngIf="errors?.validateMaxLength && errors?.validateMaxLength[i]?.description?.maxlength">{{errors?.validateMaxLength[i]?.description?.maxlength}}</span>
+                              <span *ngIf="errors?.validateMinLength && errors?.validateMinLength[i]?.description?.minlength">{{errors?.validateMinLength[i]?.description?.minlength}}</span>
+                            
+                          </span>
+                        </div>
+                    </div>
+
+                    <div mysize="9" class="control-label">
+                        <button *ngIf="events.length-1" [disabled]="newPosition>=0" type="button" (click)="removeEvent(i+1);" class="btn cmsFont cmsButton">Remove</button>
+                        <button *ngIf="i+1 == events.length" [disabled]="newPosition>=0" type="button" (click)="addEvent()" class="btn cmsFont cmsButton">+ Add More</button>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

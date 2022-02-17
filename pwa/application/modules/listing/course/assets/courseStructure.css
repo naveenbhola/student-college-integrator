@@ -1,0 +1,73 @@
+._subcontainer a{color: #008489; text-decoration: none;}
+
+.admissionBnr h3, .courseBnr h3 {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.courseBnr h3 {text-transform: capitalize;}
+/*._container h3 {
+    font-size: 0.875rem;
+}*/
+.nrml-list, .pwa-cont ul.nrml-list {
+    margin: 0px 0 10px 16px;
+}
+.pwa-cont ul.nrml-list {
+    list-style-type: disc;
+    margin-bottom: 12px;
+}
+.nrml-list li ,.pwa-cont ul.nrml-list li{
+    margin-bottom: 0px;
+    font-size: 0.875rem;
+    color: #000;
+    list-style: disc;
+}
+.pwa-hd p.flLt{
+   line-height: 25px;
+}
+
+.button-container {
+    text-align: center;
+    /* padding: 16px 0 0; */
+    line-height: 13px;
+    margin: 10px 0;
+}
+
+.clp .trnBtn {
+    border: 1px solid #008489;
+    color: #008489;
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0px 10px;
+    text-align: center;
+    cursor: pointer;
+    background: #fff;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 32px;
+    -webkit-tap-highlight-color: transparent;
+    height: 34px;
+    border-radius: 2px;
+    position: relative;
+}
+
+section.courseBnr .blu-arrw {
+    background-position: -114px -41px;
+    width: 15px;
+    height: 20px;
+    position: relative;
+    right: -1px;
+    top: 6px;
+    display: inline-block;
+}
+.blu-arrw{
+    background: url(https://images.shiksha.ws/pwa/public/images/pwa-header-mobile-v3.svg) no-repeat;
+}
+.nrml-list li, .pwa-cont ul.nrml-list li a {
+    word-break: break-word;
+
+}
+.pwa-cont ul.nrml-list li a{
+    color: #008489; text-decoration: none;
+}
+
+.courseBnr ul.nrml-list li{margin-bottom: 7px;}

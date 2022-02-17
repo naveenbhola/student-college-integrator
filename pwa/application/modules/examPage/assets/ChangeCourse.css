@@ -1,0 +1,6 @@
+.link_arw:after{content: '';display: inline-block;width: 6px;height: 6px;border-bottom: 2px solid #008489;border-right: 2px solid #008489;margin: 0 0 0 9px;transform: rotate(45deg);position: relative;top: -2px;}
+.exam_course{border-bottom: 1px solid #d2d2d2;margin-bottom: 10px}
+.exam_course p{font-size: 1rem;margin-bottom: 8px;line-height: 1.4}
+.exam_course .inter_link{display: inline-block;cursor: pointer;}
+.layer-blink li a{color: #000;display: block;text-decoration: none;}
+.ccHeading{padding: 5px 0px 12px 0px;}

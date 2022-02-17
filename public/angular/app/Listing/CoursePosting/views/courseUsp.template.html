@@ -1,0 +1,36 @@
+<div class="row" id="course_usp_form">
+    <div [mysize]="'12'">
+        <div class="x_panel">
+            <div [class.x_title]="opened">
+                <ul class="nav navbar-left panel_toolbox">
+                    <li><a class="collapse-link" (click)="toggle()"><i [class]="opened?' fa fa-chevron-up':' fa fa-chevron-down'"></i></a></li>
+                </ul>
+                <h2>USP<img class="helperText" id="usp" src="/public/images/tooltip.png" width="20px" style="padding-right:0px" (click)="toolTipNotify('usp',$event)"></h2>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content" [formGroup]="courseUsp"  [hidden]="!opened">
+                <div formArrayName="usp_list" *ngIf="initialized">
+                    <div *ngFor="let item of courseUsp.controls.usp_list.controls; let rowIndex=index;let rowLast = last;">
+                        <div [formGroup]="courseUsp.controls.usp_list.controls[rowIndex]">
+                            <div class="form-group">
+                                <div [mysize]="'3'"><label >Usp {{rowIndex + 1}}</label></div>
+                                <div [mysize]>
+                                    <textarea type="text" formControlName="usp"></textarea>
+                                    <span class="help-block text-danger">
+                                        <span *ngIf="item?.controls['usp']?.errors?.minlength">{{item?.controls['usp']?.errors?.minlength}}</span>
+                                        <span *ngIf="item?.controls['usp']?.errors?.maxlength">{{item?.controls['usp']?.errors?.maxlength}}</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div [mysize]="'9'" class="control-label">
+                                <button type="button" *ngIf="courseUsp.controls.usp_list.controls.length > 1" (click)="removeUsp(rowIndex)" class="btn cmsButton cmsFont">Remove</button>
+                                <button  type="button" *ngIf="rowLast && rowIndex < 7" (click)="addUsp()" class="btn cmsButton cmsFont">+ Add More</button>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

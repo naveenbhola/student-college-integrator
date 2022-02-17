@@ -1,0 +1,56 @@
+<div class="row" id="course_notable_alumni_form">
+    <div [mysize]="'12'">
+        <div class="x_panel">
+           <div [class.x_title]="opened">
+             <ul class="nav navbar-left panel_toolbox">
+                  <li><a class="collapse-link" (click)="toggle()"><i [class]="opened?' fa fa-chevron-up':' fa fa-chevron-down'"></i></a></li>
+              </ul>
+                <h2>Notable Alumni </h2>
+                <div class="clearfix"></div>
+           </div>
+           <div class="x_content" [formGroup]="courseNotableAlumni"  [hidden]="!opened">
+              <div   formArrayName="notable_alumni">
+              <div *ngFor="let item of courseNotableAlumni.controls.notable_alumni.controls; let rowIndex=index;let lastIndex = last">
+                <div [formGroup]="courseNotableAlumni.controls.notable_alumni.controls[rowIndex]"> 
+                    <div class="form-group">
+                      <h4 [mysize]="'3'">Alumni {{rowIndex + 1}}</h4>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label [mysize]="'3'">Name</label>
+
+                      <div [mysize]>
+                        <input type="text" formControlName="alumni_name" />                         
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label [mysize]="'3'">Description</label>
+                        <div [mysize]>
+                            <textarea type="text" formControlName="alumni_description" ></textarea>
+                        </div>
+                     </div>
+
+                     <div class="form-group">
+                          <label [mysize]="'3'">Upload Photo</label> 
+                          <div [mysize]>
+                             <shiksha-upload 
+                              (mediaResponse) = "uploadPhotoCallback($event)"
+                              [uploadXhrUrl]="'nationalInstitute/InstitutePosting/uploadInstituteLogo'"
+                             >
+                             </shiksha-upload>
+                       </div>               
+                    </div>
+
+                     <div [mysize]="'9'" class="control-label">
+                            <button *ngIf="courseNotableAlumni.controls.notable_alumni.controls.length > 1" (click)="removeNotableAlumni(rowIndex)" class="btn btn-primary">Remove</button>
+                            <button  type="button" *ngIf="lastIndex" (click)="addNotableAlumni()" class="btn btn-primary">+ Add More</button>
+                      </div>
+                      <div class="clearfix"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>

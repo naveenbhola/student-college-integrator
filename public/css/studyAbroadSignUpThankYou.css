@@ -1,0 +1,58 @@
+div#main-wrapper{width: 100%}
+div#main-wrapper > div#header{width: 988px;margin: 0 auto;}
+#sp-wrpr{width:100%;float: left;}
+/*thankyou message html*/
+.wlc-msg{padding:0px;width: 980px;margin: 0 auto;font-family: "Open Sans",sans-serif}
+.mailing-txt{font-size: 16px;font-weight: 600;margin-bottom: 10px;position: relative;padding-left: 30px}
+.em-blck{background: #f8f8f8;padding: 30px 0px;font-family: "Open Sans",sans-serif}
+.time-line{width: 980px;margin: 0 auto;padding: 10px 0px;font-family: "Open Sans",sans-serif}
+.tm-text{font-size: 16px;color: #666;font-weight: 600;margin-bottom: 15px;}
+.dwnld-blck{display:block;}
+.img-cl{width: 298px;height: 198px;overflow: hidden;background-color: #f1f1f1;margin-right:10px;border:1px solid #dfdfdf;vertical-align: top;display: inline-block;}
+.text-cl{width: 665px;vertical-align: top;display: inline-block;}
+.sugst-col{padding: 30px 0px;border-top: 1px solid #dfdfdf;border-bottom: 1px solid #dfdfdf;margin: 30px 0px 10px}
+.sugst-col > li{display: inline-block;}
+.sugst-col:before, .sugst-col:after{content: '';display: table;}
+.sugst-col:after{clear: both}
+.guides-col{display:block;vertical-align: top;padding-bottom: 10px}
+.guides-col > .inner-bolcks{margin-bottom: 15px;}
+.guides-col > .inner-bolcks:last-child{margin-bottom: 0px}
+.sugst-col > li:nth-child(2n+2) > .guides-col{margin-right: 0px;border: none;}
+.sugst-col > li:nth-child(3) > .guides-col{padding-bottom: 0px}
+.sugst-col > li:nth-child(4) > .guides-col{padding-bottom: 0px}
+.guides-col{margin-right: 10px;border-right: 1px solid #dfdfdf }
+.cl-img{width: 170px;height: 115px;overflow: hidden;border:1px solid #dfdfdf;display: inline-block;margin-right: 10px}
+.txt-guide{display: inline-block;width: 290px;vertical-align: top}
+.clk-txt, .clk-txts{font-size: 14px;font-weight: 700;text-decoration: none;display: inline-block;margin-bottom: 5px;cursor: pointer;}
+.clk-txts{font-size: 16px}
+.sugts-p, .guide-txts{font-size: 12px;color: #666;font-weight: 400}
+.guide-txts{font-size: 14px;line-height: 20px;margin-bottom: 10px}
+.clk-txt:hover, .clk-txts:hover{text-decoration: none;}
+.gray-downld-btn {background: #f8f8f8;color: #666;font-size: 12px;font-style: bold;padding: 5px 13px;border: 1px solid #ccc;display: inline-block;margin: 4px 0px;text-decoration: none;}
+.gray-downld-btn:hover {background: #f1a536;color: #fff;border: 1px solid #f1a536;text-decoration: none}
+.fnt-10{color: #999;font-size: 10px}
+.gray-downld-btn.lrg{padding: 10px 30px;width: 200px;text-align: center;background-color: #f1a536;border:1px solid #f1a536;color: #fff}
+.guide-txts > a{font-size: 14px;}
+.guide-txts > a:hover, .get-back:hover{text-decoration: none}
+.get-back{font-size: 14px;}
+/*touples css*/
+.tple-cont:before, ul.tple-cont li:before, .tple:after, ul.tple-cont li:after{content: '';display: table;}
+.tple-cont{clear: both}
+ul.tple-cont li {background: #fbfbfb;border: 1px solid #f3f3f3;margin-bottom: 8px;list-style: none;float: left;width: 100%}
+.tple-box {display: block;width: 100%;padding: 8px;position: relative;float: left;}
+.tple-image {background: #fff;border: 1px solid #f3f3f3; padding: 5px;position: relative;width: 184px}
+.tple-detail {margin-left: 208px;}
+.tple-title {margin-bottom: 10px;width: 90%;}
+.tple-title a {font-weight: bold;font-size: 13px; color: #666;}
+.tple-title span {color: #999;}
+.fnt-11 {font-size: 11px;}
+.tple-sub-title {font-weight: bold;font-size: 15px;}
+.uni-course-details {width: 450px;border-right: 1px solid #dadada;border: 1px solid #dadada;background: #fff;margin: 8px 0;padding: 8px; position: relative; margin-right: 25px;}
+.pin-show{background: url(../images/abroad-shiksha-apply.png);width: 25px;height: 25px;background-position: 1px 1px;position: absolute;left: 0px;display: inline-block;}
+.custm-arrw{border: solid var(--Teal);border-width: 0 2px 2px 0;display: inline-block;padding: 3px;position: relative;top: -1px}
+.custm-arrw.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.reco-btn-col a:first-child{width:168px;text-align: center;}

@@ -1,0 +1,87 @@
+/*----- Tabs -----*/
+*:focus {  outline: none;
+} 
+/*----- Tab Links -----*/  /* Clearfix */
+.icons { background-image: url(https://images.shiksha.ws/pwa/public/images/desktop/shiksha-icons-sprite-6.png); background-repeat: no-repeat; display: inline-block; }
+.ic_dropdownsumo{ height: 8px; width: 14px; background-position: -97px -21px;}
+.ic_search2x { height: 23px; width: 25px; background-position: -153px -43px; }
+#search-background *,#search-background-search-page *{ box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; -ms-box-sizing:border-box; font-family: 'Open Sans', sans-serif;}
+#search-container{max-width: 928px;}
+.searchtab-links:after {display:block;clear:both;content:'';}
+.searchtab-links li {float:left;list-style:none;}
+.searchtab-links > li {float:left;list-style:none; border-right: 1px solid #d3d8d7;}
+.searchtab-links > li:last-child{border-right: 0px solid #d3d8d7;}
+.searchtab-links a { padding: 16px 32px; display: inline-block; background: #F1F1F2; font-size: 14px; font-weight: 600; color: #4C4C4C; transition: all linear 0.15s; text-transform: uppercase; 
+box-shadow: inset 0px 1px 10px rgba(0,0,0,0.09);}
+.searchtab-links a:link,.searchtab-links a:active,.searchtab-links a:visited{color: #4C4C4C;}
+.searchtab-links a:hover { background:#03818D; text-decoration: none; color:#fff;}
+.searchtab-links li.active a, .searchtab-links li.active a:hover { background: #03818D; color: #fff;} 
+/*----- Content of Tabs -----*/
+.search-tabs{max-width: 928px;width: 928px;    position: absolute;    left: 50%;    margin-left: -464px;top: 50%;    margin-top: -58px;z-index: 1;}
+.searchtab-content { padding: 0px 0px;  }
+.tab { display:none;  }
+.searchtab.active { display:block; }
+.customsearch-fields{ width:100%;  display:block; box-shadow: 1px 0px 10px rgba(51, 51, 51, 0.15);}
+.search-refine-colleges{float:left;}
+.search-refine-locations{float:left;}
+.custom-searchbn{float: right;margin:0px; position: relative; height: 48px;}
+.customsearch-exam{float:left;margin-left: 3px;}
+.customsearch-exam .SumoSelect > .CaptionCont, .customsearch-fees .SumoSelect > .CaptionCont, .customsearch-specialisation .SumoSelect > .CaptionCont{width: 238px;}
+.custom-searchbn i{ position: absolute; left: 50%; top: 50%; margin-left: -11px; margin-top: -11px; cursor:pointer; }
+.customsearch-fees{float:left;}
+.customsearch-specialisation{float:left;;width: 238px;}
+.search-listfileds{width:100%;display:inline-block;}
+#customsearch-college li{float:left;} 
+#search-location{ width:347px;padding:9.5px 7px;margin-left:2px;border-radius: 3px;background:#FFF;border:#000 1px solid;}
+#searchby-career{width: 880px; border-radius: 0px;background-color: #fff; border: 0px solid #000; font-size: 13px;line-height: 48px;height: 48px; padding: 0px 16px;}
+#search-title{color:#fff;display:block;float:left;	}
+.search-listfileds{ display: inline-block;  width: 100%;}
+#customsearch-title { color: #4C4C4C; font-size: 14px; padding: 0px 16px; display: inline-block; line-height: 48px; height:48px; font-weight: 600;padding-right: 53px;}
+.custom-searchbn input[type="submit"].orange, .custom-searchbn input[type="button"].orange { width:48px; height: 48px; background: #F9B34E; margin-left: 0px;
+ overflow: hidden; cursor:pointer; border:0px; outline: none;}
+.cr-home-sprite { background: url(../images/cr-home-sprite.png) no-repeat;}
+.chosen-select{width: 400px;;margin-left:5px;margin-top:1px;padding: 8px 6px;}
+#searchby-college { width: 480px; border-radius: 0px; border: 0px solid #000; font-size: 13px; line-height: 48px;height:48px; padding: 0px 16px;border-right: 2px solid #cfd1d2;    background-color: #fff;}
+
+#searchby-career::-webkit-input-placeholder,#searchby-college::-webkit-input-placeholder { color:#BFBFBF; font-size:14px; }
+#searchby-career::-moz-placeholder,#searchby-college::-moz-placeholder { color:#BFBFBF;  font-size:14px;} 
+#searchby-career:-ms-input-placeholder,#searchby-college:-ms-input-placeholder { color:#BFBFBF;  font-size:14px;}
+#searchby-career  input:-moz-placeholder ,#searchby-college input:-moz-placeholder { color:#BFBFBF; font-size:14px;}
+
+.search-colg-overlaplayer{height: 37px;position: absolute;left: 0;top: 0;width: 361px;background-color: #fff;background: rgba(0,0,0,0);z-index: 9;-ms-filter: "alpha(opacity=0)";filter: alpha(opacity=0);}
+.search-college-layer {-moz-box-shadow: 0px 0px 2px 0px #b3b3b3; padding:0px; font-family:Tahoma, Geneva, sans-serif; font-size:12px; border:1px solid #dfdfdf; background:#FFF; top: 48px;text-align:left;z-index: 99;position: absolute;left: 0px;right:0px;}
+.search-college-layer .suggestion-box-normal-option { background-color: #fff; color: #000; line-height: 17px; list-style: none;}
+.search-college-layer .suggestion-box-active-option{ background: #f1f1f2; padding: 4px 5px 4px 5px; color: #000; list-style: none;}
+.search-college-layer li span {padding-left: 4px;display: block;font-size: 13px;}
+.suggestor-group-separator {line-height: 17px; display: list-item; font-weight: bold; color: #ff6200; cursor: default; background-color: #e4e3e3; font-size: 14px; }
+.group-select { display: list-item; font-weight: 600; color: #000; cursor: default; background-color: #e4e3e3; font-size: 13.5px; padding: 4px 9px;     list-style-type: none;}
+.careers-zero-results{display: list-item; color: #ff6200; cursor: default; font-size: 12.5px; padding: 10px 9px; font-style: italic; list-style-type: none;}
+.customselect-stream{float:left;}
+#selectstream-field{width: 712px;padding: 9.5px 7px;border-radius: 3px;background: #FFF;border: #000 1px solid;}
+.customselect-fees{float:left;margin-left:4px}
+.customselect-examstab{float:right;margin-right:0px;}
+.btn-srch {background: #ff6201 url(../images/default_srch.png); background-repeat: no-repeat; width: 66px; height: 38px; text-indent: -999px; background-position: 8px -4px; border: 0; cursor: pointer; border-radius: 2px;}
+.customsearchlist-name{ float:left;}
+.search-listfileds{ background-color: #f1f1f2;border-top: 1px solid #CFD1D2;}
+.search-listfileds .dropDown{ border-left:1px solid #d8d8d7;}
+#search-background{padding: 100px 10px; background-image: url('http://64.207.185.160/iimacase/skin/frontend/default/grayscale/images/01.jpg'); background-repeat: no-repeat; background-size: cover;}
+#search-background-search-page{ background-repeat: no-repeat; background-size: cover;    width: 100%;    height: 370px;  position: relative;}
+#coursesAdvanceOptions{box-shadow: inset 0px 0px 6px rgba(51, 51, 51, 0.24);}
+.examtabhome{ background-color: #fff; display: inline-block;height: 48px;}
+.examtabhome .customselect-stream{ border-right: 2px solid #cfd1d2;height: 48px; }
+.examtabhome .customselect-fees{}
+.slideOpen, .slideClose { -webkit-transform-origin: 50% 0 0; transform-origin: 50% 0 0; -webkit-transition: -webkit-transform .3s,opacity .3s; transition: transform .3s,opacity .3s; }
+.slideClose { -webkit-transform: perspective(1300px) rotateX(-90deg); transform: perspective(1300px) rotateX(-90deg); opacity: 0; display: none\9!important; }
+.slideOpen { -webkit-transform: perspective(1300px) rotateX(0deg); opacity: 1; transform: perspective(1300px) rotateX(0deg); opacity: 1; display: inline-block\9!important; }
+.suggestion-box{-webkit-box-shadow: 0px 0px 2px 0px #b3b3b3; -moz-box-shadow: 0px 0px 2px 0px #b3b3b3; box-shadow: 0px 0px 2px 0px #b3b3b3; padding:10px; font-family:Tahoma, Geneva, sans-serif; font-size:12px; border:1px solid #dfdfdf; background:#FFF; text-align:left}
+.suggestion-box-active-option , .suggestion-box-normal-option  {padding:4px 5px; background-color:#dff1ff; color:#000000; line-height:17px}
+.suggestion-box-normal-option {background:#FFF;}
+.search-refine-colleges strong{font-weight: bold;}
+#instituteAdvanceOptions #customsearch-title{ border-left: 1px solid #d8d8d7;}
+#instituteAdvanceOptions .CaptionCont span{ width: 100%; display: block; }
+.search-refine-colleges input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+.searchby-college-placeholder {color: #BFBFBF; font-size:14px !important;}
+.search-refine-colleges .searchby-college-disable {color: #999999; font-size:14px !important;}
+.search-refine-colleges .searchby-college-cross {background: url('../images/cr-home-sprite.png') -30px -20px no-repeat;}
+#search-background-search-page .cover-banner-text-span {position: absolute;color: #bfbfbf;font-size: 12px; bottom: 2px; right: -77px;}
+#search-background-search-page .cover-banner-link {position: absolute;right: 130px;bottom: 7px;color: #fff;font-size: 14px;font-weight: 600; text-decoration: none;}

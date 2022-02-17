@@ -1,0 +1,189 @@
+.fltlft{float:left}
+.fltryt{float:right}
+.clr:after,.clearFix:after{content:"";display:block;clear:both}
+.shortlist-tuple,.filter-widget{margin-bottom:16px;background:#fff;box-shadow:0 2px 2px 0 rgba(0,0,0,.16),0 0 0 1px rgba(0,0,0,.08)}
+.instituteCard,.courseCard{border-bottom:1px solid #eee;padding:12px;position:relative}
+.courseCard > p{padding-right: 20px;}
+i.course-shrtlst{background:url(https://images.shiksha.ws/pwa/public/images/pwa-header-mobile-v3.svg) no-repeat;position:absolute;background-position:-234px -40px;width:20px;height:20px;right:10px;top:12px}
+p.instituteLocation:before{content:"";background:url(https://images.shiksha.ws/pwa/public/images/pwa-header-mobile-v3.svg) no-repeat;display:inline-block;background-position:0 -53px;width:25px;height:14px;position:relative;top:1px;background-position:-314px -42px;width:13px;top:0px;left:-4px}
+.er-detail label{color:#666;margin:0 5px}
+.loadMore,.filter-widget{padding:12px;text-align:center}
+.filter-area{width:26%;padding-right:16px;}
+.desk-filter{width: 288px;background: #fff;z-index: 9;}
+.college-shortlist-content{padding-bottom: 30px;}
+.card-area{width:74%}
+.odd-data{width:50%;padding-right:8px}
+.even-data{width:50%;padding-left:8px}
+.shadow-box{box-shadow:0 2px 2px 0 rgba(0,0,0,0.16),0 0 0 1px rgba(0,0,0,0.08);background:#fff}
+.table-cell{display:table-cell;vertical-align:middle}
+.bullet-list{list-style-type:disc}
+.specialization-tab .table-cell{padding:8px;border:1px solid #d2d2d2}
+.specialization-tab .table-cell:first-child{font-size: 12px;color: #666;}
+.specialization-tab .table-cell:first-child a{margin-left: 5px;}
+i.specialization-icon,i.college-icon{width:24px;height:24px;background-repeat:no-repeat;display:inline-block;position:absolute;left:0;bottom:0}
+i.college-icon{background-image:url(/pwa/public/images/college-predictor-icons.svg);background-position:-3px 0px}
+i.specialization-icon{background-image:url(/pwa/public/images/college-predictor-icons.svg);background-position:-34px 0px}
+.tab{position:relative;padding-left:24px;cursor:pointer;display:inline-block;font-size: 0.875rem;color:#000;}
+.tab.active{color:#008489;font-weight: 600;}
+.quota{margin:0 0 0 5px;padding:2px 3px;background:rgba(255,0,0,0.66);color:#fff;border-radius:2px}
+.pipe{color:#666;margin:0 3px}
+.fw-nrml{font-weight:400}
+.fnt-w6,.fw-bld{font-weight:600}
+.link{color:#008489}
+.sroundBrdr{
+    padding: 2px 6px;
+    border: 1px solid #000;
+    border-radius: 2px;
+}
+.sroundBrdr a,
+.blackLink,a.blackLink{
+    color:#000;
+}
+.er-detail {
+    padding: 8px 0px 4px;
+}
+
+.rating-widget {
+    display: inline-block;
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex.left{
+    justify-content: left;
+}
+
+.loadMore .link {
+    padding: 0px 10px;
+    cursor:pointer;
+}
+
+.flex.column{
+    flex-direction:column;
+}
+a.link.less{
+    margin-top: 10px;
+} 
+.fltryt.mobileSticky.hide{display: none}
+#mobileFilter .ctp-filter-sec{margin-bottom: 0px;box-shadow: none;}
+.savedList{
+    width: 280px;
+    padding: 8px 12px 8px 12px;
+    border-radius: 4px;
+    background: rgba(16, 161, 230, 0.92);
+    color: #fff;
+    position: fixed;
+    right: 36px;
+    top: 95px;
+    box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.24);
+    z-index: 2;
+}
+.boxArrow{
+    width: 0px;
+    height: 0px;
+    border:10px solid transparent;
+    border-right-color:  rgba(16, 161, 230, 0.92);
+    border-top-color:  rgba(16, 161, 230, 0.92);
+    position: absolute;
+    right: -0px;
+    top: -18px;
+    display: inline-block;
+    transform: rotate(-45deg);
+}
+.relative{
+    position: relative;
+}
+i.boxCross {
+    font-style: normal;
+    font-weight: 600;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    padding: 10px;
+    line-height: 14px;
+    cursor: pointer;
+}
+.zrp-box{margin: 30px auto;}
+.zrp-box .button--secondary{margin: 10px 0 3px;}
+.zrp-box .button--secondry{margin: 3px 0 2px;}
+p.instituteLocation, .courseCard {
+    font-size: 0.75rem;
+}
+.courseCard a.fnt-w6 {
+    font-size: 0.875rem;
+}
+i.course-shrtlst.active {
+    background-position: -211px -40px;
+}
+.instituteName{
+    font-size: 1rem;
+}
+.infoText{padding-top:11px;}
+@media only screen and (min-width:1024px) {
+    .box{padding:16px}
+    .tab-sec.box{padding-right:0;padding-top:0;}    
+}
+@media only screen and (max-width:767px) {
+    .fltlft,.fltryt,.collegeShortlistResult .fltlft,.collegeShortlistResult .fltryt{float:none;width:100%}
+    .odd-data,.even-data{padding:0}
+    .shortlist-tuple{margin-bottom:12px}
+    .box{padding:12px}
+    .collegeShortlistResult ._subcontainer,
+    .collegeShortlist ._subcontainer{padding:0}
+    .bullet-list{margin-left:20px}
+    .desktopOnly{display:none}
+    .filter-area .table-cell,.specialization-tab .table-cell{border:none;padding: 0px;width: 50%;}
+    .filter-area .table-cell a,.specialization-tab .table-cell a{padding:10px 5px;display: block;position: relative;}
+    .filter-area .table-cell a.activeTab,.specialization-tab .table-cell a.activeTab{background-image: linear-gradient(-180deg, #FFFFFF 0%, rgba(0, 132, 137, 0.5) 274%);}
+    .filter-area .table-cell a.activeTab:after,.specialization-tab .table-cell a.activeTab:after{content:""; border-bottom: 4px solid #008489;position: absolute;bottom: -1px;left:0px;right: 0px;}
+    .specialization-tab{border-top:1px solid #ccc}
+    .specialization-tab .table-cell{text-align:center}
+    .flex{display:flex}
+    .filter-area{width:100%;padding-right:0}
+    .filter-area.flex{justify-content:left}
+    .optionBlock{max-width:100%;overflow:auto}
+    .filter-area > div{padding:7px 4px}
+    .filterBlock{position:relative}
+    .flex.left{align-items: flex-start;}
+    .flex-item.result{flex: 1 60%;}
+    span.gredient-corner {
+        position: absolute;
+        width: 10px;
+        height: 100%;
+    }
+    span.gredient-corner.left {
+        left:0px;
+        /*background-image: linear-gradient(to right, white , transparent);
+        background: -webkit-linear-gradient(top right, white, transparent);*/
+        background: -moz-linear-gradient(left, rgba(255,255,255,1) 26%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(left, rgba(255,255,255,1) 26%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right, rgba(255,255,255,1) 26%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    }
+    span.gredient-corner.right {
+        right:0px;
+        background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.02) 1%, rgba(255,255,255,1) 58%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0.02) 1%,rgba(255,255,255,1) 58%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.02) 1%,rgba(255,255,255,1) 58%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    }   
+    .fixedTop-wrapper{height: 94px;}
+    .fixedTop{
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 2;
+    }
+    .savedList{
+        top: 55px;
+        right: 5px;
+    }
+    .zrp-box{
+        margin: 0px auto 16px;
+    }
+    .specialization-tab .table-cell:first-child a{margin-left: 0px;}
+    .infoText{padding-top:0px;}
+    .tab-sec.box{padding-top: 12px;}
+    .collegeShortlistResult ._container{padding: 0px;}
+}

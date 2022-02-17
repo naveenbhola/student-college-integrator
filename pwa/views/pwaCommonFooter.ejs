@@ -1,0 +1,93 @@
+<div id="chat-container"></div>
+<script>
+  function getCookie(c_name){
+    if (document.cookie.length>0){
+        c_start=document.cookie.indexOf(c_name + "=");
+        if (c_start!=-1){
+            c_start=c_start + c_name.length+1;
+            c_end=document.cookie.indexOf(";",c_start);
+            if (c_end==-1) { c_end=document.cookie.length ; }
+            return unescape(document.cookie.substring(c_start,c_end));
+        }
+    }
+    return "";
+}
+function setCookie(c_name,value,expireTime,timeUnit) {
+    if(typeof COOKIEDOMAIN == 'undefined') {
+        COOKIEDOMAIN = '';
+    }
+  var today = new Date();
+  today.setTime( today.getTime() );
+  var cookieExpireValue = 0;
+  expireTime = (typeof(expireTime) != 'undefined')?expireTime:0;
+  timeUnit = (typeof(timeUnit) != 'undefined')?timeUnit:'days';
+  if(expireTime != 0){
+    if(timeUnit == 'seconds'){
+      expireTime = expireTime * 1000;
+    }else{
+      expireTime = expireTime * 1000 * 60 * 60 * 24;
+    }
+    var exdate=new Date( today.getTime() + (expireTime) );
+    var cookieExpireValue = exdate.toGMTString();
+                if(timeUnit == 'homepage'){ cookieExpireValue = getCookie('homepage_ticker_track');}
+    document.cookie=c_name+ "=" +escape(value)+";path=/;domain="+COOKIEDOMAIN+""+((expireTime==null) ? "" : ";expires="+cookieExpireValue);
+  }else{
+    document.cookie=c_name+ "=" +escape(value)+";path=/;domain="+COOKIEDOMAIN;
+  }
+    if(document.cookie== '') {
+        return false;
+    }
+    return true;
+}
+function showShikshaAssistant(){
+  if(window.assistantInit === true){
+    return;
+  }
+  
+  if(!(document.getElementById("chat-container") == null)){
+    window.assistantInit = true;
+    var d = new Date();
+    var imported = document.createElement('script');
+    imported.src = '<%-jsDomain%>/public/js/chatplugin.js?'+d.getDate()+''+d.getMonth()+''+d.getYear();
+    document.head.appendChild(imported);
+  }
+}
+
+if(window.assistantInit === false || typeof(window.assistantInit) === "undefined"){
+  showShikshaAssistant(); 
+}
+window.hideGdpr = <%-hideGdpr%>;
+
+var gtmInitialized = false;
+document.addEventListener('touchstart', initiateGTM);
+window.addEventListener('scroll', initiateGTM);
+function initiateGTM() {
+
+  if(!gtmInitialized) {
+  (function(w,d,s,l,i){w[l]=w[l]||[];
+      w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js', });
+      var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+      j.defer=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5FCGK6');
+  gtmInitialized = true;
+  lazyLoadJs(document,"script",['https://www.googletagservices.com/tag/js/gpt.js']);
+  }
+}
+
+//initiateGTM();
+
+function closeBanner1(){
+  if(document.getElementById('stickyBanner')){
+    document.getElementById("stickyBanner").style.display = "none";
+  }
+}
+window.addEventListener('message', receiveMessage, false); 
+
+function receiveMessage(event) {
+  if(event.data =='close_dfp'){
+    closeBanner1();  
+  }
+}
+
+</script>

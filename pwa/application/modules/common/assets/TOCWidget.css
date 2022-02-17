@@ -1,0 +1,20 @@
+.css-acrdn{box-shadow: 0 2px 2px 0 rgba(0,0,0,.16), 0 0 0 1px rgba(0,0,0,.08);padding:0;border-radius:0px;background:#fff;position:relative;margin-bottom: 12px;}
+label.block-label{display:block;position:relative;padding:2px 12px;border-bottom:1px solid #e6e5e5;}
+label.block-label h2{font-size:0.875rem;font-weight:400;color:#000;position:relative;text-align: center;}
+label.block-label h2:after{content: "";display: inline-block;width: 6px;height: 6px;top:50%;right:7px;position:absolute;border-bottom: 2px solid #000;border-right: 2px solid #000;}
+.table-content{max-height:100%;overflow:hidden;transition:max-height .0s}
+input.toggle-input:checked ~ .table-content{max-height:0;}
+/*.toc-fixed input.toggle-input:checked ~ .table-content{max-height:280px;overflow:auto}*/
+.toggle-input{display:none}
+.table-content p:first-child{border-top:none}
+.table-content p{padding:9px 12px 6px;display:block;cursor:pointer;font-size:.875rem;font-weight:400;color: #008489;border-top: 1px solid #d2d2d2;}
+
+.toc-block{margin-top:12px}
+.toc-block.toc-fixed{position:fixed;left:0;top:81px;z-index:9992;margin:0;right:0}
+.toc-fixed .css-acrdn{border:none;box-shadow:0 2px 2px 0 rgba(0,0,0,0.16),0 0 0 1px rgba(0,0,0,0.08)}
+input.toggle-input + label h2:after{transform: rotate(-135deg);margin:-2px 0 0 0}
+input.toggle-input:checked + label h2:after{transform: rotate(45deg);margin: -7px 0 0 0px;}
+
+@media only screen and (min-width: 320px) and (max-width: 1023px){
+	.table-content::-webkit-scrollbar{display:none}
+}

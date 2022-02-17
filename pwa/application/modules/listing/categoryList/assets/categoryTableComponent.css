@@ -1,0 +1,17 @@
+/*.tbl-seo{margin: 0 auto;max-height: 88%; overflow-y:scroll}*/
+.tbl-seo h1{display: inline-block; width: 90%; vertical-align: middle; border-collapse: collapse;    margin: 0;font-size: 24px;font-weight: 600;}
+/*.tbl-seo table {width: 100%;margin-top: 10px;display: block; overflow-x: auto; white-space: nowrap; font-size: 14px;}*/
+/*.tbl-seo table tr th{font-weight: 600; text-align: center;}
+.tbl-seo table tr td:first-child, .tbl-seo table tr th:first-child{text-align: left}
+.tbl-seo table tr td, .tbl-seo table tr th{border: 1px solid #eee; border-collapse: collapse; padding: 5px;text-align: left;}
+*/
+.clear{clear: both;}
+.rnkgTbl-Cont{color: #000;font-size: 14px;line-height: 21px;}
+.shwDat-link{color: #008489; font-size: 14px;padding: 0 0 0 12px;cursor: pointer;}
+.cmn-seoTbl .fix-admsn {position: fixed;top: 0;height: 100%;width: 100%;background: #fff;z-index: 9999;left: 0;right: 0;}
+.cmn-seoTbl .fix-admsn.hid{ display: none;}
+.cmn-seoTbl .prcs-col .head-fix {position: inherit;background: #008489;width: 100%;padding: 10px;
+    box-sizing: border-box}
+.cmn-seoTbl .head-fix>a {position: absolute;right: 10px;width: 30px;text-align: center;font-size: 27px;color: #fff;top: 2px;}
+.cmn-seoTbl .head-fix h3{font-size: 16px; font-weight: 600; color: #fff;text-overflow: ellipsis; overflow: hidden; white-space: nowrap; width: 80%;}
+.cmn-seoTbl .new-layer-mask {padding: 15px;display: block;height: 98%;}

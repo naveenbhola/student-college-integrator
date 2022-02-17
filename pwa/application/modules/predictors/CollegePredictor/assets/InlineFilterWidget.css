@@ -1,0 +1,6 @@
+.filter-widget{padding:12px 0;text-align:center}
+.filter-widget .filter-items{margin-top:10px}
+.filter-item-list{list-style:none;display:block;min-width:100%;white-space:nowrap;overflow:auto}
+.filter-item-list li{list-style:none;display:inline-block}
+.filter-items{width:100%;position:relative}
+.filter-capsule{padding:6px 8px 4px;margin:0 5px;display:inline-block;border:1px solid #000;border-radius:6px}

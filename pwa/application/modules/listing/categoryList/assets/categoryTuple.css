@@ -1,0 +1,211 @@
+.ctpSrp-contnr{width:100%;word-wrap: break-word}
+.ctpSrp-contnr a, .pwa-cont .ctpSrp-contnr a{color: #008489; text-decoration: none;font-weight: 400;}
+.ctpSrp-contnr a.fnt-w6{font-weight: 600;}
+.ctpSrp-tuple{ clear: both;width: 100%; display: inline-block;margin-bottom: 16px;}
+.ctp-SrpLst{background:#fff;box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.16)}/**margin-bottom: 4px; removed due to PAT*/
+.ctp-SrpDiv{ border-bottom: 1px solid #eee;padding: 10px;font-size: 0.875rem; line-height: 19px;width:100%; display: inline-block;}
+.ctp-SrpDiv:last-child{border: none;padding-bottom: 0;}
+.ctpSrp-Lft{float: left; width: 68px;height: 54px;border-radius: 2px;}
+.ctpSrp-Lft img{width:68px; height: 54px;border-radius: 2px;color: transparent;}
+.ctpSrp-Rgt{margin-left: 77px; font-size: 0.75rem; color: #000;padding-right:20px;position: relative}
+.ctpSrp-Rgt a{color: #008489;text-decoration: none;}
+.ctpSrp-Rgt p.ctpIns-tl{font-size: 0.875rem; color: #000;font-weight: 600;line-height: 1.3125rem; overflow: hidden;max-height: 40px;}
+.ctpSrp-Rgt p.ctpIns-tl a{font-weight: 600;}
+.ctp-SrpDiv a.vw-adLnk{color: #008489; display: inline-block;text-decoration: none;cursor: pointer;font-weight: 400;}
+.ctpSrp-Rgt i.ctp-shrtlst, .ctp-srcIcn{background: url(https://images.shiksha.ws/pwa/public/images/pwa-header-mobile-v3.svg) no-repeat; }
+.ctpSrp-Rgt i.ctp-shrtlst{position: absolute; background-position: -234px -40px;  width: 20px;  height: 20px;  right: 0px; top: 0;}
+p.ctp-cty { text-overflow:  ellipsis;white-space:  nowrap; overflow: hidden;}
+p.ctp-cty:before, a.vw-adLnk:after,.ctp-shwMr a:after{content: '';background: url(https://images.shiksha.ws/pwa/public/images/pwa-header-mobile-v3.svg) no-repeat;display: inline-block;background-position: 0px -53px;width: 25px;height: 16px;position: relative;top: 1px;}
+a.vw-adLnk:after {background-position: -316px -11px;width: 17px;top: 2px;height: 13px;}
+p.ctp-cty:before{background-position: -314px -42px;width: 13px;top: 2px;left: -4px;}
+.ctpSrp-Rgt i.ctp-shrtlst.active {background-position: -210px -40px;}
+.ctp-detail{font-size: 0.75rem; color: #000;margin:0;}
+.ctp-detail label{color: #666;font-size: 0.875rem; display: block;margin-top:6px;}
+.pwa-cont .ctp-detail ul{margin:0;}
+.pwa-cont .ctp-detail ul li{width:initial;}
+.ctp-detail ul li, .pwa-cont .ctp-detail ul li{list-style: none;margin-right: 4px; display: inline-block;}
+.ctp-detail ul li span{color: #e0e0e0; display: inline-block}
+div.ctp-Det-info{font-size:0.75rem; color: #000;line-height: 19px;}
+div.ctp-Det-info p{display: inline-block; text-overflow: ellipsis; vertical-align: middle;white-space: nowrap;overflow: hidden;max-width: 80%;margin-right: 5px;font-weight: 500; color: #000;}
+div.ctp-Det-info a{display: inline-block;}
+div.ctp-Det-info span.link{vertical-align: middle;display: inline-block;}
+.QRP-list{margin: 0; width:100%;}
+.QRP-list ul{width: 100%;}
+.QRP-list ul li{padding: 3px 0px; text-align: left;margin: 0;display: inline-block}
+.QRP-list ul li:nth-child(2):before, .QRP-list ul li:nth-child(3):before{content: '|';font-size: 0.75rem;position: relative; left: 0px;color: #ccc; margin: 0 15px;}
+.ctp-detail ul li span.Qrp-txt{color: #000;margin-left: 4px;}
+.ctp-SrpBtnDiv{width: 100%; display: inline-block;clear: both;padding: 10px;}
+/*.ctp-SrpBtnDiv a.ctp-btn, .layer-blink a.ctpComp-btn{width: 48.7%; border-radius: 2px;height: 34px; line-height: 36px;display: inline-block;text-align: center; font-size: 0.875rem;font-weight: 600;}
+a.ctp-btn.ctpComp-btn:hover{background: #f0f6ff;}*/
+a:not(.ebDisabled).ctp-btn.ctpBro-btn:hover{background: #db6d1d;}
+/*a.ctpComp-btn{border: 1px solid #008489; color: #008489;background: #fff; float: left;}
+.ctp-SrpBtnDiv a.ctpBro-btn{border: 1px solid #f37921; color: #fff;background:#f37921; float: right}
+.ctp-SrpBtnDiv a.ctpBro-btn.disabld{color: #999; background: #E2E2E2;cursor: default; border: 1px solid #e2e2e2;}
+*/
+.ctp-SrpLst div.brdr-Top{border-top:1px solid #ccc;margin-top:10px; padding-top: 3px;}
+/*.ctp-shwMr{position:relative;background: #fff;border-bottom: 1px solid #eee;text-align: center;color: #008489; font-size: 0.75rem;line-height: 26px;box-shadow: 0 2px 2px #ececec;margin:0 auto;width: 97%;}
+*/
+.ctp-SrpBtnDiv button {width: 48.7%;}
+.ctp-SrpBtnDiv .button--orange {margin-left: 7px;padding: 0 10px}
+/*.ctp-SrpBtnDiv .button--secondary+div{display: none;}*/
+.offrd-courses {display: block;font-size: 0.75rem; color: #666;font-weight: 600;margin-bottom: 5px;}
+.fallback-heading {display: block; margin: 0px 0px 5px 10px; font-size: 0.875rem;}
+.ctp-SrpBtnDiv {width: 100%;display: inline-block;clear: both;border-top: none;margin: 0px 0px 0px;padding-top: 14px;}/*border removed due to comment*/
+.QRP-list {margin: 0;width: 100%;position: relative;top: 2px;}
+.QRP-list ul {width: 100%;}
+.QRP-list ul li {padding: 0px 0px;text-align: left;margin: 0;font-size: 0.875rem;color: #666;display: inline-block;}
+.avail_exams {display: inline-block;font-size: 0.875rem;color: #008489;vertical-align: middle;max-width: 100%;overflow: hidden;text-overflow: ellipsis;}
+.avail_exams a{font-weight: 400;}
+.avail_exams .exm-name {color: #000}
+.avail_exams.allexam{display: inline; width: auto; vertical-align: top; white-space: normal;}/*chaged due to PAT bug*/
+#tab-section > div.ctp-filter-sec#fixed-card {    box-shadow: none;    border-bottom: 1px solid #d2d2d2;}
+@media screen and (min-width: 1024px){
+    .avail_exams.allexam{display: inline;}
+    .ad-slotDiv{text-align: center;font-size: 0;}
+    .ad-slotDiv .dfp-wraper {
+        display: inline-block;
+        margin: 10px;
+    }
+    .ad-slotDiv .dfp-wraper .dfp-add > div{
+        width: auto;
+    }
+    .fnt-w6{font-weight: 600;}
+    .ctp_rslts h1{line-height: 1.625rem;font-size: 1.25rem;margin: 6px 0px 4px;}
+    .ctp_rslts p{line-height: 1.3125rem;}
+    .ctp-detail{margin: 5px 0px 0px;}
+     #ctp_pwa .oafcta-btn {padding: 0 5px;}
+    
+}
+.pwa_wrapper .ctp-detail label{display: inline-block;margin: 7px 5px 0px 0px;}
+.pwa_wrapper div.ctp-Det-info{display: inline-block;}
+.pwa_wrapper .flexi-div{display: inline-block;width:calc(100% - 319px);vertical-align: middle;}
+.pwa_wrapper .ctp-SrpBtnDiv{display: inline-block;width: 319px;vertical-align: middle}
+.pwa_wrapper .flexi-div .ctp-SrpDiv{border: none;padding-bottom: 10px;}
+.pwa_wrapper .flexi-div .clg-col.single-col{margin-top: 0px;}
+.pwa_wrapper .ctp-SrpLst{background: #fff;position: relative;border-radius: 2px;}
+.ctp-shwMr{background:#fff;text-align: center;font-size: 0.75rem;line-height: 28px; box-shadow: 0 1px 1px 0 rgba(0,0,0,0.16);border:1px solid #cdcdcd;border-top:0px;position: relative;width: 97%;margin: 0 auto;border-radius: 0 0 2px 2px;position: relative;}
+.ctp-shwMr a{font-weight: 400;}
+.ctp-shwMr:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45) -5%,rgba(0,0,0,0) 12%);
+    pointer-events: none;
+}
+.ctp-shwMr a:after {
+    background-position: -25px -7px;
+    transform: rotate(90deg);
+    margin-left: 2px;
+    height: 13px;
+    width: 15px;
+    top:2px;
+}
+span.application-msg {
+    display: block;
+    padding: 0px 0px 10px;
+    font-size: 13px;
+    text-align: center;
+    color: #e6053a;
+}
+.highligt-msg {
+    margin-left: 77px;
+    display: block;
+}
+
+span.highlight-msg-txt {
+    font-size: 12px;
+    color: #666;
+    display: inline-block;
+    width: calc(100% - 34px);
+    margin-top: 5px;
+}
+
+i.pwa-header-icon.bulb {
+    display: inline-block;
+    width: 32px;
+    height: 28px;
+    margin: 0px 0px 0px 0px;
+    background: url('https://images.shiksha.ws/pwa/public/images/pwa-header-mobile-v3.svg') no-repeat -65px -38px;
+    transform: scale(.7);
+    -webkit-transform: scale(.7);
+    -moz-transform: scale(.7);
+}
+
+.highligt-msg * {
+    vertical-align: middle;
+}
+
+@media screen and (min-width:320px) and (max-width:767px){
+    .highligt-msg{
+        margin: 6px 0px 0px 0px;
+        padding: 2px 0px 0px;
+        border-top: 1px solid #eee;
+    }
+    i.pwa-header-icon.bulb{
+        transform: scale(.9);
+        -webkit-transform: scale(.9);
+        -moz-transform: scale(.9);
+        margin: 0px 5px 0px 0px;
+    }
+    span.highlight-msg-txt {
+        width: calc(100% - 38px);
+    }
+}
+#CTP .oafcta-btn,#ctp_pwa .oafcta-btn, .oafcta-btn {
+    background-color: #fac528;
+    border: 1px solid #fac528;
+    color: #000;
+    text-align: center;
+    font-size: 0.875rem;
+    vertical-align: middle;
+    font-weight: 600;
+    cursor: pointer;
+    height: 34px;
+    touch-action: manipulation;
+    white-space: nowrap;
+    background-image: none;
+    line-height: 32px;
+    padding: 0 9px;
+    display: inline-flex;
+    justify-content: center;
+    border-radius: 2px;
+    align-items: center;
+    outline: none;
+    width: 48.7%;
+    margin-left: 7px;
+}
+button.oafcta-btn .d-arrow {
+    position: relative;
+    width: 12px;
+    height: 14px;
+    margin: 0 5px 0 0;
+}
+button.oafcta-btn .d-arrow:after, button.oafcta-btn .d-arrow:before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 7px solid #000;
+    border-top: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-radius: 3px;
+    position: absolute;
+    left: 0;
+}
+button.oafcta-btn .d-arrow:after {
+    left: 5px;
+}
+@media only screen and (min-width: 1024px){
+    #ctp_pwa{margin-top: -8px;}/*specific to ctp changes - UI-126*/
+    #ctp_pwa .oafcta-btn {padding: 0 5px;}
+    .pwa_wrapper .pwa_rightCol .flexi-div,
+    .pwa_wrapper .pwa_rightCol .ctp-SrpBtnDiv{
+        width: 100%;
+    }
+
+}

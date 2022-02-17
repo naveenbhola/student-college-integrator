@@ -1,0 +1,49 @@
+<div class="row" id="university_parent_mapping_form">
+    <div mysize="12">
+        <div class="x_panel">
+           <div [class.x_title]="opened">
+                 <ul class="nav navbar-left panel_toolbox">
+                  <li><a class="collapse-link" (click)="toggle()"><i [class]="opened?' fa fa-chevron-up':' fa fa-chevron-down'"></i></a></li>
+              </ul>
+                <h2>Add Parent Entity <img class="helperText" id="add_parent_entity" src="/public/images/tooltip.png" width="20px" style="padding-right:0px" (click)="toolTipNotify('add_parent_entity',$event)"></h2>
+                <div class="clearfix"></div>
+           </div>
+           <div class="form-group" *ngIf="instituteObj.postingListingType != 'University'">
+
+               <div mysize="4" class="cmsAlignLeft">
+                             <div class="radio-inline"><label noBootstrap>
+                                 <input type="radio" class="flat" name="is_regular_entity" [value]=false [(ngModel)]="instituteObj.is_satellite_entity" (click)=" instituteObj.is_satellite_entity == true ? removeHierarichy() : ''"/> Regular
+                             </label></div>
+                </div>
+                          <div mysize="4">
+                            <div class="radio-inline"><label noBootstrap>
+                                <input type="radio" class="flat" name="is_satellite_entity" [value]=true [(ngModel)]="instituteObj.is_satellite_entity" (click)=" instituteObj.is_satellite_entity == false ? removeHierarichy() : ''"/> Satellite
+                            </label></div>
+                </div>
+            </div>
+           <div class="x_content"  [hidden]="!opened">
+              <institute-parent-hierarchy
+              (selectedHierarchyItem)="selectedHierarchy($event)"
+              [institute_type]="instituteObj.institute_type" 
+              [satelliteCampus] = "instituteObj.is_satellite_entity"
+              [postingListingType] = "instituteObj.postingListingType"
+              [typeOfListingPosting] = "instituteObj.is_dummy"
+              [excludedInstituteId] = "instituteObj.institute_id"
+              (toolTipEvent) = "toolTipModalParentShow($event)"
+              >
+              </institute-parent-hierarchy>
+
+              
+
+              <div *ngIf = "isSelectedHierarchy" class="cmsAlignLeft cmsFont"> 
+                <div class="clearfix"></div>             
+                  <h4>Selected hierarchy</h4>
+                  <span *ngFor="let i of selectedParentObj;let selectedLast = last">                     
+                      {{i.name}} <span *ngIf="!selectedLast" class="glyphicon glyphicon-chevron-right"></span>
+                  </span>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,35 @@
+.layer-title .close, .layer-head .close{ background: url(../images/common-sprite-v1.png) no-repeat; display: inline-block; }
+.layer-title .close, .layer-head .close { background-position: 0px -195px !important; width: 19px; height: 16px;top: 5px;right: -4px;position: relative;float: right;}
+.layer-outer, .blkRound{ -webkit-box-sizing: content-box; 
+-moz-box-sizing: content-box;
+ box-sizing: content-box; }
+
+body,form,h1,h2,h3,h4,h5,h6{font-size:12px;margin:0;padding:0} 
+a:link,a:active,a:visited{color:#0065DE;text-decoration:none}
+.Overlay{display:none;padding:10px;position:absolute;width:250px;z-index:1000001}
+.spirit_header{background:url(/public/images/spirit_header.gif)}
+.loginBtn{background:#cacaca url(/public/images/hpBtn.png) no-repeat;background-position:left 0;border:0 none;cursor:pointer;font-size:11px;height:20px;width:40px}
+.RegisterBtn{background:#fe8001 url(/public/images/hpBtn.png) no-repeat;background-position:-44px 0;border:0 none;color:#FFF;cursor:pointer;font-size:11px;height:21px;width:85px}
+.topBarLoginFormAlign {padding:3px 0 3px;width:766px; float:right}
+.error_box{background:#faa;border:solid 1px #f11 !important}
+/*CSS Fix for chrome only*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+#shikshaNavigationMenu ul li.last a{line-height:21px; padding-bottom:5px !important}
+}
+.errorMsg{color:red;font-size:11px;text-decoration:none}
+#wrapper{margin:0 auto;position:relative;width:948px}
+.iframe{position:absolute;z-index:50}
+.cssSprite1{background-image:url(/public/images/shikIcons.png)}
+h1,h2,h3,h4,h5,h6,.inline,.editLinkShow{display:inline}
+a:hover,.btmLink A:hover{text-decoration:underline}
+.pf10{padding:10px}
+/* New Overlay Classes */
+.divBdr{border-bottom:1px solid #eaeeed;padding-bottom:10px;margin-bottom:10px}
+#HomeTab {background:url(/public/images/homeIcon.gif) 4px 4px no-repeat transparent; margin:0;font-size: 15px; width:28px; height:20px; display:block; padding-top:11px; cursor:pointer}
+#whiteLine{position:absolute;top:0;left:-1px;background:#FFFFFF;z-index:2000;display:block;height:26px;width:1px;border-left:1px solid #FFFFFF;}
+/*#gradOption{width:300px;}*/
+.modalDialog_transparentDivs{filter:alpha(opacity=40);opacity:0.4;background-color:#000;z-index:105;position:absolute;}
+.modalDialog_contentDiv{border:0px solid #FFF;padding:2px;z-index:1005;position:absolute;background-color:transparent;}
+.modalDialog_contentDiv_shadow{z-index:90;position:absolute;background-color:#transparent;filter:alpha(opacity=30);opacity:0.3;}
+.ml70{margin-left:70px}
+.common-sprite { background: url(../images/common-sprite-v1.png) no-repeat; display: inline-block;}

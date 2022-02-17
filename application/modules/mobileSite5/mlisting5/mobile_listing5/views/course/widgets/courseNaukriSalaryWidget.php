@@ -1,0 +1,3 @@
+<div id = "naukri_widget_data" class="listingTuple" style="display: block;">
+   <li style='list-style-type:none'><div style='text-align: center;padding-top: 10px;margin-top: 7px; margin-bottom: 10px; display:block;' id='loader-id'><img border='0' alt='' id='loadingImage1' class='small-loader' style='border-radius:50%;width: 40px;border: 1px solid rgb(229, 230, 230)' src='//<?php echo IMGURL; ?>/public/mobile5/images/ShikshaMobileLoader.gif'/></div></li>
+</div>

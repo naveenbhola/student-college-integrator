@@ -1,0 +1,856 @@
+/* Response Form CSS | component reference*/
+
+.pwa-hd-sgnup {
+    background: #fff;
+    color: #666;
+    border-bottom: 1px solid #e7e7e7;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+.pwa-hd-sgnup p {
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 22px;
+}
+
+.pwa-hd-sgnup p.flLt {
+    width: 90%;
+    float: left;
+}
+
+.no-head {
+    width: 100%;
+    background: #edf9f9;
+}
+
+.lyr-crs-sgnup {
+    float: right;
+    color: #999;
+    font-size: 1.6875rem;
+    text-decoration: none;
+    line-height: 22px;
+}
+
+.pwa-cont-sgnup {
+    padding: 20px;
+    background: #fff;
+    text-align: center;
+}
+
+.pwa-cont-sgnup .field-title {
+    line-height: 20px;
+}
+
+.pwa-cont-sgnup #otp-mbl {
+    display: inline-block;
+}
+
+.pwa-cont-sgnup>form>.reg-btn {
+    padding: 15px;
+    width: 93.75%;
+    width: calc(100% -20px);
+}
+
+.scrolable-vport {
+    max-height: 408px;
+    padding-bottom: 46px;
+    -webkit-overflow-scrolling: touch;
+    box-sizing: border-box;
+}
+
+.form-scroll {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.field-title {
+    margin: 0 0 8px;
+    padding: 0;
+    text-align: left;
+    color: #000;
+    font-size: 0.875rem;
+}
+
+.reg-form {
+    line-height: 58px;
+    height: 51px;
+    background: #fff;
+    outline: none;
+    position: relative;
+    margin-bottom: -1px;
+    border: 1px solid #ccc;
+    -webkit-transition: .3s border, .3s height;
+    -o-transition: .3s border, .3s height;
+    transition: .3s border, .3s height;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.reg-form .ngPlaceholder {
+    line-height: 50px;
+    left: 20px;
+    pointer-events: none;
+    color: #666;
+    position: absolute;
+    top: 0;
+    font-size: 0.875rem;
+    width: auto;
+    text-align: left;
+    z-index: 1;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    -webkit-transform: 0 0;
+    -moz-transform: 0 0;
+    -ms-transform: 0 0;
+    -o-transform: 0 0;
+    transform: 0 0;
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+.reg-form .ngPlaceholder+.ngInput {
+    padding-top: 24px;
+    padding-bottom: 6px;
+}
+
+.reg-form .ngInput {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 0 0;
+    border: none;
+    outline: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.reg-form .ngInput {
+    line-height: 14px;
+    padding: 21px 20px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-size: 0.875rem;
+}
+
+.hideblk {
+    font-size: 0.8125rem;
+    color: #999;
+    position: absolute;
+    right: 21px;
+    top: -5px;
+}
+
+.signup-fld:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 4px 0 4px;
+    border-color: #666 transparent transparent transparent;
+    position: absolute;
+    right: 12px;
+    top: 25px;
+}
+
+.multiinput {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 16px;
+    padding: 0 10px 0 0;
+}
+
+.reg-form .multiinput {
+    line-height: 3px;
+    padding: 21px 20px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    width: 100%;
+    height: 20px;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 0.875rem;
+    margin-top: 4px;
+}
+
+.reg-form .ngPlaceholder+.multiinput {
+    padding-top: 24px;
+}
+
+.ih {
+    display: none;
+}
+
+.input-help,
+.reg-form .input-helper,
+.agreepolicy .input-helper{
+    background: #383443;
+    color: #fff;
+    max-width: 200px;
+    top: 100%;
+    text-align: center;
+    margin-top: 1px;
+    position: absolute;
+    left: 15px;
+    line-height: 1.4;
+    z-index: 8;
+    font-size: 0.75rem;
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transform: scale(.9);
+    -ms-transform: scale(.9);
+    transform: scale(.9);
+    -webkit-transform: 15px 0;
+    -moz-transform: 15px 0;
+    -ms-transform: 15px 0;
+    -o-transform: 15px 0;
+    transform: 15px 0;
+    -webkit-transform-origin: 15px 0;
+    -moz-transform-origin: 15px 0;
+    -ms-transform-origin: 15px 0;
+    -o-transform-origin: 15px 0;
+    transform-origin: 15px 0;
+}
+
+.input-help,
+.reg-form.invalid .input-helper {
+    -webkit-transition: .2s ease all;
+    -o-transition: .2s ease all;
+    transition: .2s ease all;
+}
+
+.input-help .help-text,
+.reg-form .input-helper .helper-text {
+    padding: 4px 8px;
+    display: block;
+}
+
+.d-info {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 48px;
+    height: 48px;
+}
+
+.d-info:after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(https://images.shiksha.ws/pwa/public/images/clp-sprite-pwa.svg) no-repeat;
+    background-position: -194px -28px;
+    position: absolute;
+    top: 14px;
+    right: 6px;
+}
+
+.clk.d-info:after {
+    background-position: -175px -28px;
+}
+
+.signup-msg {
+    font-size: 0.6875rem;
+    color: #999;
+    text-align: left;
+    margin: 0;
+    float: none;
+    line-height: 18px;
+    text-align: center;
+    padding-top: 7px;
+}
+
+.gc {
+    color: #000;
+}
+
+.shadow-vport {
+    position: relative;
+    text-align: center;
+}
+
+.shadow-lyr {
+    position: absolute;
+    pointer-events: none;
+    height: 72px;
+    z-index: 3;
+    width: 100%;
+    top: -72px;
+    background: -moz-linear-gradient(-180deg, rgba(255, 255, 255, 0) 19%, rgba(255, 255, 255, .73) 39%, #fff 84%);
+    background: -webkit-linear-gradient(-180deg, rgba(255, 255, 255, 0) 19%, rgba(255, 255, 255, .73) 39%, #fff 84%);
+    background: linear-gradient(-180deg, rgba(255, 255, 255, 0) 19%, rgba(255, 255, 255, .73) 39%, #fff 84%);
+}
+
+.shadow-vport .reg-btn {
+    margin-top: 0;
+    width: 90%;
+}
+
+.shadow-vport .reg-btn:hover,
+.otp-rst-lgn .reg-btn:hover,
+.rst-lgn .reg-btn:hover {
+    background-color: rgba(251, 181, 78, .75);
+}
+
+.btn-rltv {
+    position: relative;
+}
+
+.Sgup-box {
+    width: 100%;
+    background: #fff;
+    padding: 20px 15px;
+    padding-bottom: 5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    bottom: -92px;
+    left: 0;
+    right: 0;
+}
+
+.newSks {
+    float: none;
+    font-size: 0.875rem;
+    color: #008489;
+    display: block;
+    text-align: center;
+    margin-left: -10px;
+}
+
+.reg-form.filled .ngPlaceholder {
+    color: #666;
+}
+
+.reg-form.focused .ngPlaceholder {
+    color: #0f838e;
+}
+
+.reg-form.filled .ngPlaceholder,
+.reg-form.focused .ngPlaceholder {
+    margin-top: 6px;
+    line-height: 20px;
+    -webkit-transform: scale(.80);
+    -ms-transform: scale(.80);
+    -o-transform: scale(.80);
+    transform: scale(.80);
+    font-weight: 500;
+}
+
+.pwa-cont.pwa-resp {
+    padding: 0 0 0 0;
+}
+
+.pwa-lyr .pwa-resp .drpdwn-ul>div:last-child ul.drpdwn-ul {
+    padding-bottom: 58px;
+}
+
+.pwa-lyr .pwa-resp .loc-title {
+    background: #fff;
+    padding: 10px;
+    color: #000;
+    float: none;
+    width: 100%;
+    text-align: left;
+    font-size: 0.875rem;
+    box-sizing: border-box;
+    margin-bottom: 0px;
+}
+
+.pwa-lyr .pwa-resp .loc-title.sub-Lbl {
+    border: none;
+    border-bottom: 1px solid #efefef;
+    background-color: #fff;
+}
+
+.pwa-lyr .pwa-resp .drpdwn-ul {
+    background-color: #fff;
+    box-sizing: border-box;
+    text-align: left;
+    width: 100%;
+}
+
+.pwa-lyr .pwa-resp .drpdwn-ul li {
+    padding: 5px 10px;
+    font-size: 0.875rem;
+    border-bottom: 1px solid #f7f7f7;
+    cursor: pointer;
+    margin: 0;
+    line-height: 35px;
+    display: inline-block;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.pwa-lyr .pwa-resp .drpdwn-ul li span {
+    display: block;
+    line-height: 35px;
+    font-size: 0.875rem;
+    color: #000;
+}
+
+.pwa-algnLft {
+    text-align: left;
+}
+
+span.moreLnk {
+    font-size: 0.6875rem;
+    color: #999;
+}
+
+div[id^="isdCode_block"] {
+    border-right: 1px;
+    border-bottom: 1px solid #ccc;
+}
+
+.pwa-reg {
+    display: inline-block;
+    width: 100%;
+    clear: both;
+    margin-bottom: -8px;/*Put by sirini to fix bottom spacing issue in pwa registration*/
+}
+
+.pwa-reg .isdC {
+    width: 35%;
+    float: left;
+    margin-right: 0px;
+}
+
+.reg-form.mblFld {
+    float: right;
+    width: 65%;
+    margin-right: 0px;
+}
+
+.reg-form.updt-mblFld {
+    float: left;
+    width: 65%;
+    margin-right: 0px;
+}
+
+.pwa-resp .customSelect .optgrp-hd {
+    border: none;
+    background-color: #efefef;
+    margin-top: -1px;
+    padding: 10px;
+    font-size: 0.875rem;
+    color: #666;
+    font-weight: 600;
+}
+
+.reg-form.focused {
+    z-index: 2;
+    border: 1px solid #0f838e;
+}
+
+.input-help {
+    opacity: 1;
+    top: 37px;
+    right: -19px;
+    left: auto;
+    max-width: 250px;
+}
+
+.option-wrapper .Customcheckbox {
+    width: 100%;
+}
+
+.pwa-lyr .Customcheckbox label {
+    padding-left: 30px;
+    font-size: 0.875rem;
+    line-height: 22px;
+    padding-top: 0;
+}
+
+.Customcheckbox label {
+    width: 90%;
+    font-size: 0.75rem;
+    color: #868686;
+    padding-top: 2px;
+    line-height: 20px;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 35px;
+    font-size: 0.8125rem;
+}
+
+.fcb label {
+    color: #000;
+}
+
+.pwa-lyr .done-btn {
+    padding: 8px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+    background: #fff;
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
+    bottom: 0;
+}
+
+.pwa-lyr .done-btn .green-btn {
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 24px;
+    color: #fff;
+    background-color: #F37921;
+    cursor: pointer;
+    padding: 10px 15px;
+    display: inline-block;
+    border: 0;
+    text-decoration: none;
+    width: 100%;
+    font-weight: 600;
+    transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -moz-border-radius: 0;
+    border-radius: 2px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.reg-btn {
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    color: #fff;
+    border: 1px solid #F37921;
+    outline: none;
+    cursor: pointer;
+    font-weight: 600;
+    background-color: #F37921;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: 45px;
+    box-sizing: border-box;
+    line-height: 22px;
+}
+
+.pwa-lyr .done-btn .done-clrBtn {
+    background: #F37921;
+}
+
+.pwa-multiselect .Customcheckbox input[type=checkbox] {
+    display: none;
+}
+
+.pwa-multiselect .Customcheckbox label:before {
+    border: none;
+    content: "";
+    background: #fff url(https://images.shiksha.ws/pwa/public/images/pwa-header-mobile-v3.svg) no-repeat -267px -8px;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    top: 2px;
+    margin-right: 10px;
+}
+
+.pwa-multiselect .Customcheckbox input[type=checkbox]:checked+label:before {
+    border: none;
+    content: "";
+    background: #fff url(https://images.shiksha.ws/pwa/public/images/pwa-header-mobile-v3.svg) no-repeat -241px -8px;
+    width: 20px;
+    height: 20px;
+}
+
+.optl {
+    font-size: 0.6875rem;
+    font-weight: 100;
+}
+
+.reg-form.invalid.mblFld .input-help {
+    right: -20px;
+}
+
+.reg-form.invalid.updt-mblFld .input-help {
+    right: -22px;
+}
+
+.pwa-lyr .pwa-cont-sgnup .input-help>.up-arrow {
+    right: 18px;
+    left: auto;
+    position: absolute;
+    top: 0;
+}
+
+.pwa-lyr .pwa-cont-sgnup .input-help .up-arrow:before {
+    border-width: 6px;
+    border-bottom-color: transparent;
+    margin: -2px 0 0 -1px;
+}
+
+.pwa-lyr .pwa-cont-sgnup .input-help .up-arrow:after,
+.pwa-lyr .pwa-cont-sgnup .input-help .up-arrow:before {
+    content: '';
+    border: solid transparent;
+    position: absolute;
+    top: -9px;
+    left: -5px;
+}
+
+.pwa-lyr .pwa-cont-sgnup .input-help .up-arrow:after {
+    border-width: 5px;
+    border-bottom-color: #383443;
+}
+
+i.pwa-bckLyr {
+    background: url(https://images.shiksha.ws/pwa/public/images/pwa-header-mobile-v3.svg) no-repeat;
+    width: 30px;
+    height: 20px;
+    display: inline-block;
+    background-position: -209px -4px;
+}
+
+.reg-form .invalid .mblFld .input-help .up-arrow:after {
+    left: -8px;
+}
+
+.reg-form .invalid .updt-mblFld .input-help .up-arrow:after {
+    left: -8px;
+}
+
+.pwa-lyrSrc .clg-rmv {
+    color: #999;
+    font-size: 1.125rem;
+    line-height: 18px;
+}
+
+.reg-form .hideblk {
+    font-size: 0.8125rem;
+    color: #999;
+    position: absolute;
+    right: 21px;
+    top: -5px;
+}
+
+.pwa-searchBox {
+    background: #f9f9f9;
+    position: relative;
+}
+
+.pwa-lyrSrc .pwa-searchBox .clg-rmv {
+    position: absolute;
+    right: 8px;
+    top: 6px;
+}
+
+.pwa-lyrSrc .pwa-searchBox i.search-ico {
+    top: 4px;
+    left: 11px;
+}
+
+.editIcn {
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTIgMTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDEyIDEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGw6IzAwQTVCNTt9LnN0MXtmaWxsOiMwQUE1QjU7fTwvc3R5bGU+PGc+PHBhdGggY2xhc3M9InN0MCIgZD0iTTYsMC44YzIuOSwwLDUuMywyLjQsNS4zLDUuM1M4LjksMTEuMyw2LDExLjNTMC44LDguOSwwLjgsNlMzLjEsMC44LDYsMC44IE02LDBDMi43LDAsMCwyLjcsMCw2czIuNyw2LDYsNnM2LTIuNyw2LTZTOS4zLDAsNiwwTDYsMHoiLz48L2c+PGc+PGc+PHBvbHlnb24gY2xhc3M9InN0MSIgcG9pbnRzPSI2LjgsNi43IDUuMyw4LjEgMy40LDguNiAzLjksNi43IDUuMyw1LjIgIi8+PHJlY3QgeD0iNyIgeT0iMy41IiB0cmFuc2Zvcm09Im1hdHJpeCgwLjcwNzEgLTAuNzA3MSAwLjcwNzEgMC43MDcxIC0wLjk1ODYgNi42MzIxKSIgY2xhc3M9InN0MSIgd2lkdGg9IjEiIGhlaWdodD0iMiIvPjwvZz48L2c+PC9zdmc+) no-repeat;
+    width: 13px;
+    height: 13px;
+    margin: 0 3px;
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    cursor: pointer;
+}
+
+.lyrEdit {
+    font-size: 0.75rem;
+    color: #0f838e;
+    text-decoration: none;
+}
+
+.pwa-cont-sgnup .reg-form.invalidFld.invalid.invld-otp,
+.pwa-cont-sgnup .reg-form.invalid.invld-otp {
+    background: 0 0;
+    border: none;
+    line-height: 40px;
+    height: 52px;
+}
+
+.pwa-cont-sgnup .invld-otp .input-helper {
+    left: 11;
+    position: absolute;
+    top: 42px;
+    right: auto;
+    float: right;
+    display: inline-block;
+    margin: 0;
+    min-width: 73px;
+}
+
+.pwa-cont-sgnup .invld-otp .input-helper .up-arrow {
+    position: absolute;
+}
+
+.ques-txt-otp {
+    color: #000;
+    font-size: 0.875rem;
+}
+
+a.rsndclr {
+    color: #0f838e;
+}
+
+.rsnd-otp {
+    font-size: 0.875rem;
+    text-decoration: none;
+}
+
+.flRt {
+    float: right;
+}
+
+.flLt {
+    float: left;
+}
+
+.otp-rst-lgn {
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0;
+}
+
+.otp-blk.rsndclr.rsnd-otp.flRt {
+    float: left;
+    position: relative;
+    margin-left: 21px;
+}
+
+.reg-btn.usr-vfy-auth {
+    margin: 0;
+}
+
+.reg-form.invalidFld.focused.invalid:not(.open) .input-helper {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition-delay: .4s;
+    transition-delay: .4s
+}
+
+.reg-form.invalidFld.focused.invalid:not(.open) .input-helper:hover {
+    display: block
+}
+
+.reg-form.invalidFld.invalid {
+    background-color: #FDF4F4;
+    border-color: #E02727;
+    margin-bottom: 0;
+}
+
+.reg-form.invalidFld.invalid .ngPlaceholder {
+    color: #E02727
+}
+
+.reg-form.invalidFld.deError.invalid:not(.open) .input-helper {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition-delay: .4s;
+    transition-delay: .4s
+}
+
+.reg-form.invalidFld.deError.invalid:not(.open) .input-helper:hover {
+    display: block
+}
+
+.otp-resp-yes {
+    margin-left: 68px;
+    top: 40px;
+    position: absolute;
+    display: inline-block;
+}
+
+.rst-lgn {
+    bottom: 28px;
+    left: 0px;
+    margin: 0;
+    position: absolute;
+    right: 0px;
+    width: auto;
+    padding: 0 15px;
+    margin-top: 15px;
+}
+
+.pwa-cont-sgnup .signup-fld.updt-isd {
+    float: left;
+    width: 29%;
+    position: relative;
+}
+
+.pwa-cont-sgnup .signup-fld.updt-isd .isd-chng {
+    text-align: center;
+    line-height: 50px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.reg-form.invalidFld.deError.invalid:not(.open) .input-helper {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition-delay: .4s;
+    transition-delay: .4s
+}
+
+.reg-form.invalidFld.deError.invalid:not(.open) .input-helper:hover {
+    display: block
+}
+
+.reg-form .input-helper .up-arrow {
+    position: relative;
+    left: 15px;
+    top: 0;
+}
+
+.reg-form .input-helper .up-arrow:after,
+.reg-form .input-helper .up-arrow:before {
+    content: '';
+    border: solid transparent;
+    position: absolute;
+    top: -10px;
+    left: -5px
+}
+
+.reg-form .input-helper .up-arrow:before {
+    border-width: 6px;
+    border-bottom-color: transparent;
+    margin: -2px 0 0 -1px
+}
+
+.reg-form .input-helper .up-arrow:after {
+    border-width: 5px;
+    border-bottom-color: #383443
+}

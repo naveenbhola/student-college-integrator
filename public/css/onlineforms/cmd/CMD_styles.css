@@ -1,0 +1,34 @@
+.formPreviewMain {font-size:14px; font-family:Times New Roman, Times, serif !important}
+.previewHeader{display:block; margin-bottom:12px;}
+.instLogoBox{text-align:center; padding-bottom:3px}
+.previewTetx{font-size:22px; color:red; margin-bottom:20px; clear:both}
+.previewContentWrapper, .previewBody{width:890px; margin:0 auto;}
+.courseNameDetails{text-align:center; font-size:16px; color:#000000; font-weight:normal; line-height:normal; padding-top:2px}
+.courseNameDetails p{padding-bottom:5px}
+.courseNameDetails strong{font-weight:normal; font-size:24px; line-height:32px;}
+.picBox{width:155px; height:180px; float:right; background-color:#fff; border:1px solid #000}
+.picBox img{width:155px; height:180px; float:left}
+.picBox p{text-align:center; padding-top:80px; font-size:12px}
+/*.formPreviewMain{display:block; width:100%; clear:left}*/
+.formPreviewMain ul li{display:block; padding-bottom:25px; width:100%}
+.formPreviewMain ul li label{float:left; padding:2px 5px 0 0; font-weight:normal; width:140px;}
+.formPreviewMain ul li label span{padding-right:12px; float:left}
+.previewFieldBox, .previewFieldBox2{float:left; width:853px;}
+.previewFieldBox2 span{border-bottom:1px dotted #000000; display:block; padding:2px 0 1px 0}
+.previewFieldBox span, .enrollmentPreviewField span{display:block; border-bottom:solid 1px #000000;}
+.formColumns2{float:left}
+.formColumns3{float:left; padding-left:50px}
+.formColumns3 span{float:left; padding:7px 0 0 10px}
+.flRt{float:right}
+.checkBox{width:18px; height:15px; padding-top:3px; text-align:center; border:1px solid #000000; float:left; margin-right:10px}
+.adRows{width:700px;; float:left}
+.boxTable{border: 1px solid #000000; border-collapse: collapse;}
+.boxTable tr td{height:21px; width:22px; padding:0; margin:0; text-align: center;}
+.largeBoxTable{border: 1px solid #000000; border-collapse: collapse;}
+.largeBoxTable tr td{height:28px; width:28px; padding:0; margin:0; text-align: center;}
+.educationTable{border: 1px solid #000000; border-collapse: collapse;}
+.educationTable tr th{text-align:center; font-weight:normal}
+.formWordWrapper{white-space: pre-wrap; word-wrap: break-word; overflow:hidden}
+.declaration{}
+.declaration p{text-align:center; font-weight:bold; line-height:26px}
+.declaration div{line-height:24px; padding-left:20px; text-align:left}

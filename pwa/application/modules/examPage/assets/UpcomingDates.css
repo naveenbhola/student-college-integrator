@@ -1,0 +1,10 @@
+.examslist{padding: 10px 0px;border-bottom: 1px solid #d8d8d8;margin: 0 10px;}
+.examslist:last-child {border-bottom: none;}
+.anchor_holder a {display:inline-block;font-size: 0.875rem;color: #008489;font-weight: 600;cursor: pointer;line-height: 1.313rem;}
+.exams-infodata {font-size: 0.875rem;color: #000;line-height: 1.34;margin: 0px 0px 10px;}
+.upcoming-states .collections_a{font-size: 0px;}
+.upcoming-states .collections_a a.quick-links {font-size: 0.875rem;color: #008489;font-weight: 400;}
+.upcoming-states .collections_a b {display: inline-block;color: #ccc;margin: 0 5px;font-weight: 400;font-size: 0.875rem;}
+.exams-infodata strong {font-weight: 600;}
+.trnBtn {border: 1px solid #008489;color: #008489;font-size: .875rem;font-weight: 600;padding: 0 10px;text-align: center;cursor: pointer;background: #fff;text-decoration: none;display: inline-block;line-height: 38px;-webkit-tap-highlight-color: transparent;height: 36px;border-radius: 2px;position: relative;white-space: nowrap;}
+.viewSectn{text-align: center; padding-bottom: 15px;margin: 15px 0px 0px}

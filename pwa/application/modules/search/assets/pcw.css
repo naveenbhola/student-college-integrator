@@ -1,0 +1,87 @@
+.ctp_popular ._flexirowPCW {
+    font-size: 0;
+    position: relative;
+    background: #fff;
+    padding: 12px;
+}
+._flexirowPCW .flexi_img {
+    width: 68px;
+    height: 54px;
+    overflow: hidden;
+    display: inline-block;
+    background: transparent;
+    margin-right: 11px;
+    vertical-align: middle;
+}
+._flexirowPCW .flexi_img img {
+    height: auto;
+}
+
+.flexi_columnPCW {
+    width: 70%;
+    display: inline-block;
+    vertical-align: middle;
+}
+ .flexi_img {
+    display: inline-block;
+    vertical-align: middle;
+}
+.flexi_columnPCW ._clgname {
+    font-size: .875rem;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #008489;
+    text-overflow: ellipsis;
+}
+.flexi_columnPCW .ratingv1 {
+    font-size: .875rem;
+}
+.flexi_columnPCW .single-col {
+    margin-top: 0;
+}
+.view_rvws {
+    font-size: .75rem;
+    color: #008489;
+    text-decoration: none;
+    font-weight: 400;
+}
+i.empty_stars {
+    position: relative;
+    margin: 0 3px;
+    top: -1px;
+}
+.starBg {
+    background: url(https://images.shiksha.ws/public/images/ratingicon.svg) no-repeat;
+    background-position: 0 -10px;
+    width: 65px;
+    height: 10px;
+    display: inline-block;
+    background-size: 65px 20px;
+}
+i.full_starts {
+    background-position: 0 0;
+    width: 50%;
+    position: absolute;
+}
+.ctp_popular{margin-bottom: 15px;}
+.no_rslts {
+    padding: 12px;
+}
+
+p.indexText {
+    color: #666;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.flexi_columnPCW .ctp-cty{font-size: 0.75rem;}
+._flexirowPCW .single-col .rating-block .rating_popup {left: -78px;}
+._flexirowPCW .single-col .rating-block .rating_popup:before {left: 173px;}
+/*desktop css*/
+.pwa_wrapper .wrapperAround{margin-bottom: 16px;box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08)}
+/*.pwa_wrapper .wrapperAround .ctp_popular ._flexirowPCW {display: inline-block;width: 50%;}*/
+/*.pwa_wrapper .wrapperAround .ctp_popular {margin-bottom: 0px;}*/
+
+
+

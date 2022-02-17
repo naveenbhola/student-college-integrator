@@ -1,0 +1,6 @@
+/*.eaply.button--orange{padding: 0px;width: 44%;height: 34px;}*/
+.btnYellow.eaply-disabled{pointer-events: none;touch-action: none;background: #d0d1d1;border: 1px solid #d0d1d1;color: #000;}
+.flex-mob > * {
+    width: 100%;
+    max-width: 250px;
+}

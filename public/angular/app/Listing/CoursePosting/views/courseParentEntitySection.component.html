@@ -1,0 +1,45 @@
+<div class="row" id="course_parent_mapping_form">
+    <div [mysize]="'12'">
+        <div class="x_panel">
+            <div [class.x_title]="opened">
+                <ul class="nav navbar-left panel_toolbox">
+                    <li><a class="collapse-link" (click)="toggle()"><i [class]="opened?' fa fa-chevron-up':' fa fa-chevron-down'"></i></a></li>
+                </ul>
+                <h2>Add Parent Entity <img class="helperText" id="add_parent_entity" src="/public/images/tooltip.png" width="20px" style="padding-right:0px" (click)="toolTipNotify('add_parent_entity',$event)"></h2>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content" [formGroup]="hierarchyForm" [hidden]="!opened">
+                <institute-parent-hierarchy
+                (selectedHierarchyItem)="selectedHierarchy($event)"
+                [institute_type]="''"
+                [postingListingType]="'course'"
+                (toolTipEvent) = "toolTipModalParentShow($event)"
+                >
+                </institute-parent-hierarchy>
+                <span class="help-block text-danger">
+                    <span *ngIf="!hierarchyForm.controls.parent_course_hierarchy.valid">Parent Hierarchy is required</span>
+                </span> 
+                <div *ngIf = "selectedHierarchyObj.length>0">
+                    <div class="clearfix.length"></div>
+                    <br/>                    
+                    <h4>
+                        Added Hierarchy 
+                        <button type="button" (click)="removeCourseHierarchy()" class="btn btn-danger">Remove</button>
+                    </h4>
+                    <ul style="list-style: none;">
+                        <li *ngFor="let i of selectedHierarchyObj;let selectedLast = last">
+                            <div class="radio">
+                                <label class="radio-inline" [mysize]="'6'"  noBootstrap>
+                                <span *ngIf="(primaryHierarchyOption.length > 1) && (primaryHierarchyOption.indexOf(i.id) != -1)">
+                                    <input type="radio"  formControlName="primary_course_hierarchy" class="flat" value="{{i.id}}"/>
+                                </span>
+                                {{i.name}}<span *ngIf="i.is_dummy == '1'"> (Dummy)</span><span *ngIf="+i.is_satellite"> (satellite)</span>
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+.formPreviewMain {font-size:14px; font-family:Arial, Helvetica, sans-serif !important}
+.formRows2{clear:left; padding:10px 0 0 0px;}
+.examCenterRows{clear:left; padding:0 0 0 63px}
+.examCenterRows div.centerCols{float:left; padding-right:90px}
+.previewHeader{display:block; margin-bottom:10px; padding-bottom:5px; overflow:hidden}
+.previewBody{display:block}
+.headerLeft{width:735px; float:left;}
+.instLogoBox{width:215px; float:left;}
+.instLogoBox img{border:1px solid #cacaca; padding:5px}
+.previewTetx{font-size:22px; color:red; margin-bottom:20px; clear:both}
+.courseNameDetails{width:508px; float:right;}
+.srNumBox{font-size:18px; background-color:#969696; text-align:center; padding:5px 10px; margin-top:20px; border:1px solid #969696}
+.courseNameBox{font-size:22px; color:#000000; font-weight:bold; float:left; width:100%;}
+.courseNameBox p{margin-bottom:10px}
+.courseNameBox p.formTitle{font-size:19px}
+.courseNameBox p.instAddress{font-size:14px; font-weight:normal}
+.formInstruction{ float:left; width:730px; font-size:14px;}
+.formInstruction h4{font-size:14px; font-weight:bold; margin-bottom:12px}
+.formInstruction ul li{list-style-type:decimal; margin-left:25px; margin-bottom:5px}
+.picBox{width:195px; height:192px; float:right; border:1px solid #000000}
+.picBox img{border:1px solid #cacaca; width:195px}
+.formPreviewMain h5, .formPreviewMain h3{font-size:16px !important; margin-bottom:15px !important; display:block !important; text-transform:uppercase !important; clear:left !important; float:left !important; width:100% !important;}
+.formPreviewMain h3{text-transform:none; font-family:Arial, Helvetica, sans-serif !important; margin:0 !important; padding:0 !important; font-weight:700 !important}
+.formPreviewMain h5 strong, .formPreviewMain h3 strong{width:60px; float:left;}
+.formPreviewMain h5 span{font-weight:normal; text-transform:none;}
+.formRow,.formRow2{display:block; margin-bottom:6px; float:left; width:100%; font-size:14px}
+.labelWidth{width:175px;}
+.formRow label,.formRow2 label{font-weight:bold; padding-right:14px; float:left; padding-top:6px}
+.formValueCont{float:left; width:875px;}
+.formRowTable{border-collapse:collapse; border:1px solid #000000}
+.formRowTable tr td{height:25px; padding-top:0; padding-bottom:0; width:25px; text-align:center}
+.formNote{font-size:12px; font-weight:bold; padding:3px 0}
+.dateLabel{font-size:11px; text-align:center; text-transform:uppercase}
+.ageCont{width:200px; padding-left:80px; float:left}
+.preferenceCont{width:140px; padding-left:25px; float:left}
+.preferenceCont label{font-weight:normal !important; padding-top:4px !important; width:90px !important; text-align:right !important; padding-right:10px !important;}
+.ageChildCont{float:left; width:60px; padding-top:14px}
+.nationalityCont{padding-left:10px; width:498px; float:left}
+.appsPaymentCont{width:400px; float:left;}
+.nationalityChildCont,.appsPaymentChildCont{float:left;padding:0; width:218px}
+.nationalityChildCont span,.appsPaymentChildCont span{border-bottom:1px solid #000; width:100%; float:left; display:block; padding-bottom:2px; margin-top:7px}
+.impDates{border-top:1px solid #c0c0c0; padding:5px 0; line-height:23px}
+.impDates strong{float:left; width:120px; text-decoration:underline}
+.impDates p{float:left; width:800px; padding-left:5px;}
+.educationTable{border-collapse:collapse; border:1px solid #000000}
+.educationTable thead tr td{font-weight:bold;}
+.educationTable tr td{font-weight:normal;}
+.flRt{float:right}
+.breakHere{page-break-before:always}

@@ -1,0 +1,13 @@
+section#viewCollegeSec.viewCollegeSec{
+	background: none;
+	box-shadow: none;
+}
+.headL2{font-size: 1rem;font-weight: 600;padding: 12px 12px 0px 12px;background: none;border: none;}
+.nrml-lst{margin:0px 0px 0px 20px;list-style: disc;}
+.nrml-lst li{display: list-item;}
+
+@media only screen and (min-width: 1024px){
+    .nrml-lst{margin-left: 0px;} 
+	.nrml-lst li{ width: 23.78%;display: inline-block;vertical-align: top;margin-bottom: 14px; margin-right: 15px;}
+	.nrml-lst li:nth-child(4n+4){margin-right: 0px;}
+}
